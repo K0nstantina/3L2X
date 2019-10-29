@@ -1,0 +1,9 @@
+C:\Users\anast\source\repos\test3\bin\x64\Debug\test3.exe.config
+C:\Users\anast\source\repos\test3\bin\x64\Debug\test3.exe
+C:\Users\anast\source\repos\test3\bin\x64\Debug\test3.pdb
+C:\Users\anast\source\repos\test3\obj\x64\Debug\test3.Form1.resources
+C:\Users\anast\source\repos\test3\obj\x64\Debug\test3.Properties.Resources.resources
+C:\Users\anast\source\repos\test3\obj\x64\Debug\test3.csproj.GenerateResource.cache
+C:\Users\anast\source\repos\test3\obj\x64\Debug\test3.exe
+C:\Users\anast\source\repos\test3\obj\x64\Debug\test3.pdb
+C:\Users\anast\source\repos\test3\obj\x64\Debug\test3.csprojAssemblyReference.cache
