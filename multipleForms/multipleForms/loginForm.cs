@@ -80,7 +80,7 @@ namespace multipleForms
             string uname = usernameText.Text;
             string pwd = passwordText.Text;
             //Check uname and pwd
-            if (uname != "admin" && pwd != "123")
+            if (uname != "admin" || pwd != "123")
             {
                 //Login failure
                 MessageBox.Show("no such user. try admin 123 or go back and click continue");
