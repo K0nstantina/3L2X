@@ -99,60 +99,6 @@ namespace multipleForms
                 MessageBox.Show("nope");
             }
 
-            /*if (uname == "" || pwd == "")
-            {
-                MessageBox.Show("Fill in both fields!");
-            }
-            else
-            {
-                try
-                {
-                    OleDbConnection connection = new OleDbConnection(connectionString);
-                    OleDbCommand command = new OleDbCommand(unameQuery, connection);
-                    connection.Open();
-                    command.ExecuteReader();
-                    
-                    if (set.Tables[0].Rows.Count > 0)
-                    {
-                        MessageBox.Show(set.Tables[0].Rows.Count.ToString());
-                    }
-                    else
-                    {
-                        MessageBox.Show("no such user");
-                    }
-                    
-                }
-                catch
-                {
-
-
-                }
-            }
-            
-            //Check uname and pwd -------------------------------------------------------------------
-            if (uname != "admin" && pwd != "123" || uname != "test" && pwd != "123")
-            {
-                //Login failure
-                MessageBox.Show("no such user. try admin 123 or go back and click continue");
-            }
-            
-            else
-            {
-                //Login success
-                this.Close();
-                //Create the main form
-                mainForm mform;
-                switch (uname) {
-                    case "admin":
-                        mform = new mainForm("admin");
-                        mform.Show();
-                        break;
-                    case "test":
-                        mform = new mainForm("test");
-                        mform.Show();
-                        break;
-                }
-            }*/
         }
 
         #endregion
