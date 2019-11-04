@@ -93,6 +93,7 @@ namespace multipleForms
             // If user exists
             if (reader.HasRows)
             {
+                this.Close();
                 mainForm mform = new mainForm(uname);
                 mform.Show();
             }
