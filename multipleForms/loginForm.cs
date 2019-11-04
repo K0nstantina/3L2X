@@ -71,29 +71,32 @@ namespace multipleForms
             pm.startupForm_Click(sender, e);
         }
         /// <summary>
-        /// Admin login check. Switch to mainForm with "admin" argument (admin login)
+        /// User login
         /// </summary>
         /// <param name="sender">dologinButton</param>
         /// <param name="e">Click</param>
         private void dologinButton_Click(object sender, EventArgs e)
         {
-            //Get user input
+            // Get user input
             string uname = usernameText.Text;
             string pwd = passwordText.Text;
+            // Setup Connection and Query
             string connectionString = Properties.Settings.Default.aggeliesConnectionString;
             string unameQuery = "SELECT Username, Password FROM users WHERE Username='"+uname+"' AND Password='"+pwd+"'";
             OleDbDataReader reader;
-
+            // Open connection
             OleDbConnection connection = new OleDbConnection(connectionString);
             OleDbCommand command = new OleDbCommand(unameQuery, connection);
             connection.Open();
-
+            // Execute reader
             reader = command.ExecuteReader();
+            // If user exists
             if (reader.HasRows)
             {
                 mainForm mform = new mainForm(uname);
                 mform.Show();
             }
+            // No such user
             else
             {
                 MessageBox.Show("nope");
