@@ -36,7 +36,7 @@ namespace dataBaseTesting
             string conString = Properties.Settings.Default.dataSampleConnectionString;
             OleDbConnection cnn = new OleDbConnection(conString);
             cnn.Open();
-            this.housesTableAdapter.Insert("Here is my new text", 123123);
+            this.housesTableAdapter.Insert("Ελληνικό κείμενο", 123123);
             this.housesTableAdapter.Fill(this.dataSampleDataSet.houses);
             cnn.Close();
         }
