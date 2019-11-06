@@ -13,6 +13,12 @@ namespace multipleForms
 {
     public partial class loginForm : Form
     {
+        #region variables
+        // Connection String and publicMethod object
+        string connectionString = Properties.Settings.Default.aggeliesConnectionString;
+        publicMethods pm = new publicMethods();
+        #endregion
+
         #region constructors
         /// <summary>
         /// Default constructor
@@ -51,23 +57,21 @@ namespace multipleForms
 
         #region private methods
         /// <summary>
-        /// Call to method exitApp_Click in publicMethods class for exiting the application
+        /// Call to method exitApp_Click in publicMethods class to exit the application.
         /// </summary>
         /// <param name="sender">exitpictureBox</param>
         /// <param name="e">Click</param>
         private void exitPictureBox_Click(object sender, EventArgs e)
         {
-            publicMethods pm = new publicMethods();
             pm.exitApp_Click(sender, e);
         }
         /// <summary>
-        /// Call to method startupForm_Click in publicMethods class to go back to startup form
+        /// Call to method startupForm_Click in publicMethods class to go back to startup form.
         /// </summary>
         /// <param name="sender">backButton</param>
         /// <param name="e">Click</param>
         private void backButton_Click(object sender, EventArgs e)
         {
-            publicMethods pm = new publicMethods();
             pm.startupForm_Click(sender, e);
         }
         /// <summary>
@@ -77,35 +81,39 @@ namespace multipleForms
         /// <param name="e">Click</param>
         private void dologinButton_Click(object sender, EventArgs e)
         {
-            // Get user input
+            // Get user input.
             string uname = usernameText.Text;
             string pwd = passwordText.Text;
-            // Setup Connection and Query
-            string connectionString = Properties.Settings.Default.aggeliesConnectionString;
+            // Setup Query, declare reader.
             string unameQuery = "SELECT Username, Password FROM users WHERE Username='"+uname+"' AND Password='"+pwd+"'";
             OleDbDataReader reader;
-            // Open connection
+            // Open connection.
             OleDbConnection connection = new OleDbConnection(connectionString);
             OleDbCommand command = new OleDbCommand(unameQuery, connection);
             connection.Open();
-            // Execute reader
+            // Execute reader.
             reader = command.ExecuteReader();
-            // If user exists
+            // If user exists.
             if (reader.HasRows)
             {
                 this.Close();
                 mainForm mform = new mainForm(uname);
                 mform.Show();
             }
-            // No such user
+            // No such user.
             else
             {
                 MessageBox.Show("nope");
             }
 
         }
-
+        private void CheckEnter(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                dologinButton_Click(sender, e);
+            }
+        }
         #endregion
-
     }
 }

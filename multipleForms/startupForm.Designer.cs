@@ -63,7 +63,7 @@
             // exitPictureBox
             // 
             this.exitPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("exitPictureBox.Image")));
-            this.exitPictureBox.Location = new System.Drawing.Point(311, 12);
+            this.exitPictureBox.Location = new System.Drawing.Point(310, 11);
             this.exitPictureBox.Name = "exitPictureBox";
             this.exitPictureBox.Size = new System.Drawing.Size(37, 35);
             this.exitPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -83,6 +83,7 @@
             this.signupButton.TabIndex = 5;
             this.signupButton.Text = "Sign Up";
             this.signupButton.UseVisualStyleBackColor = true;
+            this.signupButton.Click += new System.EventHandler(this.signupButton_Click);
             // 
             // orLabel
             // 
@@ -153,7 +154,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "startupForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "3L2X";
+            this.Text = "3L2X - startup";
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.startUpPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).EndInit();

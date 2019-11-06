@@ -115,6 +115,7 @@
             this.passwordText.PasswordChar = '*';
             this.passwordText.Size = new System.Drawing.Size(336, 34);
             this.passwordText.TabIndex = 9;
+            this.passwordText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
             // 
             // usernameText
             // 
@@ -123,6 +124,7 @@
             this.usernameText.Name = "usernameText";
             this.usernameText.Size = new System.Drawing.Size(336, 34);
             this.usernameText.TabIndex = 8;
+            this.usernameText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
             // 
             // exitPictureBox
             // 
@@ -144,7 +146,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "loginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "3L2X";
+            this.Text = "3L2X - login";
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.signinPanel.ResumeLayout(false);
             this.signinPanel.PerformLayout();

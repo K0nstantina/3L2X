@@ -12,6 +12,12 @@ namespace multipleForms
 {
     public partial class startupForm : Form
     {
+        #region variables
+        // Connection String and publicMethod object
+        string connectionString = Properties.Settings.Default.aggeliesConnectionString;
+        publicMethods pm = new publicMethods();
+        #endregion
+
         #region Constructors
         /// <summary>
         /// Default constructor
@@ -56,11 +62,10 @@ namespace multipleForms
         /// <param name="e">Click</param>
         private void exitPictureBox_Click(object sender, EventArgs e)
         {
-            publicMethods pm = new publicMethods();
             pm.exitApp_Click(sender, e);
         }
         /// <summary>
-        /// Method that switch to signinForm
+        /// Open the signin form
         /// </summary>
         /// <param name="sender">loginButton</param>
         /// <param name="e">Click</param>
@@ -80,6 +85,17 @@ namespace multipleForms
             this.Hide();
             mainForm mForm = new mainForm("");
             mForm.Show();
+        }
+        /// <summary>
+        /// Open the signup form
+        /// </summary>
+        /// <param name="sender">signupButton</param>
+        /// <param name="e">Click</param>
+        private void signupButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            signupForm sinForm = new signupForm();
+            sinForm.Show();
         }
         #endregion
 

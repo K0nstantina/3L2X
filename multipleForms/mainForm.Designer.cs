@@ -35,20 +35,21 @@
             this.bottomPanel = new System.Windows.Forms.Panel();
             this.userTabControl = new System.Windows.Forms.TabControl();
             this.accountTab = new System.Windows.Forms.TabPage();
-            this.adsTab = new System.Windows.Forms.TabPage();
-            this.avatarPictureBox = new System.Windows.Forms.PictureBox();
-            this.avatarUploadButton = new System.Windows.Forms.Button();
-            this.usernameTextBox = new System.Windows.Forms.TextBox();
-            this.usernameLabel = new System.Windows.Forms.Label();
-            this.passwordLabel = new System.Windows.Forms.Label();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.emailLabel = new System.Windows.Forms.Label();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.phoneLabel = new System.Windows.Forms.Label();
-            this.phoneTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.phoneLabel = new System.Windows.Forms.Label();
+            this.phoneTextBox = new System.Windows.Forms.TextBox();
+            this.emailLabel = new System.Windows.Forms.Label();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.passwordLabel = new System.Windows.Forms.Label();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.usernameLabel = new System.Windows.Forms.Label();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.avatarUploadButton = new System.Windows.Forms.Button();
+            this.avatarPictureBox = new System.Windows.Forms.PictureBox();
+            this.adsTab = new System.Windows.Forms.TabPage();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.avatarRemoveButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).BeginInit();
             this.bottomPanel.SuspendLayout();
             this.userTabControl.SuspendLayout();
@@ -71,7 +72,7 @@
             // 
             this.exitPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.exitPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("exitPictureBox.Image")));
-            this.exitPictureBox.Location = new System.Drawing.Point(741, 3);
+            this.exitPictureBox.Location = new System.Drawing.Point(734, 11);
             this.exitPictureBox.Name = "exitPictureBox";
             this.exitPictureBox.Size = new System.Drawing.Size(37, 35);
             this.exitPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -83,7 +84,7 @@
             // 
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backButton.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backButton.Location = new System.Drawing.Point(589, 3);
+            this.backButton.Location = new System.Drawing.Point(573, 3);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(146, 45);
             this.backButton.TabIndex = 14;
@@ -119,6 +120,7 @@
             // 
             // accountTab
             // 
+            this.accountTab.Controls.Add(this.avatarRemoveButton);
             this.accountTab.Controls.Add(this.label1);
             this.accountTab.Controls.Add(this.textBox4);
             this.accountTab.Controls.Add(this.phoneLabel);
@@ -141,57 +143,59 @@
             this.accountTab.Text = "Account Management";
             this.accountTab.UseVisualStyleBackColor = true;
             // 
-            // adsTab
+            // label1
             // 
-            this.adsTab.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adsTab.Location = new System.Drawing.Point(4, 32);
-            this.adsTab.Name = "adsTab";
-            this.adsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.adsTab.Size = new System.Drawing.Size(774, 431);
-            this.adsTab.TabIndex = 1;
-            this.adsTab.Text = "Ads Management";
-            this.adsTab.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(223, 187);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 26);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Attribute3";
             // 
-            // avatarPictureBox
+            // textBox4
             // 
-            this.avatarPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("avatarPictureBox.Image")));
-            this.avatarPictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("avatarPictureBox.InitialImage")));
-            this.avatarPictureBox.Location = new System.Drawing.Point(4, 16);
-            this.avatarPictureBox.Name = "avatarPictureBox";
-            this.avatarPictureBox.Size = new System.Drawing.Size(150, 150);
-            this.avatarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.avatarPictureBox.TabIndex = 0;
-            this.avatarPictureBox.TabStop = false;
+            this.textBox4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(334, 183);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(291, 29);
+            this.textBox4.TabIndex = 24;
             // 
-            // avatarUploadButton
+            // phoneLabel
             // 
-            this.avatarUploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.avatarUploadButton.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.avatarUploadButton.Location = new System.Drawing.Point(4, 172);
-            this.avatarUploadButton.Name = "avatarUploadButton";
-            this.avatarUploadButton.Size = new System.Drawing.Size(149, 45);
-            this.avatarUploadButton.TabIndex = 15;
-            this.avatarUploadButton.Text = "Change";
-            this.avatarUploadButton.UseVisualStyleBackColor = true;
-            this.avatarUploadButton.Click += new System.EventHandler(this.avatarUploadButton_Click);
+            this.phoneLabel.AutoSize = true;
+            this.phoneLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneLabel.Location = new System.Drawing.Point(223, 147);
+            this.phoneLabel.Name = "phoneLabel";
+            this.phoneLabel.Size = new System.Drawing.Size(62, 26);
+            this.phoneLabel.TabIndex = 23;
+            this.phoneLabel.Text = "Phone";
             // 
-            // usernameTextBox
+            // phoneTextBox
             // 
-            this.usernameTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTextBox.Location = new System.Drawing.Point(334, 23);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(291, 29);
-            this.usernameTextBox.TabIndex = 16;
+            this.phoneTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneTextBox.Location = new System.Drawing.Point(334, 143);
+            this.phoneTextBox.Name = "phoneTextBox";
+            this.phoneTextBox.Size = new System.Drawing.Size(291, 29);
+            this.phoneTextBox.TabIndex = 22;
             // 
-            // usernameLabel
+            // emailLabel
             // 
-            this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(223, 27);
-            this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(99, 26);
-            this.usernameLabel.TabIndex = 17;
-            this.usernameLabel.Text = "Username";
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailLabel.Location = new System.Drawing.Point(223, 107);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(58, 26);
+            this.emailLabel.TabIndex = 21;
+            this.emailLabel.Text = "Email";
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTextBox.Location = new System.Drawing.Point(334, 103);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(291, 29);
+            this.emailTextBox.TabIndex = 20;
             // 
             // passwordLabel
             // 
@@ -212,59 +216,57 @@
             this.passwordTextBox.Size = new System.Drawing.Size(291, 29);
             this.passwordTextBox.TabIndex = 18;
             // 
-            // emailLabel
+            // usernameLabel
             // 
-            this.emailLabel.AutoSize = true;
-            this.emailLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailLabel.Location = new System.Drawing.Point(223, 107);
-            this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(58, 26);
-            this.emailLabel.TabIndex = 21;
-            this.emailLabel.Text = "Email";
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLabel.Location = new System.Drawing.Point(223, 27);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(99, 26);
+            this.usernameLabel.TabIndex = 17;
+            this.usernameLabel.Text = "Username";
             // 
-            // emailTextBox
+            // usernameTextBox
             // 
-            this.emailTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailTextBox.Location = new System.Drawing.Point(334, 103);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(291, 29);
-            this.emailTextBox.TabIndex = 20;
+            this.usernameTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameTextBox.Location = new System.Drawing.Point(334, 23);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(291, 29);
+            this.usernameTextBox.TabIndex = 16;
             // 
-            // phoneLabel
+            // avatarUploadButton
             // 
-            this.phoneLabel.AutoSize = true;
-            this.phoneLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneLabel.Location = new System.Drawing.Point(223, 147);
-            this.phoneLabel.Name = "phoneLabel";
-            this.phoneLabel.Size = new System.Drawing.Size(62, 26);
-            this.phoneLabel.TabIndex = 23;
-            this.phoneLabel.Text = "Phone";
+            this.avatarUploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.avatarUploadButton.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.avatarUploadButton.Location = new System.Drawing.Point(4, 172);
+            this.avatarUploadButton.Name = "avatarUploadButton";
+            this.avatarUploadButton.Size = new System.Drawing.Size(149, 45);
+            this.avatarUploadButton.TabIndex = 15;
+            this.avatarUploadButton.Text = "Change";
+            this.avatarUploadButton.UseVisualStyleBackColor = true;
+            this.avatarUploadButton.Click += new System.EventHandler(this.avatarUploadButton_Click);
             // 
-            // phoneTextBox
+            // avatarPictureBox
             // 
-            this.phoneTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneTextBox.Location = new System.Drawing.Point(334, 143);
-            this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.Size = new System.Drawing.Size(291, 29);
-            this.phoneTextBox.TabIndex = 22;
+            this.avatarPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("avatarPictureBox.Image")));
+            this.avatarPictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("avatarPictureBox.InitialImage")));
+            this.avatarPictureBox.Location = new System.Drawing.Point(4, 16);
+            this.avatarPictureBox.Name = "avatarPictureBox";
+            this.avatarPictureBox.Size = new System.Drawing.Size(150, 150);
+            this.avatarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.avatarPictureBox.TabIndex = 0;
+            this.avatarPictureBox.TabStop = false;
             // 
-            // label1
+            // adsTab
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(223, 187);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 26);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Attribute3";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(334, 183);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(291, 29);
-            this.textBox4.TabIndex = 24;
+            this.adsTab.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adsTab.Location = new System.Drawing.Point(4, 32);
+            this.adsTab.Name = "adsTab";
+            this.adsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.adsTab.Size = new System.Drawing.Size(774, 431);
+            this.adsTab.TabIndex = 1;
+            this.adsTab.Text = "Ads Management";
+            this.adsTab.UseVisualStyleBackColor = true;
             // 
             // mainPanel
             // 
@@ -278,6 +280,18 @@
             this.mainPanel.TabIndex = 18;
             this.mainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             // 
+            // avatarRemoveButton
+            // 
+            this.avatarRemoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.avatarRemoveButton.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.avatarRemoveButton.Location = new System.Drawing.Point(5, 223);
+            this.avatarRemoveButton.Name = "avatarRemoveButton";
+            this.avatarRemoveButton.Size = new System.Drawing.Size(149, 45);
+            this.avatarRemoveButton.TabIndex = 26;
+            this.avatarRemoveButton.Text = "Remove";
+            this.avatarRemoveButton.UseVisualStyleBackColor = true;
+            this.avatarRemoveButton.Click += new System.EventHandler(this.avatarRemoveButton_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,7 +301,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "mainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "3L2X";
+            this.Text = "3L2X - main";
             ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).EndInit();
             this.bottomPanel.ResumeLayout(false);
             this.userTabControl.ResumeLayout(false);
@@ -320,5 +334,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.Button avatarRemoveButton;
     }
 }

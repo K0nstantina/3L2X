@@ -121,7 +121,7 @@
   <data name="exitPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAByhSURBVHhe7V0P5G5Vuj6uK8c1cowxkiQZx0iSZCTJMUYy
+        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAByhSURBVHhe7V0P5G5Vuj6uK8c1cowxkiQZx0iSZCTJMUYy
         kmOMkYzkSpIkyUgSSZIrSTIycoxkJBkZGUmSjCQ5MpIkSZIkuZIk13ufZ/X7Ot/5fvv3fWvtvfZ+37X3
         s9gc57f22u963j/f+vP+OXRIbSEI2LmHDtlteJ7G8wqe9/F8vffw3/w//o190FdNCAiBxhGwI1Dme/Gc
         xGOFD9/huxhDTQgIgYYQsMNQ3DvxfFmo9F1GgmNwLIypJgSEQHAE7BiU9eMKir9pDDgmxlYTAkIgKAJ2
@@ -246,7 +246,4 @@
         JNNX4ey9X2jeTvDhrzX/j39jH/admkh9TwgIASEgBKZE4P8B4J32ErwYmiUAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="usersTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>
