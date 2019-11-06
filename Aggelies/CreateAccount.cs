@@ -15,15 +15,15 @@ namespace Aggelies
 
     {
 
-        private OleDbConnection connection = new OleDbConnection();
+       
 
 
         public CreateAccount()
         {
             InitializeComponent();
             //CONNECTION STRING 
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\anast\source\repos\Aggelies\Aggelies.accdb;
-Persist Security Info=False;";
+//            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\petre\Source\Repos\K0nstantina\3L2X\Aggelies\Aggelies.accdb;
+//Persist Security Info=False;";
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -36,35 +36,44 @@ Persist Security Info=False;";
 
             try
             {
-                connection.Open();
-
-                OleDbCommand command = new OleDbCommand();
-
-                command.Connection = connection;
-                if (txt_pass.Text == txt_confpass.Text)
-                {
-                    command.CommandText = "insert into Spitia (FirstName,LastName,Email,Username,Password) values('" + txt_firstname.Text + "','" + txt_lastname.Text + "','" + txt__mail.Text + "','" + txt__username.Text + "','" + txt_pass.Text + "')";
-                    
-                }
-                else
-                {
-                    MessageBox.Show("The passwords don't match. ");
-                    txt_pass.Text = "";
-                    txt_confpass.Text = "";
-
-                }
-
-
-                command.ExecuteNonQuery();
                 
+
+                OleDbCommand cmd = new OleDbCommand();
+                cmd.CommandType = CommandType.Text;
+                if (txt_pass.Text == txt_confpass.Text)
+               {
+                    cmd.CommandText = "INSERT INTO Spitia (FirstName, LastName, Email, Username, [Password]) VALUES " +
+                      "(?, ?, ?, ?, ?)";
+                    cmd.Parameters.AddWithValue("FirstName", txt_firstname.Text);
+                    cmd.Parameters.AddWithValue("LastName", txt_lastname.Text);
+                    cmd.Parameters.AddWithValue("Email", txt_mail.Text);
+                    cmd.Parameters.AddWithValue("Username", txt_username.Text);
+                    cmd.Parameters.AddWithValue("Password", txt_pass.Text);
+                    OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\petre\Source\Repos\K0nstantina\3L2X\Aggelies\Aggelies.accdb;
+Persist Security Info=False;");
+                    cmd.Connection = con;
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+                }
+              else
+              {
+                 MessageBox.Show("The passwords don't match. ");
+                 txt_pass.Text = "";
+                 txt_confpass.Text = "";
+
+               }
+
+                
+                
+                //connection.Close();
                 
                 MessageBox.Show("Registration complete.");
                 this.Hide();
-                this.Close();
-                Login l1 = new Login();
-                l1.ShowDialog();
-
-
+                 Login l1 = new Login();
+                 l1.ShowDialog();
+               
             }
             catch (Exception ex)
             {

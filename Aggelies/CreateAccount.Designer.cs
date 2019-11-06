@@ -36,8 +36,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txt_firstname = new System.Windows.Forms.TextBox();
             this.txt_lastname = new System.Windows.Forms.TextBox();
-            this.txt__mail = new System.Windows.Forms.TextBox();
-            this.txt__username = new System.Windows.Forms.TextBox();
+            this.txt_mail = new System.Windows.Forms.TextBox();
+            this.txt_username = new System.Windows.Forms.TextBox();
             this.txt_pass = new System.Windows.Forms.TextBox();
             this.txt_confpass = new System.Windows.Forms.TextBox();
             this.Submit = new System.Windows.Forms.Button();
@@ -118,25 +118,25 @@
             this.txt_lastname.Size = new System.Drawing.Size(110, 20);
             this.txt_lastname.TabIndex = 7;
             // 
-            // txt__mail
+            // txt_mail
             // 
-            this.txt__mail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txt_mail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt__mail.Location = new System.Drawing.Point(140, 64);
-            this.txt__mail.Name = "txt__mail";
-            this.txt__mail.Size = new System.Drawing.Size(110, 20);
-            this.txt__mail.TabIndex = 8;
+            this.txt_mail.Location = new System.Drawing.Point(140, 64);
+            this.txt_mail.Name = "txt_mail";
+            this.txt_mail.Size = new System.Drawing.Size(110, 20);
+            this.txt_mail.TabIndex = 8;
             // 
-            // txt__username
+            // txt_username
             // 
-            this.txt__username.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txt_username.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt__username.Location = new System.Drawing.Point(140, 90);
-            this.txt__username.Name = "txt__username";
-            this.txt__username.Size = new System.Drawing.Size(110, 20);
-            this.txt__username.TabIndex = 9;
+            this.txt_username.Location = new System.Drawing.Point(140, 90);
+            this.txt_username.Name = "txt_username";
+            this.txt_username.Size = new System.Drawing.Size(110, 20);
+            this.txt_username.TabIndex = 9;
             // 
             // txt_pass
             // 
@@ -176,8 +176,8 @@
             this.Controls.Add(this.Submit);
             this.Controls.Add(this.txt_confpass);
             this.Controls.Add(this.txt_pass);
-            this.Controls.Add(this.txt__username);
-            this.Controls.Add(this.txt__mail);
+            this.Controls.Add(this.txt_username);
+            this.Controls.Add(this.txt_mail);
             this.Controls.Add(this.txt_lastname);
             this.Controls.Add(this.txt_firstname);
             this.Controls.Add(this.label6);
@@ -203,8 +203,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_firstname;
         private System.Windows.Forms.TextBox txt_lastname;
-        private System.Windows.Forms.TextBox txt__mail;
-        private System.Windows.Forms.TextBox txt__username;
+        private System.Windows.Forms.TextBox txt_mail;
+        private System.Windows.Forms.TextBox txt_username;
         private System.Windows.Forms.TextBox txt_pass;
         private System.Windows.Forms.TextBox txt_confpass;
         private System.Windows.Forms.Button Submit;
