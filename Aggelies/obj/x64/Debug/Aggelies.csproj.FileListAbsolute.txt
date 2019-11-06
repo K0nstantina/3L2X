@@ -1,0 +1,11 @@
+C:\Users\anast\source\repos\Aggelies\bin\x64\Debug\Aggelies.exe.config
+C:\Users\anast\source\repos\Aggelies\bin\x64\Debug\Aggelies.exe
+C:\Users\anast\source\repos\Aggelies\bin\x64\Debug\Aggelies.pdb
+C:\Users\anast\source\repos\Aggelies\obj\x64\Debug\Aggelies.csprojAssemblyReference.cache
+C:\Users\anast\source\repos\Aggelies\obj\x64\Debug\Aggelies.Login.resources
+C:\Users\anast\source\repos\Aggelies\obj\x64\Debug\Aggelies.Properties.Resources.resources
+C:\Users\anast\source\repos\Aggelies\obj\x64\Debug\Aggelies.csproj.GenerateResource.cache
+C:\Users\anast\source\repos\Aggelies\obj\x64\Debug\Aggelies.exe
+C:\Users\anast\source\repos\Aggelies\obj\x64\Debug\Aggelies.pdb
+C:\Users\anast\source\repos\Aggelies\obj\x64\Debug\Aggelies.CreateAccount.resources
+C:\Users\anast\source\repos\Aggelies\obj\x64\Debug\Aggelies.AccManagement.resources
