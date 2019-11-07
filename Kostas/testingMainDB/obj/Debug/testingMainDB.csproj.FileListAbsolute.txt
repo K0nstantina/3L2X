@@ -1,0 +1,9 @@
+C:\Users\TEO\Source\examples\testingMainDB\testingMainDB\obj\Debug\testingMainDB.csprojAssemblyReference.cache
+C:\Users\TEO\Source\examples\testingMainDB\testingMainDB\obj\Debug\testingMainDB.Form1.resources
+C:\Users\TEO\Source\examples\testingMainDB\testingMainDB\obj\Debug\testingMainDB.Properties.Resources.resources
+C:\Users\TEO\Source\examples\testingMainDB\testingMainDB\obj\Debug\testingMainDB.csproj.GenerateResource.cache
+C:\Users\TEO\Source\examples\testingMainDB\testingMainDB\bin\Debug\testingMainDB.exe.config
+C:\Users\TEO\Source\examples\testingMainDB\testingMainDB\bin\Debug\testingMainDB.exe
+C:\Users\TEO\Source\examples\testingMainDB\testingMainDB\bin\Debug\testingMainDB.pdb
+C:\Users\TEO\Source\examples\testingMainDB\testingMainDB\obj\Debug\testingMainDB.exe
+C:\Users\TEO\Source\examples\testingMainDB\testingMainDB\obj\Debug\testingMainDB.pdb
