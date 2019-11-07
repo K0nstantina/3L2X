@@ -85,7 +85,7 @@ namespace multipleForms
             string uname = usernameText.Text;
             string pwd = passwordText.Text;
             // Setup Query, declare reader.
-            string unameQuery = "SELECT Username, Password FROM users WHERE Username='"+uname+"' AND Password='"+pwd+"'";
+            string unameQuery = "SELECT userName, userPassword FROM Users WHERE userName='"+uname+"' AND userPassword='"+pwd+"'";
             OleDbDataReader reader;
             // Open connection.
             OleDbConnection connection = new OleDbConnection(connectionString);

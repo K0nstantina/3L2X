@@ -52,7 +52,7 @@ namespace multipleForms
                 // Set welcome text.
                 welcomeMsgLabel.Text += currentUser;
                 // Start the connection to get users attributes.
-                string uname = "SELECT * FROM users WHERE Username='" + currentUser + "'";
+                string uname = "SELECT * FROM Users WHERE userName='" + currentUser + "'";
                 using (OleDbConnection connection = new OleDbConnection(pm.getConnString()))
                 {
                     OleDbCommand command = new OleDbCommand(uname, connection);
@@ -61,15 +61,18 @@ namespace multipleForms
                     // For each attribute update the fields.
                     while (reader.Read())
                     {
-                        usernameTextBox.Text = reader["Username"].ToString();
-                        passwordTextBox.Text = reader["Password"].ToString();
-                        emailTextBox.Text = reader["Email"].ToString();
-                        phoneTextBox.Text = reader["Phone"].ToString();
-                        addressTextBox.Text = reader["Address"].ToString();
+                        usernameTextBox.Text = reader["userName"].ToString();
+                        passwordTextBox.Text = reader["userPassword"].ToString();
+                        emailTextBox.Text = reader["userEmail"].ToString();
+                        phoneTextBox.Text = reader["userPhone"].ToString();
+                        altPhoneTextBox.Text = reader["userAltPhone"].ToString();
+                        addressTextBox.Text = reader["userAdress"].ToString();
+                        listBox1.Items.Add(reader["userName"].ToString());
+                        listBox1.Items.Add(reader["userEmail"].ToString());
                         // If avatar path exists set the image in avataPictureBox
-                        if (reader["Avatar"] != DBNull.Value)
+                        if (reader["userImage"] != DBNull.Value)
                         {
-                            avatarPictureBox.ImageLocation = reader["Avatar"].ToString();
+                            avatarPictureBox.ImageLocation = reader["userImage"].ToString();
                         }
                     }
                     // Close reading.
@@ -125,6 +128,7 @@ namespace multipleForms
                 string pwd = passwordTextBox.Text;
                 string email = emailTextBox.Text;
                 string phone = phoneTextBox.Text;
+                string altphone = altPhoneTextBox.Text;
                 string address = addressTextBox.Text;
                 vmail = pm.IsValidEmail(email);
                 if (!vmail)
@@ -137,7 +141,7 @@ namespace multipleForms
                 }
                 else
                 {
-                    string updateQuery = "UPDATE users SET Username='" + uname + "', [Password]='" + pwd + "', Email='" + email + "', Phone='"+phone+"', Address='"+address+"' WHERE Username='" + currentUser + "'";
+                    string updateQuery = "UPDATE users SET userName='" + uname + "', userPassword='" + pwd + "', userEmail='" + email + "', userPhone='"+phone+"',userAltPhone='"+altphone+"', userAdress='"+address+"' WHERE userName='" + currentUser + "'";
                     pm.connectionOpen(updateQuery);
                     MessageBox.Show("...profile updated...");
                     pm.connectionClose();
@@ -197,7 +201,7 @@ namespace multipleForms
                             System.IO.File.Copy(imgDialog.FileName, imagesLocation + imgName);
                             avatarPictureBox.ImageLocation = imgNewPath;
                             // Database entry.
-                            string updateQuery = "UPDATE users SET Avatar='" + imgNewPath + "' WHERE Username='" + currentUser + "'";
+                            string updateQuery = "UPDATE Users SET userImage='" + imgNewPath + "' WHERE userName='" + currentUser + "'";
                             pm.connectionOpen(updateQuery);
                             MessageBox.Show("...photo updated...");
                             pm.connectionClose();
@@ -222,7 +226,7 @@ namespace multipleForms
             if (vlogin)
             {
                 // Update Query, connection open.
-                string updateQuery = "UPDATE users SET Avatar='' WHERE Username='" + currentUser + "'";
+                string updateQuery = "UPDATE Users SET userImage='' WHERE userName='" + currentUser + "'";
                 OleDbConnection connection = new OleDbConnection(pm.getConnString());
                 pm.connectionOpen(updateQuery);
                 MessageBox.Show("photo removed");

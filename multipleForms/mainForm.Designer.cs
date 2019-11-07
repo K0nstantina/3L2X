@@ -35,6 +35,7 @@
             this.bottomPanel = new System.Windows.Forms.Panel();
             this.userTabControl = new System.Windows.Forms.TabControl();
             this.accountTab = new System.Windows.Forms.TabPage();
+            this.showpasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.saveButton = new System.Windows.Forms.Button();
             this.avatarRemoveButton = new System.Windows.Forms.Button();
             this.addressLabel = new System.Windows.Forms.Label();
@@ -50,13 +51,16 @@
             this.avatarUploadButton = new System.Windows.Forms.Button();
             this.avatarPictureBox = new System.Windows.Forms.PictureBox();
             this.adsTab = new System.Windows.Forms.TabPage();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.showpasswordCheckBox = new System.Windows.Forms.CheckBox();
+            this.altPhoneLabel = new System.Windows.Forms.Label();
+            this.altPhoneTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).BeginInit();
             this.bottomPanel.SuspendLayout();
             this.userTabControl.SuspendLayout();
             this.accountTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
+            this.adsTab.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +78,7 @@
             // 
             this.exitPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.exitPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("exitPictureBox.Image")));
-            this.exitPictureBox.Location = new System.Drawing.Point(734, 11);
+            this.exitPictureBox.Location = new System.Drawing.Point(752, 11);
             this.exitPictureBox.Name = "exitPictureBox";
             this.exitPictureBox.Size = new System.Drawing.Size(37, 35);
             this.exitPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -102,7 +106,7 @@
             this.bottomPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.bottomPanel.Location = new System.Drawing.Point(0, 0);
             this.bottomPanel.Name = "bottomPanel";
-            this.bottomPanel.Size = new System.Drawing.Size(782, 93);
+            this.bottomPanel.Size = new System.Drawing.Size(800, 93);
             this.bottomPanel.TabIndex = 16;
             this.bottomPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             // 
@@ -117,11 +121,13 @@
             this.userTabControl.Name = "userTabControl";
             this.userTabControl.Padding = new System.Drawing.Point(0, 0);
             this.userTabControl.SelectedIndex = 0;
-            this.userTabControl.Size = new System.Drawing.Size(782, 467);
+            this.userTabControl.Size = new System.Drawing.Size(800, 625);
             this.userTabControl.TabIndex = 17;
             // 
             // accountTab
             // 
+            this.accountTab.Controls.Add(this.altPhoneLabel);
+            this.accountTab.Controls.Add(this.altPhoneTextBox);
             this.accountTab.Controls.Add(this.showpasswordCheckBox);
             this.accountTab.Controls.Add(this.saveButton);
             this.accountTab.Controls.Add(this.avatarRemoveButton);
@@ -142,16 +148,29 @@
             this.accountTab.Margin = new System.Windows.Forms.Padding(0);
             this.accountTab.Name = "accountTab";
             this.accountTab.Padding = new System.Windows.Forms.Padding(3);
-            this.accountTab.Size = new System.Drawing.Size(774, 431);
+            this.accountTab.Size = new System.Drawing.Size(792, 589);
             this.accountTab.TabIndex = 0;
             this.accountTab.Text = "Account Management";
             this.accountTab.UseVisualStyleBackColor = true;
+            // 
+            // showpasswordCheckBox
+            // 
+            this.showpasswordCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showpasswordCheckBox.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showpasswordCheckBox.Location = new System.Drawing.Point(645, 63);
+            this.showpasswordCheckBox.Name = "showpasswordCheckBox";
+            this.showpasswordCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.showpasswordCheckBox.Size = new System.Drawing.Size(70, 29);
+            this.showpasswordCheckBox.TabIndex = 28;
+            this.showpasswordCheckBox.Text = "show";
+            this.showpasswordCheckBox.UseVisualStyleBackColor = true;
+            this.showpasswordCheckBox.CheckedChanged += new System.EventHandler(this.showpasswordCheckBox_CheckedChanged);
             // 
             // saveButton
             // 
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveButton.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.Location = new System.Drawing.Point(476, 223);
+            this.saveButton.Location = new System.Drawing.Point(476, 350);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(149, 45);
             this.saveButton.TabIndex = 27;
@@ -175,7 +194,7 @@
             // 
             this.addressLabel.AutoSize = true;
             this.addressLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressLabel.Location = new System.Drawing.Point(223, 187);
+            this.addressLabel.Location = new System.Drawing.Point(223, 219);
             this.addressLabel.Name = "addressLabel";
             this.addressLabel.Size = new System.Drawing.Size(84, 26);
             this.addressLabel.TabIndex = 25;
@@ -184,7 +203,7 @@
             // addressTextBox
             // 
             this.addressTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressTextBox.Location = new System.Drawing.Point(334, 183);
+            this.addressTextBox.Location = new System.Drawing.Point(334, 215);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(291, 29);
             this.addressTextBox.TabIndex = 24;
@@ -287,6 +306,7 @@
             // 
             // adsTab
             // 
+            this.adsTab.Controls.Add(this.listBox1);
             this.adsTab.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adsTab.Location = new System.Drawing.Point(4, 32);
             this.adsTab.Name = "adsTab";
@@ -296,6 +316,15 @@
             this.adsTab.Text = "Ads Management";
             this.adsTab.UseVisualStyleBackColor = true;
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 26;
+            this.listBox1.Location = new System.Drawing.Point(7, 6);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 82);
+            this.listBox1.TabIndex = 0;
+            // 
             // mainPanel
             // 
             this.mainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -304,28 +333,33 @@
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(784, 562);
+            this.mainPanel.Size = new System.Drawing.Size(802, 720);
             this.mainPanel.TabIndex = 18;
             this.mainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             // 
-            // showpasswordCheckBox
+            // altPhoneLabel
             // 
-            this.showpasswordCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showpasswordCheckBox.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showpasswordCheckBox.Location = new System.Drawing.Point(645, 63);
-            this.showpasswordCheckBox.Name = "showpasswordCheckBox";
-            this.showpasswordCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.showpasswordCheckBox.Size = new System.Drawing.Size(70, 29);
-            this.showpasswordCheckBox.TabIndex = 28;
-            this.showpasswordCheckBox.Text = "show";
-            this.showpasswordCheckBox.UseVisualStyleBackColor = true;
-            this.showpasswordCheckBox.CheckedChanged += new System.EventHandler(this.showpasswordCheckBox_CheckedChanged);
+            this.altPhoneLabel.AutoSize = true;
+            this.altPhoneLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.altPhoneLabel.Location = new System.Drawing.Point(223, 184);
+            this.altPhoneLabel.Name = "altPhoneLabel";
+            this.altPhoneLabel.Size = new System.Drawing.Size(94, 26);
+            this.altPhoneLabel.TabIndex = 30;
+            this.altPhoneLabel.Text = "Alt Phone";
+            // 
+            // altPhoneTextBox
+            // 
+            this.altPhoneTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.altPhoneTextBox.Location = new System.Drawing.Point(334, 180);
+            this.altPhoneTextBox.Name = "altPhoneTextBox";
+            this.altPhoneTextBox.Size = new System.Drawing.Size(291, 29);
+            this.altPhoneTextBox.TabIndex = 29;
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 562);
+            this.ClientSize = new System.Drawing.Size(802, 720);
             this.Controls.Add(this.mainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "mainForm";
@@ -337,6 +371,7 @@
             this.accountTab.ResumeLayout(false);
             this.accountTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
+            this.adsTab.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -366,5 +401,8 @@
         private System.Windows.Forms.Button avatarRemoveButton;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.CheckBox showpasswordCheckBox;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label altPhoneLabel;
+        private System.Windows.Forms.TextBox altPhoneTextBox;
     }
 }
