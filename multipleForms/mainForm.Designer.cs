@@ -35,8 +35,10 @@
             this.bottomPanel = new System.Windows.Forms.Panel();
             this.userTabControl = new System.Windows.Forms.TabControl();
             this.accountTab = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.avatarRemoveButton = new System.Windows.Forms.Button();
+            this.addressLabel = new System.Windows.Forms.Label();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
             this.phoneLabel = new System.Windows.Forms.Label();
             this.phoneTextBox = new System.Windows.Forms.TextBox();
             this.emailLabel = new System.Windows.Forms.Label();
@@ -49,7 +51,7 @@
             this.avatarPictureBox = new System.Windows.Forms.PictureBox();
             this.adsTab = new System.Windows.Forms.TabPage();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.avatarRemoveButton = new System.Windows.Forms.Button();
+            this.showpasswordCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).BeginInit();
             this.bottomPanel.SuspendLayout();
             this.userTabControl.SuspendLayout();
@@ -120,9 +122,11 @@
             // 
             // accountTab
             // 
+            this.accountTab.Controls.Add(this.showpasswordCheckBox);
+            this.accountTab.Controls.Add(this.saveButton);
             this.accountTab.Controls.Add(this.avatarRemoveButton);
-            this.accountTab.Controls.Add(this.label1);
-            this.accountTab.Controls.Add(this.textBox4);
+            this.accountTab.Controls.Add(this.addressLabel);
+            this.accountTab.Controls.Add(this.addressTextBox);
             this.accountTab.Controls.Add(this.phoneLabel);
             this.accountTab.Controls.Add(this.phoneTextBox);
             this.accountTab.Controls.Add(this.emailLabel);
@@ -143,23 +147,47 @@
             this.accountTab.Text = "Account Management";
             this.accountTab.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // saveButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(223, 187);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 26);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Attribute3";
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveButton.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveButton.Location = new System.Drawing.Point(476, 223);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(149, 45);
+            this.saveButton.TabIndex = 27;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
-            // textBox4
+            // avatarRemoveButton
             // 
-            this.textBox4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(334, 183);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(291, 29);
-            this.textBox4.TabIndex = 24;
+            this.avatarRemoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.avatarRemoveButton.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.avatarRemoveButton.Location = new System.Drawing.Point(5, 223);
+            this.avatarRemoveButton.Name = "avatarRemoveButton";
+            this.avatarRemoveButton.Size = new System.Drawing.Size(149, 45);
+            this.avatarRemoveButton.TabIndex = 26;
+            this.avatarRemoveButton.Text = "Remove";
+            this.avatarRemoveButton.UseVisualStyleBackColor = true;
+            this.avatarRemoveButton.Click += new System.EventHandler(this.avatarRemoveButton_Click);
+            // 
+            // addressLabel
+            // 
+            this.addressLabel.AutoSize = true;
+            this.addressLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressLabel.Location = new System.Drawing.Point(223, 187);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(84, 26);
+            this.addressLabel.TabIndex = 25;
+            this.addressLabel.Text = "Address";
+            // 
+            // addressTextBox
+            // 
+            this.addressTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressTextBox.Location = new System.Drawing.Point(334, 183);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(291, 29);
+            this.addressTextBox.TabIndex = 24;
             // 
             // phoneLabel
             // 
@@ -280,17 +308,18 @@
             this.mainPanel.TabIndex = 18;
             this.mainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             // 
-            // avatarRemoveButton
+            // showpasswordCheckBox
             // 
-            this.avatarRemoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.avatarRemoveButton.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.avatarRemoveButton.Location = new System.Drawing.Point(5, 223);
-            this.avatarRemoveButton.Name = "avatarRemoveButton";
-            this.avatarRemoveButton.Size = new System.Drawing.Size(149, 45);
-            this.avatarRemoveButton.TabIndex = 26;
-            this.avatarRemoveButton.Text = "Remove";
-            this.avatarRemoveButton.UseVisualStyleBackColor = true;
-            this.avatarRemoveButton.Click += new System.EventHandler(this.avatarRemoveButton_Click);
+            this.showpasswordCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showpasswordCheckBox.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showpasswordCheckBox.Location = new System.Drawing.Point(645, 63);
+            this.showpasswordCheckBox.Name = "showpasswordCheckBox";
+            this.showpasswordCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.showpasswordCheckBox.Size = new System.Drawing.Size(70, 29);
+            this.showpasswordCheckBox.TabIndex = 28;
+            this.showpasswordCheckBox.Text = "show";
+            this.showpasswordCheckBox.UseVisualStyleBackColor = true;
+            this.showpasswordCheckBox.CheckedChanged += new System.EventHandler(this.showpasswordCheckBox_CheckedChanged);
             // 
             // mainForm
             // 
@@ -331,9 +360,11 @@
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.Button avatarUploadButton;
         private System.Windows.Forms.PictureBox avatarPictureBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label addressLabel;
+        private System.Windows.Forms.TextBox addressTextBox;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Button avatarRemoveButton;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.CheckBox showpasswordCheckBox;
     }
 }

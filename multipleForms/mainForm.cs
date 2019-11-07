@@ -17,8 +17,8 @@ namespace multipleForms
         // Path to images folder in the application.
         private string imagesLocation = @"C:\Users\TEO\Source\examples\multipleForms\multipleForms\images\";
         private string currentUser, imgPath, imgName, imgNewPath;
-        // Connection String and publicMethod object
-        string connectionString = Properties.Settings.Default.aggeliesConnectionString;
+        bool vlogin, vmail;
+        // publicMethods object
         publicMethods pm = new publicMethods();
         #endregion
 
@@ -53,7 +53,7 @@ namespace multipleForms
                 welcomeMsgLabel.Text += currentUser;
                 // Start the connection to get users attributes.
                 string uname = "SELECT * FROM users WHERE Username='" + currentUser + "'";
-                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                using (OleDbConnection connection = new OleDbConnection(pm.getConnString()))
                 {
                     OleDbCommand command = new OleDbCommand(uname, connection);
                     connection.Open();
@@ -65,6 +65,7 @@ namespace multipleForms
                         passwordTextBox.Text = reader["Password"].ToString();
                         emailTextBox.Text = reader["Email"].ToString();
                         phoneTextBox.Text = reader["Phone"].ToString();
+                        addressTextBox.Text = reader["Address"].ToString();
                         // If avatar path exists set the image in avataPictureBox
                         if (reader["Avatar"] != DBNull.Value)
                         {
@@ -114,6 +115,46 @@ namespace multipleForms
         {
             pm.exitApp_Click(sender, e);
         }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            vlogin = pm.isLoggedIn(currentUser);
+            if (vlogin)
+            {
+                string uname = usernameTextBox.Text;
+                string pwd = passwordTextBox.Text;
+                string email = emailTextBox.Text;
+                string phone = phoneTextBox.Text;
+                string address = addressTextBox.Text;
+                vmail = pm.IsValidEmail(email);
+                if (!vmail)
+                {
+                    MessageBox.Show("enter a valid email");
+                }
+                else if (uname == "" || pwd == "")
+                {
+                    MessageBox.Show("fill in required fields");
+                }
+                else
+                {
+                    string updateQuery = "UPDATE users SET Username='" + uname + "', [Password]='" + pwd + "', Email='" + email + "', Phone='"+phone+"', Address='"+address+"' WHERE Username='" + currentUser + "'";
+                    pm.connectionOpen(updateQuery);
+                    MessageBox.Show("...profile updated...");
+                    pm.connectionClose();
+                    currentUser = uname;
+                }
+            }
+        }
+        /// <summary>
+        /// Show/hide the password text.
+        /// </summary>
+        /// <param name="sender">showpasswordCheckBox</param>
+        /// <param name="e">CheckedChanged</param>
+        private void showpasswordCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            pm.showPassword(sender, e, showpasswordCheckBox, passwordTextBox);
+        }
+
         /// <summary>
         /// Call to method startupForm_Click in publicMethods class to go back to startup form.
         /// </summary>
@@ -131,12 +172,9 @@ namespace multipleForms
         /// <param name="e">Click</param>
         private void avatarUploadButton_Click(object sender, EventArgs e)
         {
-            // Check if user has logged in
-            if (currentUser == "")
-            {
-                MessageBox.Show("Need to login or signup first!");
-            }
-            else
+            // Check if user has logged in.
+            vlogin = pm.isLoggedIn(currentUser);
+            if (vlogin)
             {
                 try
                 {
@@ -159,16 +197,10 @@ namespace multipleForms
                             System.IO.File.Copy(imgDialog.FileName, imagesLocation + imgName);
                             avatarPictureBox.ImageLocation = imgNewPath;
                             // Database entry.
-                            string connectionString = Properties.Settings.Default.aggeliesConnectionString;
                             string updateQuery = "UPDATE users SET Avatar='" + imgNewPath + "' WHERE Username='" + currentUser + "'";
-
-                            OleDbConnection connection = new OleDbConnection(connectionString);
-                            OleDbCommand command = new OleDbCommand(updateQuery, connection);
-
-                            connection.Open();
-                            command.ExecuteNonQuery();
-                            MessageBox.Show("photo updated");
-                            connection.Close();
+                            pm.connectionOpen(updateQuery);
+                            MessageBox.Show("...photo updated...");
+                            pm.connectionClose();
                         }
                     }
                 }
@@ -186,20 +218,15 @@ namespace multipleForms
         private void avatarRemoveButton_Click(object sender, EventArgs e)
         {
             // Check if user has logged in
-            if (currentUser == "")
-            {
-                MessageBox.Show("Need to login or signup first!");
-            }
-            else
+            vlogin = pm.isLoggedIn(currentUser);
+            if (vlogin)
             {
                 // Update Query, connection open.
                 string updateQuery = "UPDATE users SET Avatar='' WHERE Username='" + currentUser + "'";
-                OleDbConnection connection = new OleDbConnection(connectionString);
-                OleDbCommand command = new OleDbCommand(updateQuery, connection);
-                connection.Open();
-                command.ExecuteNonQuery();
+                OleDbConnection connection = new OleDbConnection(pm.getConnString());
+                pm.connectionOpen(updateQuery);
                 MessageBox.Show("photo removed");
-                connection.Close();
+                pm.connectionClose();
                 avatarPictureBox.Image = avatarPictureBox.InitialImage;
             }
         }

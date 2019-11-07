@@ -16,6 +16,7 @@ namespace multipleForms
         #region variables
         // Connection String and publicMethod object
         string connectionString = Properties.Settings.Default.aggeliesConnectionString;
+        bool vmail;
         publicMethods pm = new publicMethods();
         #endregion
 
@@ -82,68 +83,40 @@ namespace multipleForms
         private void dosignupButton_Click(object sender, EventArgs e)
         {
             // Get user input.
-            string uname = usernameText.Text;
-            string pwd = passwordText.Text;
-            string email = emailText.Text;
-            string phone = phoneText.Text;
+            string uname = usernameTextBox.Text;
+            string pwd = passwordTextBox.Text;
+            string email = emailTextBox.Text;
+            string phone = phoneTextBox.Text;
             // Remove whitespaces at start and end of string.
             uname.Trim();
             // Check if email is in valid format.
-            bool vmail = IsValidEmail(email);
+            vmail = pm.IsValidEmail(email);
             if (!vmail)
             {
                 MessageBox.Show("invalid mail format");
             }
             else
             {
-                // Setup Query and command.
+                // Setup Query.
                 string insertQuery = "INSERT INTO users (Username, [Password], Email, Phone) VALUES ('" + uname + "','" + pwd + "','" + email + "','" + phone + "')";
-                OleDbConnection connection = new OleDbConnection(connectionString);
-                OleDbCommand command = new OleDbCommand(insertQuery, connection);
-                // Open connection
-                connection.Open();
-                command.ExecuteNonQuery();
+                pm.connectionOpen(insertQuery);
                 MessageBox.Show("user inserted - test to login");
-                connection.Close();
+                pm.connectionClose();
                 // Switch to startupForm
                 pm.startupForm_Click(sender, e);
             }
         }
         /// <summary>
-        /// Check the email provided by user.
-        /// </summary>
-        /// <param name="email">User string</param>
-        /// <returns></returns>
-        bool IsValidEmail(string email)
-        {
-            try
-            {
-                var addr = new System.Net.Mail.MailAddress(email);
-                return addr.Address == email;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-        /// <summary>
-        /// Show/hide the text in passwordText textBox
+        /// Show/hide the password text.
         /// </summary>
         /// <param name="sender">showpasswordCheckBox</param>
-        /// <param name="e">Checked</param>
+        /// <param name="e">CheckedChanged</param>
         private void showpasswordCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (showpasswordCheckBox.Checked)
-            {
-                passwordText.PasswordChar = '\0';
-                showpasswordCheckBox.Text = "hide";
-            }
-            else
-            {
-                passwordText.PasswordChar = '*';
-                showpasswordCheckBox.Text = "show";
-            }
+            pm.showPassword(sender, e, showpasswordCheckBox, passwordTextBox);
         }
         #endregion
+
+
     }
 }

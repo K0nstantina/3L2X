@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,24 @@ namespace multipleForms
 {
     public class publicMethods
     {
+        #region variables
+        // Connection String and publicMethod object
+        static string connectionString = Properties.Settings.Default.aggeliesConnectionString;
+        OleDbConnection connection = new OleDbConnection(connectionString);
+        OleDbCommand command;
+        #endregion
+
+        #region public methods
+
+        /// <summary>
+        /// Get the connection String
+        /// </summary>
+        /// <returns>connectionString</returns>
+        public string getConnString()
+        {
+            return connectionString;
+        }
+
         /// <summary>
         /// Exits the application.
         /// </summary>
@@ -32,5 +51,74 @@ namespace multipleForms
             startupForm startform = new startupForm();
             startform.Show();
         }
+
+        /// <summary>
+        /// Check the email provided by user.
+        /// </summary>
+        /// <param name="email">User string</param>
+        /// <returns></returns>
+        public bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Opens the database connection 
+        /// Execute nonQuery command
+        /// </summary>
+        /// <param name="query">String</param>
+        public void connectionOpen(string query)
+        {
+            command = new OleDbCommand(query, connection);
+            connection.Open();
+            command.ExecuteNonQuery();
+        }
+
+        /// <summary>
+        /// Closes the current connection to database
+        /// </summary>
+        public void connectionClose()
+        {
+            connection.Close();
+        }
+        /// <summary>
+        /// Show/hide the text in passwordText textBox
+        /// </summary>
+        /// <param name="sender">showpasswordCheckBox</param>
+        /// <param name="e">Checked</param>
+        public void showPassword(object sender, EventArgs e, CheckBox cb, TextBox tb)
+        {
+            if (cb.Checked)
+            {
+                tb.PasswordChar = '\0';
+                cb.Text = "hide";
+            }
+            else
+            {
+                tb.PasswordChar = '*';
+                cb.Text = "show";
+            }
+        }
+        public Boolean isLoggedIn(string user)
+        {
+            if (user == "")
+            {
+                MessageBox.Show("Need to login or signup first!");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        #endregion
     }
 }
