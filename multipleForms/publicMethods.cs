@@ -56,7 +56,7 @@ namespace multipleForms
         /// Check the email provided by user.
         /// </summary>
         /// <param name="email">User string</param>
-        /// <returns></returns>
+        /// <returns>boolean</returns>
         public bool IsValidEmail(string email)
         {
             try
@@ -107,6 +107,11 @@ namespace multipleForms
                 cb.Text = "show";
             }
         }
+        /// <summary>
+        /// Check if user is logged in
+        /// </summary>
+        /// <param name="user">userName</param>
+        /// <returns>boolean</returns>
         public Boolean isLoggedIn(string user)
         {
             if (user == "")

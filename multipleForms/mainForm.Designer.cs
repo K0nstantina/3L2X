@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.welcomeMsgLabel = new System.Windows.Forms.Label();
             this.exitPictureBox = new System.Windows.Forms.PictureBox();
@@ -35,6 +36,8 @@
             this.bottomPanel = new System.Windows.Forms.Panel();
             this.userTabControl = new System.Windows.Forms.TabControl();
             this.accountTab = new System.Windows.Forms.TabPage();
+            this.altPhoneLabel = new System.Windows.Forms.Label();
+            this.altPhoneTextBox = new System.Windows.Forms.TextBox();
             this.showpasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.saveButton = new System.Windows.Forms.Button();
             this.avatarRemoveButton = new System.Windows.Forms.Button();
@@ -51,10 +54,14 @@
             this.avatarUploadButton = new System.Windows.Forms.Button();
             this.avatarPictureBox = new System.Windows.Forms.PictureBox();
             this.adsTab = new System.Windows.Forms.TabPage();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.categoryComboBox = new System.Windows.Forms.ComboBox();
+            this.desciptionTextBox = new System.Windows.Forms.TextBox();
+            this.adsListBox = new System.Windows.Forms.ListBox();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.altPhoneLabel = new System.Windows.Forms.Label();
-            this.altPhoneTextBox = new System.Windows.Forms.TextBox();
+            this.adCategoriesDatabaseDataSet = new multipleForms.AdCategoriesDatabaseDataSet();
+            this.adCategoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.adCategoriesTableAdapter = new multipleForms.AdCategoriesDatabaseDataSetTableAdapters.AdCategoriesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).BeginInit();
             this.bottomPanel.SuspendLayout();
             this.userTabControl.SuspendLayout();
@@ -62,6 +69,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
             this.adsTab.SuspendLayout();
             this.mainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.adCategoriesDatabaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adCategoriesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // welcomeMsgLabel
@@ -78,7 +87,7 @@
             // 
             this.exitPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.exitPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("exitPictureBox.Image")));
-            this.exitPictureBox.Location = new System.Drawing.Point(752, 11);
+            this.exitPictureBox.Location = new System.Drawing.Point(750, 11);
             this.exitPictureBox.Name = "exitPictureBox";
             this.exitPictureBox.Size = new System.Drawing.Size(37, 35);
             this.exitPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -106,7 +115,7 @@
             this.bottomPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.bottomPanel.Location = new System.Drawing.Point(0, 0);
             this.bottomPanel.Name = "bottomPanel";
-            this.bottomPanel.Size = new System.Drawing.Size(800, 93);
+            this.bottomPanel.Size = new System.Drawing.Size(798, 93);
             this.bottomPanel.TabIndex = 16;
             this.bottomPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             // 
@@ -121,7 +130,7 @@
             this.userTabControl.Name = "userTabControl";
             this.userTabControl.Padding = new System.Drawing.Point(0, 0);
             this.userTabControl.SelectedIndex = 0;
-            this.userTabControl.Size = new System.Drawing.Size(800, 625);
+            this.userTabControl.Size = new System.Drawing.Size(798, 505);
             this.userTabControl.TabIndex = 17;
             // 
             // accountTab
@@ -148,10 +157,28 @@
             this.accountTab.Margin = new System.Windows.Forms.Padding(0);
             this.accountTab.Name = "accountTab";
             this.accountTab.Padding = new System.Windows.Forms.Padding(3);
-            this.accountTab.Size = new System.Drawing.Size(792, 589);
+            this.accountTab.Size = new System.Drawing.Size(790, 469);
             this.accountTab.TabIndex = 0;
             this.accountTab.Text = "Account Management";
             this.accountTab.UseVisualStyleBackColor = true;
+            // 
+            // altPhoneLabel
+            // 
+            this.altPhoneLabel.AutoSize = true;
+            this.altPhoneLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.altPhoneLabel.Location = new System.Drawing.Point(223, 184);
+            this.altPhoneLabel.Name = "altPhoneLabel";
+            this.altPhoneLabel.Size = new System.Drawing.Size(94, 26);
+            this.altPhoneLabel.TabIndex = 30;
+            this.altPhoneLabel.Text = "Alt Phone";
+            // 
+            // altPhoneTextBox
+            // 
+            this.altPhoneTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.altPhoneTextBox.Location = new System.Drawing.Point(334, 180);
+            this.altPhoneTextBox.Name = "altPhoneTextBox";
+            this.altPhoneTextBox.Size = new System.Drawing.Size(291, 29);
+            this.altPhoneTextBox.TabIndex = 29;
             // 
             // showpasswordCheckBox
             // 
@@ -306,24 +333,57 @@
             // 
             // adsTab
             // 
-            this.adsTab.Controls.Add(this.listBox1);
+            this.adsTab.Controls.Add(this.textBox1);
+            this.adsTab.Controls.Add(this.categoryComboBox);
+            this.adsTab.Controls.Add(this.desciptionTextBox);
+            this.adsTab.Controls.Add(this.adsListBox);
             this.adsTab.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adsTab.Location = new System.Drawing.Point(4, 32);
             this.adsTab.Name = "adsTab";
             this.adsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.adsTab.Size = new System.Drawing.Size(774, 431);
+            this.adsTab.Size = new System.Drawing.Size(790, 469);
             this.adsTab.TabIndex = 1;
             this.adsTab.Text = "Ads Management";
             this.adsTab.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // textBox1
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 26;
-            this.listBox1.Location = new System.Drawing.Point(7, 6);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 82);
-            this.listBox1.TabIndex = 0;
+            this.textBox1.Location = new System.Drawing.Point(419, 60);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(331, 224);
+            this.textBox1.TabIndex = 3;
+            // 
+            // categoryComboBox
+            // 
+            this.categoryComboBox.DataSource = this.adCategoriesBindingSource;
+            this.categoryComboBox.DisplayMember = "adCatTitle";
+            this.categoryComboBox.FormattingEnabled = true;
+            this.categoryComboBox.Location = new System.Drawing.Point(195, 7);
+            this.categoryComboBox.Name = "categoryComboBox";
+            this.categoryComboBox.Size = new System.Drawing.Size(121, 34);
+            this.categoryComboBox.TabIndex = 2;
+            this.categoryComboBox.ValueMember = "adCatID";
+            // 
+            // desciptionTextBox
+            // 
+            this.desciptionTextBox.Location = new System.Drawing.Point(194, 364);
+            this.desciptionTextBox.Multiline = true;
+            this.desciptionTextBox.Name = "desciptionTextBox";
+            this.desciptionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.desciptionTextBox.Size = new System.Drawing.Size(593, 102);
+            this.desciptionTextBox.TabIndex = 1;
+            // 
+            // adsListBox
+            // 
+            this.adsListBox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.adsListBox.FormattingEnabled = true;
+            this.adsListBox.ItemHeight = 26;
+            this.adsListBox.Location = new System.Drawing.Point(3, 3);
+            this.adsListBox.Name = "adsListBox";
+            this.adsListBox.Size = new System.Drawing.Size(185, 463);
+            this.adsListBox.TabIndex = 0;
+            this.adsListBox.SelectedIndexChanged += new System.EventHandler(this.adsListBox_SelectedIndexChanged);
             // 
             // mainPanel
             // 
@@ -333,38 +393,35 @@
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(802, 720);
+            this.mainPanel.Size = new System.Drawing.Size(800, 600);
             this.mainPanel.TabIndex = 18;
             this.mainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             // 
-            // altPhoneLabel
+            // adCategoriesDatabaseDataSet
             // 
-            this.altPhoneLabel.AutoSize = true;
-            this.altPhoneLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.altPhoneLabel.Location = new System.Drawing.Point(223, 184);
-            this.altPhoneLabel.Name = "altPhoneLabel";
-            this.altPhoneLabel.Size = new System.Drawing.Size(94, 26);
-            this.altPhoneLabel.TabIndex = 30;
-            this.altPhoneLabel.Text = "Alt Phone";
+            this.adCategoriesDatabaseDataSet.DataSetName = "AdCategoriesDatabaseDataSet";
+            this.adCategoriesDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // altPhoneTextBox
+            // adCategoriesBindingSource
             // 
-            this.altPhoneTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.altPhoneTextBox.Location = new System.Drawing.Point(334, 180);
-            this.altPhoneTextBox.Name = "altPhoneTextBox";
-            this.altPhoneTextBox.Size = new System.Drawing.Size(291, 29);
-            this.altPhoneTextBox.TabIndex = 29;
+            this.adCategoriesBindingSource.DataMember = "AdCategories";
+            this.adCategoriesBindingSource.DataSource = this.adCategoriesDatabaseDataSet;
+            // 
+            // adCategoriesTableAdapter
+            // 
+            this.adCategoriesTableAdapter.ClearBeforeFill = true;
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 720);
+            this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.mainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "mainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "3L2X - main";
+            this.Load += new System.EventHandler(this.mainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).EndInit();
             this.bottomPanel.ResumeLayout(false);
             this.userTabControl.ResumeLayout(false);
@@ -372,7 +429,10 @@
             this.accountTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
             this.adsTab.ResumeLayout(false);
+            this.adsTab.PerformLayout();
             this.mainPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.adCategoriesDatabaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adCategoriesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -401,8 +461,14 @@
         private System.Windows.Forms.Button avatarRemoveButton;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.CheckBox showpasswordCheckBox;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox adsListBox;
         private System.Windows.Forms.Label altPhoneLabel;
         private System.Windows.Forms.TextBox altPhoneTextBox;
+        private System.Windows.Forms.TextBox desciptionTextBox;
+        private System.Windows.Forms.ComboBox categoryComboBox;
+        private System.Windows.Forms.TextBox textBox1;
+        private AdCategoriesDatabaseDataSet adCategoriesDatabaseDataSet;
+        private System.Windows.Forms.BindingSource adCategoriesBindingSource;
+        private AdCategoriesDatabaseDataSetTableAdapters.AdCategoriesTableAdapter adCategoriesTableAdapter;
     }
 }

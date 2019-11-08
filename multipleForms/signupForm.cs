@@ -76,6 +76,15 @@ namespace multipleForms
             pm.startupForm_Click(sender, e);
         }
         /// <summary>
+        /// Show/hide the password text.
+        /// </summary>
+        /// <param name="sender">showpasswordCheckBox</param>
+        /// <param name="e">CheckedChanged</param>
+        private void showpasswordCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            pm.showPassword(sender, e, showpasswordCheckBox, passwordTextBox);
+        }
+        /// <summary>
         /// Check user input and insert into users table.
         /// </summary>
         /// <param name="sender">dosignupButton</param>
@@ -86,7 +95,17 @@ namespace multipleForms
             string uname = usernameTextBox.Text;
             string pwd = passwordTextBox.Text;
             string email = emailTextBox.Text;
-            string phone = phoneTextBox.Text;
+            int phone=0;
+            // Check if phone is in number format.
+            try
+            {
+                phone = int.Parse(phoneTextBox.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("phone must contain only numbers!");
+                return;
+            }
             // Remove whitespaces at start and end of string.
             uname.Trim();
             // Check if email is in valid format.
@@ -98,23 +117,16 @@ namespace multipleForms
             else
             {
                 // Setup Query.
-                string insertQuery = "INSERT INTO users (Username, [Password], Email, Phone) VALUES ('" + uname + "','" + pwd + "','" + email + "','" + phone + "')";
+                string insertQuery = "INSERT INTO Users (userName, userPassword, userEmail, userPhone, userPrivilages) " +
+                    "VALUES ('" + uname + "','" + pwd + "','" + email + "','" + phone + "',2)";
                 pm.connectionOpen(insertQuery);
                 MessageBox.Show("user inserted - test to login");
                 pm.connectionClose();
-                // Switch to startupForm
+                // Switch to startupForm.
                 pm.startupForm_Click(sender, e);
             }
         }
-        /// <summary>
-        /// Show/hide the password text.
-        /// </summary>
-        /// <param name="sender">showpasswordCheckBox</param>
-        /// <param name="e">CheckedChanged</param>
-        private void showpasswordCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            pm.showPassword(sender, e, showpasswordCheckBox, passwordTextBox);
-        }
+
         #endregion
 
 

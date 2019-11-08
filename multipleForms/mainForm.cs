@@ -17,7 +17,12 @@ namespace multipleForms
         // Path to images folder in the application.
         private string imagesLocation = @"C:\Users\TEO\Source\examples\multipleForms\multipleForms\images\";
         private string currentUser, imgPath, imgName, imgNewPath;
+        // Valid login and valid email
         bool vlogin, vmail;
+        // Indexes the userAdds List
+        int index = 0;
+        User validUser=new User();
+        List<Adds> userAdds=new List<Adds>();
         // publicMethods object
         publicMethods pm = new publicMethods();
         #endregion
@@ -44,39 +49,63 @@ namespace multipleForms
                 // Set welcome text.
                 welcomeMsgLabel.Text += "Guest";
             }
+            // Valid user session
             else
             {
-                // User session (loginForm dologinButton).
+                // Set current user session and create new user.
                 currentUser = user;
+                validUser = new User(currentUser);
                 InitializeComponent();
                 // Set welcome text.
-                welcomeMsgLabel.Text += currentUser;
-                // Start the connection to get users attributes.
-                string uname = "SELECT * FROM Users WHERE userName='" + currentUser + "'";
+                welcomeMsgLabel.Text += currentUser;                    
+                // Populate the fields in account management tab.
+                usernameTextBox.Text = validUser.getUserName();
+                passwordTextBox.Text = validUser.getUserPassword();
+                emailTextBox.Text = validUser.getUserEmail();
+                phoneTextBox.Text = validUser.getUserPhone();
+                altPhoneTextBox.Text = validUser.getUserAltPhone();
+                addressTextBox.Text = validUser.getUserAddress();
+                avatarPictureBox.ImageLocation = validUser.getUserImage();
+
+                // Get the users ads and make a userAdds List.
+                string selectQuery = "SELECT * FROM Ads WHERE adOwner=" + int.Parse(validUser.getUserID());
                 using (OleDbConnection connection = new OleDbConnection(pm.getConnString()))
                 {
-                    OleDbCommand command = new OleDbCommand(uname, connection);
+                    OleDbCommand command = new OleDbCommand(selectQuery, connection);
                     connection.Open();
                     OleDbDataReader reader = command.ExecuteReader();
-                    // For each attribute update the fields.
+                    // For each attribute set the variables.
                     while (reader.Read())
                     {
-                        usernameTextBox.Text = reader["userName"].ToString();
-                        passwordTextBox.Text = reader["userPassword"].ToString();
-                        emailTextBox.Text = reader["userEmail"].ToString();
-                        phoneTextBox.Text = reader["userPhone"].ToString();
-                        altPhoneTextBox.Text = reader["userAltPhone"].ToString();
-                        addressTextBox.Text = reader["userAdress"].ToString();
-                        listBox1.Items.Add(reader["userName"].ToString());
-                        listBox1.Items.Add(reader["userEmail"].ToString());
-                        // If avatar path exists set the image in avataPictureBox
-                        if (reader["userImage"] != DBNull.Value)
-                        {
-                            avatarPictureBox.ImageLocation = reader["userImage"].ToString();
-                        }
+                        // Populate adsListBox in Ads Management tab.
+                        adsListBox.Items.Add(reader["adTitle"].ToString());
+                        // Get ad values.
+                        string adID = reader["adID"].ToString();
+                        string adCategory = reader["adCategory"].ToString();
+                        string adOwner = reader["adOwner"].ToString();
+                        string adObj = reader["adObj"].ToString();
+                        string adDesc = reader["adDesc"].ToString();
+                        string adCreation = reader["adCreation"].ToString();
+                        string adModification = reader["adModification"].ToString();
+                        string adImages = reader["adImages"].ToString();
+                        string adTitle = reader["adTitle"].ToString();
+                        // Add the new ad to userAdds List.
+                        userAdds.Add(new Adds(adID, adOwner, adCategory, adObj, adDesc, adCreation, adModification, adImages, adTitle));
                     }
-                    // Close reading.
                     reader.Close();
+                }
+                // Check if user lists any ads.
+                if (adsListBox.Items.Count > 0)
+                {
+                    adsListBox.SelectedIndex = 0;
+                    index = adsListBox.SelectedIndex;
+                    desciptionTextBox.Text = userAdds[index].getAdDesc();
+                    categoryComboBox.SelectedValue = userAdds[index].getAdCategory();
+                }
+                // FOR DEBUGGING....
+                for(int i = 0; i < userAdds.Count; i++)
+                {
+                    textBox1.Text += "category: "+userAdds[i].getAdCategory() + ", title: "+userAdds[i].getAdTitle()+"\n";
                 }
             }
         }
@@ -118,7 +147,11 @@ namespace multipleForms
         {
             pm.exitApp_Click(sender, e);
         }
-
+        /// <summary>
+        /// Inserts user profile changes to the database.
+        /// </summary>
+        /// <param name="sender">saveButton</param>
+        /// <param name="e">Click</param>
         private void saveButton_Click(object sender, EventArgs e)
         {
             vlogin = pm.isLoggedIn(currentUser);
@@ -130,15 +163,18 @@ namespace multipleForms
                 string phone = phoneTextBox.Text;
                 string altphone = altPhoneTextBox.Text;
                 string address = addressTextBox.Text;
+                // Check email format.
                 vmail = pm.IsValidEmail(email);
                 if (!vmail)
                 {
                     MessageBox.Show("enter a valid email");
                 }
+                // Check if username or password fields are empty.
                 else if (uname == "" || pwd == "")
                 {
                     MessageBox.Show("fill in required fields");
                 }
+                // If changes are valid.
                 else
                 {
                     string updateQuery = "UPDATE users SET userName='" + uname + "', userPassword='" + pwd + "', userEmail='" + email + "', userPhone='"+phone+"',userAltPhone='"+altphone+"', userAdress='"+address+"' WHERE userName='" + currentUser + "'";
@@ -148,6 +184,27 @@ namespace multipleForms
                     currentUser = uname;
                 }
             }
+        }
+        /// <summary>
+        /// Sets descriptioTextBox text and categoryComboBox according to selected ad.
+        /// </summary>
+        /// <param name="sender">adsListBox</param>
+        /// <param name="e">SelectedIndexChanged</param>
+        private void adsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            index = adsListBox.SelectedIndex;
+            desciptionTextBox.Text = userAdds[index].getAdDesc()+" "+index+" "+ userAdds[index].getAdCategory();
+            categoryComboBox.SelectedValue = userAdds[index].getAdCategory();
+        }
+        /// <summary>
+        /// Auto-Generated code
+        /// </summary>
+        /// <param name="sender">mainForm</param>
+        /// <param name="e">Load</param>
+        private void mainForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'adCategoriesDatabaseDataSet.AdCategories' table. You can move, or remove it, as needed.
+            this.adCategoriesTableAdapter.Fill(this.adCategoriesDatabaseDataSet.AdCategories);
         }
         /// <summary>
         /// Show/hide the password text.
