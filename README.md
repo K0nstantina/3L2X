@@ -29,6 +29,6 @@ Bug:
 * Αλλάξτε το path στον κώδικα του mainForm.cs στη μεταβλητή imagesLocation (στο region variables) να δείχνει στο φάκελο images του project. 
 
 **Χρήστες για δοκιμή:**  
-admin admin
-user user
+admin admin  
+user user  
 kostas petrellis
