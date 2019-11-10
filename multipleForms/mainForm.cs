@@ -67,40 +67,42 @@ namespace multipleForms
                 addressTextBox.Text = validUser.getUserAddress();
                 avatarPictureBox.ImageLocation = validUser.getUserImage();
 
-                // Get the users ads and make a userAdds List.
-                string selectQuery = "SELECT * FROM Ads WHERE adOwner=" + int.Parse(validUser.getUserID());
-                using (OleDbConnection connection = new OleDbConnection(pm.getConnString()))
-                {
-                    OleDbCommand command = new OleDbCommand(selectQuery, connection);
-                    connection.Open();
-                    OleDbDataReader reader = command.ExecuteReader();
-                    // For each attribute set the variables.
-                    while (reader.Read())
-                    {
-                        // Populate adsListBox in Ads Management tab.
-                        adsListBox.Items.Add(reader["adTitle"].ToString());
-                        // Get ad values.
-                        string adID = reader["adID"].ToString();
-                        string adCategory = reader["adCategory"].ToString();
-                        string adOwner = reader["adOwner"].ToString();
-                        string adObj = reader["adObj"].ToString();
-                        string adDesc = reader["adDesc"].ToString();
-                        string adCreation = reader["adCreation"].ToString();
-                        string adModification = reader["adModification"].ToString();
-                        string adImages = reader["adImages"].ToString();
-                        string adTitle = reader["adTitle"].ToString();
-                        // Add the new ad to userAdds List.
-                        userAdds.Add(new Adds(adID, adOwner, adCategory, adObj, adDesc, adCreation, adModification, adImages, adTitle));
-                    }
-                    reader.Close();
-                }
+                //adsTableAdapter.FillBy(adOwner:, int.Parse(validUser.getUserID()));
+
+                //// Get the users ads and make a userAdds List.
+                //string selectQuery = "SELECT * FROM Ads WHERE adOwner=" + int.Parse(validUser.getUserID());
+                //using (OleDbConnection connection = new OleDbConnection(pm.getConnString()))
+                //{
+                //    OleDbCommand command = new OleDbCommand(selectQuery, connection);
+                //    connection.Open();
+                //    OleDbDataReader reader = command.ExecuteReader();
+                //    // For each attribute set the variables.
+                //    while (reader.Read())
+                //    {
+                //        // Populate adsListBox in Ads Management tab.
+                //        adsListBox.Items.Add(reader["adTitle"].ToString());
+                //        // Get ad values.
+                //        string adID = reader["adID"].ToString();
+                //        string adCategory = reader["adCategory"].ToString();
+                //        string adOwner = reader["adOwner"].ToString();
+                //        string adObj = reader["adObj"].ToString();
+                //        string adDesc = reader["adDesc"].ToString();
+                //        string adCreation = reader["adCreation"].ToString();
+                //        string adModification = reader["adModification"].ToString();
+                //        string adImages = reader["adImages"].ToString();
+                //        string adTitle = reader["adTitle"].ToString();
+                //        // Add the new ad to userAdds List.
+                //        userAdds.Add(new Adds(adID, adOwner, adCategory, adObj, adDesc, adCreation, adModification, adImages, adTitle));
+                //    }
+                //    reader.Close();
+                //}
                 // Check if user lists any ads.
                 if (adsListBox.Items.Count > 0)
                 {
                     adsListBox.SelectedIndex = 0;
                     index = adsListBox.SelectedIndex;
                     desciptionTextBox.Text = userAdds[index].getAdDesc();
-                    categoryComboBox.SelectedValue = userAdds[index].getAdCategory();
+                    categoryComboBox.SelectedValue = userAdds[index].getAdCategory(); // BUG: Statring value is not set correctly
                 }
                 // FOR DEBUGGING....
                 for(int i = 0; i < userAdds.Count; i++)
@@ -190,12 +192,12 @@ namespace multipleForms
         /// </summary>
         /// <param name="sender">adsListBox</param>
         /// <param name="e">SelectedIndexChanged</param>
-        private void adsListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            index = adsListBox.SelectedIndex;
-            desciptionTextBox.Text = userAdds[index].getAdDesc()+" "+index+" "+ userAdds[index].getAdCategory();
-            categoryComboBox.SelectedValue = userAdds[index].getAdCategory();
-        }
+        //private void adsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    index = adsListBox.SelectedIndex;
+        //    //desciptionTextBox.Text = userAdds[index].getAdDesc()+" "+index+" "+ userAdds[index].getAdCategory();
+        //    categoryComboBox.SelectedValue = userAdds[index].getAdCategory();
+        //}
         /// <summary>
         /// Auto-Generated code
         /// </summary>
@@ -203,9 +205,13 @@ namespace multipleForms
         /// <param name="e">Load</param>
         private void mainForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'aggeliesDatabaseDataSet.Ads' table. You can move, or remove it, as needed.
+            this.adsTableAdapter.Fill(this.aggeliesDatabaseDataSet.Ads);
             // TODO: This line of code loads data into the 'adCategoriesDatabaseDataSet.AdCategories' table. You can move, or remove it, as needed.
             this.adCategoriesTableAdapter.Fill(this.adCategoriesDatabaseDataSet.AdCategories);
         }
+
+
         /// <summary>
         /// Show/hide the password text.
         /// </summary>

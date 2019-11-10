@@ -52,6 +52,14 @@
       <DependentUpon>AdCategoriesDatabaseDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Adds.cs" />
+    <Compile Include="AggeliesDatabaseDataSet.cs">
+      <DependentUpon>AggeliesDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AggeliesDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AggeliesDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="mainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +119,17 @@
     </None>
     <None Include="AdCategoriesDatabaseDataSet.xss">
       <DependentUpon>AdCategoriesDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AggeliesDatabaseDataSet.xsc">
+      <DependentUpon>AggeliesDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AggeliesDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AggeliesDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AggeliesDatabaseDataSet.xss">
+      <DependentUpon>AggeliesDatabaseDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

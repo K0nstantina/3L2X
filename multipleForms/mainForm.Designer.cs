@@ -56,21 +56,26 @@
             this.adsTab = new System.Windows.Forms.TabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.categoryComboBox = new System.Windows.Forms.ComboBox();
+            this.adCategoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.adCategoriesDatabaseDataSet = new multipleForms.AdCategoriesDatabaseDataSet();
             this.desciptionTextBox = new System.Windows.Forms.TextBox();
             this.adsListBox = new System.Windows.Forms.ListBox();
+            this.adsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aggeliesDatabaseDataSet = new multipleForms.AggeliesDatabaseDataSet();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.adCategoriesDatabaseDataSet = new multipleForms.AdCategoriesDatabaseDataSet();
-            this.adCategoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.adCategoriesTableAdapter = new multipleForms.AdCategoriesDatabaseDataSetTableAdapters.AdCategoriesTableAdapter();
+            this.adsTableAdapter = new multipleForms.AggeliesDatabaseDataSetTableAdapters.AdsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).BeginInit();
             this.bottomPanel.SuspendLayout();
             this.userTabControl.SuspendLayout();
             this.accountTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
             this.adsTab.SuspendLayout();
-            this.mainPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.adCategoriesDatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adCategoriesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adCategoriesDatabaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aggeliesDatabaseDataSet)).BeginInit();
+            this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // welcomeMsgLabel
@@ -333,6 +338,7 @@
             // 
             // adsTab
             // 
+            this.adsTab.AutoScroll = true;
             this.adsTab.Controls.Add(this.textBox1);
             this.adsTab.Controls.Add(this.categoryComboBox);
             this.adsTab.Controls.Add(this.desciptionTextBox);
@@ -365,6 +371,16 @@
             this.categoryComboBox.TabIndex = 2;
             this.categoryComboBox.ValueMember = "adCatID";
             // 
+            // adCategoriesBindingSource
+            // 
+            this.adCategoriesBindingSource.DataMember = "AdCategories";
+            this.adCategoriesBindingSource.DataSource = this.adCategoriesDatabaseDataSet;
+            // 
+            // adCategoriesDatabaseDataSet
+            // 
+            this.adCategoriesDatabaseDataSet.DataSetName = "AdCategoriesDatabaseDataSet";
+            this.adCategoriesDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // desciptionTextBox
             // 
             this.desciptionTextBox.Location = new System.Drawing.Point(194, 364);
@@ -376,6 +392,8 @@
             // 
             // adsListBox
             // 
+            this.adsListBox.DataSource = this.adsBindingSource;
+            this.adsListBox.DisplayMember = "adTitle";
             this.adsListBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.adsListBox.FormattingEnabled = true;
             this.adsListBox.ItemHeight = 26;
@@ -383,7 +401,18 @@
             this.adsListBox.Name = "adsListBox";
             this.adsListBox.Size = new System.Drawing.Size(185, 463);
             this.adsListBox.TabIndex = 0;
-            this.adsListBox.SelectedIndexChanged += new System.EventHandler(this.adsListBox_SelectedIndexChanged);
+            this.adsListBox.ValueMember = "adID";
+            //this.adsListBox.SelectedIndexChanged += new System.EventHandler(this.adsListBox_SelectedIndexChanged);
+            // 
+            // adsBindingSource
+            // 
+            this.adsBindingSource.DataMember = "Ads";
+            this.adsBindingSource.DataSource = this.aggeliesDatabaseDataSet;
+            // 
+            // aggeliesDatabaseDataSet
+            // 
+            this.aggeliesDatabaseDataSet.DataSetName = "AggeliesDatabaseDataSet";
+            this.aggeliesDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // mainPanel
             // 
@@ -397,19 +426,13 @@
             this.mainPanel.TabIndex = 18;
             this.mainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             // 
-            // adCategoriesDatabaseDataSet
-            // 
-            this.adCategoriesDatabaseDataSet.DataSetName = "AdCategoriesDatabaseDataSet";
-            this.adCategoriesDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // adCategoriesBindingSource
-            // 
-            this.adCategoriesBindingSource.DataMember = "AdCategories";
-            this.adCategoriesBindingSource.DataSource = this.adCategoriesDatabaseDataSet;
-            // 
             // adCategoriesTableAdapter
             // 
             this.adCategoriesTableAdapter.ClearBeforeFill = true;
+            // 
+            // adsTableAdapter
+            // 
+            this.adsTableAdapter.ClearBeforeFill = true;
             // 
             // mainForm
             // 
@@ -430,9 +453,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
             this.adsTab.ResumeLayout(false);
             this.adsTab.PerformLayout();
-            this.mainPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.adCategoriesDatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adCategoriesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adCategoriesDatabaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aggeliesDatabaseDataSet)).EndInit();
+            this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -470,5 +495,8 @@
         private AdCategoriesDatabaseDataSet adCategoriesDatabaseDataSet;
         private System.Windows.Forms.BindingSource adCategoriesBindingSource;
         private AdCategoriesDatabaseDataSetTableAdapters.AdCategoriesTableAdapter adCategoriesTableAdapter;
+        private AggeliesDatabaseDataSet aggeliesDatabaseDataSet;
+        private System.Windows.Forms.BindingSource adsBindingSource;
+        private AggeliesDatabaseDataSetTableAdapters.AdsTableAdapter adsTableAdapter;
     }
 }
