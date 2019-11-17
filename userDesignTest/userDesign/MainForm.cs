@@ -78,12 +78,54 @@ namespace userDesign
             panels[5].BringToFront();
             page6Button.BackColor = Color.Red;
         }
-
+        /// <summary>
+        /// Resets all buttons backColor to default.
+        /// </summary>
         private void buttonStyle()
         {
             foreach (Button btn in buttons)
             {
                 btn.BackColor = SystemColors.ActiveCaption;
+            }
+        }
+        /// <summary>
+        /// Enables editing the titleTextBox.
+        /// Changes editTitlePictureBox image accordingly.
+        /// </summary>
+        /// <param name="sender">editTitlePictureBox</param>
+        /// <param name="e">Click</param>
+        private void editTitlePictureBox_Click(object sender, EventArgs e)
+        {
+            if (titleTextBox.Enabled == false)
+            {
+                titleTextBox.Enabled = true;
+                editTitlePictureBox.Image = userDesign.Properties.Resources.save1;
+            }
+            else
+            {
+                titleTextBox.Enabled = false;
+                editTitlePictureBox.Image = userDesign.Properties.Resources.edit1;
+            }
+            
+            
+        }
+        /// <summary>
+        /// Enables editing the descriptionRichTextBox.
+        /// Changes editDescriptionPictureBox image accordingly.
+        /// </summary>
+        /// <param name="sender">editTitlePictureBox</param>
+        /// <param name="e">Click</param>
+        private void descriptionEditPictureBox_Click(object sender, EventArgs e)
+        {
+            if (descriptionRichTextBox.Enabled == false)
+            {
+                descriptionRichTextBox.Enabled = true;
+                editDescriptionPictureBox.Image = userDesign.Properties.Resources.save1;
+            }
+            else
+            {
+                descriptionRichTextBox.Enabled = false;
+                editDescriptionPictureBox.Image = userDesign.Properties.Resources.edit1;
             }
         }
     }
