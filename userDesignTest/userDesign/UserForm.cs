@@ -119,7 +119,7 @@ namespace userDesign
         /// </summary>
         /// <param name="sender">editTitlePictureBox</param>
         /// <param name="e">Click</param>
-        private void titleEditPictureBox_Click(object sender, EventArgs e)
+        private void editTitlePictureBox_Click(object sender, EventArgs e)
         {
             if (titleTextBox.Enabled == false)
             {
@@ -150,7 +150,7 @@ namespace userDesign
         /// </summary>
         /// <param name="sender">editTitlePictureBox</param>
         /// <param name="e">Click</param>
-        private void descriptionEditPictureBox_Click(object sender, EventArgs e)
+        private void editDescriptionPictureBox_Click(object sender, EventArgs e)
         {
             if (descriptionRichTextBox.Enabled == false)
             {
