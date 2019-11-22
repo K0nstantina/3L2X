@@ -11,8 +11,8 @@ C:\Users\TEO\Source\examples\userDesign\userDesign\bin\Debug\userDesign.exe.conf
 C:\Users\TEO\Source\examples\userDesign\userDesign\bin\Debug\userDesign.exe
 C:\Users\TEO\Source\examples\userDesign\userDesign\bin\Debug\userDesign.pdb
 C:\Users\TEO\Source\examples\userDesign\userDesign\obj\Debug\userDesign.csprojAssemblyReference.cache
-C:\Users\TEO\Source\examples\userDesign\userDesign\obj\Debug\userDesign.MainForm.resources
 C:\Users\TEO\Source\examples\userDesign\userDesign\obj\Debug\userDesign.Properties.Resources.resources
 C:\Users\TEO\Source\examples\userDesign\userDesign\obj\Debug\userDesign.csproj.GenerateResource.cache
 C:\Users\TEO\Source\examples\userDesign\userDesign\obj\Debug\userDesign.exe
 C:\Users\TEO\Source\examples\userDesign\userDesign\obj\Debug\userDesign.pdb
+C:\Users\TEO\Source\examples\userDesign\userDesign\obj\Debug\userDesign.UserForm.resources
