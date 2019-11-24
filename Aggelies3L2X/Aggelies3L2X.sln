@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdministratorPanel UI", "..\AdministratorPanel\AdministratorPanel UI.csproj", "{E81E7F72-D60E-4863-847E-332A121CBE78}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdministratorPanel UI", "AdministratorPanel\AdministratorPanel UI.csproj", "{E81E7F72-D60E-4863-847E-332A121CBE78}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserApplication UI", "UserApplication\UserApplication UI.csproj", "{6306B2FC-6F9D-4027-9C62-819F7CB2A5B6}"
 EndProject
