@@ -418,7 +418,7 @@
             this.editDescriptionPictureBox.Size = new System.Drawing.Size(30, 30);
             this.editDescriptionPictureBox.TabIndex = 4;
             this.editDescriptionPictureBox.TabStop = false;
-            this.editDescriptionPictureBox.Click += new System.EventHandler(this.editDescriptionPictureBox_Click);
+            this.editDescriptionPictureBox.Click += new System.EventHandler(this.descriptionEditPictureBox_Click);
             // 
             // editTitlePictureBox
             // 
@@ -428,7 +428,7 @@
             this.editTitlePictureBox.Size = new System.Drawing.Size(30, 30);
             this.editTitlePictureBox.TabIndex = 3;
             this.editTitlePictureBox.TabStop = false;
-            this.editTitlePictureBox.Click += new System.EventHandler(this.editTitlePictureBox_Click);
+            this.editTitlePictureBox.Click += new System.EventHandler(this.titleEditPictureBox_Click);
             // 
             // recentAdPanel
             // 

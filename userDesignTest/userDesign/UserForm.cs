@@ -106,6 +106,11 @@ namespace userDesign
         #endregion
 
         #region Private Methods
+        /// <summary>
+        /// Form Load.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MainForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'aggeliesDBDataSet.AdsTable' table. You can move, or remove it, as needed.
@@ -119,7 +124,7 @@ namespace userDesign
         /// </summary>
         /// <param name="sender">editTitlePictureBox</param>
         /// <param name="e">Click</param>
-        private void editTitlePictureBox_Click(object sender, EventArgs e)
+        private void titleEditPictureBox_Click(object sender, EventArgs e)
         {
             if (titleTextBox.Enabled == false)
             {
@@ -135,7 +140,7 @@ namespace userDesign
                     view = adsListBox.SelectedItem as DataRowView;
                     int adID = Int32.Parse(view["adID"].ToString());
                     this.adsTableTableAdapter.UpdateTitleDescQuery(titleTextBox.Text, descriptionRichTextBox.Text, adID);
-                    //pageRefresh();
+                    pageRefresh();
                 }
                 catch (Exception)
                 {
@@ -150,7 +155,7 @@ namespace userDesign
         /// </summary>
         /// <param name="sender">editTitlePictureBox</param>
         /// <param name="e">Click</param>
-        private void editDescriptionPictureBox_Click(object sender, EventArgs e)
+        private void descriptionEditPictureBox_Click(object sender, EventArgs e)
         {
             if (descriptionRichTextBox.Enabled == false)
             {
@@ -214,13 +219,21 @@ namespace userDesign
         /// <param name="e"></param>
         private void adsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            titleTextBox.Text = adsListBox.Text;
-            view = adsListBox.SelectedItem as DataRowView;
-            string title = view["adTitle"].ToString();
-            string desc = view["adDesc"].ToString();
-            titleTextBox.Text = title;
-            descriptionRichTextBox.Text = desc;
-            adsPictureBox.ImageLocation = view["media"].ToString();
+            try
+            {
+                adsListBox.Refresh();
+                view = adsListBox.SelectedItem as DataRowView;
+                string title = view["adTitle"].ToString();
+                string desc = view["adDesc"].ToString();
+            
+                titleTextBox.Text = title;
+                descriptionRichTextBox.Text = desc;
+                adsPictureBox.ImageLocation = view["media"].ToString();
+            }
+            catch (Exception x)
+            {
+                //MessageBox.Show(x.ToString());
+            }
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -230,8 +243,9 @@ namespace userDesign
         // Testing listbox item update...
         private void pageRefresh()
         {
-            adsListBox.Refresh();
-            adsListBox.Update();
+            this.adsTableTableAdapter.AdsPerUser(this.aggeliesDBDataSet.AdsTable, userid);
+            //adsListBox.Refresh();
+            //adsListBox.Update();
         }
         #endregion
 
