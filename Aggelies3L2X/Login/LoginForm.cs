@@ -16,5 +16,12 @@ namespace Login
         {
             InitializeComponent();
         }
+
+        private void userFormButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UserApplication.UserForm userForm = new UserApplication.UserForm();
+            userForm.Show();
+        }
     }
 }
