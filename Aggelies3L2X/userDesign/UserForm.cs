@@ -146,7 +146,6 @@ namespace UserApplication
                     view = adsListBox.SelectedItem as DataRowView;
                     int adID = Int32.Parse(view["adID"].ToString());
                     this.adsTableTableAdapter.UpdateTitleDescQuery(titleTextBox.Text, descriptionRichTextBox.Text, adID);
-                    pageRefresh();
                 }
                 catch (Exception)
                 {
@@ -250,19 +249,11 @@ namespace UserApplication
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
-        }
-        // Testing listbox item update...
-        private void pageRefresh()
-        {
-            this.adsTableTableAdapter.AdsPerUser(this.aggeliesDBDataSet.AdsTable, userid);
-            //adsListBox.Refresh();
-            //adsListBox.Update();
         }
         #endregion
 
