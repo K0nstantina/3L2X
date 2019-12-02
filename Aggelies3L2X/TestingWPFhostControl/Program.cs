@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AdministratorPanel
+namespace TestingWPFhostControl
 {
     static class Program
     {
@@ -16,8 +16,7 @@ namespace AdministratorPanel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminForm());
-            //Application.Run(new Form1());
+            Application.Run(new Form1());
         }
     }
 }
