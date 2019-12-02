@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace UserApplication
 {
     public partial class UserForm : Form
@@ -24,8 +25,13 @@ namespace UserApplication
         #region Constructor
         public UserForm()
         {
+
+        }
+        public UserForm(int userID)
+        {
             InitializeComponent();
             controlsList();
+            userid = userID;
             homeButton.BackColor = Color.Red;
         }
         #endregion
@@ -239,6 +245,12 @@ namespace UserApplication
             {
                 //MessageBox.Show(x.ToString());
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)

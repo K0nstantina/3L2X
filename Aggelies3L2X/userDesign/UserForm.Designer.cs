@@ -33,6 +33,7 @@
             this.topPanel = new System.Windows.Forms.Panel();
             this.footerPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.page6Button = new System.Windows.Forms.Button();
             this.page5Button = new System.Windows.Forms.Button();
             this.page4Button = new System.Windows.Forms.Button();
@@ -103,6 +104,7 @@
             // rightPanel
             // 
             this.rightPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.rightPanel.Controls.Add(this.button1);
             this.rightPanel.Controls.Add(this.page6Button);
             this.rightPanel.Controls.Add(this.page5Button);
             this.rightPanel.Controls.Add(this.page4Button);
@@ -114,6 +116,27 @@
             this.rightPanel.Name = "rightPanel";
             this.rightPanel.Size = new System.Drawing.Size(194, 634);
             this.rightPanel.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 322);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(194, 34);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Logout";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // page6Button
             // 
@@ -403,6 +426,7 @@
             // infoLabel
             // 
             this.infoLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.infoLabel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.infoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.infoLabel.Location = new System.Drawing.Point(0, 0);
             this.infoLabel.Name = "infoLabel";
@@ -461,6 +485,7 @@
             this.descriptionRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descriptionRichTextBox.Location = new System.Drawing.Point(0, 276);
             this.descriptionRichTextBox.Name = "descriptionRichTextBox";
+            this.descriptionRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.descriptionRichTextBox.Size = new System.Drawing.Size(278, 158);
             this.descriptionRichTextBox.TabIndex = 4;
             this.descriptionRichTextBox.Text = "Το ακίνητο βρίσκεται στην Αθήνα και μπλα μπλα μπλα....................\n.........." +
@@ -567,6 +592,7 @@
         private System.Windows.Forms.BindingSource adsTableBindingSource;
         private UserApplication.AggeliesDBDataSetTableAdapters.AdsTableTableAdapter adsTableTableAdapter;
         private System.Windows.Forms.PictureBox editPicturePictureBox;
+        private System.Windows.Forms.Button button1;
     }
 }
 
