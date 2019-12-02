@@ -249,6 +249,8 @@ namespace UserApplication
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+            // This line stops debugger and starts the app - Temporary Solution.
+            System.Diagnostics.Process.Start(Application.StartupPath.ToString()+@"\Login.exe");
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
