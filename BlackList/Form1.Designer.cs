@@ -31,31 +31,31 @@
             this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.testSalampasis1DataSet = new BlackList.testSalampasis1DataSet();
-            this.usersTableAdapter = new BlackList.testSalampasis1DataSetTableAdapters.UsersTableAdapter();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txt_id = new System.Windows.Forms.TextBox();
-            this.txt_fname = new System.Windows.Forms.TextBox();
-            this.txt_lname = new System.Windows.Forms.TextBox();
-            this.txt_uName = new System.Windows.Forms.TextBox();
-            this.txt_email = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txt_email = new System.Windows.Forms.TextBox();
+            this.txt_uName = new System.Windows.Forms.TextBox();
+            this.txt_lname = new System.Windows.Forms.TextBox();
+            this.txt_fname = new System.Windows.Forms.TextBox();
+            this.txt_id = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.usersTableAdapter = new BlackList.testSalampasis1DataSetTableAdapters.UsersTableAdapter();
             this.database1DataSet = new BlackList.Database1DataSet();
             this.table1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.table1TableAdapter = new BlackList.Database1DataSetTableAdapters.Table1TableAdapter();
             this.database1DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uPasswordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uCatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uWhitelistDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -103,12 +103,12 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.userIDDataGridViewTextBoxColumn,
-            this.fNameDataGridViewTextBoxColumn,
-            this.lNameDataGridViewTextBoxColumn,
-            this.uNameDataGridViewTextBoxColumn,
+            this.userID,
+            this.fName,
+            this.lName,
+            this.uName,
             this.uPasswordDataGridViewTextBoxColumn,
-            this.uEmailDataGridViewTextBoxColumn,
+            this.uEmail,
             this.uCatDataGridViewTextBoxColumn,
             this.uWhitelistDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.usersBindingSource;
@@ -118,26 +118,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(167, 156);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "BlackList";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label1.Location = new System.Drawing.Point(3, 156);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Insert to blacklist/whitelist";
             // 
             // usersBindingSource
             // 
@@ -149,36 +129,49 @@
             this.testSalampasis1DataSet.DataSetName = "testSalampasis1DataSet";
             this.testSalampasis1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // usersTableAdapter
+            // label6
             // 
-            this.usersTableAdapter.ClearBeforeFill = true;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 91);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "UserName";
             // 
-            // label2
+            // txt_email
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "UserID";
+            this.txt_email.Location = new System.Drawing.Point(119, 110);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(100, 20);
+            this.txt_email.TabIndex = 10;
             // 
-            // label3
+            // txt_uName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 35);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "First Name";
+            this.txt_uName.Location = new System.Drawing.Point(119, 84);
+            this.txt_uName.Name = "txt_uName";
+            this.txt_uName.Size = new System.Drawing.Size(100, 20);
+            this.txt_uName.TabIndex = 9;
             // 
-            // label4
+            // txt_lname
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 61);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Last Name";
+            this.txt_lname.Location = new System.Drawing.Point(119, 58);
+            this.txt_lname.Name = "txt_lname";
+            this.txt_lname.Size = new System.Drawing.Size(100, 20);
+            this.txt_lname.TabIndex = 8;
+            // 
+            // txt_fname
+            // 
+            this.txt_fname.Location = new System.Drawing.Point(119, 32);
+            this.txt_fname.Name = "txt_fname";
+            this.txt_fname.Size = new System.Drawing.Size(100, 20);
+            this.txt_fname.TabIndex = 7;
+            // 
+            // txt_id
+            // 
+            this.txt_id.Location = new System.Drawing.Point(119, 6);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(100, 20);
+            this.txt_id.TabIndex = 6;
             // 
             // label5
             // 
@@ -189,49 +182,56 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Email";
             // 
-            // txt_id
+            // label4
             // 
-            this.txt_id.Location = new System.Drawing.Point(119, 6);
-            this.txt_id.Name = "txt_id";
-            this.txt_id.Size = new System.Drawing.Size(100, 20);
-            this.txt_id.TabIndex = 6;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 61);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Last Name";
             // 
-            // txt_fname
+            // label3
             // 
-            this.txt_fname.Location = new System.Drawing.Point(119, 32);
-            this.txt_fname.Name = "txt_fname";
-            this.txt_fname.Size = new System.Drawing.Size(100, 20);
-            this.txt_fname.TabIndex = 7;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 35);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "First Name";
             // 
-            // txt_lname
+            // label2
             // 
-            this.txt_lname.Location = new System.Drawing.Point(119, 58);
-            this.txt_lname.Name = "txt_lname";
-            this.txt_lname.Size = new System.Drawing.Size(100, 20);
-            this.txt_lname.TabIndex = 8;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "UserID";
             // 
-            // txt_uName
+            // label1
             // 
-            this.txt_uName.Location = new System.Drawing.Point(119, 84);
-            this.txt_uName.Name = "txt_uName";
-            this.txt_uName.Size = new System.Drawing.Size(100, 20);
-            this.txt_uName.TabIndex = 9;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label1.Location = new System.Drawing.Point(3, 156);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(147, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Insert to blacklist/whitelist";
             // 
-            // txt_email
+            // button1
             // 
-            this.txt_email.Location = new System.Drawing.Point(119, 110);
-            this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(100, 20);
-            this.txt_email.TabIndex = 10;
+            this.button1.Location = new System.Drawing.Point(167, 156);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(76, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "BlackList";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label6
+            // usersTableAdapter
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 91);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "UserName";
+            this.usersTableAdapter.ClearBeforeFill = true;
             // 
             // database1DataSet
             // 
@@ -252,29 +252,29 @@
             this.database1DataSetBindingSource.DataSource = this.database1DataSet;
             this.database1DataSetBindingSource.Position = 0;
             // 
-            // userIDDataGridViewTextBoxColumn
+            // userID
             // 
-            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "userID";
-            this.userIDDataGridViewTextBoxColumn.HeaderText = "userID";
-            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
+            this.userID.DataPropertyName = "userID";
+            this.userID.HeaderText = "userID";
+            this.userID.Name = "userID";
             // 
-            // fNameDataGridViewTextBoxColumn
+            // fName
             // 
-            this.fNameDataGridViewTextBoxColumn.DataPropertyName = "fName";
-            this.fNameDataGridViewTextBoxColumn.HeaderText = "fName";
-            this.fNameDataGridViewTextBoxColumn.Name = "fNameDataGridViewTextBoxColumn";
+            this.fName.DataPropertyName = "fName";
+            this.fName.HeaderText = "fName";
+            this.fName.Name = "fName";
             // 
-            // lNameDataGridViewTextBoxColumn
+            // lName
             // 
-            this.lNameDataGridViewTextBoxColumn.DataPropertyName = "lName";
-            this.lNameDataGridViewTextBoxColumn.HeaderText = "lName";
-            this.lNameDataGridViewTextBoxColumn.Name = "lNameDataGridViewTextBoxColumn";
+            this.lName.DataPropertyName = "lName";
+            this.lName.HeaderText = "lName";
+            this.lName.Name = "lName";
             // 
-            // uNameDataGridViewTextBoxColumn
+            // uName
             // 
-            this.uNameDataGridViewTextBoxColumn.DataPropertyName = "uName";
-            this.uNameDataGridViewTextBoxColumn.HeaderText = "uName";
-            this.uNameDataGridViewTextBoxColumn.Name = "uNameDataGridViewTextBoxColumn";
+            this.uName.DataPropertyName = "uName";
+            this.uName.HeaderText = "uName";
+            this.uName.Name = "uName";
             // 
             // uPasswordDataGridViewTextBoxColumn
             // 
@@ -282,11 +282,11 @@
             this.uPasswordDataGridViewTextBoxColumn.HeaderText = "uPassword";
             this.uPasswordDataGridViewTextBoxColumn.Name = "uPasswordDataGridViewTextBoxColumn";
             // 
-            // uEmailDataGridViewTextBoxColumn
+            // uEmail
             // 
-            this.uEmailDataGridViewTextBoxColumn.DataPropertyName = "uEmail";
-            this.uEmailDataGridViewTextBoxColumn.HeaderText = "uEmail";
-            this.uEmailDataGridViewTextBoxColumn.Name = "uEmailDataGridViewTextBoxColumn";
+            this.uEmail.DataPropertyName = "uEmail";
+            this.uEmail.HeaderText = "uEmail";
+            this.uEmail.Name = "uEmail";
             // 
             // uCatDataGridViewTextBoxColumn
             // 
@@ -346,15 +346,15 @@
         private Database1DataSet database1DataSet;
         private System.Windows.Forms.BindingSource table1BindingSource;
         private Database1DataSetTableAdapters.Table1TableAdapter table1TableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn uNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource database1DataSetBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uName;
         private System.Windows.Forms.DataGridViewTextBoxColumn uPasswordDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn uEmailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn uCatDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn uWhitelistDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.BindingSource database1DataSetBindingSource;
     }
 }
 

@@ -46,11 +46,13 @@ namespace BlackList
             {
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
 
-                txt_id.Text = row.Cells["user ID"].Value.ToString();
-                txt_fname.Text = row.Cells["First Name"].Value.ToString();
-                txt_lname.Text = row.Cells["Last Name"].Value.ToString();
-                txt_uName.Text = row.Cells["User Name"].Value.ToString();
-                txt_uName.Text = row.Cells["uEmail"].Value.ToString();
+                txt_id.Text = row.Cells["userID"].FormattedValue.ToString();
+                txt_fname.Text = row.Cells["fName"].FormattedValue.ToString();
+                txt_lname.Text = row.Cells["lName"].FormattedValue.ToString();
+                txt_uName.Text = row.Cells["uName"].FormattedValue.ToString();
+                txt_email.Text = row.Cells["uEmail"].FormattedValue.ToString();
+
+
 
 
             }
