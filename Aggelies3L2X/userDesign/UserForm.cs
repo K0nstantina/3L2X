@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,9 +18,10 @@ namespace UserApplication
         List<Panel> panels = new List<Panel>();
         List<Button> buttons = new List<Button>();
         DataRowView view;
-        int userid = 1;
+        int userid;
         private string imgPath, imgName, imgNewPath;
         private string imagesLocation = @"C:\Users\TEO\Documents\GitHub\3L2X\Aggelies3L2X\userDesign\Resources\images\";
+        private string userImagesLocation = @"C:\Users\TEO\Documents\GitHub\3L2X\Aggelies3L2X\userDesign\Resources\userImages\";
         #endregion
 
         #region Constructor
@@ -37,6 +39,8 @@ namespace UserApplication
             userMenu1.adsBut.Click += AdsBut_Click;
             userMenu1.catBut.Click += CatBut_Click;
             userMenu1.profileBut.Click += ProfileBut_Click;
+            label5.Text = userid.ToString();
+            updateFields();
         }
 
         #endregion
@@ -72,7 +76,7 @@ namespace UserApplication
             panels.Add(settingsPanel); //1
             panels.Add(adsPanel); //2
             panels.Add(page4Panel);
-            panels.Add(page5Panel);
+            panels.Add(profilePanel);
             panels.Add(page6Panel);
 
             panels[0].BringToFront();
@@ -88,7 +92,6 @@ namespace UserApplication
         private void MainForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'aggeliesDBDataSet.AdsTable' table. You can move, or remove it, as needed.
-            this.adsTableTableAdapter.AdsPerUser(this.aggeliesDBDataSet.AdsTable, userid);
             adsListBox_SelectedIndexChanged(adsListBox, e);
         }
 
@@ -214,6 +217,47 @@ namespace UserApplication
             }
         }
 
+        private void avatarUploadButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Open file dialog and set directory and file filters.
+                OpenFileDialog imgDialog = new OpenFileDialog();
+                //imgDialog.InitialDirectory = "C:\\";
+                imgDialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png) |*.png| All files(*.*)|*.*";
+                // OK button clicked (file selected).
+                if (imgDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    // If file exists (no error in filename).
+                    if (imgDialog.CheckFileExists)
+                    {
+                        // Get file path and name.
+                        imgPath = imgDialog.FileName;
+                        imgName = System.IO.Path.GetFileName(imgDialog.FileName);
+                        // Set the new local path
+                        imgNewPath = userImagesLocation + imgName;
+                        // Copy file to images folder and update avatarPictureBox.
+                        System.IO.File.Copy(imgDialog.FileName, imgNewPath);
+                        // Update the image path in database.
+                        this.usersTableAdapter1.UpdateUserImageQuery(imgNewPath, userid);
+                        // Set avatarPictureBox new image.
+                        avatarPictureBox.ImageLocation = imgNewPath;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An Error Occured" + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void avatarRemoveButton_Click(object sender, EventArgs e)
+        {
+            // Update the image path in database.
+            this.usersTableAdapter1.UpdateUserImageQuery("", userid);
+            avatarPictureBox.Image = UserApplication.Properties.Resources.userAvatar;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -221,6 +265,34 @@ namespace UserApplication
             System.Diagnostics.Process.Start(Application.StartupPath.ToString()+@"\Login.exe");
         }
 
+        private void showpasswordCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (showpasswordCheckBox.Checked)
+            {
+                uPasswordTextBox.PasswordChar = '\0';
+                showpasswordCheckBox.Text = "hide";
+            }
+            else
+            {
+                uPasswordTextBox.PasswordChar = '*';
+                showpasswordCheckBox.Text = "show";
+            }
+        }
+
+        private void updateFields()
+        {
+            this.adsTableTableAdapter.AdsPerUser(this.aggeliesDBDataSet.AdsTable, userid);
+            try
+            {
+                avatarPictureBox.ImageLocation = usersTableAdapter1.SelectUserImageQuery(userid).ToString();
+            }
+            catch (Exception) {}
+            uNameTextBox.Text = usersTableAdapter1.SelectUsernameQuery(userid).ToString();
+            fNameTextBox.Text = usersTableAdapter1.SelectFirstNameQuery(userid).ToString();
+            lNameTextBox.Text = usersTableAdapter1.SelectLastNameQuery(userid).ToString();
+            uEmailTextBox.Text = usersTableAdapter1.SelectUserEmailQuery(userid).ToString();
+            uPasswordTextBox.Text = usersTableAdapter1.SelectUserPasswordQuery(userid).ToString();
+        }
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();

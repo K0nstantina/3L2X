@@ -41,7 +41,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.page6Panel = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.page5Panel = new System.Windows.Forms.Panel();
+            this.profilePanel = new System.Windows.Forms.Panel();
+            this.lNameLabel = new System.Windows.Forms.Label();
+            this.lNameTextBox = new System.Windows.Forms.TextBox();
+            this.showpasswordCheckBox = new System.Windows.Forms.CheckBox();
+            this.avatarRemoveButton = new System.Windows.Forms.Button();
+            this.fNameLabel = new System.Windows.Forms.Label();
+            this.fNameTextBox = new System.Windows.Forms.TextBox();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aggeliesDBDataSet = new UserApplication.AggeliesDBDataSet();
+            this.uEmailLabel = new System.Windows.Forms.Label();
+            this.uEmailTextBox = new System.Windows.Forms.TextBox();
+            this.uPasswordLabel = new System.Windows.Forms.Label();
+            this.uPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.uNameLabel = new System.Windows.Forms.Label();
+            this.uNameTextBox = new System.Windows.Forms.TextBox();
+            this.avatarUploadButton = new System.Windows.Forms.Button();
+            this.avatarPictureBox = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.page4Panel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,7 +66,6 @@
             this.adsListPanel = new System.Windows.Forms.Panel();
             this.adsListBox = new System.Windows.Forms.ListBox();
             this.adsTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aggeliesDBDataSet = new UserApplication.AggeliesDBDataSet();
             this.infoLabel = new System.Windows.Forms.Label();
             this.editDescriptionPictureBox = new System.Windows.Forms.PictureBox();
             this.editTitlePictureBox = new System.Windows.Forms.PictureBox();
@@ -60,17 +75,20 @@
             this.adsPictureBox = new System.Windows.Forms.PictureBox();
             this.contentPanel = new System.Windows.Forms.Panel();
             this.adsTableTableAdapter = new UserApplication.AggeliesDBDataSetTableAdapters.AdsTableTableAdapter();
+            this.usersTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.UsersTableAdapter();
             this.rightPanel.SuspendLayout();
             this.settingsPanel.SuspendLayout();
             this.homePanel.SuspendLayout();
             this.page6Panel.SuspendLayout();
-            this.page5Panel.SuspendLayout();
+            this.profilePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
             this.page4Panel.SuspendLayout();
             this.adsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.editPicturePictureBox)).BeginInit();
             this.adsListPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adsTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editDescriptionPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editTitlePictureBox)).BeginInit();
             this.recentAdPanel.SuspendLayout();
@@ -175,14 +193,178 @@
             this.label6.Text = "page 6";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // page5Panel
+            // profilePanel
             // 
-            this.page5Panel.Controls.Add(this.label5);
-            this.page5Panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.page5Panel.Location = new System.Drawing.Point(0, 0);
-            this.page5Panel.Name = "page5Panel";
-            this.page5Panel.Size = new System.Drawing.Size(1006, 434);
-            this.page5Panel.TabIndex = 0;
+            this.profilePanel.Controls.Add(this.lNameLabel);
+            this.profilePanel.Controls.Add(this.lNameTextBox);
+            this.profilePanel.Controls.Add(this.showpasswordCheckBox);
+            this.profilePanel.Controls.Add(this.avatarRemoveButton);
+            this.profilePanel.Controls.Add(this.fNameLabel);
+            this.profilePanel.Controls.Add(this.fNameTextBox);
+            this.profilePanel.Controls.Add(this.uEmailLabel);
+            this.profilePanel.Controls.Add(this.uEmailTextBox);
+            this.profilePanel.Controls.Add(this.uPasswordLabel);
+            this.profilePanel.Controls.Add(this.uPasswordTextBox);
+            this.profilePanel.Controls.Add(this.uNameLabel);
+            this.profilePanel.Controls.Add(this.uNameTextBox);
+            this.profilePanel.Controls.Add(this.avatarUploadButton);
+            this.profilePanel.Controls.Add(this.avatarPictureBox);
+            this.profilePanel.Controls.Add(this.label5);
+            this.profilePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profilePanel.Location = new System.Drawing.Point(0, 0);
+            this.profilePanel.Name = "profilePanel";
+            this.profilePanel.Size = new System.Drawing.Size(1006, 434);
+            this.profilePanel.TabIndex = 0;
+            // 
+            // lNameLabel
+            // 
+            this.lNameLabel.AutoSize = true;
+            this.lNameLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNameLabel.Location = new System.Drawing.Point(370, 132);
+            this.lNameLabel.Name = "lNameLabel";
+            this.lNameLabel.Size = new System.Drawing.Size(105, 26);
+            this.lNameLabel.TabIndex = 62;
+            this.lNameLabel.Text = "Last Name";
+            // 
+            // lNameTextBox
+            // 
+            this.lNameTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNameTextBox.Location = new System.Drawing.Point(481, 128);
+            this.lNameTextBox.Name = "lNameTextBox";
+            this.lNameTextBox.Size = new System.Drawing.Size(291, 29);
+            this.lNameTextBox.TabIndex = 61;
+            // 
+            // showpasswordCheckBox
+            // 
+            this.showpasswordCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showpasswordCheckBox.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showpasswordCheckBox.Location = new System.Drawing.Point(778, 206);
+            this.showpasswordCheckBox.Name = "showpasswordCheckBox";
+            this.showpasswordCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.showpasswordCheckBox.Size = new System.Drawing.Size(70, 29);
+            this.showpasswordCheckBox.TabIndex = 60;
+            this.showpasswordCheckBox.Text = "show";
+            this.showpasswordCheckBox.UseVisualStyleBackColor = true;
+            this.showpasswordCheckBox.CheckedChanged += new System.EventHandler(this.showpasswordCheckBox_CheckedChanged);
+            // 
+            // avatarRemoveButton
+            // 
+            this.avatarRemoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.avatarRemoveButton.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.avatarRemoveButton.Location = new System.Drawing.Point(149, 298);
+            this.avatarRemoveButton.Name = "avatarRemoveButton";
+            this.avatarRemoveButton.Size = new System.Drawing.Size(149, 45);
+            this.avatarRemoveButton.TabIndex = 59;
+            this.avatarRemoveButton.Text = "Remove";
+            this.avatarRemoveButton.UseVisualStyleBackColor = true;
+            this.avatarRemoveButton.Click += new System.EventHandler(this.avatarRemoveButton_Click);
+            // 
+            // fNameLabel
+            // 
+            this.fNameLabel.AutoSize = true;
+            this.fNameLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fNameLabel.Location = new System.Drawing.Point(370, 95);
+            this.fNameLabel.Name = "fNameLabel";
+            this.fNameLabel.Size = new System.Drawing.Size(110, 26);
+            this.fNameLabel.TabIndex = 56;
+            this.fNameLabel.Text = "First Name";
+            // 
+            // fNameTextBox
+            // 
+            this.fNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "fName", true));
+            this.fNameTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fNameTextBox.Location = new System.Drawing.Point(481, 91);
+            this.fNameTextBox.Name = "fNameTextBox";
+            this.fNameTextBox.Size = new System.Drawing.Size(291, 29);
+            this.fNameTextBox.TabIndex = 55;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.aggeliesDBDataSet;
+            // 
+            // aggeliesDBDataSet
+            // 
+            this.aggeliesDBDataSet.DataSetName = "AggeliesDBDataSet";
+            this.aggeliesDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // uEmailLabel
+            // 
+            this.uEmailLabel.AutoSize = true;
+            this.uEmailLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uEmailLabel.Location = new System.Drawing.Point(370, 250);
+            this.uEmailLabel.Name = "uEmailLabel";
+            this.uEmailLabel.Size = new System.Drawing.Size(58, 26);
+            this.uEmailLabel.TabIndex = 54;
+            this.uEmailLabel.Text = "Email";
+            // 
+            // uEmailTextBox
+            // 
+            this.uEmailTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uEmailTextBox.Location = new System.Drawing.Point(481, 246);
+            this.uEmailTextBox.Name = "uEmailTextBox";
+            this.uEmailTextBox.Size = new System.Drawing.Size(291, 29);
+            this.uEmailTextBox.TabIndex = 53;
+            // 
+            // uPasswordLabel
+            // 
+            this.uPasswordLabel.AutoSize = true;
+            this.uPasswordLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uPasswordLabel.Location = new System.Drawing.Point(370, 210);
+            this.uPasswordLabel.Name = "uPasswordLabel";
+            this.uPasswordLabel.Size = new System.Drawing.Size(94, 26);
+            this.uPasswordLabel.TabIndex = 52;
+            this.uPasswordLabel.Text = "Password";
+            // 
+            // uPasswordTextBox
+            // 
+            this.uPasswordTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uPasswordTextBox.Location = new System.Drawing.Point(481, 206);
+            this.uPasswordTextBox.Name = "uPasswordTextBox";
+            this.uPasswordTextBox.PasswordChar = '*';
+            this.uPasswordTextBox.Size = new System.Drawing.Size(291, 29);
+            this.uPasswordTextBox.TabIndex = 51;
+            // 
+            // uNameLabel
+            // 
+            this.uNameLabel.AutoSize = true;
+            this.uNameLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uNameLabel.Location = new System.Drawing.Point(370, 170);
+            this.uNameLabel.Name = "uNameLabel";
+            this.uNameLabel.Size = new System.Drawing.Size(99, 26);
+            this.uNameLabel.TabIndex = 50;
+            this.uNameLabel.Text = "Username";
+            // 
+            // uNameTextBox
+            // 
+            this.uNameTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uNameTextBox.Location = new System.Drawing.Point(481, 166);
+            this.uNameTextBox.Name = "uNameTextBox";
+            this.uNameTextBox.Size = new System.Drawing.Size(291, 29);
+            this.uNameTextBox.TabIndex = 49;
+            // 
+            // avatarUploadButton
+            // 
+            this.avatarUploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.avatarUploadButton.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.avatarUploadButton.Location = new System.Drawing.Point(148, 247);
+            this.avatarUploadButton.Name = "avatarUploadButton";
+            this.avatarUploadButton.Size = new System.Drawing.Size(149, 45);
+            this.avatarUploadButton.TabIndex = 48;
+            this.avatarUploadButton.Text = "Change";
+            this.avatarUploadButton.UseVisualStyleBackColor = true;
+            this.avatarUploadButton.Click += new System.EventHandler(this.avatarUploadButton_Click);
+            // 
+            // avatarPictureBox
+            // 
+            this.avatarPictureBox.Image = global::UserApplication.Properties.Resources.userAvatar;
+            this.avatarPictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("avatarPictureBox.InitialImage")));
+            this.avatarPictureBox.Location = new System.Drawing.Point(148, 91);
+            this.avatarPictureBox.Name = "avatarPictureBox";
+            this.avatarPictureBox.Size = new System.Drawing.Size(150, 150);
+            this.avatarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.avatarPictureBox.TabIndex = 47;
+            this.avatarPictureBox.TabStop = false;
             // 
             // label5
             // 
@@ -192,7 +374,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(177, 72);
             this.label5.TabIndex = 1;
-            this.label5.Text = "page 5";
+            this.label5.Text = "profile";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // page4Panel
@@ -272,11 +454,6 @@
             // 
             this.adsTableBindingSource.DataMember = "AdsTable";
             this.adsTableBindingSource.DataSource = this.aggeliesDBDataSet;
-            // 
-            // aggeliesDBDataSet
-            // 
-            this.aggeliesDBDataSet.DataSetName = "AggeliesDBDataSet";
-            this.aggeliesDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // infoLabel
             // 
@@ -359,12 +536,12 @@
             // 
             // contentPanel
             // 
-            this.contentPanel.Controls.Add(this.adsPanel);
-            this.contentPanel.Controls.Add(this.page4Panel);
-            this.contentPanel.Controls.Add(this.page5Panel);
+            this.contentPanel.Controls.Add(this.profilePanel);
             this.contentPanel.Controls.Add(this.page6Panel);
             this.contentPanel.Controls.Add(this.homePanel);
             this.contentPanel.Controls.Add(this.settingsPanel);
+            this.contentPanel.Controls.Add(this.adsPanel);
+            this.contentPanel.Controls.Add(this.page4Panel);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(0, 100);
             this.contentPanel.Name = "contentPanel";
@@ -374,6 +551,10 @@
             // adsTableTableAdapter
             // 
             this.adsTableTableAdapter.ClearBeforeFill = true;
+            // 
+            // usersTableAdapter1
+            // 
+            this.usersTableAdapter1.ClearBeforeFill = true;
             // 
             // UserForm
             // 
@@ -394,13 +575,16 @@
             this.settingsPanel.ResumeLayout(false);
             this.homePanel.ResumeLayout(false);
             this.page6Panel.ResumeLayout(false);
-            this.page5Panel.ResumeLayout(false);
+            this.profilePanel.ResumeLayout(false);
+            this.profilePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
             this.page4Panel.ResumeLayout(false);
             this.adsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.editPicturePictureBox)).EndInit();
             this.adsListPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.adsTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.editDescriptionPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.editTitlePictureBox)).EndInit();
             this.recentAdPanel.ResumeLayout(false);
@@ -422,7 +606,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel page6Panel;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel page5Panel;
+        private System.Windows.Forms.Panel profilePanel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel page4Panel;
         private System.Windows.Forms.Label label4;
@@ -443,6 +627,22 @@
         private System.Windows.Forms.PictureBox editPicturePictureBox;
         private System.Windows.Forms.Integration.ElementHost elementHost1;
         private aggeliesWpfLab.UserMenu userMenu1;
+        private System.Windows.Forms.CheckBox showpasswordCheckBox;
+        private System.Windows.Forms.Button avatarRemoveButton;
+        private System.Windows.Forms.Label fNameLabel;
+        private System.Windows.Forms.TextBox fNameTextBox;
+        private System.Windows.Forms.Label uEmailLabel;
+        private System.Windows.Forms.TextBox uEmailTextBox;
+        private System.Windows.Forms.Label uPasswordLabel;
+        private System.Windows.Forms.TextBox uPasswordTextBox;
+        private System.Windows.Forms.Label uNameLabel;
+        private System.Windows.Forms.TextBox uNameTextBox;
+        private System.Windows.Forms.Button avatarUploadButton;
+        private System.Windows.Forms.PictureBox avatarPictureBox;
+        private AggeliesDBDataSetTableAdapters.UsersTableAdapter usersTableAdapter1;
+        private System.Windows.Forms.Label lNameLabel;
+        private System.Windows.Forms.TextBox lNameTextBox;
+        private System.Windows.Forms.BindingSource usersBindingSource;
     }
 }
 
