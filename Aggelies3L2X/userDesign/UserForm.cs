@@ -32,62 +32,37 @@ namespace UserApplication
             InitializeComponent();
             controlsList();
             userid = userID;
-            homeButton.BackColor = Color.Red;
+            userMenu1.HomeBut.Click += HomeBut_Click;
+            userMenu1.settingBut.Click += SettingBut_Click;
+            userMenu1.adsBut.Click += AdsBut_Click;
+            userMenu1.catBut.Click += CatBut_Click;
+            userMenu1.profileBut.Click += ProfileBut_Click;
         }
+
         #endregion
 
         #region Navigation
-        private void homeButton_Click(object sender, EventArgs e)
+        private void HomeBut_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            buttonStyle();
             panels[0].BringToFront();
-            homeButton.BackColor = Color.Red;
         }
-
-        private void settingsButton_Click(object sender, EventArgs e)
+        private void SettingBut_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            buttonStyle();
             panels[1].BringToFront();
-            settingsButton.BackColor = Color.Red;
         }
-
-        private void adsButton_Click(object sender, EventArgs e)
+        private void AdsBut_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            buttonStyle();
             panels[2].BringToFront();
-            adsButton.BackColor = Color.Red;
         }
-
-        private void page4Button_Click(object sender, EventArgs e)
+        private void CatBut_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            buttonStyle();
             panels[3].BringToFront();
-            page4Button.BackColor = Color.Red;
         }
-
-        private void page5Button_Click(object sender, EventArgs e)
+        private void ProfileBut_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            buttonStyle();
             panels[4].BringToFront();
-            page5Button.BackColor = Color.Red;
         }
 
-        private void page6Button_Click(object sender, EventArgs e)
-        {
-            buttonStyle();
-            panels[5].BringToFront();
-            page6Button.BackColor = Color.Red;
-        }
-        /// <summary>
-        /// Resets all buttons backColor to default.
-        /// </summary>
-        private void buttonStyle()
-        {
-            foreach (Button btn in buttons)
-            {
-                btn.BackColor = SystemColors.ActiveCaption;
-            }
-        }
         /// <summary>
         /// Populates the panel and control lists
         /// </summary>
@@ -99,13 +74,6 @@ namespace UserApplication
             panels.Add(page4Panel);
             panels.Add(page5Panel);
             panels.Add(page6Panel);
-
-            buttons.Add(homeButton);
-            buttons.Add(settingsButton);
-            buttons.Add(adsButton);
-            buttons.Add(page4Button);
-            buttons.Add(page5Button);
-            buttons.Add(page6Button);
 
             panels[0].BringToFront();
         }

@@ -33,13 +33,8 @@
             this.topPanel = new System.Windows.Forms.Panel();
             this.footerPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.page6Button = new System.Windows.Forms.Button();
-            this.page5Button = new System.Windows.Forms.Button();
-            this.page4Button = new System.Windows.Forms.Button();
-            this.adsButton = new System.Windows.Forms.Button();
-            this.settingsButton = new System.Windows.Forms.Button();
-            this.homeButton = new System.Windows.Forms.Button();
+            this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
+            this.userMenu1 = new aggeliesWpfLab.UserMenu();
             this.settingsPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.homePanel = new System.Windows.Forms.Panel();
@@ -89,7 +84,7 @@
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1028, 100);
+            this.topPanel.Size = new System.Drawing.Size(1006, 100);
             this.topPanel.TabIndex = 0;
             // 
             // footerPanel
@@ -98,167 +93,27 @@
             this.footerPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.footerPanel.Location = new System.Drawing.Point(0, 534);
             this.footerPanel.Name = "footerPanel";
-            this.footerPanel.Size = new System.Drawing.Size(1028, 100);
+            this.footerPanel.Size = new System.Drawing.Size(1006, 100);
             this.footerPanel.TabIndex = 1;
             // 
             // rightPanel
             // 
             this.rightPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.rightPanel.Controls.Add(this.button1);
-            this.rightPanel.Controls.Add(this.page6Button);
-            this.rightPanel.Controls.Add(this.page5Button);
-            this.rightPanel.Controls.Add(this.page4Button);
-            this.rightPanel.Controls.Add(this.adsButton);
-            this.rightPanel.Controls.Add(this.settingsButton);
-            this.rightPanel.Controls.Add(this.homeButton);
+            this.rightPanel.Controls.Add(this.elementHost1);
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rightPanel.Location = new System.Drawing.Point(1028, 0);
+            this.rightPanel.Location = new System.Drawing.Point(1006, 0);
             this.rightPanel.Name = "rightPanel";
-            this.rightPanel.Size = new System.Drawing.Size(194, 634);
+            this.rightPanel.Size = new System.Drawing.Size(216, 634);
             this.rightPanel.TabIndex = 2;
             // 
-            // button1
+            // elementHost1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 322);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 34);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Logout";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // page6Button
-            // 
-            this.page6Button.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.page6Button.FlatAppearance.BorderSize = 0;
-            this.page6Button.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
-            this.page6Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.page6Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.page6Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.page6Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.page6Button.ForeColor = System.Drawing.Color.Black;
-            this.page6Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.page6Button.Location = new System.Drawing.Point(0, 288);
-            this.page6Button.Margin = new System.Windows.Forms.Padding(0);
-            this.page6Button.Name = "page6Button";
-            this.page6Button.Size = new System.Drawing.Size(194, 34);
-            this.page6Button.TabIndex = 5;
-            this.page6Button.Text = "Page 6";
-            this.page6Button.UseVisualStyleBackColor = false;
-            this.page6Button.Click += new System.EventHandler(this.page6Button_Click);
-            // 
-            // page5Button
-            // 
-            this.page5Button.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.page5Button.FlatAppearance.BorderSize = 0;
-            this.page5Button.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
-            this.page5Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.page5Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.page5Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.page5Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.page5Button.ForeColor = System.Drawing.Color.Black;
-            this.page5Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.page5Button.Location = new System.Drawing.Point(0, 254);
-            this.page5Button.Margin = new System.Windows.Forms.Padding(0);
-            this.page5Button.Name = "page5Button";
-            this.page5Button.Size = new System.Drawing.Size(194, 34);
-            this.page5Button.TabIndex = 4;
-            this.page5Button.Text = "Page 5";
-            this.page5Button.UseVisualStyleBackColor = false;
-            this.page5Button.Click += new System.EventHandler(this.page5Button_Click);
-            // 
-            // page4Button
-            // 
-            this.page4Button.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.page4Button.FlatAppearance.BorderSize = 0;
-            this.page4Button.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
-            this.page4Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.page4Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.page4Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.page4Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.page4Button.ForeColor = System.Drawing.Color.Black;
-            this.page4Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.page4Button.Location = new System.Drawing.Point(0, 220);
-            this.page4Button.Margin = new System.Windows.Forms.Padding(0);
-            this.page4Button.Name = "page4Button";
-            this.page4Button.Size = new System.Drawing.Size(194, 34);
-            this.page4Button.TabIndex = 3;
-            this.page4Button.Text = "Page 4";
-            this.page4Button.UseVisualStyleBackColor = false;
-            this.page4Button.Click += new System.EventHandler(this.page4Button_Click);
-            // 
-            // adsButton
-            // 
-            this.adsButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.adsButton.FlatAppearance.BorderSize = 0;
-            this.adsButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
-            this.adsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.adsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.adsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.adsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adsButton.ForeColor = System.Drawing.Color.Black;
-            this.adsButton.Image = global::UserApplication.Properties.Resources.ads1;
-            this.adsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adsButton.Location = new System.Drawing.Point(0, 152);
-            this.adsButton.Margin = new System.Windows.Forms.Padding(0);
-            this.adsButton.Name = "adsButton";
-            this.adsButton.Size = new System.Drawing.Size(194, 34);
-            this.adsButton.TabIndex = 2;
-            this.adsButton.Text = "My Ads";
-            this.adsButton.UseVisualStyleBackColor = false;
-            this.adsButton.Click += new System.EventHandler(this.adsButton_Click);
-            // 
-            // settingsButton
-            // 
-            this.settingsButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.settingsButton.FlatAppearance.BorderSize = 0;
-            this.settingsButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
-            this.settingsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.settingsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settingsButton.ForeColor = System.Drawing.Color.Black;
-            this.settingsButton.Image = global::UserApplication.Properties.Resources.settings1;
-            this.settingsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.settingsButton.Location = new System.Drawing.Point(0, 186);
-            this.settingsButton.Margin = new System.Windows.Forms.Padding(0);
-            this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Size = new System.Drawing.Size(194, 34);
-            this.settingsButton.TabIndex = 1;
-            this.settingsButton.Text = "Settings";
-            this.settingsButton.UseVisualStyleBackColor = false;
-            this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
-            // 
-            // homeButton
-            // 
-            this.homeButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.homeButton.FlatAppearance.BorderSize = 0;
-            this.homeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.homeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.homeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.homeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homeButton.ForeColor = System.Drawing.Color.Black;
-            this.homeButton.Image = global::UserApplication.Properties.Resources.home1;
-            this.homeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.homeButton.Location = new System.Drawing.Point(0, 118);
-            this.homeButton.Margin = new System.Windows.Forms.Padding(0);
-            this.homeButton.Name = "homeButton";
-            this.homeButton.Size = new System.Drawing.Size(194, 34);
-            this.homeButton.TabIndex = 0;
-            this.homeButton.Text = "Home   ";
-            this.homeButton.UseVisualStyleBackColor = false;
-            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
+            this.elementHost1.Location = new System.Drawing.Point(0, 100);
+            this.elementHost1.Name = "elementHost1";
+            this.elementHost1.Size = new System.Drawing.Size(216, 294);
+            this.elementHost1.TabIndex = 7;
+            this.elementHost1.Text = "elementHost1";
+            this.elementHost1.Child = this.userMenu1;
             // 
             // settingsPanel
             // 
@@ -266,7 +121,7 @@
             this.settingsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.settingsPanel.Location = new System.Drawing.Point(0, 0);
             this.settingsPanel.Name = "settingsPanel";
-            this.settingsPanel.Size = new System.Drawing.Size(1028, 434);
+            this.settingsPanel.Size = new System.Drawing.Size(1006, 434);
             this.settingsPanel.TabIndex = 1;
             // 
             // label2
@@ -286,7 +141,7 @@
             this.homePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.homePanel.Location = new System.Drawing.Point(0, 0);
             this.homePanel.Name = "homePanel";
-            this.homePanel.Size = new System.Drawing.Size(1028, 434);
+            this.homePanel.Size = new System.Drawing.Size(1006, 434);
             this.homePanel.TabIndex = 3;
             // 
             // label1
@@ -306,7 +161,7 @@
             this.page6Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.page6Panel.Location = new System.Drawing.Point(0, 0);
             this.page6Panel.Name = "page6Panel";
-            this.page6Panel.Size = new System.Drawing.Size(1028, 434);
+            this.page6Panel.Size = new System.Drawing.Size(1006, 434);
             this.page6Panel.TabIndex = 0;
             // 
             // label6
@@ -326,7 +181,7 @@
             this.page5Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.page5Panel.Location = new System.Drawing.Point(0, 0);
             this.page5Panel.Name = "page5Panel";
-            this.page5Panel.Size = new System.Drawing.Size(1028, 434);
+            this.page5Panel.Size = new System.Drawing.Size(1006, 434);
             this.page5Panel.TabIndex = 0;
             // 
             // label5
@@ -346,7 +201,7 @@
             this.page4Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.page4Panel.Location = new System.Drawing.Point(0, 0);
             this.page4Panel.Name = "page4Panel";
-            this.page4Panel.Size = new System.Drawing.Size(1028, 434);
+            this.page4Panel.Size = new System.Drawing.Size(1006, 434);
             this.page4Panel.TabIndex = 3;
             // 
             // label4
@@ -371,7 +226,7 @@
             this.adsPanel.Location = new System.Drawing.Point(0, 0);
             this.adsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adsPanel.Name = "adsPanel";
-            this.adsPanel.Size = new System.Drawing.Size(1028, 434);
+            this.adsPanel.Size = new System.Drawing.Size(1006, 434);
             this.adsPanel.TabIndex = 2;
             // 
             // editPicturePictureBox
@@ -389,7 +244,7 @@
             this.adsListPanel.Controls.Add(this.adsListBox);
             this.adsListPanel.Controls.Add(this.infoLabel);
             this.adsListPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.adsListPanel.Location = new System.Drawing.Point(828, 0);
+            this.adsListPanel.Location = new System.Drawing.Point(806, 0);
             this.adsListPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adsListPanel.Name = "adsListPanel";
             this.adsListPanel.Size = new System.Drawing.Size(200, 434);
@@ -513,7 +368,7 @@
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(0, 100);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(1028, 434);
+            this.contentPanel.Size = new System.Drawing.Size(1006, 434);
             this.contentPanel.TabIndex = 5;
             // 
             // adsTableTableAdapter
@@ -561,12 +416,6 @@
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Panel footerPanel;
         private System.Windows.Forms.Panel rightPanel;
-        private System.Windows.Forms.Button homeButton;
-        private System.Windows.Forms.Button settingsButton;
-        private System.Windows.Forms.Button adsButton;
-        private System.Windows.Forms.Button page6Button;
-        private System.Windows.Forms.Button page5Button;
-        private System.Windows.Forms.Button page4Button;
         private System.Windows.Forms.Panel settingsPanel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel homePanel;
@@ -592,7 +441,8 @@
         private System.Windows.Forms.BindingSource adsTableBindingSource;
         private UserApplication.AggeliesDBDataSetTableAdapters.AdsTableTableAdapter adsTableTableAdapter;
         private System.Windows.Forms.PictureBox editPicturePictureBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Integration.ElementHost elementHost1;
+        private aggeliesWpfLab.UserMenu userMenu1;
     }
 }
 
