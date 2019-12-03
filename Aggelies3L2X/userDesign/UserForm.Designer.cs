@@ -128,7 +128,7 @@
             // 
             this.elementHost1.Location = new System.Drawing.Point(0, 100);
             this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(216, 294);
+            this.elementHost1.Size = new System.Drawing.Size(216, 343);
             this.elementHost1.TabIndex = 7;
             this.elementHost1.Text = "elementHost1";
             this.elementHost1.Child = this.userMenu1;
@@ -626,7 +626,6 @@
         private UserApplication.AggeliesDBDataSetTableAdapters.AdsTableTableAdapter adsTableTableAdapter;
         private System.Windows.Forms.PictureBox editPicturePictureBox;
         private System.Windows.Forms.Integration.ElementHost elementHost1;
-        private aggeliesWpfLab.UserMenu userMenu1;
         private System.Windows.Forms.CheckBox showpasswordCheckBox;
         private System.Windows.Forms.Button avatarRemoveButton;
         private System.Windows.Forms.Label fNameLabel;
@@ -643,6 +642,7 @@
         private System.Windows.Forms.Label lNameLabel;
         private System.Windows.Forms.TextBox lNameTextBox;
         private System.Windows.Forms.BindingSource usersBindingSource;
+        private aggeliesWpfLab.UserMenu userMenu1;
     }
 }
 

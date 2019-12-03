@@ -34,15 +34,18 @@ namespace UserApplication
             InitializeComponent();
             controlsList();
             userid = userID;
-            userMenu1.HomeBut.Click += HomeBut_Click;
-            userMenu1.settingBut.Click += SettingBut_Click;
-            userMenu1.adsBut.Click += AdsBut_Click;
-            userMenu1.catBut.Click += CatBut_Click;
-            userMenu1.profileBut.Click += ProfileBut_Click;
+            var userMenu = new aggeliesWpfLab.UserMenu();
+            elementHost1.Child = userMenu;
+            userMenu.HomeBut.Click += HomeBut_Click;
+            userMenu.settingBut.Click += SettingBut_Click;
+            userMenu.adsBut.Click += AdsBut_Click;
+            userMenu.catBut.Click += CatBut_Click;
+            userMenu.profileBut.Click += ProfileBut_Click;
+            userMenu.logoutBut.Click += LogoutBut_Click;
             label5.Text = userid.ToString();
+            //userMenu1.logoutBut += logoutBut_Click;
             updateFields();
         }
-
         #endregion
 
         #region Navigation
@@ -65,6 +68,12 @@ namespace UserApplication
         private void ProfileBut_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             panels[4].BringToFront();
+        }
+        private void LogoutBut_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            this.Close();
+            // This line stops debugger and starts the app - Temporary Solution.
+            System.Diagnostics.Process.Start(Application.StartupPath.ToString() + @"\Login.exe");
         }
 
         /// <summary>
@@ -256,13 +265,6 @@ namespace UserApplication
             // Update the image path in database.
             this.usersTableAdapter1.UpdateUserImageQuery("", userid);
             avatarPictureBox.Image = UserApplication.Properties.Resources.userAvatar;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            // This line stops debugger and starts the app - Temporary Solution.
-            System.Diagnostics.Process.Start(Application.StartupPath.ToString()+@"\Login.exe");
         }
 
         private void showpasswordCheckBox_CheckedChanged(object sender, EventArgs e)
