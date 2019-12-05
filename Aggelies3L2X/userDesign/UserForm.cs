@@ -34,15 +34,15 @@ namespace UserApplication
             InitializeComponent();
             controlsList();
             userid = userID;
-            var userMenu = new aggeliesWpfLab.UserMenu();
-            elementHost1.Child = userMenu;
-            userMenu.HomeBut.Click += HomeBut_Click;
-            userMenu.settingBut.Click += SettingBut_Click;
-            userMenu.adsBut.Click += AdsBut_Click;
-            userMenu.catBut.Click += CatBut_Click;
-            userMenu.profileBut.Click += ProfileBut_Click;
-            userMenu.logoutBut.Click += LogoutBut_Click;
-            label5.Text = userid.ToString();
+            //var userMenu = new aggeliesWpfLab.UserMenu();
+            //elementHost1.Child = userMenu;
+            //userMenu.HomeBut.Click += HomeBut_Click;
+            //userMenu.settingBut.Click += SettingBut_Click;
+            //userMenu.adsBut.Click += AdsBut_Click;
+            //userMenu.catBut.Click += CatBut_Click;
+            //userMenu.profileBut.Click += ProfileBut_Click;
+            //userMenu.logoutBut.Click += LogoutBut_Click;
+            //label5.Text = userid.ToString();
             //userMenu1.logoutBut += logoutBut_Click;
             updateFields();
         }

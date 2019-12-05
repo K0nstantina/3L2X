@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="aggeliesWpfLab.UserMenuIcons"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:aggeliesWpfLab"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid>
+        <Button Margin="0,0,617,288" Background="{x:Null}">
+            <StackPanel>
+                <Image Source="Icons/home.png" Stretch="Fill" Height="126" Width="147" />
+                <TextBlock Height="57" Width="146" TextAlignment="Center" FontSize="22" FontFamily="Showcard Gothic">Home</TextBlock>
+            </StackPanel>
+        </Button>
+    </Grid>
+
+</UserControl>

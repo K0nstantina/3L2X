@@ -34,7 +34,6 @@
             this.footerPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
-            this.userMenu1 = new aggeliesWpfLab.UserMenu();
             this.settingsPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.homePanel = new System.Windows.Forms.Panel();
@@ -131,7 +130,6 @@
             this.elementHost1.Size = new System.Drawing.Size(216, 343);
             this.elementHost1.TabIndex = 7;
             this.elementHost1.Text = "elementHost1";
-            this.elementHost1.Child = this.userMenu1;
             // 
             // settingsPanel
             // 
@@ -642,7 +640,6 @@
         private System.Windows.Forms.Label lNameLabel;
         private System.Windows.Forms.TextBox lNameTextBox;
         private System.Windows.Forms.BindingSource usersBindingSource;
-        private aggeliesWpfLab.UserMenu userMenu1;
     }
 }
 
