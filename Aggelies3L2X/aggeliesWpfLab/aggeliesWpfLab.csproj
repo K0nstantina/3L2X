@@ -65,8 +65,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="UserMenu.xaml.cs">
-      <DependentUpon>UserMenu.xaml</DependentUpon>
+    <Compile Include="userMenuOriginal.xaml.cs">
+      <DependentUpon>userMenuOriginal.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -82,7 +82,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserMenu.xaml">
+    <Page Include="userMenuOriginal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
