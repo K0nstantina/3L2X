@@ -112,13 +112,12 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\aggeliesWpfLab\aggeliesWpfLab.csproj">
-      <Project>{CD85BF5B-BC05-4B0A-AFA6-B64CBFAB0E37}</Project>
+      <Project>{cd85bf5b-bc05-4b0a-afa6-b64cbfab0e37}</Project>
       <Name>aggeliesWpfLab</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TestingWPFhostControl\TestingWPFhostControl.csproj">
-      <Project>{072C9D30-5755-438D-8CCE-44F007B4AD70}</Project>
-      <Name>TestingWPFhostControl</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

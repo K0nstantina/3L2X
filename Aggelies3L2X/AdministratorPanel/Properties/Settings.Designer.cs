@@ -32,5 +32,17 @@ namespace AdministratorPanel.Properties {
                 return ((string)(this["AggeliesDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int User {
+            get {
+                return ((int)(this["User"]));
+            }
+            set {
+                this["User"] = value;
+            }
+        }
     }
 }

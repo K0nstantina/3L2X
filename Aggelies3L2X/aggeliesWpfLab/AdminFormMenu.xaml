@@ -1,26 +1,24 @@
-﻿<UserControl x:Class="aggeliesWpfLab.adminMenuIcons"
+﻿<UserControl x:Class="aggeliesWpfLab.AdminFormMenu"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:aggeliesWpfLab"
-             mc:Ignorable="d" d:DesignWidth="800" Height="125">
+             mc:Ignorable="d" 
+             d:DesignHeight="125" d:DesignWidth="800">
     <UserControl.Resources>
         <Style x:Key="menuIconB" TargetType="Button">
-            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
             <Setter Property="Background" Value="#FF10477E"/>
-            <Setter Property="ToolTipService.InitialShowDelay" Value="5000"/>
-            <Setter Property="ToolTipService.ShowDuration" Value="2000"/>
-            <Setter Property="ToolTipService.BetweenShowDelay" Value="10000"/>
             <Setter Property="Margin" Value="10"/>
             <Setter Property="Template">
                 <Setter.Value>
-                    <ControlTemplate>
-                        <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderThickness="1">
-                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="5" Background="{TemplateBinding Background}" BorderThickness="1">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center">
+
+                            </ContentPresenter>
                         </Border>
                     </ControlTemplate>
-                    
                 </Setter.Value>
             </Setter>
             <Style.Triggers>
@@ -45,37 +43,37 @@
         </Grid.ColumnDefinitions>
         <Button Grid.Column="0" x:Name="HomeB" Style="{StaticResource menuIconB}" ToolTip="Go to Home page.">
             <Button.OpacityMask>
-                <ImageBrush ImageSource="/Icons/Home.png"/>
+                <ImageBrush ImageSource="myIcons/Home.png"/>
             </Button.OpacityMask>
         </Button>
-        <Button Grid.Column="1" x:Name="AdsB" Style="{StaticResource menuIconB}" ToolTip="View all registered Ads.">
+        <Button Grid.Column="1" x:Name="AdsB" Style="{StaticResource menuIconB}" ToolTip="View all the classfied advertisments.">
             <Button.OpacityMask>
-                <ImageBrush ImageSource="/Icons/ads.png"/>
+                <ImageBrush ImageSource="myIcons/ads.png"/>
             </Button.OpacityMask>
         </Button>
-        <Button Grid.Column="2" x:Name="UsersB" Style="{StaticResource menuIconB}" ToolTip="View all registered Users.">
+        <Button Grid.Column="2" x:Name="UsersB" Style="{StaticResource menuIconB}" ToolTip="View all the users.">
             <Button.OpacityMask>
-                <ImageBrush ImageSource="/Icons/users.png"/>
+                <ImageBrush ImageSource="myIcons/users.png"/>
             </Button.OpacityMask>
         </Button>
-        <Button Grid.Column="3" x:Name="CategoriesB" Style="{StaticResource menuIconB}" ToolTip="View all Categories.">
+        <Button Grid.Column="3" x:Name="CategoriesB" Style="{StaticResource menuIconB}" ToolTip="View all the categories.">
             <Button.OpacityMask>
-                <ImageBrush ImageSource="/Icons/categories.png"/>
+                <ImageBrush ImageSource="myIcons/categories.png"/>
             </Button.OpacityMask>
         </Button>
-        <Button Grid.Column="4" x:Name="AnalyticsB" Style="{StaticResource menuIconB}" ToolTip="View the system's analytics.">
+        <Button Grid.Column="4" x:Name="AnalyticsB" Style="{StaticResource menuIconB}" ToolTip="Go to Analytics and Statistics page.">
             <Button.OpacityMask>
-                <ImageBrush ImageSource="/Icons/analytics.png"/>
+                <ImageBrush ImageSource="myIcons/analytics.png"/>
             </Button.OpacityMask>
         </Button>
-        <Button Grid.Column="5" x:Name="SettingsB" Style="{StaticResource menuIconB}" ToolTip="Go to your settings.">
+        <Button Grid.Column="5" x:Name="SettingsB" Style="{StaticResource menuIconB}" ToolTip="Go to your Account page.">
             <Button.OpacityMask>
-                <ImageBrush ImageSource="/Icons/settings.png"/>
+                <ImageBrush ImageSource="myIcons/settings.png"/>
             </Button.OpacityMask>
         </Button>
-        <Button Grid.Column="6" x:Name="ProfileB" Style="{StaticResource menuIconB}" ToolTip="Go to Account.">
+        <Button Grid.Column="6" x:Name="ProfileB" Style="{StaticResource menuIconB}">
             <Button.OpacityMask>
-                <ImageBrush ImageSource="/Icons/avatar.png"/>
+                <ImageBrush ImageSource="myIcons/avatar.png"/>
             </Button.OpacityMask>
         </Button>
     </Grid>
