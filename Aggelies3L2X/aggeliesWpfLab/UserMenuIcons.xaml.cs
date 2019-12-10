@@ -16,13 +16,14 @@ using System.Windows.Shapes;
 namespace aggeliesWpfLab
 {
     /// <summary>
-    /// Interaction logic for UserMenu.xaml
+    /// Interaction logic for UserMenuIcons.xaml
     /// </summary>
-    public partial class UserMenu : UserControl
+    public partial class UserMenuIcons : UserControl
     {
-        public UserMenu()
+        public UserMenuIcons()
         {
             InitializeComponent();
         }
+
     }
 }

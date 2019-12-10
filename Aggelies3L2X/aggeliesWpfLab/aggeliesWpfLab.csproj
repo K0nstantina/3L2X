@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -49,8 +50,8 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminMenu.xaml.cs">
-      <DependentUpon>AdminMenu.xaml</DependentUpon>
+    <Compile Include="adminMenuIcons.xaml.cs">
+      <DependentUpon>adminMenuIcons.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -65,8 +66,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="userMenuOriginal.xaml.cs">
       <DependentUpon>userMenuOriginal.xaml</DependentUpon>
+=======
+    <Compile Include="UserMenuIcons.xaml.cs">
+      <DependentUpon>UserMenuIcons.xaml</DependentUpon>
+>>>>>>> 51889b87fb039b6ecd2c76bda202c19d31791be0
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -78,14 +84,42 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="AdminMenu.xaml">
+    <Page Include="adminMenuIcons.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+<<<<<<< HEAD
     <Page Include="userMenuOriginal.xaml">
+=======
+    <Page Include="UserMenuIcons.xaml">
+>>>>>>> 51889b87fb039b6ecd2c76bda202c19d31791be0
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\categories.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\ads.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\analytics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\logout.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
