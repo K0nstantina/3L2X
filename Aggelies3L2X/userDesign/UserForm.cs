@@ -124,16 +124,7 @@ namespace UserApplication
             {
                 titleTextBox.Enabled = false;
                 editTitlePictureBox.Image = UserApplication.Properties.Resources.edit1;
-                try 
-                {
-                    view = adsListBox.SelectedItem as DataRowView;
-                    int adID = Int32.Parse(view["adID"].ToString());
-                    this.adsTableTableAdapter.UpdateTitleDescQuery(titleTextBox.Text, descriptionRichTextBox.Text, adID);
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("not updated");
-                }
+                updateTitleDesc();
             }
         }
 
@@ -154,6 +145,7 @@ namespace UserApplication
             {
                 descriptionRichTextBox.Enabled = false;
                 editDescriptionPictureBox.Image = UserApplication.Properties.Resources.edit1;
+                updateTitleDesc();
             }
         }
 
@@ -284,6 +276,29 @@ namespace UserApplication
             }
         }
 
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            string uname, fname, lname, umail, upass;
+            uname = uNameTextBox.Text;
+            fname = fNameTextBox.Text;
+            lname = lNameTextBox.Text;
+            umail = uEmailTextBox.Text;
+            upass = uPasswordTextBox.Text;
+
+            if (uname != "" && fname != "" && lname != "" && umail != "" && upass != "")
+            {
+                try
+                {
+                    usersTableAdapter1.UpdateUserInfoQuery(fname, lname, uname, upass, umail, userid);
+                    MessageBox.Show("Info Updated!");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Info WAS NOT Updated");
+                }
+            }
+        }
+
         private void updateFields()
         {
             this.adsTableTableAdapter.AdsPerUser(this.aggeliesDBDataSet.AdsTable, userid);
@@ -297,6 +312,21 @@ namespace UserApplication
             lNameTextBox.Text = usersTableAdapter1.SelectLastNameQuery(userid).ToString();
             uEmailTextBox.Text = usersTableAdapter1.SelectUserEmailQuery(userid).ToString();
             uPasswordTextBox.Text = usersTableAdapter1.SelectUserPasswordQuery(userid).ToString();
+        }
+
+        private void updateTitleDesc()
+        {
+            try
+            {
+                view = adsListBox.SelectedItem as DataRowView;
+                int adID = Int32.Parse(view["adID"].ToString());
+                this.adsTableTableAdapter.UpdateTitleDescQuery(titleTextBox.Text, descriptionRichTextBox.Text, adID);
+                updateFields();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("not updated");
+            }
         }
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {

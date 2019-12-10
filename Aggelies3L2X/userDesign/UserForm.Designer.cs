@@ -76,6 +76,7 @@
             this.contentPanel = new System.Windows.Forms.Panel();
             this.adsTableTableAdapter = new UserApplication.AggeliesDBDataSetTableAdapters.AdsTableTableAdapter();
             this.usersTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.UsersTableAdapter();
+            this.saveButton = new System.Windows.Forms.Button();
             this.rightPanel.SuspendLayout();
             this.settingsPanel.SuspendLayout();
             this.homePanel.SuspendLayout();
@@ -195,6 +196,7 @@
             // 
             // profilePanel
             // 
+            this.profilePanel.Controls.Add(this.saveButton);
             this.profilePanel.Controls.Add(this.lNameLabel);
             this.profilePanel.Controls.Add(this.lNameTextBox);
             this.profilePanel.Controls.Add(this.showpasswordCheckBox);
@@ -515,10 +517,10 @@
             this.descriptionRichTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.descriptionRichTextBox.Enabled = false;
             this.descriptionRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descriptionRichTextBox.Location = new System.Drawing.Point(0, 324);
+            this.descriptionRichTextBox.Location = new System.Drawing.Point(0, 282);
             this.descriptionRichTextBox.Name = "descriptionRichTextBox";
             this.descriptionRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.descriptionRichTextBox.Size = new System.Drawing.Size(278, 158);
+            this.descriptionRichTextBox.Size = new System.Drawing.Size(278, 200);
             this.descriptionRichTextBox.TabIndex = 4;
             this.descriptionRichTextBox.Text = "Το ακίνητο βρίσκεται στην Αθήνα και μπλα μπλα μπλα....................\n.........." +
     ".....................\n................................\n........................." +
@@ -529,19 +531,19 @@
             this.adsPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("adsPictureBox.Image")));
             this.adsPictureBox.Location = new System.Drawing.Point(0, 30);
             this.adsPictureBox.Name = "adsPictureBox";
-            this.adsPictureBox.Size = new System.Drawing.Size(278, 256);
+            this.adsPictureBox.Size = new System.Drawing.Size(278, 246);
             this.adsPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.adsPictureBox.TabIndex = 3;
             this.adsPictureBox.TabStop = false;
             // 
             // contentPanel
             // 
-            this.contentPanel.Controls.Add(this.adsPanel);
-            this.contentPanel.Controls.Add(this.page4Panel);
             this.contentPanel.Controls.Add(this.profilePanel);
             this.contentPanel.Controls.Add(this.page6Panel);
             this.contentPanel.Controls.Add(this.homePanel);
             this.contentPanel.Controls.Add(this.settingsPanel);
+            this.contentPanel.Controls.Add(this.adsPanel);
+            this.contentPanel.Controls.Add(this.page4Panel);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(0, 108);
             this.contentPanel.Name = "contentPanel";
@@ -555,6 +557,18 @@
             // usersTableAdapter1
             // 
             this.usersTableAdapter1.ClearBeforeFill = true;
+            // 
+            // saveButton
+            // 
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveButton.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveButton.Location = new System.Drawing.Point(623, 298);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(149, 45);
+            this.saveButton.TabIndex = 63;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // UserForm
             // 
@@ -643,6 +657,7 @@
         private System.Windows.Forms.BindingSource usersBindingSource;
         private System.Windows.Forms.Integration.ElementHost elementHost1;
         private aggeliesWpfLab.UserMenuIcons userMenuIcons1;
+        private System.Windows.Forms.Button saveButton;
     }
 }
 
