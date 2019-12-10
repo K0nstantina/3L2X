@@ -34,25 +34,22 @@ namespace UserApplication
             InitializeComponent();
             controlsList();
             userid = userID;
-            var userMenu = new aggeliesWpfLab.UserMenuIcons();
-            elementHost1.Child = userMenu;
-            elementHost1.Select();
-            userMenu.homeButton.Click += HomeButton_Click;
-            userMenu.settingsButton.Click += SettingBut_Click;
-            userMenu.adsButton.Click += AdsBut_Click;
-            userMenu.categoriesButton.Click += CatBut_Click;
-            userMenu.profileButton.Click += ProfileBut_Click;
-            userMenu.logoutButton.Click += LogoutBut_Click;
+            //var userMenu = new aggeliesWpfLab.UserMenu();
+            //elementHost1.Child = userMenu;
+            //userMenu.HomeBut.Click += HomeBut_Click;
+            //userMenu.settingBut.Click += SettingBut_Click;
+            //userMenu.adsBut.Click += AdsBut_Click;
+            //userMenu.catBut.Click += CatBut_Click;
+            //userMenu.profileBut.Click += ProfileBut_Click;
+            //userMenu.logoutBut.Click += LogoutBut_Click;
             //label5.Text = userid.ToString();
             //userMenu1.logoutBut += logoutBut_Click;
             updateFields();
         }
-
-
         #endregion
 
         #region Navigation
-        private void HomeButton_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void HomeBut_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             panels[0].BringToFront();
         }

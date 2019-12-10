@@ -5,54 +5,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:aggeliesWpfLab"
              mc:Ignorable="d" 
-             d:DesignHeight="482.992" d:DesignWidth="159.971" Height="482">
+             d:DesignHeight="450" d:DesignWidth="800">
 
     <Grid>
-        <Grid.RenderTransform>
-            <TransformGroup>
-                <ScaleTransform ScaleY="1" ScaleX="1"/>
-                <SkewTransform AngleY="0" AngleX="0"/>
-                <RotateTransform Angle="0"/>
-                <TranslateTransform/>
-            </TransformGroup>
-        </Grid.RenderTransform>
-        <Button x:Name="adsButton" Margin="0,161,0,241" Background="{x:Null}" Height="80" Width="160" x:FieldModifier="public">
+        <Button Margin="0,0,617,288" Background="{x:Null}">
             <StackPanel>
-                <Image Source="Icons/ads.png" Stretch="Fill" Height="50" Width="50" RenderTransformOrigin="0.556,0.597" />
-                <TextBlock Height="28" Width="146" TextAlignment="Center" FontSize="22" FontFamily="Showcard Gothic" Text="my ADS"/>
+                <Image Source="Icons/home.png" Stretch="Fill" Height="126" Width="147" />
+                <TextBlock Height="57" Width="146" TextAlignment="Center" FontSize="22" FontFamily="Showcard Gothic">Home</TextBlock>
             </StackPanel>
         </Button>
-        <Button x:Name="categoriesButton" Margin="0,81,0,321" Background="{x:Null}" Height="80" Width="160" x:FieldModifier="public">
-            <StackPanel>
-                <Image Source="Icons/categories.png" Stretch="Fill" Height="50" Width="50" />
-                <TextBlock Height="35" Width="153" TextAlignment="Center" FontSize="22" FontFamily="Showcard Gothic" Text="Categories"/>
-            </StackPanel>
-        </Button>
-        <Button x:Name="profileButton" Margin="0,242,0,160" Background="{x:Null}" Width="160" Height="80" x:FieldModifier="public">
-            <StackPanel>
-                <Image Source="Icons/avatar.png" Stretch="Fill" Height="50" Width="50" />
-                <TextBlock Height="57" Width="146" TextAlignment="Center" FontSize="22" FontFamily="Showcard Gothic" Text="profile"/>
-            </StackPanel>
-        </Button>
-        <Button x:Name="settingsButton" Margin="0,322,0,80" Background="{x:Null}" Width="160" Height="80" x:FieldModifier="public">
-            <StackPanel>
-                <Image Source="Icons/settings.png" Stretch="Fill" Height="50" Width="50" />
-                <TextBlock Height="57" Width="146" TextAlignment="Center" FontSize="22" FontFamily="Showcard Gothic" Text="settings"/>
-            </StackPanel>
-        </Button>
-        <Button x:Name="logoutButton" Margin="0,403,0,-1" Background="{x:Null}" Width="160" Height="80" x:FieldModifier="public">
-            <StackPanel>
-                <Image Stretch="Fill" Height="50" Width="50" Source="Icons/logout.png" />
-                <TextBlock Height="24" Width="146" TextAlignment="Center" FontSize="22" FontFamily="Showcard Gothic" Text="logout"/>
-            </StackPanel>
-        </Button>
-        <Button x:Name="homeButton" Margin="0,1,0,401" Background="{x:Null}" Width="160" Height="80" x:FieldModifier="public">
-            <StackPanel>
-                <Image Source="Icons/home.png" Stretch="Fill" Height="50" Width="50" />
-                <TextBlock Height="35" Width="100" TextAlignment="Center" FontSize="22" FontFamily="Showcard Gothic" Text="Home"/>
-            </StackPanel>
-        </Button>
-
     </Grid>
 
 </UserControl>
