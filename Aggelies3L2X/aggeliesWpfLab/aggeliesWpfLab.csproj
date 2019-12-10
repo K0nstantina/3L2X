@@ -50,8 +50,8 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminFormMenu.xaml.cs">
-      <DependentUpon>AdminFormMenu.xaml</DependentUpon>
+    <Compile Include="adminMenuIcons.xaml.cs">
+      <DependentUpon>adminMenuIcons.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -79,7 +79,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="AdminFormMenu.xaml">
+    <Page Include="adminMenuIcons.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -89,39 +89,25 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="myIcons\home.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    <Resource Include="Icons\home.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="myIcons\users.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    <Resource Include="Icons\users.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="myIcons\categories.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    <Resource Include="Icons\categories.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="myIcons\ads.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    <Resource Include="Icons\ads.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="myIcons\avatar.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    <Resource Include="Icons\avatar.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="myIcons\analytics.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    <Resource Include="Icons\analytics.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="myIcons\settings.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    <Resource Include="Icons\settings.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\logout.png" />

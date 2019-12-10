@@ -16,14 +16,15 @@ using System.Windows.Shapes;
 namespace aggeliesWpfLab
 {
     /// <summary>
-    /// Interaction logic for AdminFormMenu.xaml
+    /// Interaction logic for adminMenuIcons.xaml
     /// </summary>
-    public partial class AdminFormMenu : UserControl
+    public partial class adminMenuIcons : UserControl
     {
-        public AdminFormMenu()
+        public adminMenuIcons()
         {
             InitializeComponent();
         }
+
         public Button GetHomeB
         {
             get
@@ -57,6 +58,7 @@ namespace aggeliesWpfLab
             get
             {
                 return this.SettingsB;
+
             }
         }
         public Button GetAnalyticsB
