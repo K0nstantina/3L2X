@@ -34,6 +34,7 @@
             this.footerPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
+            this.userMenuIcons1 = new aggeliesWpfLab.UserMenuIcons();
             this.settingsPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.homePanel = new System.Windows.Forms.Panel();
@@ -101,16 +102,16 @@
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1006, 100);
+            this.topPanel.Size = new System.Drawing.Size(1062, 108);
             this.topPanel.TabIndex = 0;
             // 
             // footerPanel
             // 
             this.footerPanel.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.footerPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.footerPanel.Location = new System.Drawing.Point(0, 534);
+            this.footerPanel.Location = new System.Drawing.Point(0, 590);
             this.footerPanel.Name = "footerPanel";
-            this.footerPanel.Size = new System.Drawing.Size(1006, 100);
+            this.footerPanel.Size = new System.Drawing.Size(1062, 100);
             this.footerPanel.TabIndex = 1;
             // 
             // rightPanel
@@ -118,18 +119,19 @@
             this.rightPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.rightPanel.Controls.Add(this.elementHost1);
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rightPanel.Location = new System.Drawing.Point(1006, 0);
+            this.rightPanel.Location = new System.Drawing.Point(1062, 0);
             this.rightPanel.Name = "rightPanel";
-            this.rightPanel.Size = new System.Drawing.Size(216, 634);
+            this.rightPanel.Size = new System.Drawing.Size(160, 690);
             this.rightPanel.TabIndex = 2;
             // 
             // elementHost1
             // 
-            this.elementHost1.Location = new System.Drawing.Point(0, 100);
+            this.elementHost1.Location = new System.Drawing.Point(0, 108);
             this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(216, 343);
-            this.elementHost1.TabIndex = 7;
+            this.elementHost1.Size = new System.Drawing.Size(160, 482);
+            this.elementHost1.TabIndex = 0;
             this.elementHost1.Text = "elementHost1";
+            this.elementHost1.Child = this.userMenuIcons1;
             // 
             // settingsPanel
             // 
@@ -137,7 +139,7 @@
             this.settingsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.settingsPanel.Location = new System.Drawing.Point(0, 0);
             this.settingsPanel.Name = "settingsPanel";
-            this.settingsPanel.Size = new System.Drawing.Size(1006, 434);
+            this.settingsPanel.Size = new System.Drawing.Size(1062, 482);
             this.settingsPanel.TabIndex = 1;
             // 
             // label2
@@ -157,7 +159,7 @@
             this.homePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.homePanel.Location = new System.Drawing.Point(0, 0);
             this.homePanel.Name = "homePanel";
-            this.homePanel.Size = new System.Drawing.Size(1006, 434);
+            this.homePanel.Size = new System.Drawing.Size(1062, 482);
             this.homePanel.TabIndex = 3;
             // 
             // label1
@@ -177,7 +179,7 @@
             this.page6Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.page6Panel.Location = new System.Drawing.Point(0, 0);
             this.page6Panel.Name = "page6Panel";
-            this.page6Panel.Size = new System.Drawing.Size(1006, 434);
+            this.page6Panel.Size = new System.Drawing.Size(1062, 482);
             this.page6Panel.TabIndex = 0;
             // 
             // label6
@@ -211,7 +213,7 @@
             this.profilePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profilePanel.Location = new System.Drawing.Point(0, 0);
             this.profilePanel.Name = "profilePanel";
-            this.profilePanel.Size = new System.Drawing.Size(1006, 434);
+            this.profilePanel.Size = new System.Drawing.Size(1062, 482);
             this.profilePanel.TabIndex = 0;
             // 
             // lNameLabel
@@ -381,7 +383,7 @@
             this.page4Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.page4Panel.Location = new System.Drawing.Point(0, 0);
             this.page4Panel.Name = "page4Panel";
-            this.page4Panel.Size = new System.Drawing.Size(1006, 434);
+            this.page4Panel.Size = new System.Drawing.Size(1062, 482);
             this.page4Panel.TabIndex = 3;
             // 
             // label4
@@ -406,7 +408,7 @@
             this.adsPanel.Location = new System.Drawing.Point(0, 0);
             this.adsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adsPanel.Name = "adsPanel";
-            this.adsPanel.Size = new System.Drawing.Size(1006, 434);
+            this.adsPanel.Size = new System.Drawing.Size(1062, 482);
             this.adsPanel.TabIndex = 2;
             // 
             // editPicturePictureBox
@@ -424,10 +426,10 @@
             this.adsListPanel.Controls.Add(this.adsListBox);
             this.adsListPanel.Controls.Add(this.infoLabel);
             this.adsListPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.adsListPanel.Location = new System.Drawing.Point(806, 0);
+            this.adsListPanel.Location = new System.Drawing.Point(862, 0);
             this.adsListPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adsListPanel.Name = "adsListPanel";
-            this.adsListPanel.Size = new System.Drawing.Size(200, 434);
+            this.adsListPanel.Size = new System.Drawing.Size(200, 482);
             this.adsListPanel.TabIndex = 5;
             // 
             // adsListBox
@@ -443,7 +445,7 @@
             this.adsListBox.Location = new System.Drawing.Point(0, 42);
             this.adsListBox.Margin = new System.Windows.Forms.Padding(0);
             this.adsListBox.Name = "adsListBox";
-            this.adsListBox.Size = new System.Drawing.Size(200, 400);
+            this.adsListBox.Size = new System.Drawing.Size(200, 440);
             this.adsListBox.TabIndex = 3;
             this.adsListBox.ValueMember = "adID";
             this.adsListBox.SelectedIndexChanged += new System.EventHandler(this.adsListBox_SelectedIndexChanged);
@@ -493,7 +495,7 @@
             this.recentAdPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.recentAdPanel.Location = new System.Drawing.Point(0, 0);
             this.recentAdPanel.Name = "recentAdPanel";
-            this.recentAdPanel.Size = new System.Drawing.Size(278, 434);
+            this.recentAdPanel.Size = new System.Drawing.Size(278, 482);
             this.recentAdPanel.TabIndex = 2;
             // 
             // titleTextBox
@@ -513,7 +515,7 @@
             this.descriptionRichTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.descriptionRichTextBox.Enabled = false;
             this.descriptionRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descriptionRichTextBox.Location = new System.Drawing.Point(0, 276);
+            this.descriptionRichTextBox.Location = new System.Drawing.Point(0, 324);
             this.descriptionRichTextBox.Name = "descriptionRichTextBox";
             this.descriptionRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.descriptionRichTextBox.Size = new System.Drawing.Size(278, 158);
@@ -534,16 +536,16 @@
             // 
             // contentPanel
             // 
+            this.contentPanel.Controls.Add(this.adsPanel);
+            this.contentPanel.Controls.Add(this.page4Panel);
             this.contentPanel.Controls.Add(this.profilePanel);
             this.contentPanel.Controls.Add(this.page6Panel);
             this.contentPanel.Controls.Add(this.homePanel);
             this.contentPanel.Controls.Add(this.settingsPanel);
-            this.contentPanel.Controls.Add(this.adsPanel);
-            this.contentPanel.Controls.Add(this.page4Panel);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contentPanel.Location = new System.Drawing.Point(0, 100);
+            this.contentPanel.Location = new System.Drawing.Point(0, 108);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(1006, 434);
+            this.contentPanel.Size = new System.Drawing.Size(1062, 482);
             this.contentPanel.TabIndex = 5;
             // 
             // adsTableTableAdapter
@@ -558,7 +560,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1222, 634);
+            this.ClientSize = new System.Drawing.Size(1222, 690);
             this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.footerPanel);
             this.Controls.Add(this.topPanel);
@@ -623,7 +625,6 @@
         private System.Windows.Forms.BindingSource adsTableBindingSource;
         private UserApplication.AggeliesDBDataSetTableAdapters.AdsTableTableAdapter adsTableTableAdapter;
         private System.Windows.Forms.PictureBox editPicturePictureBox;
-        private System.Windows.Forms.Integration.ElementHost elementHost1;
         private System.Windows.Forms.CheckBox showpasswordCheckBox;
         private System.Windows.Forms.Button avatarRemoveButton;
         private System.Windows.Forms.Label fNameLabel;
@@ -640,6 +641,8 @@
         private System.Windows.Forms.Label lNameLabel;
         private System.Windows.Forms.TextBox lNameTextBox;
         private System.Windows.Forms.BindingSource usersBindingSource;
+        private System.Windows.Forms.Integration.ElementHost elementHost1;
+        private aggeliesWpfLab.UserMenuIcons userMenuIcons1;
     }
 }
 

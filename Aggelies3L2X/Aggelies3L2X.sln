@@ -4,9 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdministratorPanel UI", "AdministratorPanel\AdministratorPanel UI.csproj", "{E81E7F72-D60E-4863-847E-332A121CBE78}"
-	ProjectSection(ProjectDependencies) = postProject
-		{CD85BF5B-BC05-4B0A-AFA6-B64CBFAB0E37} = {CD85BF5B-BC05-4B0A-AFA6-B64CBFAB0E37}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geolocation", "Geolocation\Geolocation.csproj", "{1DA230CE-D783-4A9C-B537-32299435C498}"
 EndProject
