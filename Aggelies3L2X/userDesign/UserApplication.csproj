@@ -84,9 +84,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserMenu.xaml.cs">
-      <DependentUpon>UserMenu.xaml</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,12 +159,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\userAvatar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="UserMenu.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
