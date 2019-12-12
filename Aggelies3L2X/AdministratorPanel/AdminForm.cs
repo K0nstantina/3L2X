@@ -15,6 +15,14 @@ namespace AdministratorPanel
         public AdminForm()
         {
             InitializeComponent();
+            this.adminMenu1.GetHomeB.Click += GetHomeB_Click;
+        }
+
+        private void GetHomeB_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            this.homePanel.BringToFront();
+            this.splitContainer1.SplitterDistance = 300;
+            this.splitContainer2.SplitterDistance = 1000;
         }
 
         private void splitContainer2_Panel2_Paint(object sender, PaintEventArgs e)
