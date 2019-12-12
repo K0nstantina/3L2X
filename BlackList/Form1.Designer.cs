@@ -31,6 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.userID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uPasswordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uCatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uWhitelistDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.testSalampasis1DataSet = new BlackList.testSalampasis1DataSet();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,14 +58,6 @@
             this.table1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.table1TableAdapter = new BlackList.Database1DataSetTableAdapters.Table1TableAdapter();
             this.database1DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.userID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uPasswordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uCatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uWhitelistDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -118,6 +118,54 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // userID
+            // 
+            this.userID.DataPropertyName = "userID";
+            this.userID.HeaderText = "userID";
+            this.userID.Name = "userID";
+            // 
+            // fName
+            // 
+            this.fName.DataPropertyName = "fName";
+            this.fName.HeaderText = "fName";
+            this.fName.Name = "fName";
+            // 
+            // lName
+            // 
+            this.lName.DataPropertyName = "lName";
+            this.lName.HeaderText = "lName";
+            this.lName.Name = "lName";
+            // 
+            // uName
+            // 
+            this.uName.DataPropertyName = "uName";
+            this.uName.HeaderText = "uName";
+            this.uName.Name = "uName";
+            // 
+            // uPasswordDataGridViewTextBoxColumn
+            // 
+            this.uPasswordDataGridViewTextBoxColumn.DataPropertyName = "uPassword";
+            this.uPasswordDataGridViewTextBoxColumn.HeaderText = "uPassword";
+            this.uPasswordDataGridViewTextBoxColumn.Name = "uPasswordDataGridViewTextBoxColumn";
+            // 
+            // uEmail
+            // 
+            this.uEmail.DataPropertyName = "uEmail";
+            this.uEmail.HeaderText = "uEmail";
+            this.uEmail.Name = "uEmail";
+            // 
+            // uCatDataGridViewTextBoxColumn
+            // 
+            this.uCatDataGridViewTextBoxColumn.DataPropertyName = "uCat";
+            this.uCatDataGridViewTextBoxColumn.HeaderText = "uCat";
+            this.uCatDataGridViewTextBoxColumn.Name = "uCatDataGridViewTextBoxColumn";
+            // 
+            // uWhitelistDataGridViewCheckBoxColumn
+            // 
+            this.uWhitelistDataGridViewCheckBoxColumn.DataPropertyName = "uWhitelist";
+            this.uWhitelistDataGridViewCheckBoxColumn.HeaderText = "uWhitelist";
+            this.uWhitelistDataGridViewCheckBoxColumn.Name = "uWhitelistDataGridViewCheckBoxColumn";
             // 
             // usersBindingSource
             // 
@@ -221,7 +269,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(167, 156);
+            this.button1.Location = new System.Drawing.Point(167, 149);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 23);
             this.button1.TabIndex = 0;
@@ -251,54 +299,6 @@
             // 
             this.database1DataSetBindingSource.DataSource = this.database1DataSet;
             this.database1DataSetBindingSource.Position = 0;
-            // 
-            // userID
-            // 
-            this.userID.DataPropertyName = "userID";
-            this.userID.HeaderText = "userID";
-            this.userID.Name = "userID";
-            // 
-            // fName
-            // 
-            this.fName.DataPropertyName = "fName";
-            this.fName.HeaderText = "fName";
-            this.fName.Name = "fName";
-            // 
-            // lName
-            // 
-            this.lName.DataPropertyName = "lName";
-            this.lName.HeaderText = "lName";
-            this.lName.Name = "lName";
-            // 
-            // uName
-            // 
-            this.uName.DataPropertyName = "uName";
-            this.uName.HeaderText = "uName";
-            this.uName.Name = "uName";
-            // 
-            // uPasswordDataGridViewTextBoxColumn
-            // 
-            this.uPasswordDataGridViewTextBoxColumn.DataPropertyName = "uPassword";
-            this.uPasswordDataGridViewTextBoxColumn.HeaderText = "uPassword";
-            this.uPasswordDataGridViewTextBoxColumn.Name = "uPasswordDataGridViewTextBoxColumn";
-            // 
-            // uEmail
-            // 
-            this.uEmail.DataPropertyName = "uEmail";
-            this.uEmail.HeaderText = "uEmail";
-            this.uEmail.Name = "uEmail";
-            // 
-            // uCatDataGridViewTextBoxColumn
-            // 
-            this.uCatDataGridViewTextBoxColumn.DataPropertyName = "uCat";
-            this.uCatDataGridViewTextBoxColumn.HeaderText = "uCat";
-            this.uCatDataGridViewTextBoxColumn.Name = "uCatDataGridViewTextBoxColumn";
-            // 
-            // uWhitelistDataGridViewCheckBoxColumn
-            // 
-            this.uWhitelistDataGridViewCheckBoxColumn.DataPropertyName = "uWhitelist";
-            this.uWhitelistDataGridViewCheckBoxColumn.HeaderText = "uWhitelist";
-            this.uWhitelistDataGridViewCheckBoxColumn.Name = "uWhitelistDataGridViewCheckBoxColumn";
             // 
             // Form1
             // 
