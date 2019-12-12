@@ -20,7 +20,7 @@ namespace AdministratorPanel
 
         private void GetHomeB_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            this.homePanel.BringToFront();
+            
             this.splitContainer1.SplitterDistance = 300;
             this.splitContainer2.SplitterDistance = 1000;
         }
