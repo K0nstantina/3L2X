@@ -4,52 +4,79 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:aggeliesWpfLab"
-             mc:Ignorable="d" Width="327.748" Height="404.258">
+             mc:Ignorable="d" d:DesignWidth="800" Height="125">
     <UserControl.Resources>
-        <Style x:Key="menuItem" TargetType="Button">
-            <Setter Property="Background" Value="DodgerBlue"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="Height" Value="50"/>
-            <Setter Property="Margin" Value="10"/>
-            <Setter Property="FontFamily" Value="Showcard Gothic"/>
-            <Setter Property="FontSize" Value="30"/>
+        <Style x:Key="menuIconB" TargetType="Button">
             <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-            <Setter Property="Cursor" Value="Hand"/>
-
+            <Setter Property="Background" Value="#FF10477E"/>
+            <Setter Property="ToolTipService.InitialShowDelay" Value="5000"/>
+            <Setter Property="ToolTipService.ShowDuration" Value="2000"/>
+            <Setter Property="ToolTipService.BetweenShowDelay" Value="10000"/>
+            <Setter Property="Margin" Value="10"/>
             <Setter Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border CornerRadius="20" Background="{TemplateBinding Background}" BorderThickness="1">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
-
-                            </ContentPresenter>
+                    <ControlTemplate>
+                        <Border CornerRadius="5" Background="{TemplateBinding Background}" BorderThickness="1">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
+
                 </Setter.Value>
             </Setter>
             <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#FF12497E"></Setter>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="Background" Value="#FF082640"/>
+                </Trigger>
+                <Trigger Property="IsFocused" Value="true">
+                    <Setter Property="Background" Value="#FF082640"/>
                 </Trigger>
             </Style.Triggers>
         </Style>
-
     </UserControl.Resources>
-    <Grid >
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="0*"/>
-        </Grid.RowDefinitions>
-        <Button x:Name="HomeBut" Style="{StaticResource menuItem}" Margin="10,10,10,0" Content="Home" VerticalAlignment="Top"/>
-        <Button x:Name="settingBut" Style="{StaticResource menuItem}" Margin="10,65,10,0" Content="Settings" VerticalAlignment="Top"/>
-        <Button x:Name="userBut" Style="{StaticResource menuItem}" Margin="10,120,10,0" Content="Users" VerticalAlignment="Top"/>
-        <Button x:Name="adsBut" Style="{StaticResource menuItem}" Margin="10,175,10,0" Content="Ads" VerticalAlignment="Top"/>
-        <Button x:Name="catBut" Style="{StaticResource menuItem}" Margin="10,230,10,0" Content="Categories" VerticalAlignment="Top"/>
-        <Button x:Name="statisticsBut" Style="{StaticResource menuItem}" Margin="10,285,10,0" Content="Statistics" VerticalAlignment="Top"/>
-        <Button x:Name="profileBut" Style="{StaticResource menuItem}" Margin="10,340,10,0" Content="Profile" Height="50" VerticalAlignment="Top"/>
-
-
-
-
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0" x:Name="HomeB" Style="{StaticResource menuIconB}" ToolTip="Go to Home page.">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="Icons/home.png"/>
+            </Button.OpacityMask>
+        </Button>
+        <Button Grid.Column="1" x:Name="AdsB" Style="{StaticResource menuIconB}" ToolTip="View all registered Ads.">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="Icons/ads.png"/>
+            </Button.OpacityMask>
+        </Button>
+        <Button Grid.Column="2" x:Name="UsersB" Style="{StaticResource menuIconB}" ToolTip="View all registered Users.">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="Icons/users.png"/>
+            </Button.OpacityMask>
+        </Button>
+        <Button Grid.Column="3" x:Name="CategoriesB" Style="{StaticResource menuIconB}" ToolTip="View all Categories.">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="Icons/categories.png"/>
+            </Button.OpacityMask>
+        </Button>
+        <Button Grid.Column="4" x:Name="AnalyticsB" Style="{StaticResource menuIconB}" ToolTip="View the system's analytics.">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="Icons/analytics.png"/>
+            </Button.OpacityMask>
+        </Button>
+        <Button Grid.Column="5" x:Name="SettingsB" Style="{StaticResource menuIconB}" ToolTip="Go to your settings.">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="Icons/settings.png"/>
+            </Button.OpacityMask>
+        </Button>
+        <Button Grid.Column="6" x:Name="ProfileB" Style="{StaticResource menuIconB}" ToolTip="Go to Account.">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="Icons/avatar.png"/>
+            </Button.OpacityMask>
+        </Button>
     </Grid>
 </UserControl>
