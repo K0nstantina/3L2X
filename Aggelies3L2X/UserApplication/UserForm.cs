@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,8 +21,8 @@ namespace UserApplication
         DataRowView view;
         int userid;
         private string imgPath, imgName, imgNewPath;
-        private string imagesLocation = @"C:\Users\TEO\Documents\GitHub\3L2X\Aggelies3L2X\UserApplication\Resources\images\";
-        private string userImagesLocation = @"C:\Users\TEO\Documents\GitHub\3L2X\Aggelies3L2X\UserApplication\Resources\userImages\";
+        private string imagesLocation = @"..\..\Resources\images\";
+        private string userImagesLocation = @"..\..\Resources\userImages\";
         #endregion
 
         #region Constructor
