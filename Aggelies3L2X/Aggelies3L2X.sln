@@ -45,7 +45,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aggeliesWpfLab", "aggeliesW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingWPFhostControl", "TestingWPFhostControl\TestingWPFhostControl.csproj", "{072C9D30-5755-438D-8CCE-44F007B4AD70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserApplication", "userDesign\UserApplication.csproj", "{67951149-BAD1-4426-B344-E50D9CB95A51}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserApplication", "UserApplication\UserApplication.csproj", "{67951149-BAD1-4426-B344-E50D9CB95A51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

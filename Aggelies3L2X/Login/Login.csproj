@@ -110,7 +110,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\userDesign\UserApplication.csproj">
+    <ProjectReference Include="..\UserApplication\UserApplication.csproj">
       <Project>{67951149-bad1-4426-b344-e50d9cb95a51}</Project>
       <Name>UserApplication</Name>
     </ProjectReference>

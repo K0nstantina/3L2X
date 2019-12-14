@@ -20,8 +20,8 @@ namespace UserApplication
         DataRowView view;
         int userid;
         private string imgPath, imgName, imgNewPath;
-        private string imagesLocation = @"C:\Users\TEO\Documents\GitHub\3L2X\Aggelies3L2X\userDesign\Resources\images\";
-        private string userImagesLocation = @"C:\Users\TEO\Documents\GitHub\3L2X\Aggelies3L2X\userDesign\Resources\userImages\";
+        private string imagesLocation = @"C:\Users\TEO\Documents\GitHub\3L2X\Aggelies3L2X\UserApplication\Resources\images\";
+        private string userImagesLocation = @"C:\Users\TEO\Documents\GitHub\3L2X\Aggelies3L2X\UserApplication\Resources\userImages\";
         #endregion
 
         #region Constructor
