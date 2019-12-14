@@ -34,7 +34,7 @@
             this.footerPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
-            this.userMenuIcons1 = new aggeliesWpfLab.UserMenuIcons();
+            this.userMenuIcons2 = new aggeliesWpfLab.UserMenuIcons();
             this.settingsPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.homePanel = new System.Windows.Forms.Panel();
@@ -42,6 +42,7 @@
             this.page6Panel = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.profilePanel = new System.Windows.Forms.Panel();
+            this.saveButton = new System.Windows.Forms.Button();
             this.lNameLabel = new System.Windows.Forms.Label();
             this.lNameTextBox = new System.Windows.Forms.TextBox();
             this.showpasswordCheckBox = new System.Windows.Forms.CheckBox();
@@ -76,7 +77,6 @@
             this.contentPanel = new System.Windows.Forms.Panel();
             this.adsTableTableAdapter = new UserApplication.AggeliesDBDataSetTableAdapters.AdsTableTableAdapter();
             this.usersTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.UsersTableAdapter();
-            this.saveButton = new System.Windows.Forms.Button();
             this.rightPanel.SuspendLayout();
             this.settingsPanel.SuspendLayout();
             this.homePanel.SuspendLayout();
@@ -127,12 +127,12 @@
             // 
             // elementHost1
             // 
-            this.elementHost1.Location = new System.Drawing.Point(0, 108);
+            this.elementHost1.Location = new System.Drawing.Point(0, 101);
             this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(160, 482);
+            this.elementHost1.Size = new System.Drawing.Size(160, 489);
             this.elementHost1.TabIndex = 0;
             this.elementHost1.Text = "elementHost1";
-            this.elementHost1.Child = this.userMenuIcons1;
+            this.elementHost1.Child = this.userMenuIcons2;
             // 
             // settingsPanel
             // 
@@ -217,6 +217,18 @@
             this.profilePanel.Name = "profilePanel";
             this.profilePanel.Size = new System.Drawing.Size(1062, 482);
             this.profilePanel.TabIndex = 0;
+            // 
+            // saveButton
+            // 
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveButton.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveButton.Location = new System.Drawing.Point(623, 298);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(149, 45);
+            this.saveButton.TabIndex = 63;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // lNameLabel
             // 
@@ -558,18 +570,6 @@
             // 
             this.usersTableAdapter1.ClearBeforeFill = true;
             // 
-            // saveButton
-            // 
-            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveButton.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.Location = new System.Drawing.Point(623, 298);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(149, 45);
-            this.saveButton.TabIndex = 63;
-            this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = true;
-            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
-            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -658,6 +658,7 @@
         private System.Windows.Forms.Integration.ElementHost elementHost1;
         private aggeliesWpfLab.UserMenuIcons userMenuIcons1;
         private System.Windows.Forms.Button saveButton;
+        private aggeliesWpfLab.UserMenuIcons userMenuIcons2;
     }
 }
 
