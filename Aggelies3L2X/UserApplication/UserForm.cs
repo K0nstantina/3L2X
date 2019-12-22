@@ -20,9 +20,7 @@ namespace UserApplication
         List<Button> buttons = new List<Button>();
         DataRowView view;
         int userid;
-        private string imgPath, imgName, imgNewPath;
-        private string imagesLocation = @"..\..\Resources\images\";
-        private string userImagesLocation = @"..\..\Resources\userImages\";
+        private string imgPath, imgName, imgNewPath, imagesLocation, userImagesLocation;
         #endregion
 
         #region Constructor
@@ -106,6 +104,7 @@ namespace UserApplication
         {
             // TODO: This line of code loads data into the 'aggeliesDBDataSet.AdsTable' table. You can move, or remove it, as needed.
             adsListBox_SelectedIndexChanged(adsListBox, e);
+            updateFields();
         }
 
         /// <summary>
@@ -180,12 +179,12 @@ namespace UserApplication
                         view = adsListBox.SelectedItem as DataRowView;
                         int adID = Int32.Parse(view["adID"].ToString());
                         // Update the image path in database.
-                        this.adsTableTableAdapter.UpdateImageQuery(imgNewPath, adID);
+                        this.adsTableTableAdapter.UpdateImageQuery(imgName, adID);
                         // Set adsPicturebox new image.
                         adsPictureBox.ImageLocation = imgNewPath;
                         // Update DataRowView dynamicaly.
                         view.BeginEdit();
-                        view["media"] = imgNewPath;
+                        view["media"] = imgName;
                         view.EndEdit();
                     }
                 }
@@ -214,14 +213,18 @@ namespace UserApplication
 
                 titleTextBox.Text = title;
                 descriptionRichTextBox.Text = desc;
-                adsPictureBox.ImageLocation = img;
+                adsPictureBox.ImageLocation = imagesLocation + img;
             }
             catch (Exception x)
             {
                 //MessageBox.Show(x.ToString());
             }
         }
-
+        /// <summary>
+        /// Event Handler for avatarUploadButton. Sets the user image in database.
+        /// </summary>
+        /// <param name="sender">avatarUploadButton</param>
+        /// <param name="e">Click</param>
         private void avatarUploadButton_Click(object sender, EventArgs e)
         {
             try
@@ -244,7 +247,7 @@ namespace UserApplication
                         // Copy file to images folder and update avatarPictureBox.
                         System.IO.File.Copy(imgDialog.FileName, imgNewPath);
                         // Update the image path in database.
-                        this.usersTableAdapter1.UpdateUserImageQuery(imgNewPath, userid);
+                        this.usersTableAdapter1.UpdateUserImageQuery(imgName, userid);
                         // Set avatarPictureBox new image.
                         avatarPictureBox.ImageLocation = imgNewPath;
                     }
@@ -255,14 +258,22 @@ namespace UserApplication
                 MessageBox.Show("An Error Occured" + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        /// <summary>
+        /// Event Handler for avatarRemoveButton. Deletes the database entry.
+        /// </summary>
+        /// <param name="sender">avatarRemoveButton</param>
+        /// <param name="e">Click</param>
         private void avatarRemoveButton_Click(object sender, EventArgs e)
         {
             // Update the image path in database.
             this.usersTableAdapter1.UpdateUserImageQuery("", userid);
             avatarPictureBox.Image = UserApplication.Properties.Resources.userAvatar;
         }
-
+        /// <summary>
+        /// Event Handler for showpasswordCheckBox. Shows/hides the password in uPasswordTextBox.
+        /// </summary>
+        /// <param name="sender">showpasswordCheckBox</param>
+        /// <param name="e">Click</param>
         private void showpasswordCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (showpasswordCheckBox.Checked)
@@ -276,7 +287,11 @@ namespace UserApplication
                 showpasswordCheckBox.Text = "show";
             }
         }
-
+        /// <summary>
+        /// Event Handler for saveButton. Checks and saves the user info to database. 
+        /// </summary>
+        /// <param name="sender">saveButton</param>
+        /// <param name="e">Click</param>
         private void saveButton_Click(object sender, EventArgs e)
         {
             string uname, fname, lname, umail, upass;
@@ -299,15 +314,28 @@ namespace UserApplication
                 }
             }
         }
-
+        /// <summary>
+        /// Updates the profile panel with current user info.
+        /// </summary>
         private void updateFields()
         {
             this.adsTableTableAdapter.AdsPerUser(this.aggeliesDBDataSet.AdsTable, userid);
+            // Setting images and userImages location.
+            string str = AppDomain.CurrentDomain.BaseDirectory;
+            str = str.Remove(str.Length - 16);
+            str += @"UserApplication\Resources\images\";
+            imagesLocation = str;
+            str = AppDomain.CurrentDomain.BaseDirectory;
+            str = str.Remove(str.Length - 16);
+            str += @"UserApplication\Resources\userImages\";
+            userImagesLocation = str;
+            // Setting the avatarPictureBox image location.
             try
             {
-                avatarPictureBox.ImageLocation = usersTableAdapter1.SelectUserImageQuery(userid).ToString();
+                avatarPictureBox.ImageLocation = userImagesLocation + usersTableAdapter1.SelectUserImageQuery(userid).ToString();
             }
             catch (Exception) {}
+            // Setting textboxes according to user info.
             uNameTextBox.Text = usersTableAdapter1.SelectUsernameQuery(userid).ToString();
             fNameTextBox.Text = usersTableAdapter1.SelectFirstNameQuery(userid).ToString();
             lNameTextBox.Text = usersTableAdapter1.SelectLastNameQuery(userid).ToString();
