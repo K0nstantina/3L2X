@@ -66,6 +66,11 @@
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AggeliesDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AggeliesDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdminForm.resx">
@@ -92,6 +97,17 @@
     </None>
     <None Include="AggeliesDBDataSet.xss">
       <DependentUpon>AggeliesDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AggeliesDBDataSet1.xsc">
+      <DependentUpon>AggeliesDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="AggeliesDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AggeliesDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AggeliesDBDataSet1.xss">
+      <DependentUpon>AggeliesDBDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
