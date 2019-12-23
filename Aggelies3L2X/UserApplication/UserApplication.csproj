@@ -76,7 +76,6 @@
       <DependentUpon>AggeliesDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
-    <Compile Include="SpecialMethods.cs" />
     <Compile Include="UserForm.cs">
       <SubType>Form</SubType>
     </Compile>

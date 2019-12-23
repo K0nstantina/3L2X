@@ -44,8 +44,7 @@ namespace Login
                 reader.Close();
                 this.Hide();
                 UserApplication.UserForm userForm = new UserApplication.UserForm(int.Parse(uid));
-                userForm.Show();
-                
+                userForm.Show();    
             }
             // No such user.
             else

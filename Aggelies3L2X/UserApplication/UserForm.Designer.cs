@@ -70,6 +70,14 @@
             this.page4Panel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.adsPanel = new System.Windows.Forms.Panel();
+            this.priceLabel = new System.Windows.Forms.Label();
+            this.publishedLabel = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.creationDateLabel = new System.Windows.Forms.Label();
+            this.priceTextBox = new System.Windows.Forms.TextBox();
+            this.publishedTextBox = new System.Windows.Forms.TextBox();
+            this.expirationDateTextBox = new System.Windows.Forms.TextBox();
+            this.creationDateTextBox = new System.Windows.Forms.TextBox();
             this.editPicturePictureBox = new System.Windows.Forms.PictureBox();
             this.adsListPanel = new System.Windows.Forms.Panel();
             this.adsListBox = new System.Windows.Forms.ListBox();
@@ -84,6 +92,7 @@
             this.contentPanel = new System.Windows.Forms.Panel();
             this.adsTableTableAdapter = new UserApplication.AggeliesDBDataSetTableAdapters.AdsTableTableAdapter();
             this.usersTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.UsersTableAdapter();
+            this.savePriceButton = new System.Windows.Forms.Button();
             this.rightPanel.SuspendLayout();
             this.settingsPanel.SuspendLayout();
             this.fontSizeGroupBox.SuspendLayout();
@@ -322,7 +331,7 @@
             // 
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.saveButton.Location = new System.Drawing.Point(719, 313);
+            this.saveButton.Location = new System.Drawing.Point(730, 317);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(149, 45);
             this.saveButton.TabIndex = 63;
@@ -334,7 +343,7 @@
             // 
             this.lNameLabel.AutoSize = true;
             this.lNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.lNameLabel.Location = new System.Drawing.Point(466, 144);
+            this.lNameLabel.Location = new System.Drawing.Point(467, 147);
             this.lNameLabel.Name = "lNameLabel";
             this.lNameLabel.Size = new System.Drawing.Size(86, 20);
             this.lNameLabel.TabIndex = 62;
@@ -343,7 +352,7 @@
             // lNameTextBox
             // 
             this.lNameTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.lNameTextBox.Location = new System.Drawing.Point(587, 142);
+            this.lNameTextBox.Location = new System.Drawing.Point(588, 145);
             this.lNameTextBox.Name = "lNameTextBox";
             this.lNameTextBox.Size = new System.Drawing.Size(291, 26);
             this.lNameTextBox.TabIndex = 61;
@@ -352,7 +361,7 @@
             // 
             this.showpasswordCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showpasswordCheckBox.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showpasswordCheckBox.Location = new System.Drawing.Point(885, 221);
+            this.showpasswordCheckBox.Location = new System.Drawing.Point(886, 224);
             this.showpasswordCheckBox.Name = "showpasswordCheckBox";
             this.showpasswordCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.showpasswordCheckBox.Size = new System.Drawing.Size(70, 29);
@@ -365,9 +374,9 @@
             // 
             this.avatarRemoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.avatarRemoveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.avatarRemoveButton.Location = new System.Drawing.Point(245, 313);
+            this.avatarRemoveButton.Location = new System.Drawing.Point(233, 318);
             this.avatarRemoveButton.Name = "avatarRemoveButton";
-            this.avatarRemoveButton.Size = new System.Drawing.Size(149, 45);
+            this.avatarRemoveButton.Size = new System.Drawing.Size(172, 45);
             this.avatarRemoveButton.TabIndex = 59;
             this.avatarRemoveButton.Text = "Remove";
             this.avatarRemoveButton.UseVisualStyleBackColor = true;
@@ -377,7 +386,7 @@
             // 
             this.fNameLabel.AutoSize = true;
             this.fNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.fNameLabel.Location = new System.Drawing.Point(466, 107);
+            this.fNameLabel.Location = new System.Drawing.Point(467, 110);
             this.fNameLabel.Name = "fNameLabel";
             this.fNameLabel.Size = new System.Drawing.Size(86, 20);
             this.fNameLabel.TabIndex = 56;
@@ -387,7 +396,7 @@
             // 
             this.fNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "fName", true));
             this.fNameTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.fNameTextBox.Location = new System.Drawing.Point(587, 106);
+            this.fNameTextBox.Location = new System.Drawing.Point(588, 109);
             this.fNameTextBox.Name = "fNameTextBox";
             this.fNameTextBox.Size = new System.Drawing.Size(291, 26);
             this.fNameTextBox.TabIndex = 55;
@@ -406,7 +415,7 @@
             // 
             this.uEmailLabel.AutoSize = true;
             this.uEmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.uEmailLabel.Location = new System.Drawing.Point(466, 262);
+            this.uEmailLabel.Location = new System.Drawing.Point(467, 265);
             this.uEmailLabel.Name = "uEmailLabel";
             this.uEmailLabel.Size = new System.Drawing.Size(48, 20);
             this.uEmailLabel.TabIndex = 54;
@@ -415,7 +424,7 @@
             // uEmailTextBox
             // 
             this.uEmailTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.uEmailTextBox.Location = new System.Drawing.Point(587, 262);
+            this.uEmailTextBox.Location = new System.Drawing.Point(588, 265);
             this.uEmailTextBox.Name = "uEmailTextBox";
             this.uEmailTextBox.Size = new System.Drawing.Size(291, 26);
             this.uEmailTextBox.TabIndex = 53;
@@ -424,7 +433,7 @@
             // 
             this.uPasswordLabel.AutoSize = true;
             this.uPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.uPasswordLabel.Location = new System.Drawing.Point(466, 222);
+            this.uPasswordLabel.Location = new System.Drawing.Point(467, 225);
             this.uPasswordLabel.Name = "uPasswordLabel";
             this.uPasswordLabel.Size = new System.Drawing.Size(78, 20);
             this.uPasswordLabel.TabIndex = 52;
@@ -433,7 +442,7 @@
             // uPasswordTextBox
             // 
             this.uPasswordTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.uPasswordTextBox.Location = new System.Drawing.Point(587, 221);
+            this.uPasswordTextBox.Location = new System.Drawing.Point(588, 224);
             this.uPasswordTextBox.Name = "uPasswordTextBox";
             this.uPasswordTextBox.PasswordChar = '*';
             this.uPasswordTextBox.Size = new System.Drawing.Size(291, 26);
@@ -443,7 +452,7 @@
             // 
             this.uNameLabel.AutoSize = true;
             this.uNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.uNameLabel.Location = new System.Drawing.Point(466, 182);
+            this.uNameLabel.Location = new System.Drawing.Point(467, 185);
             this.uNameLabel.Name = "uNameLabel";
             this.uNameLabel.Size = new System.Drawing.Size(83, 20);
             this.uNameLabel.TabIndex = 50;
@@ -452,7 +461,7 @@
             // uNameTextBox
             // 
             this.uNameTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.uNameTextBox.Location = new System.Drawing.Point(587, 181);
+            this.uNameTextBox.Location = new System.Drawing.Point(588, 184);
             this.uNameTextBox.Name = "uNameTextBox";
             this.uNameTextBox.Size = new System.Drawing.Size(291, 26);
             this.uNameTextBox.TabIndex = 49;
@@ -461,9 +470,9 @@
             // 
             this.avatarUploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.avatarUploadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.avatarUploadButton.Location = new System.Drawing.Point(244, 262);
+            this.avatarUploadButton.Location = new System.Drawing.Point(232, 267);
             this.avatarUploadButton.Name = "avatarUploadButton";
-            this.avatarUploadButton.Size = new System.Drawing.Size(149, 45);
+            this.avatarUploadButton.Size = new System.Drawing.Size(172, 45);
             this.avatarUploadButton.TabIndex = 48;
             this.avatarUploadButton.Text = "Change";
             this.avatarUploadButton.UseVisualStyleBackColor = true;
@@ -473,9 +482,9 @@
             // 
             this.avatarPictureBox.Image = global::UserApplication.Properties.Resources.userAvatar;
             this.avatarPictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("avatarPictureBox.InitialImage")));
-            this.avatarPictureBox.Location = new System.Drawing.Point(244, 106);
+            this.avatarPictureBox.Location = new System.Drawing.Point(232, 89);
             this.avatarPictureBox.Name = "avatarPictureBox";
-            this.avatarPictureBox.Size = new System.Drawing.Size(150, 150);
+            this.avatarPictureBox.Size = new System.Drawing.Size(172, 172);
             this.avatarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.avatarPictureBox.TabIndex = 47;
             this.avatarPictureBox.TabStop = false;
@@ -513,17 +522,106 @@
             // 
             // adsPanel
             // 
+            this.adsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.adsPanel.Controls.Add(this.savePriceButton);
+            this.adsPanel.Controls.Add(this.priceLabel);
+            this.adsPanel.Controls.Add(this.publishedLabel);
+            this.adsPanel.Controls.Add(this.label7);
+            this.adsPanel.Controls.Add(this.creationDateLabel);
+            this.adsPanel.Controls.Add(this.priceTextBox);
+            this.adsPanel.Controls.Add(this.publishedTextBox);
+            this.adsPanel.Controls.Add(this.expirationDateTextBox);
+            this.adsPanel.Controls.Add(this.creationDateTextBox);
             this.adsPanel.Controls.Add(this.editPicturePictureBox);
             this.adsPanel.Controls.Add(this.adsListPanel);
             this.adsPanel.Controls.Add(this.editDescriptionPictureBox);
             this.adsPanel.Controls.Add(this.editTitlePictureBox);
             this.adsPanel.Controls.Add(this.recentAdPanel);
-            this.adsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.adsPanel.Location = new System.Drawing.Point(0, 0);
             this.adsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adsPanel.Name = "adsPanel";
             this.adsPanel.Size = new System.Drawing.Size(1064, 473);
             this.adsPanel.TabIndex = 2;
+            // 
+            // priceLabel
+            // 
+            this.priceLabel.AutoSize = true;
+            this.priceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.priceLabel.Location = new System.Drawing.Point(395, 185);
+            this.priceLabel.Name = "priceLabel";
+            this.priceLabel.Size = new System.Drawing.Size(67, 20);
+            this.priceLabel.TabIndex = 63;
+            this.priceLabel.Text = "Price (€)";
+            // 
+            // publishedLabel
+            // 
+            this.publishedLabel.AutoSize = true;
+            this.publishedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.publishedLabel.Location = new System.Drawing.Point(395, 153);
+            this.publishedLabel.Name = "publishedLabel";
+            this.publishedLabel.Size = new System.Drawing.Size(78, 20);
+            this.publishedLabel.TabIndex = 62;
+            this.publishedLabel.Text = "Published";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label7.Location = new System.Drawing.Point(395, 121);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(118, 20);
+            this.label7.TabIndex = 61;
+            this.label7.Text = "Expiration Date";
+            // 
+            // creationDateLabel
+            // 
+            this.creationDateLabel.AutoSize = true;
+            this.creationDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.creationDateLabel.Location = new System.Drawing.Point(395, 89);
+            this.creationDateLabel.Name = "creationDateLabel";
+            this.creationDateLabel.Size = new System.Drawing.Size(108, 20);
+            this.creationDateLabel.TabIndex = 60;
+            this.creationDateLabel.Text = "Creation Date";
+            // 
+            // priceTextBox
+            // 
+            this.priceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "fName", true));
+            this.priceTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.priceTextBox.Location = new System.Drawing.Point(558, 185);
+            this.priceTextBox.Name = "priceTextBox";
+            this.priceTextBox.Size = new System.Drawing.Size(242, 26);
+            this.priceTextBox.TabIndex = 59;
+            // 
+            // publishedTextBox
+            // 
+            this.publishedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "fName", true));
+            this.publishedTextBox.Enabled = false;
+            this.publishedTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.publishedTextBox.Location = new System.Drawing.Point(558, 153);
+            this.publishedTextBox.Name = "publishedTextBox";
+            this.publishedTextBox.Size = new System.Drawing.Size(242, 26);
+            this.publishedTextBox.TabIndex = 58;
+            // 
+            // expirationDateTextBox
+            // 
+            this.expirationDateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "fName", true));
+            this.expirationDateTextBox.Enabled = false;
+            this.expirationDateTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.expirationDateTextBox.Location = new System.Drawing.Point(558, 121);
+            this.expirationDateTextBox.Name = "expirationDateTextBox";
+            this.expirationDateTextBox.Size = new System.Drawing.Size(242, 26);
+            this.expirationDateTextBox.TabIndex = 57;
+            // 
+            // creationDateTextBox
+            // 
+            this.creationDateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "fName", true));
+            this.creationDateTextBox.Enabled = false;
+            this.creationDateTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.creationDateTextBox.Location = new System.Drawing.Point(558, 89);
+            this.creationDateTextBox.Name = "creationDateTextBox";
+            this.creationDateTextBox.Size = new System.Drawing.Size(242, 26);
+            this.creationDateTextBox.TabIndex = 56;
             // 
             // editPicturePictureBox
             // 
@@ -548,11 +646,15 @@
             // 
             // adsListBox
             // 
+            this.adsListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adsListBox.BackColor = System.Drawing.SystemColors.Control;
             this.adsListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.adsListBox.DataSource = this.adsTableBindingSource;
             this.adsListBox.DisplayMember = "adTitle";
-            this.adsListBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.adsListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adsListBox.ForeColor = System.Drawing.Color.DarkBlue;
             this.adsListBox.FormattingEnabled = true;
             this.adsListBox.ItemHeight = 20;
             this.adsListBox.Location = new System.Drawing.Point(0, 33);
@@ -577,7 +679,7 @@
             this.infoLabel.Name = "infoLabel";
             this.infoLabel.Size = new System.Drawing.Size(200, 33);
             this.infoLabel.TabIndex = 2;
-            this.infoLabel.Text = "My Ads";
+            this.infoLabel.Text = "Ads per Tilte";
             this.infoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // editDescriptionPictureBox
@@ -613,12 +715,14 @@
             // 
             // titleTextBox
             // 
-            this.titleTextBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.titleTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.titleTextBox.Enabled = false;
             this.titleTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleTextBox.Location = new System.Drawing.Point(0, 0);
+            this.titleTextBox.Multiline = true;
             this.titleTextBox.Name = "titleTextBox";
-            this.titleTextBox.Size = new System.Drawing.Size(278, 29);
+            this.titleTextBox.Size = new System.Drawing.Size(278, 33);
             this.titleTextBox.TabIndex = 5;
             this.titleTextBox.Text = "TITLE";
             this.titleTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -628,10 +732,10 @@
             this.descriptionRichTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.descriptionRichTextBox.Enabled = false;
             this.descriptionRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descriptionRichTextBox.Location = new System.Drawing.Point(0, 273);
+            this.descriptionRichTextBox.Location = new System.Drawing.Point(0, 282);
             this.descriptionRichTextBox.Name = "descriptionRichTextBox";
             this.descriptionRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.descriptionRichTextBox.Size = new System.Drawing.Size(278, 200);
+            this.descriptionRichTextBox.Size = new System.Drawing.Size(278, 191);
             this.descriptionRichTextBox.TabIndex = 4;
             this.descriptionRichTextBox.Text = "Το ακίνητο βρίσκεται στην Αθήνα και μπλα μπλα μπλα....................\n.........." +
     ".....................\n................................\n........................." +
@@ -639,10 +743,12 @@
             // 
             // adsPictureBox
             // 
+            this.adsPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.adsPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("adsPictureBox.Image")));
-            this.adsPictureBox.Location = new System.Drawing.Point(0, 30);
+            this.adsPictureBox.Location = new System.Drawing.Point(0, 33);
             this.adsPictureBox.Name = "adsPictureBox";
-            this.adsPictureBox.Size = new System.Drawing.Size(278, 246);
+            this.adsPictureBox.Size = new System.Drawing.Size(278, 252);
             this.adsPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.adsPictureBox.TabIndex = 3;
             this.adsPictureBox.TabStop = false;
@@ -669,6 +775,18 @@
             // 
             this.usersTableAdapter1.ClearBeforeFill = true;
             // 
+            // savePriceButton
+            // 
+            this.savePriceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.savePriceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.savePriceButton.Location = new System.Drawing.Point(651, 240);
+            this.savePriceButton.Name = "savePriceButton";
+            this.savePriceButton.Size = new System.Drawing.Size(149, 45);
+            this.savePriceButton.TabIndex = 64;
+            this.savePriceButton.Text = "Save";
+            this.savePriceButton.UseVisualStyleBackColor = true;
+            this.savePriceButton.Click += new System.EventHandler(this.savePriceButton_Click);
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -679,6 +797,7 @@
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.rightPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1240, 720);
             this.Name = "UserForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -700,6 +819,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
             this.page4Panel.ResumeLayout(false);
             this.adsPanel.ResumeLayout(false);
+            this.adsPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.editPicturePictureBox)).EndInit();
             this.adsListPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.adsTableBindingSource)).EndInit();
@@ -760,7 +880,6 @@
         private System.Windows.Forms.TextBox lNameTextBox;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private System.Windows.Forms.Integration.ElementHost elementHost1;
-        private aggeliesWpfLab.UserMenuIcons userMenuIcons1;
         private System.Windows.Forms.Button saveButton;
         private aggeliesWpfLab.UserMenuIcons userMenuIcons2;
         private System.Windows.Forms.GroupBox panelColorsGroupBox;
@@ -770,6 +889,15 @@
         private System.Windows.Forms.GroupBox fontSizeGroupBox;
         private System.Windows.Forms.RadioButton largeRadioButton;
         private System.Windows.Forms.RadioButton normalRadioButton;
+        private System.Windows.Forms.Label priceLabel;
+        private System.Windows.Forms.Label publishedLabel;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label creationDateLabel;
+        private System.Windows.Forms.TextBox priceTextBox;
+        private System.Windows.Forms.TextBox publishedTextBox;
+        private System.Windows.Forms.TextBox expirationDateTextBox;
+        private System.Windows.Forms.TextBox creationDateTextBox;
+        private System.Windows.Forms.Button savePriceButton;
     }
 }
 

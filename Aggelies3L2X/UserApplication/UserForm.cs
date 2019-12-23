@@ -196,13 +196,24 @@ namespace UserApplication
             {
                 adsListBox.Refresh();
                 view = adsListBox.SelectedItem as DataRowView;
-                string title = view["adTitle"].ToString();
-                string desc = view["adDesc"].ToString();
-                String img = view["media"].ToString();
 
-                titleTextBox.Text = title;
-                descriptionRichTextBox.Text = desc;
+                string img = view["media"].ToString();
                 adsPictureBox.ImageLocation = imagesLocation + img;
+
+                titleTextBox.Text = view["adTitle"].ToString(); ;
+                descriptionRichTextBox.Text = view["adDesc"].ToString();
+                creationDateTextBox.Text = view["creationDate"].ToString();
+                expirationDateTextBox.Text = view["expirationDate"].ToString();
+                priceTextBox.Text = view["price"].ToString();
+
+                if (view["published"].ToString() == "True")
+                {
+                    publishedTextBox.Text = "Published";
+                }
+                else
+                {
+                    publishedTextBox.Text = "Not yet published";
+                }
             }
             catch (Exception x)
             {
@@ -221,6 +232,29 @@ namespace UserApplication
             catch (Exception)
             {
                 MessageBox.Show("not updated");
+            }
+        }
+
+        /// <summary>
+        /// Save the price to database
+        /// </summary>
+        /// <param name="sender">savePriceButton</param>
+        /// <param name="e">Click</param>
+        private void savePriceButton_Click(object sender, EventArgs e)
+        {
+            int price;
+            bool result = Int32.TryParse(priceTextBox.Text, out price);
+            if (result)
+            {
+                // Get current adID.
+                view = adsListBox.SelectedItem as DataRowView;
+                int adID = Int32.Parse(view["adID"].ToString());
+                adsTableTableAdapter.UpdatePriceQuery(price, adID);
+                updateFields();
+            }
+            else
+            {
+                MessageBox.Show("nope");
             }
         }
         #endregion
@@ -263,6 +297,7 @@ namespace UserApplication
                 MessageBox.Show("An Error Occured" + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         /// <summary>
         /// Event Handler for avatarRemoveButton. Deletes the database entry.
         /// </summary>
@@ -274,6 +309,7 @@ namespace UserApplication
             this.usersTableAdapter1.UpdateUserImageQuery("", userid);
             avatarPictureBox.Image = UserApplication.Properties.Resources.userAvatar;
         }
+
         /// <summary>
         /// Event Handler for showpasswordCheckBox. Shows/hides the password in uPasswordTextBox.
         /// </summary>
@@ -320,35 +356,6 @@ namespace UserApplication
                 }
             }
         }
-        /// <summary>
-        /// Updates the profile panel with current user info.
-        /// </summary>
-        private void updateFields()
-        {
-            // Find current users Ads
-            this.adsTableTableAdapter.AdsPerUser(this.aggeliesDBDataSet.AdsTable, userid);
-            // Set images and userImages location.
-            string str = AppDomain.CurrentDomain.BaseDirectory;
-            str = str.Remove(str.Length - 16);
-            str += @"UserApplication\Resources\images\";
-            imagesLocation = str;
-            str = AppDomain.CurrentDomain.BaseDirectory;
-            str = str.Remove(str.Length - 16);
-            str += @"UserApplication\Resources\userImages\";
-            userImagesLocation = str;
-            // Set the avatarPictureBox image location.
-            try
-            {
-                avatarPictureBox.ImageLocation = userImagesLocation + usersTableAdapter1.SelectUserImageQuery(userid).ToString();
-            }
-            catch (Exception) { }
-            // Set textboxes according to user info.
-            uNameTextBox.Text = usersTableAdapter1.SelectUsernameQuery(userid).ToString();
-            fNameTextBox.Text = usersTableAdapter1.SelectFirstNameQuery(userid).ToString();
-            lNameTextBox.Text = usersTableAdapter1.SelectLastNameQuery(userid).ToString();
-            uEmailTextBox.Text = usersTableAdapter1.SelectUserEmailQuery(userid).ToString();
-            uPasswordTextBox.Text = usersTableAdapter1.SelectUserPasswordQuery(userid).ToString();
-        }
         #endregion
 
         #region Settings Panel Methods
@@ -390,13 +397,13 @@ namespace UserApplication
 
         private void normalRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            Font normalFont = new Font("Sans Serif", 12, FontStyle.Regular);
+            Font normalFont = new Font("Microsoft Sans Serif", 12, FontStyle.Regular);
             fontFormating(normalFont);
         }
 
         private void largeRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            Font largeFont = new Font("Sans Serif", 16, FontStyle.Regular);
+            Font largeFont = new Font("Microsoft Sans Serif", 16, FontStyle.Regular);
             fontFormating(largeFont);
         }
 
@@ -461,12 +468,47 @@ namespace UserApplication
             updateFields();
         }
 
+        /// <summary>
+        /// Appication exit.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
+
+        /// <summary>
+        /// Updates the profile panel with current user info.
+        /// </summary>
+        private void updateFields()
+        {
+            // Find current users Ads
+            this.adsTableTableAdapter.AdsPerUser(this.aggeliesDBDataSet.AdsTable, userid);
+            // Set images and userImages location.
+            string str = AppDomain.CurrentDomain.BaseDirectory;
+            str = str.Remove(str.Length - 16);
+            str += @"UserApplication\Resources\images\";
+            imagesLocation = str;
+            str = AppDomain.CurrentDomain.BaseDirectory;
+            str = str.Remove(str.Length - 16);
+            str += @"UserApplication\Resources\userImages\";
+            userImagesLocation = str;
+            // Set the avatarPictureBox image location.
+            try
+            {
+                avatarPictureBox.ImageLocation = userImagesLocation + usersTableAdapter1.SelectUserImageQuery(userid).ToString();
+            }
+            catch (Exception) { }
+            // Set textboxes according to user info.
+            uNameTextBox.Text = usersTableAdapter1.SelectUsernameQuery(userid).ToString();
+            fNameTextBox.Text = usersTableAdapter1.SelectFirstNameQuery(userid).ToString();
+            lNameTextBox.Text = usersTableAdapter1.SelectLastNameQuery(userid).ToString();
+            uEmailTextBox.Text = usersTableAdapter1.SelectUserEmailQuery(userid).ToString();
+            uPasswordTextBox.Text = usersTableAdapter1.SelectUserPasswordQuery(userid).ToString();
+        }
         #endregion
-        
+
         #endregion
 
     }
