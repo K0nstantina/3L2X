@@ -36,6 +36,13 @@
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
             this.userMenuIcons2 = new aggeliesWpfLab.UserMenuIcons();
             this.settingsPanel = new System.Windows.Forms.Panel();
+            this.fontSizeGroupBox = new System.Windows.Forms.GroupBox();
+            this.largeRadioButton = new System.Windows.Forms.RadioButton();
+            this.normalRadioButton = new System.Windows.Forms.RadioButton();
+            this.panelColorsGroupBox = new System.Windows.Forms.GroupBox();
+            this.orangeRadioButton = new System.Windows.Forms.RadioButton();
+            this.defaultRadioButton = new System.Windows.Forms.RadioButton();
+            this.fullBlueRadioButton = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.homePanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -79,6 +86,8 @@
             this.usersTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.UsersTableAdapter();
             this.rightPanel.SuspendLayout();
             this.settingsPanel.SuspendLayout();
+            this.fontSizeGroupBox.SuspendLayout();
+            this.panelColorsGroupBox.SuspendLayout();
             this.homePanel.SuspendLayout();
             this.page6Panel.SuspendLayout();
             this.profilePanel.SuspendLayout();
@@ -103,31 +112,31 @@
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1062, 108);
+            this.topPanel.Size = new System.Drawing.Size(1064, 108);
             this.topPanel.TabIndex = 0;
             // 
             // footerPanel
             // 
             this.footerPanel.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.footerPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.footerPanel.Location = new System.Drawing.Point(0, 590);
+            this.footerPanel.Location = new System.Drawing.Point(0, 581);
             this.footerPanel.Name = "footerPanel";
-            this.footerPanel.Size = new System.Drawing.Size(1062, 100);
+            this.footerPanel.Size = new System.Drawing.Size(1064, 100);
             this.footerPanel.TabIndex = 1;
             // 
             // rightPanel
             // 
-            this.rightPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.rightPanel.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.rightPanel.Controls.Add(this.elementHost1);
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rightPanel.Location = new System.Drawing.Point(1062, 0);
+            this.rightPanel.Location = new System.Drawing.Point(1064, 0);
             this.rightPanel.Name = "rightPanel";
-            this.rightPanel.Size = new System.Drawing.Size(160, 690);
+            this.rightPanel.Size = new System.Drawing.Size(160, 681);
             this.rightPanel.TabIndex = 2;
             // 
             // elementHost1
             // 
-            this.elementHost1.Location = new System.Drawing.Point(0, 101);
+            this.elementHost1.Location = new System.Drawing.Point(0, 99);
             this.elementHost1.Name = "elementHost1";
             this.elementHost1.Size = new System.Drawing.Size(160, 489);
             this.elementHost1.TabIndex = 0;
@@ -136,17 +145,108 @@
             // 
             // settingsPanel
             // 
+            this.settingsPanel.Controls.Add(this.fontSizeGroupBox);
+            this.settingsPanel.Controls.Add(this.panelColorsGroupBox);
             this.settingsPanel.Controls.Add(this.label2);
             this.settingsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.settingsPanel.Location = new System.Drawing.Point(0, 0);
             this.settingsPanel.Name = "settingsPanel";
-            this.settingsPanel.Size = new System.Drawing.Size(1062, 482);
+            this.settingsPanel.Size = new System.Drawing.Size(1064, 473);
             this.settingsPanel.TabIndex = 1;
+            // 
+            // fontSizeGroupBox
+            // 
+            this.fontSizeGroupBox.Controls.Add(this.largeRadioButton);
+            this.fontSizeGroupBox.Controls.Add(this.normalRadioButton);
+            this.fontSizeGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.fontSizeGroupBox.Location = new System.Drawing.Point(148, 91);
+            this.fontSizeGroupBox.Name = "fontSizeGroupBox";
+            this.fontSizeGroupBox.Size = new System.Drawing.Size(130, 105);
+            this.fontSizeGroupBox.TabIndex = 5;
+            this.fontSizeGroupBox.TabStop = false;
+            this.fontSizeGroupBox.Text = "Font Size";
+            // 
+            // largeRadioButton
+            // 
+            this.largeRadioButton.AutoSize = true;
+            this.largeRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.largeRadioButton.Location = new System.Drawing.Point(7, 42);
+            this.largeRadioButton.Name = "largeRadioButton";
+            this.largeRadioButton.Size = new System.Drawing.Size(61, 20);
+            this.largeRadioButton.TabIndex = 1;
+            this.largeRadioButton.Text = "Large";
+            this.largeRadioButton.UseVisualStyleBackColor = true;
+            this.largeRadioButton.CheckedChanged += new System.EventHandler(this.largeRadioButton_CheckedChanged);
+            // 
+            // normalRadioButton
+            // 
+            this.normalRadioButton.AutoSize = true;
+            this.normalRadioButton.Checked = true;
+            this.normalRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.normalRadioButton.Location = new System.Drawing.Point(7, 21);
+            this.normalRadioButton.Name = "normalRadioButton";
+            this.normalRadioButton.Size = new System.Drawing.Size(70, 20);
+            this.normalRadioButton.TabIndex = 0;
+            this.normalRadioButton.TabStop = true;
+            this.normalRadioButton.Text = "Normal";
+            this.normalRadioButton.UseVisualStyleBackColor = true;
+            this.normalRadioButton.CheckedChanged += new System.EventHandler(this.normalRadioButton_CheckedChanged);
+            // 
+            // panelColorsGroupBox
+            // 
+            this.panelColorsGroupBox.Controls.Add(this.orangeRadioButton);
+            this.panelColorsGroupBox.Controls.Add(this.defaultRadioButton);
+            this.panelColorsGroupBox.Controls.Add(this.fullBlueRadioButton);
+            this.panelColorsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.panelColorsGroupBox.Location = new System.Drawing.Point(12, 91);
+            this.panelColorsGroupBox.Name = "panelColorsGroupBox";
+            this.panelColorsGroupBox.Size = new System.Drawing.Size(130, 104);
+            this.panelColorsGroupBox.TabIndex = 4;
+            this.panelColorsGroupBox.TabStop = false;
+            this.panelColorsGroupBox.Text = "Panel Colors";
+            // 
+            // orangeRadioButton
+            // 
+            this.orangeRadioButton.AutoSize = true;
+            this.orangeRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.orangeRadioButton.Location = new System.Drawing.Point(6, 65);
+            this.orangeRadioButton.Name = "orangeRadioButton";
+            this.orangeRadioButton.Size = new System.Drawing.Size(71, 20);
+            this.orangeRadioButton.TabIndex = 4;
+            this.orangeRadioButton.Text = "Orange";
+            this.orangeRadioButton.UseVisualStyleBackColor = true;
+            this.orangeRadioButton.CheckedChanged += new System.EventHandler(this.orangeRadioButton_CheckedChanged);
+            // 
+            // defaultRadioButton
+            // 
+            this.defaultRadioButton.AutoSize = true;
+            this.defaultRadioButton.Checked = true;
+            this.defaultRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.defaultRadioButton.Location = new System.Drawing.Point(6, 19);
+            this.defaultRadioButton.Name = "defaultRadioButton";
+            this.defaultRadioButton.Size = new System.Drawing.Size(68, 20);
+            this.defaultRadioButton.TabIndex = 2;
+            this.defaultRadioButton.TabStop = true;
+            this.defaultRadioButton.Text = "Default";
+            this.defaultRadioButton.UseVisualStyleBackColor = true;
+            this.defaultRadioButton.CheckedChanged += new System.EventHandler(this.defaultRadioButton_CheckedChanged);
+            // 
+            // fullBlueRadioButton
+            // 
+            this.fullBlueRadioButton.AutoSize = true;
+            this.fullBlueRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.fullBlueRadioButton.Location = new System.Drawing.Point(6, 42);
+            this.fullBlueRadioButton.Name = "fullBlueRadioButton";
+            this.fullBlueRadioButton.Size = new System.Drawing.Size(77, 20);
+            this.fullBlueRadioButton.TabIndex = 3;
+            this.fullBlueRadioButton.Text = "Full Blue";
+            this.fullBlueRadioButton.UseVisualStyleBackColor = true;
+            this.fullBlueRadioButton.CheckedChanged += new System.EventHandler(this.fullBlueRadioButton_CheckedChanged);
             // 
             // label2
             // 
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 72);
@@ -160,13 +260,13 @@
             this.homePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.homePanel.Location = new System.Drawing.Point(0, 0);
             this.homePanel.Name = "homePanel";
-            this.homePanel.Size = new System.Drawing.Size(1062, 482);
+            this.homePanel.Size = new System.Drawing.Size(1064, 473);
             this.homePanel.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(177, 72);
@@ -180,13 +280,13 @@
             this.page6Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.page6Panel.Location = new System.Drawing.Point(0, 0);
             this.page6Panel.Name = "page6Panel";
-            this.page6Panel.Size = new System.Drawing.Size(1062, 482);
+            this.page6Panel.Size = new System.Drawing.Size(1064, 473);
             this.page6Panel.TabIndex = 0;
             // 
             // label6
             // 
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(177, 72);
@@ -215,14 +315,14 @@
             this.profilePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profilePanel.Location = new System.Drawing.Point(0, 0);
             this.profilePanel.Name = "profilePanel";
-            this.profilePanel.Size = new System.Drawing.Size(1062, 482);
+            this.profilePanel.Size = new System.Drawing.Size(1064, 473);
             this.profilePanel.TabIndex = 0;
             // 
             // saveButton
             // 
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveButton.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.Location = new System.Drawing.Point(623, 298);
+            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.saveButton.Location = new System.Drawing.Point(719, 313);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(149, 45);
             this.saveButton.TabIndex = 63;
@@ -233,26 +333,26 @@
             // lNameLabel
             // 
             this.lNameLabel.AutoSize = true;
-            this.lNameLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNameLabel.Location = new System.Drawing.Point(370, 132);
+            this.lNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.lNameLabel.Location = new System.Drawing.Point(466, 144);
             this.lNameLabel.Name = "lNameLabel";
-            this.lNameLabel.Size = new System.Drawing.Size(105, 26);
+            this.lNameLabel.Size = new System.Drawing.Size(86, 20);
             this.lNameLabel.TabIndex = 62;
             this.lNameLabel.Text = "Last Name";
             // 
             // lNameTextBox
             // 
-            this.lNameTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNameTextBox.Location = new System.Drawing.Point(481, 128);
+            this.lNameTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.lNameTextBox.Location = new System.Drawing.Point(587, 142);
             this.lNameTextBox.Name = "lNameTextBox";
-            this.lNameTextBox.Size = new System.Drawing.Size(291, 29);
+            this.lNameTextBox.Size = new System.Drawing.Size(291, 26);
             this.lNameTextBox.TabIndex = 61;
             // 
             // showpasswordCheckBox
             // 
             this.showpasswordCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showpasswordCheckBox.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showpasswordCheckBox.Location = new System.Drawing.Point(778, 206);
+            this.showpasswordCheckBox.Location = new System.Drawing.Point(885, 221);
             this.showpasswordCheckBox.Name = "showpasswordCheckBox";
             this.showpasswordCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.showpasswordCheckBox.Size = new System.Drawing.Size(70, 29);
@@ -264,8 +364,8 @@
             // avatarRemoveButton
             // 
             this.avatarRemoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.avatarRemoveButton.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.avatarRemoveButton.Location = new System.Drawing.Point(149, 298);
+            this.avatarRemoveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.avatarRemoveButton.Location = new System.Drawing.Point(245, 313);
             this.avatarRemoveButton.Name = "avatarRemoveButton";
             this.avatarRemoveButton.Size = new System.Drawing.Size(149, 45);
             this.avatarRemoveButton.TabIndex = 59;
@@ -276,20 +376,20 @@
             // fNameLabel
             // 
             this.fNameLabel.AutoSize = true;
-            this.fNameLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fNameLabel.Location = new System.Drawing.Point(370, 95);
+            this.fNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.fNameLabel.Location = new System.Drawing.Point(466, 107);
             this.fNameLabel.Name = "fNameLabel";
-            this.fNameLabel.Size = new System.Drawing.Size(110, 26);
+            this.fNameLabel.Size = new System.Drawing.Size(86, 20);
             this.fNameLabel.TabIndex = 56;
             this.fNameLabel.Text = "First Name";
             // 
             // fNameTextBox
             // 
             this.fNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "fName", true));
-            this.fNameTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fNameTextBox.Location = new System.Drawing.Point(481, 91);
+            this.fNameTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.fNameTextBox.Location = new System.Drawing.Point(587, 106);
             this.fNameTextBox.Name = "fNameTextBox";
-            this.fNameTextBox.Size = new System.Drawing.Size(291, 29);
+            this.fNameTextBox.Size = new System.Drawing.Size(291, 26);
             this.fNameTextBox.TabIndex = 55;
             // 
             // usersBindingSource
@@ -305,63 +405,63 @@
             // uEmailLabel
             // 
             this.uEmailLabel.AutoSize = true;
-            this.uEmailLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uEmailLabel.Location = new System.Drawing.Point(370, 250);
+            this.uEmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.uEmailLabel.Location = new System.Drawing.Point(466, 262);
             this.uEmailLabel.Name = "uEmailLabel";
-            this.uEmailLabel.Size = new System.Drawing.Size(58, 26);
+            this.uEmailLabel.Size = new System.Drawing.Size(48, 20);
             this.uEmailLabel.TabIndex = 54;
             this.uEmailLabel.Text = "Email";
             // 
             // uEmailTextBox
             // 
-            this.uEmailTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uEmailTextBox.Location = new System.Drawing.Point(481, 246);
+            this.uEmailTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.uEmailTextBox.Location = new System.Drawing.Point(587, 262);
             this.uEmailTextBox.Name = "uEmailTextBox";
-            this.uEmailTextBox.Size = new System.Drawing.Size(291, 29);
+            this.uEmailTextBox.Size = new System.Drawing.Size(291, 26);
             this.uEmailTextBox.TabIndex = 53;
             // 
             // uPasswordLabel
             // 
             this.uPasswordLabel.AutoSize = true;
-            this.uPasswordLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uPasswordLabel.Location = new System.Drawing.Point(370, 210);
+            this.uPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.uPasswordLabel.Location = new System.Drawing.Point(466, 222);
             this.uPasswordLabel.Name = "uPasswordLabel";
-            this.uPasswordLabel.Size = new System.Drawing.Size(94, 26);
+            this.uPasswordLabel.Size = new System.Drawing.Size(78, 20);
             this.uPasswordLabel.TabIndex = 52;
             this.uPasswordLabel.Text = "Password";
             // 
             // uPasswordTextBox
             // 
-            this.uPasswordTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uPasswordTextBox.Location = new System.Drawing.Point(481, 206);
+            this.uPasswordTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.uPasswordTextBox.Location = new System.Drawing.Point(587, 221);
             this.uPasswordTextBox.Name = "uPasswordTextBox";
             this.uPasswordTextBox.PasswordChar = '*';
-            this.uPasswordTextBox.Size = new System.Drawing.Size(291, 29);
+            this.uPasswordTextBox.Size = new System.Drawing.Size(291, 26);
             this.uPasswordTextBox.TabIndex = 51;
             // 
             // uNameLabel
             // 
             this.uNameLabel.AutoSize = true;
-            this.uNameLabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uNameLabel.Location = new System.Drawing.Point(370, 170);
+            this.uNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.uNameLabel.Location = new System.Drawing.Point(466, 182);
             this.uNameLabel.Name = "uNameLabel";
-            this.uNameLabel.Size = new System.Drawing.Size(99, 26);
+            this.uNameLabel.Size = new System.Drawing.Size(83, 20);
             this.uNameLabel.TabIndex = 50;
             this.uNameLabel.Text = "Username";
             // 
             // uNameTextBox
             // 
-            this.uNameTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uNameTextBox.Location = new System.Drawing.Point(481, 166);
+            this.uNameTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.uNameTextBox.Location = new System.Drawing.Point(587, 181);
             this.uNameTextBox.Name = "uNameTextBox";
-            this.uNameTextBox.Size = new System.Drawing.Size(291, 29);
+            this.uNameTextBox.Size = new System.Drawing.Size(291, 26);
             this.uNameTextBox.TabIndex = 49;
             // 
             // avatarUploadButton
             // 
             this.avatarUploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.avatarUploadButton.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.avatarUploadButton.Location = new System.Drawing.Point(148, 247);
+            this.avatarUploadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.avatarUploadButton.Location = new System.Drawing.Point(244, 262);
             this.avatarUploadButton.Name = "avatarUploadButton";
             this.avatarUploadButton.Size = new System.Drawing.Size(149, 45);
             this.avatarUploadButton.TabIndex = 48;
@@ -373,7 +473,7 @@
             // 
             this.avatarPictureBox.Image = global::UserApplication.Properties.Resources.userAvatar;
             this.avatarPictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("avatarPictureBox.InitialImage")));
-            this.avatarPictureBox.Location = new System.Drawing.Point(148, 91);
+            this.avatarPictureBox.Location = new System.Drawing.Point(244, 106);
             this.avatarPictureBox.Name = "avatarPictureBox";
             this.avatarPictureBox.Size = new System.Drawing.Size(150, 150);
             this.avatarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -383,7 +483,7 @@
             // label5
             // 
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(177, 72);
@@ -397,13 +497,13 @@
             this.page4Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.page4Panel.Location = new System.Drawing.Point(0, 0);
             this.page4Panel.Name = "page4Panel";
-            this.page4Panel.Size = new System.Drawing.Size(1062, 482);
+            this.page4Panel.Size = new System.Drawing.Size(1064, 473);
             this.page4Panel.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(177, 72);
@@ -422,7 +522,7 @@
             this.adsPanel.Location = new System.Drawing.Point(0, 0);
             this.adsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adsPanel.Name = "adsPanel";
-            this.adsPanel.Size = new System.Drawing.Size(1062, 482);
+            this.adsPanel.Size = new System.Drawing.Size(1064, 473);
             this.adsPanel.TabIndex = 2;
             // 
             // editPicturePictureBox
@@ -440,23 +540,22 @@
             this.adsListPanel.Controls.Add(this.adsListBox);
             this.adsListPanel.Controls.Add(this.infoLabel);
             this.adsListPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.adsListPanel.Location = new System.Drawing.Point(862, 0);
+            this.adsListPanel.Location = new System.Drawing.Point(864, 0);
             this.adsListPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adsListPanel.Name = "adsListPanel";
-            this.adsListPanel.Size = new System.Drawing.Size(200, 482);
+            this.adsListPanel.Size = new System.Drawing.Size(200, 473);
             this.adsListPanel.TabIndex = 5;
             // 
             // adsListBox
             // 
-            this.adsListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.adsListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.adsListBox.DataSource = this.adsTableBindingSource;
             this.adsListBox.DisplayMember = "adTitle";
+            this.adsListBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.adsListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adsListBox.FormattingEnabled = true;
             this.adsListBox.ItemHeight = 20;
-            this.adsListBox.Location = new System.Drawing.Point(0, 42);
+            this.adsListBox.Location = new System.Drawing.Point(0, 33);
             this.adsListBox.Margin = new System.Windows.Forms.Padding(0);
             this.adsListBox.Name = "adsListBox";
             this.adsListBox.Size = new System.Drawing.Size(200, 440);
@@ -473,10 +572,10 @@
             // 
             this.infoLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.infoLabel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.infoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.infoLabel.Location = new System.Drawing.Point(0, 0);
             this.infoLabel.Name = "infoLabel";
-            this.infoLabel.Size = new System.Drawing.Size(200, 41);
+            this.infoLabel.Size = new System.Drawing.Size(200, 33);
             this.infoLabel.TabIndex = 2;
             this.infoLabel.Text = "My Ads";
             this.infoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -509,7 +608,7 @@
             this.recentAdPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.recentAdPanel.Location = new System.Drawing.Point(0, 0);
             this.recentAdPanel.Name = "recentAdPanel";
-            this.recentAdPanel.Size = new System.Drawing.Size(278, 482);
+            this.recentAdPanel.Size = new System.Drawing.Size(278, 473);
             this.recentAdPanel.TabIndex = 2;
             // 
             // titleTextBox
@@ -529,7 +628,7 @@
             this.descriptionRichTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.descriptionRichTextBox.Enabled = false;
             this.descriptionRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descriptionRichTextBox.Location = new System.Drawing.Point(0, 282);
+            this.descriptionRichTextBox.Location = new System.Drawing.Point(0, 273);
             this.descriptionRichTextBox.Name = "descriptionRichTextBox";
             this.descriptionRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.descriptionRichTextBox.Size = new System.Drawing.Size(278, 200);
@@ -550,16 +649,16 @@
             // 
             // contentPanel
             // 
+            this.contentPanel.Controls.Add(this.adsPanel);
+            this.contentPanel.Controls.Add(this.page4Panel);
             this.contentPanel.Controls.Add(this.profilePanel);
             this.contentPanel.Controls.Add(this.page6Panel);
             this.contentPanel.Controls.Add(this.homePanel);
             this.contentPanel.Controls.Add(this.settingsPanel);
-            this.contentPanel.Controls.Add(this.adsPanel);
-            this.contentPanel.Controls.Add(this.page4Panel);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(0, 108);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(1062, 482);
+            this.contentPanel.Size = new System.Drawing.Size(1064, 473);
             this.contentPanel.TabIndex = 5;
             // 
             // adsTableTableAdapter
@@ -574,19 +673,24 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1222, 690);
+            this.ClientSize = new System.Drawing.Size(1224, 681);
             this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.footerPanel);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.rightPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximumSize = new System.Drawing.Size(1240, 720);
             this.Name = "UserForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main Form";
+            this.Text = "3L2X - User Form";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.rightPanel.ResumeLayout(false);
             this.settingsPanel.ResumeLayout(false);
+            this.fontSizeGroupBox.ResumeLayout(false);
+            this.fontSizeGroupBox.PerformLayout();
+            this.panelColorsGroupBox.ResumeLayout(false);
+            this.panelColorsGroupBox.PerformLayout();
             this.homePanel.ResumeLayout(false);
             this.page6Panel.ResumeLayout(false);
             this.profilePanel.ResumeLayout(false);
@@ -659,6 +763,13 @@
         private aggeliesWpfLab.UserMenuIcons userMenuIcons1;
         private System.Windows.Forms.Button saveButton;
         private aggeliesWpfLab.UserMenuIcons userMenuIcons2;
+        private System.Windows.Forms.GroupBox panelColorsGroupBox;
+        private System.Windows.Forms.RadioButton orangeRadioButton;
+        private System.Windows.Forms.RadioButton defaultRadioButton;
+        private System.Windows.Forms.RadioButton fullBlueRadioButton;
+        private System.Windows.Forms.GroupBox fontSizeGroupBox;
+        private System.Windows.Forms.RadioButton largeRadioButton;
+        private System.Windows.Forms.RadioButton normalRadioButton;
     }
 }
 

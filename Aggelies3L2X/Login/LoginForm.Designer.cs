@@ -40,7 +40,7 @@
             // userFormButton
             // 
             this.userFormButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userFormButton.Location = new System.Drawing.Point(205, 162);
+            this.userFormButton.Location = new System.Drawing.Point(196, 161);
             this.userFormButton.Name = "userFormButton";
             this.userFormButton.Size = new System.Drawing.Size(184, 37);
             this.userFormButton.TabIndex = 3;
@@ -58,14 +58,14 @@
             this.loginPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.loginPanel.Location = new System.Drawing.Point(0, 0);
             this.loginPanel.Name = "loginPanel";
-            this.loginPanel.Size = new System.Drawing.Size(570, 339);
+            this.loginPanel.Size = new System.Drawing.Size(560, 360);
             this.loginPanel.TabIndex = 1;
             // 
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLabel.Location = new System.Drawing.Point(121, 133);
+            this.passwordLabel.Location = new System.Drawing.Point(112, 132);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(82, 20);
             this.passwordLabel.TabIndex = 4;
@@ -75,7 +75,7 @@
             // 
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(116, 101);
+            this.usernameLabel.Location = new System.Drawing.Point(107, 100);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(87, 20);
             this.usernameLabel.TabIndex = 3;
@@ -84,7 +84,7 @@
             // usernameTextBox
             // 
             this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTextBox.Location = new System.Drawing.Point(205, 98);
+            this.usernameTextBox.Location = new System.Drawing.Point(196, 97);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(184, 26);
             this.usernameTextBox.TabIndex = 1;
@@ -92,7 +92,7 @@
             // passwordTextBox
             // 
             this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTextBox.Location = new System.Drawing.Point(205, 130);
+            this.passwordTextBox.Location = new System.Drawing.Point(196, 129);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(184, 26);
@@ -102,8 +102,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 339);
+            this.ClientSize = new System.Drawing.Size(544, 321);
             this.Controls.Add(this.loginPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(560, 360);
+            this.MinimumSize = new System.Drawing.Size(560, 360);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

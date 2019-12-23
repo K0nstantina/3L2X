@@ -17,13 +17,12 @@ namespace UserApplication
     {
         #region Variables
         List<Panel> panels = new List<Panel>();
-        List<Button> buttons = new List<Button>();
         DataRowView view;
         int userid;
-        private string imgPath, imgName, imgNewPath, imagesLocation, userImagesLocation;
+        private string imgName, imgNewPath, imagesLocation, userImagesLocation;
         #endregion
 
-        #region Constructor
+        #region Constructors
         public UserForm()
         {
 
@@ -31,8 +30,10 @@ namespace UserApplication
         public UserForm(int userID)
         {
             InitializeComponent();
+            // Add controls to list.
             controlsList();
             userid = userID;
+            // Add WPF control to host and set the event handlers.
             var userMenu = new aggeliesWpfLab.UserMenuIcons();
             elementHost1.Child = userMenu;
             elementHost1.Select();
@@ -42,8 +43,7 @@ namespace UserApplication
             userMenu.categoriesButton.Click += CatBut_Click;
             userMenu.profileButton.Click += ProfileBut_Click;
             userMenu.logoutButton.Click += LogoutBut_Click;
-            //label5.Text = userid.ToString();
-            //userMenu1.logoutBut += logoutBut_Click;
+            // Initialize profile fields.
             updateFields();
         }
 
@@ -95,18 +95,8 @@ namespace UserApplication
         #endregion
 
         #region Private Methods
-        /// <summary>
-        /// Form Load.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'aggeliesDBDataSet.AdsTable' table. You can move, or remove it, as needed.
-            adsListBox_SelectedIndexChanged(adsListBox, e);
-            updateFields();
-        }
-
+        
+        #region ADS Panel Methods
         /// <summary>
         /// Enables editing the titleTextBox.
         /// Changes editTitlePictureBox image accordingly.
@@ -168,8 +158,7 @@ namespace UserApplication
                     // If file exists (no error in filename).
                     if (imgDialog.CheckFileExists)
                     {
-                        // Get file path and name.
-                        imgPath = imgDialog.FileName;
+                        // Get file name.
                         imgName = System.IO.Path.GetFileName(imgDialog.FileName);
                         // Set the new local path
                         imgNewPath = imagesLocation + imgName;
@@ -220,6 +209,23 @@ namespace UserApplication
                 //MessageBox.Show(x.ToString());
             }
         }
+        private void updateTitleDesc()
+        {
+            try
+            {
+                view = adsListBox.SelectedItem as DataRowView;
+                int adID = Int32.Parse(view["adID"].ToString());
+                this.adsTableTableAdapter.UpdateTitleDescQuery(titleTextBox.Text, descriptionRichTextBox.Text, adID);
+                updateFields();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("not updated");
+            }
+        }
+        #endregion
+
+        #region Profile Panel Methods
         /// <summary>
         /// Event Handler for avatarUploadButton. Sets the user image in database.
         /// </summary>
@@ -240,7 +246,6 @@ namespace UserApplication
                     if (imgDialog.CheckFileExists)
                     {
                         // Get file path and name.
-                        imgPath = imgDialog.FileName;
                         imgName = System.IO.Path.GetFileName(imgDialog.FileName);
                         // Set the new local path
                         imgNewPath = userImagesLocation + imgName;
@@ -287,6 +292,7 @@ namespace UserApplication
                 showpasswordCheckBox.Text = "show";
             }
         }
+
         /// <summary>
         /// Event Handler for saveButton. Checks and saves the user info to database. 
         /// </summary>
@@ -319,8 +325,9 @@ namespace UserApplication
         /// </summary>
         private void updateFields()
         {
+            // Find current users Ads
             this.adsTableTableAdapter.AdsPerUser(this.aggeliesDBDataSet.AdsTable, userid);
-            // Setting images and userImages location.
+            // Set images and userImages location.
             string str = AppDomain.CurrentDomain.BaseDirectory;
             str = str.Remove(str.Length - 16);
             str += @"UserApplication\Resources\images\";
@@ -329,38 +336,137 @@ namespace UserApplication
             str = str.Remove(str.Length - 16);
             str += @"UserApplication\Resources\userImages\";
             userImagesLocation = str;
-            // Setting the avatarPictureBox image location.
+            // Set the avatarPictureBox image location.
             try
             {
                 avatarPictureBox.ImageLocation = userImagesLocation + usersTableAdapter1.SelectUserImageQuery(userid).ToString();
             }
-            catch (Exception) {}
-            // Setting textboxes according to user info.
+            catch (Exception) { }
+            // Set textboxes according to user info.
             uNameTextBox.Text = usersTableAdapter1.SelectUsernameQuery(userid).ToString();
             fNameTextBox.Text = usersTableAdapter1.SelectFirstNameQuery(userid).ToString();
             lNameTextBox.Text = usersTableAdapter1.SelectLastNameQuery(userid).ToString();
             uEmailTextBox.Text = usersTableAdapter1.SelectUserEmailQuery(userid).ToString();
             uPasswordTextBox.Text = usersTableAdapter1.SelectUserPasswordQuery(userid).ToString();
         }
+        #endregion
 
-        private void updateTitleDesc()
+        #region Settings Panel Methods
+        private void defaultRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            try
+            if (defaultRadioButton.Checked)
             {
-                view = adsListBox.SelectedItem as DataRowView;
-                int adID = Int32.Parse(view["adID"].ToString());
-                this.adsTableTableAdapter.UpdateTitleDescQuery(titleTextBox.Text, descriptionRichTextBox.Text, adID);
-                updateFields();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("not updated");
+                topPanel.BackColor = SystemColors.ActiveBorder;
+                footerPanel.BackColor = SystemColors.ActiveBorder;
+                rightPanel.BackColor = SystemColors.ActiveBorder;
+                fullBlueRadioButton.Checked = false;
+                orangeRadioButton.Checked = false;
             }
         }
+
+        private void fullBlueRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (fullBlueRadioButton.Checked)
+            {
+                topPanel.BackColor = SystemColors.ActiveCaption;
+                footerPanel.BackColor = SystemColors.ActiveCaption;
+                rightPanel.BackColor = SystemColors.ActiveCaption;
+                defaultRadioButton.Checked = false;
+                orangeRadioButton.Checked = false;
+            }
+        }
+
+        private void orangeRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (orangeRadioButton.Checked)
+            {
+                topPanel.BackColor = Color.DarkOrange;
+                footerPanel.BackColor = Color.DarkOrange;
+                rightPanel.BackColor = Color.DarkOrange;
+                defaultRadioButton.Checked = false;
+                fullBlueRadioButton.Checked = false;
+            }
+        }
+
+        private void normalRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            Font normalFont = new Font("Sans Serif", 12, FontStyle.Regular);
+            fontFormating(normalFont);
+        }
+
+        private void largeRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            Font largeFont = new Font("Sans Serif", 16, FontStyle.Regular);
+            fontFormating(largeFont);
+        }
+
+        public static IEnumerable<Control> GetAllControls(Control aControl)
+        {
+            Stack<Control> stack = new Stack<Control>();
+
+            stack.Push(aControl);
+
+            while (stack.Any())
+            {
+                var nextControl = stack.Pop();
+
+                foreach (Control childControl in nextControl.Controls)
+                {
+                    stack.Push(childControl);
+                }
+
+                yield return nextControl;
+            }
+        }
+
+        public void fontFormating(Font font)
+        {
+            foreach (Control theControl in (GetAllControls(this).OfType<Label>()))
+            {
+                theControl.Font = font;
+            }
+
+            foreach (Control theControl in (GetAllControls(this).OfType<TextBox>()))
+            {
+                theControl.Font = font;
+            }
+
+            foreach (Control theControl in (GetAllControls(this).OfType<RichTextBox>()))
+            {
+                theControl.Font = font;
+            }
+
+            foreach (Control theControl in (GetAllControls(this).OfType<ListBox>()))
+            {
+                theControl.Font = font;
+            }
+
+            foreach (Control theControl in (GetAllControls(this).OfType<Button>()))
+            {
+                theControl.Font = font;
+            }
+        }
+        #endregion
+
+        #region General Methods
+        /// <summary>
+        /// Form Load.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'aggeliesDBDataSet.AdsTable' table. You can move, or remove it, as needed.
+            adsListBox_SelectedIndexChanged(adsListBox, e);
+            updateFields();
+        }
+
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
+        #endregion
+        
         #endregion
 
     }
