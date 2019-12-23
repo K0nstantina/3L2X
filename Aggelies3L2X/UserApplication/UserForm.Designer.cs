@@ -70,6 +70,7 @@
             this.page4Panel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.adsPanel = new System.Windows.Forms.Panel();
+            this.savePriceButton = new System.Windows.Forms.Button();
             this.priceLabel = new System.Windows.Forms.Label();
             this.publishedLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -92,7 +93,6 @@
             this.contentPanel = new System.Windows.Forms.Panel();
             this.adsTableTableAdapter = new UserApplication.AggeliesDBDataSetTableAdapters.AdsTableTableAdapter();
             this.usersTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.UsersTableAdapter();
-            this.savePriceButton = new System.Windows.Forms.Button();
             this.rightPanel.SuspendLayout();
             this.settingsPanel.SuspendLayout();
             this.fontSizeGroupBox.SuspendLayout();
@@ -167,10 +167,10 @@
             // 
             this.fontSizeGroupBox.Controls.Add(this.largeRadioButton);
             this.fontSizeGroupBox.Controls.Add(this.normalRadioButton);
-            this.fontSizeGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.fontSizeGroupBox.Location = new System.Drawing.Point(148, 91);
+            this.fontSizeGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.fontSizeGroupBox.Location = new System.Drawing.Point(163, 91);
             this.fontSizeGroupBox.Name = "fontSizeGroupBox";
-            this.fontSizeGroupBox.Size = new System.Drawing.Size(130, 105);
+            this.fontSizeGroupBox.Size = new System.Drawing.Size(145, 114);
             this.fontSizeGroupBox.TabIndex = 5;
             this.fontSizeGroupBox.TabStop = false;
             this.fontSizeGroupBox.Text = "Font Size";
@@ -178,10 +178,10 @@
             // largeRadioButton
             // 
             this.largeRadioButton.AutoSize = true;
-            this.largeRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.largeRadioButton.Location = new System.Drawing.Point(7, 42);
+            this.largeRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.largeRadioButton.Location = new System.Drawing.Point(6, 50);
             this.largeRadioButton.Name = "largeRadioButton";
-            this.largeRadioButton.Size = new System.Drawing.Size(61, 20);
+            this.largeRadioButton.Size = new System.Drawing.Size(68, 24);
             this.largeRadioButton.TabIndex = 1;
             this.largeRadioButton.Text = "Large";
             this.largeRadioButton.UseVisualStyleBackColor = true;
@@ -191,10 +191,10 @@
             // 
             this.normalRadioButton.AutoSize = true;
             this.normalRadioButton.Checked = true;
-            this.normalRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.normalRadioButton.Location = new System.Drawing.Point(7, 21);
+            this.normalRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.normalRadioButton.Location = new System.Drawing.Point(6, 21);
             this.normalRadioButton.Name = "normalRadioButton";
-            this.normalRadioButton.Size = new System.Drawing.Size(70, 20);
+            this.normalRadioButton.Size = new System.Drawing.Size(77, 24);
             this.normalRadioButton.TabIndex = 0;
             this.normalRadioButton.TabStop = true;
             this.normalRadioButton.Text = "Normal";
@@ -206,10 +206,10 @@
             this.panelColorsGroupBox.Controls.Add(this.orangeRadioButton);
             this.panelColorsGroupBox.Controls.Add(this.defaultRadioButton);
             this.panelColorsGroupBox.Controls.Add(this.fullBlueRadioButton);
-            this.panelColorsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.panelColorsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.panelColorsGroupBox.Location = new System.Drawing.Point(12, 91);
             this.panelColorsGroupBox.Name = "panelColorsGroupBox";
-            this.panelColorsGroupBox.Size = new System.Drawing.Size(130, 104);
+            this.panelColorsGroupBox.Size = new System.Drawing.Size(145, 114);
             this.panelColorsGroupBox.TabIndex = 4;
             this.panelColorsGroupBox.TabStop = false;
             this.panelColorsGroupBox.Text = "Panel Colors";
@@ -217,10 +217,10 @@
             // orangeRadioButton
             // 
             this.orangeRadioButton.AutoSize = true;
-            this.orangeRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.orangeRadioButton.Location = new System.Drawing.Point(6, 65);
+            this.orangeRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.orangeRadioButton.Location = new System.Drawing.Point(6, 80);
             this.orangeRadioButton.Name = "orangeRadioButton";
-            this.orangeRadioButton.Size = new System.Drawing.Size(71, 20);
+            this.orangeRadioButton.Size = new System.Drawing.Size(80, 24);
             this.orangeRadioButton.TabIndex = 4;
             this.orangeRadioButton.Text = "Orange";
             this.orangeRadioButton.UseVisualStyleBackColor = true;
@@ -230,10 +230,10 @@
             // 
             this.defaultRadioButton.AutoSize = true;
             this.defaultRadioButton.Checked = true;
-            this.defaultRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.defaultRadioButton.Location = new System.Drawing.Point(6, 19);
+            this.defaultRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.defaultRadioButton.Location = new System.Drawing.Point(6, 21);
             this.defaultRadioButton.Name = "defaultRadioButton";
-            this.defaultRadioButton.Size = new System.Drawing.Size(68, 20);
+            this.defaultRadioButton.Size = new System.Drawing.Size(79, 24);
             this.defaultRadioButton.TabIndex = 2;
             this.defaultRadioButton.TabStop = true;
             this.defaultRadioButton.Text = "Default";
@@ -243,10 +243,10 @@
             // fullBlueRadioButton
             // 
             this.fullBlueRadioButton.AutoSize = true;
-            this.fullBlueRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.fullBlueRadioButton.Location = new System.Drawing.Point(6, 42);
+            this.fullBlueRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.fullBlueRadioButton.Location = new System.Drawing.Point(6, 50);
             this.fullBlueRadioButton.Name = "fullBlueRadioButton";
-            this.fullBlueRadioButton.Size = new System.Drawing.Size(77, 20);
+            this.fullBlueRadioButton.Size = new System.Drawing.Size(88, 24);
             this.fullBlueRadioButton.TabIndex = 3;
             this.fullBlueRadioButton.Text = "Full Blue";
             this.fullBlueRadioButton.UseVisualStyleBackColor = true;
@@ -544,6 +544,18 @@
             this.adsPanel.Size = new System.Drawing.Size(1064, 473);
             this.adsPanel.TabIndex = 2;
             // 
+            // savePriceButton
+            // 
+            this.savePriceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.savePriceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.savePriceButton.Location = new System.Drawing.Point(651, 240);
+            this.savePriceButton.Name = "savePriceButton";
+            this.savePriceButton.Size = new System.Drawing.Size(149, 45);
+            this.savePriceButton.TabIndex = 64;
+            this.savePriceButton.Text = "Save";
+            this.savePriceButton.UseVisualStyleBackColor = true;
+            this.savePriceButton.Click += new System.EventHandler(this.savePriceButton_Click);
+            // 
             // priceLabel
             // 
             this.priceLabel.AutoSize = true;
@@ -755,12 +767,12 @@
             // 
             // contentPanel
             // 
+            this.contentPanel.Controls.Add(this.settingsPanel);
             this.contentPanel.Controls.Add(this.adsPanel);
             this.contentPanel.Controls.Add(this.page4Panel);
             this.contentPanel.Controls.Add(this.profilePanel);
             this.contentPanel.Controls.Add(this.page6Panel);
             this.contentPanel.Controls.Add(this.homePanel);
-            this.contentPanel.Controls.Add(this.settingsPanel);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(0, 108);
             this.contentPanel.Name = "contentPanel";
@@ -774,18 +786,6 @@
             // usersTableAdapter1
             // 
             this.usersTableAdapter1.ClearBeforeFill = true;
-            // 
-            // savePriceButton
-            // 
-            this.savePriceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.savePriceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.savePriceButton.Location = new System.Drawing.Point(651, 240);
-            this.savePriceButton.Name = "savePriceButton";
-            this.savePriceButton.Size = new System.Drawing.Size(149, 45);
-            this.savePriceButton.TabIndex = 64;
-            this.savePriceButton.Text = "Save";
-            this.savePriceButton.UseVisualStyleBackColor = true;
-            this.savePriceButton.Click += new System.EventHandler(this.savePriceButton_Click);
             // 
             // UserForm
             // 

@@ -52,5 +52,12 @@ namespace Login
                 MessageBox.Show("nope");
             }
         }
+        private void CheckEnter(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                userFormButton_Click(sender, e);
+            }
+        }
     }
 }

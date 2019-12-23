@@ -58,7 +58,7 @@
             this.loginPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.loginPanel.Location = new System.Drawing.Point(0, 0);
             this.loginPanel.Name = "loginPanel";
-            this.loginPanel.Size = new System.Drawing.Size(560, 360);
+            this.loginPanel.Size = new System.Drawing.Size(544, 321);
             this.loginPanel.TabIndex = 1;
             // 
             // passwordLabel
@@ -88,6 +88,7 @@
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(184, 26);
             this.usernameTextBox.TabIndex = 1;
+            this.usernameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
             // 
             // passwordTextBox
             // 
@@ -97,6 +98,7 @@
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(184, 26);
             this.passwordTextBox.TabIndex = 2;
+            this.passwordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
             // 
             // LoginForm
             // 
@@ -110,7 +112,7 @@
             this.MinimumSize = new System.Drawing.Size(560, 360);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "3L2X - Login Form";
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();
             this.ResumeLayout(false);

@@ -452,6 +452,11 @@ namespace UserApplication
             {
                 theControl.Font = font;
             }
+
+            foreach (Control theControl in (GetAllControls(this).OfType<RadioButton>()))
+            {
+                theControl.Font = font;
+            }
         }
         #endregion
 
