@@ -45,6 +45,11 @@
             this.fullBlueRadioButton = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.homePanel = new System.Windows.Forms.Panel();
+            this.recentAdsLabel = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.recentAds3 = new UserApplication.RecentAds();
+            this.recentAds2 = new UserApplication.RecentAds();
+            this.recentAds1 = new UserApplication.RecentAds();
             this.label1 = new System.Windows.Forms.Label();
             this.page6Panel = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -265,12 +270,57 @@
             // 
             // homePanel
             // 
+            this.homePanel.Controls.Add(this.recentAdsLabel);
+            this.homePanel.Controls.Add(this.listBox1);
+            this.homePanel.Controls.Add(this.recentAds3);
+            this.homePanel.Controls.Add(this.recentAds2);
+            this.homePanel.Controls.Add(this.recentAds1);
             this.homePanel.Controls.Add(this.label1);
             this.homePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.homePanel.Location = new System.Drawing.Point(0, 0);
             this.homePanel.Name = "homePanel";
             this.homePanel.Size = new System.Drawing.Size(1064, 473);
             this.homePanel.TabIndex = 3;
+            // 
+            // recentAdsLabel
+            // 
+            this.recentAdsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.recentAdsLabel.Location = new System.Drawing.Point(395, 17);
+            this.recentAdsLabel.Name = "recentAdsLabel";
+            this.recentAdsLabel.Size = new System.Drawing.Size(227, 72);
+            this.recentAdsLabel.TabIndex = 5;
+            this.recentAdsLabel.Text = "Most Recent Ads";
+            this.recentAdsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(1007, 0);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(57, 43);
+            this.listBox1.TabIndex = 4;
+            this.listBox1.Visible = false;
+            // 
+            // recentAds3
+            // 
+            this.recentAds3.Location = new System.Drawing.Point(689, 140);
+            this.recentAds3.Name = "recentAds3";
+            this.recentAds3.Size = new System.Drawing.Size(280, 260);
+            this.recentAds3.TabIndex = 3;
+            // 
+            // recentAds2
+            // 
+            this.recentAds2.Location = new System.Drawing.Point(379, 140);
+            this.recentAds2.Name = "recentAds2";
+            this.recentAds2.Size = new System.Drawing.Size(280, 260);
+            this.recentAds2.TabIndex = 2;
+            // 
+            // recentAds1
+            // 
+            this.recentAds1.Location = new System.Drawing.Point(69, 141);
+            this.recentAds1.Name = "recentAds1";
+            this.recentAds1.Size = new System.Drawing.Size(280, 260);
+            this.recentAds1.TabIndex = 1;
             // 
             // label1
             // 
@@ -767,12 +817,12 @@
             // 
             // contentPanel
             // 
+            this.contentPanel.Controls.Add(this.homePanel);
             this.contentPanel.Controls.Add(this.settingsPanel);
             this.contentPanel.Controls.Add(this.adsPanel);
             this.contentPanel.Controls.Add(this.page4Panel);
             this.contentPanel.Controls.Add(this.profilePanel);
             this.contentPanel.Controls.Add(this.page6Panel);
-            this.contentPanel.Controls.Add(this.homePanel);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(0, 108);
             this.contentPanel.Name = "contentPanel";
@@ -898,6 +948,11 @@
         private System.Windows.Forms.TextBox expirationDateTextBox;
         private System.Windows.Forms.TextBox creationDateTextBox;
         private System.Windows.Forms.Button savePriceButton;
+        private RecentAds recentAds3;
+        private RecentAds recentAds2;
+        private RecentAds recentAds1;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label recentAdsLabel;
     }
 }
 

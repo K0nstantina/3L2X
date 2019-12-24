@@ -17,6 +17,7 @@ namespace UserApplication
     {
         #region Variables
         List<Panel> panels = new List<Panel>();
+        List<RecentAds> recentAdsList = new List<RecentAds>();
         DataRowView view;
         int userid;
         private string imgName, imgNewPath, imagesLocation, userImagesLocation;
@@ -45,9 +46,8 @@ namespace UserApplication
             userMenu.logoutButton.Click += LogoutBut_Click;
             // Initialize profile fields.
             updateFields();
+            recentAds();
         }
-
-
         #endregion
 
         #region Navigation
@@ -78,24 +78,31 @@ namespace UserApplication
             System.Diagnostics.Process.Start(Application.StartupPath.ToString() + @"\Login.exe");
         }
 
-        /// <summary>
-        /// Populates the panel and control lists
-        /// </summary>
-        private void controlsList()
-        {
-            panels.Add(homePanel); //0
-            panels.Add(settingsPanel); //1
-            panels.Add(adsPanel); //2
-            panels.Add(page4Panel);
-            panels.Add(profilePanel);
-            panels.Add(page6Panel);
 
-            panels[0].BringToFront();
-        }
         #endregion
 
         #region Private Methods
-        
+
+        #region Homepage Panel Methods
+        /// <summary>
+        /// Populates the custom RecentAds.cs control with recently added ads.
+        /// </summary>
+        private void recentAds()
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = adsTableTableAdapter.GetRecentAds();
+            listBox1.DataSource = bs;
+
+            for (int i = 0; i < recentAdsList.Count; i++)
+            {
+                view = listBox1.Items[i] as DataRowView;
+                recentAdsList[i].titleLabel.Text = view["adTitle"].ToString();
+                recentAdsList[i].descriptionLabel.Text = view["adDesc"].ToString();
+                recentAdsList[i].mediaPictureBox.ImageLocation = imagesLocation + view["media"].ToString();
+            }
+        }
+        #endregion
+
         #region ADS Panel Methods
         /// <summary>
         /// Enables editing the titleTextBox.
@@ -430,7 +437,11 @@ namespace UserApplication
         {
             foreach (Control theControl in (GetAllControls(this).OfType<Label>()))
             {
-                theControl.Font = font;
+                if (theControl.Name != "titleLabel")
+                {
+                    theControl.Font = font;
+                }
+ 
             }
 
             foreach (Control theControl in (GetAllControls(this).OfType<TextBox>()))
@@ -484,6 +495,25 @@ namespace UserApplication
         }
 
         /// <summary>
+        /// Populates the panel and control lists
+        /// </summary>
+        private void controlsList()
+        {
+            panels.Add(homePanel); //0
+            panels.Add(settingsPanel); //1
+            panels.Add(adsPanel); //2
+            panels.Add(page4Panel);
+            panels.Add(profilePanel);
+            panels.Add(page6Panel);
+
+            panels[0].BringToFront();
+
+            recentAdsList.Add(recentAds1);
+            recentAdsList.Add(recentAds2);
+            recentAdsList.Add(recentAds3);
+        }
+
+        /// <summary>
         /// Updates the profile panel with current user info.
         /// </summary>
         private void updateFields()
@@ -512,6 +542,7 @@ namespace UserApplication
             uEmailTextBox.Text = usersTableAdapter1.SelectUserEmailQuery(userid).ToString();
             uPasswordTextBox.Text = usersTableAdapter1.SelectUserPasswordQuery(userid).ToString();
         }
+
         #endregion
 
         #endregion

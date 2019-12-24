@@ -8,7 +8,7 @@
   <Shapes>
     <Shape ID="DesignTable:AdCategory" ZOrder="17" X="338" Y="70" Height="134" Width="213" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
     <Shape ID="DesignTable:AdsStatus" ZOrder="16" X="910" Y="70" Height="115" Width="202" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
-    <Shape ID="DesignTable:AdsTable" ZOrder="1" X="70" Y="70" Height="381" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
+    <Shape ID="DesignTable:AdsTable" ZOrder="1" X="70" Y="70" Height="419" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
     <Shape ID="DesignTable:Media" ZOrder="15" X="621" Y="777" Height="115" Width="181" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:MediaValue" ZOrder="14" X="338" Y="777" Height="153" Width="213" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
     <Shape ID="DesignTable:PropertiesTB" ZOrder="13" X="621" Y="70" Height="134" Width="219" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
@@ -45,7 +45,7 @@
         </Point>
         <Point>
           <X>251</X>
-          <Y>451</Y>
+          <Y>489</Y>
         </Point>
       </RoutePoints>
     </Connector>
@@ -53,7 +53,7 @@
       <RoutePoints>
         <Point>
           <X>243</X>
-          <Y>451</Y>
+          <Y>489</Y>
         </Point>
         <Point>
           <X>243</X>
