@@ -70,6 +70,9 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AggeliesDBDataSet.cs">
+      <DependentUpon>AggeliesDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="AggeliesDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

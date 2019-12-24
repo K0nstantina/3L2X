@@ -54,6 +54,7 @@ namespace UserApplication
         private void HomeButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             panels[0].BringToFront();
+            recentAds();
         }
         private void SettingBut_Click(object sender, System.Windows.RoutedEventArgs e)
         {
@@ -77,8 +78,6 @@ namespace UserApplication
             // This line stops debugger and starts the app - Temporary Solution.
             System.Diagnostics.Process.Start(Application.StartupPath.ToString() + @"\Login.exe");
         }
-
-
         #endregion
 
         #region Private Methods
@@ -91,11 +90,11 @@ namespace UserApplication
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = adsTableTableAdapter.GetRecentAds();
-            listBox1.DataSource = bs;
+            recentAdsListBox.DataSource = bs;
 
             for (int i = 0; i < recentAdsList.Count; i++)
             {
-                view = listBox1.Items[i] as DataRowView;
+                view = recentAdsListBox.Items[i] as DataRowView;
                 recentAdsList[i].titleLabel.Text = view["adTitle"].ToString();
                 recentAdsList[i].descriptionLabel.Text = view["adDesc"].ToString();
                 recentAdsList[i].mediaPictureBox.ImageLocation = imagesLocation + view["media"].ToString();
@@ -227,6 +226,9 @@ namespace UserApplication
                 //MessageBox.Show(x.ToString());
             }
         }
+        /// <summary>
+        /// Updates the tilte and description in database.
+        /// </summary>
         private void updateTitleDesc()
         {
             try
@@ -243,7 +245,7 @@ namespace UserApplication
         }
 
         /// <summary>
-        /// Save the price to database
+        /// Update the price to database
         /// </summary>
         /// <param name="sender">savePriceButton</param>
         /// <param name="e">Click</param>
@@ -366,6 +368,11 @@ namespace UserApplication
         #endregion
 
         #region Settings Panel Methods
+        /// <summary>
+        /// Event Handler for defaultRadioButton click.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void defaultRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (defaultRadioButton.Checked)
@@ -377,7 +384,11 @@ namespace UserApplication
                 orangeRadioButton.Checked = false;
             }
         }
-
+        /// <summary>
+        /// Event Handler for fullBlueRadioButton click.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void fullBlueRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (fullBlueRadioButton.Checked)
@@ -389,7 +400,11 @@ namespace UserApplication
                 orangeRadioButton.Checked = false;
             }
         }
-
+        /// <summary>
+        /// Event Handler for orangeRadioButton click.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void orangeRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (orangeRadioButton.Checked)
@@ -401,40 +416,52 @@ namespace UserApplication
                 fullBlueRadioButton.Checked = false;
             }
         }
-
+        /// <summary>
+        /// Event Handler for normalRadioButton click. Call to fontFormating(Font font).
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void normalRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             Font normalFont = new Font("Microsoft Sans Serif", 12, FontStyle.Regular);
             fontFormating(normalFont);
         }
-
+        /// <summary>
+        /// Event Handler for largeRadioButton click. Call to fontFormating(Font font).
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void largeRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             Font largeFont = new Font("Microsoft Sans Serif", 16, FontStyle.Regular);
             fontFormating(largeFont);
         }
-
+        /// <summary>
+        /// Gets all application controls as stack.
+        /// </summary>
+        /// <param name="aControl"></param>
+        /// <returns></returns>
         public static IEnumerable<Control> GetAllControls(Control aControl)
         {
             Stack<Control> stack = new Stack<Control>();
-
             stack.Push(aControl);
-
             while (stack.Any())
             {
                 var nextControl = stack.Pop();
-
                 foreach (Control childControl in nextControl.Controls)
                 {
                     stack.Push(childControl);
                 }
-
                 yield return nextControl;
             }
         }
-
+        /// <summary>
+        /// Updates the application fonts based on user selection.
+        /// </summary>
+        /// <param name="font"></param>
         public void fontFormating(Font font)
         {
+            // Labels.
             foreach (Control theControl in (GetAllControls(this).OfType<Label>()))
             {
                 if (theControl.Name != "titleLabel")
@@ -443,27 +470,27 @@ namespace UserApplication
                 }
  
             }
-
+            // TextBox.
             foreach (Control theControl in (GetAllControls(this).OfType<TextBox>()))
             {
                 theControl.Font = font;
             }
-
+            // RichTextBox.
             foreach (Control theControl in (GetAllControls(this).OfType<RichTextBox>()))
             {
                 theControl.Font = font;
             }
-
+            // ListBox.
             foreach (Control theControl in (GetAllControls(this).OfType<ListBox>()))
             {
                 theControl.Font = font;
             }
-
+            // Button.
             foreach (Control theControl in (GetAllControls(this).OfType<Button>()))
             {
                 theControl.Font = font;
             }
-
+            // RadioButton.
             foreach (Control theControl in (GetAllControls(this).OfType<RadioButton>()))
             {
                 theControl.Font = font;

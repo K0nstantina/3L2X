@@ -1,0 +1,7 @@
+﻿namespace UserApplication
+{
+}
+
+namespace UserApplication
+{
+}

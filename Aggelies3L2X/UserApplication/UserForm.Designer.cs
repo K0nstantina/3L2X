@@ -46,11 +46,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.homePanel = new System.Windows.Forms.Panel();
             this.recentAdsLabel = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.recentAdsListBox = new System.Windows.Forms.ListBox();
             this.recentAds3 = new UserApplication.RecentAds();
             this.recentAds2 = new UserApplication.RecentAds();
             this.recentAds1 = new UserApplication.RecentAds();
-            this.label1 = new System.Windows.Forms.Label();
             this.page6Panel = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.profilePanel = new System.Windows.Forms.Panel();
@@ -271,11 +270,10 @@
             // homePanel
             // 
             this.homePanel.Controls.Add(this.recentAdsLabel);
-            this.homePanel.Controls.Add(this.listBox1);
+            this.homePanel.Controls.Add(this.recentAdsListBox);
             this.homePanel.Controls.Add(this.recentAds3);
             this.homePanel.Controls.Add(this.recentAds2);
             this.homePanel.Controls.Add(this.recentAds1);
-            this.homePanel.Controls.Add(this.label1);
             this.homePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.homePanel.Location = new System.Drawing.Point(0, 0);
             this.homePanel.Name = "homePanel";
@@ -292,14 +290,14 @@
             this.recentAdsLabel.Text = "Most Recent Ads";
             this.recentAdsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // listBox1
+            // recentAdsListBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(1007, 0);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(57, 43);
-            this.listBox1.TabIndex = 4;
-            this.listBox1.Visible = false;
+            this.recentAdsListBox.FormattingEnabled = true;
+            this.recentAdsListBox.Location = new System.Drawing.Point(1007, 0);
+            this.recentAdsListBox.Name = "recentAdsListBox";
+            this.recentAdsListBox.Size = new System.Drawing.Size(57, 43);
+            this.recentAdsListBox.TabIndex = 4;
+            this.recentAdsListBox.Visible = false;
             // 
             // recentAds3
             // 
@@ -321,17 +319,6 @@
             this.recentAds1.Name = "recentAds1";
             this.recentAds1.Size = new System.Drawing.Size(280, 260);
             this.recentAds1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 72);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "homepage";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // page6Panel
             // 
@@ -891,7 +878,6 @@
         private System.Windows.Forms.Panel settingsPanel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel homePanel;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel page6Panel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel profilePanel;
@@ -951,7 +937,7 @@
         private RecentAds recentAds3;
         private RecentAds recentAds2;
         private RecentAds recentAds1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox recentAdsListBox;
         private System.Windows.Forms.Label recentAdsLabel;
     }
 }

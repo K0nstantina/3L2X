@@ -39,7 +39,7 @@
             this.mediaPictureBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.mediaPictureBox.Location = new System.Drawing.Point(0, 0);
             this.mediaPictureBox.Name = "mediaPictureBox";
-            this.mediaPictureBox.Size = new System.Drawing.Size(280, 150);
+            this.mediaPictureBox.Size = new System.Drawing.Size(278, 150);
             this.mediaPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.mediaPictureBox.TabIndex = 0;
             this.mediaPictureBox.TabStop = false;
@@ -51,7 +51,7 @@
             this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.titleLabel.Location = new System.Drawing.Point(0, 153);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(280, 31);
+            this.titleLabel.Size = new System.Drawing.Size(280, 29);
             this.titleLabel.TabIndex = 1;
             this.titleLabel.Text = "label1";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -59,10 +59,11 @@
             // descriptionLabel
             // 
             this.descriptionLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.descriptionLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.descriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.descriptionLabel.Location = new System.Drawing.Point(0, 184);
+            this.descriptionLabel.Location = new System.Drawing.Point(0, 182);
             this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(280, 76);
+            this.descriptionLabel.Size = new System.Drawing.Size(278, 76);
             this.descriptionLabel.TabIndex = 2;
             this.descriptionLabel.Text = "desc";
             // 
@@ -70,11 +71,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.descriptionLabel);
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.mediaPictureBox);
             this.Name = "RecentAds";
-            this.Size = new System.Drawing.Size(280, 260);
+            this.Size = new System.Drawing.Size(278, 258);
             ((System.ComponentModel.ISupportInitialize)(this.mediaPictureBox)).EndInit();
             this.ResumeLayout(false);
 
