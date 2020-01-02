@@ -42,21 +42,21 @@ namespace UserApplication {
         
         private UsersDataTable tableUsers;
         
-        private global::System.Data.DataRelation relationadCategoryAdsTable;
-        
         private global::System.Data.DataRelation relationUsersAdsTable;
         
         private global::System.Data.DataRelation relationAdsTableMediaValue;
         
         private global::System.Data.DataRelation relationMediaMediaValue;
         
-        private global::System.Data.DataRelation relationadCategoryProperties;
-        
         private global::System.Data.DataRelation relationAdsTablePropertiesValues;
         
         private global::System.Data.DataRelation relationPropertiesPropertiesValues;
         
         private global::System.Data.DataRelation relationuserCategoriesUsers;
+        
+        private global::System.Data.DataRelation relationadCategoryProperties;
+        
+        private global::System.Data.DataRelation relationadCategoryAdsTable;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -402,14 +402,14 @@ namespace UserApplication {
                     this.tableUsers.InitVars();
                 }
             }
-            this.relationadCategoryAdsTable = this.Relations["adCategoryAdsTable"];
             this.relationUsersAdsTable = this.Relations["UsersAdsTable"];
             this.relationAdsTableMediaValue = this.Relations["AdsTableMediaValue"];
             this.relationMediaMediaValue = this.Relations["MediaMediaValue"];
-            this.relationadCategoryProperties = this.Relations["adCategoryProperties"];
             this.relationAdsTablePropertiesValues = this.Relations["AdsTablePropertiesValues"];
             this.relationPropertiesPropertiesValues = this.Relations["PropertiesPropertiesValues"];
             this.relationuserCategoriesUsers = this.Relations["userCategoriesUsers"];
+            this.relationadCategoryProperties = this.Relations["adCategoryProperties"];
+            this.relationadCategoryAdsTable = this.Relations["adCategoryAdsTable"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -438,10 +438,6 @@ namespace UserApplication {
             base.Tables.Add(this.tableuserCategories);
             this.tableUsers = new UsersDataTable();
             base.Tables.Add(this.tableUsers);
-            this.relationadCategoryAdsTable = new global::System.Data.DataRelation("adCategoryAdsTable", new global::System.Data.DataColumn[] {
-                        this.tableAdCategory.catIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableAdsTable.adCategoryColumn}, false);
-            this.Relations.Add(this.relationadCategoryAdsTable);
             this.relationUsersAdsTable = new global::System.Data.DataRelation("UsersAdsTable", new global::System.Data.DataColumn[] {
                         this.tableUsers.userIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableAdsTable.ownerIDColumn}, false);
@@ -454,10 +450,6 @@ namespace UserApplication {
                         this.tableMedia.mediaIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableMediaValue.medIDColumn}, false);
             this.Relations.Add(this.relationMediaMediaValue);
-            this.relationadCategoryProperties = new global::System.Data.DataRelation("adCategoryProperties", new global::System.Data.DataColumn[] {
-                        this.tableAdCategory.catIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tablePropertiesTB.catIDColumn}, false);
-            this.Relations.Add(this.relationadCategoryProperties);
             this.relationAdsTablePropertiesValues = new global::System.Data.DataRelation("AdsTablePropertiesValues", new global::System.Data.DataColumn[] {
                         this.tableAdsTable.adIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablePropertiesValues.advertIDColumn}, false);
@@ -470,6 +462,14 @@ namespace UserApplication {
                         this.tableuserCategories.uCatIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableUsers.uCatColumn}, false);
             this.Relations.Add(this.relationuserCategoriesUsers);
+            this.relationadCategoryProperties = new global::System.Data.DataRelation("adCategoryProperties", new global::System.Data.DataColumn[] {
+                        this.tableAdCategory.catIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tablePropertiesTB.catIDColumn}, false);
+            this.Relations.Add(this.relationadCategoryProperties);
+            this.relationadCategoryAdsTable = new global::System.Data.DataRelation("adCategoryAdsTable", new global::System.Data.DataColumn[] {
+                        this.tableAdCategory.catIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableAdsTable.adCategoryColumn}, false);
+            this.Relations.Add(this.relationadCategoryAdsTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3498,23 +3498,23 @@ namespace UserApplication {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AdsTableRow[] GetAdsTableRows() {
-                if ((this.Table.ChildRelations["adCategoryAdsTable"] == null)) {
-                    return new AdsTableRow[0];
-                }
-                else {
-                    return ((AdsTableRow[])(base.GetChildRows(this.Table.ChildRelations["adCategoryAdsTable"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public PropertiesTBRow[] GetPropertiesTBRows() {
                 if ((this.Table.ChildRelations["adCategoryProperties"] == null)) {
                     return new PropertiesTBRow[0];
                 }
                 else {
                     return ((PropertiesTBRow[])(base.GetChildRows(this.Table.ChildRelations["adCategoryProperties"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public AdsTableRow[] GetAdsTableRows() {
+                if ((this.Table.ChildRelations["adCategoryAdsTable"] == null)) {
+                    return new AdsTableRow[0];
+                }
+                else {
+                    return ((AdsTableRow[])(base.GetChildRows(this.Table.ChildRelations["adCategoryAdsTable"])));
                 }
             }
         }
@@ -3776,23 +3776,23 @@ namespace UserApplication {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AdCategoryRow AdCategoryRow {
-                get {
-                    return ((AdCategoryRow)(this.GetParentRow(this.Table.ParentRelations["adCategoryAdsTable"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["adCategoryAdsTable"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public UsersRow UsersRow {
                 get {
                     return ((UsersRow)(this.GetParentRow(this.Table.ParentRelations["UsersAdsTable"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["UsersAdsTable"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public AdCategoryRow AdCategoryRow {
+                get {
+                    return ((AdCategoryRow)(this.GetParentRow(this.Table.ParentRelations["adCategoryAdsTable"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["adCategoryAdsTable"]);
                 }
             }
             
@@ -5130,17 +5130,28 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::UserApplication.Properties.Settings.Default.AggeliesDBConnectionString;
+            this._connection.ConnectionString = global::UserApplication.Properties.Settings.Default.AggeliesDBConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[3];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT catID, catTitle, catParent FROM AdCategory";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        catTitle, catID\r\nFROM            AdCategory\r\nWHERE        (catParen" +
+                "t = ?)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("catParent", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "catParent", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT        catTitle, catID\r\nFROM            AdCategory\r\nWHERE        (catParen" +
+                "t = 0)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5162,6 +5173,66 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual AggeliesDBDataSet.AdCategoryDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            AggeliesDBDataSet.AdCategoryDataTable dataTable = new AggeliesDBDataSet.AdCategoryDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillDTChildCategories(AggeliesDBDataSet.AdCategoryDataTable dataTable, global::System.Nullable<int> catParent) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((catParent.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(catParent.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual AggeliesDBDataSet.AdCategoryDataTable GetDTChildCategories(global::System.Nullable<int> catParent) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((catParent.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(catParent.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            AggeliesDBDataSet.AdCategoryDataTable dataTable = new AggeliesDBDataSet.AdCategoryDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillDTMainCategories(AggeliesDBDataSet.AdCategoryDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual AggeliesDBDataSet.AdCategoryDataTable GetDTMainCategories() {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             AggeliesDBDataSet.AdCategoryDataTable dataTable = new AggeliesDBDataSet.AdCategoryDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -5828,7 +5899,7 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[6];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[7];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT adID, adTitle, adCategory, ownerID, creationDate, expirationDate, media, a" +
@@ -5841,29 +5912,36 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ownerID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ownerID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT        TOP 3 adTitle, adDesc, media\r\nFROM            AdsTable\r\nWHERE      " +
-                "  (Published = True)\r\nORDER BY creationDate DESC, adID DESC";
+            this._commandCollection[2].CommandText = "SELECT        adID, adTitle, adCategory, ownerID, creationDate, expirationDate, m" +
+                "edia, adDesc, price, Published, Hits, adStatus\r\nFROM            AdsTable\r\nWHERE " +
+                "       (adCategory = ?)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adCategory", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adCategory", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "UPDATE       AdsTable\r\nSET                media = ?\r\nWHERE        (adID = ?)";
+            this._commandCollection[3].CommandText = "SELECT        TOP 3 adTitle, adDesc, media\r\nFROM            AdsTable\r\nWHERE      " +
+                "  (Published = True)\r\nORDER BY creationDate DESC, adID DESC";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("media", global::System.Data.OleDb.OleDbType.WChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "media", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_adID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adID", global::System.Data.DataRowVersion.Original, false, null));
             this._commandCollection[4] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "UPDATE       AdsTable\r\nSET                price = ?\r\nWHERE        (adID = ?)";
+            this._commandCollection[4].CommandText = "UPDATE       AdsTable\r\nSET                media = ?\r\nWHERE        (adID = ?)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "price", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("media", global::System.Data.OleDb.OleDbType.WChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "media", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_adID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adID", global::System.Data.DataRowVersion.Original, false, null));
             this._commandCollection[5] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = "UPDATE       AdsTable\r\nSET                adTitle = ?, adDesc = ?\r\nWHERE        (" +
-                "adID = ?)";
+            this._commandCollection[5].CommandText = "UPDATE       AdsTable\r\nSET                price = ?\r\nWHERE        (adID = ?)";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adTitle", global::System.Data.OleDb.OleDbType.WChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adTitle", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adDesc", global::System.Data.OleDb.OleDbType.WChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adDesc", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "price", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_adID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adID", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[6] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[6].Connection = this.Connection;
+            this._commandCollection[6].CommandText = "UPDATE       AdsTable\r\nSET                adTitle = ?, adDesc = ?\r\nWHERE        (" +
+                "adID = ?)";
+            this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[6].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adTitle", global::System.Data.OleDb.OleDbType.WChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adTitle", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[6].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adDesc", global::System.Data.OleDb.OleDbType.WChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adDesc", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[6].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_adID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adID", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5907,9 +5985,35 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillDTFilterAds(AggeliesDBDataSet.AdsTableDataTable dataTable, int adCategory) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(adCategory));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual AggeliesDBDataSet.AdsTableDataTable GetDTFilterAds(int adCategory) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(adCategory));
+            AggeliesDBDataSet.AdsTableDataTable dataTable = new AggeliesDBDataSet.AdsTableDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual AggeliesDBDataSet.AdsTableDataTable GetRecentAds() {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             AggeliesDBDataSet.AdsTableDataTable dataTable = new AggeliesDBDataSet.AdsTableDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -6162,7 +6266,7 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int UpdateImageQuery(string media, int Original_adID) {
-            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[3];
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[4];
             if ((media == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -6192,7 +6296,7 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int UpdatePriceQuery(int price, int Original_adID) {
-            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[4];
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[5];
             command.Parameters[0].Value = ((int)(price));
             command.Parameters[1].Value = ((int)(Original_adID));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
@@ -6217,7 +6321,7 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int UpdateTitleDescQuery(string adTitle, string adDesc, int Original_adID) {
-            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[5];
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[6];
             if ((adTitle == null)) {
                 throw new global::System.ArgumentNullException("adTitle");
             }

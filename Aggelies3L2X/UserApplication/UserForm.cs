@@ -17,7 +17,7 @@ namespace UserApplication
     {
         #region Variables
         List<Panel> panels = new List<Panel>();
-        List<RecentAds> recentAdsList = new List<RecentAds>();
+        List<DisplayAds> recentAdsList = new List<DisplayAds>();
         DataRowView view;
         int userid;
         private string imgName, imgNewPath, imagesLocation, userImagesLocation;
@@ -95,11 +95,94 @@ namespace UserApplication
             for (int i = 0; i < recentAdsList.Count; i++)
             {
                 view = recentAdsListBox.Items[i] as DataRowView;
-                recentAdsList[i].titleLabel.Text = view["adTitle"].ToString();
-                recentAdsList[i].descriptionLabel.Text = view["adDesc"].ToString();
+                recentAdsList[i].titleTextBox.Text = view["adTitle"].ToString();
+                recentAdsList[i].descTextBox.Text = view["adDesc"].ToString();
                 recentAdsList[i].mediaPictureBox.ImageLocation = imagesLocation + view["media"].ToString();
             }
         }
+        #endregion
+
+        #region Categories Panel Methods
+        /// <summary>
+        /// Event Handler for selected index in mainCategoriesComboBox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void mainCategoriesComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            childCategoriesComboBox.Enabled = true;
+            view = mainCategoriesComboBox.SelectedItem as DataRowView;
+            int parentCategory = Int32.Parse(view["catID"].ToString());
+
+            childCategoriesComboBox.DataSource = this.adCategoryTableAdapter1.GetDTChildCategories(parentCategory);
+            childCategoriesComboBox.DisplayMember = "catTitle";
+            childCategoriesComboBox.ValueMember = "catID";
+        }
+        /// <summary>
+        /// Event Handler for selected index in childCategoriesComboBox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void childCategoriesComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            residenceComboBox.Visible = false;
+            view = childCategoriesComboBox.SelectedItem as DataRowView;
+            if (view["catID"].ToString() == "25")
+            {
+                residenceComboBox.Visible = true;
+                int parentCategory = Int32.Parse(view["catID"].ToString());
+                residenceComboBox.DataSource = this.adCategoryTableAdapter1.GetDTChildCategories(parentCategory);
+                residenceComboBox.DisplayMember = "catTitle";
+                residenceComboBox.ValueMember = "catID";
+                updateCategoriesListBox(residenceComboBox);
+            }
+            //updateCategoriesListBox(residenceComboBox);
+        }
+
+        /// <summary>
+        /// Event Handler for selected index in categoriesListBox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void categoriesListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            view = categoriesListBox.SelectedItem as DataRowView;
+            displayAd.titleTextBox.Text = view["adTitle"].ToString();
+            displayAd.descTextBox.Text = view["adDesc"].ToString();
+            displayAd.mediaPictureBox.ImageLocation = imagesLocation + view["media"].ToString();
+        }
+
+        /// <summary>
+        /// Event handler for selected index in residenceComboBox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void residenceComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            updateCategoriesListBox(residenceComboBox);
+        }
+
+        /// <summary>
+        /// Updates the displayed ad.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void updateCategoriesListBox(ComboBox cb)
+        {
+            displayAd.Visible = true;
+            view = cb.SelectedItem as DataRowView;
+            int category = Int32.Parse(view["catID"].ToString());
+
+            // Debugging
+            label4.Text = category.ToString();
+
+            BindingSource bs = new BindingSource();
+            bs.DataSource = adsTableTableAdapter.GetDTFilterAds(category);
+            categoriesListBox.DataSource = bs;
+            categoriesListBox.DisplayMember = "adTitle";
+            categoriesListBox.ValueMember = "adID";
+        }
+
         #endregion
 
         #region ADS Panel Methods
@@ -464,16 +547,15 @@ namespace UserApplication
             // Labels.
             foreach (Control theControl in (GetAllControls(this).OfType<Label>()))
             {
-                if (theControl.Name != "titleLabel")
-                {
-                    theControl.Font = font;
-                }
- 
+                theControl.Font = font;
             }
             // TextBox.
             foreach (Control theControl in (GetAllControls(this).OfType<TextBox>()))
             {
-                theControl.Font = font;
+                if (theControl.Name != "titleTextBox")
+                {
+                    theControl.Font = font;
+                }
             }
             // RichTextBox.
             foreach (Control theControl in (GetAllControls(this).OfType<RichTextBox>()))
@@ -506,7 +588,6 @@ namespace UserApplication
         /// <param name="e"></param>
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'aggeliesDBDataSet.AdsTable' table. You can move, or remove it, as needed.
             adsListBox_SelectedIndexChanged(adsListBox, e);
             updateFields();
         }
@@ -522,7 +603,7 @@ namespace UserApplication
         }
 
         /// <summary>
-        /// Populates the panel and control lists
+        /// Populates the panel and control lists.
         /// </summary>
         private void controlsList()
         {
@@ -545,6 +626,11 @@ namespace UserApplication
         /// </summary>
         private void updateFields()
         {
+
+            mainCategoriesComboBox.DataSource = this.adCategoryTableAdapter1.GetDTMainCategories();
+            mainCategoriesComboBox.DisplayMember = "catTitle";
+            mainCategoriesComboBox.ValueMember = "catID";
+
             // Find current users Ads
             this.adsTableTableAdapter.AdsPerUser(this.aggeliesDBDataSet.AdsTable, userid);
             // Set images and userImages location.
@@ -569,10 +655,8 @@ namespace UserApplication
             uEmailTextBox.Text = usersTableAdapter1.SelectUserEmailQuery(userid).ToString();
             uPasswordTextBox.Text = usersTableAdapter1.SelectUserPasswordQuery(userid).ToString();
         }
-
         #endregion
 
         #endregion
-
     }
 }

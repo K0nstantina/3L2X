@@ -47,9 +47,9 @@
             this.homePanel = new System.Windows.Forms.Panel();
             this.recentAdsLabel = new System.Windows.Forms.Label();
             this.recentAdsListBox = new System.Windows.Forms.ListBox();
-            this.recentAds3 = new UserApplication.RecentAds();
-            this.recentAds2 = new UserApplication.RecentAds();
-            this.recentAds1 = new UserApplication.RecentAds();
+            this.recentAds3 = new UserApplication.DisplayAds();
+            this.recentAds2 = new UserApplication.DisplayAds();
+            this.recentAds1 = new UserApplication.DisplayAds();
             this.page6Panel = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.profilePanel = new System.Windows.Forms.Panel();
@@ -72,6 +72,11 @@
             this.avatarPictureBox = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.page4Panel = new System.Windows.Forms.Panel();
+            this.displayAd = new UserApplication.DisplayAds();
+            this.categoriesListBox = new System.Windows.Forms.ListBox();
+            this.residenceComboBox = new System.Windows.Forms.ComboBox();
+            this.childCategoriesComboBox = new System.Windows.Forms.ComboBox();
+            this.mainCategoriesComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.adsPanel = new System.Windows.Forms.Panel();
             this.savePriceButton = new System.Windows.Forms.Button();
@@ -97,6 +102,7 @@
             this.contentPanel = new System.Windows.Forms.Panel();
             this.adsTableTableAdapter = new UserApplication.AggeliesDBDataSetTableAdapters.AdsTableTableAdapter();
             this.usersTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.UsersTableAdapter();
+            this.adCategoryTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.AdCategoryTableAdapter();
             this.rightPanel.SuspendLayout();
             this.settingsPanel.SuspendLayout();
             this.fontSizeGroupBox.SuspendLayout();
@@ -539,6 +545,11 @@
             // 
             // page4Panel
             // 
+            this.page4Panel.Controls.Add(this.displayAd);
+            this.page4Panel.Controls.Add(this.categoriesListBox);
+            this.page4Panel.Controls.Add(this.residenceComboBox);
+            this.page4Panel.Controls.Add(this.childCategoriesComboBox);
+            this.page4Panel.Controls.Add(this.mainCategoriesComboBox);
             this.page4Panel.Controls.Add(this.label4);
             this.page4Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.page4Panel.Location = new System.Drawing.Point(0, 0);
@@ -546,13 +557,71 @@
             this.page4Panel.Size = new System.Drawing.Size(1064, 473);
             this.page4Panel.TabIndex = 3;
             // 
+            // displayAd
+            // 
+            this.displayAd.Location = new System.Drawing.Point(424, 67);
+            this.displayAd.Name = "displayAd";
+            this.displayAd.Size = new System.Drawing.Size(280, 260);
+            this.displayAd.TabIndex = 6;
+            this.displayAd.Visible = false;
+            // 
+            // categoriesListBox
+            // 
+            this.categoriesListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.categoriesListBox.BackColor = System.Drawing.SystemColors.Control;
+            this.categoriesListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.categoriesListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.categoriesListBox.ForeColor = System.Drawing.Color.DarkBlue;
+            this.categoriesListBox.FormattingEnabled = true;
+            this.categoriesListBox.ItemHeight = 20;
+            this.categoriesListBox.Location = new System.Drawing.Point(868, 53);
+            this.categoriesListBox.Name = "categoriesListBox";
+            this.categoriesListBox.Size = new System.Drawing.Size(196, 420);
+            this.categoriesListBox.TabIndex = 5;
+            this.categoriesListBox.SelectedIndexChanged += new System.EventHandler(this.categoriesListBox_SelectedIndexChanged);
+            // 
+            // residenceComboBox
+            // 
+            this.residenceComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.residenceComboBox.FormattingEnabled = true;
+            this.residenceComboBox.Location = new System.Drawing.Point(98, 137);
+            this.residenceComboBox.Name = "residenceComboBox";
+            this.residenceComboBox.Size = new System.Drawing.Size(180, 28);
+            this.residenceComboBox.TabIndex = 4;
+            this.residenceComboBox.Visible = false;
+            this.residenceComboBox.SelectedIndexChanged += new System.EventHandler(this.residenceComboBox_SelectedIndexChanged);
+            // 
+            // childCategoriesComboBox
+            // 
+            this.childCategoriesComboBox.Enabled = false;
+            this.childCategoriesComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.childCategoriesComboBox.FormattingEnabled = true;
+            this.childCategoriesComboBox.Location = new System.Drawing.Point(98, 102);
+            this.childCategoriesComboBox.Name = "childCategoriesComboBox";
+            this.childCategoriesComboBox.Size = new System.Drawing.Size(180, 28);
+            this.childCategoriesComboBox.TabIndex = 3;
+            this.childCategoriesComboBox.Text = "Select Main Category";
+            this.childCategoriesComboBox.SelectedIndexChanged += new System.EventHandler(this.childCategoriesComboBox_SelectedIndexChanged);
+            // 
+            // mainCategoriesComboBox
+            // 
+            this.mainCategoriesComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.mainCategoriesComboBox.FormattingEnabled = true;
+            this.mainCategoriesComboBox.Location = new System.Drawing.Point(98, 67);
+            this.mainCategoriesComboBox.Name = "mainCategoriesComboBox";
+            this.mainCategoriesComboBox.Size = new System.Drawing.Size(180, 28);
+            this.mainCategoriesComboBox.TabIndex = 2;
+            this.mainCategoriesComboBox.SelectedIndexChanged += new System.EventHandler(this.mainCategoriesComboBox_SelectedIndexChanged);
+            // 
             // label4
             // 
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Location = new System.Drawing.Point(868, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(177, 72);
+            this.label4.Size = new System.Drawing.Size(196, 50);
             this.label4.TabIndex = 1;
             this.label4.Text = "page 4";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -804,12 +873,12 @@
             // 
             // contentPanel
             // 
-            this.contentPanel.Controls.Add(this.homePanel);
-            this.contentPanel.Controls.Add(this.settingsPanel);
-            this.contentPanel.Controls.Add(this.adsPanel);
             this.contentPanel.Controls.Add(this.page4Panel);
             this.contentPanel.Controls.Add(this.profilePanel);
             this.contentPanel.Controls.Add(this.page6Panel);
+            this.contentPanel.Controls.Add(this.homePanel);
+            this.contentPanel.Controls.Add(this.settingsPanel);
+            this.contentPanel.Controls.Add(this.adsPanel);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(0, 108);
             this.contentPanel.Name = "contentPanel";
@@ -823,6 +892,10 @@
             // usersTableAdapter1
             // 
             this.usersTableAdapter1.ClearBeforeFill = true;
+            // 
+            // adCategoryTableAdapter1
+            // 
+            this.adCategoryTableAdapter1.ClearBeforeFill = true;
             // 
             // UserForm
             // 
@@ -934,11 +1007,17 @@
         private System.Windows.Forms.TextBox expirationDateTextBox;
         private System.Windows.Forms.TextBox creationDateTextBox;
         private System.Windows.Forms.Button savePriceButton;
-        private RecentAds recentAds3;
-        private RecentAds recentAds2;
-        private RecentAds recentAds1;
+        private DisplayAds recentAds3;
+        private DisplayAds recentAds2;
+        private DisplayAds recentAds1;
         private System.Windows.Forms.ListBox recentAdsListBox;
         private System.Windows.Forms.Label recentAdsLabel;
+        private System.Windows.Forms.ComboBox mainCategoriesComboBox;
+        private AggeliesDBDataSetTableAdapters.AdCategoryTableAdapter adCategoryTableAdapter1;
+        private System.Windows.Forms.ComboBox childCategoriesComboBox;
+        private System.Windows.Forms.ComboBox residenceComboBox;
+        private System.Windows.Forms.ListBox categoriesListBox;
+        private DisplayAds displayAd;
     }
 }
 

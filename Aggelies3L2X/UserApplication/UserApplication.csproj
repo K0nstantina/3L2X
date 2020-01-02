@@ -78,11 +78,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AggeliesDBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="RecentAds.cs">
+    <Compile Include="DisplayAds.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RecentAds.Designer.cs">
-      <DependentUpon>RecentAds.cs</DependentUpon>
+    <Compile Include="DisplayAds.Designer.cs">
+      <DependentUpon>DisplayAds.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
     <Compile Include="UserForm.cs">
@@ -93,8 +93,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="RecentAds.resx">
-      <DependentUpon>RecentAds.cs</DependentUpon>
+    <EmbeddedResource Include="DisplayAds.resx">
+      <DependentUpon>DisplayAds.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>

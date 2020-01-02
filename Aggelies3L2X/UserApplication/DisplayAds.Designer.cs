@@ -1,6 +1,6 @@
 ﻿namespace UserApplication
 {
-    partial class RecentAds
+    partial class DisplayAds
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.mediaPictureBox = new System.Windows.Forms.PictureBox();
-            this.titleLabel = new System.Windows.Forms.Label();
-            this.descriptionLabel = new System.Windows.Forms.Label();
+            this.titleTextBox = new System.Windows.Forms.TextBox();
+            this.descTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.mediaPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,47 +44,50 @@
             this.mediaPictureBox.TabIndex = 0;
             this.mediaPictureBox.TabStop = false;
             // 
-            // titleLabel
+            // titleTextBox
             // 
-            this.titleLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.titleLabel.Location = new System.Drawing.Point(0, 153);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(280, 31);
-            this.titleLabel.TabIndex = 1;
-            this.titleLabel.Text = "label1";
-            this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.titleTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.titleTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.titleTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.titleTextBox.Location = new System.Drawing.Point(0, 152);
+            this.titleTextBox.Multiline = true;
+            this.titleTextBox.Name = "titleTextBox";
+            this.titleTextBox.ReadOnly = true;
+            this.titleTextBox.Size = new System.Drawing.Size(280, 23);
+            this.titleTextBox.TabIndex = 1;
+            this.titleTextBox.Text = "title";
             // 
-            // descriptionLabel
+            // descTextBox
             // 
-            this.descriptionLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.descriptionLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.descriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.descriptionLabel.Location = new System.Drawing.Point(0, 184);
-            this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(280, 76);
-            this.descriptionLabel.TabIndex = 2;
-            this.descriptionLabel.Text = "desc";
+            this.descTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.descTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.descTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.descTextBox.Location = new System.Drawing.Point(0, 179);
+            this.descTextBox.Multiline = true;
+            this.descTextBox.Name = "descTextBox";
+            this.descTextBox.ReadOnly = true;
+            this.descTextBox.Size = new System.Drawing.Size(280, 81);
+            this.descTextBox.TabIndex = 2;
             // 
-            // RecentAds
+            // DisplayAds
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.descriptionLabel);
-            this.Controls.Add(this.titleLabel);
+            this.Controls.Add(this.descTextBox);
+            this.Controls.Add(this.titleTextBox);
             this.Controls.Add(this.mediaPictureBox);
-            this.Name = "RecentAds";
+            this.Name = "DisplayAds";
             this.Size = new System.Drawing.Size(280, 260);
             ((System.ComponentModel.ISupportInitialize)(this.mediaPictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         public System.Windows.Forms.PictureBox mediaPictureBox;
-        public System.Windows.Forms.Label titleLabel;
-        public System.Windows.Forms.Label descriptionLabel;
+        public System.Windows.Forms.TextBox titleTextBox;
+        public System.Windows.Forms.TextBox descTextBox;
     }
 }

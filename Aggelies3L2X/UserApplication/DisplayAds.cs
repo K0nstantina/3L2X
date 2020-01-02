@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UserApplication
 {
-    public partial class RecentAds : UserControl
+    public partial class DisplayAds : UserControl
     {
-        public RecentAds()
+        public DisplayAds()
         {
             InitializeComponent();
         }
