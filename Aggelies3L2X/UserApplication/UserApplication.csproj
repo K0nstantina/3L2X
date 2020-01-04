@@ -164,13 +164,13 @@
     <None Include="Resources\logout1.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\aggeliesWpfLab\aggeliesWpfLab.csproj">
-      <Project>{CD85BF5B-BC05-4B0A-AFA6-B64CBFAB0E37}</Project>
-      <Name>aggeliesWpfLab</Name>
-    </ProjectReference>
+    <Content Include="Resources\userAvatar.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\userAvatar.png" />
+    <ProjectReference Include="..\aggeliesWpfLab\aggeliesWpfLab.csproj">
+      <Project>{cd85bf5b-bc05-4b0a-afa6-b64cbfab0e37}</Project>
+      <Name>aggeliesWpfLab</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

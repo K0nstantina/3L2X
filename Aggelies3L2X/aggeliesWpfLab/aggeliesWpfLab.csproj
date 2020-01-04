@@ -84,7 +84,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserMenuIcons.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

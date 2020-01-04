@@ -19,6 +19,7 @@ namespace UserApplication
         List<Panel> panels = new List<Panel>();
         List<DisplayAds> recentAdsList = new List<DisplayAds>();
         DataRowView view;
+        BindingSource bs = new BindingSource();
         int userid;
         private string imgName, imgNewPath, imagesLocation, userImagesLocation;
         #endregion
@@ -34,6 +35,9 @@ namespace UserApplication
             // Add controls to list.
             controlsList();
             userid = userID;
+            // Initialize profile fields (profile panel) and recentAds (home panel).
+            updateFields();
+            recentAds();
             // Add WPF control to host and set the event handlers.
             var userMenu = new aggeliesWpfLab.UserMenuIcons();
             elementHost1.Child = userMenu;
@@ -44,9 +48,6 @@ namespace UserApplication
             userMenu.categoriesButton.Click += CatBut_Click;
             userMenu.profileButton.Click += ProfileBut_Click;
             userMenu.logoutButton.Click += LogoutBut_Click;
-            // Initialize profile fields.
-            updateFields();
-            recentAds();
         }
         #endregion
 
@@ -88,7 +89,6 @@ namespace UserApplication
         /// </summary>
         private void recentAds()
         {
-            BindingSource bs = new BindingSource();
             bs.DataSource = adsTableTableAdapter.GetRecentAds();
             recentAdsListBox.DataSource = bs;
 
@@ -117,7 +117,9 @@ namespace UserApplication
             childCategoriesComboBox.DataSource = this.adCategoryTableAdapter1.GetDTChildCategories(parentCategory);
             childCategoriesComboBox.DisplayMember = "catTitle";
             childCategoriesComboBox.ValueMember = "catID";
+            updateCategoriesListBox(childCategoriesComboBox);
         }
+
         /// <summary>
         /// Event Handler for selected index in childCategoriesComboBox.
         /// </summary>
@@ -134,9 +136,21 @@ namespace UserApplication
                 residenceComboBox.DataSource = this.adCategoryTableAdapter1.GetDTChildCategories(parentCategory);
                 residenceComboBox.DisplayMember = "catTitle";
                 residenceComboBox.ValueMember = "catID";
-                updateCategoriesListBox(residenceComboBox);
+                residenceComboBox_SelectedIndexChanged(sender, e);
             }
-            //updateCategoriesListBox(residenceComboBox);
+            //updateCategoriesListBox(childCategoriesComboBox);
+            //categoriesListBox_SelectedIndexChanged(sender, e);
+        }
+
+        /// <summary>
+        /// Event handler for selected index in residenceComboBox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void residenceComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            updateCategoriesListBox(residenceComboBox);
+            categoriesListBox_SelectedIndexChanged(sender, e);
         }
 
         /// <summary>
@@ -153,16 +167,6 @@ namespace UserApplication
         }
 
         /// <summary>
-        /// Event handler for selected index in residenceComboBox.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void residenceComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            updateCategoriesListBox(residenceComboBox);
-        }
-
-        /// <summary>
         /// Updates the displayed ad.
         /// </summary>
         /// <param name="sender"></param>
@@ -172,11 +176,7 @@ namespace UserApplication
             displayAd.Visible = true;
             view = cb.SelectedItem as DataRowView;
             int category = Int32.Parse(view["catID"].ToString());
-
-            // Debugging
-            label4.Text = category.ToString();
-
-            BindingSource bs = new BindingSource();
+            // Filter ads by category ID.
             bs.DataSource = adsTableTableAdapter.GetDTFilterAds(category);
             categoriesListBox.DataSource = bs;
             categoriesListBox.DisplayMember = "adTitle";
@@ -589,6 +589,7 @@ namespace UserApplication
         private void MainForm_Load(object sender, EventArgs e)
         {
             adsListBox_SelectedIndexChanged(adsListBox, e);
+            categoriesListBox_SelectedIndexChanged(categoriesListBox,e);
             updateFields();
         }
 
@@ -612,7 +613,6 @@ namespace UserApplication
             panels.Add(adsPanel); //2
             panels.Add(page4Panel);
             panels.Add(profilePanel);
-            panels.Add(page6Panel);
 
             panels[0].BringToFront();
 

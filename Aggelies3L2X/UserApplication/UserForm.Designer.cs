@@ -50,8 +50,6 @@
             this.recentAds3 = new UserApplication.DisplayAds();
             this.recentAds2 = new UserApplication.DisplayAds();
             this.recentAds1 = new UserApplication.DisplayAds();
-            this.page6Panel = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.profilePanel = new System.Windows.Forms.Panel();
             this.saveButton = new System.Windows.Forms.Button();
             this.lNameLabel = new System.Windows.Forms.Label();
@@ -77,7 +75,7 @@
             this.residenceComboBox = new System.Windows.Forms.ComboBox();
             this.childCategoriesComboBox = new System.Windows.Forms.ComboBox();
             this.mainCategoriesComboBox = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.categoriesLabel = new System.Windows.Forms.Label();
             this.adsPanel = new System.Windows.Forms.Panel();
             this.savePriceButton = new System.Windows.Forms.Button();
             this.priceLabel = new System.Windows.Forms.Label();
@@ -95,7 +93,7 @@
             this.infoLabel = new System.Windows.Forms.Label();
             this.editDescriptionPictureBox = new System.Windows.Forms.PictureBox();
             this.editTitlePictureBox = new System.Windows.Forms.PictureBox();
-            this.recentAdPanel = new System.Windows.Forms.Panel();
+            this.selectedAdPanel = new System.Windows.Forms.Panel();
             this.titleTextBox = new System.Windows.Forms.TextBox();
             this.descriptionRichTextBox = new System.Windows.Forms.RichTextBox();
             this.adsPictureBox = new System.Windows.Forms.PictureBox();
@@ -108,7 +106,6 @@
             this.fontSizeGroupBox.SuspendLayout();
             this.panelColorsGroupBox.SuspendLayout();
             this.homePanel.SuspendLayout();
-            this.page6Panel.SuspendLayout();
             this.profilePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSet)).BeginInit();
@@ -120,7 +117,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.adsTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editDescriptionPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editTitlePictureBox)).BeginInit();
-            this.recentAdPanel.SuspendLayout();
+            this.selectedAdPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adsPictureBox)).BeginInit();
             this.contentPanel.SuspendLayout();
             this.SuspendLayout();
@@ -289,9 +286,9 @@
             // recentAdsLabel
             // 
             this.recentAdsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.recentAdsLabel.Location = new System.Drawing.Point(395, 17);
+            this.recentAdsLabel.Location = new System.Drawing.Point(391, 3);
             this.recentAdsLabel.Name = "recentAdsLabel";
-            this.recentAdsLabel.Size = new System.Drawing.Size(227, 72);
+            this.recentAdsLabel.Size = new System.Drawing.Size(227, 61);
             this.recentAdsLabel.TabIndex = 5;
             this.recentAdsLabel.Text = "Most Recent Ads";
             this.recentAdsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -307,44 +304,24 @@
             // 
             // recentAds3
             // 
-            this.recentAds3.Location = new System.Drawing.Point(689, 140);
+            this.recentAds3.Location = new System.Drawing.Point(703, 67);
             this.recentAds3.Name = "recentAds3";
-            this.recentAds3.Size = new System.Drawing.Size(280, 260);
+            this.recentAds3.Size = new System.Drawing.Size(306, 348);
             this.recentAds3.TabIndex = 3;
             // 
             // recentAds2
             // 
-            this.recentAds2.Location = new System.Drawing.Point(379, 140);
+            this.recentAds2.Location = new System.Drawing.Point(366, 67);
             this.recentAds2.Name = "recentAds2";
-            this.recentAds2.Size = new System.Drawing.Size(280, 260);
+            this.recentAds2.Size = new System.Drawing.Size(302, 348);
             this.recentAds2.TabIndex = 2;
             // 
             // recentAds1
             // 
-            this.recentAds1.Location = new System.Drawing.Point(69, 141);
+            this.recentAds1.Location = new System.Drawing.Point(15, 67);
             this.recentAds1.Name = "recentAds1";
-            this.recentAds1.Size = new System.Drawing.Size(280, 260);
+            this.recentAds1.Size = new System.Drawing.Size(316, 348);
             this.recentAds1.TabIndex = 1;
-            // 
-            // page6Panel
-            // 
-            this.page6Panel.Controls.Add(this.label6);
-            this.page6Panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.page6Panel.Location = new System.Drawing.Point(0, 0);
-            this.page6Panel.Name = "page6Panel";
-            this.page6Panel.Size = new System.Drawing.Size(1064, 473);
-            this.page6Panel.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(177, 72);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "page 6";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // profilePanel
             // 
@@ -550,7 +527,7 @@
             this.page4Panel.Controls.Add(this.residenceComboBox);
             this.page4Panel.Controls.Add(this.childCategoriesComboBox);
             this.page4Panel.Controls.Add(this.mainCategoriesComboBox);
-            this.page4Panel.Controls.Add(this.label4);
+            this.page4Panel.Controls.Add(this.categoriesLabel);
             this.page4Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.page4Panel.Location = new System.Drawing.Point(0, 0);
             this.page4Panel.Name = "page4Panel";
@@ -559,9 +536,9 @@
             // 
             // displayAd
             // 
-            this.displayAd.Location = new System.Drawing.Point(424, 67);
+            this.displayAd.Location = new System.Drawing.Point(314, 36);
             this.displayAd.Name = "displayAd";
-            this.displayAd.Size = new System.Drawing.Size(280, 260);
+            this.displayAd.Size = new System.Drawing.Size(390, 348);
             this.displayAd.TabIndex = 6;
             this.displayAd.Visible = false;
             // 
@@ -576,9 +553,9 @@
             this.categoriesListBox.ForeColor = System.Drawing.Color.DarkBlue;
             this.categoriesListBox.FormattingEnabled = true;
             this.categoriesListBox.ItemHeight = 20;
-            this.categoriesListBox.Location = new System.Drawing.Point(868, 53);
+            this.categoriesListBox.Location = new System.Drawing.Point(807, 53);
             this.categoriesListBox.Name = "categoriesListBox";
-            this.categoriesListBox.Size = new System.Drawing.Size(196, 420);
+            this.categoriesListBox.Size = new System.Drawing.Size(257, 420);
             this.categoriesListBox.TabIndex = 5;
             this.categoriesListBox.SelectedIndexChanged += new System.EventHandler(this.categoriesListBox_SelectedIndexChanged);
             // 
@@ -586,7 +563,7 @@
             // 
             this.residenceComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.residenceComboBox.FormattingEnabled = true;
-            this.residenceComboBox.Location = new System.Drawing.Point(98, 137);
+            this.residenceComboBox.Location = new System.Drawing.Point(67, 137);
             this.residenceComboBox.Name = "residenceComboBox";
             this.residenceComboBox.Size = new System.Drawing.Size(180, 28);
             this.residenceComboBox.TabIndex = 4;
@@ -598,7 +575,7 @@
             this.childCategoriesComboBox.Enabled = false;
             this.childCategoriesComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.childCategoriesComboBox.FormattingEnabled = true;
-            this.childCategoriesComboBox.Location = new System.Drawing.Point(98, 102);
+            this.childCategoriesComboBox.Location = new System.Drawing.Point(67, 102);
             this.childCategoriesComboBox.Name = "childCategoriesComboBox";
             this.childCategoriesComboBox.Size = new System.Drawing.Size(180, 28);
             this.childCategoriesComboBox.TabIndex = 3;
@@ -609,22 +586,22 @@
             // 
             this.mainCategoriesComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.mainCategoriesComboBox.FormattingEnabled = true;
-            this.mainCategoriesComboBox.Location = new System.Drawing.Point(98, 67);
+            this.mainCategoriesComboBox.Location = new System.Drawing.Point(67, 67);
             this.mainCategoriesComboBox.Name = "mainCategoriesComboBox";
             this.mainCategoriesComboBox.Size = new System.Drawing.Size(180, 28);
             this.mainCategoriesComboBox.TabIndex = 2;
             this.mainCategoriesComboBox.SelectedIndexChanged += new System.EventHandler(this.mainCategoriesComboBox_SelectedIndexChanged);
             // 
-            // label4
+            // categoriesLabel
             // 
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label4.Location = new System.Drawing.Point(868, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(196, 50);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "page 4";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.categoriesLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.categoriesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.categoriesLabel.Location = new System.Drawing.Point(807, 0);
+            this.categoriesLabel.Name = "categoriesLabel";
+            this.categoriesLabel.Size = new System.Drawing.Size(257, 50);
+            this.categoriesLabel.TabIndex = 1;
+            this.categoriesLabel.Text = "categories";
+            this.categoriesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // adsPanel
             // 
@@ -643,7 +620,7 @@
             this.adsPanel.Controls.Add(this.adsListPanel);
             this.adsPanel.Controls.Add(this.editDescriptionPictureBox);
             this.adsPanel.Controls.Add(this.editTitlePictureBox);
-            this.adsPanel.Controls.Add(this.recentAdPanel);
+            this.adsPanel.Controls.Add(this.selectedAdPanel);
             this.adsPanel.Location = new System.Drawing.Point(0, 0);
             this.adsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adsPanel.Name = "adsPanel";
@@ -654,7 +631,7 @@
             // 
             this.savePriceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savePriceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.savePriceButton.Location = new System.Drawing.Point(651, 240);
+            this.savePriceButton.Location = new System.Drawing.Point(652, 248);
             this.savePriceButton.Name = "savePriceButton";
             this.savePriceButton.Size = new System.Drawing.Size(149, 45);
             this.savePriceButton.TabIndex = 64;
@@ -666,7 +643,7 @@
             // 
             this.priceLabel.AutoSize = true;
             this.priceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.priceLabel.Location = new System.Drawing.Point(395, 185);
+            this.priceLabel.Location = new System.Drawing.Point(396, 193);
             this.priceLabel.Name = "priceLabel";
             this.priceLabel.Size = new System.Drawing.Size(67, 20);
             this.priceLabel.TabIndex = 63;
@@ -676,7 +653,7 @@
             // 
             this.publishedLabel.AutoSize = true;
             this.publishedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.publishedLabel.Location = new System.Drawing.Point(395, 153);
+            this.publishedLabel.Location = new System.Drawing.Point(396, 161);
             this.publishedLabel.Name = "publishedLabel";
             this.publishedLabel.Size = new System.Drawing.Size(78, 20);
             this.publishedLabel.TabIndex = 62;
@@ -686,7 +663,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label7.Location = new System.Drawing.Point(395, 121);
+            this.label7.Location = new System.Drawing.Point(396, 129);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(118, 20);
             this.label7.TabIndex = 61;
@@ -696,7 +673,7 @@
             // 
             this.creationDateLabel.AutoSize = true;
             this.creationDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.creationDateLabel.Location = new System.Drawing.Point(395, 89);
+            this.creationDateLabel.Location = new System.Drawing.Point(396, 97);
             this.creationDateLabel.Name = "creationDateLabel";
             this.creationDateLabel.Size = new System.Drawing.Size(108, 20);
             this.creationDateLabel.TabIndex = 60;
@@ -706,7 +683,7 @@
             // 
             this.priceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "fName", true));
             this.priceTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.priceTextBox.Location = new System.Drawing.Point(558, 185);
+            this.priceTextBox.Location = new System.Drawing.Point(559, 193);
             this.priceTextBox.Name = "priceTextBox";
             this.priceTextBox.Size = new System.Drawing.Size(242, 26);
             this.priceTextBox.TabIndex = 59;
@@ -716,7 +693,7 @@
             this.publishedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "fName", true));
             this.publishedTextBox.Enabled = false;
             this.publishedTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.publishedTextBox.Location = new System.Drawing.Point(558, 153);
+            this.publishedTextBox.Location = new System.Drawing.Point(559, 161);
             this.publishedTextBox.Name = "publishedTextBox";
             this.publishedTextBox.Size = new System.Drawing.Size(242, 26);
             this.publishedTextBox.TabIndex = 58;
@@ -726,7 +703,7 @@
             this.expirationDateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "fName", true));
             this.expirationDateTextBox.Enabled = false;
             this.expirationDateTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.expirationDateTextBox.Location = new System.Drawing.Point(558, 121);
+            this.expirationDateTextBox.Location = new System.Drawing.Point(559, 129);
             this.expirationDateTextBox.Name = "expirationDateTextBox";
             this.expirationDateTextBox.Size = new System.Drawing.Size(242, 26);
             this.expirationDateTextBox.TabIndex = 57;
@@ -736,7 +713,7 @@
             this.creationDateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "fName", true));
             this.creationDateTextBox.Enabled = false;
             this.creationDateTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.creationDateTextBox.Location = new System.Drawing.Point(558, 89);
+            this.creationDateTextBox.Location = new System.Drawing.Point(559, 97);
             this.creationDateTextBox.Name = "creationDateTextBox";
             this.creationDateTextBox.Size = new System.Drawing.Size(242, 26);
             this.creationDateTextBox.TabIndex = 56;
@@ -744,7 +721,7 @@
             // editPicturePictureBox
             // 
             this.editPicturePictureBox.Image = global::UserApplication.Properties.Resources.edit1;
-            this.editPicturePictureBox.Location = new System.Drawing.Point(286, 36);
+            this.editPicturePictureBox.Location = new System.Drawing.Point(355, 36);
             this.editPicturePictureBox.Name = "editPicturePictureBox";
             this.editPicturePictureBox.Size = new System.Drawing.Size(30, 30);
             this.editPicturePictureBox.TabIndex = 6;
@@ -756,10 +733,10 @@
             this.adsListPanel.Controls.Add(this.adsListBox);
             this.adsListPanel.Controls.Add(this.infoLabel);
             this.adsListPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.adsListPanel.Location = new System.Drawing.Point(864, 0);
+            this.adsListPanel.Location = new System.Drawing.Point(819, 0);
             this.adsListPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adsListPanel.Name = "adsListPanel";
-            this.adsListPanel.Size = new System.Drawing.Size(200, 473);
+            this.adsListPanel.Size = new System.Drawing.Size(245, 473);
             this.adsListPanel.TabIndex = 5;
             // 
             // adsListBox
@@ -775,10 +752,10 @@
             this.adsListBox.ForeColor = System.Drawing.Color.DarkBlue;
             this.adsListBox.FormattingEnabled = true;
             this.adsListBox.ItemHeight = 20;
-            this.adsListBox.Location = new System.Drawing.Point(0, 33);
+            this.adsListBox.Location = new System.Drawing.Point(4, 33);
             this.adsListBox.Margin = new System.Windows.Forms.Padding(0);
             this.adsListBox.Name = "adsListBox";
-            this.adsListBox.Size = new System.Drawing.Size(200, 440);
+            this.adsListBox.Size = new System.Drawing.Size(241, 440);
             this.adsListBox.TabIndex = 3;
             this.adsListBox.ValueMember = "adID";
             this.adsListBox.SelectedIndexChanged += new System.EventHandler(this.adsListBox_SelectedIndexChanged);
@@ -795,7 +772,7 @@
             this.infoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.infoLabel.Location = new System.Drawing.Point(0, 0);
             this.infoLabel.Name = "infoLabel";
-            this.infoLabel.Size = new System.Drawing.Size(200, 33);
+            this.infoLabel.Size = new System.Drawing.Size(245, 33);
             this.infoLabel.TabIndex = 2;
             this.infoLabel.Text = "Ads per Tilte";
             this.infoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -803,7 +780,7 @@
             // editDescriptionPictureBox
             // 
             this.editDescriptionPictureBox.Image = global::UserApplication.Properties.Resources.edit1;
-            this.editDescriptionPictureBox.Location = new System.Drawing.Point(286, 284);
+            this.editDescriptionPictureBox.Location = new System.Drawing.Point(355, 282);
             this.editDescriptionPictureBox.Name = "editDescriptionPictureBox";
             this.editDescriptionPictureBox.Size = new System.Drawing.Size(30, 30);
             this.editDescriptionPictureBox.TabIndex = 4;
@@ -813,23 +790,23 @@
             // editTitlePictureBox
             // 
             this.editTitlePictureBox.Image = global::UserApplication.Properties.Resources.edit1;
-            this.editTitlePictureBox.Location = new System.Drawing.Point(286, 0);
+            this.editTitlePictureBox.Location = new System.Drawing.Point(355, 1);
             this.editTitlePictureBox.Name = "editTitlePictureBox";
             this.editTitlePictureBox.Size = new System.Drawing.Size(30, 30);
             this.editTitlePictureBox.TabIndex = 3;
             this.editTitlePictureBox.TabStop = false;
             this.editTitlePictureBox.Click += new System.EventHandler(this.titleEditPictureBox_Click);
             // 
-            // recentAdPanel
+            // selectedAdPanel
             // 
-            this.recentAdPanel.Controls.Add(this.titleTextBox);
-            this.recentAdPanel.Controls.Add(this.descriptionRichTextBox);
-            this.recentAdPanel.Controls.Add(this.adsPictureBox);
-            this.recentAdPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.recentAdPanel.Location = new System.Drawing.Point(0, 0);
-            this.recentAdPanel.Name = "recentAdPanel";
-            this.recentAdPanel.Size = new System.Drawing.Size(278, 473);
-            this.recentAdPanel.TabIndex = 2;
+            this.selectedAdPanel.Controls.Add(this.titleTextBox);
+            this.selectedAdPanel.Controls.Add(this.descriptionRichTextBox);
+            this.selectedAdPanel.Controls.Add(this.adsPictureBox);
+            this.selectedAdPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.selectedAdPanel.Location = new System.Drawing.Point(0, 0);
+            this.selectedAdPanel.Name = "selectedAdPanel";
+            this.selectedAdPanel.Size = new System.Drawing.Size(349, 473);
+            this.selectedAdPanel.TabIndex = 2;
             // 
             // titleTextBox
             // 
@@ -840,7 +817,7 @@
             this.titleTextBox.Location = new System.Drawing.Point(0, 0);
             this.titleTextBox.Multiline = true;
             this.titleTextBox.Name = "titleTextBox";
-            this.titleTextBox.Size = new System.Drawing.Size(278, 33);
+            this.titleTextBox.Size = new System.Drawing.Size(349, 33);
             this.titleTextBox.TabIndex = 5;
             this.titleTextBox.Text = "TITLE";
             this.titleTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -849,11 +826,11 @@
             // 
             this.descriptionRichTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.descriptionRichTextBox.Enabled = false;
-            this.descriptionRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descriptionRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.descriptionRichTextBox.Location = new System.Drawing.Point(0, 282);
             this.descriptionRichTextBox.Name = "descriptionRichTextBox";
             this.descriptionRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.descriptionRichTextBox.Size = new System.Drawing.Size(278, 191);
+            this.descriptionRichTextBox.Size = new System.Drawing.Size(349, 191);
             this.descriptionRichTextBox.TabIndex = 4;
             this.descriptionRichTextBox.Text = "Το ακίνητο βρίσκεται στην Αθήνα και μπλα μπλα μπλα....................\n.........." +
     ".....................\n................................\n........................." +
@@ -866,19 +843,18 @@
             this.adsPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("adsPictureBox.Image")));
             this.adsPictureBox.Location = new System.Drawing.Point(0, 33);
             this.adsPictureBox.Name = "adsPictureBox";
-            this.adsPictureBox.Size = new System.Drawing.Size(278, 252);
+            this.adsPictureBox.Size = new System.Drawing.Size(349, 252);
             this.adsPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.adsPictureBox.TabIndex = 3;
             this.adsPictureBox.TabStop = false;
             // 
             // contentPanel
             // 
+            this.contentPanel.Controls.Add(this.adsPanel);
             this.contentPanel.Controls.Add(this.page4Panel);
             this.contentPanel.Controls.Add(this.profilePanel);
-            this.contentPanel.Controls.Add(this.page6Panel);
             this.contentPanel.Controls.Add(this.homePanel);
             this.contentPanel.Controls.Add(this.settingsPanel);
-            this.contentPanel.Controls.Add(this.adsPanel);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(0, 108);
             this.contentPanel.Name = "contentPanel";
@@ -921,7 +897,6 @@
             this.panelColorsGroupBox.ResumeLayout(false);
             this.panelColorsGroupBox.PerformLayout();
             this.homePanel.ResumeLayout(false);
-            this.page6Panel.ResumeLayout(false);
             this.profilePanel.ResumeLayout(false);
             this.profilePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
@@ -935,8 +910,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.adsTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.editDescriptionPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.editTitlePictureBox)).EndInit();
-            this.recentAdPanel.ResumeLayout(false);
-            this.recentAdPanel.PerformLayout();
+            this.selectedAdPanel.ResumeLayout(false);
+            this.selectedAdPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adsPictureBox)).EndInit();
             this.contentPanel.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -951,19 +926,17 @@
         private System.Windows.Forms.Panel settingsPanel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel homePanel;
-        private System.Windows.Forms.Panel page6Panel;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel profilePanel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel page4Panel;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label categoriesLabel;
         private System.Windows.Forms.Panel adsPanel;
         private System.Windows.Forms.Panel adsListPanel;
         private System.Windows.Forms.ListBox adsListBox;
         private System.Windows.Forms.Label infoLabel;
         private System.Windows.Forms.PictureBox editDescriptionPictureBox;
         private System.Windows.Forms.PictureBox editTitlePictureBox;
-        private System.Windows.Forms.Panel recentAdPanel;
+        private System.Windows.Forms.Panel selectedAdPanel;
         private System.Windows.Forms.TextBox titleTextBox;
         private System.Windows.Forms.RichTextBox descriptionRichTextBox;
         private System.Windows.Forms.PictureBox adsPictureBox;
