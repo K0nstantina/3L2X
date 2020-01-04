@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -38,6 +34,7 @@ namespace UserApplication
             // Initialize profile fields (profile panel) and recentAds (home panel).
             updateFields();
             recentAds();
+            initializeView();
             // Add WPF control to host and set the event handlers.
             var userMenu = new aggeliesWpfLab.UserMenuIcons();
             elementHost1.Child = userMenu;
@@ -103,6 +100,16 @@ namespace UserApplication
         #endregion
 
         #region Categories Panel Methods
+
+        private void initializeView()
+        {
+            mainCategoriesComboBox.DataSource = this.adCategoryTableAdapter1.GetDTMainCategories();
+            mainCategoriesComboBox.DisplayMember = "catTitle";
+            mainCategoriesComboBox.ValueMember = "catID";
+            mainCategoriesComboBox.SelectedIndex = 0;
+        }
+
+
         /// <summary>
         /// Event Handler for selected index in mainCategoriesComboBox.
         /// </summary>
@@ -112,12 +119,10 @@ namespace UserApplication
         {
             childCategoriesComboBox.Enabled = true;
             view = mainCategoriesComboBox.SelectedItem as DataRowView;
-            int parentCategory = Int32.Parse(view["catID"].ToString());
-
-            childCategoriesComboBox.DataSource = this.adCategoryTableAdapter1.GetDTChildCategories(parentCategory);
+            childCategoriesComboBox.DataSource = this.adCategoryTableAdapter1.GetDTChildCategories(Int32.Parse(view["catID"].ToString()));
             childCategoriesComboBox.DisplayMember = "catTitle";
             childCategoriesComboBox.ValueMember = "catID";
-            updateCategoriesListBox(childCategoriesComboBox);
+            childCategoriesComboBox.SelectedIndex = 0;
         }
 
         /// <summary>
@@ -127,19 +132,21 @@ namespace UserApplication
         /// <param name="e"></param>
         private void childCategoriesComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            residenceComboBox.Visible = false;
+            gChildComboBox.Visible = false;
             view = childCategoriesComboBox.SelectedItem as DataRowView;
-            if (view["catID"].ToString() == "25")
+            int catID = Int32.Parse(view["catID"].ToString());
+            if (catID == 25 || catID == 23)
             {
-                residenceComboBox.Visible = true;
-                int parentCategory = Int32.Parse(view["catID"].ToString());
-                residenceComboBox.DataSource = this.adCategoryTableAdapter1.GetDTChildCategories(parentCategory);
-                residenceComboBox.DisplayMember = "catTitle";
-                residenceComboBox.ValueMember = "catID";
-                residenceComboBox_SelectedIndexChanged(sender, e);
+                gChildComboBox.Visible = true;
+                gChildComboBox.DataSource = this.adCategoryTableAdapter1.GetDTChildCategories(catID);
+                gChildComboBox.DisplayMember = "catTitle";
+                gChildComboBox.ValueMember = "catID";
+                gChildComboBox.SelectedIndex = 0;
             }
-            //updateCategoriesListBox(childCategoriesComboBox);
-            //categoriesListBox_SelectedIndexChanged(sender, e);
+            else
+            {
+                updateCategoriesListBox(childCategoriesComboBox);
+            }
         }
 
         /// <summary>
@@ -147,10 +154,9 @@ namespace UserApplication
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void residenceComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void gChildComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            updateCategoriesListBox(residenceComboBox);
-            categoriesListBox_SelectedIndexChanged(sender, e);
+            updateCategoriesListBox(gChildComboBox);
         }
 
         /// <summary>
@@ -160,10 +166,14 @@ namespace UserApplication
         /// <param name="e"></param>
         private void categoriesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            view = categoriesListBox.SelectedItem as DataRowView;
-            displayAd.titleTextBox.Text = view["adTitle"].ToString();
-            displayAd.descTextBox.Text = view["adDesc"].ToString();
-            displayAd.mediaPictureBox.ImageLocation = imagesLocation + view["media"].ToString();
+            if (categoriesListBox.DataSource!=null)
+            {
+                view = categoriesListBox.SelectedItem as DataRowView;
+                displayAd.titleTextBox.Text = view["adTitle"].ToString();
+                displayAd.descTextBox.Text = view["adDesc"].ToString();
+                displayAd.mediaPictureBox.ImageLocation = imagesLocation + view["media"].ToString();
+            }
+
         }
 
         /// <summary>
@@ -181,6 +191,11 @@ namespace UserApplication
             categoriesListBox.DataSource = bs;
             categoriesListBox.DisplayMember = "adTitle";
             categoriesListBox.ValueMember = "adID";
+
+            view = categoriesListBox.SelectedItem as DataRowView;
+            displayAd.titleTextBox.Text = view["adTitle"].ToString();
+            displayAd.descTextBox.Text = view["adDesc"].ToString();
+            displayAd.mediaPictureBox.ImageLocation = imagesLocation + view["media"].ToString();
         }
 
         #endregion
@@ -626,11 +641,6 @@ namespace UserApplication
         /// </summary>
         private void updateFields()
         {
-
-            mainCategoriesComboBox.DataSource = this.adCategoryTableAdapter1.GetDTMainCategories();
-            mainCategoriesComboBox.DisplayMember = "catTitle";
-            mainCategoriesComboBox.ValueMember = "catID";
-
             // Find current users Ads
             this.adsTableTableAdapter.AdsPerUser(this.aggeliesDBDataSet.AdsTable, userid);
             // Set images and userImages location.
