@@ -72,7 +72,7 @@
             this.page4Panel = new System.Windows.Forms.Panel();
             this.displayAd = new UserApplication.DisplayAds();
             this.categoriesListBox = new System.Windows.Forms.ListBox();
-            this.residenceComboBox = new System.Windows.Forms.ComboBox();
+            this.gChildComboBox = new System.Windows.Forms.ComboBox();
             this.childCategoriesComboBox = new System.Windows.Forms.ComboBox();
             this.mainCategoriesComboBox = new System.Windows.Forms.ComboBox();
             this.categoriesLabel = new System.Windows.Forms.Label();
@@ -524,7 +524,7 @@
             // 
             this.page4Panel.Controls.Add(this.displayAd);
             this.page4Panel.Controls.Add(this.categoriesListBox);
-            this.page4Panel.Controls.Add(this.residenceComboBox);
+            this.page4Panel.Controls.Add(this.gChildComboBox);
             this.page4Panel.Controls.Add(this.childCategoriesComboBox);
             this.page4Panel.Controls.Add(this.mainCategoriesComboBox);
             this.page4Panel.Controls.Add(this.categoriesLabel);
@@ -559,16 +559,16 @@
             this.categoriesListBox.TabIndex = 5;
             this.categoriesListBox.SelectedIndexChanged += new System.EventHandler(this.categoriesListBox_SelectedIndexChanged);
             // 
-            // residenceComboBox
+            // gChildComboBox
             // 
-            this.residenceComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.residenceComboBox.FormattingEnabled = true;
-            this.residenceComboBox.Location = new System.Drawing.Point(67, 137);
-            this.residenceComboBox.Name = "residenceComboBox";
-            this.residenceComboBox.Size = new System.Drawing.Size(180, 28);
-            this.residenceComboBox.TabIndex = 4;
-            this.residenceComboBox.Visible = false;
-            this.residenceComboBox.SelectedIndexChanged += new System.EventHandler(this.residenceComboBox_SelectedIndexChanged);
+            this.gChildComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gChildComboBox.FormattingEnabled = true;
+            this.gChildComboBox.Location = new System.Drawing.Point(67, 137);
+            this.gChildComboBox.Name = "gChildComboBox";
+            this.gChildComboBox.Size = new System.Drawing.Size(180, 28);
+            this.gChildComboBox.TabIndex = 4;
+            this.gChildComboBox.Visible = false;
+            this.gChildComboBox.SelectedIndexChanged += new System.EventHandler(this.gChildComboBox_SelectedIndexChanged);
             // 
             // childCategoriesComboBox
             // 
@@ -579,7 +579,6 @@
             this.childCategoriesComboBox.Name = "childCategoriesComboBox";
             this.childCategoriesComboBox.Size = new System.Drawing.Size(180, 28);
             this.childCategoriesComboBox.TabIndex = 3;
-            this.childCategoriesComboBox.Text = "Select Main Category";
             this.childCategoriesComboBox.SelectedIndexChanged += new System.EventHandler(this.childCategoriesComboBox_SelectedIndexChanged);
             // 
             // mainCategoriesComboBox
@@ -850,11 +849,11 @@
             // 
             // contentPanel
             // 
-            this.contentPanel.Controls.Add(this.adsPanel);
             this.contentPanel.Controls.Add(this.page4Panel);
             this.contentPanel.Controls.Add(this.profilePanel);
             this.contentPanel.Controls.Add(this.homePanel);
             this.contentPanel.Controls.Add(this.settingsPanel);
+            this.contentPanel.Controls.Add(this.adsPanel);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(0, 108);
             this.contentPanel.Name = "contentPanel";
@@ -988,7 +987,7 @@
         private System.Windows.Forms.ComboBox mainCategoriesComboBox;
         private AggeliesDBDataSetTableAdapters.AdCategoryTableAdapter adCategoryTableAdapter1;
         private System.Windows.Forms.ComboBox childCategoriesComboBox;
-        private System.Windows.Forms.ComboBox residenceComboBox;
+        private System.Windows.Forms.ComboBox gChildComboBox;
         private System.Windows.Forms.ListBox categoriesListBox;
         private DisplayAds displayAd;
     }
