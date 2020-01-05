@@ -39,8 +39,10 @@
             System.Windows.Forms.Label fNameLabel;
             System.Windows.Forms.Label useridlabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.topPanel = new System.Windows.Forms.Panel();
             this.Menu_panel = new System.Windows.Forms.Panel();
+            this.btn_settings = new System.Windows.Forms.Button();
+            this.btn_category = new System.Windows.Forms.Button();
             this.btn_email = new System.Windows.Forms.Button();
             this.btn_profile = new System.Windows.Forms.Button();
             this.btn_ads = new System.Windows.Forms.Button();
@@ -96,7 +98,6 @@
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.categoriesRightPanel = new System.Windows.Forms.Panel();
-            this.AdsCategoriesRightPanel = new System.Windows.Forms.Panel();
             this.PropertiesRightPanel = new System.Windows.Forms.Panel();
             this.propertyAddButton = new System.Windows.Forms.Button();
             this.parentCategoriesCMB = new System.Windows.Forms.ComboBox();
@@ -104,7 +105,9 @@
             this.propertyNameTBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.addingPropertyL = new System.Windows.Forms.Label();
+            this.AdsCategoriesRightPanel = new System.Windows.Forms.Panel();
             this.usersRightPanel = new System.Windows.Forms.Panel();
             this.uAgeTextBox = new System.Windows.Forms.TextBox();
             this.txt_phone = new System.Windows.Forms.TextBox();
@@ -135,12 +138,6 @@
             this.propertiesTbAdapter = new AdministratorPanel.AggeliesDBDataSetTableAdapters.PropertiesTbAdapter();
             this.adCategoryBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.parentCategoriesTableAdapter = new AdministratorPanel.AggeliesDBDataSetTableAdapters.ParentCategoriesTableAdapter();
-
-            this.label1 = new System.Windows.Forms.Label();
-
-            this.btn_category = new System.Windows.Forms.Button();
-            this.btn_settings = new System.Windows.Forms.Button();
-
             uAgeLabel = new System.Windows.Forms.Label();
             uPhoneLabel = new System.Windows.Forms.Label();
             uRecoverEmailLabel = new System.Windows.Forms.Label();
@@ -150,7 +147,7 @@
             lNameLabel = new System.Windows.Forms.Label();
             fNameLabel = new System.Windows.Forms.Label();
             useridlabel = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.topPanel.SuspendLayout();
             this.Menu_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Menu_navigator)).BeginInit();
             this.Menu_navigator.SuspendLayout();
@@ -270,14 +267,14 @@
             useridlabel.TabIndex = 54;
             useridlabel.Text = "Userr ID:";
             // 
-            // panel1
+            // topPanel
             // 
-            this.panel1.Controls.Add(this.Menu_panel);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1230, 71);
-            this.panel1.TabIndex = 0;
+            this.topPanel.Controls.Add(this.Menu_panel);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(1230, 71);
+            this.topPanel.TabIndex = 0;
             // 
             // Menu_panel
             // 
@@ -297,6 +294,27 @@
             this.Menu_panel.Name = "Menu_panel";
             this.Menu_panel.Size = new System.Drawing.Size(1230, 69);
             this.Menu_panel.TabIndex = 0;
+            // 
+            // btn_settings
+            // 
+            this.btn_settings.BackColor = System.Drawing.Color.White;
+            this.btn_settings.Image = ((System.Drawing.Image)(resources.GetObject("btn_settings.Image")));
+            this.btn_settings.Location = new System.Drawing.Point(339, 30);
+            this.btn_settings.Name = "btn_settings";
+            this.btn_settings.Size = new System.Drawing.Size(50, 36);
+            this.btn_settings.TabIndex = 32;
+            this.btn_settings.UseVisualStyleBackColor = false;
+            // 
+            // btn_category
+            // 
+            this.btn_category.BackColor = System.Drawing.Color.White;
+            this.btn_category.Image = ((System.Drawing.Image)(resources.GetObject("btn_category.Image")));
+            this.btn_category.Location = new System.Drawing.Point(171, 30);
+            this.btn_category.Name = "btn_category";
+            this.btn_category.Size = new System.Drawing.Size(50, 36);
+            this.btn_category.TabIndex = 31;
+            this.btn_category.UseVisualStyleBackColor = false;
+            this.btn_category.Click += new System.EventHandler(this.btn_category_Click);
             // 
             // btn_email
             // 
@@ -337,6 +355,7 @@
             this.btn_users.Size = new System.Drawing.Size(50, 36);
             this.btn_users.TabIndex = 27;
             this.btn_users.UseVisualStyleBackColor = false;
+            this.btn_users.Click += new System.EventHandler(this.btn_users_Click);
             // 
             // Statistics
             // 
@@ -514,8 +533,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.SandyBrown;
-            this.splitContainer2.Panel2.Controls.Add(this.categoriesMidPanel);
             this.splitContainer2.Panel2.Controls.Add(this.usersMidPanel);
+            this.splitContainer2.Panel2.Controls.Add(this.categoriesMidPanel);
             this.splitContainer2.Size = new System.Drawing.Size(829, 428);
             this.splitContainer2.SplitterDistance = 200;
             this.splitContainer2.TabIndex = 0;
@@ -636,6 +655,8 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.userIDDataGridViewTextBoxColumn,
@@ -766,8 +787,8 @@
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.RosyBrown;
-            this.splitContainer1.Panel2.Controls.Add(this.categoriesRightPanel);
             this.splitContainer1.Panel2.Controls.Add(this.usersRightPanel);
+            this.splitContainer1.Panel2.Controls.Add(this.categoriesRightPanel);
             this.splitContainer1.Size = new System.Drawing.Size(1230, 428);
             this.splitContainer1.SplitterDistance = 829;
             this.splitContainer1.TabIndex = 1;
@@ -782,14 +803,6 @@
             this.categoriesRightPanel.Name = "categoriesRightPanel";
             this.categoriesRightPanel.Size = new System.Drawing.Size(397, 428);
             this.categoriesRightPanel.TabIndex = 72;
-            // 
-            // AdsCategoriesRightPanel
-            // 
-            this.AdsCategoriesRightPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AdsCategoriesRightPanel.Location = new System.Drawing.Point(0, 0);
-            this.AdsCategoriesRightPanel.Name = "AdsCategoriesRightPanel";
-            this.AdsCategoriesRightPanel.Size = new System.Drawing.Size(397, 428);
-            this.AdsCategoriesRightPanel.TabIndex = 4;
             // 
             // PropertiesRightPanel
             // 
@@ -815,7 +828,7 @@
             this.propertyAddButton.TabIndex = 3;
             this.propertyAddButton.Text = "Add";
             this.propertyAddButton.UseVisualStyleBackColor = true;
-            this.propertyAddButton.Click += new System.EventHandler(this.propertyAddButton_Click);
+            this.propertyAddButton.Click += new System.EventHandler(this.PropertyAddButton_Click);
             // 
             // parentCategoriesCMB
             // 
@@ -858,6 +871,16 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Property Name";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 199);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(204, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Edit the selected property";
+            // 
             // addingPropertyL
             // 
             this.addingPropertyL.AutoSize = true;
@@ -867,6 +890,14 @@
             this.addingPropertyL.Size = new System.Drawing.Size(158, 19);
             this.addingPropertyL.TabIndex = 0;
             this.addingPropertyL.Text = "Add a new property";
+            // 
+            // AdsCategoriesRightPanel
+            // 
+            this.AdsCategoriesRightPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AdsCategoriesRightPanel.Location = new System.Drawing.Point(0, 0);
+            this.AdsCategoriesRightPanel.Name = "AdsCategoriesRightPanel";
+            this.AdsCategoriesRightPanel.Size = new System.Drawing.Size(397, 428);
+            this.AdsCategoriesRightPanel.TabIndex = 4;
             // 
             // usersRightPanel
             // 
@@ -1104,50 +1135,18 @@
             // 
             this.parentCategoriesTableAdapter.ClearBeforeFill = true;
             // 
-
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 199);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Edit the selected property";
-
-            // btn_category
-             
-            this.btn_category.BackColor = System.Drawing.Color.White;
-            this.btn_category.Image = ((System.Drawing.Image)(resources.GetObject("btn_category.Image")));
-            this.btn_category.Location = new System.Drawing.Point(171, 30);
-            this.btn_category.Name = "btn_category";
-            this.btn_category.Size = new System.Drawing.Size(50, 36);
-            this.btn_category.TabIndex = 31;
-            this.btn_category.UseVisualStyleBackColor = false;
-            // 
-            // btn_settings
-           
-            this.btn_settings.BackColor = System.Drawing.Color.White;
-            this.btn_settings.Image = ((System.Drawing.Image)(resources.GetObject("btn_settings.Image")));
-            this.btn_settings.Location = new System.Drawing.Point(339, 30);
-            this.btn_settings.Name = "btn_settings";
-            this.btn_settings.Size = new System.Drawing.Size(50, 36);
-            this.btn_settings.TabIndex = 32;
-            this.btn_settings.UseVisualStyleBackColor = false;
-
-            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1230, 499);
             this.Controls.Add(this.splitContainer1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.topPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminForm";
             this.Text = "Administrator Form";
             this.Load += new System.EventHandler(this.AdminForm_Load);
-            this.panel1.ResumeLayout(false);
+            this.topPanel.ResumeLayout(false);
             this.Menu_panel.ResumeLayout(false);
             this.Menu_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Menu_navigator)).EndInit();
@@ -1196,7 +1195,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Panel Menu_panel;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.SplitContainer splitContainer1;

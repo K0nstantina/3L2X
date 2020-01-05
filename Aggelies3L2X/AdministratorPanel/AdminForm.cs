@@ -56,5 +56,20 @@ namespace AdministratorPanel
             PropertiesRightPanel.Visible = true;
             PropertiesRightPanel.BringToFront();
         }
+
+        private void btn_category_Click(object sender, EventArgs e)
+        {
+            this.categoriesMidPanel.Visible = true;
+            this.categoriesMidPanel.BringToFront();
+
+        }
+
+        private void btn_users_Click(object sender, EventArgs e)
+        {
+            this.usersMidPanel.Visible = true;
+            this.usersMidPanel.BringToFront();
+            this.usersRightPanel.Visible = true;
+            this.usersRightPanel.BringToFront();
+        }
     }
 }
