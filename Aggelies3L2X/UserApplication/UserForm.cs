@@ -64,6 +64,7 @@ namespace UserApplication
         }
         private void CatBut_Click(object sender, System.Windows.RoutedEventArgs e)
         {
+            initializeView();
             panels[3].BringToFront();
         }
         private void ProfileBut_Click(object sender, System.Windows.RoutedEventArgs e)
