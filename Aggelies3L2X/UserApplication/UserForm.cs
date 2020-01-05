@@ -64,6 +64,7 @@ namespace UserApplication
         }
         private void CatBut_Click(object sender, System.Windows.RoutedEventArgs e)
         {
+            initializeView();
             panels[3].BringToFront();
         }
         private void ProfileBut_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -119,9 +120,11 @@ namespace UserApplication
         {
             childCategoriesComboBox.Enabled = true;
             view = mainCategoriesComboBox.SelectedItem as DataRowView;
+            categoriesLabel.Text = view["catTitle"].ToString();
+
             childCategoriesComboBox.DataSource = this.adCategoryTableAdapter1.GetDTChildCategories(Int32.Parse(view["catID"].ToString()));
             childCategoriesComboBox.DisplayMember = "catTitle";
-            childCategoriesComboBox.ValueMember = "catID";
+            childCategoriesComboBox.ValueMember = "catID";            
             childCategoriesComboBox.SelectedIndex = 0;
         }
 
@@ -135,7 +138,7 @@ namespace UserApplication
             gChildComboBox.Visible = false;
             view = childCategoriesComboBox.SelectedItem as DataRowView;
             int catID = Int32.Parse(view["catID"].ToString());
-            if (catID == 25 || catID == 23)
+            if (catID==23 || catID==25)
             {
                 gChildComboBox.Visible = true;
                 gChildComboBox.DataSource = this.adCategoryTableAdapter1.GetDTChildCategories(catID);
@@ -623,10 +626,10 @@ namespace UserApplication
         /// </summary>
         private void controlsList()
         {
-            panels.Add(homePanel); //0
-            panels.Add(settingsPanel); //1
-            panels.Add(adsPanel); //2
-            panels.Add(page4Panel);
+            panels.Add(homePanel); 
+            panels.Add(settingsPanel); 
+            panels.Add(adsPanel);
+            panels.Add(categoriesPanel);
             panels.Add(profilePanel);
 
             panels[0].BringToFront();

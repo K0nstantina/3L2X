@@ -69,7 +69,7 @@
             this.avatarUploadButton = new System.Windows.Forms.Button();
             this.avatarPictureBox = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.page4Panel = new System.Windows.Forms.Panel();
+            this.categoriesPanel = new System.Windows.Forms.Panel();
             this.displayAd = new UserApplication.DisplayAds();
             this.categoriesListBox = new System.Windows.Forms.ListBox();
             this.gChildComboBox = new System.Windows.Forms.ComboBox();
@@ -110,7 +110,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
-            this.page4Panel.SuspendLayout();
+            this.categoriesPanel.SuspendLayout();
             this.adsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.editPicturePictureBox)).BeginInit();
             this.adsListPanel.SuspendLayout();
@@ -520,19 +520,19 @@
             this.label5.Text = "profile";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // page4Panel
+            // categoriesPanel
             // 
-            this.page4Panel.Controls.Add(this.displayAd);
-            this.page4Panel.Controls.Add(this.categoriesListBox);
-            this.page4Panel.Controls.Add(this.gChildComboBox);
-            this.page4Panel.Controls.Add(this.childCategoriesComboBox);
-            this.page4Panel.Controls.Add(this.mainCategoriesComboBox);
-            this.page4Panel.Controls.Add(this.categoriesLabel);
-            this.page4Panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.page4Panel.Location = new System.Drawing.Point(0, 0);
-            this.page4Panel.Name = "page4Panel";
-            this.page4Panel.Size = new System.Drawing.Size(1064, 473);
-            this.page4Panel.TabIndex = 3;
+            this.categoriesPanel.Controls.Add(this.displayAd);
+            this.categoriesPanel.Controls.Add(this.categoriesListBox);
+            this.categoriesPanel.Controls.Add(this.gChildComboBox);
+            this.categoriesPanel.Controls.Add(this.childCategoriesComboBox);
+            this.categoriesPanel.Controls.Add(this.mainCategoriesComboBox);
+            this.categoriesPanel.Controls.Add(this.categoriesLabel);
+            this.categoriesPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.categoriesPanel.Location = new System.Drawing.Point(0, 0);
+            this.categoriesPanel.Name = "categoriesPanel";
+            this.categoriesPanel.Size = new System.Drawing.Size(1064, 473);
+            this.categoriesPanel.TabIndex = 3;
             // 
             // displayAd
             // 
@@ -849,7 +849,7 @@
             // 
             // contentPanel
             // 
-            this.contentPanel.Controls.Add(this.page4Panel);
+            this.contentPanel.Controls.Add(this.categoriesPanel);
             this.contentPanel.Controls.Add(this.profilePanel);
             this.contentPanel.Controls.Add(this.homePanel);
             this.contentPanel.Controls.Add(this.settingsPanel);
@@ -901,7 +901,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
-            this.page4Panel.ResumeLayout(false);
+            this.categoriesPanel.ResumeLayout(false);
             this.adsPanel.ResumeLayout(false);
             this.adsPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.editPicturePictureBox)).EndInit();
@@ -927,7 +927,7 @@
         private System.Windows.Forms.Panel homePanel;
         private System.Windows.Forms.Panel profilePanel;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel page4Panel;
+        private System.Windows.Forms.Panel categoriesPanel;
         private System.Windows.Forms.Label categoriesLabel;
         private System.Windows.Forms.Panel adsPanel;
         private System.Windows.Forms.Panel adsListPanel;

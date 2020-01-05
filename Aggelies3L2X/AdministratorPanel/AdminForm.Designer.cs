@@ -135,7 +135,12 @@
             this.propertiesTbAdapter = new AdministratorPanel.AggeliesDBDataSetTableAdapters.PropertiesTbAdapter();
             this.adCategoryBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.parentCategoriesTableAdapter = new AdministratorPanel.AggeliesDBDataSetTableAdapters.ParentCategoriesTableAdapter();
+<<<<<<< HEAD
             this.label1 = new System.Windows.Forms.Label();
+=======
+            this.btn_category = new System.Windows.Forms.Button();
+            this.btn_settings = new System.Windows.Forms.Button();
+>>>>>>> a5e4d73c6b98aec37bad223027b3c0e8361a0976
             uAgeLabel = new System.Windows.Forms.Label();
             uPhoneLabel = new System.Windows.Forms.Label();
             uRecoverEmailLabel = new System.Windows.Forms.Label();
@@ -277,6 +282,8 @@
             // Menu_panel
             // 
             this.Menu_panel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Menu_panel.Controls.Add(this.btn_settings);
+            this.Menu_panel.Controls.Add(this.btn_category);
             this.Menu_panel.Controls.Add(this.btn_email);
             this.Menu_panel.Controls.Add(this.btn_profile);
             this.Menu_panel.Controls.Add(this.btn_ads);
@@ -295,7 +302,7 @@
             // 
             this.btn_email.BackColor = System.Drawing.Color.White;
             this.btn_email.Image = ((System.Drawing.Image)(resources.GetObject("btn_email.Image")));
-            this.btn_email.Location = new System.Drawing.Point(227, 30);
+            this.btn_email.Location = new System.Drawing.Point(283, 30);
             this.btn_email.Name = "btn_email";
             this.btn_email.Size = new System.Drawing.Size(50, 36);
             this.btn_email.TabIndex = 30;
@@ -305,7 +312,7 @@
             // 
             this.btn_profile.BackColor = System.Drawing.Color.White;
             this.btn_profile.Image = ((System.Drawing.Image)(resources.GetObject("btn_profile.Image")));
-            this.btn_profile.Location = new System.Drawing.Point(171, 30);
+            this.btn_profile.Location = new System.Drawing.Point(227, 30);
             this.btn_profile.Name = "btn_profile";
             this.btn_profile.Size = new System.Drawing.Size(50, 36);
             this.btn_profile.TabIndex = 29;
@@ -954,10 +961,10 @@
             // txt_firstname
             // 
             this.txt_firstname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "fName", true));
-            this.txt_firstname.Font = new System.Drawing.Font("Arial Nova", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_firstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_firstname.Location = new System.Drawing.Point(76, 32);
             this.txt_firstname.Name = "txt_firstname";
-            this.txt_firstname.Size = new System.Drawing.Size(100, 21);
+            this.txt_firstname.Size = new System.Drawing.Size(100, 20);
             this.txt_firstname.TabIndex = 57;
             // 
             // txt_userid
@@ -1097,6 +1104,7 @@
             // 
             this.parentCategoriesTableAdapter.ClearBeforeFill = true;
             // 
+<<<<<<< HEAD
             // label1
             // 
             this.label1.AutoSize = true;
@@ -1106,6 +1114,27 @@
             this.label1.Size = new System.Drawing.Size(204, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Edit the selected property";
+=======
+            // btn_category
+            // 
+            this.btn_category.BackColor = System.Drawing.Color.White;
+            this.btn_category.Image = ((System.Drawing.Image)(resources.GetObject("btn_category.Image")));
+            this.btn_category.Location = new System.Drawing.Point(171, 30);
+            this.btn_category.Name = "btn_category";
+            this.btn_category.Size = new System.Drawing.Size(50, 36);
+            this.btn_category.TabIndex = 31;
+            this.btn_category.UseVisualStyleBackColor = false;
+            // 
+            // btn_settings
+            // 
+            this.btn_settings.BackColor = System.Drawing.Color.White;
+            this.btn_settings.Image = ((System.Drawing.Image)(resources.GetObject("btn_settings.Image")));
+            this.btn_settings.Location = new System.Drawing.Point(339, 30);
+            this.btn_settings.Name = "btn_settings";
+            this.btn_settings.Size = new System.Drawing.Size(50, 36);
+            this.btn_settings.TabIndex = 32;
+            this.btn_settings.UseVisualStyleBackColor = false;
+>>>>>>> a5e4d73c6b98aec37bad223027b3c0e8361a0976
             // 
             // AdminForm
             // 
@@ -1270,6 +1299,11 @@
         private AggeliesDBDataSetTableAdapters.ParentCategoriesTableAdapter parentCategoriesTableAdapter;
         private System.Windows.Forms.Button propertyAddButton;
         private System.Windows.Forms.Panel AdsCategoriesRightPanel;
+<<<<<<< HEAD
         private System.Windows.Forms.Label label1;
+=======
+        private System.Windows.Forms.Button btn_settings;
+        public System.Windows.Forms.Button btn_category;
+>>>>>>> a5e4d73c6b98aec37bad223027b3c0e8361a0976
     }
 }
