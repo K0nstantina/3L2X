@@ -96,6 +96,7 @@
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.categoriesRightPanel = new System.Windows.Forms.Panel();
+            this.AdsCategoriesRightPanel = new System.Windows.Forms.Panel();
             this.PropertiesRightPanel = new System.Windows.Forms.Panel();
             this.propertyAddButton = new System.Windows.Forms.Button();
             this.parentCategoriesCMB = new System.Windows.Forms.ComboBox();
@@ -134,7 +135,7 @@
             this.propertiesTbAdapter = new AdministratorPanel.AggeliesDBDataSetTableAdapters.PropertiesTbAdapter();
             this.adCategoryBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.parentCategoriesTableAdapter = new AdministratorPanel.AggeliesDBDataSetTableAdapters.ParentCategoriesTableAdapter();
-            this.AdsCategoriesRightPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             uAgeLabel = new System.Windows.Forms.Label();
             uPhoneLabel = new System.Windows.Forms.Label();
             uRecoverEmailLabel = new System.Windows.Forms.Label();
@@ -767,13 +768,21 @@
             // categoriesRightPanel
             // 
             this.categoriesRightPanel.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.categoriesRightPanel.Controls.Add(this.AdsCategoriesRightPanel);
             this.categoriesRightPanel.Controls.Add(this.PropertiesRightPanel);
+            this.categoriesRightPanel.Controls.Add(this.AdsCategoriesRightPanel);
             this.categoriesRightPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.categoriesRightPanel.Location = new System.Drawing.Point(0, 0);
             this.categoriesRightPanel.Name = "categoriesRightPanel";
             this.categoriesRightPanel.Size = new System.Drawing.Size(397, 428);
             this.categoriesRightPanel.TabIndex = 72;
+            // 
+            // AdsCategoriesRightPanel
+            // 
+            this.AdsCategoriesRightPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AdsCategoriesRightPanel.Location = new System.Drawing.Point(0, 0);
+            this.AdsCategoriesRightPanel.Name = "AdsCategoriesRightPanel";
+            this.AdsCategoriesRightPanel.Size = new System.Drawing.Size(397, 428);
+            this.AdsCategoriesRightPanel.TabIndex = 4;
             // 
             // PropertiesRightPanel
             // 
@@ -782,6 +791,7 @@
             this.PropertiesRightPanel.Controls.Add(this.propertyNameTBox);
             this.PropertiesRightPanel.Controls.Add(this.label3);
             this.PropertiesRightPanel.Controls.Add(this.label2);
+            this.PropertiesRightPanel.Controls.Add(this.label1);
             this.PropertiesRightPanel.Controls.Add(this.addingPropertyL);
             this.PropertiesRightPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PropertiesRightPanel.Location = new System.Drawing.Point(0, 0);
@@ -1087,13 +1097,15 @@
             // 
             this.parentCategoriesTableAdapter.ClearBeforeFill = true;
             // 
-            // AdsCategoriesRightPanel
+            // label1
             // 
-            this.AdsCategoriesRightPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AdsCategoriesRightPanel.Location = new System.Drawing.Point(0, 0);
-            this.AdsCategoriesRightPanel.Name = "AdsCategoriesRightPanel";
-            this.AdsCategoriesRightPanel.Size = new System.Drawing.Size(397, 428);
-            this.AdsCategoriesRightPanel.TabIndex = 4;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 199);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(204, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Edit the selected property";
             // 
             // AdminForm
             // 
@@ -1258,5 +1270,6 @@
         private AggeliesDBDataSetTableAdapters.ParentCategoriesTableAdapter parentCategoriesTableAdapter;
         private System.Windows.Forms.Button propertyAddButton;
         private System.Windows.Forms.Panel AdsCategoriesRightPanel;
+        private System.Windows.Forms.Label label1;
     }
 }
