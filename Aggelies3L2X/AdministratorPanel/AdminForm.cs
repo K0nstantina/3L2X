@@ -44,7 +44,7 @@ namespace AdministratorPanel
 
         }
 
-        private void propertyAddButton_Click(object sender, EventArgs e)
+        private void PropertyAddButton_Click(object sender, EventArgs e)
         {
             this.propertiesTbAdapter.InsertProperties(Int32.Parse(parentCategoriesCMB.SelectedValue.ToString()),propertyNameTBox.Text);
             this.propertiesTbAdapter.Fill(this.aggeliesDBDataSet.Properties);
