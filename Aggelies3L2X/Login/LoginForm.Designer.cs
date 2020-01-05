@@ -34,6 +34,7 @@
             this.usernameLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.guestButton = new System.Windows.Forms.Button();
             this.loginPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +51,7 @@
             // 
             // loginPanel
             // 
+            this.loginPanel.Controls.Add(this.guestButton);
             this.loginPanel.Controls.Add(this.passwordLabel);
             this.loginPanel.Controls.Add(this.usernameLabel);
             this.loginPanel.Controls.Add(this.usernameTextBox);
@@ -100,6 +102,17 @@
             this.passwordTextBox.TabIndex = 2;
             this.passwordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
             // 
+            // guestButton
+            // 
+            this.guestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guestButton.Location = new System.Drawing.Point(196, 204);
+            this.guestButton.Name = "guestButton";
+            this.guestButton.Size = new System.Drawing.Size(184, 37);
+            this.guestButton.TabIndex = 5;
+            this.guestButton.Text = "Guest Access";
+            this.guestButton.UseVisualStyleBackColor = true;
+            this.guestButton.Click += new System.EventHandler(this.guestButton_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,6 +140,7 @@
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.Button guestButton;
     }
 }
 

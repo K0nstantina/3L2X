@@ -28,23 +28,21 @@ namespace UserApplication
         public UserForm(int userID)
         {
             InitializeComponent();
+            userid = userID;
+            setImagesPath();
             // Add controls to list.
             controlsList();
-            userid = userID;
-            // Initialize profile fields (profile panel) and recentAds (home panel).
-            updateFields();
+            // Display recent ads.
             recentAds();
+            // Set categories to default filters.
             initializeView();
-            // Add WPF control to host and set the event handlers.
-            var userMenu = new aggeliesWpfLab.UserMenuIcons();
-            elementHost1.Child = userMenu;
-            elementHost1.Select();
-            userMenu.homeButton.Click += HomeButton_Click;
-            userMenu.settingsButton.Click += SettingBut_Click;
-            userMenu.adsButton.Click += AdsBut_Click;
-            userMenu.categoriesButton.Click += CatBut_Click;
-            userMenu.profileButton.Click += ProfileBut_Click;
-            userMenu.logoutButton.Click += LogoutBut_Click;
+            setWPFControl(userID);
+
+            if (userid!=9999)
+            {
+                // Initialize profile fields (profile panel).
+                updateFields();
+            }
         }
         #endregion
 
@@ -54,20 +52,34 @@ namespace UserApplication
             panels[0].BringToFront();
             recentAds();
         }
-        private void SettingBut_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void CatBut_Click(object sender, System.Windows.RoutedEventArgs e)
         {
+            initializeView();
             panels[1].BringToFront();
         }
         private void AdsBut_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            panels[2].BringToFront();
-        }
-        private void CatBut_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-            initializeView();
-            panels[3].BringToFront();
+            if (userid != 9999)
+            {
+                panels[2].BringToFront();
+            }
+            else
+            {
+                MessageBox.Show("Create an account to procced!!");
+            }
         }
         private void ProfileBut_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (userid != 9999)
+            {
+                panels[3].BringToFront();
+            }
+            else
+            {
+                MessageBox.Show("Create an account to procced!!");
+            }
+        }
+        private void SettingBut_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             panels[4].BringToFront();
         }
@@ -608,7 +620,6 @@ namespace UserApplication
         {
             adsListBox_SelectedIndexChanged(adsListBox, e);
             categoriesListBox_SelectedIndexChanged(categoriesListBox,e);
-            updateFields();
         }
 
         /// <summary>
@@ -627,10 +638,11 @@ namespace UserApplication
         private void controlsList()
         {
             panels.Add(homePanel); 
-            panels.Add(settingsPanel); 
+            panels.Add(categoriesPanel); 
             panels.Add(adsPanel);
-            panels.Add(categoriesPanel);
             panels.Add(profilePanel);
+            panels.Add(settingsPanel);
+            
 
             panels[0].BringToFront();
 
@@ -646,15 +658,7 @@ namespace UserApplication
         {
             // Find current users Ads
             this.adsTableTableAdapter.AdsPerUser(this.aggeliesDBDataSet.AdsTable, userid);
-            // Set images and userImages location.
-            string str = AppDomain.CurrentDomain.BaseDirectory;
-            str = str.Remove(str.Length - 16);
-            str += @"UserApplication\Resources\images\";
-            imagesLocation = str;
-            str = AppDomain.CurrentDomain.BaseDirectory;
-            str = str.Remove(str.Length - 16);
-            str += @"UserApplication\Resources\userImages\";
-            userImagesLocation = str;
+
             // Set the avatarPictureBox image location.
             try
             {
@@ -668,6 +672,36 @@ namespace UserApplication
             uEmailTextBox.Text = usersTableAdapter1.SelectUserEmailQuery(userid).ToString();
             uPasswordTextBox.Text = usersTableAdapter1.SelectUserPasswordQuery(userid).ToString();
         }
+        private void setImagesPath()
+        {
+            // Set images and userImages location.
+            string str = AppDomain.CurrentDomain.BaseDirectory;
+            str = str.Remove(str.Length - 16);
+            str += @"UserApplication\Resources\images\";
+            imagesLocation = str;
+            str = AppDomain.CurrentDomain.BaseDirectory;
+            str = str.Remove(str.Length - 16);
+            str += @"UserApplication\Resources\userImages\";
+            userImagesLocation = str;
+        }
+        private void setWPFControl(int uid)
+        {
+            // Add WPF control to host and set the event handlers.
+            var userMenu = new aggeliesWpfLab.UserMenuIcons();
+            elementHost1.Child = userMenu;
+            elementHost1.Select();
+            userMenu.homeButton.Click += HomeButton_Click;
+            userMenu.categoriesButton.Click += CatBut_Click;
+            userMenu.logoutButton.Click += LogoutBut_Click;
+            userMenu.settingsButton.Click += SettingBut_Click;
+
+            if (uid!=9999)
+            {
+                userMenu.adsButton.Click += AdsBut_Click;
+                userMenu.profileButton.Click += ProfileBut_Click;
+            }
+        }
+
         #endregion
 
         #endregion

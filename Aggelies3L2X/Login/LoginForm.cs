@@ -59,5 +59,12 @@ namespace Login
                 userFormButton_Click(sender, e);
             }
         }
+
+        private void guestButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UserApplication.UserForm userForm = new UserApplication.UserForm(9999);
+            userForm.Show();
+        }
     }
 }
