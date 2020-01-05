@@ -5149,8 +5149,8 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("catParent", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "catParent", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT        catTitle, catID\r\nFROM            AdCategory\r\nWHERE        (catParen" +
-                "t = 0)";
+            this._commandCollection[2].CommandText = "SELECT        catTitle, catID, catParent\r\nFROM            AdCategory\r\nWHERE      " +
+                "  (catParent = 0)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[3].Connection = this.Connection;
