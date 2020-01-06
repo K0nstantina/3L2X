@@ -118,69 +118,72 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="addingPropertyLabel" xml:space="preserve">
-    <value>Προσθήκη καινούργιας ιδιοκτησίας</value>
+    <value>Add a new property</value>
   </data>
   <data name="btn_addnew" xml:space="preserve">
-    <value>Προσθήκη</value>
+    <value>Add New</value>
   </data>
   <data name="btn_delete" xml:space="preserve">
-    <value>Διαγραφή</value>
+    <value>Delete</value>
+  </data>
+  <data name="btn_lang" xml:space="preserve">
+    <value>Greek</value>
   </data>
   <data name="btn_next" xml:space="preserve">
-    <value>Επόμενο</value>
+    <value>Next</value>
   </data>
   <data name="btn_previous" xml:space="preserve">
-    <value>Προηγούμενο</value>
+    <value>Previous</value>
   </data>
   <data name="btn_save" xml:space="preserve">
-    <value>Αποθήκευση</value>
+    <value>Save</value>
   </data>
   <data name="btn_update" xml:space="preserve">
-    <value>Εκσυγχρόνιση</value>
+    <value>Update</value>
   </data>
   <data name="checkbox_blacklist" xml:space="preserve">
-    <value>Μαυρή Λίστα</value>
+    <value>Black List: </value>
   </data>
   <data name="editpropertyLabel" xml:space="preserve">
-    <value>Επεξεργασία επιλεγμένης ιδιοκτησίας</value>
+    <value>Edit the selected property</value>
   </data>
   <data name="fNameLabel" xml:space="preserve">
-    <value>Όνομα:</value>
+    <value>First Name:</value>
   </data>
   <data name="lNameLabel" xml:space="preserve">
-    <value>Επίθετο:</value>
+    <value>Last Name:</value>
   </data>
   <data name="propertyAddButton" xml:space="preserve">
-    <value>Προσθήκη</value>
+    <value>Add</value>
   </data>
   <data name="propertynameLabel" xml:space="preserve">
-    <value>Όνομα ιδιοκτησίας</value>
+    <value>Property Name</value>
   </data>
   <data name="searchlabel" xml:space="preserve">
-    <value>Αναζήτηση</value>
+    <value>Search</value>
   </data>
   <data name="uAgeLabel" xml:space="preserve">
-    <value>Ηλικία:</value>
+    <value>Age:</value>
   </data>
   <data name="uEmailLabel" xml:space="preserve">
     <value>Email:</value>
   </data>
   <data name="uNameLabel" xml:space="preserve">
-    <value>Όνομα χρήστη:</value>
+    <value>Username:</value>
   </data>
   <data name="uPasswordLabel" xml:space="preserve">
-    <value>Κωδικός:</value>
+    <value>Password:</value>
   </data>
   <data name="uPhoneLabel" xml:space="preserve">
-    <value>Τηλέφωνο:</value>
+    <value>Phone:</value>
   </data>
   <data name="uRecoverEmailLabel" xml:space="preserve">
-    <value>Ανάκτηση Email:</value>
+    <value>Recover email:</value>
   </data>
   <data name="useridlabel" xml:space="preserve">
-    <value>Κωδικός χρήστη:</value>
+    <value>User ID:</value>
   </data>
   <data name="whichcatLabel" xml:space="preserve">
-    <value>Σε ποια κατηγορία θέλετε να αναθέσετε αυτή την ιδιοκτησία;</value>
+    <value>Which category do you want to assign this property?</value>
   </data>
 </root>

@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+using System.Threading;
+
 
 namespace AdministratorPanel
 {
@@ -40,7 +43,11 @@ namespace AdministratorPanel
             // TODO: This line of code loads data into the 'aggeliesDBDataSet.Users' table. You can move, or remove it, as needed.
             this.usersTableAdapter1.Fill(this.aggeliesDBDataSet.Users);
             // TODO: This line of code loads data into the 'aggeliesDBDataSet1.Users' table. You can move, or remove it, as needed.
+
+            lang_combobox.Items.Add("US");
+            lang_combobox.Items.Add("GR");
            
+            lang_combobox.SelectedIndex = 0;
 
         }
 
@@ -75,6 +82,29 @@ namespace AdministratorPanel
         private void btn_lang_Click(object sender, EventArgs e)
         {
            
+
+        }
+
+
+        private void ChangeLanguage(string lang)
+        {
+            foreach (Control c in this.Controls)
+            {
+                ComponentResourceManager resources = new ComponentResourceManager(typeof(AdminForm));
+                resources.ApplyResources(c, c.Name, new CultureInfo(lang));
+            }
+        }
+
+        private void lang_combobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lang_combobox.SelectedItem.ToString() == "US")
+            {
+                ChangeLanguage("us");
+            }
+
+            else if ((lang_combobox.SelectedItem.ToString() == "GR"))            {
+                ChangeLanguage("gr");
+            }
         }
     }
 }

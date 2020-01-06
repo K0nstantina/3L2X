@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label uAgeLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             System.Windows.Forms.Label uPhoneLabel;
             System.Windows.Forms.Label uRecoverEmailLabel;
             System.Windows.Forms.Label uEmailLabel;
@@ -38,7 +39,6 @@
             System.Windows.Forms.Label lNameLabel;
             System.Windows.Forms.Label fNameLabel;
             System.Windows.Forms.Label useridlabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.topPanel = new System.Windows.Forms.Panel();
             this.Menu_panel = new System.Windows.Forms.Panel();
             this.btn_settings = new System.Windows.Forms.Button();
@@ -49,7 +49,7 @@
             this.btn_users = new System.Windows.Forms.Button();
             this.Statistics = new System.Windows.Forms.Button();
             this.searchlabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_search = new System.Windows.Forms.TextBox();
             this.Menu_navigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -119,9 +119,9 @@
             this.parentCategoriesCMB = new System.Windows.Forms.ComboBox();
             this.parentCategoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.propertyNameTBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.whichcatLabel = new System.Windows.Forms.Label();
+            this.properynameLabel = new System.Windows.Forms.Label();
+            this.editpropertyLabel = new System.Windows.Forms.Label();
             this.addingPropertyL = new System.Windows.Forms.Label();
             this.AdsCategoriesRightPanel = new System.Windows.Forms.Panel();
             this.adsTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -139,7 +139,7 @@
             this.adCategoryBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.parentCategoriesTableAdapter = new AdministratorPanel.AggeliesDBDataSetTableAdapters.ParentCategoriesTableAdapter();
             this.checkbox_blacklist = new System.Windows.Forms.CheckBox();
-            this.btn_lang = new System.Windows.Forms.Button();
+            this.lang_combobox = new System.Windows.Forms.ComboBox();
             uAgeLabel = new System.Windows.Forms.Label();
             uPhoneLabel = new System.Windows.Forms.Label();
             uRecoverEmailLabel = new System.Windows.Forms.Label();
@@ -190,98 +190,59 @@
             // 
             // uAgeLabel
             // 
-            uAgeLabel.AutoSize = true;
-            uAgeLabel.Location = new System.Drawing.Point(36, 145);
+            resources.ApplyResources(uAgeLabel, "uAgeLabel");
             uAgeLabel.Name = "uAgeLabel";
-            uAgeLabel.Size = new System.Drawing.Size(30, 12);
-            uAgeLabel.TabIndex = 70;
-            uAgeLabel.Text = "Age:";
             // 
             // uPhoneLabel
             // 
-            uPhoneLabel.AutoSize = true;
-            uPhoneLabel.Location = new System.Drawing.Point(24, 119);
+            resources.ApplyResources(uPhoneLabel, "uPhoneLabel");
             uPhoneLabel.Name = "uPhoneLabel";
-            uPhoneLabel.Size = new System.Drawing.Size(43, 12);
-            uPhoneLabel.TabIndex = 68;
-            uPhoneLabel.Text = "Phone:";
             // 
             // uRecoverEmailLabel
             // 
-            uRecoverEmailLabel.AutoSize = true;
-            uRecoverEmailLabel.Location = new System.Drawing.Point(176, 65);
+            resources.ApplyResources(uRecoverEmailLabel, "uRecoverEmailLabel");
             uRecoverEmailLabel.Name = "uRecoverEmailLabel";
-            uRecoverEmailLabel.Size = new System.Drawing.Size(88, 12);
-            uRecoverEmailLabel.TabIndex = 66;
-            uRecoverEmailLabel.Text = "Recover Email:";
             // 
             // uEmailLabel
             // 
-            uEmailLabel.AutoSize = true;
-            uEmailLabel.Location = new System.Drawing.Point(31, 91);
+            resources.ApplyResources(uEmailLabel, "uEmailLabel");
             uEmailLabel.Name = "uEmailLabel";
-            uEmailLabel.Size = new System.Drawing.Size(38, 12);
-            uEmailLabel.TabIndex = 63;
-            uEmailLabel.Text = "Email:";
             // 
             // uPasswordLabel
             // 
-            uPasswordLabel.AutoSize = true;
-            uPasswordLabel.Location = new System.Drawing.Point(202, 39);
+            resources.ApplyResources(uPasswordLabel, "uPasswordLabel");
             uPasswordLabel.Name = "uPasswordLabel";
-            uPasswordLabel.Size = new System.Drawing.Size(62, 12);
-            uPasswordLabel.TabIndex = 62;
-            uPasswordLabel.Text = "Password:";
             // 
             // uNameLabel
             // 
-            uNameLabel.AutoSize = true;
-            uNameLabel.Location = new System.Drawing.Point(198, 13);
+            resources.ApplyResources(uNameLabel, "uNameLabel");
             uNameLabel.Name = "uNameLabel";
-            uNameLabel.Size = new System.Drawing.Size(65, 12);
-            uNameLabel.TabIndex = 60;
-            uNameLabel.Text = "Username:";
             // 
             // lNameLabel
             // 
-            lNameLabel.AutoSize = true;
-            lNameLabel.Location = new System.Drawing.Point(5, 65);
+            resources.ApplyResources(lNameLabel, "lNameLabel");
             lNameLabel.Name = "lNameLabel";
-            lNameLabel.Size = new System.Drawing.Size(67, 12);
-            lNameLabel.TabIndex = 58;
-            lNameLabel.Text = "Last Name:";
             // 
             // fNameLabel
             // 
-            fNameLabel.AutoSize = true;
-            fNameLabel.Location = new System.Drawing.Point(6, 39);
+            resources.ApplyResources(fNameLabel, "fNameLabel");
             fNameLabel.Name = "fNameLabel";
-            fNameLabel.Size = new System.Drawing.Size(68, 12);
-            fNameLabel.TabIndex = 56;
-            fNameLabel.Text = "First Name:";
             // 
             // useridlabel
             // 
-            useridlabel.AutoSize = true;
-            useridlabel.Location = new System.Drawing.Point(17, 13);
+            resources.ApplyResources(useridlabel, "useridlabel");
             useridlabel.Name = "useridlabel";
-            useridlabel.Size = new System.Drawing.Size(53, 12);
-            useridlabel.TabIndex = 54;
-            useridlabel.Text = "Userr ID:";
             // 
             // topPanel
             // 
             this.topPanel.Controls.Add(this.Menu_panel);
-            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.topPanel, "topPanel");
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1230, 71);
-            this.topPanel.TabIndex = 0;
             // 
             // Menu_panel
             // 
             this.Menu_panel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Menu_panel.Controls.Add(this.btn_lang);
+            this.Menu_panel.Controls.Add(this.lang_combobox);
             this.Menu_panel.Controls.Add(this.btn_settings);
             this.Menu_panel.Controls.Add(this.btn_category);
             this.Menu_panel.Controls.Add(this.btn_email);
@@ -290,103 +251,71 @@
             this.Menu_panel.Controls.Add(this.btn_users);
             this.Menu_panel.Controls.Add(this.Statistics);
             this.Menu_panel.Controls.Add(this.searchlabel);
-            this.Menu_panel.Controls.Add(this.textBox1);
+            this.Menu_panel.Controls.Add(this.txt_search);
             this.Menu_panel.Controls.Add(this.Menu_navigator);
-            this.Menu_panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Menu_panel.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.Menu_panel, "Menu_panel");
             this.Menu_panel.Name = "Menu_panel";
-            this.Menu_panel.Size = new System.Drawing.Size(1230, 69);
-            this.Menu_panel.TabIndex = 0;
             // 
             // btn_settings
             // 
             this.btn_settings.BackColor = System.Drawing.Color.White;
-            this.btn_settings.Image = ((System.Drawing.Image)(resources.GetObject("btn_settings.Image")));
-            this.btn_settings.Location = new System.Drawing.Point(339, 30);
+            resources.ApplyResources(this.btn_settings, "btn_settings");
             this.btn_settings.Name = "btn_settings";
-            this.btn_settings.Size = new System.Drawing.Size(50, 36);
-            this.btn_settings.TabIndex = 32;
             this.btn_settings.UseVisualStyleBackColor = false;
             // 
             // btn_category
             // 
             this.btn_category.BackColor = System.Drawing.Color.White;
-            this.btn_category.Image = ((System.Drawing.Image)(resources.GetObject("btn_category.Image")));
-            this.btn_category.Location = new System.Drawing.Point(171, 30);
+            resources.ApplyResources(this.btn_category, "btn_category");
             this.btn_category.Name = "btn_category";
-            this.btn_category.Size = new System.Drawing.Size(50, 36);
-            this.btn_category.TabIndex = 31;
             this.btn_category.UseVisualStyleBackColor = false;
             this.btn_category.Click += new System.EventHandler(this.btn_category_Click);
             // 
             // btn_email
             // 
             this.btn_email.BackColor = System.Drawing.Color.White;
-            this.btn_email.Image = ((System.Drawing.Image)(resources.GetObject("btn_email.Image")));
-            this.btn_email.Location = new System.Drawing.Point(283, 30);
+            resources.ApplyResources(this.btn_email, "btn_email");
             this.btn_email.Name = "btn_email";
-            this.btn_email.Size = new System.Drawing.Size(50, 36);
-            this.btn_email.TabIndex = 30;
             this.btn_email.UseVisualStyleBackColor = false;
             // 
             // btn_profile
             // 
             this.btn_profile.BackColor = System.Drawing.Color.White;
-            this.btn_profile.Image = ((System.Drawing.Image)(resources.GetObject("btn_profile.Image")));
-            this.btn_profile.Location = new System.Drawing.Point(227, 30);
+            resources.ApplyResources(this.btn_profile, "btn_profile");
             this.btn_profile.Name = "btn_profile";
-            this.btn_profile.Size = new System.Drawing.Size(50, 36);
-            this.btn_profile.TabIndex = 29;
             this.btn_profile.UseVisualStyleBackColor = false;
             // 
             // btn_ads
             // 
             this.btn_ads.BackColor = System.Drawing.Color.White;
-            this.btn_ads.Image = ((System.Drawing.Image)(resources.GetObject("btn_ads.Image")));
-            this.btn_ads.Location = new System.Drawing.Point(115, 30);
+            resources.ApplyResources(this.btn_ads, "btn_ads");
             this.btn_ads.Name = "btn_ads";
-            this.btn_ads.Size = new System.Drawing.Size(50, 36);
-            this.btn_ads.TabIndex = 28;
             this.btn_ads.UseVisualStyleBackColor = false;
             // 
             // btn_users
             // 
             this.btn_users.BackColor = System.Drawing.Color.White;
-            this.btn_users.Image = ((System.Drawing.Image)(resources.GetObject("btn_users.Image")));
-            this.btn_users.Location = new System.Drawing.Point(59, 30);
+            resources.ApplyResources(this.btn_users, "btn_users");
             this.btn_users.Name = "btn_users";
-            this.btn_users.Size = new System.Drawing.Size(50, 36);
-            this.btn_users.TabIndex = 27;
             this.btn_users.UseVisualStyleBackColor = false;
             this.btn_users.Click += new System.EventHandler(this.btn_users_Click);
             // 
             // Statistics
             // 
             this.Statistics.BackColor = System.Drawing.Color.White;
-            this.Statistics.Image = ((System.Drawing.Image)(resources.GetObject("Statistics.Image")));
-            this.Statistics.Location = new System.Drawing.Point(3, 30);
+            resources.ApplyResources(this.Statistics, "Statistics");
             this.Statistics.Name = "Statistics";
-            this.Statistics.Size = new System.Drawing.Size(50, 36);
-            this.Statistics.TabIndex = 26;
             this.Statistics.UseVisualStyleBackColor = false;
             // 
             // searchlabel
             // 
-            this.searchlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchlabel.AutoSize = true;
-            this.searchlabel.Location = new System.Drawing.Point(830, 42);
+            resources.ApplyResources(this.searchlabel, "searchlabel");
             this.searchlabel.Name = "searchlabel";
-            this.searchlabel.Size = new System.Drawing.Size(47, 13);
-            this.searchlabel.TabIndex = 24;
-            this.searchlabel.Text = "Search :";
             // 
-            // textBox1
+            // txt_search
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(883, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(145, 20);
-            this.textBox1.TabIndex = 25;
+            resources.ApplyResources(this.txt_search, "txt_search");
+            this.txt_search.Name = "txt_search";
             // 
             // Menu_navigator
             // 
@@ -407,125 +336,90 @@
             this.bindingNavigatorDeleteItem,
             this.toolStripButton1,
             this.toolStripRefresh});
-            this.Menu_navigator.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.Menu_navigator, "Menu_navigator");
             this.Menu_navigator.MoveFirstItem = null;
             this.Menu_navigator.MoveLastItem = null;
             this.Menu_navigator.MoveNextItem = null;
             this.Menu_navigator.MovePreviousItem = null;
             this.Menu_navigator.Name = "Menu_navigator";
             this.Menu_navigator.PositionItem = null;
-            this.Menu_navigator.Size = new System.Drawing.Size(1230, 25);
-            this.Menu_navigator.TabIndex = 0;
-            this.Menu_navigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            resources.ApplyResources(this.bindingNavigatorCountItem, "bindingNavigatorCountItem");
             // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            resources.ApplyResources(this.bindingNavigatorMoveFirstItem, "bindingNavigatorMoveFirstItem");
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
             // 
             this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            resources.ApplyResources(this.bindingNavigatorMovePreviousItem, "bindingNavigatorMovePreviousItem");
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            resources.ApplyResources(this.bindingNavigatorSeparator, "bindingNavigatorSeparator");
             // 
             // bindingNavigatorPositionItem
             // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            resources.ApplyResources(this.bindingNavigatorPositionItem, "bindingNavigatorPositionItem");
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            resources.ApplyResources(this.bindingNavigatorSeparator1, "bindingNavigatorSeparator1");
             // 
             // bindingNavigatorMoveNextItem
             // 
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            resources.ApplyResources(this.bindingNavigatorMoveNextItem, "bindingNavigatorMoveNextItem");
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
             // 
             this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            resources.ApplyResources(this.bindingNavigatorMoveLastItem, "bindingNavigatorMoveLastItem");
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            resources.ApplyResources(this.bindingNavigatorSeparator2, "bindingNavigatorSeparator2");
             // 
             // bindingNavigatorAddNewItem
             // 
             this.bindingNavigatorAddNewItem.ForeColor = System.Drawing.Color.Red;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            resources.ApplyResources(this.bindingNavigatorAddNewItem, "bindingNavigatorAddNewItem");
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(74, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorDeleteItem
             // 
             this.bindingNavigatorDeleteItem.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            resources.ApplyResources(this.bindingNavigatorDeleteItem, "bindingNavigatorDeleteItem");
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(60, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // toolStripButton1
             // 
             this.toolStripButton1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(98, 22);
-            this.toolStripButton1.Text = "Save | Update";
             // 
             // toolStripRefresh
             // 
             this.toolStripRefresh.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.toolStripRefresh.Image = ((System.Drawing.Image)(resources.GetObject("toolStripRefresh.Image")));
-            this.toolStripRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            resources.ApplyResources(this.toolStripRefresh, "toolStripRefresh");
             this.toolStripRefresh.Name = "toolStripRefresh";
-            this.toolStripRefresh.Size = new System.Drawing.Size(66, 22);
-            this.toolStripRefresh.Text = "Refresh";
             // 
             // splitContainer2
             // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.splitContainer2, "splitContainer2");
             this.splitContainer2.Name = "splitContainer2";
             // 
             // splitContainer2.Panel1
@@ -536,38 +430,27 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.SandyBrown;
-            this.splitContainer2.Panel2.Controls.Add(this.usersMidPanel);
             this.splitContainer2.Panel2.Controls.Add(this.categoriesMidPanel);
-            this.splitContainer2.Size = new System.Drawing.Size(829, 428);
-            this.splitContainer2.SplitterDistance = 200;
-            this.splitContainer2.TabIndex = 0;
+            this.splitContainer2.Panel2.Controls.Add(this.usersMidPanel);
             // 
             // treeview_panel
             // 
             this.treeview_panel.Controls.Add(this.treeviewdatabase);
-            this.treeview_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeview_panel.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.treeview_panel, "treeview_panel");
             this.treeview_panel.Name = "treeview_panel";
-            this.treeview_panel.Size = new System.Drawing.Size(200, 428);
-            this.treeview_panel.TabIndex = 0;
             // 
             // treeviewdatabase
             // 
-            this.treeviewdatabase.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeviewdatabase.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.treeviewdatabase, "treeviewdatabase");
             this.treeviewdatabase.Name = "treeviewdatabase";
-            this.treeviewdatabase.Size = new System.Drawing.Size(200, 428);
-            this.treeviewdatabase.TabIndex = 0;
             // 
             // usersMidPanel
             // 
             this.usersMidPanel.BackColor = System.Drawing.SystemColors.Control;
             this.usersMidPanel.Controls.Add(this.dataGridView1);
             this.usersMidPanel.Controls.Add(this.statusStrip);
-            this.usersMidPanel.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.usersMidPanel, "usersMidPanel");
             this.usersMidPanel.Name = "usersMidPanel";
-            this.usersMidPanel.Size = new System.Drawing.Size(625, 428);
-            this.usersMidPanel.TabIndex = 0;
             // 
             // dataGridView1
             // 
@@ -587,70 +470,67 @@
             this.uRecoverEmailDataGridViewTextBoxColumn,
             this.uPhoneDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.usersBindingSource1;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(625, 406);
-            this.dataGridView1.TabIndex = 2;
             // 
             // userIDDataGridViewTextBoxColumn
             // 
             this.userIDDataGridViewTextBoxColumn.DataPropertyName = "userID";
-            this.userIDDataGridViewTextBoxColumn.HeaderText = "userID";
+            resources.ApplyResources(this.userIDDataGridViewTextBoxColumn, "userIDDataGridViewTextBoxColumn");
             this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
             // 
             // fNameDataGridViewTextBoxColumn
             // 
             this.fNameDataGridViewTextBoxColumn.DataPropertyName = "fName";
-            this.fNameDataGridViewTextBoxColumn.HeaderText = "fName";
+            resources.ApplyResources(this.fNameDataGridViewTextBoxColumn, "fNameDataGridViewTextBoxColumn");
             this.fNameDataGridViewTextBoxColumn.Name = "fNameDataGridViewTextBoxColumn";
             // 
             // lNameDataGridViewTextBoxColumn
             // 
             this.lNameDataGridViewTextBoxColumn.DataPropertyName = "lName";
-            this.lNameDataGridViewTextBoxColumn.HeaderText = "lName";
+            resources.ApplyResources(this.lNameDataGridViewTextBoxColumn, "lNameDataGridViewTextBoxColumn");
             this.lNameDataGridViewTextBoxColumn.Name = "lNameDataGridViewTextBoxColumn";
             // 
             // uNameDataGridViewTextBoxColumn
             // 
             this.uNameDataGridViewTextBoxColumn.DataPropertyName = "uName";
-            this.uNameDataGridViewTextBoxColumn.HeaderText = "uName";
+            resources.ApplyResources(this.uNameDataGridViewTextBoxColumn, "uNameDataGridViewTextBoxColumn");
             this.uNameDataGridViewTextBoxColumn.Name = "uNameDataGridViewTextBoxColumn";
             // 
             // uPasswordDataGridViewTextBoxColumn
             // 
             this.uPasswordDataGridViewTextBoxColumn.DataPropertyName = "uPassword";
-            this.uPasswordDataGridViewTextBoxColumn.HeaderText = "uPassword";
+            resources.ApplyResources(this.uPasswordDataGridViewTextBoxColumn, "uPasswordDataGridViewTextBoxColumn");
             this.uPasswordDataGridViewTextBoxColumn.Name = "uPasswordDataGridViewTextBoxColumn";
             // 
             // uEmailDataGridViewTextBoxColumn
             // 
             this.uEmailDataGridViewTextBoxColumn.DataPropertyName = "uEmail";
-            this.uEmailDataGridViewTextBoxColumn.HeaderText = "uEmail";
+            resources.ApplyResources(this.uEmailDataGridViewTextBoxColumn, "uEmailDataGridViewTextBoxColumn");
             this.uEmailDataGridViewTextBoxColumn.Name = "uEmailDataGridViewTextBoxColumn";
             // 
             // uCatDataGridViewTextBoxColumn
             // 
             this.uCatDataGridViewTextBoxColumn.DataPropertyName = "uCat";
-            this.uCatDataGridViewTextBoxColumn.HeaderText = "uCat";
+            resources.ApplyResources(this.uCatDataGridViewTextBoxColumn, "uCatDataGridViewTextBoxColumn");
             this.uCatDataGridViewTextBoxColumn.Name = "uCatDataGridViewTextBoxColumn";
             // 
             // uAgeDataGridViewTextBoxColumn
             // 
             this.uAgeDataGridViewTextBoxColumn.DataPropertyName = "uAge";
-            this.uAgeDataGridViewTextBoxColumn.HeaderText = "uAge";
+            resources.ApplyResources(this.uAgeDataGridViewTextBoxColumn, "uAgeDataGridViewTextBoxColumn");
             this.uAgeDataGridViewTextBoxColumn.Name = "uAgeDataGridViewTextBoxColumn";
             // 
             // uRecoverEmailDataGridViewTextBoxColumn
             // 
             this.uRecoverEmailDataGridViewTextBoxColumn.DataPropertyName = "uRecoverEmail";
-            this.uRecoverEmailDataGridViewTextBoxColumn.HeaderText = "uRecoverEmail";
+            resources.ApplyResources(this.uRecoverEmailDataGridViewTextBoxColumn, "uRecoverEmailDataGridViewTextBoxColumn");
             this.uRecoverEmailDataGridViewTextBoxColumn.Name = "uRecoverEmailDataGridViewTextBoxColumn";
             // 
             // uPhoneDataGridViewTextBoxColumn
             // 
             this.uPhoneDataGridViewTextBoxColumn.DataPropertyName = "uPhone";
-            this.uPhoneDataGridViewTextBoxColumn.HeaderText = "uPhone";
+            resources.ApplyResources(this.uPhoneDataGridViewTextBoxColumn, "uPhoneDataGridViewTextBoxColumn");
             this.uPhoneDataGridViewTextBoxColumn.Name = "uPhoneDataGridViewTextBoxColumn";
             // 
             // usersBindingSource1
@@ -667,60 +547,42 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Statuslabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 406);
+            resources.ApplyResources(this.statusStrip, "statusStrip");
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(625, 22);
-            this.statusStrip.TabIndex = 1;
-            this.statusStrip.Text = "Status";
             // 
             // Statuslabel
             // 
             this.Statuslabel.BackColor = System.Drawing.Color.MistyRose;
             this.Statuslabel.Name = "Statuslabel";
-            this.Statuslabel.Size = new System.Drawing.Size(39, 17);
-            this.Statuslabel.Text = "Status";
+            resources.ApplyResources(this.Statuslabel, "Statuslabel");
             // 
             // categoriesMidPanel
             // 
             this.categoriesMidPanel.BackColor = System.Drawing.SystemColors.Control;
             this.categoriesMidPanel.Controls.Add(this.CategoriesTabC);
-            this.categoriesMidPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.categoriesMidPanel.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.categoriesMidPanel, "categoriesMidPanel");
             this.categoriesMidPanel.Name = "categoriesMidPanel";
-            this.categoriesMidPanel.Size = new System.Drawing.Size(625, 428);
-            this.categoriesMidPanel.TabIndex = 3;
             // 
             // CategoriesTabC
             // 
             this.CategoriesTabC.Controls.Add(this.AdsCategoriesTab);
             this.CategoriesTabC.Controls.Add(this.AdsPropertiesTab);
-            this.CategoriesTabC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CategoriesTabC.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.CategoriesTabC, "CategoriesTabC");
             this.CategoriesTabC.Name = "CategoriesTabC";
             this.CategoriesTabC.SelectedIndex = 0;
-            this.CategoriesTabC.Size = new System.Drawing.Size(625, 428);
-            this.CategoriesTabC.TabIndex = 0;
             this.CategoriesTabC.Click += new System.EventHandler(this.CategoriesTabC_Click);
             // 
             // AdsCategoriesTab
             // 
-            this.AdsCategoriesTab.Location = new System.Drawing.Point(4, 22);
+            resources.ApplyResources(this.AdsCategoriesTab, "AdsCategoriesTab");
             this.AdsCategoriesTab.Name = "AdsCategoriesTab";
-            this.AdsCategoriesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.AdsCategoriesTab.Size = new System.Drawing.Size(617, 402);
-            this.AdsCategoriesTab.TabIndex = 0;
-            this.AdsCategoriesTab.Text = "Ads Categories";
             this.AdsCategoriesTab.UseVisualStyleBackColor = true;
             // 
             // AdsPropertiesTab
             // 
             this.AdsPropertiesTab.Controls.Add(this.propertiesGridView);
-            this.AdsPropertiesTab.Location = new System.Drawing.Point(4, 22);
+            resources.ApplyResources(this.AdsPropertiesTab, "AdsPropertiesTab");
             this.AdsPropertiesTab.Name = "AdsPropertiesTab";
-            this.AdsPropertiesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.AdsPropertiesTab.Size = new System.Drawing.Size(617, 402);
-            this.AdsPropertiesTab.TabIndex = 1;
-            this.AdsPropertiesTab.Text = "Ads Properties";
             this.AdsPropertiesTab.UseVisualStyleBackColor = true;
             // 
             // propertiesGridView
@@ -732,28 +594,25 @@
             this.propertyDataGridViewTextBoxColumn,
             this.catTitleDataGridViewTextBoxColumn});
             this.propertiesGridView.DataSource = this.propertiesBindingSource;
-            this.propertiesGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.propertiesGridView.Location = new System.Drawing.Point(3, 3);
+            resources.ApplyResources(this.propertiesGridView, "propertiesGridView");
             this.propertiesGridView.Name = "propertiesGridView";
-            this.propertiesGridView.Size = new System.Drawing.Size(611, 396);
-            this.propertiesGridView.TabIndex = 0;
             // 
             // pIDDataGridViewTextBoxColumn
             // 
             this.pIDDataGridViewTextBoxColumn.DataPropertyName = "pID";
-            this.pIDDataGridViewTextBoxColumn.HeaderText = "pID";
+            resources.ApplyResources(this.pIDDataGridViewTextBoxColumn, "pIDDataGridViewTextBoxColumn");
             this.pIDDataGridViewTextBoxColumn.Name = "pIDDataGridViewTextBoxColumn";
             // 
             // propertyDataGridViewTextBoxColumn
             // 
             this.propertyDataGridViewTextBoxColumn.DataPropertyName = "property";
-            this.propertyDataGridViewTextBoxColumn.HeaderText = "property";
+            resources.ApplyResources(this.propertyDataGridViewTextBoxColumn, "propertyDataGridViewTextBoxColumn");
             this.propertyDataGridViewTextBoxColumn.Name = "propertyDataGridViewTextBoxColumn";
             // 
             // catTitleDataGridViewTextBoxColumn
             // 
             this.catTitleDataGridViewTextBoxColumn.DataPropertyName = "catTitle";
-            this.catTitleDataGridViewTextBoxColumn.HeaderText = "catTitle";
+            resources.ApplyResources(this.catTitleDataGridViewTextBoxColumn, "catTitleDataGridViewTextBoxColumn");
             this.catTitleDataGridViewTextBoxColumn.Name = "catTitleDataGridViewTextBoxColumn";
             // 
             // propertiesBindingSource
@@ -778,8 +637,7 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 71);
+            resources.ApplyResources(this.splitContainer1, "splitContainer1");
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -788,13 +646,10 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.AutoScroll = true;
+            resources.ApplyResources(this.splitContainer1.Panel2, "splitContainer1.Panel2");
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.RosyBrown;
             this.splitContainer1.Panel2.Controls.Add(this.usersRightPanel);
             this.splitContainer1.Panel2.Controls.Add(this.categoriesRightPanel);
-            this.splitContainer1.Size = new System.Drawing.Size(1230, 428);
-            this.splitContainer1.SplitterDistance = 829;
-            this.splitContainer1.TabIndex = 1;
             // 
             // usersRightPanel
             // 
@@ -824,138 +679,97 @@
             this.usersRightPanel.Controls.Add(this.btn_next);
             this.usersRightPanel.Controls.Add(this.btn_addnew);
             this.usersRightPanel.Controls.Add(this.btn_previous);
-            this.usersRightPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usersRightPanel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usersRightPanel.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.usersRightPanel, "usersRightPanel");
             this.usersRightPanel.Name = "usersRightPanel";
-            this.usersRightPanel.Size = new System.Drawing.Size(397, 428);
-            this.usersRightPanel.TabIndex = 0;
             // 
             // txt_age
             // 
             this.txt_age.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uAge", true));
-            this.txt_age.Location = new System.Drawing.Point(76, 138);
+            resources.ApplyResources(this.txt_age, "txt_age");
             this.txt_age.Name = "txt_age";
-            this.txt_age.Size = new System.Drawing.Size(100, 20);
-            this.txt_age.TabIndex = 71;
             // 
             // txt_phone
             // 
             this.txt_phone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uPhone", true));
-            this.txt_phone.Location = new System.Drawing.Point(76, 112);
+            resources.ApplyResources(this.txt_phone, "txt_phone");
             this.txt_phone.Name = "txt_phone";
-            this.txt_phone.Size = new System.Drawing.Size(100, 20);
-            this.txt_phone.TabIndex = 69;
             // 
             // txt_recoveremail
             // 
             this.txt_recoveremail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uRecoverEmail", true));
-            this.txt_recoveremail.Location = new System.Drawing.Point(270, 59);
+            resources.ApplyResources(this.txt_recoveremail, "txt_recoveremail");
             this.txt_recoveremail.Name = "txt_recoveremail";
-            this.txt_recoveremail.Size = new System.Drawing.Size(100, 20);
-            this.txt_recoveremail.TabIndex = 67;
             // 
             // txt_email
             // 
             this.txt_email.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uEmail", true));
-            this.txt_email.Location = new System.Drawing.Point(76, 84);
+            resources.ApplyResources(this.txt_email, "txt_email");
             this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(100, 20);
-            this.txt_email.TabIndex = 65;
             // 
             // txt_password
             // 
             this.txt_password.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uPassword", true));
-            this.txt_password.Location = new System.Drawing.Point(270, 33);
+            resources.ApplyResources(this.txt_password, "txt_password");
             this.txt_password.Name = "txt_password";
-            this.txt_password.Size = new System.Drawing.Size(100, 20);
-            this.txt_password.TabIndex = 64;
             // 
             // txt_username
             // 
             this.txt_username.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uName", true));
-            this.txt_username.Location = new System.Drawing.Point(270, 7);
+            resources.ApplyResources(this.txt_username, "txt_username");
             this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(100, 20);
-            this.txt_username.TabIndex = 61;
             // 
             // txt_lastname
             // 
             this.txt_lastname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "lName", true));
-            this.txt_lastname.Location = new System.Drawing.Point(76, 58);
+            resources.ApplyResources(this.txt_lastname, "txt_lastname");
             this.txt_lastname.Name = "txt_lastname";
-            this.txt_lastname.Size = new System.Drawing.Size(100, 20);
-            this.txt_lastname.TabIndex = 59;
             // 
             // txt_firstname
             // 
             this.txt_firstname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "fName", true));
-            this.txt_firstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_firstname.Location = new System.Drawing.Point(76, 32);
+            resources.ApplyResources(this.txt_firstname, "txt_firstname");
             this.txt_firstname.Name = "txt_firstname";
-            this.txt_firstname.Size = new System.Drawing.Size(100, 20);
-            this.txt_firstname.TabIndex = 57;
             // 
             // txt_userid
             // 
             this.txt_userid.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "userID", true));
-            this.txt_userid.Location = new System.Drawing.Point(76, 6);
+            resources.ApplyResources(this.txt_userid, "txt_userid");
             this.txt_userid.Name = "txt_userid";
-            this.txt_userid.Size = new System.Drawing.Size(100, 20);
-            this.txt_userid.TabIndex = 55;
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(238, 224);
+            resources.ApplyResources(this.btn_update, "btn_update");
             this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(75, 23);
-            this.btn_update.TabIndex = 53;
-            this.btn_update.Text = "Update";
             this.btn_update.UseVisualStyleBackColor = true;
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(157, 224);
+            resources.ApplyResources(this.btn_delete, "btn_delete");
             this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(75, 23);
-            this.btn_delete.TabIndex = 52;
-            this.btn_delete.Text = "Delete";
             this.btn_delete.UseVisualStyleBackColor = true;
             // 
             // btn_save
             // 
-            this.btn_save.Location = new System.Drawing.Point(76, 224);
+            resources.ApplyResources(this.btn_save, "btn_save");
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(75, 23);
-            this.btn_save.TabIndex = 51;
-            this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = true;
             // 
             // btn_next
             // 
-            this.btn_next.Location = new System.Drawing.Point(238, 195);
+            resources.ApplyResources(this.btn_next, "btn_next");
             this.btn_next.Name = "btn_next";
-            this.btn_next.Size = new System.Drawing.Size(75, 23);
-            this.btn_next.TabIndex = 50;
-            this.btn_next.Text = "Next";
             this.btn_next.UseVisualStyleBackColor = true;
             // 
             // btn_addnew
             // 
-            this.btn_addnew.Location = new System.Drawing.Point(157, 195);
+            resources.ApplyResources(this.btn_addnew, "btn_addnew");
             this.btn_addnew.Name = "btn_addnew";
-            this.btn_addnew.Size = new System.Drawing.Size(75, 23);
-            this.btn_addnew.TabIndex = 49;
-            this.btn_addnew.Text = "Add New";
             this.btn_addnew.UseVisualStyleBackColor = true;
             // 
             // btn_previous
             // 
-            this.btn_previous.Location = new System.Drawing.Point(76, 195);
+            resources.ApplyResources(this.btn_previous, "btn_previous");
             this.btn_previous.Name = "btn_previous";
-            this.btn_previous.Size = new System.Drawing.Size(75, 23);
-            this.btn_previous.TabIndex = 48;
-            this.btn_previous.Text = "Previous";
             this.btn_previous.UseVisualStyleBackColor = true;
             // 
             // categoriesRightPanel
@@ -963,35 +777,25 @@
             this.categoriesRightPanel.BackColor = System.Drawing.SystemColors.ControlDark;
             this.categoriesRightPanel.Controls.Add(this.PropertiesRightPanel);
             this.categoriesRightPanel.Controls.Add(this.AdsCategoriesRightPanel);
-            this.categoriesRightPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.categoriesRightPanel.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.categoriesRightPanel, "categoriesRightPanel");
             this.categoriesRightPanel.Name = "categoriesRightPanel";
-            this.categoriesRightPanel.Size = new System.Drawing.Size(397, 428);
-            this.categoriesRightPanel.TabIndex = 72;
             // 
             // PropertiesRightPanel
             // 
             this.PropertiesRightPanel.Controls.Add(this.propertyAddButton);
             this.PropertiesRightPanel.Controls.Add(this.parentCategoriesCMB);
             this.PropertiesRightPanel.Controls.Add(this.propertyNameTBox);
-            this.PropertiesRightPanel.Controls.Add(this.label3);
-            this.PropertiesRightPanel.Controls.Add(this.label2);
-            this.PropertiesRightPanel.Controls.Add(this.label1);
+            this.PropertiesRightPanel.Controls.Add(this.whichcatLabel);
+            this.PropertiesRightPanel.Controls.Add(this.properynameLabel);
+            this.PropertiesRightPanel.Controls.Add(this.editpropertyLabel);
             this.PropertiesRightPanel.Controls.Add(this.addingPropertyL);
-            this.PropertiesRightPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PropertiesRightPanel.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.PropertiesRightPanel, "PropertiesRightPanel");
             this.PropertiesRightPanel.Name = "PropertiesRightPanel";
-            this.PropertiesRightPanel.Size = new System.Drawing.Size(397, 428);
-            this.PropertiesRightPanel.TabIndex = 0;
-            this.PropertiesRightPanel.Visible = false;
             // 
             // propertyAddButton
             // 
-            this.propertyAddButton.Location = new System.Drawing.Point(12, 138);
+            resources.ApplyResources(this.propertyAddButton, "propertyAddButton");
             this.propertyAddButton.Name = "propertyAddButton";
-            this.propertyAddButton.Size = new System.Drawing.Size(75, 23);
-            this.propertyAddButton.TabIndex = 3;
-            this.propertyAddButton.Text = "Add";
             this.propertyAddButton.UseVisualStyleBackColor = true;
             this.propertyAddButton.Click += new System.EventHandler(this.PropertyAddButton_Click);
             // 
@@ -1000,10 +804,8 @@
             this.parentCategoriesCMB.DataSource = this.parentCategoriesBindingSource;
             this.parentCategoriesCMB.DisplayMember = "catTitle";
             this.parentCategoriesCMB.FormattingEnabled = true;
-            this.parentCategoriesCMB.Location = new System.Drawing.Point(12, 108);
+            resources.ApplyResources(this.parentCategoriesCMB, "parentCategoriesCMB");
             this.parentCategoriesCMB.Name = "parentCategoriesCMB";
-            this.parentCategoriesCMB.Size = new System.Drawing.Size(139, 21);
-            this.parentCategoriesCMB.TabIndex = 2;
             this.parentCategoriesCMB.ValueMember = "catID";
             // 
             // parentCategoriesBindingSource
@@ -1013,56 +815,33 @@
             // 
             // propertyNameTBox
             // 
-            this.propertyNameTBox.Location = new System.Drawing.Point(93, 59);
+            resources.ApplyResources(this.propertyNameTBox, "propertyNameTBox");
             this.propertyNameTBox.Name = "propertyNameTBox";
-            this.propertyNameTBox.Size = new System.Drawing.Size(170, 20);
-            this.propertyNameTBox.TabIndex = 1;
             // 
-            // label3
+            // whichcatLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 91);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(254, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Which category do you want to assign this property?";
+            resources.ApplyResources(this.whichcatLabel, "whichcatLabel");
+            this.whichcatLabel.Name = "whichcatLabel";
             // 
-            // label2
+            // properynameLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Property Name";
+            resources.ApplyResources(this.properynameLabel, "properynameLabel");
+            this.properynameLabel.Name = "properynameLabel";
             // 
-            // label1
+            // editpropertyLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 199);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Edit the selected property";
+            resources.ApplyResources(this.editpropertyLabel, "editpropertyLabel");
+            this.editpropertyLabel.Name = "editpropertyLabel";
             // 
             // addingPropertyL
             // 
-            this.addingPropertyL.AutoSize = true;
-            this.addingPropertyL.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addingPropertyL.Location = new System.Drawing.Point(9, 32);
+            resources.ApplyResources(this.addingPropertyL, "addingPropertyL");
             this.addingPropertyL.Name = "addingPropertyL";
-            this.addingPropertyL.Size = new System.Drawing.Size(158, 19);
-            this.addingPropertyL.TabIndex = 0;
-            this.addingPropertyL.Text = "Add a new property";
             // 
             // AdsCategoriesRightPanel
             // 
-            this.AdsCategoriesRightPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AdsCategoriesRightPanel.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.AdsCategoriesRightPanel, "AdsCategoriesRightPanel");
             this.AdsCategoriesRightPanel.Name = "AdsCategoriesRightPanel";
-            this.AdsCategoriesRightPanel.Size = new System.Drawing.Size(397, 428);
-            this.AdsCategoriesRightPanel.TabIndex = 4;
             // 
             // adsTableBindingSource
             // 
@@ -1141,37 +920,24 @@
             // 
             // checkbox_blacklist
             // 
-            this.checkbox_blacklist.AutoSize = true;
-            this.checkbox_blacklist.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkbox_blacklist.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkbox_blacklist.Location = new System.Drawing.Point(270, 91);
+            resources.ApplyResources(this.checkbox_blacklist, "checkbox_blacklist");
             this.checkbox_blacklist.Name = "checkbox_blacklist";
-            this.checkbox_blacklist.Size = new System.Drawing.Size(84, 16);
-            this.checkbox_blacklist.TabIndex = 73;
-            this.checkbox_blacklist.Text = "Black List: ";
             this.checkbox_blacklist.UseVisualStyleBackColor = true;
             // 
-            // btn_lang
+            // lang_combobox
             // 
-            this.btn_lang.BackColor = System.Drawing.Color.White;
-            this.btn_lang.Location = new System.Drawing.Point(1143, 36);
-            this.btn_lang.Name = "btn_lang";
-            this.btn_lang.Size = new System.Drawing.Size(75, 23);
-            this.btn_lang.TabIndex = 33;
-            this.btn_lang.Text = "Greek";
-            this.btn_lang.UseVisualStyleBackColor = false;
-            this.btn_lang.Click += new System.EventHandler(this.btn_lang_Click);
+            this.lang_combobox.FormattingEnabled = true;
+            resources.ApplyResources(this.lang_combobox, "lang_combobox");
+            this.lang_combobox.Name = "lang_combobox";
+            this.lang_combobox.SelectedIndexChanged += new System.EventHandler(this.lang_combobox_SelectedIndexChanged);
             // 
             // AdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1230, 499);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.topPanel);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminForm";
-            this.Text = "Administrator Form";
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.topPanel.ResumeLayout(false);
             this.Menu_panel.ResumeLayout(false);
@@ -1253,7 +1019,7 @@
         private System.Windows.Forms.ToolStripButton toolStripRefresh;
         public System.Windows.Forms.BindingNavigator Menu_navigator;
         private System.Windows.Forms.Label searchlabel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_search;
         public System.Windows.Forms.Button btn_email;
         private System.Windows.Forms.Button btn_profile;
         private System.Windows.Forms.Button btn_ads;
@@ -1313,8 +1079,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn propertyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn catTitleDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel PropertiesRightPanel;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label whichcatLabel;
+        private System.Windows.Forms.Label properynameLabel;
         private System.Windows.Forms.Label addingPropertyL;
         private System.Windows.Forms.ComboBox parentCategoriesCMB;
         private System.Windows.Forms.TextBox propertyNameTBox;
@@ -1326,11 +1092,11 @@
         private System.Windows.Forms.Button propertyAddButton;
         private System.Windows.Forms.Panel AdsCategoriesRightPanel;
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label editpropertyLabel;
 
         private System.Windows.Forms.Button btn_settings;
         public System.Windows.Forms.Button btn_category;
         private System.Windows.Forms.CheckBox checkbox_blacklist;
-        private System.Windows.Forms.Button btn_lang;
+        private System.Windows.Forms.ComboBox lang_combobox;
     }
 }
