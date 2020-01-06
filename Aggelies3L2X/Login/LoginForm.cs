@@ -66,5 +66,16 @@ namespace Login
             UserApplication.UserForm userForm = new UserApplication.UserForm(9999);
             userForm.Show();
         }
+
+        private void createaccountLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            CreateAccountForm createAccount = new CreateAccountForm();
+            createAccount.Show();
+
+
+
+
+        }
     }
 }

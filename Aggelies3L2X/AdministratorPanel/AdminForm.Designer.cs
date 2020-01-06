@@ -430,8 +430,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.SandyBrown;
-            this.splitContainer2.Panel2.Controls.Add(this.categoriesMidPanel);
             this.splitContainer2.Panel2.Controls.Add(this.usersMidPanel);
+            this.splitContainer2.Panel2.Controls.Add(this.categoriesMidPanel);
             // 
             // treeview_panel
             // 

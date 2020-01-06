@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btn_submit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 227</value>
+  </data>
+  <data name="btn_submit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btn_submit.TabIndex" type="System.Int32, mscorlib">
+    <value>109</value>
+  </data>
+  <data name="btn_submit.Text" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="&gt;&gt;btn_submit.Name" xml:space="preserve">
+    <value>btn_submit</value>
+  </data>
+  <data name="&gt;&gt;btn_submit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_submit.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;btn_submit.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="uAgeLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="uAgeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="uAgeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="uAgeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 104</value>
+  </data>
+  <data name="uAgeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 13</value>
+  </data>
+  <data name="uAgeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>107</value>
+  </data>
+  <data name="uAgeLabel.Text" xml:space="preserve">
+    <value>Age:</value>
+  </data>
+  <data name="&gt;&gt;uAgeLabel.Name" xml:space="preserve">
+    <value>uAgeLabel</value>
+  </data>
+  <data name="&gt;&gt;uAgeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;uAgeLabel.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;uAgeLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txt_age.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 97</value>
+  </data>
+  <data name="txt_age.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txt_age.TabIndex" type="System.Int32, mscorlib">
+    <value>108</value>
+  </data>
+  <data name="&gt;&gt;txt_age.Name" xml:space="preserve">
+    <value>txt_age</value>
+  </data>
+  <data name="&gt;&gt;txt_age.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_age.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;txt_age.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="uPhoneLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="uPhoneLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="uPhoneLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="uPhoneLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 78</value>
+  </data>
+  <data name="uPhoneLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="uPhoneLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="uPhoneLabel.Text" xml:space="preserve">
+    <value>Phone:</value>
+  </data>
+  <data name="&gt;&gt;uPhoneLabel.Name" xml:space="preserve">
+    <value>uPhoneLabel</value>
+  </data>
+  <data name="&gt;&gt;uPhoneLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;uPhoneLabel.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;uPhoneLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="txt_phone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 71</value>
+  </data>
+  <data name="txt_phone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txt_phone.TabIndex" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="&gt;&gt;txt_phone.Name" xml:space="preserve">
+    <value>txt_phone</value>
+  </data>
+  <data name="&gt;&gt;txt_phone.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_phone.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;txt_phone.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <metadata name="uRecoverEmailLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="uRecoverEmailLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="uRecoverEmailLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="uRecoverEmailLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-10, 208</value>
+  </data>
+  <data name="uRecoverEmailLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
+  </data>
+  <data name="uRecoverEmailLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>103</value>
+  </data>
+  <data name="uRecoverEmailLabel.Text" xml:space="preserve">
+    <value>Recover Email:</value>
+  </data>
+  <data name="&gt;&gt;uRecoverEmailLabel.Name" xml:space="preserve">
+    <value>uRecoverEmailLabel</value>
+  </data>
+  <data name="&gt;&gt;uRecoverEmailLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;uRecoverEmailLabel.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;uRecoverEmailLabel.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="txt_recoveremail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 201</value>
+  </data>
+  <data name="txt_recoveremail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txt_recoveremail.TabIndex" type="System.Int32, mscorlib">
+    <value>104</value>
+  </data>
+  <data name="&gt;&gt;txt_recoveremail.Name" xml:space="preserve">
+    <value>txt_recoveremail</value>
+  </data>
+  <data name="&gt;&gt;txt_recoveremail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_recoveremail.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;txt_recoveremail.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <metadata name="uEmailLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="uEmailLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="uEmailLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="uEmailLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 185</value>
+  </data>
+  <data name="uEmailLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="uEmailLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="uEmailLabel.Text" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="&gt;&gt;uEmailLabel.Name" xml:space="preserve">
+    <value>uEmailLabel</value>
+  </data>
+  <data name="&gt;&gt;uEmailLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;uEmailLabel.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;uEmailLabel.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="txt_email.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 175</value>
+  </data>
+  <data name="txt_email.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txt_email.TabIndex" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <data name="&gt;&gt;txt_email.Name" xml:space="preserve">
+    <value>txt_email</value>
+  </data>
+  <data name="&gt;&gt;txt_email.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_email.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;txt_email.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <metadata name="uPasswordLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="uPasswordLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="uPasswordLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="uPasswordLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 155</value>
+  </data>
+  <data name="uPasswordLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
+  <data name="uPasswordLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>99</value>
+  </data>
+  <data name="uPasswordLabel.Text" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="&gt;&gt;uPasswordLabel.Name" xml:space="preserve">
+    <value>uPasswordLabel</value>
+  </data>
+  <data name="&gt;&gt;uPasswordLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;uPasswordLabel.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;uPasswordLabel.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="txt_password.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 149</value>
+  </data>
+  <data name="txt_password.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txt_password.TabIndex" type="System.Int32, mscorlib">
+    <value>101</value>
+  </data>
+  <data name="&gt;&gt;txt_password.Name" xml:space="preserve">
+    <value>txt_password</value>
+  </data>
+  <data name="&gt;&gt;txt_password.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_password.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;txt_password.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <metadata name="uNameLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="uNameLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="uNameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="uNameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 129</value>
+  </data>
+  <data name="uNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="uNameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="uNameLabel.Text" xml:space="preserve">
+    <value>Username:</value>
+  </data>
+  <data name="&gt;&gt;uNameLabel.Name" xml:space="preserve">
+    <value>uNameLabel</value>
+  </data>
+  <data name="&gt;&gt;uNameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;uNameLabel.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;uNameLabel.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="txt_username.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 123</value>
+  </data>
+  <data name="txt_username.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txt_username.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="&gt;&gt;txt_username.Name" xml:space="preserve">
+    <value>txt_username</value>
+  </data>
+  <data name="&gt;&gt;txt_username.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_username.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;txt_username.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <metadata name="lNameLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="lNameLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lNameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lNameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 52</value>
+  </data>
+  <data name="lNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
+  </data>
+  <data name="lNameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="lNameLabel.Text" xml:space="preserve">
+    <value>Last Name:</value>
+  </data>
+  <data name="&gt;&gt;lNameLabel.Name" xml:space="preserve">
+    <value>lNameLabel</value>
+  </data>
+  <data name="&gt;&gt;lNameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lNameLabel.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;lNameLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="txt_lastname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 45</value>
+  </data>
+  <data name="txt_lastname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txt_lastname.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="&gt;&gt;txt_lastname.Name" xml:space="preserve">
+    <value>txt_lastname</value>
+  </data>
+  <data name="&gt;&gt;txt_lastname.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_lastname.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;txt_lastname.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="fNameLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="fNameLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fNameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="fNameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 26</value>
+  </data>
+  <data name="fNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 13</value>
+  </data>
+  <data name="fNameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="fNameLabel.Text" xml:space="preserve">
+    <value>First Name:</value>
+  </data>
+  <data name="&gt;&gt;fNameLabel.Name" xml:space="preserve">
+    <value>fNameLabel</value>
+  </data>
+  <data name="&gt;&gt;fNameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fNameLabel.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;fNameLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txt_firstname.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="txt_firstname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 19</value>
+  </data>
+  <data name="txt_firstname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txt_firstname.TabIndex" type="System.Int32, mscorlib">
+    <value>94</value>
+  </data>
+  <data name="&gt;&gt;txt_firstname.Name" xml:space="preserve">
+    <value>txt_firstname</value>
+  </data>
+  <data name="&gt;&gt;txt_firstname.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_firstname.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;txt_firstname.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CreateAccGroupBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CreateAccGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="CreateAccGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 269</value>
+  </data>
+  <data name="CreateAccGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>110</value>
+  </data>
+  <data name="&gt;&gt;CreateAccGroupBox.Name" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;CreateAccGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CreateAccGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CreateAccGroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>302, 301</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>CreateAccountForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>CreateAccountForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

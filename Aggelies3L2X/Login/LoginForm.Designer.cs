@@ -30,11 +30,12 @@
         {
             this.userFormButton = new System.Windows.Forms.Button();
             this.loginPanel = new System.Windows.Forms.Panel();
+            this.guestButton = new System.Windows.Forms.Button();
             this.passwordLabel = new System.Windows.Forms.Label();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.guestButton = new System.Windows.Forms.Button();
+            this.createaccountLabel = new System.Windows.Forms.LinkLabel();
             this.loginPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             // 
             // loginPanel
             // 
+            this.loginPanel.Controls.Add(this.createaccountLabel);
             this.loginPanel.Controls.Add(this.guestButton);
             this.loginPanel.Controls.Add(this.passwordLabel);
             this.loginPanel.Controls.Add(this.usernameLabel);
@@ -62,6 +64,17 @@
             this.loginPanel.Name = "loginPanel";
             this.loginPanel.Size = new System.Drawing.Size(544, 321);
             this.loginPanel.TabIndex = 1;
+            // 
+            // guestButton
+            // 
+            this.guestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guestButton.Location = new System.Drawing.Point(196, 204);
+            this.guestButton.Name = "guestButton";
+            this.guestButton.Size = new System.Drawing.Size(184, 37);
+            this.guestButton.TabIndex = 5;
+            this.guestButton.Text = "Guest Access";
+            this.guestButton.UseVisualStyleBackColor = true;
+            this.guestButton.Click += new System.EventHandler(this.guestButton_Click);
             // 
             // passwordLabel
             // 
@@ -102,16 +115,17 @@
             this.passwordTextBox.TabIndex = 2;
             this.passwordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
             // 
-            // guestButton
+            // createaccountLabel
             // 
-            this.guestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guestButton.Location = new System.Drawing.Point(196, 204);
-            this.guestButton.Name = "guestButton";
-            this.guestButton.Size = new System.Drawing.Size(184, 37);
-            this.guestButton.TabIndex = 5;
-            this.guestButton.Text = "Guest Access";
-            this.guestButton.UseVisualStyleBackColor = true;
-            this.guestButton.Click += new System.EventHandler(this.guestButton_Click);
+            this.createaccountLabel.AutoSize = true;
+            this.createaccountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.createaccountLabel.Location = new System.Drawing.Point(220, 244);
+            this.createaccountLabel.Name = "createaccountLabel";
+            this.createaccountLabel.Size = new System.Drawing.Size(134, 20);
+            this.createaccountLabel.TabIndex = 6;
+            this.createaccountLabel.TabStop = true;
+            this.createaccountLabel.Text = "Create Account";
+            this.createaccountLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.createaccountLabel_LinkClicked);
             // 
             // LoginForm
             // 
@@ -141,6 +155,7 @@
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Button guestButton;
+        private System.Windows.Forms.LinkLabel createaccountLabel;
     }
 }
 
