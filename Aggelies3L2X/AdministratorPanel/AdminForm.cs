@@ -71,5 +71,10 @@ namespace AdministratorPanel
             this.usersRightPanel.Visible = true;
             this.usersRightPanel.BringToFront();
         }
+
+        private void btn_lang_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

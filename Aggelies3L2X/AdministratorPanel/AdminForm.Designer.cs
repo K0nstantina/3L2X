@@ -67,16 +67,6 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.treeview_panel = new System.Windows.Forms.Panel();
             this.treeviewdatabase = new System.Windows.Forms.TreeView();
-            this.categoriesMidPanel = new System.Windows.Forms.Panel();
-            this.CategoriesTabC = new System.Windows.Forms.TabControl();
-            this.AdsCategoriesTab = new System.Windows.Forms.TabPage();
-            this.AdsPropertiesTab = new System.Windows.Forms.TabPage();
-            this.propertiesGridView = new System.Windows.Forms.DataGridView();
-            this.pIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.propertyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.catTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.propertiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aggeliesDBDataSet = new AdministratorPanel.AggeliesDBDataSet();
             this.usersMidPanel = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,26 +80,25 @@
             this.uRecoverEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.aggeliesDBDataSet = new AdministratorPanel.AggeliesDBDataSet();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.Statuslabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.categoriesMidPanel = new System.Windows.Forms.Panel();
+            this.CategoriesTabC = new System.Windows.Forms.TabControl();
+            this.AdsCategoriesTab = new System.Windows.Forms.TabPage();
+            this.AdsPropertiesTab = new System.Windows.Forms.TabPage();
+            this.propertiesGridView = new System.Windows.Forms.DataGridView();
+            this.pIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.propertyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.catTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.propertiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.adCategoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.aggeliesDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.categoriesRightPanel = new System.Windows.Forms.Panel();
-            this.PropertiesRightPanel = new System.Windows.Forms.Panel();
-            this.propertyAddButton = new System.Windows.Forms.Button();
-            this.parentCategoriesCMB = new System.Windows.Forms.ComboBox();
-            this.parentCategoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.propertyNameTBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.addingPropertyL = new System.Windows.Forms.Label();
-            this.AdsCategoriesRightPanel = new System.Windows.Forms.Panel();
             this.usersRightPanel = new System.Windows.Forms.Panel();
-            this.uAgeTextBox = new System.Windows.Forms.TextBox();
+            this.txt_age = new System.Windows.Forms.TextBox();
             this.txt_phone = new System.Windows.Forms.TextBox();
             this.txt_recoveremail = new System.Windows.Forms.TextBox();
             this.txt_email = new System.Windows.Forms.TextBox();
@@ -124,6 +113,17 @@
             this.btn_next = new System.Windows.Forms.Button();
             this.btn_addnew = new System.Windows.Forms.Button();
             this.btn_previous = new System.Windows.Forms.Button();
+            this.categoriesRightPanel = new System.Windows.Forms.Panel();
+            this.PropertiesRightPanel = new System.Windows.Forms.Panel();
+            this.propertyAddButton = new System.Windows.Forms.Button();
+            this.parentCategoriesCMB = new System.Windows.Forms.ComboBox();
+            this.parentCategoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.propertyNameTBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.addingPropertyL = new System.Windows.Forms.Label();
+            this.AdsCategoriesRightPanel = new System.Windows.Forms.Panel();
             this.adsTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter1 = new AdministratorPanel.AggeliesDBDataSetTableAdapters.UsersTableAdapter();
             this.tableAdapterManager1 = new AdministratorPanel.AggeliesDBDataSetTableAdapters.TableAdapterManager();
@@ -138,6 +138,8 @@
             this.propertiesTbAdapter = new AdministratorPanel.AggeliesDBDataSetTableAdapters.PropertiesTbAdapter();
             this.adCategoryBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.parentCategoriesTableAdapter = new AdministratorPanel.AggeliesDBDataSetTableAdapters.ParentCategoriesTableAdapter();
+            this.checkbox_blacklist = new System.Windows.Forms.CheckBox();
+            this.btn_lang = new System.Windows.Forms.Button();
             uAgeLabel = new System.Windows.Forms.Label();
             uPhoneLabel = new System.Windows.Forms.Label();
             uRecoverEmailLabel = new System.Windows.Forms.Label();
@@ -156,16 +158,16 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.treeview_panel.SuspendLayout();
+            this.usersMidPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSet)).BeginInit();
+            this.statusStrip.SuspendLayout();
             this.categoriesMidPanel.SuspendLayout();
             this.CategoriesTabC.SuspendLayout();
             this.AdsPropertiesTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.propertiesGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.propertiesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSet)).BeginInit();
-            this.usersMidPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
-            this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adCategoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSetBindingSource)).BeginInit();
@@ -174,10 +176,10 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.usersRightPanel.SuspendLayout();
             this.categoriesRightPanel.SuspendLayout();
             this.PropertiesRightPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.parentCategoriesBindingSource)).BeginInit();
-            this.usersRightPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adsTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userCategoriesBindingSource)).BeginInit();
@@ -207,7 +209,7 @@
             // uRecoverEmailLabel
             // 
             uRecoverEmailLabel.AutoSize = true;
-            uRecoverEmailLabel.Location = new System.Drawing.Point(182, 65);
+            uRecoverEmailLabel.Location = new System.Drawing.Point(176, 65);
             uRecoverEmailLabel.Name = "uRecoverEmailLabel";
             uRecoverEmailLabel.Size = new System.Drawing.Size(88, 12);
             uRecoverEmailLabel.TabIndex = 66;
@@ -279,6 +281,7 @@
             // Menu_panel
             // 
             this.Menu_panel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Menu_panel.Controls.Add(this.btn_lang);
             this.Menu_panel.Controls.Add(this.btn_settings);
             this.Menu_panel.Controls.Add(this.btn_category);
             this.Menu_panel.Controls.Add(this.btn_email);
@@ -556,92 +559,6 @@
             this.treeviewdatabase.Size = new System.Drawing.Size(200, 428);
             this.treeviewdatabase.TabIndex = 0;
             // 
-            // categoriesMidPanel
-            // 
-            this.categoriesMidPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.categoriesMidPanel.Controls.Add(this.CategoriesTabC);
-            this.categoriesMidPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.categoriesMidPanel.Location = new System.Drawing.Point(0, 0);
-            this.categoriesMidPanel.Name = "categoriesMidPanel";
-            this.categoriesMidPanel.Size = new System.Drawing.Size(625, 428);
-            this.categoriesMidPanel.TabIndex = 3;
-            // 
-            // CategoriesTabC
-            // 
-            this.CategoriesTabC.Controls.Add(this.AdsCategoriesTab);
-            this.CategoriesTabC.Controls.Add(this.AdsPropertiesTab);
-            this.CategoriesTabC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CategoriesTabC.Location = new System.Drawing.Point(0, 0);
-            this.CategoriesTabC.Name = "CategoriesTabC";
-            this.CategoriesTabC.SelectedIndex = 0;
-            this.CategoriesTabC.Size = new System.Drawing.Size(625, 428);
-            this.CategoriesTabC.TabIndex = 0;
-            this.CategoriesTabC.Click += new System.EventHandler(this.CategoriesTabC_Click);
-            // 
-            // AdsCategoriesTab
-            // 
-            this.AdsCategoriesTab.Location = new System.Drawing.Point(4, 22);
-            this.AdsCategoriesTab.Name = "AdsCategoriesTab";
-            this.AdsCategoriesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.AdsCategoriesTab.Size = new System.Drawing.Size(617, 402);
-            this.AdsCategoriesTab.TabIndex = 0;
-            this.AdsCategoriesTab.Text = "Ads Categories";
-            this.AdsCategoriesTab.UseVisualStyleBackColor = true;
-            // 
-            // AdsPropertiesTab
-            // 
-            this.AdsPropertiesTab.Controls.Add(this.propertiesGridView);
-            this.AdsPropertiesTab.Location = new System.Drawing.Point(4, 22);
-            this.AdsPropertiesTab.Name = "AdsPropertiesTab";
-            this.AdsPropertiesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.AdsPropertiesTab.Size = new System.Drawing.Size(617, 402);
-            this.AdsPropertiesTab.TabIndex = 1;
-            this.AdsPropertiesTab.Text = "Ads Properties";
-            this.AdsPropertiesTab.UseVisualStyleBackColor = true;
-            // 
-            // propertiesGridView
-            // 
-            this.propertiesGridView.AutoGenerateColumns = false;
-            this.propertiesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.propertiesGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.pIDDataGridViewTextBoxColumn,
-            this.propertyDataGridViewTextBoxColumn,
-            this.catTitleDataGridViewTextBoxColumn});
-            this.propertiesGridView.DataSource = this.propertiesBindingSource;
-            this.propertiesGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.propertiesGridView.Location = new System.Drawing.Point(3, 3);
-            this.propertiesGridView.Name = "propertiesGridView";
-            this.propertiesGridView.Size = new System.Drawing.Size(611, 396);
-            this.propertiesGridView.TabIndex = 0;
-            // 
-            // pIDDataGridViewTextBoxColumn
-            // 
-            this.pIDDataGridViewTextBoxColumn.DataPropertyName = "pID";
-            this.pIDDataGridViewTextBoxColumn.HeaderText = "pID";
-            this.pIDDataGridViewTextBoxColumn.Name = "pIDDataGridViewTextBoxColumn";
-            // 
-            // propertyDataGridViewTextBoxColumn
-            // 
-            this.propertyDataGridViewTextBoxColumn.DataPropertyName = "property";
-            this.propertyDataGridViewTextBoxColumn.HeaderText = "property";
-            this.propertyDataGridViewTextBoxColumn.Name = "propertyDataGridViewTextBoxColumn";
-            // 
-            // catTitleDataGridViewTextBoxColumn
-            // 
-            this.catTitleDataGridViewTextBoxColumn.DataPropertyName = "catTitle";
-            this.catTitleDataGridViewTextBoxColumn.HeaderText = "catTitle";
-            this.catTitleDataGridViewTextBoxColumn.Name = "catTitleDataGridViewTextBoxColumn";
-            // 
-            // propertiesBindingSource
-            // 
-            this.propertiesBindingSource.DataMember = "Properties";
-            this.propertiesBindingSource.DataSource = this.aggeliesDBDataSet;
-            // 
-            // aggeliesDBDataSet
-            // 
-            this.aggeliesDBDataSet.DataSetName = "AggeliesDBDataSet";
-            this.aggeliesDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // usersMidPanel
             // 
             this.usersMidPanel.BackColor = System.Drawing.SystemColors.Control;
@@ -741,6 +658,11 @@
             this.usersBindingSource1.DataMember = "Users";
             this.usersBindingSource1.DataSource = this.aggeliesDBDataSet;
             // 
+            // aggeliesDBDataSet
+            // 
+            this.aggeliesDBDataSet.DataSetName = "AggeliesDBDataSet";
+            this.aggeliesDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -757,6 +679,87 @@
             this.Statuslabel.Name = "Statuslabel";
             this.Statuslabel.Size = new System.Drawing.Size(39, 17);
             this.Statuslabel.Text = "Status";
+            // 
+            // categoriesMidPanel
+            // 
+            this.categoriesMidPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.categoriesMidPanel.Controls.Add(this.CategoriesTabC);
+            this.categoriesMidPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.categoriesMidPanel.Location = new System.Drawing.Point(0, 0);
+            this.categoriesMidPanel.Name = "categoriesMidPanel";
+            this.categoriesMidPanel.Size = new System.Drawing.Size(625, 428);
+            this.categoriesMidPanel.TabIndex = 3;
+            // 
+            // CategoriesTabC
+            // 
+            this.CategoriesTabC.Controls.Add(this.AdsCategoriesTab);
+            this.CategoriesTabC.Controls.Add(this.AdsPropertiesTab);
+            this.CategoriesTabC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CategoriesTabC.Location = new System.Drawing.Point(0, 0);
+            this.CategoriesTabC.Name = "CategoriesTabC";
+            this.CategoriesTabC.SelectedIndex = 0;
+            this.CategoriesTabC.Size = new System.Drawing.Size(625, 428);
+            this.CategoriesTabC.TabIndex = 0;
+            this.CategoriesTabC.Click += new System.EventHandler(this.CategoriesTabC_Click);
+            // 
+            // AdsCategoriesTab
+            // 
+            this.AdsCategoriesTab.Location = new System.Drawing.Point(4, 22);
+            this.AdsCategoriesTab.Name = "AdsCategoriesTab";
+            this.AdsCategoriesTab.Padding = new System.Windows.Forms.Padding(3);
+            this.AdsCategoriesTab.Size = new System.Drawing.Size(617, 402);
+            this.AdsCategoriesTab.TabIndex = 0;
+            this.AdsCategoriesTab.Text = "Ads Categories";
+            this.AdsCategoriesTab.UseVisualStyleBackColor = true;
+            // 
+            // AdsPropertiesTab
+            // 
+            this.AdsPropertiesTab.Controls.Add(this.propertiesGridView);
+            this.AdsPropertiesTab.Location = new System.Drawing.Point(4, 22);
+            this.AdsPropertiesTab.Name = "AdsPropertiesTab";
+            this.AdsPropertiesTab.Padding = new System.Windows.Forms.Padding(3);
+            this.AdsPropertiesTab.Size = new System.Drawing.Size(617, 402);
+            this.AdsPropertiesTab.TabIndex = 1;
+            this.AdsPropertiesTab.Text = "Ads Properties";
+            this.AdsPropertiesTab.UseVisualStyleBackColor = true;
+            // 
+            // propertiesGridView
+            // 
+            this.propertiesGridView.AutoGenerateColumns = false;
+            this.propertiesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.propertiesGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.pIDDataGridViewTextBoxColumn,
+            this.propertyDataGridViewTextBoxColumn,
+            this.catTitleDataGridViewTextBoxColumn});
+            this.propertiesGridView.DataSource = this.propertiesBindingSource;
+            this.propertiesGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.propertiesGridView.Location = new System.Drawing.Point(3, 3);
+            this.propertiesGridView.Name = "propertiesGridView";
+            this.propertiesGridView.Size = new System.Drawing.Size(611, 396);
+            this.propertiesGridView.TabIndex = 0;
+            // 
+            // pIDDataGridViewTextBoxColumn
+            // 
+            this.pIDDataGridViewTextBoxColumn.DataPropertyName = "pID";
+            this.pIDDataGridViewTextBoxColumn.HeaderText = "pID";
+            this.pIDDataGridViewTextBoxColumn.Name = "pIDDataGridViewTextBoxColumn";
+            // 
+            // propertyDataGridViewTextBoxColumn
+            // 
+            this.propertyDataGridViewTextBoxColumn.DataPropertyName = "property";
+            this.propertyDataGridViewTextBoxColumn.HeaderText = "property";
+            this.propertyDataGridViewTextBoxColumn.Name = "propertyDataGridViewTextBoxColumn";
+            // 
+            // catTitleDataGridViewTextBoxColumn
+            // 
+            this.catTitleDataGridViewTextBoxColumn.DataPropertyName = "catTitle";
+            this.catTitleDataGridViewTextBoxColumn.HeaderText = "catTitle";
+            this.catTitleDataGridViewTextBoxColumn.Name = "catTitleDataGridViewTextBoxColumn";
+            // 
+            // propertiesBindingSource
+            // 
+            this.propertiesBindingSource.DataMember = "Properties";
+            this.propertiesBindingSource.DataSource = this.aggeliesDBDataSet;
             // 
             // adCategoryBindingSource
             // 
@@ -792,6 +795,168 @@
             this.splitContainer1.Size = new System.Drawing.Size(1230, 428);
             this.splitContainer1.SplitterDistance = 829;
             this.splitContainer1.TabIndex = 1;
+            // 
+            // usersRightPanel
+            // 
+            this.usersRightPanel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.usersRightPanel.Controls.Add(this.checkbox_blacklist);
+            this.usersRightPanel.Controls.Add(uAgeLabel);
+            this.usersRightPanel.Controls.Add(this.txt_age);
+            this.usersRightPanel.Controls.Add(uPhoneLabel);
+            this.usersRightPanel.Controls.Add(this.txt_phone);
+            this.usersRightPanel.Controls.Add(uRecoverEmailLabel);
+            this.usersRightPanel.Controls.Add(this.txt_recoveremail);
+            this.usersRightPanel.Controls.Add(uEmailLabel);
+            this.usersRightPanel.Controls.Add(this.txt_email);
+            this.usersRightPanel.Controls.Add(uPasswordLabel);
+            this.usersRightPanel.Controls.Add(this.txt_password);
+            this.usersRightPanel.Controls.Add(uNameLabel);
+            this.usersRightPanel.Controls.Add(this.txt_username);
+            this.usersRightPanel.Controls.Add(lNameLabel);
+            this.usersRightPanel.Controls.Add(this.txt_lastname);
+            this.usersRightPanel.Controls.Add(fNameLabel);
+            this.usersRightPanel.Controls.Add(this.txt_firstname);
+            this.usersRightPanel.Controls.Add(useridlabel);
+            this.usersRightPanel.Controls.Add(this.txt_userid);
+            this.usersRightPanel.Controls.Add(this.btn_update);
+            this.usersRightPanel.Controls.Add(this.btn_delete);
+            this.usersRightPanel.Controls.Add(this.btn_save);
+            this.usersRightPanel.Controls.Add(this.btn_next);
+            this.usersRightPanel.Controls.Add(this.btn_addnew);
+            this.usersRightPanel.Controls.Add(this.btn_previous);
+            this.usersRightPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usersRightPanel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usersRightPanel.Location = new System.Drawing.Point(0, 0);
+            this.usersRightPanel.Name = "usersRightPanel";
+            this.usersRightPanel.Size = new System.Drawing.Size(397, 428);
+            this.usersRightPanel.TabIndex = 0;
+            // 
+            // txt_age
+            // 
+            this.txt_age.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uAge", true));
+            this.txt_age.Location = new System.Drawing.Point(76, 138);
+            this.txt_age.Name = "txt_age";
+            this.txt_age.Size = new System.Drawing.Size(100, 20);
+            this.txt_age.TabIndex = 71;
+            // 
+            // txt_phone
+            // 
+            this.txt_phone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uPhone", true));
+            this.txt_phone.Location = new System.Drawing.Point(76, 112);
+            this.txt_phone.Name = "txt_phone";
+            this.txt_phone.Size = new System.Drawing.Size(100, 20);
+            this.txt_phone.TabIndex = 69;
+            // 
+            // txt_recoveremail
+            // 
+            this.txt_recoveremail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uRecoverEmail", true));
+            this.txt_recoveremail.Location = new System.Drawing.Point(270, 59);
+            this.txt_recoveremail.Name = "txt_recoveremail";
+            this.txt_recoveremail.Size = new System.Drawing.Size(100, 20);
+            this.txt_recoveremail.TabIndex = 67;
+            // 
+            // txt_email
+            // 
+            this.txt_email.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uEmail", true));
+            this.txt_email.Location = new System.Drawing.Point(76, 84);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(100, 20);
+            this.txt_email.TabIndex = 65;
+            // 
+            // txt_password
+            // 
+            this.txt_password.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uPassword", true));
+            this.txt_password.Location = new System.Drawing.Point(270, 33);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.Size = new System.Drawing.Size(100, 20);
+            this.txt_password.TabIndex = 64;
+            // 
+            // txt_username
+            // 
+            this.txt_username.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uName", true));
+            this.txt_username.Location = new System.Drawing.Point(270, 7);
+            this.txt_username.Name = "txt_username";
+            this.txt_username.Size = new System.Drawing.Size(100, 20);
+            this.txt_username.TabIndex = 61;
+            // 
+            // txt_lastname
+            // 
+            this.txt_lastname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "lName", true));
+            this.txt_lastname.Location = new System.Drawing.Point(76, 58);
+            this.txt_lastname.Name = "txt_lastname";
+            this.txt_lastname.Size = new System.Drawing.Size(100, 20);
+            this.txt_lastname.TabIndex = 59;
+            // 
+            // txt_firstname
+            // 
+            this.txt_firstname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "fName", true));
+            this.txt_firstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_firstname.Location = new System.Drawing.Point(76, 32);
+            this.txt_firstname.Name = "txt_firstname";
+            this.txt_firstname.Size = new System.Drawing.Size(100, 20);
+            this.txt_firstname.TabIndex = 57;
+            // 
+            // txt_userid
+            // 
+            this.txt_userid.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "userID", true));
+            this.txt_userid.Location = new System.Drawing.Point(76, 6);
+            this.txt_userid.Name = "txt_userid";
+            this.txt_userid.Size = new System.Drawing.Size(100, 20);
+            this.txt_userid.TabIndex = 55;
+            // 
+            // btn_update
+            // 
+            this.btn_update.Location = new System.Drawing.Point(238, 224);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(75, 23);
+            this.btn_update.TabIndex = 53;
+            this.btn_update.Text = "Update";
+            this.btn_update.UseVisualStyleBackColor = true;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Location = new System.Drawing.Point(157, 224);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_delete.TabIndex = 52;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            // 
+            // btn_save
+            // 
+            this.btn_save.Location = new System.Drawing.Point(76, 224);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(75, 23);
+            this.btn_save.TabIndex = 51;
+            this.btn_save.Text = "Save";
+            this.btn_save.UseVisualStyleBackColor = true;
+            // 
+            // btn_next
+            // 
+            this.btn_next.Location = new System.Drawing.Point(238, 195);
+            this.btn_next.Name = "btn_next";
+            this.btn_next.Size = new System.Drawing.Size(75, 23);
+            this.btn_next.TabIndex = 50;
+            this.btn_next.Text = "Next";
+            this.btn_next.UseVisualStyleBackColor = true;
+            // 
+            // btn_addnew
+            // 
+            this.btn_addnew.Location = new System.Drawing.Point(157, 195);
+            this.btn_addnew.Name = "btn_addnew";
+            this.btn_addnew.Size = new System.Drawing.Size(75, 23);
+            this.btn_addnew.TabIndex = 49;
+            this.btn_addnew.Text = "Add New";
+            this.btn_addnew.UseVisualStyleBackColor = true;
+            // 
+            // btn_previous
+            // 
+            this.btn_previous.Location = new System.Drawing.Point(76, 195);
+            this.btn_previous.Name = "btn_previous";
+            this.btn_previous.Size = new System.Drawing.Size(75, 23);
+            this.btn_previous.TabIndex = 48;
+            this.btn_previous.Text = "Previous";
+            this.btn_previous.UseVisualStyleBackColor = true;
             // 
             // categoriesRightPanel
             // 
@@ -899,167 +1064,6 @@
             this.AdsCategoriesRightPanel.Size = new System.Drawing.Size(397, 428);
             this.AdsCategoriesRightPanel.TabIndex = 4;
             // 
-            // usersRightPanel
-            // 
-            this.usersRightPanel.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.usersRightPanel.Controls.Add(uAgeLabel);
-            this.usersRightPanel.Controls.Add(this.uAgeTextBox);
-            this.usersRightPanel.Controls.Add(uPhoneLabel);
-            this.usersRightPanel.Controls.Add(this.txt_phone);
-            this.usersRightPanel.Controls.Add(uRecoverEmailLabel);
-            this.usersRightPanel.Controls.Add(this.txt_recoveremail);
-            this.usersRightPanel.Controls.Add(uEmailLabel);
-            this.usersRightPanel.Controls.Add(this.txt_email);
-            this.usersRightPanel.Controls.Add(uPasswordLabel);
-            this.usersRightPanel.Controls.Add(this.txt_password);
-            this.usersRightPanel.Controls.Add(uNameLabel);
-            this.usersRightPanel.Controls.Add(this.txt_username);
-            this.usersRightPanel.Controls.Add(lNameLabel);
-            this.usersRightPanel.Controls.Add(this.txt_lastname);
-            this.usersRightPanel.Controls.Add(fNameLabel);
-            this.usersRightPanel.Controls.Add(this.txt_firstname);
-            this.usersRightPanel.Controls.Add(useridlabel);
-            this.usersRightPanel.Controls.Add(this.txt_userid);
-            this.usersRightPanel.Controls.Add(this.btn_update);
-            this.usersRightPanel.Controls.Add(this.btn_delete);
-            this.usersRightPanel.Controls.Add(this.btn_save);
-            this.usersRightPanel.Controls.Add(this.btn_next);
-            this.usersRightPanel.Controls.Add(this.btn_addnew);
-            this.usersRightPanel.Controls.Add(this.btn_previous);
-            this.usersRightPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usersRightPanel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usersRightPanel.Location = new System.Drawing.Point(0, 0);
-            this.usersRightPanel.Name = "usersRightPanel";
-            this.usersRightPanel.Size = new System.Drawing.Size(397, 428);
-            this.usersRightPanel.TabIndex = 0;
-            // 
-            // uAgeTextBox
-            // 
-            this.uAgeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uAge", true));
-            this.uAgeTextBox.Location = new System.Drawing.Point(76, 138);
-            this.uAgeTextBox.Name = "uAgeTextBox";
-            this.uAgeTextBox.Size = new System.Drawing.Size(100, 20);
-            this.uAgeTextBox.TabIndex = 71;
-            // 
-            // txt_phone
-            // 
-            this.txt_phone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uPhone", true));
-            this.txt_phone.Location = new System.Drawing.Point(76, 112);
-            this.txt_phone.Name = "txt_phone";
-            this.txt_phone.Size = new System.Drawing.Size(100, 20);
-            this.txt_phone.TabIndex = 69;
-            // 
-            // txt_recoveremail
-            // 
-            this.txt_recoveremail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uRecoverEmail", true));
-            this.txt_recoveremail.Location = new System.Drawing.Point(270, 59);
-            this.txt_recoveremail.Name = "txt_recoveremail";
-            this.txt_recoveremail.Size = new System.Drawing.Size(100, 20);
-            this.txt_recoveremail.TabIndex = 67;
-            // 
-            // txt_email
-            // 
-            this.txt_email.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uEmail", true));
-            this.txt_email.Location = new System.Drawing.Point(76, 84);
-            this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(100, 20);
-            this.txt_email.TabIndex = 65;
-            // 
-            // txt_password
-            // 
-            this.txt_password.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uPassword", true));
-            this.txt_password.Location = new System.Drawing.Point(270, 33);
-            this.txt_password.Name = "txt_password";
-            this.txt_password.Size = new System.Drawing.Size(100, 20);
-            this.txt_password.TabIndex = 64;
-            // 
-            // txt_username
-            // 
-            this.txt_username.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uName", true));
-            this.txt_username.Location = new System.Drawing.Point(270, 7);
-            this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(100, 20);
-            this.txt_username.TabIndex = 61;
-            // 
-            // txt_lastname
-            // 
-            this.txt_lastname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "lName", true));
-            this.txt_lastname.Location = new System.Drawing.Point(76, 58);
-            this.txt_lastname.Name = "txt_lastname";
-            this.txt_lastname.Size = new System.Drawing.Size(100, 20);
-            this.txt_lastname.TabIndex = 59;
-            // 
-            // txt_firstname
-            // 
-            this.txt_firstname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "fName", true));
-            this.txt_firstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_firstname.Location = new System.Drawing.Point(76, 32);
-            this.txt_firstname.Name = "txt_firstname";
-            this.txt_firstname.Size = new System.Drawing.Size(100, 20);
-            this.txt_firstname.TabIndex = 57;
-            // 
-            // txt_userid
-            // 
-            this.txt_userid.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "userID", true));
-            this.txt_userid.Location = new System.Drawing.Point(76, 6);
-            this.txt_userid.Name = "txt_userid";
-            this.txt_userid.Size = new System.Drawing.Size(100, 20);
-            this.txt_userid.TabIndex = 55;
-            // 
-            // btn_update
-            // 
-            this.btn_update.Location = new System.Drawing.Point(238, 382);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(75, 23);
-            this.btn_update.TabIndex = 53;
-            this.btn_update.Text = "Update";
-            this.btn_update.UseVisualStyleBackColor = true;
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.Location = new System.Drawing.Point(157, 382);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(75, 23);
-            this.btn_delete.TabIndex = 52;
-            this.btn_delete.Text = "Delete";
-            this.btn_delete.UseVisualStyleBackColor = true;
-            // 
-            // btn_save
-            // 
-            this.btn_save.Location = new System.Drawing.Point(76, 382);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(75, 23);
-            this.btn_save.TabIndex = 51;
-            this.btn_save.Text = "Save";
-            this.btn_save.UseVisualStyleBackColor = true;
-            // 
-            // btn_next
-            // 
-            this.btn_next.Location = new System.Drawing.Point(238, 353);
-            this.btn_next.Name = "btn_next";
-            this.btn_next.Size = new System.Drawing.Size(75, 23);
-            this.btn_next.TabIndex = 50;
-            this.btn_next.Text = "Next";
-            this.btn_next.UseVisualStyleBackColor = true;
-            // 
-            // btn_addnew
-            // 
-            this.btn_addnew.Location = new System.Drawing.Point(157, 353);
-            this.btn_addnew.Name = "btn_addnew";
-            this.btn_addnew.Size = new System.Drawing.Size(75, 23);
-            this.btn_addnew.TabIndex = 49;
-            this.btn_addnew.Text = "Add New";
-            this.btn_addnew.UseVisualStyleBackColor = true;
-            // 
-            // btn_previous
-            // 
-            this.btn_previous.Location = new System.Drawing.Point(76, 353);
-            this.btn_previous.Name = "btn_previous";
-            this.btn_previous.Size = new System.Drawing.Size(75, 23);
-            this.btn_previous.TabIndex = 48;
-            this.btn_previous.Text = "Previous";
-            this.btn_previous.UseVisualStyleBackColor = true;
-            // 
             // adsTableBindingSource
             // 
             this.adsTableBindingSource.DataMember = "AdsTable";
@@ -1135,6 +1139,29 @@
             // 
             this.parentCategoriesTableAdapter.ClearBeforeFill = true;
             // 
+            // checkbox_blacklist
+            // 
+            this.checkbox_blacklist.AutoSize = true;
+            this.checkbox_blacklist.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkbox_blacklist.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.checkbox_blacklist.Location = new System.Drawing.Point(270, 91);
+            this.checkbox_blacklist.Name = "checkbox_blacklist";
+            this.checkbox_blacklist.Size = new System.Drawing.Size(84, 16);
+            this.checkbox_blacklist.TabIndex = 73;
+            this.checkbox_blacklist.Text = "Black List: ";
+            this.checkbox_blacklist.UseVisualStyleBackColor = true;
+            // 
+            // btn_lang
+            // 
+            this.btn_lang.BackColor = System.Drawing.Color.White;
+            this.btn_lang.Location = new System.Drawing.Point(1143, 36);
+            this.btn_lang.Name = "btn_lang";
+            this.btn_lang.Size = new System.Drawing.Size(75, 23);
+            this.btn_lang.TabIndex = 33;
+            this.btn_lang.Text = "Greek";
+            this.btn_lang.UseVisualStyleBackColor = false;
+            this.btn_lang.Click += new System.EventHandler(this.btn_lang_Click);
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1157,18 +1184,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.treeview_panel.ResumeLayout(false);
+            this.usersMidPanel.ResumeLayout(false);
+            this.usersMidPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSet)).EndInit();
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
             this.categoriesMidPanel.ResumeLayout(false);
             this.CategoriesTabC.ResumeLayout(false);
             this.AdsPropertiesTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.propertiesGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.propertiesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSet)).EndInit();
-            this.usersMidPanel.ResumeLayout(false);
-            this.usersMidPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
-            this.statusStrip.ResumeLayout(false);
-            this.statusStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adCategoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSetBindingSource)).EndInit();
@@ -1177,12 +1204,12 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.usersRightPanel.ResumeLayout(false);
+            this.usersRightPanel.PerformLayout();
             this.categoriesRightPanel.ResumeLayout(false);
             this.PropertiesRightPanel.ResumeLayout(false);
             this.PropertiesRightPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.parentCategoriesBindingSource)).EndInit();
-            this.usersRightPanel.ResumeLayout(false);
-            this.usersRightPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adsTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userCategoriesBindingSource)).EndInit();
@@ -1237,7 +1264,7 @@
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel Statuslabel;
         private System.Windows.Forms.Panel usersRightPanel;
-        private System.Windows.Forms.TextBox uAgeTextBox;
+        private System.Windows.Forms.TextBox txt_age;
         private System.Windows.Forms.TextBox txt_phone;
         private System.Windows.Forms.TextBox txt_recoveremail;
         private System.Windows.Forms.TextBox txt_email;
@@ -1303,6 +1330,7 @@
 
         private System.Windows.Forms.Button btn_settings;
         public System.Windows.Forms.Button btn_category;
-
+        private System.Windows.Forms.CheckBox checkbox_blacklist;
+        private System.Windows.Forms.Button btn_lang;
     }
 }
