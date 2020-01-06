@@ -117,73 +117,107 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="addingPropertyLabel.Text" xml:space="preserve">
-    <value>Προσθήκη καινούργιας ιδιοκτησίας</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="uAgeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 104</value>
   </data>
-  <data name="btn_addnew.Text" xml:space="preserve">
-    <value>Προσθήκη</value>
-  </data>
-  <data name="btn_delete.Text" xml:space="preserve">
-    <value>Διαγραφή</value>
-  </data>
-  <data name="btn_lang.Text" xml:space="preserve">
-    <value>Αγγλικά</value>
-  </data>
-  <data name="btn_next.Text" xml:space="preserve">
-    <value>Επόμενο</value>
-  </data>
-  <data name="btn_previous.Text" xml:space="preserve">
-    <value>Προηγούμενο</value>
-  </data>
-  <data name="btn_save.Text" xml:space="preserve">
-    <value>Αποθήκευση</value>
-  </data>
-  <data name="btn_update.Text" xml:space="preserve">
-    <value>Εκσυγχρόνιση</value>
-  </data>
-  <data name="checkbox_blacklist.Text" xml:space="preserve">
-    <value>Μαυρή Λίστα</value>
-  </data>
-  <data name="editpropertyLabel.Text" xml:space="preserve">
-    <value>Επεξεργασία επιλεγμένης ιδιοκτησίας</value>
-  </data>
-  <data name="fNameLabel.Text" xml:space="preserve">
-    <value>Όνομα:</value>
-  </data>
-  <data name="lNameLabel.Text" xml:space="preserve">
-    <value>Επίθετο:</value>
-  </data>
-  <data name="propertyAddButton.Text" xml:space="preserve">
-    <value>Προσθήκη</value>
-  </data>
-  <data name="propertynameLabel.Text" xml:space="preserve">
-    <value>Όνομα ιδιοκτησίας</value>
-  </data>
-  <data name="searchlabel.Text" xml:space="preserve">
-    <value>Αναζήτηση</value>
+  <data name="uAgeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 13</value>
   </data>
   <data name="uAgeLabel.Text" xml:space="preserve">
     <value>Ηλικία:</value>
   </data>
-  <data name="uEmailLabel.Text" xml:space="preserve">
-    <value>Email:</value>
+  <data name="uPhoneLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 78</value>
   </data>
-  <data name="uNameLabel.Text" xml:space="preserve">
-    <value>Όνομα χρήστη:</value>
-  </data>
-  <data name="uPasswordLabel.Text" xml:space="preserve">
-    <value>Κωδικός:</value>
+  <data name="uPhoneLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
   </data>
   <data name="uPhoneLabel.Text" xml:space="preserve">
     <value>Τηλέφωνο:</value>
   </data>
+  <data name="uRecoverEmailLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 208</value>
+  </data>
+  <data name="uRecoverEmailLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 13</value>
+  </data>
   <data name="uRecoverEmailLabel.Text" xml:space="preserve">
-    <value>Ανάκτηση Email:</value>
+    <value>Email ανάκτησης:</value>
   </data>
-  <data name="useridlabel.Text" xml:space="preserve">
-    <value>Κωδικός χρήστη:</value>
+  <data name="uEmailLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>81, 182</value>
   </data>
-  <data name="whichcatLabel.Text" xml:space="preserve">
-    <value>Σε ποια κατηγορία θέλετε να αναθέσετε αυτή την ιδιοκτησία;</value>
+  <data name="uPasswordLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 156</value>
+  </data>
+  <data name="uPasswordLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 13</value>
+  </data>
+  <data name="uPasswordLabel.Text" xml:space="preserve">
+    <value>Κωδικός</value>
+  </data>
+  <data name="uNameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 130</value>
+  </data>
+  <data name="uNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 13</value>
+  </data>
+  <data name="uNameLabel.Text" xml:space="preserve">
+    <value>Όνομα Χρήστη:</value>
+  </data>
+  <data name="lNameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>67, 52</value>
+  </data>
+  <data name="lNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 13</value>
+  </data>
+  <data name="lNameLabel.Text" xml:space="preserve">
+    <value>Επίθετο:</value>
+  </data>
+  <data name="fNameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 26</value>
+  </data>
+  <data name="fNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 13</value>
+  </data>
+  <data name="fNameLabel.Text" xml:space="preserve">
+    <value>Όνομα:</value>
+  </data>
+  <data name="btn_submit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 227</value>
+  </data>
+  <data name="btn_submit.Text" xml:space="preserve">
+    <value>Υποβολή</value>
+  </data>
+  <data name="txt_age.Location" type="System.Drawing.Point, System.Drawing">
+    <value>122, 97</value>
+  </data>
+  <data name="txt_phone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>122, 71</value>
+  </data>
+  <data name="txt_recoveremail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>122, 201</value>
+  </data>
+  <data name="txt_email.Location" type="System.Drawing.Point, System.Drawing">
+    <value>122, 175</value>
+  </data>
+  <data name="txt_password.Location" type="System.Drawing.Point, System.Drawing">
+    <value>122, 149</value>
+  </data>
+  <data name="txt_username.Location" type="System.Drawing.Point, System.Drawing">
+    <value>122, 123</value>
+  </data>
+  <data name="txt_lastname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>122, 45</value>
+  </data>
+  <data name="txt_firstname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>122, 19</value>
+  </data>
+  <data name="CreateAccGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>290, 269</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>356, 320</value>
   </data>
 </root>

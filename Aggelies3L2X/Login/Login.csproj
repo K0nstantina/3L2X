@@ -78,6 +78,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CreateAccountForm.el.resx">
+      <DependentUpon>CreateAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAccountForm.en.resx">
+      <DependentUpon>CreateAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateAccountForm.resx">
       <DependentUpon>CreateAccountForm.cs</DependentUpon>
     </EmbeddedResource>

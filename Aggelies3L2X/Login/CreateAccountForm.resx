@@ -117,35 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_submit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 227</value>
-  </data>
-  <data name="btn_submit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btn_submit.TabIndex" type="System.Int32, mscorlib">
-    <value>109</value>
-  </data>
-  <data name="btn_submit.Text" xml:space="preserve">
-    <value>Submit</value>
-  </data>
-  <data name="&gt;&gt;btn_submit.Name" xml:space="preserve">
-    <value>btn_submit</value>
-  </data>
-  <data name="&gt;&gt;btn_submit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_submit.Parent" xml:space="preserve">
-    <value>CreateAccGroupBox</value>
-  </data>
-  <data name="&gt;&gt;btn_submit.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <metadata name="uAgeLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="uAgeLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -153,6 +128,7 @@
   <data name="uAgeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="uAgeLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>43, 104</value>
   </data>
@@ -176,27 +152,6 @@
   </data>
   <data name="&gt;&gt;uAgeLabel.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="txt_age.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 97</value>
-  </data>
-  <data name="txt_age.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="txt_age.TabIndex" type="System.Int32, mscorlib">
-    <value>108</value>
-  </data>
-  <data name="&gt;&gt;txt_age.Name" xml:space="preserve">
-    <value>txt_age</value>
-  </data>
-  <data name="&gt;&gt;txt_age.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_age.Parent" xml:space="preserve">
-    <value>CreateAccGroupBox</value>
-  </data>
-  <data name="&gt;&gt;txt_age.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <metadata name="uPhoneLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -231,27 +186,6 @@
   <data name="&gt;&gt;uPhoneLabel.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="txt_phone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 71</value>
-  </data>
-  <data name="txt_phone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="txt_phone.TabIndex" type="System.Int32, mscorlib">
-    <value>106</value>
-  </data>
-  <data name="&gt;&gt;txt_phone.Name" xml:space="preserve">
-    <value>txt_phone</value>
-  </data>
-  <data name="&gt;&gt;txt_phone.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_phone.Parent" xml:space="preserve">
-    <value>CreateAccGroupBox</value>
-  </data>
-  <data name="&gt;&gt;txt_phone.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
   <metadata name="uRecoverEmailLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
@@ -284,27 +218,6 @@
   </data>
   <data name="&gt;&gt;uRecoverEmailLabel.ZOrder" xml:space="preserve">
     <value>11</value>
-  </data>
-  <data name="txt_recoveremail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 201</value>
-  </data>
-  <data name="txt_recoveremail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="txt_recoveremail.TabIndex" type="System.Int32, mscorlib">
-    <value>104</value>
-  </data>
-  <data name="&gt;&gt;txt_recoveremail.Name" xml:space="preserve">
-    <value>txt_recoveremail</value>
-  </data>
-  <data name="&gt;&gt;txt_recoveremail.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_recoveremail.Parent" xml:space="preserve">
-    <value>CreateAccGroupBox</value>
-  </data>
-  <data name="&gt;&gt;txt_recoveremail.ZOrder" xml:space="preserve">
-    <value>13</value>
   </data>
   <metadata name="uEmailLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -339,27 +252,6 @@
   <data name="&gt;&gt;uEmailLabel.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="txt_email.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 175</value>
-  </data>
-  <data name="txt_email.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="txt_email.TabIndex" type="System.Int32, mscorlib">
-    <value>102</value>
-  </data>
-  <data name="&gt;&gt;txt_email.Name" xml:space="preserve">
-    <value>txt_email</value>
-  </data>
-  <data name="&gt;&gt;txt_email.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_email.Parent" xml:space="preserve">
-    <value>CreateAccGroupBox</value>
-  </data>
-  <data name="&gt;&gt;txt_email.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
   <metadata name="uPasswordLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
@@ -392,27 +284,6 @@
   </data>
   <data name="&gt;&gt;uPasswordLabel.ZOrder" xml:space="preserve">
     <value>14</value>
-  </data>
-  <data name="txt_password.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 149</value>
-  </data>
-  <data name="txt_password.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="txt_password.TabIndex" type="System.Int32, mscorlib">
-    <value>101</value>
-  </data>
-  <data name="&gt;&gt;txt_password.Name" xml:space="preserve">
-    <value>txt_password</value>
-  </data>
-  <data name="&gt;&gt;txt_password.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_password.Parent" xml:space="preserve">
-    <value>CreateAccGroupBox</value>
-  </data>
-  <data name="&gt;&gt;txt_password.ZOrder" xml:space="preserve">
-    <value>12</value>
   </data>
   <metadata name="uNameLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -447,27 +318,6 @@
   <data name="&gt;&gt;uNameLabel.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="txt_username.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 123</value>
-  </data>
-  <data name="txt_username.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="txt_username.TabIndex" type="System.Int32, mscorlib">
-    <value>98</value>
-  </data>
-  <data name="&gt;&gt;txt_username.Name" xml:space="preserve">
-    <value>txt_username</value>
-  </data>
-  <data name="&gt;&gt;txt_username.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_username.Parent" xml:space="preserve">
-    <value>CreateAccGroupBox</value>
-  </data>
-  <data name="&gt;&gt;txt_username.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
   <metadata name="lNameLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
@@ -501,27 +351,6 @@
   <data name="&gt;&gt;lNameLabel.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="txt_lastname.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 45</value>
-  </data>
-  <data name="txt_lastname.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="txt_lastname.TabIndex" type="System.Int32, mscorlib">
-    <value>96</value>
-  </data>
-  <data name="&gt;&gt;txt_lastname.Name" xml:space="preserve">
-    <value>txt_lastname</value>
-  </data>
-  <data name="&gt;&gt;txt_lastname.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_lastname.Parent" xml:space="preserve">
-    <value>CreateAccGroupBox</value>
-  </data>
-  <data name="&gt;&gt;txt_lastname.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <metadata name="fNameLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
@@ -554,6 +383,177 @@
   </data>
   <data name="&gt;&gt;fNameLabel.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="btn_submit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 227</value>
+  </data>
+  <data name="btn_submit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btn_submit.TabIndex" type="System.Int32, mscorlib">
+    <value>109</value>
+  </data>
+  <data name="btn_submit.Text" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="&gt;&gt;btn_submit.Name" xml:space="preserve">
+    <value>btn_submit</value>
+  </data>
+  <data name="&gt;&gt;btn_submit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_submit.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;btn_submit.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txt_age.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 97</value>
+  </data>
+  <data name="txt_age.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txt_age.TabIndex" type="System.Int32, mscorlib">
+    <value>108</value>
+  </data>
+  <data name="&gt;&gt;txt_age.Name" xml:space="preserve">
+    <value>txt_age</value>
+  </data>
+  <data name="&gt;&gt;txt_age.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_age.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;txt_age.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="txt_phone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 71</value>
+  </data>
+  <data name="txt_phone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txt_phone.TabIndex" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="&gt;&gt;txt_phone.Name" xml:space="preserve">
+    <value>txt_phone</value>
+  </data>
+  <data name="&gt;&gt;txt_phone.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_phone.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;txt_phone.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="txt_recoveremail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 201</value>
+  </data>
+  <data name="txt_recoveremail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txt_recoveremail.TabIndex" type="System.Int32, mscorlib">
+    <value>104</value>
+  </data>
+  <data name="&gt;&gt;txt_recoveremail.Name" xml:space="preserve">
+    <value>txt_recoveremail</value>
+  </data>
+  <data name="&gt;&gt;txt_recoveremail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_recoveremail.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;txt_recoveremail.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="txt_email.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 175</value>
+  </data>
+  <data name="txt_email.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txt_email.TabIndex" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <data name="&gt;&gt;txt_email.Name" xml:space="preserve">
+    <value>txt_email</value>
+  </data>
+  <data name="&gt;&gt;txt_email.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_email.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;txt_email.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="txt_password.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 149</value>
+  </data>
+  <data name="txt_password.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txt_password.TabIndex" type="System.Int32, mscorlib">
+    <value>101</value>
+  </data>
+  <data name="&gt;&gt;txt_password.Name" xml:space="preserve">
+    <value>txt_password</value>
+  </data>
+  <data name="&gt;&gt;txt_password.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_password.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;txt_password.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="txt_username.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 123</value>
+  </data>
+  <data name="txt_username.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txt_username.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="&gt;&gt;txt_username.Name" xml:space="preserve">
+    <value>txt_username</value>
+  </data>
+  <data name="&gt;&gt;txt_username.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_username.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;txt_username.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="txt_lastname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 45</value>
+  </data>
+  <data name="txt_lastname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txt_lastname.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="&gt;&gt;txt_lastname.Name" xml:space="preserve">
+    <value>txt_lastname</value>
+  </data>
+  <data name="&gt;&gt;txt_lastname.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_lastname.Parent" xml:space="preserve">
+    <value>CreateAccGroupBox</value>
+  </data>
+  <data name="&gt;&gt;txt_lastname.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="txt_firstname.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
@@ -601,6 +601,30 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CreateAccGroupBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lang_button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>250, 28</value>
+  </data>
+  <data name="lang_button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 23</value>
+  </data>
+  <data name="lang_button.TabIndex" type="System.Int32, mscorlib">
+    <value>111</value>
+  </data>
+  <data name="lang_button.Text" xml:space="preserve">
+    <value>GR</value>
+  </data>
+  <data name="&gt;&gt;lang_button.Name" xml:space="preserve">
+    <value>lang_button</value>
+  </data>
+  <data name="&gt;&gt;lang_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lang_button.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lang_button.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

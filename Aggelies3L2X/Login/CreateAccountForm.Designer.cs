@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccountForm));
             System.Windows.Forms.Label uAgeLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccountForm));
             System.Windows.Forms.Label uPhoneLabel;
             System.Windows.Forms.Label uRecoverEmailLabel;
             System.Windows.Forms.Label uEmailLabel;
@@ -47,6 +47,7 @@
             this.txt_lastname = new System.Windows.Forms.TextBox();
             this.txt_firstname = new System.Windows.Forms.TextBox();
             this.CreateAccGroupBox = new System.Windows.Forms.GroupBox();
+            this.lang_button = new System.Windows.Forms.Button();
             uAgeLabel = new System.Windows.Forms.Label();
             uPhoneLabel = new System.Windows.Forms.Label();
             uRecoverEmailLabel = new System.Windows.Forms.Label();
@@ -58,86 +59,87 @@
             this.CreateAccGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btn_submit
-            // 
-            resources.ApplyResources(this.btn_submit, "btn_submit");
-            this.btn_submit.Name = "btn_submit";
-            this.btn_submit.UseVisualStyleBackColor = true;
-            // 
             // uAgeLabel
             // 
             resources.ApplyResources(uAgeLabel, "uAgeLabel");
             uAgeLabel.Name = "uAgeLabel";
-            // 
-            // txt_age
-            // 
-            resources.ApplyResources(this.txt_age, "txt_age");
-            this.txt_age.Name = "txt_age";
             // 
             // uPhoneLabel
             // 
             resources.ApplyResources(uPhoneLabel, "uPhoneLabel");
             uPhoneLabel.Name = "uPhoneLabel";
             // 
-            // txt_phone
-            // 
-            resources.ApplyResources(this.txt_phone, "txt_phone");
-            this.txt_phone.Name = "txt_phone";
-            // 
             // uRecoverEmailLabel
             // 
             resources.ApplyResources(uRecoverEmailLabel, "uRecoverEmailLabel");
             uRecoverEmailLabel.Name = "uRecoverEmailLabel";
-            // 
-            // txt_recoveremail
-            // 
-            resources.ApplyResources(this.txt_recoveremail, "txt_recoveremail");
-            this.txt_recoveremail.Name = "txt_recoveremail";
             // 
             // uEmailLabel
             // 
             resources.ApplyResources(uEmailLabel, "uEmailLabel");
             uEmailLabel.Name = "uEmailLabel";
             // 
-            // txt_email
-            // 
-            resources.ApplyResources(this.txt_email, "txt_email");
-            this.txt_email.Name = "txt_email";
-            // 
             // uPasswordLabel
             // 
             resources.ApplyResources(uPasswordLabel, "uPasswordLabel");
             uPasswordLabel.Name = "uPasswordLabel";
-            // 
-            // txt_password
-            // 
-            resources.ApplyResources(this.txt_password, "txt_password");
-            this.txt_password.Name = "txt_password";
             // 
             // uNameLabel
             // 
             resources.ApplyResources(uNameLabel, "uNameLabel");
             uNameLabel.Name = "uNameLabel";
             // 
-            // txt_username
-            // 
-            resources.ApplyResources(this.txt_username, "txt_username");
-            this.txt_username.Name = "txt_username";
-            // 
             // lNameLabel
             // 
             resources.ApplyResources(lNameLabel, "lNameLabel");
             lNameLabel.Name = "lNameLabel";
             // 
-            // txt_lastname
-            // 
-            resources.ApplyResources(this.txt_lastname, "txt_lastname");
-            this.txt_lastname.Name = "txt_lastname";
-            // 
             // fNameLabel
             // 
             resources.ApplyResources(fNameLabel, "fNameLabel");
             fNameLabel.Name = "fNameLabel";
+            // 
+            // btn_submit
+            // 
+            resources.ApplyResources(this.btn_submit, "btn_submit");
+            this.btn_submit.Name = "btn_submit";
+            this.btn_submit.UseVisualStyleBackColor = true;
+            this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
+            // 
+            // txt_age
+            // 
+            resources.ApplyResources(this.txt_age, "txt_age");
+            this.txt_age.Name = "txt_age";
+            // 
+            // txt_phone
+            // 
+            resources.ApplyResources(this.txt_phone, "txt_phone");
+            this.txt_phone.Name = "txt_phone";
+            // 
+            // txt_recoveremail
+            // 
+            resources.ApplyResources(this.txt_recoveremail, "txt_recoveremail");
+            this.txt_recoveremail.Name = "txt_recoveremail";
+            // 
+            // txt_email
+            // 
+            resources.ApplyResources(this.txt_email, "txt_email");
+            this.txt_email.Name = "txt_email";
+            // 
+            // txt_password
+            // 
+            resources.ApplyResources(this.txt_password, "txt_password");
+            this.txt_password.Name = "txt_password";
+            // 
+            // txt_username
+            // 
+            resources.ApplyResources(this.txt_username, "txt_username");
+            this.txt_username.Name = "txt_username";
+            // 
+            // txt_lastname
+            // 
+            resources.ApplyResources(this.txt_lastname, "txt_lastname");
+            this.txt_lastname.Name = "txt_lastname";
             // 
             // txt_firstname
             // 
@@ -167,10 +169,18 @@
             this.CreateAccGroupBox.Name = "CreateAccGroupBox";
             this.CreateAccGroupBox.TabStop = false;
             // 
+            // lang_button
+            // 
+            resources.ApplyResources(this.lang_button, "lang_button");
+            this.lang_button.Name = "lang_button";
+            this.lang_button.UseVisualStyleBackColor = true;
+            this.lang_button.Click += new System.EventHandler(this.lang_button_Click);
+            // 
             // CreateAccountForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lang_button);
             this.Controls.Add(this.CreateAccGroupBox);
             this.Name = "CreateAccountForm";
             this.Load += new System.EventHandler(this.CreateAccountForm_Load);
@@ -193,5 +203,6 @@
         private System.Windows.Forms.TextBox txt_lastname;
         private System.Windows.Forms.TextBox txt_firstname;
         private System.Windows.Forms.GroupBox CreateAccGroupBox;
+        private System.Windows.Forms.Button lang_button;
     }
 }
