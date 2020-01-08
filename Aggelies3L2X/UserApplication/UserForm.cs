@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
-
 namespace UserApplication
 {
     public partial class UserForm : Form
@@ -370,6 +369,34 @@ namespace UserApplication
                 MessageBox.Show("nope");
             }
         }
+        /// <summary>
+        /// Event Handler fot publishButton Click.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void publishButton_Click(object sender, EventArgs e)
+        {
+            view = adsListBox.SelectedItem as DataRowView;
+            int adid = Int32.Parse(view["adID"].ToString());
+            string publishQuery;
+            // Setup Query.
+            if (view["Published"].ToString() == "True")
+            {
+                publishQuery = "UPDATE AdsTable SET Published=No WHERE adID=" + adid + "";
+            }
+            else
+            {
+                publishQuery = "UPDATE AdsTable SET Published=Yes WHERE adID=" + adid + "";
+            }
+            // Open connection.
+            OleDbConnection connection = new OleDbConnection(connectionString);
+            OleDbCommand command = new OleDbCommand(publishQuery, connection);
+
+            connection.Open();
+            command.ExecuteNonQuery();
+            connection.Close();
+            updateFields();
+        }
         #endregion
 
         #region Profile Panel Methods
@@ -605,6 +632,11 @@ namespace UserApplication
         #endregion
 
         #region Signup Panel Methods
+        /// <summary>
+        /// Event Handler for signupButton Click.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void signupSaveButton_Click(object sender, EventArgs e)
         {
             // Setup Query.
@@ -626,6 +658,7 @@ namespace UserApplication
         /// <param name="e"></param>
         private void MainForm_Load(object sender, EventArgs e)
         {
+            // Initialize the lists.
             adsListBox_SelectedIndexChanged(adsListBox, e);
             categoriesListBox_SelectedIndexChanged(categoriesListBox,e);
         }
@@ -661,6 +694,7 @@ namespace UserApplication
 
         /// <summary>
         /// Updates the profile panel with current user info.
+        /// Also updates the users Ads.
         /// </summary>
         private void updateFields()
         {
@@ -700,31 +734,9 @@ namespace UserApplication
             }
             connection.Close();
         }
-
-        private void publishButton_Click(object sender, EventArgs e)
-        {
-            view = adsListBox.SelectedItem as DataRowView;
-            int adid = Int32.Parse(view["adID"].ToString());
-            string publishQuery;
-            // Setup Query.
-            if (view["Published"].ToString()=="True")
-            {
-                publishQuery = "UPDATE AdsTable SET Published=No WHERE adID=" + adid + "";
-            }
-            else
-            {
-                publishQuery = "UPDATE AdsTable SET Published=Yes WHERE adID=" + adid + "";
-            }
-            // Open connection.
-            OleDbConnection connection = new OleDbConnection(connectionString);
-            OleDbCommand command = new OleDbCommand(publishQuery, connection);
-            
-            connection.Open();
-            command.ExecuteNonQuery();
-            connection.Close();
-            updateFields();
-        }
-
+        /// <summary>
+        /// Initialize the images relative path.
+        /// </summary>
         private void setImagesPath()
         {
             // Set images and userImages location.
@@ -737,6 +749,10 @@ namespace UserApplication
             str += @"UserApplication\Resources\userImages\";
             userImagesLocation = str;
         }
+        /// <summary>
+        /// Initialize the WPF custom control used as navigation menu.
+        /// </summary>
+        /// <param name="uid"></param>
         private void setWPFControl(int uid)
         {
             // Add WPF control to host and set the event handlers.
