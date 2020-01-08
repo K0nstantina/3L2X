@@ -17,6 +17,7 @@ namespace UserApplication
         DataRowView view;
         BindingSource bs = new BindingSource();
         int userid;
+        string connectionString = Properties.Settings.Default.AggeliesDBConnectionString;
         private string imgName, imgNewPath, imagesLocation, userImagesLocation;
         #endregion
 
@@ -59,25 +60,11 @@ namespace UserApplication
         }
         private void AdsBut_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            if (userid != 9999)
-            {
-                panels[2].BringToFront();
-            }
-            else
-            {
-                MessageBox.Show("Create an account to procced!!");
-            }
+            signupPrompt(2);
         }
         private void ProfileBut_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            if (userid != 9999)
-            {
-                panels[3].BringToFront();
-            }
-            else
-            {
-                MessageBox.Show("Create an account to procced!!");
-            }
+            signupPrompt(3);
         }
         private void SettingBut_Click(object sender, System.Windows.RoutedEventArgs e)
         {
@@ -328,10 +315,14 @@ namespace UserApplication
                 if (view["published"].ToString() == "True")
                 {
                     publishedTextBox.Text = "Published";
+                    publishedTextBox.BackColor = Color.Green;
+                    publishButton.Text = "Κατάργηση";
                 }
                 else
                 {
                     publishedTextBox.Text = "Not yet published";
+                    publishedTextBox.BackColor = Color.DarkRed;
+                    publishButton.Text = "Δημοσίευση";
                 }
             }
             catch (Exception x)
@@ -458,14 +449,17 @@ namespace UserApplication
         /// <param name="e">Click</param>
         private void saveButton_Click(object sender, EventArgs e)
         {
-            string uname, fname, lname, umail, upass;
+            string uname, fname, lname, umail, upass,  urmail, uage, uphone;
             uname = uNameTextBox.Text;
             fname = fNameTextBox.Text;
             lname = lNameTextBox.Text;
             umail = uEmailTextBox.Text;
             upass = uPasswordTextBox.Text;
+            urmail = uREmailTextBox.Text;
+            uage = uAgeTextBox.Text;
+            uphone = uPhoneTextBox.Text;
 
-            if (uname != "" && fname != "" && lname != "" && umail != "" && upass != "")
+            if (uname != "" && fname != "" && lname != "" && umail != "" && upass != "" && urmail != "" && uage!= "" && uphone != "")
             {
                 try
                 {
@@ -610,6 +604,20 @@ namespace UserApplication
         }
         #endregion
 
+        #region Signup Panel Methods
+        private void signupSaveButton_Click(object sender, EventArgs e)
+        {
+            // Setup Query.
+            string newUserQuery = "INSERT INTO Users ()";
+            // Open connection.
+            //OleDbConnection connection = new OleDbConnection(connectionString);
+            //OleDbCommand command = new OleDbCommand(newUserQuery, connection);
+            //connection.Open();
+
+            //connection.Close();
+        }
+        #endregion
+
         #region General Methods
         /// <summary>
         /// Form Load.
@@ -642,8 +650,8 @@ namespace UserApplication
             panels.Add(adsPanel);
             panels.Add(profilePanel);
             panels.Add(settingsPanel);
+            panels.Add(signupPanel);
             
-
             panels[0].BringToFront();
 
             recentAdsList.Add(recentAds1);
@@ -656,22 +664,67 @@ namespace UserApplication
         /// </summary>
         private void updateFields()
         {
+            int sIndex = adsListBox.SelectedIndex;
             // Find current users Ads
             this.adsTableTableAdapter.AdsPerUser(this.aggeliesDBDataSet.AdsTable, userid);
-
+            adsListBox.SelectedIndex = sIndex;
             // Set the avatarPictureBox image location.
             try
             {
                 avatarPictureBox.ImageLocation = userImagesLocation + usersTableAdapter1.SelectUserImageQuery(userid).ToString();
             }
             catch (Exception) { }
-            // Set textboxes according to user info.
-            uNameTextBox.Text = usersTableAdapter1.SelectUsernameQuery(userid).ToString();
-            fNameTextBox.Text = usersTableAdapter1.SelectFirstNameQuery(userid).ToString();
-            lNameTextBox.Text = usersTableAdapter1.SelectLastNameQuery(userid).ToString();
-            uEmailTextBox.Text = usersTableAdapter1.SelectUserEmailQuery(userid).ToString();
-            uPasswordTextBox.Text = usersTableAdapter1.SelectUserPasswordQuery(userid).ToString();
+
+            // Setup Query, declare reader.
+            string unameQuery = "SELECT uName, uPassword, fName, lName, uAge, uPhone, uEmail, uRecoverEmail FROM Users WHERE userID=" + userid + "";
+            OleDbDataReader reader;
+            // Open connection.
+            OleDbConnection connection = new OleDbConnection(connectionString);
+            OleDbCommand command = new OleDbCommand(unameQuery, connection);
+            connection.Open();
+            // Execute reader.
+            reader = command.ExecuteReader();
+            // If user exists.
+            if (reader.HasRows)
+            {
+                reader.Read();
+                uNameTextBox.Text = reader["uName"].ToString();
+                fNameTextBox.Text = reader["fName"].ToString();
+                lNameTextBox.Text = reader["lName"].ToString();
+                uEmailTextBox.Text = reader["uEmail"].ToString();
+                uREmailTextBox.Text = reader["uRecoverEmail"].ToString();
+                uAgeTextBox.Text = reader["uAge"].ToString();
+                uPhoneTextBox.Text = reader["uPhone"].ToString();
+                uPasswordTextBox.Text = reader["uPassword"].ToString();
+                reader.Close();
+            }
+            connection.Close();
         }
+
+        private void publishButton_Click(object sender, EventArgs e)
+        {
+            view = adsListBox.SelectedItem as DataRowView;
+            int adid = Int32.Parse(view["adID"].ToString());
+            string publishQuery;
+            // Setup Query.
+            if (view["Published"].ToString()=="True")
+            {
+                publishQuery = "UPDATE AdsTable SET Published=No WHERE adID=" + adid + "";
+            }
+            else
+            {
+                publishQuery = "UPDATE AdsTable SET Published=Yes WHERE adID=" + adid + "";
+            }
+            // Open connection.
+            OleDbConnection connection = new OleDbConnection(connectionString);
+            OleDbCommand command = new OleDbCommand(publishQuery, connection);
+            
+            connection.Open();
+            command.ExecuteNonQuery();
+            connection.Close();
+            updateFields();
+        }
+
         private void setImagesPath()
         {
             // Set images and userImages location.
@@ -694,14 +747,27 @@ namespace UserApplication
             userMenu.categoriesButton.Click += CatBut_Click;
             userMenu.logoutButton.Click += LogoutBut_Click;
             userMenu.settingsButton.Click += SettingBut_Click;
-
-            if (uid!=9999)
+            userMenu.adsButton.Click += AdsBut_Click;
+            userMenu.profileButton.Click += ProfileBut_Click;
+        }
+        /// <summary>
+        /// Message to prompt user to signup.
+        /// </summary>
+        /// <param name="panel"></param>
+        private void signupPrompt(int panel)
+        {
+            if (userid != 9999)
             {
-                userMenu.adsButton.Click += AdsBut_Click;
-                userMenu.profileButton.Click += ProfileBut_Click;
+                panels[panel].BringToFront();
+            }
+            else
+            {
+                if (MessageBox.Show("Απαιτείται δημιουργία λογαριασμού! \nΔημιουργία?", "Επιβεβαίωση", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    panels[5].BringToFront();
+                }
             }
         }
-
         #endregion
 
         #endregion

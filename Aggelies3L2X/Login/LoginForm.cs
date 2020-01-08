@@ -42,6 +42,7 @@ namespace Login
                 reader.Read();
                 string uid = reader["userID"].ToString();
                 reader.Close();
+                connection.Close();
                 this.Hide();
                 UserApplication.UserForm userForm = new UserApplication.UserForm(int.Parse(uid));
                 userForm.Show();    
