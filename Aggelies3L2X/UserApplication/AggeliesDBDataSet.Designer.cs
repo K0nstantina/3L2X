@@ -5130,7 +5130,7 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::UserApplication.Properties.Settings.Default.AggeliesDBConnectionString;
+            this._connection.ConnectionString = global::UserApplication.Properties.Settings.Default.AggeliesDBConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5924,7 +5924,7 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::UserApplication.Properties.Settings.Default.AggeliesDBConnectionString;
+            this._connection.ConnectionString = global::UserApplication.Properties.Settings.Default.AggeliesDBConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
