@@ -110,7 +110,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AggeliesDB.accdb" />
+    <Content Include="AggeliesDB.accdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\aggeliesWpfLab\aggeliesWpfLab.csproj">

@@ -47,6 +47,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingWPFhostControl", "Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserApplication", "UserApplication\UserApplication.csproj", "{67951149-BAD1-4426-B344-E50D9CB95A51}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppData", "AppData", "{9D385313-CC44-42B0-A258-A10C060A8B97}"
+	ProjectSection(SolutionItems) = preProject
+		App_Data\AggeliesDB.accdb = App_Data\AggeliesDB.accdb
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
