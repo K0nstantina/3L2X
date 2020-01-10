@@ -51,6 +51,7 @@ namespace UserApplication
         private void HomeButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             panels[0].BringToFront();
+            
             recentAds();
         }
         private void CatBut_Click(object sender, System.Windows.RoutedEventArgs e)

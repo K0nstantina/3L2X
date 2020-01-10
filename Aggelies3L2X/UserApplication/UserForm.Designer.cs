@@ -31,10 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
             this.topPanel = new System.Windows.Forms.Panel();
+            this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
             this.footerPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
-            this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
-            this.userMenuIcons2 = new aggeliesWpfLab.UserMenuIcons();
             this.settingsPanel = new System.Windows.Forms.Panel();
             this.fontSizeGroupBox = new System.Windows.Forms.GroupBox();
             this.largeRadioButton = new System.Windows.Forms.RadioButton();
@@ -128,7 +127,7 @@
             this.adsTableTableAdapter = new UserApplication.AggeliesDBDataSetTableAdapters.AdsTableTableAdapter();
             this.usersTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.UsersTableAdapter();
             this.adCategoryTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.AdCategoryTableAdapter();
-            this.rightPanel.SuspendLayout();
+            this.topPanel.SuspendLayout();
             this.settingsPanel.SuspendLayout();
             this.fontSizeGroupBox.SuspendLayout();
             this.panelColorsGroupBox.SuspendLayout();
@@ -153,11 +152,22 @@
             // topPanel
             // 
             this.topPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.topPanel.Controls.Add(this.elementHost1);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1064, 108);
             this.topPanel.TabIndex = 0;
+            // 
+            // elementHost1
+            // 
+            this.elementHost1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.elementHost1.Location = new System.Drawing.Point(138, 0);
+            this.elementHost1.Name = "elementHost1";
+            this.elementHost1.Size = new System.Drawing.Size(926, 108);
+            this.elementHost1.TabIndex = 0;
+            this.elementHost1.Text = "elementHost1";
+            this.elementHost1.Child = null;
             // 
             // footerPanel
             // 
@@ -171,21 +181,11 @@
             // rightPanel
             // 
             this.rightPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.rightPanel.Controls.Add(this.elementHost1);
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.rightPanel.Location = new System.Drawing.Point(1064, 0);
             this.rightPanel.Name = "rightPanel";
             this.rightPanel.Size = new System.Drawing.Size(160, 681);
             this.rightPanel.TabIndex = 2;
-            // 
-            // elementHost1
-            // 
-            this.elementHost1.Location = new System.Drawing.Point(0, 99);
-            this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(160, 489);
-            this.elementHost1.TabIndex = 0;
-            this.elementHost1.Text = "elementHost1";
-            this.elementHost1.Child = this.userMenuIcons2;
             // 
             // settingsPanel
             // 
@@ -1198,7 +1198,7 @@
             this.Text = "3L2X - User Form";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.rightPanel.ResumeLayout(false);
+            this.topPanel.ResumeLayout(false);
             this.settingsPanel.ResumeLayout(false);
             this.fontSizeGroupBox.ResumeLayout(false);
             this.fontSizeGroupBox.PerformLayout();
@@ -1273,7 +1273,6 @@
         private System.Windows.Forms.BindingSource usersBindingSource;
         private System.Windows.Forms.Integration.ElementHost elementHost1;
         private System.Windows.Forms.Button saveButton;
-        private aggeliesWpfLab.UserMenuIcons userMenuIcons2;
         private System.Windows.Forms.GroupBox panelColorsGroupBox;
         private System.Windows.Forms.RadioButton orangeRadioButton;
         private System.Windows.Forms.RadioButton defaultRadioButton;
