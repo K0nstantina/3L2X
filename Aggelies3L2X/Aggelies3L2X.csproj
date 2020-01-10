@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8F9541C6-E9F4-4551-8A6F-F9A7A43F045A}</ProjectGuid>
+    <ProjectGuid>{F0DBE5CD-C1DF-4338-8640-7096E52B34CC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Aggelies3L2X</RootNamespace>
     <AssemblyName>Aggelies3L2X</AssemblyName>
@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="LoadingScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="LoadingScreen.Designer.cs">
+      <DependentUpon>LoadingScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

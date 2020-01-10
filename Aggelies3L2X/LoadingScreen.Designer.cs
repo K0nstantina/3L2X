@@ -1,6 +1,6 @@
-﻿namespace DataManipulation
+﻿namespace Aggelies3L2X
 {
-    partial class Form1
+    partial class LoadingScreen
     {
         /// <summary>
         /// Required designer variable.

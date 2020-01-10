@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Aggelies3L2X
 {
-    public partial class Form1 : Form
+    public partial class LoadingScreen : Form
     {
-        public Form1()
+        public LoadingScreen()
         {
             InitializeComponent();
         }
