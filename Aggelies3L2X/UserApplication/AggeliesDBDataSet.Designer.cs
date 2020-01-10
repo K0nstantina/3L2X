@@ -5950,8 +5950,9 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
             this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adCategory", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adCategory", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT        TOP 3 adTitle, adDesc, media\r\nFROM            AdsTable\r\nWHERE      " +
-                "  (Published = True)\r\nORDER BY creationDate DESC, adID DESC";
+            this._commandCollection[3].CommandText = "SELECT        TOP 9 adTitle, adDesc, media, adCategory, adID, ownerID, creationDa" +
+                "te, expirationDate, price, Published, Hits, adStatus, address\r\nFROM            A" +
+                "dsTable\r\nWHERE        (Published = True)\r\nORDER BY creationDate DESC, adID DESC";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[4].Connection = this.Connection;
