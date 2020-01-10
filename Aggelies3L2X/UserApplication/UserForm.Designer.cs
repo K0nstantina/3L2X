@@ -42,7 +42,7 @@
             this.panelColorsGroupBox = new System.Windows.Forms.GroupBox();
             this.orangeRadioButton = new System.Windows.Forms.RadioButton();
             this.defaultRadioButton = new System.Windows.Forms.RadioButton();
-            this.fullBlueRadioButton = new System.Windows.Forms.RadioButton();
+            this.darkRadioButton = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.homePanel = new System.Windows.Forms.Panel();
             this.recentAdsLabel = new System.Windows.Forms.Label();
@@ -153,7 +153,7 @@
             // 
             // topPanel
             // 
-            this.topPanel.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.topPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
@@ -162,7 +162,7 @@
             // 
             // footerPanel
             // 
-            this.footerPanel.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.footerPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.footerPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.footerPanel.Location = new System.Drawing.Point(0, 581);
             this.footerPanel.Name = "footerPanel";
@@ -171,7 +171,7 @@
             // 
             // rightPanel
             // 
-            this.rightPanel.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.rightPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.rightPanel.Controls.Add(this.elementHost1);
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.rightPanel.Location = new System.Drawing.Point(1064, 0);
@@ -241,7 +241,7 @@
             // 
             this.panelColorsGroupBox.Controls.Add(this.orangeRadioButton);
             this.panelColorsGroupBox.Controls.Add(this.defaultRadioButton);
-            this.panelColorsGroupBox.Controls.Add(this.fullBlueRadioButton);
+            this.panelColorsGroupBox.Controls.Add(this.darkRadioButton);
             this.panelColorsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.panelColorsGroupBox.Location = new System.Drawing.Point(12, 91);
             this.panelColorsGroupBox.Name = "panelColorsGroupBox";
@@ -276,17 +276,17 @@
             this.defaultRadioButton.UseVisualStyleBackColor = true;
             this.defaultRadioButton.CheckedChanged += new System.EventHandler(this.defaultRadioButton_CheckedChanged);
             // 
-            // fullBlueRadioButton
+            // darkRadioButton
             // 
-            this.fullBlueRadioButton.AutoSize = true;
-            this.fullBlueRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.fullBlueRadioButton.Location = new System.Drawing.Point(6, 50);
-            this.fullBlueRadioButton.Name = "fullBlueRadioButton";
-            this.fullBlueRadioButton.Size = new System.Drawing.Size(88, 24);
-            this.fullBlueRadioButton.TabIndex = 3;
-            this.fullBlueRadioButton.Text = "Full Blue";
-            this.fullBlueRadioButton.UseVisualStyleBackColor = true;
-            this.fullBlueRadioButton.CheckedChanged += new System.EventHandler(this.fullBlueRadioButton_CheckedChanged);
+            this.darkRadioButton.AutoSize = true;
+            this.darkRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.darkRadioButton.Location = new System.Drawing.Point(6, 50);
+            this.darkRadioButton.Name = "darkRadioButton";
+            this.darkRadioButton.Size = new System.Drawing.Size(61, 24);
+            this.darkRadioButton.TabIndex = 3;
+            this.darkRadioButton.Text = "Dark";
+            this.darkRadioButton.UseVisualStyleBackColor = true;
+            this.darkRadioButton.CheckedChanged += new System.EventHandler(this.darkRadioButton_CheckedChanged);
             // 
             // label2
             // 
@@ -625,7 +625,7 @@
             // 
             // displayAd
             // 
-            this.displayAd.Location = new System.Drawing.Point(314, 36);
+            this.displayAd.Location = new System.Drawing.Point(381, 36);
             this.displayAd.Name = "displayAd";
             this.displayAd.Size = new System.Drawing.Size(390, 348);
             this.displayAd.TabIndex = 6;
@@ -652,9 +652,9 @@
             // 
             this.gChildComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.gChildComboBox.FormattingEnabled = true;
-            this.gChildComboBox.Location = new System.Drawing.Point(67, 137);
+            this.gChildComboBox.Location = new System.Drawing.Point(36, 133);
             this.gChildComboBox.Name = "gChildComboBox";
-            this.gChildComboBox.Size = new System.Drawing.Size(180, 28);
+            this.gChildComboBox.Size = new System.Drawing.Size(255, 28);
             this.gChildComboBox.TabIndex = 4;
             this.gChildComboBox.Visible = false;
             this.gChildComboBox.SelectedIndexChanged += new System.EventHandler(this.gChildComboBox_SelectedIndexChanged);
@@ -664,9 +664,9 @@
             this.childCategoriesComboBox.Enabled = false;
             this.childCategoriesComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.childCategoriesComboBox.FormattingEnabled = true;
-            this.childCategoriesComboBox.Location = new System.Drawing.Point(67, 102);
+            this.childCategoriesComboBox.Location = new System.Drawing.Point(36, 98);
             this.childCategoriesComboBox.Name = "childCategoriesComboBox";
-            this.childCategoriesComboBox.Size = new System.Drawing.Size(180, 28);
+            this.childCategoriesComboBox.Size = new System.Drawing.Size(255, 28);
             this.childCategoriesComboBox.TabIndex = 3;
             this.childCategoriesComboBox.SelectedIndexChanged += new System.EventHandler(this.childCategoriesComboBox_SelectedIndexChanged);
             // 
@@ -674,9 +674,9 @@
             // 
             this.mainCategoriesComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.mainCategoriesComboBox.FormattingEnabled = true;
-            this.mainCategoriesComboBox.Location = new System.Drawing.Point(67, 67);
+            this.mainCategoriesComboBox.Location = new System.Drawing.Point(36, 63);
             this.mainCategoriesComboBox.Name = "mainCategoriesComboBox";
-            this.mainCategoriesComboBox.Size = new System.Drawing.Size(180, 28);
+            this.mainCategoriesComboBox.Size = new System.Drawing.Size(255, 28);
             this.mainCategoriesComboBox.TabIndex = 2;
             this.mainCategoriesComboBox.SelectedIndexChanged += new System.EventHandler(this.mainCategoriesComboBox_SelectedIndexChanged);
             // 
@@ -1007,7 +1007,7 @@
             // 
             this.signupRPasswordLabel.AutoSize = true;
             this.signupRPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupRPasswordLabel.Location = new System.Drawing.Point(297, 170);
+            this.signupRPasswordLabel.Location = new System.Drawing.Point(297, 190);
             this.signupRPasswordLabel.Name = "signupRPasswordLabel";
             this.signupRPasswordLabel.Size = new System.Drawing.Size(162, 20);
             this.signupRPasswordLabel.TabIndex = 88;
@@ -1016,7 +1016,7 @@
             // signupRPasswordTextBox
             // 
             this.signupRPasswordTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupRPasswordTextBox.Location = new System.Drawing.Point(524, 169);
+            this.signupRPasswordTextBox.Location = new System.Drawing.Point(524, 189);
             this.signupRPasswordTextBox.Name = "signupRPasswordTextBox";
             this.signupRPasswordTextBox.PasswordChar = '*';
             this.signupRPasswordTextBox.Size = new System.Drawing.Size(291, 26);
@@ -1026,7 +1026,7 @@
             // 
             this.signupPhoneLabel.AutoSize = true;
             this.signupPhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupPhoneLabel.Location = new System.Drawing.Point(297, 318);
+            this.signupPhoneLabel.Location = new System.Drawing.Point(297, 338);
             this.signupPhoneLabel.Name = "signupPhoneLabel";
             this.signupPhoneLabel.Size = new System.Drawing.Size(78, 20);
             this.signupPhoneLabel.TabIndex = 86;
@@ -1035,7 +1035,7 @@
             // signupPhoneTextBox
             // 
             this.signupPhoneTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupPhoneTextBox.Location = new System.Drawing.Point(524, 317);
+            this.signupPhoneTextBox.Location = new System.Drawing.Point(524, 337);
             this.signupPhoneTextBox.Name = "signupPhoneTextBox";
             this.signupPhoneTextBox.Size = new System.Drawing.Size(291, 26);
             this.signupPhoneTextBox.TabIndex = 85;
@@ -1044,7 +1044,7 @@
             // 
             this.signupAgeLabel.AutoSize = true;
             this.signupAgeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupAgeLabel.Location = new System.Drawing.Point(297, 281);
+            this.signupAgeLabel.Location = new System.Drawing.Point(297, 301);
             this.signupAgeLabel.Name = "signupAgeLabel";
             this.signupAgeLabel.Size = new System.Drawing.Size(60, 20);
             this.signupAgeLabel.TabIndex = 84;
@@ -1053,7 +1053,7 @@
             // signupAgeTextBox
             // 
             this.signupAgeTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupAgeTextBox.Location = new System.Drawing.Point(524, 280);
+            this.signupAgeTextBox.Location = new System.Drawing.Point(524, 300);
             this.signupAgeTextBox.Name = "signupAgeTextBox";
             this.signupAgeTextBox.Size = new System.Drawing.Size(291, 26);
             this.signupAgeTextBox.TabIndex = 83;
@@ -1062,7 +1062,7 @@
             // 
             this.signupREmailLabel.AutoSize = true;
             this.signupREmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupREmailLabel.Location = new System.Drawing.Point(297, 244);
+            this.signupREmailLabel.Location = new System.Drawing.Point(297, 264);
             this.signupREmailLabel.Name = "signupREmailLabel";
             this.signupREmailLabel.Size = new System.Drawing.Size(132, 20);
             this.signupREmailLabel.TabIndex = 82;
@@ -1071,7 +1071,7 @@
             // signupREmailTextBox
             // 
             this.signupREmailTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupREmailTextBox.Location = new System.Drawing.Point(524, 243);
+            this.signupREmailTextBox.Location = new System.Drawing.Point(524, 263);
             this.signupREmailTextBox.Name = "signupREmailTextBox";
             this.signupREmailTextBox.Size = new System.Drawing.Size(291, 26);
             this.signupREmailTextBox.TabIndex = 81;
@@ -1080,7 +1080,7 @@
             // 
             this.signupSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.signupSaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupSaveButton.Location = new System.Drawing.Point(666, 361);
+            this.signupSaveButton.Location = new System.Drawing.Point(666, 381);
             this.signupSaveButton.Name = "signupSaveButton";
             this.signupSaveButton.Size = new System.Drawing.Size(149, 45);
             this.signupSaveButton.TabIndex = 80;
@@ -1092,7 +1092,7 @@
             // 
             this.signupLNameLabel.AutoSize = true;
             this.signupLNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupLNameLabel.Location = new System.Drawing.Point(297, 59);
+            this.signupLNameLabel.Location = new System.Drawing.Point(297, 79);
             this.signupLNameLabel.Name = "signupLNameLabel";
             this.signupLNameLabel.Size = new System.Drawing.Size(72, 20);
             this.signupLNameLabel.TabIndex = 79;
@@ -1101,7 +1101,7 @@
             // signupLNameTextBox
             // 
             this.signupLNameTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupLNameTextBox.Location = new System.Drawing.Point(524, 58);
+            this.signupLNameTextBox.Location = new System.Drawing.Point(524, 78);
             this.signupLNameTextBox.Name = "signupLNameTextBox";
             this.signupLNameTextBox.Size = new System.Drawing.Size(291, 26);
             this.signupLNameTextBox.TabIndex = 78;
@@ -1110,7 +1110,7 @@
             // 
             this.signupFNameLabel.AutoSize = true;
             this.signupFNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupFNameLabel.Location = new System.Drawing.Point(297, 22);
+            this.signupFNameLabel.Location = new System.Drawing.Point(297, 42);
             this.signupFNameLabel.Name = "signupFNameLabel";
             this.signupFNameLabel.Size = new System.Drawing.Size(56, 20);
             this.signupFNameLabel.TabIndex = 77;
@@ -1120,7 +1120,7 @@
             // 
             this.signupFNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "fName", true));
             this.signupFNameTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupFNameTextBox.Location = new System.Drawing.Point(524, 21);
+            this.signupFNameTextBox.Location = new System.Drawing.Point(524, 41);
             this.signupFNameTextBox.Name = "signupFNameTextBox";
             this.signupFNameTextBox.Size = new System.Drawing.Size(291, 26);
             this.signupFNameTextBox.TabIndex = 76;
@@ -1129,7 +1129,7 @@
             // 
             this.signupEmailLabel.AutoSize = true;
             this.signupEmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupEmailLabel.Location = new System.Drawing.Point(297, 207);
+            this.signupEmailLabel.Location = new System.Drawing.Point(297, 227);
             this.signupEmailLabel.Name = "signupEmailLabel";
             this.signupEmailLabel.Size = new System.Drawing.Size(48, 20);
             this.signupEmailLabel.TabIndex = 75;
@@ -1138,7 +1138,7 @@
             // signupEmailTextBox
             // 
             this.signupEmailTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupEmailTextBox.Location = new System.Drawing.Point(524, 206);
+            this.signupEmailTextBox.Location = new System.Drawing.Point(524, 226);
             this.signupEmailTextBox.Name = "signupEmailTextBox";
             this.signupEmailTextBox.Size = new System.Drawing.Size(291, 26);
             this.signupEmailTextBox.TabIndex = 74;
@@ -1147,7 +1147,7 @@
             // 
             this.signupPasswordLabel.AutoSize = true;
             this.signupPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupPasswordLabel.Location = new System.Drawing.Point(297, 133);
+            this.signupPasswordLabel.Location = new System.Drawing.Point(297, 153);
             this.signupPasswordLabel.Name = "signupPasswordLabel";
             this.signupPasswordLabel.Size = new System.Drawing.Size(67, 20);
             this.signupPasswordLabel.TabIndex = 73;
@@ -1156,7 +1156,7 @@
             // signupPasswordTextBox
             // 
             this.signupPasswordTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupPasswordTextBox.Location = new System.Drawing.Point(524, 132);
+            this.signupPasswordTextBox.Location = new System.Drawing.Point(524, 152);
             this.signupPasswordTextBox.Name = "signupPasswordTextBox";
             this.signupPasswordTextBox.PasswordChar = '*';
             this.signupPasswordTextBox.Size = new System.Drawing.Size(291, 26);
@@ -1166,7 +1166,7 @@
             // 
             this.signupUNameLabel.AutoSize = true;
             this.signupUNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupUNameLabel.Location = new System.Drawing.Point(297, 96);
+            this.signupUNameLabel.Location = new System.Drawing.Point(297, 116);
             this.signupUNameLabel.Name = "signupUNameLabel";
             this.signupUNameLabel.Size = new System.Drawing.Size(83, 20);
             this.signupUNameLabel.TabIndex = 71;
@@ -1175,7 +1175,7 @@
             // signupUNameTextBox
             // 
             this.signupUNameTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupUNameTextBox.Location = new System.Drawing.Point(524, 95);
+            this.signupUNameTextBox.Location = new System.Drawing.Point(524, 115);
             this.signupUNameTextBox.Name = "signupUNameTextBox";
             this.signupUNameTextBox.Size = new System.Drawing.Size(291, 26);
             this.signupUNameTextBox.TabIndex = 70;
@@ -1288,7 +1288,7 @@
         private System.Windows.Forms.GroupBox panelColorsGroupBox;
         private System.Windows.Forms.RadioButton orangeRadioButton;
         private System.Windows.Forms.RadioButton defaultRadioButton;
-        private System.Windows.Forms.RadioButton fullBlueRadioButton;
+        private System.Windows.Forms.RadioButton darkRadioButton;
         private System.Windows.Forms.GroupBox fontSizeGroupBox;
         private System.Windows.Forms.RadioButton largeRadioButton;
         private System.Windows.Forms.RadioButton normalRadioButton;

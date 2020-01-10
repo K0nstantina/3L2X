@@ -511,25 +511,25 @@ namespace UserApplication
         {
             if (defaultRadioButton.Checked)
             {
-                topPanel.BackColor = SystemColors.ActiveBorder;
-                footerPanel.BackColor = SystemColors.ActiveBorder;
-                rightPanel.BackColor = SystemColors.ActiveBorder;
-                fullBlueRadioButton.Checked = false;
+                topPanel.BackColor = SystemColors.ActiveCaption;
+                footerPanel.BackColor = SystemColors.ActiveCaption;
+                rightPanel.BackColor = SystemColors.ActiveCaption;
+                darkRadioButton.Checked = false;
                 orangeRadioButton.Checked = false;
             }
         }
         /// <summary>
-        /// Event Handler for fullBlueRadioButton click.
+        /// Event Handler for darkRadioButton click.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void fullBlueRadioButton_CheckedChanged(object sender, EventArgs e)
+        private void darkRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            if (fullBlueRadioButton.Checked)
+            if (darkRadioButton.Checked)
             {
-                topPanel.BackColor = SystemColors.ActiveCaption;
-                footerPanel.BackColor = SystemColors.ActiveCaption;
-                rightPanel.BackColor = SystemColors.ActiveCaption;
+                topPanel.BackColor = SystemColors.ActiveBorder;
+                footerPanel.BackColor = SystemColors.ActiveBorder;
+                rightPanel.BackColor = SystemColors.ActiveBorder;
                 defaultRadioButton.Checked = false;
                 orangeRadioButton.Checked = false;
             }
@@ -547,7 +547,7 @@ namespace UserApplication
                 footerPanel.BackColor = Color.DarkOrange;
                 rightPanel.BackColor = Color.DarkOrange;
                 defaultRadioButton.Checked = false;
-                fullBlueRadioButton.Checked = false;
+                darkRadioButton.Checked = false;
             }
         }
         /// <summary>
@@ -625,6 +625,11 @@ namespace UserApplication
             }
             // RadioButton.
             foreach (Control theControl in (GetAllControls(this).OfType<RadioButton>()))
+            {
+                theControl.Font = font;
+            }
+            // Combobox.
+            foreach (Control theControl in (GetAllControls(this).OfType<ComboBox>()))
             {
                 theControl.Font = font;
             }

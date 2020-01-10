@@ -30,19 +30,19 @@
         {
             this.userFormButton = new System.Windows.Forms.Button();
             this.loginPanel = new System.Windows.Forms.Panel();
+            this.createaccountLabel = new System.Windows.Forms.LinkLabel();
             this.guestButton = new System.Windows.Forms.Button();
             this.passwordLabel = new System.Windows.Forms.Label();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.createaccountLabel = new System.Windows.Forms.LinkLabel();
             this.loginPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // userFormButton
             // 
             this.userFormButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userFormButton.Location = new System.Drawing.Point(196, 161);
+            this.userFormButton.Location = new System.Drawing.Point(192, 135);
             this.userFormButton.Name = "userFormButton";
             this.userFormButton.Size = new System.Drawing.Size(184, 37);
             this.userFormButton.TabIndex = 3;
@@ -65,10 +65,22 @@
             this.loginPanel.Size = new System.Drawing.Size(544, 321);
             this.loginPanel.TabIndex = 1;
             // 
+            // createaccountLabel
+            // 
+            this.createaccountLabel.AutoSize = true;
+            this.createaccountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.createaccountLabel.Location = new System.Drawing.Point(216, 218);
+            this.createaccountLabel.Name = "createaccountLabel";
+            this.createaccountLabel.Size = new System.Drawing.Size(134, 20);
+            this.createaccountLabel.TabIndex = 6;
+            this.createaccountLabel.TabStop = true;
+            this.createaccountLabel.Text = "Create Account";
+            this.createaccountLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.createaccountLabel_LinkClicked);
+            // 
             // guestButton
             // 
             this.guestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guestButton.Location = new System.Drawing.Point(196, 204);
+            this.guestButton.Location = new System.Drawing.Point(192, 178);
             this.guestButton.Name = "guestButton";
             this.guestButton.Size = new System.Drawing.Size(184, 37);
             this.guestButton.TabIndex = 5;
@@ -80,7 +92,7 @@
             // 
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLabel.Location = new System.Drawing.Point(112, 132);
+            this.passwordLabel.Location = new System.Drawing.Point(108, 106);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(82, 20);
             this.passwordLabel.TabIndex = 4;
@@ -90,7 +102,7 @@
             // 
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(107, 100);
+            this.usernameLabel.Location = new System.Drawing.Point(103, 74);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(87, 20);
             this.usernameLabel.TabIndex = 3;
@@ -99,7 +111,7 @@
             // usernameTextBox
             // 
             this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTextBox.Location = new System.Drawing.Point(196, 97);
+            this.usernameTextBox.Location = new System.Drawing.Point(192, 71);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(184, 26);
             this.usernameTextBox.TabIndex = 1;
@@ -108,24 +120,12 @@
             // passwordTextBox
             // 
             this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTextBox.Location = new System.Drawing.Point(196, 129);
+            this.passwordTextBox.Location = new System.Drawing.Point(192, 103);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(184, 26);
             this.passwordTextBox.TabIndex = 2;
             this.passwordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
-            // 
-            // createaccountLabel
-            // 
-            this.createaccountLabel.AutoSize = true;
-            this.createaccountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.createaccountLabel.Location = new System.Drawing.Point(220, 244);
-            this.createaccountLabel.Name = "createaccountLabel";
-            this.createaccountLabel.Size = new System.Drawing.Size(134, 20);
-            this.createaccountLabel.TabIndex = 6;
-            this.createaccountLabel.TabStop = true;
-            this.createaccountLabel.Text = "Create Account";
-            this.createaccountLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.createaccountLabel_LinkClicked);
             // 
             // LoginForm
             // 

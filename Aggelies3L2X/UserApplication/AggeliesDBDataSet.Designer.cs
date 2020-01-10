@@ -5945,7 +5945,7 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "SELECT        adID, adTitle, adCategory, ownerID, creationDate, expirationDate, m" +
                 "edia, adDesc, price, Published, Hits, adStatus\r\nFROM            AdsTable\r\nWHERE " +
-                "       (adCategory = ?)";
+                "       (adCategory = ?) AND (Published = Yes)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adCategory", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adCategory", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
