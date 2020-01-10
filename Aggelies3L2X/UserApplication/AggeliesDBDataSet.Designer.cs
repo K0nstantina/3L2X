@@ -8205,7 +8205,7 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[9];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[10];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT userID, fName, lName, uName, uPassword, uEmail, uCat FROM Users";
@@ -8257,6 +8257,21 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
             this._commandCollection[8].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("uPassword", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "uPassword", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[8].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("uEmail", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "uEmail", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[8].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_userID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "userID", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[9] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[9].Connection = this.Connection;
+            this._commandCollection[9].CommandText = "INSERT INTO Users\r\n                         (fName, lName, uName, uPassword, uEma" +
+                "il, uCat, uAge, uRecoverEmail, uPhone)\r\nVALUES        (?, ?, ?, ?, ?, ?, ?, ?, ?" +
+                ")";
+            this._commandCollection[9].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[9].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("fName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fName", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("lName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "lName", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("uName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "uName", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("uPassword", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "uPassword", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("uEmail", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "uEmail", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("uCat", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "uCat", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("uAge", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "uAge", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("uRecoverEmail", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "uRecoverEmail", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("uPhone", global::System.Data.OleDb.OleDbType.Numeric, 0, global::System.Data.ParameterDirection.Input, ((byte)(18)), ((byte)(0)), "uPhone", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8754,6 +8769,78 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
                 command.Parameters[4].Value = ((string)(uEmail));
             }
             command.Parameters[5].Value = ((int)(Original_userID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int UserSignupQuery(string fName, string lName, string uName, string uPassword, string uEmail, int uCat, global::System.Nullable<int> uAge, string uRecoverEmail, global::System.Nullable<decimal> uPhone) {
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[9];
+            if ((fName == null)) {
+                throw new global::System.ArgumentNullException("fName");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(fName));
+            }
+            if ((lName == null)) {
+                throw new global::System.ArgumentNullException("lName");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(lName));
+            }
+            if ((uName == null)) {
+                throw new global::System.ArgumentNullException("uName");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(uName));
+            }
+            if ((uPassword == null)) {
+                throw new global::System.ArgumentNullException("uPassword");
+            }
+            else {
+                command.Parameters[3].Value = ((string)(uPassword));
+            }
+            if ((uEmail == null)) {
+                throw new global::System.ArgumentNullException("uEmail");
+            }
+            else {
+                command.Parameters[4].Value = ((string)(uEmail));
+            }
+            command.Parameters[5].Value = ((int)(uCat));
+            if ((uAge.HasValue == true)) {
+                command.Parameters[6].Value = ((int)(uAge.Value));
+            }
+            else {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((uRecoverEmail == null)) {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[7].Value = ((string)(uRecoverEmail));
+            }
+            if ((uPhone.HasValue == true)) {
+                command.Parameters[8].Value = ((decimal)(uPhone.Value));
+            }
+            else {
+                command.Parameters[8].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

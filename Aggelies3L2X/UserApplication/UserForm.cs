@@ -644,14 +644,23 @@ namespace UserApplication
         /// <param name="e"></param>
         private void signupSaveButton_Click(object sender, EventArgs e)
         {
-            // Setup Query.
-            string newUserQuery = "INSERT INTO Users ()";
-            // Open connection.
-            //OleDbConnection connection = new OleDbConnection(connectionString);
-            //OleDbCommand command = new OleDbCommand(newUserQuery, connection);
-            //connection.Open();
+            //
+            string fName, lName, uName, uPassword, uEmail, uRecoverEmail;
+            int uCat, uAge, uPhone;
 
-            //connection.Close();
+            fName = signupFNameTextBox.Text;
+            lName = signupLNameTextBox.Text;
+            uName = signupUNameTextBox.Text;
+            uPassword = signupPasswordTextBox.Text;
+            uEmail = signupEmailTextBox.Text;
+            uRecoverEmail = signupREmailTextBox.Text;
+            uCat = 2;
+            uAge = Int32.Parse(signupAgeTextBox.Text);
+            uPhone = Int32.Parse(signupPhoneTextBox.Text);
+
+            this.usersTableAdapter1.UserSignupQuery(fName,lName,uName,uPassword,uEmail,uCat,uAge,uRecoverEmail,uPhone);
+            MessageBox.Show("user created! try login!");
+            LogoutBut_Click(sender, new System.Windows.RoutedEventArgs());
         }
         #endregion
 

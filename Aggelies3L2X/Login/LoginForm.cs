@@ -50,7 +50,7 @@ namespace Login
             // No such user.
             else
             {
-                MessageBox.Show("nope");
+                MessageBox.Show("Wrong username/password combination!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void CheckEnter(object sender, System.Windows.Forms.KeyPressEventArgs e)

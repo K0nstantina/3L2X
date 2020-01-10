@@ -1020,7 +1020,7 @@
             this.signupRPasswordTextBox.Name = "signupRPasswordTextBox";
             this.signupRPasswordTextBox.PasswordChar = '*';
             this.signupRPasswordTextBox.Size = new System.Drawing.Size(291, 26);
-            this.signupRPasswordTextBox.TabIndex = 87;
+            this.signupRPasswordTextBox.TabIndex = 80;
             // 
             // signupPhoneLabel
             // 
@@ -1038,7 +1038,7 @@
             this.signupPhoneTextBox.Location = new System.Drawing.Point(524, 337);
             this.signupPhoneTextBox.Name = "signupPhoneTextBox";
             this.signupPhoneTextBox.Size = new System.Drawing.Size(291, 26);
-            this.signupPhoneTextBox.TabIndex = 85;
+            this.signupPhoneTextBox.TabIndex = 84;
             // 
             // signupAgeLabel
             // 
@@ -1074,7 +1074,7 @@
             this.signupREmailTextBox.Location = new System.Drawing.Point(524, 263);
             this.signupREmailTextBox.Name = "signupREmailTextBox";
             this.signupREmailTextBox.Size = new System.Drawing.Size(291, 26);
-            this.signupREmailTextBox.TabIndex = 81;
+            this.signupREmailTextBox.TabIndex = 82;
             // 
             // signupSaveButton
             // 
@@ -1083,7 +1083,7 @@
             this.signupSaveButton.Location = new System.Drawing.Point(666, 381);
             this.signupSaveButton.Name = "signupSaveButton";
             this.signupSaveButton.Size = new System.Drawing.Size(149, 45);
-            this.signupSaveButton.TabIndex = 80;
+            this.signupSaveButton.TabIndex = 85;
             this.signupSaveButton.Text = "Αποθήκευση";
             this.signupSaveButton.UseVisualStyleBackColor = true;
             this.signupSaveButton.Click += new System.EventHandler(this.signupSaveButton_Click);
@@ -1104,7 +1104,7 @@
             this.signupLNameTextBox.Location = new System.Drawing.Point(524, 78);
             this.signupLNameTextBox.Name = "signupLNameTextBox";
             this.signupLNameTextBox.Size = new System.Drawing.Size(291, 26);
-            this.signupLNameTextBox.TabIndex = 78;
+            this.signupLNameTextBox.TabIndex = 77;
             // 
             // signupFNameLabel
             // 
@@ -1141,7 +1141,7 @@
             this.signupEmailTextBox.Location = new System.Drawing.Point(524, 226);
             this.signupEmailTextBox.Name = "signupEmailTextBox";
             this.signupEmailTextBox.Size = new System.Drawing.Size(291, 26);
-            this.signupEmailTextBox.TabIndex = 74;
+            this.signupEmailTextBox.TabIndex = 81;
             // 
             // signupPasswordLabel
             // 
@@ -1160,7 +1160,7 @@
             this.signupPasswordTextBox.Name = "signupPasswordTextBox";
             this.signupPasswordTextBox.PasswordChar = '*';
             this.signupPasswordTextBox.Size = new System.Drawing.Size(291, 26);
-            this.signupPasswordTextBox.TabIndex = 72;
+            this.signupPasswordTextBox.TabIndex = 79;
             // 
             // signupUNameLabel
             // 
@@ -1178,7 +1178,7 @@
             this.signupUNameTextBox.Location = new System.Drawing.Point(524, 115);
             this.signupUNameTextBox.Name = "signupUNameTextBox";
             this.signupUNameTextBox.Size = new System.Drawing.Size(291, 26);
-            this.signupUNameTextBox.TabIndex = 70;
+            this.signupUNameTextBox.TabIndex = 78;
             // 
             // adsTableTableAdapter
             // 
