@@ -46,7 +46,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.homePanel = new System.Windows.Forms.Panel();
             this.recentAdsLabel = new System.Windows.Forms.Label();
-            this.recentAdsListBox = new System.Windows.Forms.ListBox();
             this.recentAds3 = new UserApplication.DisplayAds();
             this.recentAds2 = new UserApplication.DisplayAds();
             this.recentAds1 = new UserApplication.DisplayAds();
@@ -302,7 +301,6 @@
             // homePanel
             // 
             this.homePanel.Controls.Add(this.recentAdsLabel);
-            this.homePanel.Controls.Add(this.recentAdsListBox);
             this.homePanel.Controls.Add(this.recentAds3);
             this.homePanel.Controls.Add(this.recentAds2);
             this.homePanel.Controls.Add(this.recentAds1);
@@ -321,15 +319,6 @@
             this.recentAdsLabel.TabIndex = 5;
             this.recentAdsLabel.Text = "Πρόσφατες Αγγελίες";
             this.recentAdsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // recentAdsListBox
-            // 
-            this.recentAdsListBox.FormattingEnabled = true;
-            this.recentAdsListBox.Location = new System.Drawing.Point(1007, 0);
-            this.recentAdsListBox.Name = "recentAdsListBox";
-            this.recentAdsListBox.Size = new System.Drawing.Size(57, 43);
-            this.recentAdsListBox.TabIndex = 4;
-            this.recentAdsListBox.Visible = false;
             // 
             // recentAds3
             // 
@@ -1304,7 +1293,6 @@
         private DisplayAds recentAds3;
         private DisplayAds recentAds2;
         private DisplayAds recentAds1;
-        private System.Windows.Forms.ListBox recentAdsListBox;
         private System.Windows.Forms.Label recentAdsLabel;
         private System.Windows.Forms.ComboBox mainCategoriesComboBox;
         private AggeliesDBDataSetTableAdapters.AdCategoryTableAdapter adCategoryTableAdapter1;

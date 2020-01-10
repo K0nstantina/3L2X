@@ -13,6 +13,7 @@ namespace UserApplication
         #region Variables
         List<Panel> panels = new List<Panel>();
         List<DisplayAds> recentAdsList = new List<DisplayAds>();
+        ListBox recentAdsListBox = new ListBox();
         DataRowView view;
         BindingSource bs = new BindingSource();
         int userid;
@@ -87,6 +88,9 @@ namespace UserApplication
         {
             bs.DataSource = adsTableTableAdapter.GetRecentAds();
             recentAdsListBox.DataSource = bs;
+            this.Controls.Add(recentAdsListBox);
+            recentAdsListBox.ValueMember = "adTitle";
+            recentAdsListBox.SelectedIndex = 0;
 
             for (int i = 0; i < recentAdsList.Count; i++)
             {
