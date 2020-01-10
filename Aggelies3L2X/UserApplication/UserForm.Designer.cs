@@ -952,12 +952,12 @@
             // 
             // contentPanel
             // 
-            this.contentPanel.Controls.Add(this.signupPanel);
-            this.contentPanel.Controls.Add(this.categoriesPanel);
             this.contentPanel.Controls.Add(this.profilePanel);
             this.contentPanel.Controls.Add(this.homePanel);
             this.contentPanel.Controls.Add(this.settingsPanel);
             this.contentPanel.Controls.Add(this.adsPanel);
+            this.contentPanel.Controls.Add(this.signupPanel);
+            this.contentPanel.Controls.Add(this.categoriesPanel);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(0, 108);
             this.contentPanel.Name = "contentPanel";
