@@ -315,9 +315,9 @@
             // recentAdsLabel
             // 
             this.recentAdsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.recentAdsLabel.Location = new System.Drawing.Point(412, 3);
+            this.recentAdsLabel.Location = new System.Drawing.Point(36, 3);
             this.recentAdsLabel.Name = "recentAdsLabel";
-            this.recentAdsLabel.Size = new System.Drawing.Size(227, 61);
+            this.recentAdsLabel.Size = new System.Drawing.Size(954, 61);
             this.recentAdsLabel.TabIndex = 5;
             this.recentAdsLabel.Text = "Πρόσφατες Αγγελίες";
             this.recentAdsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -952,12 +952,12 @@
             // 
             // contentPanel
             // 
-            this.contentPanel.Controls.Add(this.profilePanel);
             this.contentPanel.Controls.Add(this.homePanel);
             this.contentPanel.Controls.Add(this.settingsPanel);
             this.contentPanel.Controls.Add(this.adsPanel);
             this.contentPanel.Controls.Add(this.signupPanel);
             this.contentPanel.Controls.Add(this.categoriesPanel);
+            this.contentPanel.Controls.Add(this.profilePanel);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(0, 108);
             this.contentPanel.Name = "contentPanel";

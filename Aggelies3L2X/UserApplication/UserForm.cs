@@ -672,6 +672,7 @@ namespace UserApplication
         /// <param name="e"></param>
         private void MainForm_Load(object sender, EventArgs e)
         {
+            setConnectionString();
             // Initialize the lists.
             adsListBox_SelectedIndexChanged(adsListBox, e);
             categoriesListBox_SelectedIndexChanged(categoriesListBox,e);
@@ -797,6 +798,14 @@ namespace UserApplication
                     panels[5].BringToFront();
                 }
             }
+        }
+        private void setConnectionString()
+        {
+            string str = AppDomain.CurrentDomain.BaseDirectory;
+            str = str.Remove(str.Length - 16);
+            str += @"AppData\AggeliesDB.accdb";
+            connectionString = "Provider=Microft.ACE.OLEDB.12.0;Data Source=" + str;
+            recentAdsLabel.Text = connectionString;
         }
         #endregion
 
