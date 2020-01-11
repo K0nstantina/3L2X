@@ -115,6 +115,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Aggelies3L2X.csproj">
+      <Project>{f0dbe5cd-c1df-4338-8640-7096e52b34cc}</Project>
+      <Name>Aggelies3L2X</Name>
+    </ProjectReference>
     <ProjectReference Include="..\aggeliesWpfLab\aggeliesWpfLab.csproj">
       <Project>{CD85BF5B-BC05-4B0A-AFA6-B64CBFAB0E37}</Project>
       <Name>aggeliesWpfLab</Name>

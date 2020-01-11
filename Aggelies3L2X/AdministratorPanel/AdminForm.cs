@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Threading;
-
+using Aggelies3L2X;
 
 namespace AdministratorPanel
 {
@@ -18,7 +18,7 @@ namespace AdministratorPanel
         public AdminForm()
         {
             InitializeComponent();
-          
+            
         }
 
        
@@ -126,6 +126,28 @@ namespace AdministratorPanel
                 PropertiesRightPanel.Visible = true;
                 PropertiesRightPanel.BringToFront();
             }
+        }
+
+        private void AdminForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string fileName = "AggeliesDB.accdb";
+            string sourcePath = AppDomain.CurrentDomain.BaseDirectory;
+            sourcePath = sourcePath.Remove(sourcePath.Length - 1);
+            string targetPath = AppDomain.CurrentDomain.BaseDirectory;
+            targetPath = targetPath.Remove(targetPath.Length - 29);
+            targetPath += @"AppData";
+            //Console.WriteLine(fileName);
+            //Console.WriteLine(sourcePath);
+            //Console.WriteLine(targetPath);
+            // Use Path class to manipulate file and directory paths.
+            string sourceFile = System.IO.Path.Combine(sourcePath, fileName);
+            string destFile = System.IO.Path.Combine(targetPath, fileName);
+            //Console.WriteLine(sourceFile);
+            //Console.WriteLine(destFile);
+            // To copy a file to another location and 
+            // overwrite the destination file if it already exists.
+            System.IO.File.Copy(sourceFile, destFile, true);
+            Application.Exit();
         }
     }
 }

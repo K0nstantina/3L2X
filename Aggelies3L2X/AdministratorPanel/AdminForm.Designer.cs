@@ -1174,6 +1174,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.topPanel);
             this.Name = "AdminForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminForm_FormClosing);
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
