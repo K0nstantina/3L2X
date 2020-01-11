@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Threading;
-
+using System.IO;
 
 namespace AdministratorPanel
 {
@@ -17,6 +17,12 @@ namespace AdministratorPanel
     {
         public AdminForm()
         {
+            var directoryName = Application.StartupPath;
+            Console.WriteLine(directoryName);
+            var path = Directory.GetParent(directoryName).FullName;
+            Console.WriteLine(path);
+            var z = Directory.GetParent(path).FullName;
+            Console.WriteLine(z);
             InitializeComponent();
           
         }
