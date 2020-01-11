@@ -24,7 +24,9 @@ namespace UserApplication
         #region Constructors
         public UserForm()
         {
-
+            this.Hide();
+            UserApplication.trestingTreeView treeView = new trestingTreeView();
+            treeView.Show();
         }
         public UserForm(int userID)
         {

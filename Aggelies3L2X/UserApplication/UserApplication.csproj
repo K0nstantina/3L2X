@@ -85,6 +85,12 @@
       <DependentUpon>DisplayAds.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
+    <Compile Include="trestingTreeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trestingTreeView.Designer.cs">
+      <DependentUpon>trestingTreeView.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DisplayAds.resx">
       <DependentUpon>DisplayAds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trestingTreeView.resx">
+      <DependentUpon>trestingTreeView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
