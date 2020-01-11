@@ -288,7 +288,6 @@
             this.CategoriesTabC.Name = "CategoriesTabC";
             this.CategoriesTabC.SelectedIndex = 0;
             this.CategoriesTabC.Selected += new System.Windows.Forms.TabControlEventHandler(this.CategoriesTabC_Selected);
-            
             // 
             // AdsCategoriesTab
             // 

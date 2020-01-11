@@ -769,6 +769,9 @@ namespace UserApplication
             str += @"UserApplication\Resources\userImages\";
             userImagesLocation = str;
         }
+
+      
+
         /// <summary>
         /// Initialize the WPF custom control used as navigation menu.
         /// </summary>
