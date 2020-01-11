@@ -18,6 +18,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppData", "AppData", "{37FD
 		AppData\AggeliesDB.accdb = AppData\AggeliesDB.accdb
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AAD5F8CA-C0F4-423B-9BA8-E62CD91799EF}"
+	ProjectSection(SolutionItems) = preProject
+		UpdateDB.cs = UpdateDB.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
