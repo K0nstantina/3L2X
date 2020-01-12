@@ -40,7 +40,7 @@ namespace UserApplication
             foreach (DataRow dr in dt.Select("[catParent]=" + parentId))
             {
                 TreeNode t = new TreeNode();
-                t.Text = dr["catTitle"].ToString();
+                t.Text = dr["catID"].ToString()+" - "+dr["catTitle"].ToString();
                 t.Name = dr["catID"].ToString();
                 t.Tag = dt.Rows.IndexOf(dr);
                 if (parentNode == null)
@@ -99,7 +99,7 @@ namespace UserApplication
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectQuery = "SELECT adID, adTitle, adDesc, media, Published FROM AdsTable WHERE Published=true AND adTitle='" + listBox1.SelectedItem.ToString()+"'";
+            string selectQuery = "SELECT adID, adTitle, adDesc, Images, Published FROM AdsTable WHERE Published=true AND adTitle='" + listBox1.SelectedItem.ToString()+"'";
             OleDbConnection connection = new OleDbConnection(connectionString);
             OleDbCommand command = new OleDbCommand(selectQuery, connection);
             OleDbDataReader reader;
@@ -113,9 +113,9 @@ namespace UserApplication
                 reader.Read();
                 displayAd1.adTitle.Text = reader["adTitle"].ToString();
                 displayAd1.adDesc.Text = reader["adDesc"].ToString();
-                if (reader["media"].ToString()!="")
+                if (reader["Images"].ToString()!="")
                 {
-                    displayAd1.adImage.Source = new BitmapImage(new Uri(imagesLocation + reader["media"].ToString()));
+                    displayAd1.adImage.Source = new BitmapImage(new Uri(imagesLocation + reader["Images"].ToString()));
                 }
                 textBox1.Text = reader["adID"].ToString();
                 textBox2.Text = reader["adTitle"].ToString();
