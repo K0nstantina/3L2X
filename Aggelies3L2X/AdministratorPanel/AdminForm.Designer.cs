@@ -167,15 +167,9 @@
             this.topPanel = new System.Windows.Forms.Panel();
             this.Menu_panel = new System.Windows.Forms.Panel();
             this.logo_box = new System.Windows.Forms.PictureBox();
-            this.btn_settings = new System.Windows.Forms.Button();
             this.btn_category = new System.Windows.Forms.Button();
-            this.btn_email = new System.Windows.Forms.Button();
-            this.btn_profile = new System.Windows.Forms.Button();
             this.btn_ads = new System.Windows.Forms.Button();
             this.btn_users = new System.Windows.Forms.Button();
-            this.Statistics = new System.Windows.Forms.Button();
-            this.searchlabel = new System.Windows.Forms.Label();
-            this.txt_search = new System.Windows.Forms.TextBox();
             this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter1 = new AdministratorPanel.AggeliesDBDataSetTableAdapters.UsersTableAdapter();
@@ -1206,17 +1200,11 @@
             // 
             // Menu_panel
             // 
-            this.Menu_panel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(200)))), ((int)(((byte)(252)))));
             this.Menu_panel.Controls.Add(this.logo_box);
-            this.Menu_panel.Controls.Add(this.btn_settings);
             this.Menu_panel.Controls.Add(this.btn_category);
-            this.Menu_panel.Controls.Add(this.btn_email);
-            this.Menu_panel.Controls.Add(this.btn_profile);
             this.Menu_panel.Controls.Add(this.btn_ads);
             this.Menu_panel.Controls.Add(this.btn_users);
-            this.Menu_panel.Controls.Add(this.Statistics);
-            this.Menu_panel.Controls.Add(this.searchlabel);
-            this.Menu_panel.Controls.Add(this.txt_search);
             resources.ApplyResources(this.Menu_panel, "Menu_panel");
             this.Menu_panel.Name = "Menu_panel";
             // 
@@ -1226,13 +1214,6 @@
             this.logo_box.Name = "logo_box";
             this.logo_box.TabStop = false;
             // 
-            // btn_settings
-            // 
-            this.btn_settings.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.btn_settings, "btn_settings");
-            this.btn_settings.Name = "btn_settings";
-            this.btn_settings.UseVisualStyleBackColor = false;
-            // 
             // btn_category
             // 
             this.btn_category.BackColor = System.Drawing.Color.White;
@@ -1240,20 +1221,6 @@
             this.btn_category.Name = "btn_category";
             this.btn_category.UseVisualStyleBackColor = false;
             this.btn_category.Click += new System.EventHandler(this.btn_category_Click);
-            // 
-            // btn_email
-            // 
-            this.btn_email.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.btn_email, "btn_email");
-            this.btn_email.Name = "btn_email";
-            this.btn_email.UseVisualStyleBackColor = false;
-            // 
-            // btn_profile
-            // 
-            this.btn_profile.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.btn_profile, "btn_profile");
-            this.btn_profile.Name = "btn_profile";
-            this.btn_profile.UseVisualStyleBackColor = false;
             // 
             // btn_ads
             // 
@@ -1270,23 +1237,6 @@
             this.btn_users.Name = "btn_users";
             this.btn_users.UseVisualStyleBackColor = false;
             this.btn_users.Click += new System.EventHandler(this.btn_users_Click);
-            // 
-            // Statistics
-            // 
-            this.Statistics.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.Statistics, "Statistics");
-            this.Statistics.Name = "Statistics";
-            this.Statistics.UseVisualStyleBackColor = false;
-            // 
-            // searchlabel
-            // 
-            resources.ApplyResources(this.searchlabel, "searchlabel");
-            this.searchlabel.Name = "searchlabel";
-            // 
-            // txt_search
-            // 
-            resources.ApplyResources(this.txt_search, "txt_search");
-            this.txt_search.Name = "txt_search";
             // 
             // usersBindingSource
             // 
@@ -1451,7 +1401,6 @@
             this.usersRightPanel.PerformLayout();
             this.topPanel.ResumeLayout(false);
             this.Menu_panel.ResumeLayout(false);
-            this.Menu_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_box)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
@@ -1489,13 +1438,8 @@
         private System.Windows.Forms.BindingSource usersBindingSource2;
         private AggeliesDBDataSetTableAdapters.AdsTableTableAdapter adsTableTableAdapter;
         private System.Windows.Forms.BindingSource adsTableBindingSource;
-        private System.Windows.Forms.Label searchlabel;
-        private System.Windows.Forms.TextBox txt_search;
-        public System.Windows.Forms.Button btn_email;
-        private System.Windows.Forms.Button btn_profile;
         private System.Windows.Forms.Button btn_ads;
         private System.Windows.Forms.Button btn_users;
-        private System.Windows.Forms.Button Statistics;
         private System.Windows.Forms.Panel treeview_panel;
         private System.Windows.Forms.Panel usersMidPanel;
         private System.Windows.Forms.StatusStrip statusStrip;
@@ -1564,8 +1508,6 @@
         private System.Windows.Forms.Panel AdsCategoriesRightPanel;
 
         private System.Windows.Forms.Label editpropertyLabel;
-
-        private System.Windows.Forms.Button btn_settings;
         public System.Windows.Forms.Button btn_category;
         private System.Windows.Forms.CheckBox checkbox_blacklist;
         private System.Windows.Forms.TextBox pNameUpdateTBox;

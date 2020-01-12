@@ -213,18 +213,6 @@
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1064, 251</value>
   </metadata>
-  <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 49</value>
-  </data>
-  <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>590, 25</value>
-  </data>
-  <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="toolStrip1.Text" xml:space="preserve">
-    <value>toolStrip1</value>
-  </data>
   <data name="&gt;&gt;toolStrip1.Name" xml:space="preserve">
     <value>toolStrip1</value>
   </data>
@@ -237,21 +225,6 @@
   <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="adsTableBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>360, 95</value>
-  </metadata>
-  <data name="allAdsDGV.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="allAdsDGV.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 84</value>
-  </data>
-  <data name="allAdsDGV.Size" type="System.Drawing.Size, System.Drawing">
-    <value>573, 254</value>
-  </data>
-  <data name="allAdsDGV.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
   <data name="&gt;&gt;allAdsDGV.Name" xml:space="preserve">
     <value>allAdsDGV</value>
   </data>
@@ -263,27 +236,6 @@
   </data>
   <data name="&gt;&gt;allAdsDGV.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="AdsLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="AdsLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="AdsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="AdsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>590, 49</value>
-  </data>
-  <data name="AdsLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="AdsLabel.Text" xml:space="preserve">
-    <value>View all listed Ads</value>
-  </data>
-  <data name="AdsLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
   </data>
   <data name="&gt;&gt;AdsLabel.Name" xml:space="preserve">
     <value>AdsLabel</value>
@@ -936,6 +888,33 @@
   <data name="&gt;&gt;treeviewdatabase.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1064, 251</value>
+  </metadata>
+  <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 49</value>
+  </data>
+  <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>590, 25</value>
+  </data>
+  <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="toolStrip1.Text" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Name" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Parent" xml:space="preserve">
+    <value>AdsMidPanel</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="toolDelB.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -1056,6 +1035,33 @@
   <data name="userIDSortTB.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 25</value>
   </data>
+  <metadata name="adsTableBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>360, 95</value>
+  </metadata>
+  <data name="allAdsDGV.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="allAdsDGV.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 84</value>
+  </data>
+  <data name="allAdsDGV.Size" type="System.Drawing.Size, System.Drawing">
+    <value>573, 254</value>
+  </data>
+  <data name="allAdsDGV.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;allAdsDGV.Name" xml:space="preserve">
+    <value>allAdsDGV</value>
+  </data>
+  <data name="&gt;&gt;allAdsDGV.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;allAdsDGV.Parent" xml:space="preserve">
+    <value>AdsMidPanel</value>
+  </data>
+  <data name="&gt;&gt;allAdsDGV.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="adIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>adID</value>
   </data>
@@ -1101,6 +1107,39 @@
   <metadata name="aggeliesDBDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="AdsLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="AdsLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="AdsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="AdsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>590, 49</value>
+  </data>
+  <data name="AdsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="AdsLabel.Text" xml:space="preserve">
+    <value>View all listed Ads</value>
+  </data>
+  <data name="AdsLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;AdsLabel.Name" xml:space="preserve">
+    <value>AdsLabel</value>
+  </data>
+  <data name="&gt;&gt;AdsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdsLabel.Parent" xml:space="preserve">
+    <value>AdsMidPanel</value>
+  </data>
+  <data name="&gt;&gt;AdsLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="&gt;&gt;AdsCategoriesTab.Name" xml:space="preserve">
     <value>AdsCategoriesTab</value>
   </data>
@@ -4086,7 +4125,7 @@
     <value>0, 0</value>
   </data>
   <data name="logo_box.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 65</value>
+    <value>92, 65</value>
   </data>
   <data name="logo_box.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -4105,54 +4144,6 @@
   </data>
   <data name="&gt;&gt;logo_box.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="btn_settings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAABGdBTUEAALGPC/xhBQAABOBJREFUSEvl
-        VvtPk2cU/uaWXaKyX2YgDhwOsVxKuYhFoGMVQafcBNNw8QIoFpBx0wXB4NINEIlX2NgiiyAdkUuAttAV
-        AWu5FAayTabguPyw6//x7JzyboTMgZkuWbInefKe85xzHuj3nvIh/efhWozXNuch6M08hHIs5H8JGrzo
-        fgoPiAbB71gT1ecP7xzIZdm4I1JJlgOLlxZ+In0G6LDO/yROK7JQS3QVqkRxAbFKpJL/CVQoTqJQpFx3
-        5Rm/EyhmDyGvjZDjaFAeh554QpmJxZBMVJBmp3MwJAvOok3iWJmBflGr4F5iFrGZPUTb6gg/AlnEMUz9
-        8RvuSYWzKh3H9pVAWTyGU0Xj6CE+Euwp+hq5XKOZdHUGXBwmNMseqmPY7shXg1qDDVGHsRCVhreFJJWO
-        4VCpHYtldlSVjmLHB/1YzyyxI9ihLdWSRLu09yi2sged64W0OmJSEEM0cqyzI0c3ijGdDS4u+djklo8z
-        ru/jS9d86N3ycJo16tmsG8H4R3Zk88yBZBiIsRw/FTQabEnSYPzCKEIuDuNBjR0b/bTQyE9ikVjmq4WK
-        luMdeRbOObQsJOkm4HRxCNPVQ9hJs2PsIezWRmoiKlMSUVBng63WijBVBtR0Hw9C6D5Fy5/ge6PadEQ6
-        ImptUF0fgpVn2UO0PBlZ8XDOSEBVZjwsGQdx/3ITvG5YcZ9rccmYikmGnON6erSf3UNVvRWVHLMWnwpF
-        XAomOaaZb2puQpaegCnyM7Mne3NtBbJj0a2NQ2luPBQ62jL9ADTNg7iUloS3jh7EOPfQPb7UaMUPjXcB
-        wccdHUt/aahnIjMBbs0DuHJrEIfYgzz9tTE4p41FJ/esQOF+TJ2JwxsilTr6kds+gJKCGITlH8Bt1tos
-        8GjtB1oHltlmhQfXuCfvPYTyDM+yxsjfj03k7XhSK1ASDQvx6NkovM65qQ8pPX2o1qmx7fxu2FijT/My
-        6b8Z+wDBX1nj2oeRGC6PhIfJghqjBcms0Q9zOhuNI+zN+QqUR8OzfDdazkdi5vwemC0d8On/CiNcuxqO
-        mWu74M7xXQt8Bs1o6SfS6c3apQhsvarCQ45pxt5ngox8etmLPdmba3+Lygh8UvEuMofNmLKZIb+pRGJT
-        MIb1ir9+ket9saFxJ0Yag5EwYoKCZiar1MhgD9GyNmoi4H1ZhXuTZuyb7MHoLD02gwKF3X54RDxslMOt
-        wxdbDHIcoXymS4587pnsxdiECdE8ezkUXsJubXwahtC6UAxyPG1AxbQRBjLcMOwJb5snrtu2Y9RBT1yj
-        04tr3xtgfGjCxzxDs3frwrGL4zVRtw2v3FBitmEnAoQkzXWhaL4bcwsGaOd7lzeZ44UuZHNtzrD8mvo8
-        GIHkMUNPwbFQq0IfDHnzDoyKVOJ7u7UDe7+tguLnTlT/0olpOn8i/ijiaq7RHaub1HhVjEnkYdcHLS3V
-        qtBJWNceAHNbACpvByCazsfEZuJ8awAaTDJsFK1SSwicSP+Ca23+0NM52x6IqNZAVFDcCwkviNbVYaHH
-        SgtxnRalq9sX/qx10P8ulF8gvczRRDAqcI4WqJJrnBt8EUBL1E16bZP78qf9x7jjjaA+n6XXFoNjiw8C
-        Rfr8wUtglWHB6oWrDsow/1SL8SywucPF7om0MQ+kTGx9wlvgfw5J+h3YyTUxLLECMgAAAABJRU5ErkJg
-        gg==
-</value>
-  </data>
-  <data name="btn_settings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>403, 19</value>
-  </data>
-  <data name="btn_settings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 36</value>
-  </data>
-  <data name="btn_settings.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;btn_settings.Name" xml:space="preserve">
-    <value>btn_settings</value>
-  </data>
-  <data name="&gt;&gt;btn_settings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_settings.Parent" xml:space="preserve">
-    <value>Menu_panel</value>
-  </data>
-  <data name="&gt;&gt;btn_settings.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="btn_category.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -4176,7 +4167,7 @@
 </value>
   </data>
   <data name="btn_category.Location" type="System.Drawing.Point, System.Drawing">
-    <value>235, 19</value>
+    <value>239, 19</value>
   </data>
   <data name="btn_category.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 36</value>
@@ -4194,91 +4185,7 @@
     <value>Menu_panel</value>
   </data>
   <data name="&gt;&gt;btn_category.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="btn_email.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAABGdBTUEAALGPC/xhBQAAA6dJREFUSEvt
-        k29M1HUcx89c2h/c0qmtWEoFCjuSizO5g4QDguLw8mCcyHEW/zNAo4XQRO10gRIB6QbhA4RHDK/mz8Bo
-        0pIGY6E5NzMdHltP61nPWs9efb7XdzjGBQbVeuB7e+0+3/fn3+9++/5MD/S/l9nPKmsVD+vjv6PoA6ze
-        VEvD5hp+FGaiqglG1fDD5lrqo0p4RJf9M9pSxfrY/VzbWkVrdCkbtG16fj8bY9+iTZgyl7NO28tXQjlf
-        WcooUbEanFDGHsULb7NW58ss5YyoeNmyleCwl3ApFJeSKPG08JH9TdpUrDyVs5cyIqSpWIsVDh8V6T4G
-        hMDf4JajmEI1QeLvHF4soXGi1Dd4UXkqzvBRJPPbQgklZxEVzr1czynEluvFer9I39e7vOxQt1L6g3rc
-        rHL3MuOQS/NaIS9JbUDbJlNeAefzPfyUX8AJ9W+VVz+JvWGSxoXwvceE9yD7QjM8THs89y5NXh4bZebv
-        bjdPuD1YJDZ0ymTy5mPs202SN49zxXlckMaIj69g7RjjF4G/oqmLoG8P/WqGz02R9F715ZOrULEQLHbT
-        IL+ni/NpDS1TqnRhVDr/fP8VLuqEG8KzgW+IHBjlhkAYPuvtZY3UTZe9znbVW+Xi5XIXXZW76FWxsF6f
-        W6VmjaoJqdaJUa0XKtU4yRIveDCX9LEAEWNfMnTlEswyzGl5Cyul5gPhe+HugRxcun1xHcrGOJR1b6GS
-        nGPEv9OQTTUBVt4x6BR+vW3ge9fOo5IbFC6q+P1XeE7iIeFmfRbnhFONr2LWo+braAaG3zF34ZFMCsSf
-        FkaPZnLW72EVsMKfxdPHMrh6JIMByd2WvnjdYjqcyZOSOyN+X1MGkdqer5Y0jGa9ELmlzWmcOJnGZPNO
-        nvKbeKgllZPClNQdFz8oeFTthw5s4t09lc5udVZqcVCn0Mfwak/G6EzG0uUgoiOFC50p9J3JYbVOh9S5
-        k8SOZErbU3lGWyF12ImUnimZ0aQetj2FOoVOh1dPEkaPDdenNq5122jU9n1LPZz09suMQPcODncnLbKw
-        34oh/Cxka2tJ6t9Og8z4rS9xkYWDFozzCaTr47I0mMBxmbfwwovxGIZ57i1VCphZ9/k2PglHIIFjumyO
-        hszUfRHPO/oYXpdjabscR7U+zmrYymPDcbjDEj//9atLI3MCo3E4tRVe49FsGI/h24kYbo1v4fqSiWFG
-        ZvSoxXr0wrq5jccnNrF2qYxEz/2UHug/kMn0B3FPzyYSfLz2AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btn_email.Location" type="System.Drawing.Point, System.Drawing">
-    <value>347, 19</value>
-  </data>
-  <data name="btn_email.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 36</value>
-  </data>
-  <data name="btn_email.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="&gt;&gt;btn_email.Name" xml:space="preserve">
-    <value>btn_email</value>
-  </data>
-  <data name="&gt;&gt;btn_email.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_email.Parent" xml:space="preserve">
-    <value>Menu_panel</value>
-  </data>
-  <data name="&gt;&gt;btn_email.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btn_profile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAABGdBTUEAALGPC/xhBQAAA6FJREFUSEvt
-        lFtM02cYh7slni627HSxA4soRBgggv+iU6oWpAwQtEMYhIPryNpoOIxlAbM5yLclLMsy4rIFEw8NN4KG
-        QHEKUoMwp8NkBzOzIy4ZLphsN14s8XbJs/drPjZp/1VYTHbjL3nyvYff+75N2tRxX/+Lnm3Cm9DI/oXw
-        TBN7k5tZZkYXr+RG0pP3cTVpH4GFIN6bwliij+VmxeKU8SrudD+96nPK373I+DuXOGBathLv9fQA7Rl+
-        wv/pqFMOWg30nhlDjYT5NnSex03LVuK9rl/nK7TnNBB2L/aoy4c792V6fx9i640BHjPluHLt4WdXHetc
-        DayWOOiqZ8wKsMS0766COtzba+k16V3lqWNnQS1hYdzwa0EN5aYdX5WVLN3xEm+UVvNlaRV/lFVxqLiK
-        JNNesGRelVXjM6m9amp4tKKCqd27+UgOW8IqwSe1aXk92iOxugOtkUUinetZk9qrfhdH6ry8ZtJ/VFPO
-        Sqlf83l5pN6LLx61u6gwIw7xK10zaayai3k4UMasUjxoSvMU2MkH/lL26thfQpa/jAvRyPzJiFkkfiU1
-        +4OvV7KiuYg2YcyUYtRSRLXuN5awxudmeWsRidHIh04wdkdLCUr89gfbCgkJo8KwKcWovRBvm4evxDPT
-        +gJPSV4h+W/zKOQLY9d+JTX7gx15zHRuJ68jn09NKUad+bwo/YPCsPYqD0+/XUDB7Sg3Txi79ivx2h98
-        bxv+rm3cFH7S+YHLbOi4RCDCFHW61rWV/dK/JZw9bLFEZjZJfDiKr7VXq8uNEuL/aFQ6S7s3c+XgFnJP
-        nyP/VJi/BIbDBD8uZll3Lj98uJkcY7eVeCJ/b1rdLpTsi3+w53lqhe97NjIt5M2GyLgxSElvCU/2bOKU
-        9K4IQ/q4GYmR9GdMqGMl2B8MbsAZdHIraNFzdD2WxBeEWeE7YeaYk6ajTtwS/yl0R2YsCiUen0cOE5GF
-        IsmV5PYH+7O52J+Fpy+bQ8ezmZLYK/HKE1kknsjGKfEn4rnab5Eq8S8nLZKCKTzUl8Pq29HfrVnp6FuP
-        6suyOTiQyaqhTL4xqWMwk43CEV0LreVHeU8PrqNhblkokxbJOyPmO0jm1NBam4Mjz7FjNJ1jkTgVayCB
-        FZFGlOZ6I2lsOZvGgCnH1WgaSvbGHpxYQ/FkCp9NphKYSOGavG/qOJq53vlU3pJ4OrofjXgm9W5z5l/h
-        4IHLSeyZSub9e0y93m3O3Ne9lsPxN82R0XqgSr68AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btn_profile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>291, 19</value>
-  </data>
-  <data name="btn_profile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 36</value>
-  </data>
-  <data name="btn_profile.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="&gt;&gt;btn_profile.Name" xml:space="preserve">
-    <value>btn_profile</value>
-  </data>
-  <data name="&gt;&gt;btn_profile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_profile.Parent" xml:space="preserve">
-    <value>Menu_panel</value>
-  </data>
-  <data name="&gt;&gt;btn_profile.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>1</value>
   </data>
   <data name="btn_ads.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -4300,7 +4207,7 @@
 </value>
   </data>
   <data name="btn_ads.Location" type="System.Drawing.Point, System.Drawing">
-    <value>179, 19</value>
+    <value>183, 19</value>
   </data>
   <data name="btn_ads.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 36</value>
@@ -4318,7 +4225,7 @@
     <value>Menu_panel</value>
   </data>
   <data name="&gt;&gt;btn_ads.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>2</value>
   </data>
   <data name="btn_users.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -4340,7 +4247,7 @@
 </value>
   </data>
   <data name="btn_users.Location" type="System.Drawing.Point, System.Drawing">
-    <value>123, 19</value>
+    <value>127, 19</value>
   </data>
   <data name="btn_users.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 36</value>
@@ -4358,102 +4265,7 @@
     <value>Menu_panel</value>
   </data>
   <data name="&gt;&gt;btn_users.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="Statistics.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAABGdBTUEAALGPC/xhBQAAA1lJREFUSEvt
-        lttLVFEUxqV6iIooCCqJnFRCMW+NOt4mz6TWTDnjODp6TM2jjJNjN4NCC6RjQZbYzcoyM6fEkinspXwo
-        80j41kC9RFh4qbfwqb/ga+2ZPZK39KRP0Qc/9ll7r/WttZnDYYL+a6Y2n8babcdwiMGe+fbSFezEmu0u
-        bJxJSA26TXcxbGrD8A4XHs+Vw2q5zeKkOYra0BqMhbrgDSPCiZ3VU/zs68d3RsQR/Iw8Am9UgCp4dxHR
-        VRiLceAEt1tYZDS4y4kwHk4TGZ2zncaXfCLegXq+PU3acoQlVGCQhwsr1gElToKGh7OkdWJrooQtPJyl
-        ZKpNL4PCw4Wlq4DCinioWoIITWaJioZ6mk6ghkIphN/JYquEDTxtmvYVI8LKz4zU8KCoomF2MRRWRCZu
-        I8fEMZMxT/PJYke41Y44ayHcVhEC26NVk2dX0TCnCAorsoiQLYWQycyHja20z9N8stshFRZALsyHWyyA
-        UGRDrWiFpjhPRcOCAigiGTMzu82PyKE938tSbMamkjzUl1khlVohE27JCuFwLiZo1Ui5KhqSkcKKSvMw
-        RIYBJH7sEzuvtGCo0gzJYYHsMMPtyIHgzMFENZ1VH1TRsMLsb8jwFfufp70ssoBVNQewpcaOdbV05qQb
-        SwJWHzdhW60RmpNGFQ1dNF01FfFQteqp9ky2ioanaDo2JQ+nRCaNddnwBDibhVb6TVfy4ynR7TUNBhUN
-        62k6NiUPfZJNWN8o4ltXP0YCNLvwQc5EDE+ZUhM1vJSxyIYNeyGdN2BSNmC80YDRxgyMXiAuChgjo8lm
-        I8ZbiKv7Md5swI8mPSYu78HoFT1GmzktaZSTjslraSjntvOLJnvYlAFnUzq0v0MGc3JzJjo/t1PhvK1D
-        J7edX9dTkXI9Db2Eh3GDaCVupsLbmoKvt1LgucNIhqctGR9p/XyPngO0J8HTQbTr0NuhQzK3VS8yGmhP
-        xNP7SahjPGAkoq0zASOeOV6cJalrN/TuBLx/pEUdozveT4+f10QZT10e9cRioDcOXsLjYcT6eUY8j8E7
-        Yvlu+SwG+r5oKC+ioZ3JywBRePIqcpluSWYDZLaHh3PqbSRCBiLwSaHPHd/6O8lBWPEmAjYe/lHDoTjg
-        DVb5b+0fVFDQL/hUW9gHbFLNAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="Statistics.Location" type="System.Drawing.Point, System.Drawing">
-    <value>67, 19</value>
-  </data>
-  <data name="Statistics.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 36</value>
-  </data>
-  <data name="Statistics.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;Statistics.Name" xml:space="preserve">
-    <value>Statistics</value>
-  </data>
-  <data name="&gt;&gt;Statistics.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Statistics.Parent" xml:space="preserve">
-    <value>Menu_panel</value>
-  </data>
-  <data name="&gt;&gt;Statistics.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="searchlabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="searchlabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="searchlabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>830, 42</value>
-  </data>
-  <data name="searchlabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 13</value>
-  </data>
-  <data name="searchlabel.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="searchlabel.Text" xml:space="preserve">
-    <value>Search :</value>
-  </data>
-  <data name="&gt;&gt;searchlabel.Name" xml:space="preserve">
-    <value>searchlabel</value>
-  </data>
-  <data name="&gt;&gt;searchlabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;searchlabel.Parent" xml:space="preserve">
-    <value>Menu_panel</value>
-  </data>
-  <data name="&gt;&gt;searchlabel.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="txt_search.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="txt_search.Location" type="System.Drawing.Point, System.Drawing">
-    <value>883, 39</value>
-  </data>
-  <data name="txt_search.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 20</value>
-  </data>
-  <data name="txt_search.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;txt_search.Name" xml:space="preserve">
-    <value>txt_search</value>
-  </data>
-  <data name="&gt;&gt;txt_search.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_search.Parent" xml:space="preserve">
-    <value>Menu_panel</value>
-  </data>
-  <data name="&gt;&gt;txt_search.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>3</value>
   </data>
   <data name="Menu_panel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>

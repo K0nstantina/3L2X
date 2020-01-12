@@ -1240,9 +1240,9 @@
             // 
             // contentPanel
             // 
+            this.contentPanel.Controls.Add(this.settingsPanel);
             this.contentPanel.Controls.Add(this.newAddPanel);
             this.contentPanel.Controls.Add(this.profilePanel);
-            this.contentPanel.Controls.Add(this.settingsPanel);
             this.contentPanel.Controls.Add(this.signupPanel);
             this.contentPanel.Controls.Add(this.displayAdsPanel);
             this.contentPanel.Controls.Add(this.adsPanel);
