@@ -24,9 +24,9 @@ namespace UserApplication
         #region Constructors
         public UserForm()
         {
-            this.Hide();
-            UserApplication.trestingTreeView treeView = new trestingTreeView();
-            treeView.Show();
+            //this.Hide();
+            //UserApplication.trestingTreeView treeView = new trestingTreeView();
+            //treeView.Show();
         }
         public UserForm(int userID)
         {
@@ -709,9 +709,9 @@ namespace UserApplication
             
             panels[0].BringToFront();
 
-            recentAdsList.Add(recentAds1);
-            recentAdsList.Add(recentAds2);
-            recentAdsList.Add(recentAds3);
+            //recentAdsList.Add(recentAds1);
+            //recentAdsList.Add(recentAds2);
+            //recentAdsList.Add(recentAds3);
         }
 
         /// <summary>
@@ -788,7 +788,6 @@ namespace UserApplication
             userMenu.categoriesButton.Click += CatBut_Click;
             userMenu.logoutButton.Click += LogoutBut_Click;
             userMenu.settingsButton.Click += SettingBut_Click;
-            userMenu.adsButton.Click += AdsBut_Click;
             userMenu.profileButton.Click += ProfileBut_Click;
         }
         /// <summary>
