@@ -6012,7 +6012,7 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[8];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[9];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        adID, adTitle, adCategory, ownerID, creationDate, expirationDate, M" +
@@ -6048,24 +6048,41 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[5] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = "UPDATE       AdsTable\r\nSET                Images = ?\r\nWHERE        (adID = ?)";
+            this._commandCollection[5].CommandText = "INSERT INTO AdsTable\r\n                         (adTitle, adCategory, ownerID, cre" +
+                "ationDate, expirationDate, adDesc, price, Published, Hits, adStatus, Images)\r\nVA" +
+                "LUES        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adTitle", global::System.Data.OleDb.OleDbType.WChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adTitle", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adCategory", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adCategory", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ownerID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ownerID", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("creationDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "creationDate", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("expirationDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "expirationDate", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adDesc", global::System.Data.OleDb.OleDbType.WChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adDesc", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "price", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Published", global::System.Data.OleDb.OleDbType.Boolean, 2, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Published", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Hits", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Hits", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adStatus", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adStatus", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Images", global::System.Data.OleDb.OleDbType.WChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Images", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_adID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adID", global::System.Data.DataRowVersion.Original, false, null));
             this._commandCollection[6] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[6].Connection = this.Connection;
-            this._commandCollection[6].CommandText = "UPDATE       AdsTable\r\nSET                price = ?\r\nWHERE        (adID = ?)";
+            this._commandCollection[6].CommandText = "UPDATE       AdsTable\r\nSET                Images = ?\r\nWHERE        (adID = ?)";
             this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[6].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "price", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[6].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Images", global::System.Data.OleDb.OleDbType.WChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Images", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[6].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_adID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adID", global::System.Data.DataRowVersion.Original, false, null));
             this._commandCollection[7] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[7].Connection = this.Connection;
-            this._commandCollection[7].CommandText = "UPDATE       AdsTable\r\nSET                adTitle = ?, adDesc = ?\r\nWHERE        (" +
-                "adID = ?)";
+            this._commandCollection[7].CommandText = "UPDATE       AdsTable\r\nSET                price = ?\r\nWHERE        (adID = ?)";
             this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[7].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adTitle", global::System.Data.OleDb.OleDbType.WChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adTitle", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[7].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adDesc", global::System.Data.OleDb.OleDbType.WChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adDesc", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "price", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[7].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_adID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adID", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[8] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[8].Connection = this.Connection;
+            this._commandCollection[8].CommandText = "UPDATE       AdsTable\r\nSET                adTitle = ?, adDesc = ?\r\nWHERE        (" +
+                "adID = ?)";
+            this._commandCollection[8].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[8].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adTitle", global::System.Data.OleDb.OleDbType.WChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adTitle", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[8].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adDesc", global::System.Data.OleDb.OleDbType.WChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adDesc", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[8].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_adID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adID", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6469,9 +6486,68 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int InsertNewAddQuery(string adTitle, int adCategory, int ownerID, System.DateTime creationDate, global::System.Nullable<global::System.DateTime> expirationDate, string adDesc, int price, bool Published, global::System.Nullable<int> Hits, int adStatus, string Images) {
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[5];
+            if ((adTitle == null)) {
+                throw new global::System.ArgumentNullException("adTitle");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(adTitle));
+            }
+            command.Parameters[1].Value = ((int)(adCategory));
+            command.Parameters[2].Value = ((int)(ownerID));
+            command.Parameters[3].Value = ((System.DateTime)(creationDate));
+            if ((expirationDate.HasValue == true)) {
+                command.Parameters[4].Value = ((System.DateTime)(expirationDate.Value));
+            }
+            else {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((adDesc == null)) {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[5].Value = ((string)(adDesc));
+            }
+            command.Parameters[6].Value = ((int)(price));
+            command.Parameters[7].Value = ((bool)(Published));
+            if ((Hits.HasValue == true)) {
+                command.Parameters[8].Value = ((int)(Hits.Value));
+            }
+            else {
+                command.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            command.Parameters[9].Value = ((int)(adStatus));
+            if ((Images == null)) {
+                command.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[10].Value = ((string)(Images));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int UpdateImageQuery(string Images, int Original_adID) {
-            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[5];
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[6];
             if ((Images == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -6501,7 +6577,7 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int UpdatePriceQuery(global::System.Nullable<int> price, int Original_adID) {
-            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[6];
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[7];
             if ((price.HasValue == true)) {
                 command.Parameters[0].Value = ((int)(price.Value));
             }
@@ -6531,7 +6607,7 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int UpdateTitleDescQuery(string adTitle, string adDesc, int Original_adID) {
-            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[7];
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[8];
             if ((adTitle == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
