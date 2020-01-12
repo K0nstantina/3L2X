@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
             this.topPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
-            this.userMenuIcons1 = new aggeliesWpfLab.UserMenuIcons();
             this.footerPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.settingsPanel = new System.Windows.Forms.Panel();
@@ -72,7 +72,6 @@
             this.avatarPictureBox = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.categoriesPanel = new System.Windows.Forms.Panel();
-            this.displayAd = new UserApplication.DisplayAds();
             this.categoriesListBox = new System.Windows.Forms.ListBox();
             this.gChildComboBox = new System.Windows.Forms.ComboBox();
             this.childCategoriesComboBox = new System.Windows.Forms.ComboBox();
@@ -126,8 +125,15 @@
             this.usersTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.UsersTableAdapter();
             this.adCategoryTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.AdCategoryTableAdapter();
             this.leftPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.upgrade_label = new System.Windows.Forms.LinkLabel();
+            this.upgradeAccount_panel = new System.Windows.Forms.Panel();
+            this.Info_label = new System.Windows.Forms.Label();
+            this.btn_gold = new System.Windows.Forms.Button();
+            this.btn_silver = new System.Windows.Forms.Button();
+            this.freetrial_button = new System.Windows.Forms.Button();
+            this.premium_img = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.settingsPanel.SuspendLayout();
             this.fontSizeGroupBox.SuspendLayout();
             this.panelColorsGroupBox.SuspendLayout();
@@ -147,7 +153,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.adsPictureBox)).BeginInit();
             this.contentPanel.SuspendLayout();
             this.signupPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.upgradeAccount_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // topPanel
@@ -158,35 +164,45 @@
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1828, 108);
+            this.topPanel.Size = new System.Drawing.Size(1370, 108);
             this.topPanel.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 108);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // elementHost1
             // 
             this.elementHost1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.elementHost1.Location = new System.Drawing.Point(902, 0);
+            this.elementHost1.Location = new System.Drawing.Point(444, 0);
             this.elementHost1.Name = "elementHost1";
             this.elementHost1.Size = new System.Drawing.Size(926, 108);
             this.elementHost1.TabIndex = 0;
             this.elementHost1.Text = "elementHost1";
-            this.elementHost1.Child = this.userMenuIcons1;
+            this.elementHost1.Child = null;
             // 
             // footerPanel
             // 
             this.footerPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.footerPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.footerPanel.Location = new System.Drawing.Point(200, 714);
+            this.footerPanel.Location = new System.Drawing.Point(200, 649);
             this.footerPanel.Name = "footerPanel";
-            this.footerPanel.Size = new System.Drawing.Size(1428, 100);
+            this.footerPanel.Size = new System.Drawing.Size(970, 100);
             this.footerPanel.TabIndex = 1;
             // 
             // rightPanel
             // 
             this.rightPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rightPanel.Location = new System.Drawing.Point(1628, 108);
+            this.rightPanel.Location = new System.Drawing.Point(1170, 108);
             this.rightPanel.Name = "rightPanel";
-            this.rightPanel.Size = new System.Drawing.Size(200, 706);
+            this.rightPanel.Size = new System.Drawing.Size(200, 641);
             this.rightPanel.TabIndex = 2;
             // 
             // settingsPanel
@@ -197,7 +213,7 @@
             this.settingsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.settingsPanel.Location = new System.Drawing.Point(0, 0);
             this.settingsPanel.Name = "settingsPanel";
-            this.settingsPanel.Size = new System.Drawing.Size(1428, 606);
+            this.settingsPanel.Size = new System.Drawing.Size(970, 541);
             this.settingsPanel.TabIndex = 1;
             // 
             // fontSizeGroupBox
@@ -306,7 +322,7 @@
             this.homePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.homePanel.Location = new System.Drawing.Point(0, 0);
             this.homePanel.Name = "homePanel";
-            this.homePanel.Size = new System.Drawing.Size(1428, 606);
+            this.homePanel.Size = new System.Drawing.Size(970, 541);
             this.homePanel.TabIndex = 3;
             // 
             // recentAdsLabel
@@ -323,6 +339,7 @@
             // 
             // profilePanel
             // 
+            this.profilePanel.Controls.Add(this.upgrade_label);
             this.profilePanel.Controls.Add(this.uPhoneLabel);
             this.profilePanel.Controls.Add(this.uPhoneTextBox);
             this.profilePanel.Controls.Add(this.uAgeLabel);
@@ -348,8 +365,9 @@
             this.profilePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profilePanel.Location = new System.Drawing.Point(0, 0);
             this.profilePanel.Name = "profilePanel";
-            this.profilePanel.Size = new System.Drawing.Size(1428, 606);
+            this.profilePanel.Size = new System.Drawing.Size(970, 541);
             this.profilePanel.TabIndex = 0;
+            this.profilePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.profilePanel_Paint);
             // 
             // uPhoneLabel
             // 
@@ -409,7 +427,7 @@
             // 
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.saveButton.Location = new System.Drawing.Point(803, 370);
+            this.saveButton.Location = new System.Drawing.Point(803, 401);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(149, 45);
             this.saveButton.TabIndex = 63;
@@ -580,7 +598,6 @@
             // 
             // categoriesPanel
             // 
-            this.categoriesPanel.Controls.Add(this.displayAd);
             this.categoriesPanel.Controls.Add(this.categoriesListBox);
             this.categoriesPanel.Controls.Add(this.gChildComboBox);
             this.categoriesPanel.Controls.Add(this.childCategoriesComboBox);
@@ -589,16 +606,8 @@
             this.categoriesPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.categoriesPanel.Location = new System.Drawing.Point(0, 0);
             this.categoriesPanel.Name = "categoriesPanel";
-            this.categoriesPanel.Size = new System.Drawing.Size(1428, 606);
+            this.categoriesPanel.Size = new System.Drawing.Size(970, 541);
             this.categoriesPanel.TabIndex = 3;
-            // 
-            // displayAd
-            // 
-            this.displayAd.Location = new System.Drawing.Point(381, 36);
-            this.displayAd.Name = "displayAd";
-            this.displayAd.Size = new System.Drawing.Size(390, 348);
-            this.displayAd.TabIndex = 6;
-            this.displayAd.Visible = false;
             // 
             // categoriesListBox
             // 
@@ -613,7 +622,7 @@
             this.categoriesListBox.ItemHeight = 20;
             this.categoriesListBox.Location = new System.Drawing.Point(807, 53);
             this.categoriesListBox.Name = "categoriesListBox";
-            this.categoriesListBox.Size = new System.Drawing.Size(621, 540);
+            this.categoriesListBox.Size = new System.Drawing.Size(163, 460);
             this.categoriesListBox.TabIndex = 5;
             this.categoriesListBox.SelectedIndexChanged += new System.EventHandler(this.categoriesListBox_SelectedIndexChanged);
             // 
@@ -682,7 +691,7 @@
             this.adsPanel.Location = new System.Drawing.Point(0, 0);
             this.adsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adsPanel.Name = "adsPanel";
-            this.adsPanel.Size = new System.Drawing.Size(1064, 606);
+            this.adsPanel.Size = new System.Drawing.Size(1064, 541);
             this.adsPanel.TabIndex = 2;
             // 
             // publishButton
@@ -807,7 +816,7 @@
             this.adsListPanel.Location = new System.Drawing.Point(819, 0);
             this.adsListPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adsListPanel.Name = "adsListPanel";
-            this.adsListPanel.Size = new System.Drawing.Size(245, 606);
+            this.adsListPanel.Size = new System.Drawing.Size(245, 541);
             this.adsListPanel.TabIndex = 5;
             // 
             // adsListBox
@@ -826,7 +835,7 @@
             this.adsListBox.Location = new System.Drawing.Point(4, 33);
             this.adsListBox.Margin = new System.Windows.Forms.Padding(0);
             this.adsListBox.Name = "adsListBox";
-            this.adsListBox.Size = new System.Drawing.Size(241, 340);
+            this.adsListBox.Size = new System.Drawing.Size(241, 260);
             this.adsListBox.TabIndex = 3;
             this.adsListBox.ValueMember = "adID";
             this.adsListBox.SelectedIndexChanged += new System.EventHandler(this.adsListBox_SelectedIndexChanged);
@@ -876,7 +885,7 @@
             this.selectedAdPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.selectedAdPanel.Location = new System.Drawing.Point(0, 0);
             this.selectedAdPanel.Name = "selectedAdPanel";
-            this.selectedAdPanel.Size = new System.Drawing.Size(349, 606);
+            this.selectedAdPanel.Size = new System.Drawing.Size(349, 541);
             this.selectedAdPanel.TabIndex = 2;
             // 
             // titleTextBox
@@ -888,7 +897,7 @@
             this.titleTextBox.Location = new System.Drawing.Point(0, 0);
             this.titleTextBox.Multiline = true;
             this.titleTextBox.Name = "titleTextBox";
-            this.titleTextBox.Size = new System.Drawing.Size(349, 166);
+            this.titleTextBox.Size = new System.Drawing.Size(349, 101);
             this.titleTextBox.TabIndex = 5;
             this.titleTextBox.Text = "TITLE";
             this.titleTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -898,7 +907,7 @@
             this.descriptionRichTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.descriptionRichTextBox.Enabled = false;
             this.descriptionRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.descriptionRichTextBox.Location = new System.Drawing.Point(0, 415);
+            this.descriptionRichTextBox.Location = new System.Drawing.Point(0, 350);
             this.descriptionRichTextBox.Name = "descriptionRichTextBox";
             this.descriptionRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.descriptionRichTextBox.Size = new System.Drawing.Size(349, 191);
@@ -914,23 +923,24 @@
             this.adsPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("adsPictureBox.Image")));
             this.adsPictureBox.Location = new System.Drawing.Point(0, 33);
             this.adsPictureBox.Name = "adsPictureBox";
-            this.adsPictureBox.Size = new System.Drawing.Size(349, 385);
+            this.adsPictureBox.Size = new System.Drawing.Size(349, 320);
             this.adsPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.adsPictureBox.TabIndex = 3;
             this.adsPictureBox.TabStop = false;
             // 
             // contentPanel
             // 
+            this.contentPanel.Controls.Add(this.upgradeAccount_panel);
+            this.contentPanel.Controls.Add(this.profilePanel);
             this.contentPanel.Controls.Add(this.homePanel);
             this.contentPanel.Controls.Add(this.settingsPanel);
             this.contentPanel.Controls.Add(this.adsPanel);
             this.contentPanel.Controls.Add(this.signupPanel);
             this.contentPanel.Controls.Add(this.categoriesPanel);
-            this.contentPanel.Controls.Add(this.profilePanel);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(200, 108);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(1428, 606);
+            this.contentPanel.Size = new System.Drawing.Size(970, 541);
             this.contentPanel.TabIndex = 5;
             // 
             // signupPanel
@@ -958,7 +968,7 @@
             this.signupPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.signupPanel.Location = new System.Drawing.Point(0, 0);
             this.signupPanel.Name = "signupPanel";
-            this.signupPanel.Size = new System.Drawing.Size(1428, 606);
+            this.signupPanel.Size = new System.Drawing.Size(970, 541);
             this.signupPanel.TabIndex = 7;
             // 
             // signupLabel
@@ -1166,25 +1176,89 @@
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 108);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(200, 706);
+            this.leftPanel.Size = new System.Drawing.Size(200, 641);
             this.leftPanel.TabIndex = 1;
             // 
-            // pictureBox1
+            // upgrade_label
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 108);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.upgrade_label.AutoSize = true;
+            this.upgrade_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.upgrade_label.Location = new System.Drawing.Point(758, 358);
+            this.upgrade_label.Name = "upgrade_label";
+            this.upgrade_label.Size = new System.Drawing.Size(194, 20);
+            this.upgrade_label.TabIndex = 70;
+            this.upgrade_label.TabStop = true;
+            this.upgrade_label.Text = "Αναβάθμιση λογαριασμού.";
+            // 
+            // upgradeAccount_panel
+            // 
+            this.upgradeAccount_panel.Controls.Add(this.Info_label);
+            this.upgradeAccount_panel.Controls.Add(this.btn_gold);
+            this.upgradeAccount_panel.Controls.Add(this.btn_silver);
+            this.upgradeAccount_panel.Controls.Add(this.freetrial_button);
+            this.upgradeAccount_panel.Controls.Add(this.premium_img);
+            this.upgradeAccount_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.upgradeAccount_panel.Location = new System.Drawing.Point(0, 0);
+            this.upgradeAccount_panel.Name = "upgradeAccount_panel";
+            this.upgradeAccount_panel.Size = new System.Drawing.Size(970, 541);
+            this.upgradeAccount_panel.TabIndex = 71;
+            // 
+            // Info_label
+            // 
+            this.Info_label.AutoSize = true;
+            this.Info_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.Info_label.Location = new System.Drawing.Point(13, 6);
+            this.Info_label.Name = "Info_label";
+            this.Info_label.Size = new System.Drawing.Size(204, 25);
+            this.Info_label.TabIndex = 14;
+            this.Info_label.Text = "MONTHLY PLANS";
+            this.Info_label.Click += new System.EventHandler(this.Info_label_Click);
+            // 
+            // btn_gold
+            // 
+            this.btn_gold.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btn_gold.Location = new System.Drawing.Point(602, 469);
+            this.btn_gold.Name = "btn_gold";
+            this.btn_gold.Size = new System.Drawing.Size(175, 35);
+            this.btn_gold.TabIndex = 13;
+            this.btn_gold.Text = "Upgrade to GOLD";
+            this.btn_gold.UseVisualStyleBackColor = true;
+            // 
+            // btn_silver
+            // 
+            this.btn_silver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btn_silver.Location = new System.Drawing.Point(417, 469);
+            this.btn_silver.Name = "btn_silver";
+            this.btn_silver.Size = new System.Drawing.Size(175, 35);
+            this.btn_silver.TabIndex = 12;
+            this.btn_silver.Text = "Upgrade to SILVER";
+            this.btn_silver.UseVisualStyleBackColor = true;
+            // 
+            // freetrial_button
+            // 
+            this.freetrial_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.freetrial_button.Location = new System.Drawing.Point(229, 469);
+            this.freetrial_button.Name = "freetrial_button";
+            this.freetrial_button.Size = new System.Drawing.Size(175, 35);
+            this.freetrial_button.TabIndex = 11;
+            this.freetrial_button.Text = "Free Trial 10 days";
+            this.freetrial_button.UseVisualStyleBackColor = true;
+            // 
+            // premium_img
+            // 
+            this.premium_img.Image = ((System.Drawing.Image)(resources.GetObject("premium_img.Image")));
+            this.premium_img.Location = new System.Drawing.Point(3, 33);
+            this.premium_img.Name = "premium_img";
+            this.premium_img.Size = new System.Drawing.Size(768, 404);
+            this.premium_img.TabIndex = 10;
+            this.premium_img.UseVisualStyleBackColor = true;
             // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1828, 814);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.footerPanel);
             this.Controls.Add(this.leftPanel);
@@ -1198,6 +1272,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.topPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.settingsPanel.ResumeLayout(false);
             this.fontSizeGroupBox.ResumeLayout(false);
             this.fontSizeGroupBox.PerformLayout();
@@ -1224,7 +1299,8 @@
             this.contentPanel.ResumeLayout(false);
             this.signupPanel.ResumeLayout(false);
             this.signupPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.upgradeAccount_panel.ResumeLayout(false);
+            this.upgradeAccount_panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1328,6 +1404,13 @@
         private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private aggeliesWpfLab.UserMenuIcons userMenuIcons1;
+        private System.Windows.Forms.LinkLabel upgrade_label;
+        private System.Windows.Forms.Panel upgradeAccount_panel;
+        private System.Windows.Forms.Label Info_label;
+        private System.Windows.Forms.Button btn_gold;
+        private System.Windows.Forms.Button btn_silver;
+        private System.Windows.Forms.Button freetrial_button;
+        private System.Windows.Forms.Button premium_img;
     }
 }
 
