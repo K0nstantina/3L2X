@@ -19,3 +19,10 @@ namespace UserApplication {
     public partial class AggeliesDBDataSet {
     }
 }
+
+namespace UserApplication.AggeliesDBDataSetTableAdapters {
+    
+    
+    public partial class AdsTableTableAdapter {
+    }
+}

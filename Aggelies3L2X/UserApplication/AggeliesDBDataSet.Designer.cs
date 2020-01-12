@@ -58,6 +58,8 @@ namespace UserApplication {
         
         private global::System.Data.DataRelation relationadCategoryAdsTable;
         
+        private global::System.Data.DataRelation relationAdsStatusAdsTable;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -410,6 +412,7 @@ namespace UserApplication {
             this.relationuserCategoriesUsers = this.Relations["userCategoriesUsers"];
             this.relationadCategoryProperties = this.Relations["adCategoryProperties"];
             this.relationadCategoryAdsTable = this.Relations["adCategoryAdsTable"];
+            this.relationAdsStatusAdsTable = this.Relations["AdsStatusAdsTable"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -470,6 +473,10 @@ namespace UserApplication {
                         this.tableAdCategory.catIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableAdsTable.adCategoryColumn}, false);
             this.Relations.Add(this.relationadCategoryAdsTable);
+            this.relationAdsStatusAdsTable = new global::System.Data.DataRelation("AdsStatusAdsTable", new global::System.Data.DataColumn[] {
+                        this.tableAdsStatus.adStatusIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableAdsTable.adStatusColumn}, false);
+            this.Relations.Add(this.relationAdsStatusAdsTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1193,8 +1200,6 @@ namespace UserApplication {
             
             private global::System.Data.DataColumn columnexpirationDate;
             
-            private global::System.Data.DataColumn columnmedia;
-            
             private global::System.Data.DataColumn columnadDesc;
             
             private global::System.Data.DataColumn columnprice;
@@ -1204,6 +1209,10 @@ namespace UserApplication {
             private global::System.Data.DataColumn columnHits;
             
             private global::System.Data.DataColumn columnadStatus;
+            
+            private global::System.Data.DataColumn columnMedia;
+            
+            private global::System.Data.DataColumn columnImages;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -1288,14 +1297,6 @@ namespace UserApplication {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn mediaColumn {
-                get {
-                    return this.columnmedia;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn adDescColumn {
                 get {
                     return this.columnadDesc;
@@ -1336,6 +1337,22 @@ namespace UserApplication {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MediaColumn {
+                get {
+                    return this.columnMedia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ImagesColumn {
+                get {
+                    return this.columnImages;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1371,7 +1388,7 @@ namespace UserApplication {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AdsTableRow AddAdsTableRow(string adTitle, AdCategoryRow parentAdCategoryRowByadCategoryAdsTable, UsersRow parentUsersRowByUsersAdsTable, System.DateTime creationDate, System.DateTime expirationDate, string media, string adDesc, int price, bool Published, int Hits, int adStatus) {
+            public AdsTableRow AddAdsTableRow(string adTitle, AdCategoryRow parentAdCategoryRowByadCategoryAdsTable, UsersRow parentUsersRowByUsersAdsTable, System.DateTime creationDate, System.DateTime expirationDate, string adDesc, int price, bool Published, int Hits, AdsStatusRow parentAdsStatusRowByAdsStatusAdsTable, string Media, string Images) {
                 AdsTableRow rowAdsTableRow = ((AdsTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1380,17 +1397,21 @@ namespace UserApplication {
                         null,
                         creationDate,
                         expirationDate,
-                        media,
                         adDesc,
                         price,
                         Published,
                         Hits,
-                        adStatus};
+                        null,
+                        Media,
+                        Images};
                 if ((parentAdCategoryRowByadCategoryAdsTable != null)) {
                     columnValuesArray[2] = parentAdCategoryRowByadCategoryAdsTable[0];
                 }
                 if ((parentUsersRowByUsersAdsTable != null)) {
                     columnValuesArray[3] = parentUsersRowByUsersAdsTable[0];
+                }
+                if ((parentAdsStatusRowByAdsStatusAdsTable != null)) {
+                    columnValuesArray[10] = parentAdsStatusRowByAdsStatusAdsTable[0];
                 }
                 rowAdsTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAdsTableRow);
@@ -1427,12 +1448,13 @@ namespace UserApplication {
                 this.columnownerID = base.Columns["ownerID"];
                 this.columncreationDate = base.Columns["creationDate"];
                 this.columnexpirationDate = base.Columns["expirationDate"];
-                this.columnmedia = base.Columns["media"];
                 this.columnadDesc = base.Columns["adDesc"];
                 this.columnprice = base.Columns["price"];
                 this.columnPublished = base.Columns["Published"];
                 this.columnHits = base.Columns["Hits"];
                 this.columnadStatus = base.Columns["adStatus"];
+                this.columnMedia = base.Columns["Media"];
+                this.columnImages = base.Columns["Images"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1450,8 +1472,6 @@ namespace UserApplication {
                 base.Columns.Add(this.columncreationDate);
                 this.columnexpirationDate = new global::System.Data.DataColumn("expirationDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnexpirationDate);
-                this.columnmedia = new global::System.Data.DataColumn("media", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmedia);
                 this.columnadDesc = new global::System.Data.DataColumn("adDesc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnadDesc);
                 this.columnprice = new global::System.Data.DataColumn("price", typeof(int), null, global::System.Data.MappingType.Element);
@@ -1462,6 +1482,10 @@ namespace UserApplication {
                 base.Columns.Add(this.columnHits);
                 this.columnadStatus = new global::System.Data.DataColumn("adStatus", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnadStatus);
+                this.columnMedia = new global::System.Data.DataColumn("Media", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMedia);
+                this.columnImages = new global::System.Data.DataColumn("Images", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnImages);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnadID}, true));
                 this.columnadID.AutoIncrement = true;
@@ -1470,8 +1494,9 @@ namespace UserApplication {
                 this.columnadID.AllowDBNull = false;
                 this.columnadID.Unique = true;
                 this.columnadTitle.MaxLength = 536870910;
-                this.columnmedia.MaxLength = 536870910;
                 this.columnadDesc.MaxLength = 536870910;
+                this.columnMedia.MaxLength = 255;
+                this.columnImages.MaxLength = 536870910;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3571,6 +3596,17 @@ namespace UserApplication {
             public void SetstatusTitleNull() {
                 this[this.tableAdsStatus.statusTitleColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public AdsTableRow[] GetAdsTableRows() {
+                if ((this.Table.ChildRelations["AdsStatusAdsTable"] == null)) {
+                    return new AdsTableRow[0];
+                }
+                else {
+                    return ((AdsTableRow[])(base.GetChildRows(this.Table.ChildRelations["AdsStatusAdsTable"])));
+                }
+            }
         }
         
         /// <summary>
@@ -3680,22 +3716,6 @@ namespace UserApplication {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string media {
-                get {
-                    try {
-                        return ((string)(this[this.tableAdsTable.mediaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'media\' in table \'AdsTable\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAdsTable.mediaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string adDesc {
                 get {
                     try {
@@ -3776,6 +3796,38 @@ namespace UserApplication {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Media {
+                get {
+                    try {
+                        return ((string)(this[this.tableAdsTable.MediaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Media\' in table \'AdsTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAdsTable.MediaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Images {
+                get {
+                    try {
+                        return ((string)(this[this.tableAdsTable.ImagesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Images\' in table \'AdsTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAdsTable.ImagesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public UsersRow UsersRow {
                 get {
                     return ((UsersRow)(this.GetParentRow(this.Table.ParentRelations["UsersAdsTable"])));
@@ -3793,6 +3845,17 @@ namespace UserApplication {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["adCategoryAdsTable"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public AdsStatusRow AdsStatusRow {
+                get {
+                    return ((AdsStatusRow)(this.GetParentRow(this.Table.ParentRelations["AdsStatusAdsTable"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["AdsStatusAdsTable"]);
                 }
             }
             
@@ -3858,18 +3921,6 @@ namespace UserApplication {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsmediaNull() {
-                return this.IsNull(this.tableAdsTable.mediaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetmediaNull() {
-                this[this.tableAdsTable.mediaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsadDescNull() {
                 return this.IsNull(this.tableAdsTable.adDescColumn);
             }
@@ -3926,6 +3977,30 @@ namespace UserApplication {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetadStatusNull() {
                 this[this.tableAdsTable.adStatusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMediaNull() {
+                return this.IsNull(this.tableAdsTable.MediaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMediaNull() {
+                this[this.tableAdsTable.MediaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsImagesNull() {
+                return this.IsNull(this.tableAdsTable.ImagesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetImagesNull() {
+                this[this.tableAdsTable.ImagesColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5143,18 +5218,18 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        catTitle, catID, catParent\nFROM            AdCategory\nWHERE        " +
-                "(catParent = ?)";
+            this._commandCollection[1].CommandText = "SELECT        catTitle, catID, catParent\r\nFROM            AdCategory\r\nWHERE      " +
+                "  (catParent = ?)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("catParent", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "catParent", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT        catTitle, catID, catParent\nFROM            AdCategory\nWHERE        " +
-                "(catParent = 0)";
+            this._commandCollection[2].CommandText = "SELECT        catTitle, catID, catParent\r\nFROM            AdCategory\r\nWHERE      " +
+                "  (catParent = 0)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT        catParent\nFROM            AdCategory\nWHERE        (catID = ?)";
+            this._commandCollection[3].CommandText = "SELECT        catParent\r\nFROM            AdCategory\r\nWHERE        (catID = ?)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("catID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "catID", global::System.Data.DataRowVersion.Current, false, null));
         }
@@ -5841,16 +5916,17 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("ownerID", "ownerID");
             tableMapping.ColumnMappings.Add("creationDate", "creationDate");
             tableMapping.ColumnMappings.Add("expirationDate", "expirationDate");
-            tableMapping.ColumnMappings.Add("media", "media");
             tableMapping.ColumnMappings.Add("adDesc", "adDesc");
             tableMapping.ColumnMappings.Add("price", "price");
             tableMapping.ColumnMappings.Add("Published", "Published");
             tableMapping.ColumnMappings.Add("Hits", "Hits");
             tableMapping.ColumnMappings.Add("adStatus", "adStatus");
+            tableMapping.ColumnMappings.Add("Media", "Media");
+            tableMapping.ColumnMappings.Add("Images", "Images");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `AdsTable` WHERE ((`adID` = ?) AND ((? = 1 AND `adCategory` IS NULL) OR (`adCategory` = ?)) AND ((? = 1 AND `ownerID` IS NULL) OR (`ownerID` = ?)) AND ((? = 1 AND `creationDate` IS NULL) OR (`creationDate` = ?)) AND ((? = 1 AND `expirationDate` IS NULL) OR (`expirationDate` = ?)) AND ((? = 1 AND `price` IS NULL) OR (`price` = ?)) AND ((? = 1 AND `Published` IS NULL) OR (`Published` = ?)) AND ((? = 1 AND `Hits` IS NULL) OR (`Hits` = ?)) AND ((? = 1 AND `adStatus` IS NULL) OR (`adStatus` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `AdsTable` WHERE ((`adID` = ?) AND ((? = 1 AND `adCategory` IS NULL) OR (`adCategory` = ?)) AND ((? = 1 AND `ownerID` IS NULL) OR (`ownerID` = ?)) AND ((? = 1 AND `creationDate` IS NULL) OR (`creationDate` = ?)) AND ((? = 1 AND `expirationDate` IS NULL) OR (`expirationDate` = ?)) AND ((? = 1 AND `Media` IS NULL) OR (`Media` = ?)) AND ((? = 1 AND `price` IS NULL) OR (`price` = ?)) AND ((? = 1 AND `Published` IS NULL) OR (`Published` = ?)) AND ((? = 1 AND `Hits` IS NULL) OR (`Hits` = ?)) AND ((? = 1 AND `adStatus` IS NULL) OR (`adStatus` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_adID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_adCategory", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adCategory", global::System.Data.DataRowVersion.Original, true, null));
@@ -5861,6 +5937,8 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_creationDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "creationDate", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_expirationDate", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "expirationDate", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_expirationDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "expirationDate", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Media", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Media", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Media", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Media", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "price", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "price", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Published", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Published", global::System.Data.DataRowVersion.Original, true, null));
@@ -5872,35 +5950,37 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO `AdsTable` (`adTitle`, `adCategory`, `ownerID`, `creationDate`, `expi" +
-                "rationDate`, `media`, `adDesc`, `price`, `Published`, `Hits`, `adStatus`) VALUES" +
-                " (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                "rationDate`, `Media`, `adDesc`, `price`, `Published`, `Hits`, `adStatus`, `Image" +
+                "s`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adTitle", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adTitle", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adCategory", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adCategory", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ownerID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ownerID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("creationDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "creationDate", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("expirationDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "expirationDate", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("media", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "media", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Media", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Media", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adDesc", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adDesc", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "price", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Published", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Published", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Hits", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Hits", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adStatus", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adStatus", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Images", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Images", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `AdsTable` SET `adTitle` = ?, `adCategory` = ?, `ownerID` = ?, `creationDate` = ?, `expirationDate` = ?, `media` = ?, `adDesc` = ?, `price` = ?, `Published` = ?, `Hits` = ?, `adStatus` = ? WHERE ((`adID` = ?) AND ((? = 1 AND `adCategory` IS NULL) OR (`adCategory` = ?)) AND ((? = 1 AND `ownerID` IS NULL) OR (`ownerID` = ?)) AND ((? = 1 AND `creationDate` IS NULL) OR (`creationDate` = ?)) AND ((? = 1 AND `expirationDate` IS NULL) OR (`expirationDate` = ?)) AND ((? = 1 AND `price` IS NULL) OR (`price` = ?)) AND ((? = 1 AND `Published` IS NULL) OR (`Published` = ?)) AND ((? = 1 AND `Hits` IS NULL) OR (`Hits` = ?)) AND ((? = 1 AND `adStatus` IS NULL) OR (`adStatus` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `AdsTable` SET `adTitle` = ?, `adCategory` = ?, `ownerID` = ?, `creationDate` = ?, `expirationDate` = ?, `Media` = ?, `adDesc` = ?, `price` = ?, `Published` = ?, `Hits` = ?, `adStatus` = ?, `Images` = ? WHERE ((`adID` = ?) AND ((? = 1 AND `adCategory` IS NULL) OR (`adCategory` = ?)) AND ((? = 1 AND `ownerID` IS NULL) OR (`ownerID` = ?)) AND ((? = 1 AND `creationDate` IS NULL) OR (`creationDate` = ?)) AND ((? = 1 AND `expirationDate` IS NULL) OR (`expirationDate` = ?)) AND ((? = 1 AND `Media` IS NULL) OR (`Media` = ?)) AND ((? = 1 AND `price` IS NULL) OR (`price` = ?)) AND ((? = 1 AND `Published` IS NULL) OR (`Published` = ?)) AND ((? = 1 AND `Hits` IS NULL) OR (`Hits` = ?)) AND ((? = 1 AND `adStatus` IS NULL) OR (`adStatus` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adTitle", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adTitle", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adCategory", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adCategory", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ownerID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ownerID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("creationDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "creationDate", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("expirationDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "expirationDate", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("media", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "media", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Media", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Media", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adDesc", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adDesc", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "price", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Published", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Published", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Hits", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Hits", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adStatus", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adStatus", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Images", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Images", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_adID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_adCategory", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adCategory", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_adCategory", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adCategory", global::System.Data.DataRowVersion.Original, false, null));
@@ -5910,6 +5990,8 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_creationDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "creationDate", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_expirationDate", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "expirationDate", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_expirationDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "expirationDate", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Media", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Media", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Media", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Media", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "price", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "price", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Published", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Published", global::System.Data.DataRowVersion.Original, true, null));
@@ -5933,47 +6015,46 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[8];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT adID, adTitle, adCategory, ownerID, creationDate, expirationDate, media, a" +
-                "dDesc, price, Published, Hits, adStatus FROM AdsTable";
+            this._commandCollection[0].CommandText = "SELECT        adID, adTitle, adCategory, ownerID, creationDate, expirationDate, M" +
+                "edia, adDesc, price, Published, Hits, adStatus, Images\r\nFROM            AdsTable" +
+                "";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT * FROM AdsTable WHERE ownerID=?";
+            this._commandCollection[1].CommandText = "SELECT Hits, Images, Media, Published, adCategory, adDesc, adID, adStatus, adTitl" +
+                "e, creationDate, expirationDate, ownerID, price FROM AdsTable WHERE (ownerID = ?" +
+                ")";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ownerID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ownerID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT        adID, adTitle, adCategory, ownerID, creationDate, expirationDate, m" +
-
-                "edia, adDesc, price, Published, Hits, adStatus\r\nFROM            AdsTable\r\nWHERE " +
-                "       (adCategory = ?) AND (Published = true)";
-
+            this._commandCollection[2].CommandText = "SELECT Hits, Images, Media, Published, adCategory, adDesc, adID, adStatus, adTitl" +
+                "e, creationDate, expirationDate, ownerID, price FROM AdsTable WHERE (adCategory " +
+                "= ?) AND (Published = true)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adCategory", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adCategory", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT        TOP 9 adTitle, adDesc, media, adCategory, adID, ownerID, creationDa" +
-                "te, expirationDate, price, Published, Hits, adStatus, address\nFROM            Ad" +
-                "sTable\nWHERE        (Published = True)\nORDER BY creationDate DESC, adID DESC";
+            this._commandCollection[3].CommandText = "SELECT Hits, Images, Media, Published, adCategory, adDesc, adID, adStatus, adTitl" +
+                "e, creationDate, expirationDate, ownerID, price FROM AdsTable WHERE (adCategory " +
+                "= ?) AND (Published = Yes)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adCategory", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adCategory", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[4] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "SELECT        TOP 9 adTitle, adDesc, media, adCategory, adID, ownerID, creationDa" +
-                "te, expirationDate, price, Published, Hits, adStatus, address\r\nFROM            A" +
-                "dsTable\r\nWHERE        (Published = True)\r\nORDER BY creationDate DESC, adID DESC";
+            this._commandCollection[4].CommandText = "SELECT TOP 9 Hits, Images, Media, Published, adCategory, adDesc, adID, adStatus, " +
+                "adTitle, creationDate, expirationDate, ownerID, price FROM AdsTable WHERE (Publi" +
+                "shed = True) ORDER BY creationDate DESC, adID DESC";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[5] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = "UPDATE       AdsTable\nSET                price = ?\nWHERE        (adID = ?)";
+            this._commandCollection[5].CommandText = "UPDATE       AdsTable\r\nSET                Images = ?\r\nWHERE        (adID = ?)";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("media", global::System.Data.OleDb.OleDbType.WChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "media", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Images", global::System.Data.OleDb.OleDbType.WChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Images", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_adID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adID", global::System.Data.DataRowVersion.Original, false, null));
             this._commandCollection[6] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[6].Connection = this.Connection;
-
             this._commandCollection[6].CommandText = "UPDATE       AdsTable\r\nSET                price = ?\r\nWHERE        (adID = ?)";
-
             this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[6].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "price", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[6].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_adID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adID", global::System.Data.DataRowVersion.Original, false, null));
@@ -6015,9 +6096,14 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int AdsPerUser(AggeliesDBDataSet.AdsTableDataTable dataTable, int ownerID) {
+        public virtual int AdsPerUser(AggeliesDBDataSet.AdsTableDataTable dataTable, global::System.Nullable<int> ownerID) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ownerID));
+            if ((ownerID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ownerID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -6029,9 +6115,14 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillDTByCategory(AggeliesDBDataSet.AdsTableDataTable dataTable, int adCategory) {
+        public virtual int FillDTByCategory(AggeliesDBDataSet.AdsTableDataTable dataTable, global::System.Nullable<int> adCategory) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(adCategory));
+            if ((adCategory.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(adCategory.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -6043,9 +6134,14 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual AggeliesDBDataSet.AdsTableDataTable GetDTByCategory(int adCategory) {
+        public virtual AggeliesDBDataSet.AdsTableDataTable GetDTByCategory(global::System.Nullable<int> adCategory) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(adCategory));
+            if ((adCategory.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(adCategory.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             AggeliesDBDataSet.AdsTableDataTable dataTable = new AggeliesDBDataSet.AdsTableDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -6055,9 +6151,14 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillDTFilterAds(AggeliesDBDataSet.AdsTableDataTable dataTable, int adCategory) {
+        public virtual int FillDTFilterAds(AggeliesDBDataSet.AdsTableDataTable dataTable, global::System.Nullable<int> adCategory) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(adCategory));
+            if ((adCategory.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(adCategory.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -6069,9 +6170,14 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual AggeliesDBDataSet.AdsTableDataTable GetDTFilterAds(int adCategory) {
+        public virtual AggeliesDBDataSet.AdsTableDataTable GetDTFilterAds(global::System.Nullable<int> adCategory) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(adCategory));
+            if ((adCategory.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(adCategory.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             AggeliesDBDataSet.AdsTableDataTable dataTable = new AggeliesDBDataSet.AdsTableDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -6121,7 +6227,7 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_adID, int Original_adCategory, int Original_ownerID, System.DateTime Original_creationDate, global::System.Nullable<global::System.DateTime> Original_expirationDate, int Original_price, bool Original_Published, global::System.Nullable<int> Original_Hits, int Original_adStatus) {
+        public virtual int Delete(int Original_adID, int Original_adCategory, int Original_ownerID, System.DateTime Original_creationDate, global::System.Nullable<global::System.DateTime> Original_expirationDate, string Original_Media, int Original_price, bool Original_Published, global::System.Nullable<int> Original_Hits, int Original_adStatus) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_adID));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_adCategory));
@@ -6137,20 +6243,28 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_price));
-            this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[12].Value = ((bool)(Original_Published));
-            if ((Original_Hits.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_Hits.Value));
+            if ((Original_Media == null)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Media));
             }
-            this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_adStatus));
+            this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_price));
+            this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[14].Value = ((bool)(Original_Published));
+            if ((Original_Hits.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_Hits.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[18].Value = ((int)(Original_adStatus));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6171,7 +6285,7 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string adTitle, int adCategory, int ownerID, System.DateTime creationDate, global::System.Nullable<global::System.DateTime> expirationDate, string media, string adDesc, int price, bool Published, global::System.Nullable<int> Hits, int adStatus) {
+        public virtual int Insert(string adTitle, int adCategory, int ownerID, System.DateTime creationDate, global::System.Nullable<global::System.DateTime> expirationDate, string Media, string adDesc, int price, bool Published, global::System.Nullable<int> Hits, int adStatus, string Images) {
             if ((adTitle == null)) {
                 throw new global::System.ArgumentNullException("adTitle");
             }
@@ -6187,11 +6301,11 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((media == null)) {
+            if ((Media == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(media));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Media));
             }
             if ((adDesc == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
@@ -6208,6 +6322,12 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             this.Adapter.InsertCommand.Parameters[10].Value = ((int)(adStatus));
+            if ((Images == null)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(Images));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6234,17 +6354,19 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
                     int ownerID, 
                     System.DateTime creationDate, 
                     global::System.Nullable<global::System.DateTime> expirationDate, 
-                    string media, 
+                    string Media, 
                     string adDesc, 
                     int price, 
                     bool Published, 
                     global::System.Nullable<int> Hits, 
                     int adStatus, 
+                    string Images, 
                     int Original_adID, 
                     int Original_adCategory, 
                     int Original_ownerID, 
                     System.DateTime Original_creationDate, 
                     global::System.Nullable<global::System.DateTime> Original_expirationDate, 
+                    string Original_Media, 
                     int Original_price, 
                     bool Original_Published, 
                     global::System.Nullable<int> Original_Hits, 
@@ -6264,11 +6386,11 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((media == null)) {
+            if ((Media == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(media));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Media));
             }
             if ((adDesc == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
@@ -6285,35 +6407,49 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(adStatus));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_adID));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_adCategory));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_ownerID));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(Original_creationDate));
+            if ((Images == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Images));
+            }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_adID));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_adCategory));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_ownerID));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((System.DateTime)(Original_creationDate));
             if ((Original_expirationDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((System.DateTime)(Original_expirationDate.Value));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((System.DateTime)(Original_expirationDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_price));
-            this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[23].Value = ((bool)(Original_Published));
+            if ((Original_Media == null)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_Media));
+            }
+            this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_price));
+            this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[26].Value = ((bool)(Original_Published));
             if ((Original_Hits.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_Hits.Value));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_Hits.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(Original_adStatus));
+            this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_adStatus));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6334,13 +6470,13 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int UpdateImageQuery(string media, int Original_adID) {
+        public virtual int UpdateImageQuery(string Images, int Original_adID) {
             global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[5];
-            if ((media == null)) {
+            if ((Images == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[0].Value = ((string)(media));
+                command.Parameters[0].Value = ((string)(Images));
             }
             command.Parameters[1].Value = ((int)(Original_adID));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
@@ -6364,9 +6500,14 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int UpdatePriceQuery(int price, int Original_adID) {
+        public virtual int UpdatePriceQuery(global::System.Nullable<int> price, int Original_adID) {
             global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[6];
-            command.Parameters[0].Value = ((int)(price));
+            if ((price.HasValue == true)) {
+                command.Parameters[0].Value = ((int)(price.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
             command.Parameters[1].Value = ((int)(Original_adID));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6392,7 +6533,7 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
         public virtual int UpdateTitleDescQuery(string adTitle, string adDesc, int Original_adID) {
             global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[7];
             if ((adTitle == null)) {
-                throw new global::System.ArgumentNullException("adTitle");
+                command.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 command.Parameters[0].Value = ((string)(adTitle));
@@ -8250,44 +8391,44 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT fName\nFROM Users\nWHERE        (userID = ?)";
+            this._commandCollection[1].CommandText = "SELECT fName\r\nFROM Users\r\nWHERE        (userID = ?)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("userID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "userID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT lName\nFROM Users\nWHERE        (userID = ?)";
+            this._commandCollection[2].CommandText = "SELECT lName\r\nFROM Users\r\nWHERE        (userID = ?)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("userID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "userID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT uEmail\nFROM Users\nWHERE        (userID = ?)";
+            this._commandCollection[3].CommandText = "SELECT uEmail\r\nFROM Users\r\nWHERE        (userID = ?)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("userID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "userID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[4] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "SELECT uImage \nFROM Users\nWHERE        (userID = ?)";
+            this._commandCollection[4].CommandText = "SELECT uImage \r\nFROM Users\r\nWHERE        (userID = ?)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("userID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "userID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[5] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = "SELECT uName\nFROM Users\nWHERE        (userID = ?)";
+            this._commandCollection[5].CommandText = "SELECT uName\r\nFROM Users\r\nWHERE        (userID = ?)";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("userID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "userID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[6] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[6].Connection = this.Connection;
-            this._commandCollection[6].CommandText = "SELECT uPassword\nFROM Users\nWHERE        (userID = ?)";
+            this._commandCollection[6].CommandText = "SELECT uPassword\r\nFROM Users\r\nWHERE        (userID = ?)";
             this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[6].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("userID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "userID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[7] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[7].Connection = this.Connection;
-            this._commandCollection[7].CommandText = "UPDATE       Users\nSET                uImage= ?\nWHERE        (userID = ?)";
+            this._commandCollection[7].CommandText = "UPDATE       Users\r\nSET                uImage= ?\r\nWHERE        (userID = ?)";
             this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[7].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("uImage", global::System.Data.OleDb.OleDbType.WChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "uImage", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[7].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_userID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "userID", global::System.Data.DataRowVersion.Original, false, null));
             this._commandCollection[8] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[8].Connection = this.Connection;
-            this._commandCollection[8].CommandText = "UPDATE       Users\nSET                fName = ?, lName = ?, uName = ?, uPassword " +
-                "= ?, uEmail = ?\nWHERE        (userID = ?)";
+            this._commandCollection[8].CommandText = "UPDATE       Users\r\nSET                fName = ?, lName = ?, uName = ?, uPassword" +
+                " = ?, uEmail = ?\r\nWHERE        (userID = ?)";
             this._commandCollection[8].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[8].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("fName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fName", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[8].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("lName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "lName", global::System.Data.DataRowVersion.Current, false, null));
@@ -8297,8 +8438,9 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
             this._commandCollection[8].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_userID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "userID", global::System.Data.DataRowVersion.Original, false, null));
             this._commandCollection[9] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[9].Connection = this.Connection;
-            this._commandCollection[9].CommandText = "INSERT INTO Users\n                         (fName, lName, uName, uPassword, uEmai" +
-                "l, uCat, uAge, uRecoverEmail, uPhone)\nVALUES        (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._commandCollection[9].CommandText = "INSERT INTO Users\r\n                         (fName, lName, uName, uPassword, uEma" +
+                "il, uCat, uAge, uRecoverEmail, uPhone)\r\nVALUES        (?, ?, ?, ?, ?, ?, ?, ?, ?" +
+                ")";
             this._commandCollection[9].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[9].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("fName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fName", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[9].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("lName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "lName", global::System.Data.DataRowVersion.Current, false, null));
@@ -9191,6 +9333,15 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._adsStatusTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.AdsStatus.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._adsStatusTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._usersTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Users.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -9224,15 +9375,6 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._propertiesTBTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._adsStatusTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.AdsStatus.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._adsStatusTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -9280,6 +9422,14 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._adsStatusTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.AdsStatus.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._adsStatusTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._usersTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Users.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -9309,14 +9459,6 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._propertiesTBTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._adsStatusTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.AdsStatus.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._adsStatusTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -9362,14 +9504,6 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._adsStatusTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.AdsStatus.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._adsStatusTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._propertiesTBTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.PropertiesTB.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -9399,6 +9533,14 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._usersTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._adsStatusTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.AdsStatus.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._adsStatusTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

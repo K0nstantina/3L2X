@@ -49,7 +49,9 @@ namespace UserApplication
             {
                 // Initialize profile fields (profile panel).
                 updateFields();
+                userAdsDataGrid.CurrentCell = userAdsDataGrid.Rows[0].Cells[0];
             }
+
         }
         #endregion
 
@@ -263,100 +265,46 @@ namespace UserApplication
         private void editPicturePictureBox_Click(object sender, EventArgs e)
         {
             
-            //try
-            //{
-            //    // Open file dialog and set directory and file filters.
-            //    OpenFileDialog imgDialog = new OpenFileDialog();
-            //    //imgDialog.InitialDirectory = "C:\\";
-            //    imgDialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png) |*.png| All files(*.*)|*.*";
-            //    // OK button clicked (file selected).
-            //    if (imgDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            //    {
-            //        // If file exists (no error in filename).
-            //        if (imgDialog.CheckFileExists)
-            //        {
-            //            // Get file name.
-            //            imgName = System.IO.Path.GetFileName(imgDialog.FileName);
-            //            // Set the new local path
-            //            imgNewPath = imagesLocation + imgName;
-            //            // Copy file to images folder and update avatarPictureBox.
-            //            System.IO.File.Copy(imgDialog.FileName, imagesLocation + imgName);
-            //            // Get current adID.
-            //           // view = adsListBox.SelectedItem as DataRowView;
-            //            int adID = Int32.Parse(view["adID"].ToString());
-            //            // Update the image path in database.
-            //            this.adsTableTableAdapter.UpdateImageQuery(imgName, adID);
-            //            // Set adsPicturebox new image.
-            //            displayAd1.GetadImage.Source = imgNewPath;
-            //            // Update DataRowView dynamicaly.
-            //            view.BeginEdit();
-            //            view["media"] = imgName;
-            //            view.EndEdit();
-            //        }
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("An Error Occured" + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-        }
+          
+            try
+            {
+                // Open file dialog and set directory and file filters.
+                OpenFileDialog imgDialog = new OpenFileDialog();
+                //imgDialog.InitialDirectory = "C:\\";
+                imgDialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png) |*.png| All files(*.*)|*.*";
+                // OK button clicked (file selected).
+                if (imgDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    // If file exists (no error in filename).
+                    if (imgDialog.CheckFileExists)
+                    {
+                        // Get file name.
+                        imgName = System.IO.Path.GetFileName(imgDialog.FileName);
+                        // Set the new local path
+                        imgNewPath = imagesLocation + imgName;
+                        // Copy file to images folder and update avatarPictureBox.
+                        System.IO.File.Copy(imgDialog.FileName, imagesLocation + imgName);
+                        // Get current adID.
+                        // view = adsListBox.SelectedItem as DataRowView;
+                       // int adID = Int32.Parse();
+                        // Update the image path in database.
+                      //  this.adsTableTableAdapter.UpdateImageQuery(imgName, adID);
+                        // Set adsPicturebox new image.
+                        Console.WriteLine(imgNewPath);
+                        displayAd1.GetadImage.Source = new BitmapImage(new Uri(imgNewPath));
+                       
+                        // Update DataRowView dynamicaly.
+                        //view.BeginEdit();
+                        //view["media"] = imgName;
+                        //view.EndEdit();
 
-        /// <summary>
-        /// Event handler for selected index in adsListBox.
-        /// Updates the title and description text in controls.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void adsListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //try
-            //{
-            //    adsListBox.Refresh();
-            //    view = adsListBox.SelectedItem as DataRowView;
-
-            //    string img = view["media"].ToString();
-            //    adsPictureBox.ImageLocation = imagesLocation + img;
-
-            //    titleTextBox.Text = view["adTitle"].ToString(); ;
-            //    descriptionRichTextBox.Text = view["adDesc"].ToString();
-            //    creationDateTextBox.Text = view["creationDate"].ToString();
-            //    expirationDateTextBox.Text = view["expirationDate"].ToString();
-            //    priceTextBox.Text = view["price"].ToString();
-
-            //    if (view["published"].ToString() == "True")
-            //    {
-            //        publishedTextBox.Text = "Published";
-            //        publishedTextBox.BackColor = Color.Green;
-            //        publishButton.Text = "Κατάργηση";
-            //    }
-            //    else
-            //    {
-            //        publishedTextBox.Text = "Not yet published";
-            //        publishedTextBox.BackColor = Color.DarkRed;
-            //        publishButton.Text = "Δημοσίευση";
-            //    }
-            //}
-            //catch (Exception x)
-            //{
-            //    //MessageBox.Show(x.ToString());
-            //}
-        }
-        /// <summary>
-        /// Updates the tilte and description in database.
-        /// </summary>
-        private void updateTitleDesc()
-        {
-            //try
-            //{
-            //    view = adsListBox.SelectedItem as DataRowView;
-            //    int adID = Int32.Parse(view["adID"].ToString());
-            //    this.adsTableTableAdapter.UpdateTitleDescQuery(titleTextBox.Text, descriptionRichTextBox.Text, adID);
-            //    updateFields();
-            //}
-            //catch (Exception)
-            //{
-            //    MessageBox.Show("not updated");
-            //}
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An Error Occured" + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         /// <summary>
@@ -699,6 +647,7 @@ namespace UserApplication
             categoriesListBox_SelectedIndexChanged(categoriesListBox,e);
            
             this.adsTableTableAdapter.AdsPerUser(this.aggeliesDBDataSet.AdsTable, userid);
+            
         }
 
         /// <summary>
@@ -802,26 +751,13 @@ namespace UserApplication
             signupPrompt(3);
         }
 
-        private void userAdsDataGrid_SelectionChanged(object sender, EventArgs e)
-        {
-            
-          
       
-        }
 
 
 
        
 
-        private void Info_label_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void btn_silver_Click(object sender, EventArgs e)
         {
@@ -852,6 +788,19 @@ namespace UserApplication
             this.profilePanel.Visible = true;
             this.profilePanel.BringToFront();
         }
+
+        private void userAdsDataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow selectedRow = userAdsDataGrid.Rows[index];
+            displayAd1.GetadTitle.Text = selectedRow.Cells["adTitle"].Value.ToString();
+            displayAd1.GetadDesc.Text = selectedRow.Cells["adDesc"].Value.ToString();
+         displayAd1.GetadImage.Source = new BitmapImage(new Uri(imagesLocation + selectedRow.Cells["images"].Value.ToString()));
+
+
+        }
+
+      
 
 
 

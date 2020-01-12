@@ -99,6 +99,7 @@
             this.mainCategoriesComboBox = new System.Windows.Forms.ComboBox();
             this.categoriesLabel = new System.Windows.Forms.Label();
             this.adsPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.goBackImage = new System.Windows.Forms.PictureBox();
             this.adsUserCategoryCBox = new System.Windows.Forms.ComboBox();
             this.adsTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -116,14 +117,15 @@
             this.creationDateTextBox = new System.Windows.Forms.TextBox();
             this.adsListPanel = new System.Windows.Forms.Panel();
             this.userAdsDataGrid = new System.Windows.Forms.DataGridView();
-            this.adIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adCategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Images = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.infoLabel = new System.Windows.Forms.Label();
             this.selectedAdPanel = new System.Windows.Forms.Panel();
             this.userPanelElementHost = new System.Windows.Forms.Integration.ElementHost();
             this.displayAd1 = new aggeliesWpfLab.DisplayAd();
-            this.adsTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.usersAdsTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contentPanel = new System.Windows.Forms.Panel();
             this.silver_panel = new System.Windows.Forms.Panel();
@@ -213,11 +215,12 @@
             this.signupPasswordTextBox = new System.Windows.Forms.TextBox();
             this.signupUNameLabel = new System.Windows.Forms.Label();
             this.signupUNameTextBox = new System.Windows.Forms.TextBox();
+            this.leftPanel = new System.Windows.Forms.Panel();
+            this.usersAdsTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.adsTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.adsTableTableAdapter = new UserApplication.AggeliesDBDataSetTableAdapters.AdsTableTableAdapter();
             this.usersTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.UsersTableAdapter();
             this.adCategoryTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.AdCategoryTableAdapter();
-            this.leftPanel = new System.Windows.Forms.Panel();
-            this.usersAdsTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.settingsPanel.SuspendLayout();
@@ -236,7 +239,6 @@
             this.adsListPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userAdsDataGrid)).BeginInit();
             this.selectedAdPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.adsTableBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersAdsTableBindingSource)).BeginInit();
             this.contentPanel.SuspendLayout();
             this.silver_panel.SuspendLayout();
@@ -253,6 +255,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.upgradeinfo_picbox)).BeginInit();
             this.signupPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersAdsTableBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adsTableBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
@@ -263,7 +266,7 @@
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1817, 108);
+            this.topPanel.Size = new System.Drawing.Size(1839, 108);
             this.topPanel.TabIndex = 0;
             // 
             // pictureBox1
@@ -280,7 +283,7 @@
             // elementHost1
             // 
             this.elementHost1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.elementHost1.Location = new System.Drawing.Point(891, 0);
+            this.elementHost1.Location = new System.Drawing.Point(913, 0);
             this.elementHost1.Name = "elementHost1";
             this.elementHost1.Size = new System.Drawing.Size(926, 108);
             this.elementHost1.TabIndex = 0;
@@ -291,18 +294,18 @@
             // 
             this.footerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(178)))), ((int)(((byte)(250)))));
             this.footerPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.footerPanel.Location = new System.Drawing.Point(200, 909);
+            this.footerPanel.Location = new System.Drawing.Point(100, 737);
             this.footerPanel.Name = "footerPanel";
-            this.footerPanel.Size = new System.Drawing.Size(1417, 100);
+            this.footerPanel.Size = new System.Drawing.Size(1539, 100);
             this.footerPanel.TabIndex = 1;
             // 
             // rightPanel
             // 
             this.rightPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(178)))), ((int)(((byte)(250)))));
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rightPanel.Location = new System.Drawing.Point(1617, 108);
+            this.rightPanel.Location = new System.Drawing.Point(1639, 108);
             this.rightPanel.Name = "rightPanel";
-            this.rightPanel.Size = new System.Drawing.Size(200, 901);
+            this.rightPanel.Size = new System.Drawing.Size(200, 729);
             this.rightPanel.TabIndex = 2;
             // 
             // settingsPanel
@@ -313,7 +316,7 @@
             this.settingsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.settingsPanel.Location = new System.Drawing.Point(0, 0);
             this.settingsPanel.Name = "settingsPanel";
-            this.settingsPanel.Size = new System.Drawing.Size(1417, 801);
+            this.settingsPanel.Size = new System.Drawing.Size(1539, 629);
             this.settingsPanel.TabIndex = 1;
             // 
             // fontSizeGroupBox
@@ -424,7 +427,7 @@
             this.homePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.homePanel.Location = new System.Drawing.Point(0, 0);
             this.homePanel.Name = "homePanel";
-            this.homePanel.Size = new System.Drawing.Size(1417, 801);
+            this.homePanel.Size = new System.Drawing.Size(1539, 629);
             this.homePanel.TabIndex = 3;
             // 
             // recentAdsTablePanel
@@ -452,7 +455,7 @@
             this.recentAdsTablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.recentAdsTablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.recentAdsTablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.recentAdsTablePanel.Size = new System.Drawing.Size(989, 662);
+            this.recentAdsTablePanel.Size = new System.Drawing.Size(1111, 490);
             this.recentAdsTablePanel.TabIndex = 6;
             // 
             // elementHost2
@@ -460,7 +463,7 @@
             this.elementHost2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.elementHost2.Location = new System.Drawing.Point(5, 5);
             this.elementHost2.Name = "elementHost2";
-            this.elementHost2.Size = new System.Drawing.Size(322, 213);
+            this.elementHost2.Size = new System.Drawing.Size(363, 156);
             this.elementHost2.TabIndex = 0;
             this.elementHost2.Text = "elementHost2";
             this.elementHost2.Child = this.displayAd2;
@@ -468,9 +471,9 @@
             // elementHost3
             // 
             this.elementHost3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost3.Location = new System.Drawing.Point(333, 5);
+            this.elementHost3.Location = new System.Drawing.Point(374, 5);
             this.elementHost3.Name = "elementHost3";
-            this.elementHost3.Size = new System.Drawing.Size(322, 213);
+            this.elementHost3.Size = new System.Drawing.Size(363, 156);
             this.elementHost3.TabIndex = 1;
             this.elementHost3.Text = "elementHost3";
             this.elementHost3.Child = this.displayAd3;
@@ -478,9 +481,9 @@
             // elementHost4
             // 
             this.elementHost4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost4.Location = new System.Drawing.Point(661, 5);
+            this.elementHost4.Location = new System.Drawing.Point(743, 5);
             this.elementHost4.Name = "elementHost4";
-            this.elementHost4.Size = new System.Drawing.Size(323, 213);
+            this.elementHost4.Size = new System.Drawing.Size(363, 156);
             this.elementHost4.TabIndex = 2;
             this.elementHost4.Text = "elementHost4";
             this.elementHost4.Child = this.displayAd4;
@@ -488,9 +491,9 @@
             // elementHost5
             // 
             this.elementHost5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost5.Location = new System.Drawing.Point(5, 224);
+            this.elementHost5.Location = new System.Drawing.Point(5, 167);
             this.elementHost5.Name = "elementHost5";
-            this.elementHost5.Size = new System.Drawing.Size(322, 213);
+            this.elementHost5.Size = new System.Drawing.Size(363, 156);
             this.elementHost5.TabIndex = 3;
             this.elementHost5.Text = "elementHost5";
             this.elementHost5.Child = this.displayAd5;
@@ -498,9 +501,9 @@
             // elementHost6
             // 
             this.elementHost6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost6.Location = new System.Drawing.Point(333, 224);
+            this.elementHost6.Location = new System.Drawing.Point(374, 167);
             this.elementHost6.Name = "elementHost6";
-            this.elementHost6.Size = new System.Drawing.Size(322, 213);
+            this.elementHost6.Size = new System.Drawing.Size(363, 156);
             this.elementHost6.TabIndex = 4;
             this.elementHost6.Text = "elementHost6";
             this.elementHost6.Child = this.displayAd6;
@@ -508,9 +511,9 @@
             // elementHost7
             // 
             this.elementHost7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost7.Location = new System.Drawing.Point(661, 224);
+            this.elementHost7.Location = new System.Drawing.Point(743, 167);
             this.elementHost7.Name = "elementHost7";
-            this.elementHost7.Size = new System.Drawing.Size(323, 213);
+            this.elementHost7.Size = new System.Drawing.Size(363, 156);
             this.elementHost7.TabIndex = 5;
             this.elementHost7.Text = "elementHost7";
             this.elementHost7.Child = this.displayAd7;
@@ -518,9 +521,9 @@
             // elementHost8
             // 
             this.elementHost8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost8.Location = new System.Drawing.Point(5, 443);
+            this.elementHost8.Location = new System.Drawing.Point(5, 329);
             this.elementHost8.Name = "elementHost8";
-            this.elementHost8.Size = new System.Drawing.Size(322, 214);
+            this.elementHost8.Size = new System.Drawing.Size(363, 156);
             this.elementHost8.TabIndex = 6;
             this.elementHost8.Text = "elementHost8";
             this.elementHost8.Child = this.displayAd8;
@@ -528,9 +531,9 @@
             // elementHost9
             // 
             this.elementHost9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost9.Location = new System.Drawing.Point(333, 443);
+            this.elementHost9.Location = new System.Drawing.Point(374, 329);
             this.elementHost9.Name = "elementHost9";
-            this.elementHost9.Size = new System.Drawing.Size(322, 214);
+            this.elementHost9.Size = new System.Drawing.Size(363, 156);
             this.elementHost9.TabIndex = 7;
             this.elementHost9.Text = "elementHost9";
             this.elementHost9.Child = this.displayAd9;
@@ -538,9 +541,9 @@
             // elementHost10
             // 
             this.elementHost10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost10.Location = new System.Drawing.Point(661, 443);
+            this.elementHost10.Location = new System.Drawing.Point(743, 329);
             this.elementHost10.Name = "elementHost10";
-            this.elementHost10.Size = new System.Drawing.Size(323, 214);
+            this.elementHost10.Size = new System.Drawing.Size(363, 156);
             this.elementHost10.TabIndex = 8;
             this.elementHost10.Text = "elementHost10";
             this.elementHost10.Child = this.displayAd10;
@@ -588,7 +591,7 @@
             this.profilePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profilePanel.Location = new System.Drawing.Point(0, 0);
             this.profilePanel.Name = "profilePanel";
-            this.profilePanel.Size = new System.Drawing.Size(1417, 801);
+            this.profilePanel.Size = new System.Drawing.Size(1539, 629);
             this.profilePanel.TabIndex = 0;
             // 
             // upgrade_label
@@ -854,7 +857,7 @@
             this.categoriesPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.categoriesPanel.Location = new System.Drawing.Point(0, 0);
             this.categoriesPanel.Name = "categoriesPanel";
-            this.categoriesPanel.Size = new System.Drawing.Size(1417, 801);
+            this.categoriesPanel.Size = new System.Drawing.Size(1539, 629);
             this.categoriesPanel.TabIndex = 3;
             // 
             // categoriesListBox
@@ -870,7 +873,7 @@
             this.categoriesListBox.ItemHeight = 20;
             this.categoriesListBox.Location = new System.Drawing.Point(807, 53);
             this.categoriesListBox.Name = "categoriesListBox";
-            this.categoriesListBox.Size = new System.Drawing.Size(610, 700);
+            this.categoriesListBox.Size = new System.Drawing.Size(732, 500);
             this.categoriesListBox.TabIndex = 5;
             this.categoriesListBox.SelectedIndexChanged += new System.EventHandler(this.categoriesListBox_SelectedIndexChanged);
             // 
@@ -919,6 +922,7 @@
             // 
             // adsPanel
             // 
+            this.adsPanel.Controls.Add(this.button1);
             this.adsPanel.Controls.Add(this.goBackImage);
             this.adsPanel.Controls.Add(this.adsUserCategoryCBox);
             this.adsPanel.Controls.Add(this.publishButton);
@@ -939,8 +943,18 @@
             this.adsPanel.Location = new System.Drawing.Point(0, 0);
             this.adsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adsPanel.Name = "adsPanel";
-            this.adsPanel.Size = new System.Drawing.Size(1417, 801);
+            this.adsPanel.Size = new System.Drawing.Size(1539, 629);
             this.adsPanel.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1098, 24);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 68;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.editPicturePictureBox_Click);
             // 
             // goBackImage
             // 
@@ -956,14 +970,12 @@
             // 
             // adsUserCategoryCBox
             // 
-            this.adsUserCategoryCBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adsUserCategoryCBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.adsUserCategoryCBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.adsTableBindingSource, "adCategory", true));
             this.adsUserCategoryCBox.FormattingEnabled = true;
-            this.adsUserCategoryCBox.Location = new System.Drawing.Point(666, 223);
+            this.adsUserCategoryCBox.Location = new System.Drawing.Point(666, 231);
             this.adsUserCategoryCBox.Name = "adsUserCategoryCBox";
-            this.adsUserCategoryCBox.Size = new System.Drawing.Size(242, 21);
+            this.adsUserCategoryCBox.Size = new System.Drawing.Size(364, 21);
             this.adsUserCategoryCBox.TabIndex = 66;
             // 
             // adsTableBindingSource
@@ -973,14 +985,13 @@
             // 
             // publishButton
             // 
-            this.publishButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.publishButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.publishButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.publishButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.publishButton.Location = new System.Drawing.Point(524, 358);
+            this.publishButton.Location = new System.Drawing.Point(666, 264);
             this.publishButton.Name = "publishButton";
-            this.publishButton.Size = new System.Drawing.Size(149, 173);
+            this.publishButton.Size = new System.Drawing.Size(149, 43);
             this.publishButton.TabIndex = 65;
             this.publishButton.Text = "Publish my Ad";
             this.publishButton.UseVisualStyleBackColor = true;
@@ -988,14 +999,12 @@
             // 
             // savePriceButton
             // 
-            this.savePriceButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.savePriceButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.savePriceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savePriceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.savePriceButton.Location = new System.Drawing.Point(759, 358);
+            this.savePriceButton.Location = new System.Drawing.Point(826, 265);
             this.savePriceButton.Name = "savePriceButton";
-            this.savePriceButton.Size = new System.Drawing.Size(149, 173);
+            this.savePriceButton.Size = new System.Drawing.Size(126, 43);
             this.savePriceButton.TabIndex = 64;
             this.savePriceButton.Text = "Save my Ad";
             this.savePriceButton.UseVisualStyleBackColor = true;
@@ -1003,12 +1012,10 @@
             // 
             // adsUserCategoryL
             // 
-            this.adsUserCategoryL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adsUserCategoryL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.adsUserCategoryL.AutoSize = true;
             this.adsUserCategoryL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.adsUserCategoryL.Location = new System.Drawing.Point(520, 226);
+            this.adsUserCategoryL.Location = new System.Drawing.Point(520, 234);
             this.adsUserCategoryL.Name = "adsUserCategoryL";
             this.adsUserCategoryL.Size = new System.Drawing.Size(81, 20);
             this.adsUserCategoryL.TabIndex = 63;
@@ -1016,12 +1023,10 @@
             // 
             // priceLabel
             // 
-            this.priceLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.priceLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.priceLabel.AutoSize = true;
             this.priceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.priceLabel.Location = new System.Drawing.Point(520, 189);
+            this.priceLabel.Location = new System.Drawing.Point(520, 197);
             this.priceLabel.Name = "priceLabel";
             this.priceLabel.Size = new System.Drawing.Size(75, 20);
             this.priceLabel.TabIndex = 63;
@@ -1029,12 +1034,10 @@
             // 
             // publishedLabel
             // 
-            this.publishedLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.publishedLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.publishedLabel.AutoSize = true;
             this.publishedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.publishedLabel.Location = new System.Drawing.Point(520, 152);
+            this.publishedLabel.Location = new System.Drawing.Point(520, 160);
             this.publishedLabel.Name = "publishedLabel";
             this.publishedLabel.Size = new System.Drawing.Size(82, 20);
             this.publishedLabel.TabIndex = 62;
@@ -1042,12 +1045,10 @@
             // 
             // label7
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label7.Location = new System.Drawing.Point(520, 115);
+            this.label7.Location = new System.Drawing.Point(520, 123);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(126, 20);
             this.label7.TabIndex = 61;
@@ -1055,9 +1056,11 @@
             // 
             // adsOfUserL
             // 
+            this.adsOfUserL.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.adsOfUserL.AutoSize = true;
             this.adsOfUserL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.adsOfUserL.Location = new System.Drawing.Point(628, 3);
+            this.adsOfUserL.Location = new System.Drawing.Point(628, 11);
             this.adsOfUserL.Name = "adsOfUserL";
             this.adsOfUserL.Size = new System.Drawing.Size(173, 25);
             this.adsOfUserL.TabIndex = 60;
@@ -1065,12 +1068,10 @@
             // 
             // creationDateLabel
             // 
-            this.creationDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.creationDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.creationDateLabel.AutoSize = true;
             this.creationDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.creationDateLabel.Location = new System.Drawing.Point(520, 83);
+            this.creationDateLabel.Location = new System.Drawing.Point(520, 91);
             this.creationDateLabel.Name = "creationDateLabel";
             this.creationDateLabel.Size = new System.Drawing.Size(116, 20);
             this.creationDateLabel.TabIndex = 60;
@@ -1078,55 +1079,47 @@
             // 
             // priceTextBox
             // 
-            this.priceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.priceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.priceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.adsTableBindingSource, "price", true));
             this.priceTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.priceTextBox.Location = new System.Drawing.Point(666, 188);
+            this.priceTextBox.Location = new System.Drawing.Point(666, 196);
             this.priceTextBox.Name = "priceTextBox";
-            this.priceTextBox.Size = new System.Drawing.Size(242, 26);
+            this.priceTextBox.Size = new System.Drawing.Size(364, 26);
             this.priceTextBox.TabIndex = 59;
             // 
             // publishedTextBox
             // 
-            this.publishedTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.publishedTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.publishedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.adsTableBindingSource, "Published", true));
             this.publishedTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.publishedTextBox.ForeColor = System.Drawing.Color.White;
-            this.publishedTextBox.Location = new System.Drawing.Point(666, 153);
+            this.publishedTextBox.Location = new System.Drawing.Point(666, 161);
             this.publishedTextBox.Name = "publishedTextBox";
             this.publishedTextBox.ReadOnly = true;
-            this.publishedTextBox.Size = new System.Drawing.Size(242, 26);
+            this.publishedTextBox.Size = new System.Drawing.Size(364, 26);
             this.publishedTextBox.TabIndex = 58;
             // 
             // expirationDateTextBox
             // 
-            this.expirationDateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.expirationDateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.expirationDateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.adsTableBindingSource, "expirationDate", true));
             this.expirationDateTextBox.Enabled = false;
             this.expirationDateTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.expirationDateTextBox.Location = new System.Drawing.Point(666, 116);
+            this.expirationDateTextBox.Location = new System.Drawing.Point(666, 124);
             this.expirationDateTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.expirationDateTextBox.Name = "expirationDateTextBox";
-            this.expirationDateTextBox.Size = new System.Drawing.Size(242, 26);
+            this.expirationDateTextBox.Size = new System.Drawing.Size(364, 26);
             this.expirationDateTextBox.TabIndex = 57;
             // 
             // creationDateTextBox
             // 
-            this.creationDateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.creationDateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.creationDateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.adsTableBindingSource, "creationDate", true));
             this.creationDateTextBox.Enabled = false;
             this.creationDateTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.creationDateTextBox.Location = new System.Drawing.Point(666, 83);
+            this.creationDateTextBox.Location = new System.Drawing.Point(666, 91);
             this.creationDateTextBox.Name = "creationDateTextBox";
-            this.creationDateTextBox.Size = new System.Drawing.Size(242, 26);
+            this.creationDateTextBox.Size = new System.Drawing.Size(364, 26);
             this.creationDateTextBox.TabIndex = 56;
             // 
             // adsListPanel
@@ -1137,56 +1130,67 @@
             this.adsListPanel.Location = new System.Drawing.Point(0, 0);
             this.adsListPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adsListPanel.Name = "adsListPanel";
-            this.adsListPanel.Size = new System.Drawing.Size(391, 801);
+            this.adsListPanel.Size = new System.Drawing.Size(391, 629);
             this.adsListPanel.TabIndex = 5;
             // 
             // userAdsDataGrid
             // 
-            this.userAdsDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userAdsDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.userAdsDataGrid.AutoGenerateColumns = false;
             this.userAdsDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.userAdsDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.userAdsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.userAdsDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.adIDDataGridViewTextBoxColumn,
-            this.adTitleDataGridViewTextBoxColumn,
-            this.adCategoryDataGridViewTextBoxColumn});
+            this.adID,
+            this.adTitle,
+            this.adCategory,
+            this.Images,
+            this.adDesc});
             this.userAdsDataGrid.DataSource = this.adsTableBindingSource;
             this.userAdsDataGrid.Location = new System.Drawing.Point(4, 42);
             this.userAdsDataGrid.Name = "userAdsDataGrid";
-            this.userAdsDataGrid.Size = new System.Drawing.Size(380, 753);
+            this.userAdsDataGrid.Size = new System.Drawing.Size(380, 581);
             this.userAdsDataGrid.TabIndex = 3;
-            this.userAdsDataGrid.SelectionChanged += new System.EventHandler(this.userAdsDataGrid_SelectionChanged);
+            this.userAdsDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.userAdsDataGrid_CellClick);
             // 
-            // adIDDataGridViewTextBoxColumn
+            // adID
             // 
-            this.adIDDataGridViewTextBoxColumn.DataPropertyName = "adID";
-            this.adIDDataGridViewTextBoxColumn.HeaderText = "adID";
-            this.adIDDataGridViewTextBoxColumn.Name = "adIDDataGridViewTextBoxColumn";
+            this.adID.DataPropertyName = "adID";
+            this.adID.HeaderText = "adID";
+            this.adID.Name = "adID";
             // 
-            // adTitleDataGridViewTextBoxColumn
+            // adTitle
             // 
-            this.adTitleDataGridViewTextBoxColumn.DataPropertyName = "adTitle";
-            this.adTitleDataGridViewTextBoxColumn.HeaderText = "adTitle";
-            this.adTitleDataGridViewTextBoxColumn.Name = "adTitleDataGridViewTextBoxColumn";
+            this.adTitle.DataPropertyName = "adTitle";
+            this.adTitle.HeaderText = "adTitle";
+            this.adTitle.Name = "adTitle";
             // 
-            // adCategoryDataGridViewTextBoxColumn
+            // adCategory
             // 
-            this.adCategoryDataGridViewTextBoxColumn.DataPropertyName = "adCategory";
-            this.adCategoryDataGridViewTextBoxColumn.HeaderText = "adCategory";
-            this.adCategoryDataGridViewTextBoxColumn.Name = "adCategoryDataGridViewTextBoxColumn";
+            this.adCategory.DataPropertyName = "adCategory";
+            this.adCategory.HeaderText = "adCategory";
+            this.adCategory.Name = "adCategory";
+            // 
+            // Images
+            // 
+            this.Images.DataPropertyName = "Images";
+            this.Images.HeaderText = "Images";
+            this.Images.Name = "Images";
+            this.Images.Visible = false;
+            // 
+            // adDesc
+            // 
+            this.adDesc.DataPropertyName = "adDesc";
+            this.adDesc.HeaderText = "adDesc";
+            this.adDesc.Name = "adDesc";
+            this.adDesc.Visible = false;
             // 
             // infoLabel
             // 
-            this.infoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.infoLabel.AutoSize = true;
             this.infoLabel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.infoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.infoLabel.Location = new System.Drawing.Point(121, 3);
+            this.infoLabel.Location = new System.Drawing.Point(121, 11);
             this.infoLabel.Name = "infoLabel";
             this.infoLabel.Size = new System.Drawing.Size(148, 25);
             this.infoLabel.TabIndex = 2;
@@ -1197,9 +1201,9 @@
             // 
             this.selectedAdPanel.Controls.Add(this.userPanelElementHost);
             this.selectedAdPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.selectedAdPanel.Location = new System.Drawing.Point(1068, 0);
+            this.selectedAdPanel.Location = new System.Drawing.Point(1190, 0);
             this.selectedAdPanel.Name = "selectedAdPanel";
-            this.selectedAdPanel.Size = new System.Drawing.Size(349, 801);
+            this.selectedAdPanel.Size = new System.Drawing.Size(349, 629);
             this.selectedAdPanel.TabIndex = 2;
             // 
             // userPanelElementHost
@@ -1207,14 +1211,9 @@
             this.userPanelElementHost.Dock = System.Windows.Forms.DockStyle.Fill;
             this.userPanelElementHost.Location = new System.Drawing.Point(0, 0);
             this.userPanelElementHost.Name = "userPanelElementHost";
-            this.userPanelElementHost.Size = new System.Drawing.Size(349, 801);
+            this.userPanelElementHost.Size = new System.Drawing.Size(349, 629);
             this.userPanelElementHost.TabIndex = 0;
             this.userPanelElementHost.Child = this.displayAd1;
-            // 
-            // adsTableBindingSource1
-            // 
-            this.adsTableBindingSource1.DataMember = "AdsTable";
-            this.adsTableBindingSource1.DataSource = this.aggeliesDBDataSet;
             // 
             // usersAdsTableBindingSource
             // 
@@ -1233,9 +1232,9 @@
             this.contentPanel.Controls.Add(this.signupPanel);
             this.contentPanel.Controls.Add(this.categoriesPanel);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contentPanel.Location = new System.Drawing.Point(200, 108);
+            this.contentPanel.Location = new System.Drawing.Point(100, 108);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(1417, 801);
+            this.contentPanel.Size = new System.Drawing.Size(1539, 629);
             this.contentPanel.TabIndex = 5;
             // 
             // silver_panel
@@ -1247,7 +1246,7 @@
             this.silver_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.silver_panel.Location = new System.Drawing.Point(0, 0);
             this.silver_panel.Name = "silver_panel";
-            this.silver_panel.Size = new System.Drawing.Size(1417, 801);
+            this.silver_panel.Size = new System.Drawing.Size(1539, 629);
             this.silver_panel.TabIndex = 72;
             // 
             // usexpress_box
@@ -1257,7 +1256,7 @@
             this.usexpress_box.Dock = System.Windows.Forms.DockStyle.Left;
             this.usexpress_box.Location = new System.Drawing.Point(670, 0);
             this.usexpress_box.Name = "usexpress_box";
-            this.usexpress_box.Size = new System.Drawing.Size(282, 629);
+            this.usexpress_box.Size = new System.Drawing.Size(282, 457);
             this.usexpress_box.TabIndex = 6;
             this.usexpress_box.TabStop = false;
             // 
@@ -1288,7 +1287,7 @@
             this.paypal_box.Dock = System.Windows.Forms.DockStyle.Left;
             this.paypal_box.Location = new System.Drawing.Point(388, 0);
             this.paypal_box.Name = "paypal_box";
-            this.paypal_box.Size = new System.Drawing.Size(282, 629);
+            this.paypal_box.Size = new System.Drawing.Size(282, 457);
             this.paypal_box.TabIndex = 5;
             this.paypal_box.TabStop = false;
             // 
@@ -1338,7 +1337,7 @@
             this.creditcard_box.Dock = System.Windows.Forms.DockStyle.Left;
             this.creditcard_box.Location = new System.Drawing.Point(0, 0);
             this.creditcard_box.Name = "creditcard_box";
-            this.creditcard_box.Size = new System.Drawing.Size(388, 629);
+            this.creditcard_box.Size = new System.Drawing.Size(388, 457);
             this.creditcard_box.TabIndex = 3;
             this.creditcard_box.TabStop = false;
             // 
@@ -1570,9 +1569,9 @@
             // payments_picbox
             // 
             this.payments_picbox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.payments_picbox.Location = new System.Drawing.Point(0, 629);
+            this.payments_picbox.Location = new System.Drawing.Point(0, 457);
             this.payments_picbox.Name = "payments_picbox";
-            this.payments_picbox.Size = new System.Drawing.Size(1417, 172);
+            this.payments_picbox.Size = new System.Drawing.Size(1539, 172);
             this.payments_picbox.TabIndex = 0;
             this.payments_picbox.TabStop = false;
             // 
@@ -1585,7 +1584,7 @@
             this.gold_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gold_panel.Location = new System.Drawing.Point(0, 0);
             this.gold_panel.Name = "gold_panel";
-            this.gold_panel.Size = new System.Drawing.Size(1417, 801);
+            this.gold_panel.Size = new System.Drawing.Size(1539, 629);
             this.gold_panel.TabIndex = 16;
             // 
             // gold_AmericanExpess_groupbox
@@ -1595,7 +1594,7 @@
             this.gold_AmericanExpess_groupbox.Dock = System.Windows.Forms.DockStyle.Left;
             this.gold_AmericanExpess_groupbox.Location = new System.Drawing.Point(670, 0);
             this.gold_AmericanExpess_groupbox.Name = "gold_AmericanExpess_groupbox";
-            this.gold_AmericanExpess_groupbox.Size = new System.Drawing.Size(282, 629);
+            this.gold_AmericanExpess_groupbox.Size = new System.Drawing.Size(282, 457);
             this.gold_AmericanExpess_groupbox.TabIndex = 6;
             this.gold_AmericanExpess_groupbox.TabStop = false;
             // 
@@ -1626,7 +1625,7 @@
             this.gold_paypal_groupbox.Dock = System.Windows.Forms.DockStyle.Left;
             this.gold_paypal_groupbox.Location = new System.Drawing.Point(388, 0);
             this.gold_paypal_groupbox.Name = "gold_paypal_groupbox";
-            this.gold_paypal_groupbox.Size = new System.Drawing.Size(282, 629);
+            this.gold_paypal_groupbox.Size = new System.Drawing.Size(282, 457);
             this.gold_paypal_groupbox.TabIndex = 5;
             this.gold_paypal_groupbox.TabStop = false;
             // 
@@ -1676,7 +1675,7 @@
             this.gold_credit_box.Dock = System.Windows.Forms.DockStyle.Left;
             this.gold_credit_box.Location = new System.Drawing.Point(0, 0);
             this.gold_credit_box.Name = "gold_credit_box";
-            this.gold_credit_box.Size = new System.Drawing.Size(388, 629);
+            this.gold_credit_box.Size = new System.Drawing.Size(388, 457);
             this.gold_credit_box.TabIndex = 3;
             this.gold_credit_box.TabStop = false;
             // 
@@ -1894,7 +1893,6 @@
             this.gold_creditinfolabel.Size = new System.Drawing.Size(229, 24);
             this.gold_creditinfolabel.TabIndex = 1;
             this.gold_creditinfolabel.Text = "Payment by Credit Card";
-            this.gold_creditinfolabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // plan_label
             // 
@@ -1909,9 +1907,9 @@
             // gold_payment_picbox
             // 
             this.gold_payment_picbox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gold_payment_picbox.Location = new System.Drawing.Point(0, 629);
+            this.gold_payment_picbox.Location = new System.Drawing.Point(0, 457);
             this.gold_payment_picbox.Name = "gold_payment_picbox";
-            this.gold_payment_picbox.Size = new System.Drawing.Size(1417, 172);
+            this.gold_payment_picbox.Size = new System.Drawing.Size(1539, 172);
             this.gold_payment_picbox.TabIndex = 0;
             this.gold_payment_picbox.TabStop = false;
             // 
@@ -1925,7 +1923,7 @@
             this.upgradeAccount_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.upgradeAccount_panel.Location = new System.Drawing.Point(0, 0);
             this.upgradeAccount_panel.Name = "upgradeAccount_panel";
-            this.upgradeAccount_panel.Size = new System.Drawing.Size(1417, 801);
+            this.upgradeAccount_panel.Size = new System.Drawing.Size(1539, 629);
             this.upgradeAccount_panel.TabIndex = 71;
             // 
             // btn_backtoprofile
@@ -1956,7 +1954,6 @@
             this.Info_label.Size = new System.Drawing.Size(204, 25);
             this.Info_label.TabIndex = 14;
             this.Info_label.Text = "MONTHLY PLANS";
-            this.Info_label.Click += new System.EventHandler(this.Info_label_Click);
             // 
             // btn_gold
             // 
@@ -2005,7 +2002,7 @@
             this.signupPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.signupPanel.Location = new System.Drawing.Point(0, 0);
             this.signupPanel.Name = "signupPanel";
-            this.signupPanel.Size = new System.Drawing.Size(1417, 801);
+            this.signupPanel.Size = new System.Drawing.Size(1539, 629);
             this.signupPanel.TabIndex = 7;
             // 
             // signupLabel
@@ -2196,6 +2193,25 @@
             this.signupUNameTextBox.Size = new System.Drawing.Size(291, 26);
             this.signupUNameTextBox.TabIndex = 78;
             // 
+            // leftPanel
+            // 
+            this.leftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(178)))), ((int)(((byte)(250)))));
+            this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.leftPanel.Location = new System.Drawing.Point(0, 108);
+            this.leftPanel.Name = "leftPanel";
+            this.leftPanel.Size = new System.Drawing.Size(100, 729);
+            this.leftPanel.TabIndex = 1;
+            // 
+            // usersAdsTableBindingSource1
+            // 
+            this.usersAdsTableBindingSource1.DataMember = "UsersAdsTable";
+            this.usersAdsTableBindingSource1.DataSource = this.usersBindingSource;
+            // 
+            // adsTableBindingSource1
+            // 
+            this.adsTableBindingSource1.DataMember = "AdsTable";
+            this.adsTableBindingSource1.DataSource = this.aggeliesDBDataSet;
+            // 
             // adsTableTableAdapter
             // 
             this.adsTableTableAdapter.ClearBeforeFill = true;
@@ -2208,34 +2224,19 @@
             // 
             this.adCategoryTableAdapter1.ClearBeforeFill = true;
             // 
-            // leftPanel
-            // 
-            this.leftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(178)))), ((int)(((byte)(250)))));
-            this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.leftPanel.Location = new System.Drawing.Point(0, 108);
-            this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(200, 901);
-            this.leftPanel.TabIndex = 1;
-            // 
-            // usersAdsTableBindingSource1
-            // 
-            this.usersAdsTableBindingSource1.DataMember = "UsersAdsTable";
-            this.usersAdsTableBindingSource1.DataSource = this.usersBindingSource;
-            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1817, 1009);
+            this.ClientSize = new System.Drawing.Size(1839, 837);
             this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.footerPanel);
             this.Controls.Add(this.leftPanel);
             this.Controls.Add(this.rightPanel);
             this.Controls.Add(this.topPanel);
             this.MaximumSize = new System.Drawing.Size(1920, 1080);
-            this.MinimumSize = new System.Drawing.Size(1400, 1048);
+            this.MinimumSize = new System.Drawing.Size(16, 800);
             this.Name = "UserForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "3L2X - User Form";
@@ -2265,7 +2266,6 @@
             this.adsListPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userAdsDataGrid)).EndInit();
             this.selectedAdPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.adsTableBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersAdsTableBindingSource)).EndInit();
             this.contentPanel.ResumeLayout(false);
             this.silver_panel.ResumeLayout(false);
@@ -2290,6 +2290,7 @@
             this.signupPanel.ResumeLayout(false);
             this.signupPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersAdsTableBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adsTableBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2354,7 +2355,7 @@
         private System.Windows.Forms.ComboBox childCategoriesComboBox;
         private System.Windows.Forms.ComboBox gChildComboBox;
         private System.Windows.Forms.ListBox categoriesListBox;
-        private DisplayAds displayAd;
+       
         private System.Windows.Forms.Label uPhoneLabel;
         private System.Windows.Forms.TextBox uPhoneTextBox;
         private System.Windows.Forms.Label uAgeLabel;
@@ -2388,9 +2389,6 @@
         private aggeliesWpfLab.UserMenuIcons userMenuIcons1;
 
         private System.Windows.Forms.DataGridView userAdsDataGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adTitleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adCategoryDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource usersAdsTableBindingSource1;
         private System.Windows.Forms.Integration.ElementHost userPanelElementHost;
         private aggeliesWpfLab.DisplayAd displayAd1;
@@ -2488,7 +2486,12 @@
         private System.Windows.Forms.Button gold_btn_goback;
         private System.Windows.Forms.Button silver_btn_goback;
         private System.Windows.Forms.Button btn_backtoprofile;
-
+        private System.Windows.Forms.DataGridViewTextBoxColumn adID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adCategory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Images;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adDesc;
+        private System.Windows.Forms.Button button1;
     }
 }
 
