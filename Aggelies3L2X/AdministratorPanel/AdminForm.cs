@@ -9,11 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Threading;
-<<<<<<< HEAD
 using System.IO;
-=======
-using Aggelies3L2X;
->>>>>>> 47b9b442119a5ed6be36fdb00c9a2fbe5ab72e9b
 
 namespace AdministratorPanel
 {
@@ -28,7 +24,7 @@ namespace AdministratorPanel
             var z = Directory.GetParent(path).FullName;
             Console.WriteLine(z);
             InitializeComponent();
-            
+          
         }
 
        
