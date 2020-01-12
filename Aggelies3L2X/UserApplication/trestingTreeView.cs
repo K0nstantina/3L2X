@@ -4,10 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media.Imaging;
 using UserApplication.AggeliesDBDataSetTableAdapters;
 
 namespace UserApplication
@@ -15,9 +17,18 @@ namespace UserApplication
     public partial class trestingTreeView : Form
     {
         string connectionString = Properties.Settings.Default.AggeliesDBConnectionString;
+        private string imagesLocation;
         public trestingTreeView()
         {
             InitializeComponent();
+            var directoryName = Application.StartupPath;
+            //Console.WriteLine(directoryName);
+            var path = Directory.GetParent(directoryName).FullName;
+            //Console.WriteLine(path);
+            var z = Directory.GetParent(path).FullName;
+            imagesLocation = z.ToString()+@"\Resources\images\";
+
+            Console.WriteLine(z);
         }
         private void PopulateTreeView(int parentId, TreeNode parentNode)
         {
@@ -88,7 +99,7 @@ namespace UserApplication
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectQuery = "SELECT adID, adTitle, adDesc, Published FROM AdsTable WHERE Published=true AND adTitle='" + listBox1.SelectedItem.ToString()+"'";
+            string selectQuery = "SELECT adID, adTitle, adDesc, media, Published FROM AdsTable WHERE Published=true AND adTitle='" + listBox1.SelectedItem.ToString()+"'";
             OleDbConnection connection = new OleDbConnection(connectionString);
             OleDbCommand command = new OleDbCommand(selectQuery, connection);
             OleDbDataReader reader;
@@ -102,6 +113,10 @@ namespace UserApplication
                 reader.Read();
                 displayAd1.adTitle.Text = reader["adTitle"].ToString();
                 displayAd1.adDesc.Text = reader["adDesc"].ToString();
+                if (reader["media"].ToString()!="")
+                {
+                    displayAd1.adImage.Source = new BitmapImage(new Uri(imagesLocation + reader["media"].ToString()));
+                }
                 textBox1.Text = reader["adID"].ToString();
                 textBox2.Text = reader["adTitle"].ToString();
                 reader.Close();
@@ -113,6 +128,7 @@ namespace UserApplication
             listBox1.Items.Clear();
             displayAd1.adTitle.Text = "";
             displayAd1.adDesc.Text = "";
+            displayAd1.adImage.Source = null;
             textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
