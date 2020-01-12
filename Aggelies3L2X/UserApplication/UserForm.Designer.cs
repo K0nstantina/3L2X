@@ -47,6 +47,7 @@
             this.homePanel = new System.Windows.Forms.Panel();
             this.recentAdsLabel = new System.Windows.Forms.Label();
             this.profilePanel = new System.Windows.Forms.Panel();
+            this.upgrade_label = new System.Windows.Forms.LinkLabel();
             this.uPhoneLabel = new System.Windows.Forms.Label();
             this.uPhoneTextBox = new System.Windows.Forms.TextBox();
             this.uAgeLabel = new System.Windows.Forms.Label();
@@ -100,6 +101,11 @@
             this.descriptionRichTextBox = new System.Windows.Forms.RichTextBox();
             this.adsPictureBox = new System.Windows.Forms.PictureBox();
             this.contentPanel = new System.Windows.Forms.Panel();
+            this.upgradeAccount_panel = new System.Windows.Forms.Panel();
+            this.Info_label = new System.Windows.Forms.Label();
+            this.btn_gold = new System.Windows.Forms.Button();
+            this.btn_silver = new System.Windows.Forms.Button();
+            this.freetrial_button = new System.Windows.Forms.Button();
             this.signupPanel = new System.Windows.Forms.Panel();
             this.signupLabel = new System.Windows.Forms.Label();
             this.signupRPasswordLabel = new System.Windows.Forms.Label();
@@ -125,13 +131,7 @@
             this.usersTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.UsersTableAdapter();
             this.adCategoryTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.AdCategoryTableAdapter();
             this.leftPanel = new System.Windows.Forms.Panel();
-            this.upgrade_label = new System.Windows.Forms.LinkLabel();
-            this.upgradeAccount_panel = new System.Windows.Forms.Panel();
-            this.Info_label = new System.Windows.Forms.Label();
-            this.btn_gold = new System.Windows.Forms.Button();
-            this.btn_silver = new System.Windows.Forms.Button();
-            this.freetrial_button = new System.Windows.Forms.Button();
-            this.premium_img = new System.Windows.Forms.Button();
+            this.upgradeinfo_picbox = new System.Windows.Forms.PictureBox();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.settingsPanel.SuspendLayout();
@@ -152,8 +152,9 @@
             this.selectedAdPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adsPictureBox)).BeginInit();
             this.contentPanel.SuspendLayout();
-            this.signupPanel.SuspendLayout();
             this.upgradeAccount_panel.SuspendLayout();
+            this.signupPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.upgradeinfo_picbox)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
@@ -368,6 +369,17 @@
             this.profilePanel.Size = new System.Drawing.Size(970, 541);
             this.profilePanel.TabIndex = 0;
             this.profilePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.profilePanel_Paint);
+            // 
+            // upgrade_label
+            // 
+            this.upgrade_label.AutoSize = true;
+            this.upgrade_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.upgrade_label.Location = new System.Drawing.Point(758, 358);
+            this.upgrade_label.Name = "upgrade_label";
+            this.upgrade_label.Size = new System.Drawing.Size(194, 20);
+            this.upgrade_label.TabIndex = 70;
+            this.upgrade_label.TabStop = true;
+            this.upgrade_label.Text = "Αναβάθμιση λογαριασμού.";
             // 
             // uPhoneLabel
             // 
@@ -943,6 +955,60 @@
             this.contentPanel.Size = new System.Drawing.Size(970, 541);
             this.contentPanel.TabIndex = 5;
             // 
+            // upgradeAccount_panel
+            // 
+            this.upgradeAccount_panel.Controls.Add(this.upgradeinfo_picbox);
+            this.upgradeAccount_panel.Controls.Add(this.Info_label);
+            this.upgradeAccount_panel.Controls.Add(this.btn_gold);
+            this.upgradeAccount_panel.Controls.Add(this.btn_silver);
+            this.upgradeAccount_panel.Controls.Add(this.freetrial_button);
+            this.upgradeAccount_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.upgradeAccount_panel.Location = new System.Drawing.Point(0, 0);
+            this.upgradeAccount_panel.Name = "upgradeAccount_panel";
+            this.upgradeAccount_panel.Size = new System.Drawing.Size(970, 541);
+            this.upgradeAccount_panel.TabIndex = 71;
+            // 
+            // Info_label
+            // 
+            this.Info_label.AutoSize = true;
+            this.Info_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.Info_label.Location = new System.Drawing.Point(13, 6);
+            this.Info_label.Name = "Info_label";
+            this.Info_label.Size = new System.Drawing.Size(204, 25);
+            this.Info_label.TabIndex = 14;
+            this.Info_label.Text = "MONTHLY PLANS";
+            this.Info_label.Click += new System.EventHandler(this.Info_label_Click);
+            // 
+            // btn_gold
+            // 
+            this.btn_gold.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btn_gold.Location = new System.Drawing.Point(602, 469);
+            this.btn_gold.Name = "btn_gold";
+            this.btn_gold.Size = new System.Drawing.Size(175, 35);
+            this.btn_gold.TabIndex = 13;
+            this.btn_gold.Text = "Upgrade to GOLD";
+            this.btn_gold.UseVisualStyleBackColor = true;
+            // 
+            // btn_silver
+            // 
+            this.btn_silver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btn_silver.Location = new System.Drawing.Point(417, 469);
+            this.btn_silver.Name = "btn_silver";
+            this.btn_silver.Size = new System.Drawing.Size(175, 35);
+            this.btn_silver.TabIndex = 12;
+            this.btn_silver.Text = "Upgrade to SILVER";
+            this.btn_silver.UseVisualStyleBackColor = true;
+            // 
+            // freetrial_button
+            // 
+            this.freetrial_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.freetrial_button.Location = new System.Drawing.Point(229, 469);
+            this.freetrial_button.Name = "freetrial_button";
+            this.freetrial_button.Size = new System.Drawing.Size(175, 35);
+            this.freetrial_button.TabIndex = 11;
+            this.freetrial_button.Text = "Free Trial 10 days";
+            this.freetrial_button.UseVisualStyleBackColor = true;
+            // 
             // signupPanel
             // 
             this.signupPanel.Controls.Add(this.signupLabel);
@@ -1179,79 +1245,14 @@
             this.leftPanel.Size = new System.Drawing.Size(200, 641);
             this.leftPanel.TabIndex = 1;
             // 
-            // upgrade_label
+            // upgradeinfo_picbox
             // 
-            this.upgrade_label.AutoSize = true;
-            this.upgrade_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.upgrade_label.Location = new System.Drawing.Point(758, 358);
-            this.upgrade_label.Name = "upgrade_label";
-            this.upgrade_label.Size = new System.Drawing.Size(194, 20);
-            this.upgrade_label.TabIndex = 70;
-            this.upgrade_label.TabStop = true;
-            this.upgrade_label.Text = "Αναβάθμιση λογαριασμού.";
-            // 
-            // upgradeAccount_panel
-            // 
-            this.upgradeAccount_panel.Controls.Add(this.Info_label);
-            this.upgradeAccount_panel.Controls.Add(this.btn_gold);
-            this.upgradeAccount_panel.Controls.Add(this.btn_silver);
-            this.upgradeAccount_panel.Controls.Add(this.freetrial_button);
-            this.upgradeAccount_panel.Controls.Add(this.premium_img);
-            this.upgradeAccount_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.upgradeAccount_panel.Location = new System.Drawing.Point(0, 0);
-            this.upgradeAccount_panel.Name = "upgradeAccount_panel";
-            this.upgradeAccount_panel.Size = new System.Drawing.Size(970, 541);
-            this.upgradeAccount_panel.TabIndex = 71;
-            // 
-            // Info_label
-            // 
-            this.Info_label.AutoSize = true;
-            this.Info_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.Info_label.Location = new System.Drawing.Point(13, 6);
-            this.Info_label.Name = "Info_label";
-            this.Info_label.Size = new System.Drawing.Size(204, 25);
-            this.Info_label.TabIndex = 14;
-            this.Info_label.Text = "MONTHLY PLANS";
-            this.Info_label.Click += new System.EventHandler(this.Info_label_Click);
-            // 
-            // btn_gold
-            // 
-            this.btn_gold.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.btn_gold.Location = new System.Drawing.Point(602, 469);
-            this.btn_gold.Name = "btn_gold";
-            this.btn_gold.Size = new System.Drawing.Size(175, 35);
-            this.btn_gold.TabIndex = 13;
-            this.btn_gold.Text = "Upgrade to GOLD";
-            this.btn_gold.UseVisualStyleBackColor = true;
-            // 
-            // btn_silver
-            // 
-            this.btn_silver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.btn_silver.Location = new System.Drawing.Point(417, 469);
-            this.btn_silver.Name = "btn_silver";
-            this.btn_silver.Size = new System.Drawing.Size(175, 35);
-            this.btn_silver.TabIndex = 12;
-            this.btn_silver.Text = "Upgrade to SILVER";
-            this.btn_silver.UseVisualStyleBackColor = true;
-            // 
-            // freetrial_button
-            // 
-            this.freetrial_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.freetrial_button.Location = new System.Drawing.Point(229, 469);
-            this.freetrial_button.Name = "freetrial_button";
-            this.freetrial_button.Size = new System.Drawing.Size(175, 35);
-            this.freetrial_button.TabIndex = 11;
-            this.freetrial_button.Text = "Free Trial 10 days";
-            this.freetrial_button.UseVisualStyleBackColor = true;
-            // 
-            // premium_img
-            // 
-            this.premium_img.Image = ((System.Drawing.Image)(resources.GetObject("premium_img.Image")));
-            this.premium_img.Location = new System.Drawing.Point(3, 33);
-            this.premium_img.Name = "premium_img";
-            this.premium_img.Size = new System.Drawing.Size(768, 404);
-            this.premium_img.TabIndex = 10;
-            this.premium_img.UseVisualStyleBackColor = true;
+            this.upgradeinfo_picbox.Image = ((System.Drawing.Image)(resources.GetObject("upgradeinfo_picbox.Image")));
+            this.upgradeinfo_picbox.Location = new System.Drawing.Point(6, 36);
+            this.upgradeinfo_picbox.Name = "upgradeinfo_picbox";
+            this.upgradeinfo_picbox.Size = new System.Drawing.Size(771, 410);
+            this.upgradeinfo_picbox.TabIndex = 15;
+            this.upgradeinfo_picbox.TabStop = false;
             // 
             // UserForm
             // 
@@ -1297,10 +1298,11 @@
             this.selectedAdPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adsPictureBox)).EndInit();
             this.contentPanel.ResumeLayout(false);
-            this.signupPanel.ResumeLayout(false);
-            this.signupPanel.PerformLayout();
             this.upgradeAccount_panel.ResumeLayout(false);
             this.upgradeAccount_panel.PerformLayout();
+            this.signupPanel.ResumeLayout(false);
+            this.signupPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.upgradeinfo_picbox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1410,7 +1412,7 @@
         private System.Windows.Forms.Button btn_gold;
         private System.Windows.Forms.Button btn_silver;
         private System.Windows.Forms.Button freetrial_button;
-        private System.Windows.Forms.Button premium_img;
+        private System.Windows.Forms.PictureBox upgradeinfo_picbox;
     }
 }
 
