@@ -102,6 +102,7 @@
             this.adsPictureBox = new System.Windows.Forms.PictureBox();
             this.contentPanel = new System.Windows.Forms.Panel();
             this.upgradeAccount_panel = new System.Windows.Forms.Panel();
+            this.upgradeinfo_picbox = new System.Windows.Forms.PictureBox();
             this.Info_label = new System.Windows.Forms.Label();
             this.btn_gold = new System.Windows.Forms.Button();
             this.btn_silver = new System.Windows.Forms.Button();
@@ -131,7 +132,26 @@
             this.usersTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.UsersTableAdapter();
             this.adCategoryTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.AdCategoryTableAdapter();
             this.leftPanel = new System.Windows.Forms.Panel();
-            this.upgradeinfo_picbox = new System.Windows.Forms.PictureBox();
+            this.gold_panel = new System.Windows.Forms.Panel();
+            this.payment_picbox = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.plan_label = new System.Windows.Forms.Label();
+            this.credit_box = new System.Windows.Forms.GroupBox();
+            this.cardholder_label = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.creditcard_label = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cvv_label = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.total_label = new System.Windows.Forms.Label();
+            this.requiredCardHolder_label = new System.Windows.Forms.Label();
+            this.requiredCardNumber = new System.Windows.Forms.Label();
+            this.requiredcvv_label = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.expdate_label = new System.Windows.Forms.Label();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.settingsPanel.SuspendLayout();
@@ -153,8 +173,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.adsPictureBox)).BeginInit();
             this.contentPanel.SuspendLayout();
             this.upgradeAccount_panel.SuspendLayout();
-            this.signupPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upgradeinfo_picbox)).BeginInit();
+            this.signupPanel.SuspendLayout();
+            this.gold_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.payment_picbox)).BeginInit();
+            this.credit_box.SuspendLayout();
             this.SuspendLayout();
             // 
             // topPanel
@@ -942,6 +965,7 @@
             // 
             // contentPanel
             // 
+            this.contentPanel.Controls.Add(this.gold_panel);
             this.contentPanel.Controls.Add(this.upgradeAccount_panel);
             this.contentPanel.Controls.Add(this.profilePanel);
             this.contentPanel.Controls.Add(this.homePanel);
@@ -967,6 +991,15 @@
             this.upgradeAccount_panel.Name = "upgradeAccount_panel";
             this.upgradeAccount_panel.Size = new System.Drawing.Size(970, 541);
             this.upgradeAccount_panel.TabIndex = 71;
+            // 
+            // upgradeinfo_picbox
+            // 
+            this.upgradeinfo_picbox.Image = ((System.Drawing.Image)(resources.GetObject("upgradeinfo_picbox.Image")));
+            this.upgradeinfo_picbox.Location = new System.Drawing.Point(6, 36);
+            this.upgradeinfo_picbox.Name = "upgradeinfo_picbox";
+            this.upgradeinfo_picbox.Size = new System.Drawing.Size(771, 410);
+            this.upgradeinfo_picbox.TabIndex = 15;
+            this.upgradeinfo_picbox.TabStop = false;
             // 
             // Info_label
             // 
@@ -1245,14 +1278,214 @@
             this.leftPanel.Size = new System.Drawing.Size(200, 641);
             this.leftPanel.TabIndex = 1;
             // 
-            // upgradeinfo_picbox
+            // gold_panel
             // 
-            this.upgradeinfo_picbox.Image = ((System.Drawing.Image)(resources.GetObject("upgradeinfo_picbox.Image")));
-            this.upgradeinfo_picbox.Location = new System.Drawing.Point(6, 36);
-            this.upgradeinfo_picbox.Name = "upgradeinfo_picbox";
-            this.upgradeinfo_picbox.Size = new System.Drawing.Size(771, 410);
-            this.upgradeinfo_picbox.TabIndex = 15;
-            this.upgradeinfo_picbox.TabStop = false;
+            this.gold_panel.Controls.Add(this.credit_box);
+            this.gold_panel.Controls.Add(this.payment_picbox);
+            this.gold_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gold_panel.Location = new System.Drawing.Point(0, 0);
+            this.gold_panel.Name = "gold_panel";
+            this.gold_panel.Size = new System.Drawing.Size(970, 541);
+            this.gold_panel.TabIndex = 16;
+            // 
+            // payment_picbox
+            // 
+            this.payment_picbox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.payment_picbox.Image = ((System.Drawing.Image)(resources.GetObject("payment_picbox.Image")));
+            this.payment_picbox.Location = new System.Drawing.Point(0, 369);
+            this.payment_picbox.Name = "payment_picbox";
+            this.payment_picbox.Size = new System.Drawing.Size(970, 172);
+            this.payment_picbox.TabIndex = 0;
+            this.payment_picbox.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label1.Location = new System.Drawing.Point(8, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(229, 24);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Payment by Credit Card";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // plan_label
+            // 
+            this.plan_label.AutoSize = true;
+            this.plan_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.plan_label.Location = new System.Drawing.Point(8, 53);
+            this.plan_label.Name = "plan_label";
+            this.plan_label.Size = new System.Drawing.Size(87, 20);
+            this.plan_label.TabIndex = 2;
+            this.plan_label.Text = "Gold Plan";
+            // 
+            // credit_box
+            // 
+            this.credit_box.Controls.Add(this.label4);
+            this.credit_box.Controls.Add(this.textBox5);
+            this.credit_box.Controls.Add(this.expdate_label);
+            this.credit_box.Controls.Add(this.label3);
+            this.credit_box.Controls.Add(this.requiredcvv_label);
+            this.credit_box.Controls.Add(this.requiredCardNumber);
+            this.credit_box.Controls.Add(this.requiredCardHolder_label);
+            this.credit_box.Controls.Add(this.textBox4);
+            this.credit_box.Controls.Add(this.total_label);
+            this.credit_box.Controls.Add(this.textBox3);
+            this.credit_box.Controls.Add(this.cvv_label);
+            this.credit_box.Controls.Add(this.textBox2);
+            this.credit_box.Controls.Add(this.creditcard_label);
+            this.credit_box.Controls.Add(this.textBox1);
+            this.credit_box.Controls.Add(this.cardholder_label);
+            this.credit_box.Controls.Add(this.label1);
+            this.credit_box.Controls.Add(this.plan_label);
+            this.credit_box.Dock = System.Windows.Forms.DockStyle.Left;
+            this.credit_box.Location = new System.Drawing.Point(0, 0);
+            this.credit_box.Name = "credit_box";
+            this.credit_box.Size = new System.Drawing.Size(388, 369);
+            this.credit_box.TabIndex = 3;
+            this.credit_box.TabStop = false;
+            // 
+            // cardholder_label
+            // 
+            this.cardholder_label.AutoSize = true;
+            this.cardholder_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.cardholder_label.Location = new System.Drawing.Point(14, 110);
+            this.cardholder_label.Name = "cardholder_label";
+            this.cardholder_label.Size = new System.Drawing.Size(148, 20);
+            this.cardholder_label.TabIndex = 3;
+            this.cardholder_label.Text = "Card Holder Name: ";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(214, 110);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 4;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(214, 148);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 6;
+            // 
+            // creditcard_label
+            // 
+            this.creditcard_label.AutoSize = true;
+            this.creditcard_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.creditcard_label.Location = new System.Drawing.Point(14, 152);
+            this.creditcard_label.Name = "creditcard_label";
+            this.creditcard_label.Size = new System.Drawing.Size(157, 20);
+            this.creditcard_label.TabIndex = 5;
+            this.creditcard_label.Text = "Credit Card Number: ";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(214, 184);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 8;
+            // 
+            // cvv_label
+            // 
+            this.cvv_label.AutoSize = true;
+            this.cvv_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.cvv_label.Location = new System.Drawing.Point(14, 189);
+            this.cvv_label.Name = "cvv_label";
+            this.cvv_label.Size = new System.Drawing.Size(46, 20);
+            this.cvv_label.TabIndex = 7;
+            this.cvv_label.Text = "CVV:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(214, 264);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 10;
+            this.textBox4.Text = "9.99 ";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // total_label
+            // 
+            this.total_label.AutoSize = true;
+            this.total_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.total_label.Location = new System.Drawing.Point(14, 269);
+            this.total_label.Name = "total_label";
+            this.total_label.Size = new System.Drawing.Size(44, 20);
+            this.total_label.TabIndex = 9;
+            this.total_label.Text = "Total";
+            // 
+            // requiredCardHolder_label
+            // 
+            this.requiredCardHolder_label.AutoSize = true;
+            this.requiredCardHolder_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.requiredCardHolder_label.ForeColor = System.Drawing.Color.Red;
+            this.requiredCardHolder_label.Location = new System.Drawing.Point(316, 110);
+            this.requiredCardHolder_label.Name = "requiredCardHolder_label";
+            this.requiredCardHolder_label.Size = new System.Drawing.Size(15, 20);
+            this.requiredCardHolder_label.TabIndex = 11;
+            this.requiredCardHolder_label.Text = "*";
+            // 
+            // requiredCardNumber
+            // 
+            this.requiredCardNumber.AutoSize = true;
+            this.requiredCardNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.requiredCardNumber.ForeColor = System.Drawing.Color.Red;
+            this.requiredCardNumber.Location = new System.Drawing.Point(316, 152);
+            this.requiredCardNumber.Name = "requiredCardNumber";
+            this.requiredCardNumber.Size = new System.Drawing.Size(15, 20);
+            this.requiredCardNumber.TabIndex = 12;
+            this.requiredCardNumber.Text = "*";
+            // 
+            // requiredcvv_label
+            // 
+            this.requiredcvv_label.AutoSize = true;
+            this.requiredcvv_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.requiredcvv_label.ForeColor = System.Drawing.Color.Red;
+            this.requiredcvv_label.Location = new System.Drawing.Point(316, 184);
+            this.requiredcvv_label.Name = "requiredcvv_label";
+            this.requiredcvv_label.Size = new System.Drawing.Size(15, 20);
+            this.requiredcvv_label.TabIndex = 13;
+            this.requiredcvv_label.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(317, 265);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(16, 18);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "€";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(316, 225);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(15, 20);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "*";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(214, 225);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 16;
+            // 
+            // expdate_label
+            // 
+            this.expdate_label.AutoSize = true;
+            this.expdate_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.expdate_label.Location = new System.Drawing.Point(14, 230);
+            this.expdate_label.Name = "expdate_label";
+            this.expdate_label.Size = new System.Drawing.Size(46, 20);
+            this.expdate_label.TabIndex = 15;
+            this.expdate_label.Text = "CVV:";
             // 
             // UserForm
             // 
@@ -1300,9 +1533,13 @@
             this.contentPanel.ResumeLayout(false);
             this.upgradeAccount_panel.ResumeLayout(false);
             this.upgradeAccount_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.upgradeinfo_picbox)).EndInit();
             this.signupPanel.ResumeLayout(false);
             this.signupPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.upgradeinfo_picbox)).EndInit();
+            this.gold_panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.payment_picbox)).EndInit();
+            this.credit_box.ResumeLayout(false);
+            this.credit_box.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1413,6 +1650,26 @@
         private System.Windows.Forms.Button btn_silver;
         private System.Windows.Forms.Button freetrial_button;
         private System.Windows.Forms.PictureBox upgradeinfo_picbox;
+        private System.Windows.Forms.Panel gold_panel;
+        private System.Windows.Forms.GroupBox credit_box;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label plan_label;
+        private System.Windows.Forms.PictureBox payment_picbox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label expdate_label;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label requiredcvv_label;
+        private System.Windows.Forms.Label requiredCardNumber;
+        private System.Windows.Forms.Label requiredCardHolder_label;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label total_label;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label cvv_label;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label creditcard_label;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label cardholder_label;
     }
 }
 
