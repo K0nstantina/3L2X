@@ -732,40 +732,40 @@ namespace UserApplication
         private void updateFields()
         {
             //int sIndex = adsListBox.SelectedIndex;
-            //// Find current users Ads
-            //this.adsTableTableAdapter.AdsPerUser(this.aggeliesDBDataSet.AdsTable, userid);
+            // Find current users Ads
+            this.adsTableTableAdapter.AdsPerUser(this.aggeliesDBDataSet.AdsTable, userid);
             //adsListBox.SelectedIndex = sIndex;
-            //// Set the avatarPictureBox image location.
-            //try
-            //{
-            //    avatarPictureBox.ImageLocation = userImagesLocation + usersTableAdapter1.SelectUserImageQuery(userid).ToString();
-            //}
-            //catch (Exception) { }
+            // Set the avatarPictureBox image location.
+            try
+            {
+                avatarPictureBox.ImageLocation = userImagesLocation + usersTableAdapter1.SelectUserImageQuery(userid).ToString();
+            }
+            catch (Exception) { }
 
-            //// Setup Query, declare reader.
-            //string unameQuery = "SELECT uName, uPassword, fName, lName, uAge, uPhone, uEmail, uRecoverEmail FROM Users WHERE userID=" + userid + "";
-            //OleDbDataReader reader;
-            //// Open connection.
-            //OleDbConnection connection = new OleDbConnection(connectionString);
-            //OleDbCommand command = new OleDbCommand(unameQuery, connection);
-            //connection.Open();
-            //// Execute reader.
-            //reader = command.ExecuteReader();
-            //// If user exists.
-            //if (reader.HasRows)
-            //{
-            //    reader.Read();
-            //    uNameTextBox.Text = reader["uName"].ToString();
-            //    fNameTextBox.Text = reader["fName"].ToString();
-            //    lNameTextBox.Text = reader["lName"].ToString();
-            //    uEmailTextBox.Text = reader["uEmail"].ToString();
-            //    uREmailTextBox.Text = reader["uRecoverEmail"].ToString();
-            //    uAgeTextBox.Text = reader["uAge"].ToString();
-            //    uPhoneTextBox.Text = reader["uPhone"].ToString();
-            //    uPasswordTextBox.Text = reader["uPassword"].ToString();
-            //    reader.Close();
-            //}
-            //connection.Close();
+            // Setup Query, declare reader.
+            string unameQuery = "SELECT uName, uPassword, fName, lName, uAge, uPhone, uEmail, uRecoverEmail FROM Users WHERE userID=" + userid + "";
+            OleDbDataReader reader;
+            // Open connection.
+            OleDbConnection connection = new OleDbConnection(connectionString);
+            OleDbCommand command = new OleDbCommand(unameQuery, connection);
+            connection.Open();
+            // Execute reader.
+            reader = command.ExecuteReader();
+            // If user exists.
+            if (reader.HasRows)
+            {
+                reader.Read();
+                uNameTextBox.Text = reader["uName"].ToString();
+                fNameTextBox.Text = reader["fName"].ToString();
+                lNameTextBox.Text = reader["lName"].ToString();
+                uEmailTextBox.Text = reader["uEmail"].ToString();
+                uREmailTextBox.Text = reader["uRecoverEmail"].ToString();
+                uAgeTextBox.Text = reader["uAge"].ToString();
+                uPhoneTextBox.Text = reader["uPhone"].ToString();
+                uPasswordTextBox.Text = reader["uPassword"].ToString();
+                reader.Close();
+            }
+            connection.Close();
         }
         /// <summary>
         /// Initialize the images relative path.

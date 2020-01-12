@@ -2235,7 +2235,7 @@
             this.Controls.Add(this.rightPanel);
             this.Controls.Add(this.topPanel);
             this.MaximumSize = new System.Drawing.Size(1920, 1080);
-            this.MinimumSize = new System.Drawing.Size(800, 600);
+            this.MinimumSize = new System.Drawing.Size(1200, 800);
             this.Name = "UserForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "3L2X - User Form";
