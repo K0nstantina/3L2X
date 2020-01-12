@@ -529,9 +529,10 @@ namespace UserApplication
         {
             if (defaultRadioButton.Checked)
             {
-                topPanel.BackColor = SystemColors.ActiveCaption;
-                footerPanel.BackColor = SystemColors.ActiveCaption;
-                rightPanel.BackColor = SystemColors.ActiveCaption;
+                topPanel.BackColor = Color.FromArgb(57, 178, 250);
+                footerPanel.BackColor = Color.FromArgb(57, 178, 250);
+                rightPanel.BackColor = Color.FromArgb(57, 178, 250);
+                leftPanel.BackColor = Color.FromArgb(57, 178, 250);
                 darkRadioButton.Checked = false;
                 orangeRadioButton.Checked = false;
             }
@@ -548,6 +549,7 @@ namespace UserApplication
                 topPanel.BackColor = SystemColors.ActiveBorder;
                 footerPanel.BackColor = SystemColors.ActiveBorder;
                 rightPanel.BackColor = SystemColors.ActiveBorder;
+                leftPanel.BackColor = SystemColors.ActiveBorder;
                 defaultRadioButton.Checked = false;
                 orangeRadioButton.Checked = false;
             }
@@ -564,6 +566,7 @@ namespace UserApplication
                 topPanel.BackColor = Color.DarkOrange;
                 footerPanel.BackColor = Color.DarkOrange;
                 rightPanel.BackColor = Color.DarkOrange;
+                leftPanel.BackColor = Color.DarkOrange;
                 defaultRadioButton.Checked = false;
                 darkRadioButton.Checked = false;
             }
