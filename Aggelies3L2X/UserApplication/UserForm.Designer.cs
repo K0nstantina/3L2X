@@ -92,14 +92,15 @@
             this.avatarPictureBox = new System.Windows.Forms.PictureBox();
             this.myAdsLabel = new System.Windows.Forms.Label();
             this.profileLabel = new System.Windows.Forms.Label();
-            this.categoriesPanel = new System.Windows.Forms.Panel();
-            this.categoriesListBox = new System.Windows.Forms.ListBox();
-            this.gChildComboBox = new System.Windows.Forms.ComboBox();
-            this.childCategoriesComboBox = new System.Windows.Forms.ComboBox();
-            this.mainCategoriesComboBox = new System.Windows.Forms.ComboBox();
-            this.categoriesLabel = new System.Windows.Forms.Label();
+            this.displayAdsPanel = new System.Windows.Forms.Panel();
+            this.elementHost11 = new System.Windows.Forms.Integration.ElementHost();
+            this.displayAd11 = new aggeliesWpfLab.DisplayAd();
+            this.categoryLabel = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.adsPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.newAdButton = new System.Windows.Forms.Button();
+            this.editPictureButton = new System.Windows.Forms.Button();
             this.goBackImage = new System.Windows.Forms.PictureBox();
             this.adsUserCategoryCBox = new System.Windows.Forms.ComboBox();
             this.adsTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -118,6 +119,7 @@
             this.adsListPanel = new System.Windows.Forms.Panel();
             this.userAdsDataGrid = new System.Windows.Forms.DataGridView();
             this.adID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Published = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.adTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Images = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -128,6 +130,38 @@
             this.displayAd1 = new aggeliesWpfLab.DisplayAd();
             this.usersAdsTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contentPanel = new System.Windows.Forms.Panel();
+            this.newAddPanel = new System.Windows.Forms.Panel();
+            this.insertAdCancelButton = new System.Windows.Forms.Button();
+            this.insertAdButton = new System.Windows.Forms.Button();
+            this.insertAdCategoryLabel = new System.Windows.Forms.Label();
+            this.insertAdCategoryTextBox = new System.Windows.Forms.TextBox();
+            this.insertAdTitleLabel = new System.Windows.Forms.Label();
+            this.insertAdTitleTextBox = new System.Windows.Forms.TextBox();
+            this.insertAdPriceLabel = new System.Windows.Forms.Label();
+            this.insertAdPriceTextBox = new System.Windows.Forms.TextBox();
+            this.insertAdDescLabel = new System.Windows.Forms.Label();
+            this.insertAdDescTextBox = new System.Windows.Forms.TextBox();
+            this.signupPanel = new System.Windows.Forms.Panel();
+            this.signupLabel = new System.Windows.Forms.Label();
+            this.signupRPasswordLabel = new System.Windows.Forms.Label();
+            this.signupRPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.signupPhoneLabel = new System.Windows.Forms.Label();
+            this.signupPhoneTextBox = new System.Windows.Forms.TextBox();
+            this.signupAgeLabel = new System.Windows.Forms.Label();
+            this.signupAgeTextBox = new System.Windows.Forms.TextBox();
+            this.signupREmailLabel = new System.Windows.Forms.Label();
+            this.signupREmailTextBox = new System.Windows.Forms.TextBox();
+            this.signupSaveButton = new System.Windows.Forms.Button();
+            this.signupLNameLabel = new System.Windows.Forms.Label();
+            this.signupLNameTextBox = new System.Windows.Forms.TextBox();
+            this.signupFNameLabel = new System.Windows.Forms.Label();
+            this.signupFNameTextBox = new System.Windows.Forms.TextBox();
+            this.signupEmailLabel = new System.Windows.Forms.Label();
+            this.signupEmailTextBox = new System.Windows.Forms.TextBox();
+            this.signupPasswordLabel = new System.Windows.Forms.Label();
+            this.signupPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.signupUNameLabel = new System.Windows.Forms.Label();
+            this.signupUNameTextBox = new System.Windows.Forms.TextBox();
             this.silver_panel = new System.Windows.Forms.Panel();
             this.usexpress_box = new System.Windows.Forms.GroupBox();
             this.btn_usexpresscheckout = new System.Windows.Forms.Button();
@@ -194,27 +228,6 @@
             this.Info_label = new System.Windows.Forms.Label();
             this.btn_gold = new System.Windows.Forms.Button();
             this.btn_silver = new System.Windows.Forms.Button();
-            this.signupPanel = new System.Windows.Forms.Panel();
-            this.signupLabel = new System.Windows.Forms.Label();
-            this.signupRPasswordLabel = new System.Windows.Forms.Label();
-            this.signupRPasswordTextBox = new System.Windows.Forms.TextBox();
-            this.signupPhoneLabel = new System.Windows.Forms.Label();
-            this.signupPhoneTextBox = new System.Windows.Forms.TextBox();
-            this.signupAgeLabel = new System.Windows.Forms.Label();
-            this.signupAgeTextBox = new System.Windows.Forms.TextBox();
-            this.signupREmailLabel = new System.Windows.Forms.Label();
-            this.signupREmailTextBox = new System.Windows.Forms.TextBox();
-            this.signupSaveButton = new System.Windows.Forms.Button();
-            this.signupLNameLabel = new System.Windows.Forms.Label();
-            this.signupLNameTextBox = new System.Windows.Forms.TextBox();
-            this.signupFNameLabel = new System.Windows.Forms.Label();
-            this.signupFNameTextBox = new System.Windows.Forms.TextBox();
-            this.signupEmailLabel = new System.Windows.Forms.Label();
-            this.signupEmailTextBox = new System.Windows.Forms.TextBox();
-            this.signupPasswordLabel = new System.Windows.Forms.Label();
-            this.signupPasswordTextBox = new System.Windows.Forms.TextBox();
-            this.signupUNameLabel = new System.Windows.Forms.Label();
-            this.signupUNameTextBox = new System.Windows.Forms.TextBox();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.usersAdsTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.adsTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -232,7 +245,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
-            this.categoriesPanel.SuspendLayout();
+            this.displayAdsPanel.SuspendLayout();
             this.adsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.goBackImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adsTableBindingSource)).BeginInit();
@@ -241,6 +254,8 @@
             this.selectedAdPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersAdsTableBindingSource)).BeginInit();
             this.contentPanel.SuspendLayout();
+            this.newAddPanel.SuspendLayout();
+            this.signupPanel.SuspendLayout();
             this.silver_panel.SuspendLayout();
             this.usexpress_box.SuspendLayout();
             this.paypal_box.SuspendLayout();
@@ -253,7 +268,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gold_payment_picbox)).BeginInit();
             this.upgradeAccount_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upgradeinfo_picbox)).BeginInit();
-            this.signupPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersAdsTableBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adsTableBindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -847,82 +861,62 @@
             this.profileLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.profileLabel.Click += new System.EventHandler(this.profileLabel_Click);
             // 
-            // categoriesPanel
+            // displayAdsPanel
             // 
-            this.categoriesPanel.Controls.Add(this.categoriesListBox);
-            this.categoriesPanel.Controls.Add(this.gChildComboBox);
-            this.categoriesPanel.Controls.Add(this.childCategoriesComboBox);
-            this.categoriesPanel.Controls.Add(this.mainCategoriesComboBox);
-            this.categoriesPanel.Controls.Add(this.categoriesLabel);
-            this.categoriesPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.categoriesPanel.Location = new System.Drawing.Point(0, 0);
-            this.categoriesPanel.Name = "categoriesPanel";
-            this.categoriesPanel.Size = new System.Drawing.Size(1539, 629);
-            this.categoriesPanel.TabIndex = 3;
+            this.displayAdsPanel.Controls.Add(this.elementHost11);
+            this.displayAdsPanel.Controls.Add(this.categoryLabel);
+            this.displayAdsPanel.Controls.Add(this.listBox1);
+            this.displayAdsPanel.Controls.Add(this.treeView1);
+            this.displayAdsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.displayAdsPanel.Location = new System.Drawing.Point(0, 0);
+            this.displayAdsPanel.Name = "displayAdsPanel";
+            this.displayAdsPanel.Size = new System.Drawing.Size(1539, 629);
+            this.displayAdsPanel.TabIndex = 3;
             // 
-            // categoriesListBox
+            // elementHost11
             // 
-            this.categoriesListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.categoriesListBox.BackColor = System.Drawing.SystemColors.Control;
-            this.categoriesListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.categoriesListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.categoriesListBox.ForeColor = System.Drawing.Color.DarkBlue;
-            this.categoriesListBox.FormattingEnabled = true;
-            this.categoriesListBox.ItemHeight = 20;
-            this.categoriesListBox.Location = new System.Drawing.Point(807, 53);
-            this.categoriesListBox.Name = "categoriesListBox";
-            this.categoriesListBox.Size = new System.Drawing.Size(732, 500);
-            this.categoriesListBox.TabIndex = 5;
-            this.categoriesListBox.SelectedIndexChanged += new System.EventHandler(this.categoriesListBox_SelectedIndexChanged);
+            this.elementHost11.Location = new System.Drawing.Point(704, 33);
+            this.elementHost11.Name = "elementHost11";
+            this.elementHost11.Size = new System.Drawing.Size(517, 408);
+            this.elementHost11.TabIndex = 3;
+            this.elementHost11.Text = "elementHost11";
+            this.elementHost11.Child = this.displayAd11;
             // 
-            // gChildComboBox
+            // categoryLabel
             // 
-            this.gChildComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gChildComboBox.FormattingEnabled = true;
-            this.gChildComboBox.Location = new System.Drawing.Point(36, 133);
-            this.gChildComboBox.Name = "gChildComboBox";
-            this.gChildComboBox.Size = new System.Drawing.Size(255, 28);
-            this.gChildComboBox.TabIndex = 4;
-            this.gChildComboBox.Visible = false;
-            this.gChildComboBox.SelectedIndexChanged += new System.EventHandler(this.gChildComboBox_SelectedIndexChanged);
+            this.categoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.categoryLabel.Location = new System.Drawing.Point(291, 11);
+            this.categoryLabel.Name = "categoryLabel";
+            this.categoryLabel.Size = new System.Drawing.Size(287, 37);
+            this.categoryLabel.TabIndex = 2;
+            this.categoryLabel.Text = "label1";
+            this.categoryLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // childCategoriesComboBox
+            // listBox1
             // 
-            this.childCategoriesComboBox.Enabled = false;
-            this.childCategoriesComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.childCategoriesComboBox.FormattingEnabled = true;
-            this.childCategoriesComboBox.Location = new System.Drawing.Point(36, 98);
-            this.childCategoriesComboBox.Name = "childCategoriesComboBox";
-            this.childCategoriesComboBox.Size = new System.Drawing.Size(255, 28);
-            this.childCategoriesComboBox.TabIndex = 3;
-            this.childCategoriesComboBox.SelectedIndexChanged += new System.EventHandler(this.childCategoriesComboBox_SelectedIndexChanged);
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(291, 49);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(287, 184);
+            this.listBox1.TabIndex = 1;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
-            // mainCategoriesComboBox
+            // treeView1
             // 
-            this.mainCategoriesComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.mainCategoriesComboBox.FormattingEnabled = true;
-            this.mainCategoriesComboBox.Location = new System.Drawing.Point(36, 63);
-            this.mainCategoriesComboBox.Name = "mainCategoriesComboBox";
-            this.mainCategoriesComboBox.Size = new System.Drawing.Size(255, 28);
-            this.mainCategoriesComboBox.TabIndex = 2;
-            this.mainCategoriesComboBox.SelectedIndexChanged += new System.EventHandler(this.mainCategoriesComboBox_SelectedIndexChanged);
-            // 
-            // categoriesLabel
-            // 
-            this.categoriesLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.categoriesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.categoriesLabel.Location = new System.Drawing.Point(807, 0);
-            this.categoriesLabel.Name = "categoriesLabel";
-            this.categoriesLabel.Size = new System.Drawing.Size(257, 50);
-            this.categoriesLabel.TabIndex = 1;
-            this.categoriesLabel.Text = "categories";
-            this.categoriesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.treeView1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.treeView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.treeView1.Location = new System.Drawing.Point(0, 0);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(265, 629);
+            this.treeView1.TabIndex = 0;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // adsPanel
             // 
-            this.adsPanel.Controls.Add(this.button1);
+            this.adsPanel.Controls.Add(this.newAdButton);
+            this.adsPanel.Controls.Add(this.editPictureButton);
             this.adsPanel.Controls.Add(this.goBackImage);
             this.adsPanel.Controls.Add(this.adsUserCategoryCBox);
             this.adsPanel.Controls.Add(this.publishButton);
@@ -946,15 +940,31 @@
             this.adsPanel.Size = new System.Drawing.Size(1539, 629);
             this.adsPanel.TabIndex = 2;
             // 
-            // button1
+            // newAdButton
             // 
-            this.button1.Location = new System.Drawing.Point(1098, 24);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 68;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.editPicturePictureBox_Click);
+            this.newAdButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.newAdButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newAdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.newAdButton.Location = new System.Drawing.Point(646, 334);
+            this.newAdButton.Name = "newAdButton";
+            this.newAdButton.Size = new System.Drawing.Size(149, 41);
+            this.newAdButton.TabIndex = 70;
+            this.newAdButton.Text = "New Ad";
+            this.newAdButton.UseVisualStyleBackColor = true;
+            this.newAdButton.Click += new System.EventHandler(this.newAdButton_Click);
+            // 
+            // editPictureButton
+            // 
+            this.editPictureButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.editPictureButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editPictureButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.editPictureButton.Location = new System.Drawing.Point(1058, 53);
+            this.editPictureButton.Name = "editPictureButton";
+            this.editPictureButton.Size = new System.Drawing.Size(126, 43);
+            this.editPictureButton.TabIndex = 69;
+            this.editPictureButton.Text = "Edit";
+            this.editPictureButton.UseVisualStyleBackColor = true;
+            this.editPictureButton.Click += new System.EventHandler(this.editPictureButton_Click);
             // 
             // goBackImage
             // 
@@ -973,7 +983,7 @@
             this.adsUserCategoryCBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.adsUserCategoryCBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.adsTableBindingSource, "adCategory", true));
             this.adsUserCategoryCBox.FormattingEnabled = true;
-            this.adsUserCategoryCBox.Location = new System.Drawing.Point(666, 231);
+            this.adsUserCategoryCBox.Location = new System.Drawing.Point(646, 231);
             this.adsUserCategoryCBox.Name = "adsUserCategoryCBox";
             this.adsUserCategoryCBox.Size = new System.Drawing.Size(364, 21);
             this.adsUserCategoryCBox.TabIndex = 66;
@@ -989,7 +999,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.publishButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.publishButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.publishButton.Location = new System.Drawing.Point(666, 264);
+            this.publishButton.Location = new System.Drawing.Point(646, 264);
             this.publishButton.Name = "publishButton";
             this.publishButton.Size = new System.Drawing.Size(149, 43);
             this.publishButton.TabIndex = 65;
@@ -1002,7 +1012,7 @@
             this.savePriceButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.savePriceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savePriceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.savePriceButton.Location = new System.Drawing.Point(826, 265);
+            this.savePriceButton.Location = new System.Drawing.Point(806, 265);
             this.savePriceButton.Name = "savePriceButton";
             this.savePriceButton.Size = new System.Drawing.Size(126, 43);
             this.savePriceButton.TabIndex = 64;
@@ -1015,7 +1025,7 @@
             this.adsUserCategoryL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.adsUserCategoryL.AutoSize = true;
             this.adsUserCategoryL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.adsUserCategoryL.Location = new System.Drawing.Point(520, 234);
+            this.adsUserCategoryL.Location = new System.Drawing.Point(500, 234);
             this.adsUserCategoryL.Name = "adsUserCategoryL";
             this.adsUserCategoryL.Size = new System.Drawing.Size(81, 20);
             this.adsUserCategoryL.TabIndex = 63;
@@ -1026,7 +1036,7 @@
             this.priceLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.priceLabel.AutoSize = true;
             this.priceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.priceLabel.Location = new System.Drawing.Point(520, 197);
+            this.priceLabel.Location = new System.Drawing.Point(500, 197);
             this.priceLabel.Name = "priceLabel";
             this.priceLabel.Size = new System.Drawing.Size(75, 20);
             this.priceLabel.TabIndex = 63;
@@ -1037,7 +1047,7 @@
             this.publishedLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.publishedLabel.AutoSize = true;
             this.publishedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.publishedLabel.Location = new System.Drawing.Point(520, 160);
+            this.publishedLabel.Location = new System.Drawing.Point(500, 160);
             this.publishedLabel.Name = "publishedLabel";
             this.publishedLabel.Size = new System.Drawing.Size(82, 20);
             this.publishedLabel.TabIndex = 62;
@@ -1048,7 +1058,7 @@
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label7.Location = new System.Drawing.Point(520, 123);
+            this.label7.Location = new System.Drawing.Point(500, 123);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(126, 20);
             this.label7.TabIndex = 61;
@@ -1071,7 +1081,7 @@
             this.creationDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.creationDateLabel.AutoSize = true;
             this.creationDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.creationDateLabel.Location = new System.Drawing.Point(520, 91);
+            this.creationDateLabel.Location = new System.Drawing.Point(500, 91);
             this.creationDateLabel.Name = "creationDateLabel";
             this.creationDateLabel.Size = new System.Drawing.Size(116, 20);
             this.creationDateLabel.TabIndex = 60;
@@ -1082,7 +1092,7 @@
             this.priceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.priceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.adsTableBindingSource, "price", true));
             this.priceTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.priceTextBox.Location = new System.Drawing.Point(666, 196);
+            this.priceTextBox.Location = new System.Drawing.Point(646, 196);
             this.priceTextBox.Name = "priceTextBox";
             this.priceTextBox.Size = new System.Drawing.Size(364, 26);
             this.priceTextBox.TabIndex = 59;
@@ -1093,7 +1103,7 @@
             this.publishedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.adsTableBindingSource, "Published", true));
             this.publishedTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.publishedTextBox.ForeColor = System.Drawing.Color.White;
-            this.publishedTextBox.Location = new System.Drawing.Point(666, 161);
+            this.publishedTextBox.Location = new System.Drawing.Point(646, 161);
             this.publishedTextBox.Name = "publishedTextBox";
             this.publishedTextBox.ReadOnly = true;
             this.publishedTextBox.Size = new System.Drawing.Size(364, 26);
@@ -1105,7 +1115,7 @@
             this.expirationDateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.adsTableBindingSource, "expirationDate", true));
             this.expirationDateTextBox.Enabled = false;
             this.expirationDateTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.expirationDateTextBox.Location = new System.Drawing.Point(666, 124);
+            this.expirationDateTextBox.Location = new System.Drawing.Point(646, 124);
             this.expirationDateTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.expirationDateTextBox.Name = "expirationDateTextBox";
             this.expirationDateTextBox.Size = new System.Drawing.Size(364, 26);
@@ -1117,7 +1127,7 @@
             this.creationDateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.adsTableBindingSource, "creationDate", true));
             this.creationDateTextBox.Enabled = false;
             this.creationDateTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.creationDateTextBox.Location = new System.Drawing.Point(666, 91);
+            this.creationDateTextBox.Location = new System.Drawing.Point(646, 91);
             this.creationDateTextBox.Name = "creationDateTextBox";
             this.creationDateTextBox.Size = new System.Drawing.Size(364, 26);
             this.creationDateTextBox.TabIndex = 56;
@@ -1142,6 +1152,7 @@
             this.userAdsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.userAdsDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.adID,
+            this.Published,
             this.adTitle,
             this.adCategory,
             this.Images,
@@ -1158,6 +1169,13 @@
             this.adID.DataPropertyName = "adID";
             this.adID.HeaderText = "adID";
             this.adID.Name = "adID";
+            // 
+            // Published
+            // 
+            this.Published.DataPropertyName = "Published";
+            this.Published.HeaderText = "Published";
+            this.Published.Name = "Published";
+            this.Published.Visible = false;
             // 
             // adTitle
             // 
@@ -1222,20 +1240,355 @@
             // 
             // contentPanel
             // 
+            this.contentPanel.Controls.Add(this.newAddPanel);
+            this.contentPanel.Controls.Add(this.profilePanel);
+            this.contentPanel.Controls.Add(this.settingsPanel);
+            this.contentPanel.Controls.Add(this.signupPanel);
+            this.contentPanel.Controls.Add(this.displayAdsPanel);
             this.contentPanel.Controls.Add(this.adsPanel);
             this.contentPanel.Controls.Add(this.silver_panel);
             this.contentPanel.Controls.Add(this.gold_panel);
             this.contentPanel.Controls.Add(this.upgradeAccount_panel);
             this.contentPanel.Controls.Add(this.homePanel);
-            this.contentPanel.Controls.Add(this.profilePanel);
-            this.contentPanel.Controls.Add(this.settingsPanel);
-            this.contentPanel.Controls.Add(this.signupPanel);
-            this.contentPanel.Controls.Add(this.categoriesPanel);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(100, 108);
             this.contentPanel.Name = "contentPanel";
             this.contentPanel.Size = new System.Drawing.Size(1539, 629);
             this.contentPanel.TabIndex = 5;
+            // 
+            // newAddPanel
+            // 
+            this.newAddPanel.Controls.Add(this.insertAdCancelButton);
+            this.newAddPanel.Controls.Add(this.insertAdButton);
+            this.newAddPanel.Controls.Add(this.insertAdCategoryLabel);
+            this.newAddPanel.Controls.Add(this.insertAdCategoryTextBox);
+            this.newAddPanel.Controls.Add(this.insertAdTitleLabel);
+            this.newAddPanel.Controls.Add(this.insertAdTitleTextBox);
+            this.newAddPanel.Controls.Add(this.insertAdPriceLabel);
+            this.newAddPanel.Controls.Add(this.insertAdPriceTextBox);
+            this.newAddPanel.Controls.Add(this.insertAdDescLabel);
+            this.newAddPanel.Controls.Add(this.insertAdDescTextBox);
+            this.newAddPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newAddPanel.Location = new System.Drawing.Point(0, 0);
+            this.newAddPanel.Name = "newAddPanel";
+            this.newAddPanel.Size = new System.Drawing.Size(1539, 629);
+            this.newAddPanel.TabIndex = 71;
+            // 
+            // insertAdCancelButton
+            // 
+            this.insertAdCancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.insertAdCancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.insertAdCancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.insertAdCancelButton.Location = new System.Drawing.Point(633, 360);
+            this.insertAdCancelButton.Name = "insertAdCancelButton";
+            this.insertAdCancelButton.Size = new System.Drawing.Size(126, 43);
+            this.insertAdCancelButton.TabIndex = 81;
+            this.insertAdCancelButton.Text = "Cancel";
+            this.insertAdCancelButton.UseVisualStyleBackColor = true;
+            this.insertAdCancelButton.Click += new System.EventHandler(this.insertAdCancelButton_Click);
+            // 
+            // insertAdButton
+            // 
+            this.insertAdButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.insertAdButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.insertAdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.insertAdButton.Location = new System.Drawing.Point(633, 307);
+            this.insertAdButton.Name = "insertAdButton";
+            this.insertAdButton.Size = new System.Drawing.Size(126, 43);
+            this.insertAdButton.TabIndex = 80;
+            this.insertAdButton.Text = "Save my Ad";
+            this.insertAdButton.UseVisualStyleBackColor = true;
+            this.insertAdButton.Click += new System.EventHandler(this.insertAdButton_Click);
+            // 
+            // insertAdCategoryLabel
+            // 
+            this.insertAdCategoryLabel.AutoSize = true;
+            this.insertAdCategoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.insertAdCategoryLabel.Location = new System.Drawing.Point(277, 73);
+            this.insertAdCategoryLabel.Name = "insertAdCategoryLabel";
+            this.insertAdCategoryLabel.Size = new System.Drawing.Size(73, 20);
+            this.insertAdCategoryLabel.TabIndex = 79;
+            this.insertAdCategoryLabel.Text = "Category";
+            // 
+            // insertAdCategoryTextBox
+            // 
+            this.insertAdCategoryTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.insertAdCategoryTextBox.Location = new System.Drawing.Point(471, 72);
+            this.insertAdCategoryTextBox.Name = "insertAdCategoryTextBox";
+            this.insertAdCategoryTextBox.Size = new System.Drawing.Size(291, 26);
+            this.insertAdCategoryTextBox.TabIndex = 78;
+            // 
+            // insertAdTitleLabel
+            // 
+            this.insertAdTitleLabel.AutoSize = true;
+            this.insertAdTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.insertAdTitleLabel.Location = new System.Drawing.Point(277, 36);
+            this.insertAdTitleLabel.Name = "insertAdTitleLabel";
+            this.insertAdTitleLabel.Size = new System.Drawing.Size(38, 20);
+            this.insertAdTitleLabel.TabIndex = 77;
+            this.insertAdTitleLabel.Text = "Title";
+            // 
+            // insertAdTitleTextBox
+            // 
+            this.insertAdTitleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "fName", true));
+            this.insertAdTitleTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.insertAdTitleTextBox.Location = new System.Drawing.Point(471, 35);
+            this.insertAdTitleTextBox.Name = "insertAdTitleTextBox";
+            this.insertAdTitleTextBox.Size = new System.Drawing.Size(291, 26);
+            this.insertAdTitleTextBox.TabIndex = 76;
+            // 
+            // insertAdPriceLabel
+            // 
+            this.insertAdPriceLabel.AutoSize = true;
+            this.insertAdPriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.insertAdPriceLabel.Location = new System.Drawing.Point(277, 269);
+            this.insertAdPriceLabel.Name = "insertAdPriceLabel";
+            this.insertAdPriceLabel.Size = new System.Drawing.Size(67, 20);
+            this.insertAdPriceLabel.TabIndex = 73;
+            this.insertAdPriceLabel.Text = "Price (€)";
+            // 
+            // insertAdPriceTextBox
+            // 
+            this.insertAdPriceTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.insertAdPriceTextBox.Location = new System.Drawing.Point(471, 268);
+            this.insertAdPriceTextBox.Name = "insertAdPriceTextBox";
+            this.insertAdPriceTextBox.Size = new System.Drawing.Size(291, 26);
+            this.insertAdPriceTextBox.TabIndex = 72;
+            // 
+            // insertAdDescLabel
+            // 
+            this.insertAdDescLabel.AutoSize = true;
+            this.insertAdDescLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.insertAdDescLabel.Location = new System.Drawing.Point(277, 110);
+            this.insertAdDescLabel.Name = "insertAdDescLabel";
+            this.insertAdDescLabel.Size = new System.Drawing.Size(89, 20);
+            this.insertAdDescLabel.TabIndex = 71;
+            this.insertAdDescLabel.Text = "Description";
+            // 
+            // insertAdDescTextBox
+            // 
+            this.insertAdDescTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.insertAdDescTextBox.Location = new System.Drawing.Point(471, 109);
+            this.insertAdDescTextBox.Multiline = true;
+            this.insertAdDescTextBox.Name = "insertAdDescTextBox";
+            this.insertAdDescTextBox.Size = new System.Drawing.Size(291, 148);
+            this.insertAdDescTextBox.TabIndex = 70;
+            // 
+            // signupPanel
+            // 
+            this.signupPanel.Controls.Add(this.signupLabel);
+            this.signupPanel.Controls.Add(this.signupRPasswordLabel);
+            this.signupPanel.Controls.Add(this.signupRPasswordTextBox);
+            this.signupPanel.Controls.Add(this.signupPhoneLabel);
+            this.signupPanel.Controls.Add(this.signupPhoneTextBox);
+            this.signupPanel.Controls.Add(this.signupAgeLabel);
+            this.signupPanel.Controls.Add(this.signupAgeTextBox);
+            this.signupPanel.Controls.Add(this.signupREmailLabel);
+            this.signupPanel.Controls.Add(this.signupREmailTextBox);
+            this.signupPanel.Controls.Add(this.signupSaveButton);
+            this.signupPanel.Controls.Add(this.signupLNameLabel);
+            this.signupPanel.Controls.Add(this.signupLNameTextBox);
+            this.signupPanel.Controls.Add(this.signupFNameLabel);
+            this.signupPanel.Controls.Add(this.signupFNameTextBox);
+            this.signupPanel.Controls.Add(this.signupEmailLabel);
+            this.signupPanel.Controls.Add(this.signupEmailTextBox);
+            this.signupPanel.Controls.Add(this.signupPasswordLabel);
+            this.signupPanel.Controls.Add(this.signupPasswordTextBox);
+            this.signupPanel.Controls.Add(this.signupUNameLabel);
+            this.signupPanel.Controls.Add(this.signupUNameTextBox);
+            this.signupPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.signupPanel.Location = new System.Drawing.Point(0, 0);
+            this.signupPanel.Name = "signupPanel";
+            this.signupPanel.Size = new System.Drawing.Size(1539, 629);
+            this.signupPanel.TabIndex = 7;
+            // 
+            // signupLabel
+            // 
+            this.signupLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.signupLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.signupLabel.Location = new System.Drawing.Point(0, 0);
+            this.signupLabel.Name = "signupLabel";
+            this.signupLabel.Size = new System.Drawing.Size(177, 72);
+            this.signupLabel.TabIndex = 89;
+            this.signupLabel.Text = "Εγγραφή";
+            this.signupLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // signupRPasswordLabel
+            // 
+            this.signupRPasswordLabel.AutoSize = true;
+            this.signupRPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.signupRPasswordLabel.Location = new System.Drawing.Point(297, 190);
+            this.signupRPasswordLabel.Name = "signupRPasswordLabel";
+            this.signupRPasswordLabel.Size = new System.Drawing.Size(162, 20);
+            this.signupRPasswordLabel.TabIndex = 88;
+            this.signupRPasswordLabel.Text = "Επαλήθευση Κωδικού";
+            // 
+            // signupRPasswordTextBox
+            // 
+            this.signupRPasswordTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.signupRPasswordTextBox.Location = new System.Drawing.Point(524, 189);
+            this.signupRPasswordTextBox.Name = "signupRPasswordTextBox";
+            this.signupRPasswordTextBox.PasswordChar = '*';
+            this.signupRPasswordTextBox.Size = new System.Drawing.Size(291, 26);
+            this.signupRPasswordTextBox.TabIndex = 80;
+            // 
+            // signupPhoneLabel
+            // 
+            this.signupPhoneLabel.AutoSize = true;
+            this.signupPhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.signupPhoneLabel.Location = new System.Drawing.Point(297, 338);
+            this.signupPhoneLabel.Name = "signupPhoneLabel";
+            this.signupPhoneLabel.Size = new System.Drawing.Size(78, 20);
+            this.signupPhoneLabel.TabIndex = 86;
+            this.signupPhoneLabel.Text = "Τηλέφωνο";
+            // 
+            // signupPhoneTextBox
+            // 
+            this.signupPhoneTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.signupPhoneTextBox.Location = new System.Drawing.Point(524, 337);
+            this.signupPhoneTextBox.Name = "signupPhoneTextBox";
+            this.signupPhoneTextBox.Size = new System.Drawing.Size(291, 26);
+            this.signupPhoneTextBox.TabIndex = 84;
+            // 
+            // signupAgeLabel
+            // 
+            this.signupAgeLabel.AutoSize = true;
+            this.signupAgeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.signupAgeLabel.Location = new System.Drawing.Point(297, 301);
+            this.signupAgeLabel.Name = "signupAgeLabel";
+            this.signupAgeLabel.Size = new System.Drawing.Size(60, 20);
+            this.signupAgeLabel.TabIndex = 84;
+            this.signupAgeLabel.Text = "Ηληκία";
+            // 
+            // signupAgeTextBox
+            // 
+            this.signupAgeTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.signupAgeTextBox.Location = new System.Drawing.Point(524, 300);
+            this.signupAgeTextBox.Name = "signupAgeTextBox";
+            this.signupAgeTextBox.Size = new System.Drawing.Size(291, 26);
+            this.signupAgeTextBox.TabIndex = 83;
+            // 
+            // signupREmailLabel
+            // 
+            this.signupREmailLabel.AutoSize = true;
+            this.signupREmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.signupREmailLabel.Location = new System.Drawing.Point(297, 264);
+            this.signupREmailLabel.Name = "signupREmailLabel";
+            this.signupREmailLabel.Size = new System.Drawing.Size(132, 20);
+            this.signupREmailLabel.TabIndex = 82;
+            this.signupREmailLabel.Text = "Email Ανάκτησης";
+            // 
+            // signupREmailTextBox
+            // 
+            this.signupREmailTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.signupREmailTextBox.Location = new System.Drawing.Point(524, 263);
+            this.signupREmailTextBox.Name = "signupREmailTextBox";
+            this.signupREmailTextBox.Size = new System.Drawing.Size(291, 26);
+            this.signupREmailTextBox.TabIndex = 82;
+            // 
+            // signupSaveButton
+            // 
+            this.signupSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signupSaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.signupSaveButton.Location = new System.Drawing.Point(666, 381);
+            this.signupSaveButton.Name = "signupSaveButton";
+            this.signupSaveButton.Size = new System.Drawing.Size(149, 45);
+            this.signupSaveButton.TabIndex = 85;
+            this.signupSaveButton.Text = "Αποθήκευση";
+            this.signupSaveButton.UseVisualStyleBackColor = true;
+            this.signupSaveButton.Click += new System.EventHandler(this.signupSaveButton_Click);
+            // 
+            // signupLNameLabel
+            // 
+            this.signupLNameLabel.AutoSize = true;
+            this.signupLNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.signupLNameLabel.Location = new System.Drawing.Point(297, 79);
+            this.signupLNameLabel.Name = "signupLNameLabel";
+            this.signupLNameLabel.Size = new System.Drawing.Size(72, 20);
+            this.signupLNameLabel.TabIndex = 79;
+            this.signupLNameLabel.Text = "Επώνυμο";
+            // 
+            // signupLNameTextBox
+            // 
+            this.signupLNameTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.signupLNameTextBox.Location = new System.Drawing.Point(524, 78);
+            this.signupLNameTextBox.Name = "signupLNameTextBox";
+            this.signupLNameTextBox.Size = new System.Drawing.Size(291, 26);
+            this.signupLNameTextBox.TabIndex = 77;
+            // 
+            // signupFNameLabel
+            // 
+            this.signupFNameLabel.AutoSize = true;
+            this.signupFNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.signupFNameLabel.Location = new System.Drawing.Point(297, 42);
+            this.signupFNameLabel.Name = "signupFNameLabel";
+            this.signupFNameLabel.Size = new System.Drawing.Size(56, 20);
+            this.signupFNameLabel.TabIndex = 77;
+            this.signupFNameLabel.Text = "Όνομα";
+            // 
+            // signupFNameTextBox
+            // 
+            this.signupFNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "fName", true));
+            this.signupFNameTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.signupFNameTextBox.Location = new System.Drawing.Point(524, 41);
+            this.signupFNameTextBox.Name = "signupFNameTextBox";
+            this.signupFNameTextBox.Size = new System.Drawing.Size(291, 26);
+            this.signupFNameTextBox.TabIndex = 76;
+            // 
+            // signupEmailLabel
+            // 
+            this.signupEmailLabel.AutoSize = true;
+            this.signupEmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.signupEmailLabel.Location = new System.Drawing.Point(297, 227);
+            this.signupEmailLabel.Name = "signupEmailLabel";
+            this.signupEmailLabel.Size = new System.Drawing.Size(48, 20);
+            this.signupEmailLabel.TabIndex = 75;
+            this.signupEmailLabel.Text = "Email";
+            // 
+            // signupEmailTextBox
+            // 
+            this.signupEmailTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.signupEmailTextBox.Location = new System.Drawing.Point(524, 226);
+            this.signupEmailTextBox.Name = "signupEmailTextBox";
+            this.signupEmailTextBox.Size = new System.Drawing.Size(291, 26);
+            this.signupEmailTextBox.TabIndex = 81;
+            // 
+            // signupPasswordLabel
+            // 
+            this.signupPasswordLabel.AutoSize = true;
+            this.signupPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.signupPasswordLabel.Location = new System.Drawing.Point(297, 153);
+            this.signupPasswordLabel.Name = "signupPasswordLabel";
+            this.signupPasswordLabel.Size = new System.Drawing.Size(67, 20);
+            this.signupPasswordLabel.TabIndex = 73;
+            this.signupPasswordLabel.Text = "Κωδικός";
+            // 
+            // signupPasswordTextBox
+            // 
+            this.signupPasswordTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.signupPasswordTextBox.Location = new System.Drawing.Point(524, 152);
+            this.signupPasswordTextBox.Name = "signupPasswordTextBox";
+            this.signupPasswordTextBox.PasswordChar = '*';
+            this.signupPasswordTextBox.Size = new System.Drawing.Size(291, 26);
+            this.signupPasswordTextBox.TabIndex = 79;
+            // 
+            // signupUNameLabel
+            // 
+            this.signupUNameLabel.AutoSize = true;
+            this.signupUNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.signupUNameLabel.Location = new System.Drawing.Point(297, 116);
+            this.signupUNameLabel.Name = "signupUNameLabel";
+            this.signupUNameLabel.Size = new System.Drawing.Size(83, 20);
+            this.signupUNameLabel.TabIndex = 71;
+            this.signupUNameLabel.Text = "Username";
+            // 
+            // signupUNameTextBox
+            // 
+            this.signupUNameTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.signupUNameTextBox.Location = new System.Drawing.Point(524, 115);
+            this.signupUNameTextBox.Name = "signupUNameTextBox";
+            this.signupUNameTextBox.Size = new System.Drawing.Size(291, 26);
+            this.signupUNameTextBox.TabIndex = 78;
             // 
             // silver_panel
             // 
@@ -1977,222 +2330,6 @@
             this.btn_silver.UseVisualStyleBackColor = true;
             this.btn_silver.Click += new System.EventHandler(this.btn_silver_Click);
             // 
-            // signupPanel
-            // 
-            this.signupPanel.Controls.Add(this.signupLabel);
-            this.signupPanel.Controls.Add(this.signupRPasswordLabel);
-            this.signupPanel.Controls.Add(this.signupRPasswordTextBox);
-            this.signupPanel.Controls.Add(this.signupPhoneLabel);
-            this.signupPanel.Controls.Add(this.signupPhoneTextBox);
-            this.signupPanel.Controls.Add(this.signupAgeLabel);
-            this.signupPanel.Controls.Add(this.signupAgeTextBox);
-            this.signupPanel.Controls.Add(this.signupREmailLabel);
-            this.signupPanel.Controls.Add(this.signupREmailTextBox);
-            this.signupPanel.Controls.Add(this.signupSaveButton);
-            this.signupPanel.Controls.Add(this.signupLNameLabel);
-            this.signupPanel.Controls.Add(this.signupLNameTextBox);
-            this.signupPanel.Controls.Add(this.signupFNameLabel);
-            this.signupPanel.Controls.Add(this.signupFNameTextBox);
-            this.signupPanel.Controls.Add(this.signupEmailLabel);
-            this.signupPanel.Controls.Add(this.signupEmailTextBox);
-            this.signupPanel.Controls.Add(this.signupPasswordLabel);
-            this.signupPanel.Controls.Add(this.signupPasswordTextBox);
-            this.signupPanel.Controls.Add(this.signupUNameLabel);
-            this.signupPanel.Controls.Add(this.signupUNameTextBox);
-            this.signupPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.signupPanel.Location = new System.Drawing.Point(0, 0);
-            this.signupPanel.Name = "signupPanel";
-            this.signupPanel.Size = new System.Drawing.Size(1539, 629);
-            this.signupPanel.TabIndex = 7;
-            // 
-            // signupLabel
-            // 
-            this.signupLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.signupLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupLabel.Location = new System.Drawing.Point(0, 0);
-            this.signupLabel.Name = "signupLabel";
-            this.signupLabel.Size = new System.Drawing.Size(177, 72);
-            this.signupLabel.TabIndex = 89;
-            this.signupLabel.Text = "Εγγραφή";
-            this.signupLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // signupRPasswordLabel
-            // 
-            this.signupRPasswordLabel.AutoSize = true;
-            this.signupRPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupRPasswordLabel.Location = new System.Drawing.Point(297, 190);
-            this.signupRPasswordLabel.Name = "signupRPasswordLabel";
-            this.signupRPasswordLabel.Size = new System.Drawing.Size(162, 20);
-            this.signupRPasswordLabel.TabIndex = 88;
-            this.signupRPasswordLabel.Text = "Επαλήθευση Κωδικού";
-            // 
-            // signupRPasswordTextBox
-            // 
-            this.signupRPasswordTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupRPasswordTextBox.Location = new System.Drawing.Point(524, 189);
-            this.signupRPasswordTextBox.Name = "signupRPasswordTextBox";
-            this.signupRPasswordTextBox.PasswordChar = '*';
-            this.signupRPasswordTextBox.Size = new System.Drawing.Size(291, 26);
-            this.signupRPasswordTextBox.TabIndex = 80;
-            // 
-            // signupPhoneLabel
-            // 
-            this.signupPhoneLabel.AutoSize = true;
-            this.signupPhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupPhoneLabel.Location = new System.Drawing.Point(297, 338);
-            this.signupPhoneLabel.Name = "signupPhoneLabel";
-            this.signupPhoneLabel.Size = new System.Drawing.Size(78, 20);
-            this.signupPhoneLabel.TabIndex = 86;
-            this.signupPhoneLabel.Text = "Τηλέφωνο";
-            // 
-            // signupPhoneTextBox
-            // 
-            this.signupPhoneTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupPhoneTextBox.Location = new System.Drawing.Point(524, 337);
-            this.signupPhoneTextBox.Name = "signupPhoneTextBox";
-            this.signupPhoneTextBox.Size = new System.Drawing.Size(291, 26);
-            this.signupPhoneTextBox.TabIndex = 84;
-            // 
-            // signupAgeLabel
-            // 
-            this.signupAgeLabel.AutoSize = true;
-            this.signupAgeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupAgeLabel.Location = new System.Drawing.Point(297, 301);
-            this.signupAgeLabel.Name = "signupAgeLabel";
-            this.signupAgeLabel.Size = new System.Drawing.Size(60, 20);
-            this.signupAgeLabel.TabIndex = 84;
-            this.signupAgeLabel.Text = "Ηληκία";
-            // 
-            // signupAgeTextBox
-            // 
-            this.signupAgeTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupAgeTextBox.Location = new System.Drawing.Point(524, 300);
-            this.signupAgeTextBox.Name = "signupAgeTextBox";
-            this.signupAgeTextBox.Size = new System.Drawing.Size(291, 26);
-            this.signupAgeTextBox.TabIndex = 83;
-            // 
-            // signupREmailLabel
-            // 
-            this.signupREmailLabel.AutoSize = true;
-            this.signupREmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupREmailLabel.Location = new System.Drawing.Point(297, 264);
-            this.signupREmailLabel.Name = "signupREmailLabel";
-            this.signupREmailLabel.Size = new System.Drawing.Size(132, 20);
-            this.signupREmailLabel.TabIndex = 82;
-            this.signupREmailLabel.Text = "Email Ανάκτησης";
-            // 
-            // signupREmailTextBox
-            // 
-            this.signupREmailTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupREmailTextBox.Location = new System.Drawing.Point(524, 263);
-            this.signupREmailTextBox.Name = "signupREmailTextBox";
-            this.signupREmailTextBox.Size = new System.Drawing.Size(291, 26);
-            this.signupREmailTextBox.TabIndex = 82;
-            // 
-            // signupSaveButton
-            // 
-            this.signupSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signupSaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupSaveButton.Location = new System.Drawing.Point(666, 381);
-            this.signupSaveButton.Name = "signupSaveButton";
-            this.signupSaveButton.Size = new System.Drawing.Size(149, 45);
-            this.signupSaveButton.TabIndex = 85;
-            this.signupSaveButton.Text = "Αποθήκευση";
-            this.signupSaveButton.UseVisualStyleBackColor = true;
-            this.signupSaveButton.Click += new System.EventHandler(this.signupSaveButton_Click);
-            // 
-            // signupLNameLabel
-            // 
-            this.signupLNameLabel.AutoSize = true;
-            this.signupLNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupLNameLabel.Location = new System.Drawing.Point(297, 79);
-            this.signupLNameLabel.Name = "signupLNameLabel";
-            this.signupLNameLabel.Size = new System.Drawing.Size(72, 20);
-            this.signupLNameLabel.TabIndex = 79;
-            this.signupLNameLabel.Text = "Επώνυμο";
-            // 
-            // signupLNameTextBox
-            // 
-            this.signupLNameTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupLNameTextBox.Location = new System.Drawing.Point(524, 78);
-            this.signupLNameTextBox.Name = "signupLNameTextBox";
-            this.signupLNameTextBox.Size = new System.Drawing.Size(291, 26);
-            this.signupLNameTextBox.TabIndex = 77;
-            // 
-            // signupFNameLabel
-            // 
-            this.signupFNameLabel.AutoSize = true;
-            this.signupFNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupFNameLabel.Location = new System.Drawing.Point(297, 42);
-            this.signupFNameLabel.Name = "signupFNameLabel";
-            this.signupFNameLabel.Size = new System.Drawing.Size(56, 20);
-            this.signupFNameLabel.TabIndex = 77;
-            this.signupFNameLabel.Text = "Όνομα";
-            // 
-            // signupFNameTextBox
-            // 
-            this.signupFNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "fName", true));
-            this.signupFNameTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupFNameTextBox.Location = new System.Drawing.Point(524, 41);
-            this.signupFNameTextBox.Name = "signupFNameTextBox";
-            this.signupFNameTextBox.Size = new System.Drawing.Size(291, 26);
-            this.signupFNameTextBox.TabIndex = 76;
-            // 
-            // signupEmailLabel
-            // 
-            this.signupEmailLabel.AutoSize = true;
-            this.signupEmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupEmailLabel.Location = new System.Drawing.Point(297, 227);
-            this.signupEmailLabel.Name = "signupEmailLabel";
-            this.signupEmailLabel.Size = new System.Drawing.Size(48, 20);
-            this.signupEmailLabel.TabIndex = 75;
-            this.signupEmailLabel.Text = "Email";
-            // 
-            // signupEmailTextBox
-            // 
-            this.signupEmailTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupEmailTextBox.Location = new System.Drawing.Point(524, 226);
-            this.signupEmailTextBox.Name = "signupEmailTextBox";
-            this.signupEmailTextBox.Size = new System.Drawing.Size(291, 26);
-            this.signupEmailTextBox.TabIndex = 81;
-            // 
-            // signupPasswordLabel
-            // 
-            this.signupPasswordLabel.AutoSize = true;
-            this.signupPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupPasswordLabel.Location = new System.Drawing.Point(297, 153);
-            this.signupPasswordLabel.Name = "signupPasswordLabel";
-            this.signupPasswordLabel.Size = new System.Drawing.Size(67, 20);
-            this.signupPasswordLabel.TabIndex = 73;
-            this.signupPasswordLabel.Text = "Κωδικός";
-            // 
-            // signupPasswordTextBox
-            // 
-            this.signupPasswordTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupPasswordTextBox.Location = new System.Drawing.Point(524, 152);
-            this.signupPasswordTextBox.Name = "signupPasswordTextBox";
-            this.signupPasswordTextBox.PasswordChar = '*';
-            this.signupPasswordTextBox.Size = new System.Drawing.Size(291, 26);
-            this.signupPasswordTextBox.TabIndex = 79;
-            // 
-            // signupUNameLabel
-            // 
-            this.signupUNameLabel.AutoSize = true;
-            this.signupUNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupUNameLabel.Location = new System.Drawing.Point(297, 116);
-            this.signupUNameLabel.Name = "signupUNameLabel";
-            this.signupUNameLabel.Size = new System.Drawing.Size(83, 20);
-            this.signupUNameLabel.TabIndex = 71;
-            this.signupUNameLabel.Text = "Username";
-            // 
-            // signupUNameTextBox
-            // 
-            this.signupUNameTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.signupUNameTextBox.Location = new System.Drawing.Point(524, 115);
-            this.signupUNameTextBox.Name = "signupUNameTextBox";
-            this.signupUNameTextBox.Size = new System.Drawing.Size(291, 26);
-            this.signupUNameTextBox.TabIndex = 78;
-            // 
             // leftPanel
             // 
             this.leftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(178)))), ((int)(((byte)(250)))));
@@ -2257,7 +2394,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
-            this.categoriesPanel.ResumeLayout(false);
+            this.displayAdsPanel.ResumeLayout(false);
             this.adsPanel.ResumeLayout(false);
             this.adsPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.goBackImage)).EndInit();
@@ -2268,6 +2405,10 @@
             this.selectedAdPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.usersAdsTableBindingSource)).EndInit();
             this.contentPanel.ResumeLayout(false);
+            this.newAddPanel.ResumeLayout(false);
+            this.newAddPanel.PerformLayout();
+            this.signupPanel.ResumeLayout(false);
+            this.signupPanel.PerformLayout();
             this.silver_panel.ResumeLayout(false);
             this.usexpress_box.ResumeLayout(false);
             this.usexpress_box.PerformLayout();
@@ -2287,8 +2428,6 @@
             this.upgradeAccount_panel.ResumeLayout(false);
             this.upgradeAccount_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upgradeinfo_picbox)).EndInit();
-            this.signupPanel.ResumeLayout(false);
-            this.signupPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersAdsTableBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adsTableBindingSource1)).EndInit();
             this.ResumeLayout(false);
@@ -2305,8 +2444,7 @@
         private System.Windows.Forms.Panel homePanel;
         private System.Windows.Forms.Panel profilePanel;
         private System.Windows.Forms.Label profileLabel;
-        private System.Windows.Forms.Panel categoriesPanel;
-        private System.Windows.Forms.Label categoriesLabel;
+        private System.Windows.Forms.Panel displayAdsPanel;
         private System.Windows.Forms.Panel adsPanel;
         private System.Windows.Forms.Panel adsListPanel;
         private System.Windows.Forms.Label infoLabel;
@@ -2350,11 +2488,7 @@
         private System.Windows.Forms.TextBox creationDateTextBox;
         private System.Windows.Forms.Button savePriceButton;
         private System.Windows.Forms.Label recentAdsLabel;
-        private System.Windows.Forms.ComboBox mainCategoriesComboBox;
         private AggeliesDBDataSetTableAdapters.AdCategoryTableAdapter adCategoryTableAdapter1;
-        private System.Windows.Forms.ComboBox childCategoriesComboBox;
-        private System.Windows.Forms.ComboBox gChildComboBox;
-        private System.Windows.Forms.ListBox categoriesListBox;
        
         private System.Windows.Forms.Label uPhoneLabel;
         private System.Windows.Forms.TextBox uPhoneTextBox;
@@ -2486,12 +2620,30 @@
         private System.Windows.Forms.Button gold_btn_goback;
         private System.Windows.Forms.Button silver_btn_goback;
         private System.Windows.Forms.Button btn_backtoprofile;
+        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.Label categoryLabel;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button editPictureButton;
+        private System.Windows.Forms.Integration.ElementHost elementHost11;
+        private aggeliesWpfLab.DisplayAd displayAd11;
         private System.Windows.Forms.DataGridViewTextBoxColumn adID;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Published;
         private System.Windows.Forms.DataGridViewTextBoxColumn adTitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn adCategory;
         private System.Windows.Forms.DataGridViewTextBoxColumn Images;
         private System.Windows.Forms.DataGridViewTextBoxColumn adDesc;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel newAddPanel;
+        private System.Windows.Forms.Button insertAdCancelButton;
+        private System.Windows.Forms.Button insertAdButton;
+        private System.Windows.Forms.Label insertAdCategoryLabel;
+        private System.Windows.Forms.TextBox insertAdCategoryTextBox;
+        private System.Windows.Forms.Label insertAdTitleLabel;
+        private System.Windows.Forms.TextBox insertAdTitleTextBox;
+        private System.Windows.Forms.Label insertAdPriceLabel;
+        private System.Windows.Forms.TextBox insertAdPriceTextBox;
+        private System.Windows.Forms.Label insertAdDescLabel;
+        private System.Windows.Forms.TextBox insertAdDescTextBox;
+        private System.Windows.Forms.Button newAdButton;
     }
 }
 

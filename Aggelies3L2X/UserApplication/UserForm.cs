@@ -34,18 +34,17 @@ namespace UserApplication
         public UserForm(int userID)
         {
             InitializeComponent();
-            
+
             userid = userID;
+            // Set the path to images.
             setImagesPath();
             // Add controls to list.
             controlsList();
             // Display recent ads.
             recentAds();
-            // Set categories to default filters.
-            initializeView();
             setWPFControl(userID);
 
-            if (userid!=9999)
+            if (userid != 9999)
             {
                 // Initialize profile fields (profile panel).
                 updateFields();
@@ -59,12 +58,11 @@ namespace UserApplication
         private void HomeButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             panels[0].BringToFront();
-            
+
             recentAds();
         }
         private void CatBut_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            initializeView();
             panels[1].BringToFront();
         }
         private void AdsBut_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -111,120 +109,114 @@ namespace UserApplication
         }
         #endregion
 
-        #region Categories Panel Methods
-
-        private void initializeView()
+        #region Display Ads Panel Methods
+        private void PopulateTreeView(int parentId, TreeNode parentNode)
         {
-            mainCategoriesComboBox.DataSource = this.adCategoryTableAdapter1.GetDTMainCategories();
-            mainCategoriesComboBox.DisplayMember = "catTitle";
-            mainCategoriesComboBox.ValueMember = "catID";
-            mainCategoriesComboBox.SelectedIndex = 0;
-        }
 
-
-        /// <summary>
-        /// Event Handler for selected index in mainCategoriesComboBox.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void mainCategoriesComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            childCategoriesComboBox.Enabled = true;
-            view = mainCategoriesComboBox.SelectedItem as DataRowView;
-            categoriesLabel.Text = view["catTitle"].ToString();
-
-            childCategoriesComboBox.DataSource = this.adCategoryTableAdapter1.GetDTChildCategories(Int32.Parse(view["catID"].ToString()));
-            childCategoriesComboBox.DisplayMember = "catTitle";
-            childCategoriesComboBox.ValueMember = "catID";            
-            childCategoriesComboBox.SelectedIndex = 0;
-        }
-
-        /// <summary>
-        /// Event Handler for selected index in childCategoriesComboBox.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void childCategoriesComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            gChildComboBox.Visible = false;
-            view = childCategoriesComboBox.SelectedItem as DataRowView;
-            int catID = Int32.Parse(view["catID"].ToString());
-            if (catID==23 || catID==25)
+            TreeNode childNode;
+            AggeliesDBDataSet.AdCategoryDataTable dt = new AggeliesDBDataSet.AdCategoryDataTable();
+            BindingSource bs = new BindingSource();
+            bs.DataSource = adCategoryTableAdapter1.Fill(dt);
+            foreach (DataRow dr in dt.Select("[catParent]=" + parentId))
             {
-                gChildComboBox.Visible = true;
-                gChildComboBox.DataSource = this.adCategoryTableAdapter1.GetDTChildCategories(catID);
-                gChildComboBox.DisplayMember = "catTitle";
-                gChildComboBox.ValueMember = "catID";
-                gChildComboBox.SelectedIndex = 0;
+                TreeNode t = new TreeNode();
+                t.Text = dr["catTitle"].ToString();
+                t.Name = dr["catID"].ToString();
+                t.Tag = dt.Rows.IndexOf(dr);
+                if (parentNode == null)
+                {
+                    treeView1.Nodes.Add(t);
+                    childNode = t;
+                }
+                else
+                {
+                    parentNode.Nodes.Add(t);
+                    childNode = t;
+                }
+                PopulateTreeView(Convert.ToInt32(dr["catID"].ToString()), childNode);
+            }
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            ShowNodeData(e.Node);
+            categoryLabel.Text = e.Node.Text;
+        }
+        private void ShowNodeData(TreeNode nod)
+        {
+            int catID = int.Parse(nod.Name.ToString());
+            string selectQuery = "SELECT adID, adTitle, Published FROM AdsTable WHERE Published=true AND adCategory=" + catID.ToString();
+            OleDbConnection connection = new OleDbConnection(connectionString);
+            OleDbCommand command = new OleDbCommand(selectQuery, connection);
+            OleDbDataReader reader;
+
+            resetValues();
+
+            connection.Open();
+            // Execute reader.
+            reader = command.ExecuteReader();
+            // If user exists.
+            while (reader.Read())
+            {
+                listBox1.Items.Add(reader["adTitle"].ToString());
+            }
+            if (listBox1.Items.Count > 0)
+            {
+                listBox1.SelectedIndex = 0;
             }
             else
             {
-                updateCategoriesListBox(childCategoriesComboBox);
+                listBox1.Items.Add("Select a sub category");
             }
-        }
 
-        /// <summary>
-        /// Event handler for selected index in residenceComboBox.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void gChildComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            updateCategoriesListBox(gChildComboBox);
+            reader.Close();
+            connection.Close();
         }
-
-        /// <summary>
-        /// Event Handler for selected index in categoriesListBox.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void categoriesListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void resetValues()
         {
-            if (categoriesListBox.DataSource!=null)
+            listBox1.Items.Clear();
+            displayAd11.adTitle.Text = "";
+            displayAd11.adDesc.Text = "";
+            displayAd11.adImage.Source = null;
+
+        }
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectQuery = "SELECT adID, adTitle, adDesc, Images, Published FROM AdsTable WHERE Published=true AND adTitle='" + listBox1.SelectedItem.ToString() + "'";
+            OleDbConnection connection = new OleDbConnection(connectionString);
+            OleDbCommand command = new OleDbCommand(selectQuery, connection);
+            OleDbDataReader reader;
+
+            connection.Open();
+            // Execute reader.
+            reader = command.ExecuteReader();
+            // If user exists.
+            if (reader.HasRows)
             {
-                view = categoriesListBox.SelectedItem as DataRowView;
-                //displayAd.titleTextBox.Text = view["adTitle"].ToString();
-                //displayAd.descTextBox.Text = view["adDesc"].ToString();
-                //displayAd.mediaPictureBox.ImageLocation = imagesLocation + view["media"].ToString();
+                reader.Read();
+                displayAd11.adTitle.Text = reader["adTitle"].ToString();
+                displayAd11.adDesc.Text = reader["adDesc"].ToString();
+                if (reader["Images"].ToString() != "")
+                {
+                    displayAd11.adImage.Source = new BitmapImage(new Uri(imagesLocation + reader["Images"].ToString()));
+                }
+
+                reader.Close();
             }
-
-        }
-
-        /// <summary>
-        /// Updates the displayed ad.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void updateCategoriesListBox(ComboBox cb)
-        {
-            //displayAd.Visible = true;
-            view = cb.SelectedItem as DataRowView;
-            int category = Int32.Parse(view["catID"].ToString());
-            // Filter ads by category ID.
-            bs.DataSource = adsTableTableAdapter.GetDTFilterAds(category);
-            categoriesListBox.DataSource = bs;
-            categoriesListBox.DisplayMember = "adTitle";
-            categoriesListBox.ValueMember = "adID";
-
-            view = categoriesListBox.SelectedItem as DataRowView;
-            //displayAd.titleTextBox.Text = view["adTitle"].ToString();
-            //displayAd.descTextBox.Text = view["adDesc"].ToString();
-            //displayAd.mediaPictureBox.ImageLocation = imagesLocation + view["media"].ToString();
+            connection.Close();
         }
 
         #endregion
 
-        #region ADS Panel Methods
+        #region User Ads Panel Methods
 
         /// <summary>
         /// Changes the image path in database per adID.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void editPicturePictureBox_Click(object sender, EventArgs e)
+        private void editPictureButton_Click(object sender, EventArgs e)
         {
-
-            
             try
             {
                 // Open file dialog and set directory and file filters.
@@ -260,6 +252,15 @@ namespace UserApplication
                 MessageBox.Show("An Error Occured" + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void userAdsDataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow selectedRow = userAdsDataGrid.Rows[index];
+            displayAd1.GetadTitle.Text = selectedRow.Cells["adTitle"].Value.ToString();
+            displayAd1.GetadDesc.Text = selectedRow.Cells["adDesc"].Value.ToString();
+
+            displayAd1.GetadImage.Source = new BitmapImage(new Uri(imagesLocation + selectedRow.Cells["Images"].Value.ToString()));
+        }
 
         /// <summary>
         /// Update the price to database
@@ -268,21 +269,20 @@ namespace UserApplication
         /// <param name="e">Click</param>
         private void savePriceButton_Click(object sender, EventArgs e)
         {
-            
-            //int price;
-            //bool result = Int32.TryParse(priceTextBox.Text, out price);
-            //if (result)
-            //{
-            //    // Get current adID.
-            //    view = adsListBox.SelectedItem as DataRowView;
-            //    int adID = Int32.Parse(view["adID"].ToString());
-            //    adsTableTableAdapter.UpdatePriceQuery(price, adID);
-            //    updateFields();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("nope");
-            //}
+
+            int price;
+            bool result = Int32.TryParse(priceTextBox.Text, out price);
+            if (result)
+            {
+                // Get current adID.
+                int adID = Int32.Parse(userAdsDataGrid.CurrentRow.Cells["adID"].Value.ToString());
+                adsTableTableAdapter.UpdatePriceQuery(price, adID);
+                updateFields();
+            }
+            else
+            {
+                MessageBox.Show("nope");
+            }
         }
         /// <summary>
         /// Event Handler fot publishButton Click.
@@ -291,31 +291,29 @@ namespace UserApplication
         /// <param name="e"></param>
         private void publishButton_Click(object sender, EventArgs e)
         {
-           
-            //view = adsListBox.SelectedItem as DataRowView;
-            //int adid = Int32.Parse(view["adID"].ToString());
-            //string publishQuery;
-            //// Setup Query.
-            //if (view["Published"].ToString() == "True")
-            //{
-            //    publishQuery = "UPDATE AdsTable SET Published=No WHERE adID=" + adid + "";
-            //}
-            //else
-            //{
-            //    publishQuery = "UPDATE AdsTable SET Published=Yes WHERE adID=" + adid + "";
-            //}
-            //// Open connection.
-            //OleDbConnection connection = new OleDbConnection(connectionString);
-            //OleDbCommand command = new OleDbCommand(publishQuery, connection);
+            int adid = Int32.Parse(userAdsDataGrid.CurrentRow.Cells["adID"].Value.ToString());
+            string publishQuery;
+            // Setup Query.
+            if (userAdsDataGrid.CurrentRow.Cells["Published"].Value.ToString() == "True")
+            {
+                publishQuery = "UPDATE AdsTable SET Published=No WHERE adID=" + adid + "";
+            }
+            else
+            {
+                publishQuery = "UPDATE AdsTable SET Published=Yes WHERE adID=" + adid + "";
+            }
+            // Open connection.
+            OleDbConnection connection = new OleDbConnection(connectionString);
+            OleDbCommand command = new OleDbCommand(publishQuery, connection);
 
-            //connection.Open();
-            //command.ExecuteNonQuery();
-            //connection.Close();
-            //updateFields();
-
-
-
-
+            connection.Open();
+            command.ExecuteNonQuery();
+            connection.Close();
+            updateFields();
+        }
+        private void insertAdCancelButton_Click(object sender, EventArgs e)
+        {
+            adsPanel.BringToFront();
         }
         #endregion
 
@@ -396,7 +394,7 @@ namespace UserApplication
         /// <param name="e">Click</param>
         private void saveButton_Click(object sender, EventArgs e)
         {
-            string uname, fname, lname, umail, upass,  urmail, uage, uphone;
+            string uname, fname, lname, umail, upass, urmail, uage, uphone;
             uname = uNameTextBox.Text;
             fname = fNameTextBox.Text;
             lname = lNameTextBox.Text;
@@ -406,7 +404,7 @@ namespace UserApplication
             uage = uAgeTextBox.Text;
             uphone = uPhoneTextBox.Text;
 
-            if (uname != "" && fname != "" && lname != "" && umail != "" && upass != "" && urmail != "" && uage!= "" && uphone != "")
+            if (uname != "" && fname != "" && lname != "" && umail != "" && upass != "" && urmail != "" && uage != "" && uphone != "")
             {
                 try
                 {
@@ -581,9 +579,27 @@ namespace UserApplication
             uAge = Int32.Parse(signupAgeTextBox.Text);
             uPhone = Int32.Parse(signupPhoneTextBox.Text);
 
-            this.usersTableAdapter1.UserSignupQuery(fName,lName,uName,uPassword,uEmail,uCat,uAge,uRecoverEmail,uPhone);
+            this.usersTableAdapter1.UserSignupQuery(fName, lName, uName, uPassword, uEmail, uCat, uAge, uRecoverEmail, uPhone);
             MessageBox.Show("user created! try login!");
             LogoutBut_Click(sender, new System.Windows.RoutedEventArgs());
+        }
+        #endregion
+
+        #region New Ad Panel Methods
+        private void newAdButton_Click(object sender, EventArgs e)
+        {
+            newAddPanel.BringToFront();
+        }
+        private void insertAdButton_Click(object sender, EventArgs e)
+        {
+            string title, desc;
+            int price;
+            title = insertAdTitleTextBox.Text;
+            desc = insertAdDescTextBox.Text;
+            price = Int32.Parse(insertAdPriceTextBox.Text);
+            DateTime timeStamp = DateTime.Now;
+
+            this.adsTableTableAdapter.InsertNewAddQuery(title, 26, userid, timeStamp, timeStamp, desc, price, false,0,1,"");
         }
         #endregion
 
@@ -595,13 +611,8 @@ namespace UserApplication
         /// <param name="e"></param>
         private void MainForm_Load(object sender, EventArgs e)
         {
-            setConnectionString();
-            // Initialize the lists.
-            //adsListBox_SelectedIndexChanged(adsListBox, e);
-            categoriesListBox_SelectedIndexChanged(categoriesListBox,e);
-           
             this.adsTableTableAdapter.AdsPerUser(this.aggeliesDBDataSet.AdsTable, userid);
-            
+            PopulateTreeView(0, null);
         }
 
         /// <summary>
@@ -615,20 +626,18 @@ namespace UserApplication
         }
 
         /// <summary>
-        /// Populates the panel and control lists.
+        /// Populates the panels lists.
         /// </summary>
         private void controlsList()
         {
-            panels.Add(homePanel); 
-            panels.Add(categoriesPanel); 
+            panels.Add(homePanel);
+            panels.Add(displayAdsPanel);
             panels.Add(adsPanel);
             panels.Add(profilePanel);
             panels.Add(settingsPanel);
             panels.Add(signupPanel);
-            
+
             panels[0].BringToFront();
-
-
         }
 
         /// <summary>
@@ -637,10 +646,8 @@ namespace UserApplication
         /// </summary>
         private void updateFields()
         {
-            //int sIndex = adsListBox.SelectedIndex;
             // Find current users Ads
             this.adsTableTableAdapter.AdsPerUser(this.aggeliesDBDataSet.AdsTable, userid);
-            //adsListBox.SelectedIndex = sIndex;
             // Set the avatarPictureBox image location.
             try
             {
@@ -679,75 +686,13 @@ namespace UserApplication
         private void setImagesPath()
         {
             // Set images and userImages location.
-            string str = AppDomain.CurrentDomain.BaseDirectory;
-            str = str.Remove(str.Length - 16);
-            str += @"UserApplication\Resources\images\";
-            imagesLocation = str;
-            str = AppDomain.CurrentDomain.BaseDirectory;
-            str = str.Remove(str.Length - 16);
-            str += @"UserApplication\Resources\userImages\";
-            userImagesLocation = str;
+            var directoryName = Application.StartupPath;
+            var path = Directory.GetParent(directoryName).FullName;
+            var z = Directory.GetParent(path).FullName;
+            var y = Directory.GetParent(z).FullName;
+            imagesLocation = y.ToString() + @"\UserApplication\Resources\images\";
+            userImagesLocation = y.ToString() + @"\UserApplication\Resources\userImages\"; 
         }
-
-
-        private void myAdsLabel_Click(object sender, EventArgs e)
-        {
-            signupPrompt(2);
-        }
-
-        private void profileLabel_Click(object sender, EventArgs e)
-        {
-            signupPrompt(3);
-        }
-
-        private void goBackImage_Click(object sender, EventArgs e)
-        {
-            signupPrompt(3);
-        }
-    
-
-        private void btn_silver_Click(object sender, EventArgs e)
-        {
-            this.silver_panel.Visible = true;
-            this.silver_panel.BringToFront();
-        }
-
-        private void btn_gold_Click(object sender, EventArgs e)
-        {
-            this.gold_panel.Visible = true;
-            this.gold_panel.BringToFront();
-        }
-
-        private void gold_btn_goback_Click(object sender, EventArgs e)
-        {
-            this.upgradeAccount_panel.Visible = true;
-            this.upgradeAccount_panel.BringToFront();
-        }
-
-        private void silver_btn_goback_Click(object sender, EventArgs e)
-        {
-            this.upgradeAccount_panel.Visible = true;
-            this.upgradeAccount_panel.BringToFront();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.profilePanel.Visible = true;
-            this.profilePanel.BringToFront();
-        }
-
-        private void userAdsDataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int index = e.RowIndex;
-            DataGridViewRow selectedRow = userAdsDataGrid.Rows[index];
-            displayAd1.GetadTitle.Text = selectedRow.Cells["adTitle"].Value.ToString();
-            displayAd1.GetadDesc.Text = selectedRow.Cells["adDesc"].Value.ToString();
-
-            displayAd1.GetadImage.Source = new BitmapImage(new Uri(imagesLocation + selectedRow.Cells["Images"].Value.ToString()));
-
-
-        }
-
         /// <summary>
         /// Initialize the WPF custom control used as navigation menu.
         /// </summary>
@@ -782,17 +727,53 @@ namespace UserApplication
                 }
             }
         }
-        private void setConnectionString()
+
+        private void myAdsLabel_Click(object sender, EventArgs e)
         {
-            string DebugDir = Application.StartupPath;
-            Console.WriteLine(DebugDir);
-            string BidDir = Directory.GetParent(DebugDir).FullName;
-            string ProjectDir = Directory.GetParent(BidDir).FullName;
-            string SolutionDir = Directory.GetParent(ProjectDir).FullName;
-            string str = SolutionDir + @"\AppData\AggeliesDB.accdb";
-            Console.WriteLine(str);
-            connectionString = "Provider=Microft.ACE.OLEDB.12.0;Data Source=" + str;
+            signupPrompt(2);
         }
+
+        private void profileLabel_Click(object sender, EventArgs e)
+        {
+            signupPrompt(3);
+        }
+
+        private void goBackImage_Click(object sender, EventArgs e)
+        {
+            signupPrompt(3);
+        }
+
+
+        private void btn_silver_Click(object sender, EventArgs e)
+        {
+            this.silver_panel.Visible = true;
+            this.silver_panel.BringToFront();
+        }
+
+        private void btn_gold_Click(object sender, EventArgs e)
+        {
+            this.gold_panel.Visible = true;
+            this.gold_panel.BringToFront();
+        }
+
+        private void gold_btn_goback_Click(object sender, EventArgs e)
+        {
+            this.upgradeAccount_panel.Visible = true;
+            this.upgradeAccount_panel.BringToFront();
+        }
+
+        private void silver_btn_goback_Click(object sender, EventArgs e)
+        {
+            this.upgradeAccount_panel.Visible = true;
+            this.upgradeAccount_panel.BringToFront();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.profilePanel.Visible = true;
+            this.profilePanel.BringToFront();
+        }
+
         #endregion
 
         #endregion

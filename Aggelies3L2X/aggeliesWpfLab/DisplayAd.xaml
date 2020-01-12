@@ -17,7 +17,7 @@
                 <Trigger Property="IsMouseOver" Value="true">
                     <Setter Property="Cursor" Value="Hand"/>
                 </Trigger>
-               
+
             </Style.Triggers>
         </Style>
         <Style TargetType="TextBox">
@@ -27,22 +27,22 @@
             <Setter Property="TextWrapping" Value="Wrap"/>
             <Setter Property="VerticalAlignment" Value="Stretch"/>
             <Setter Property="BorderBrush" Value="Black"/>
-            
+
         </Style>
     </UserControl.Resources>
-    
+
     <Grid x:Name="subGrid">
         <Grid.RowDefinitions>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="3*"/>
+            <RowDefinition Height="200*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="149*"/>
         </Grid.RowDefinitions>
 
-        <Image x:Name="adImage" Grid.Row="0" x:FieldModifier="public"/>
-        <TextBlock x:Name="adTitle" Grid.Row="1" Text="Title" x:FieldModifier="public"/>
+        <Image x:Name="adImage" Grid.Row="0" x:FieldModifier="public" Stretch="Fill"/>
+        <TextBlock x:Name="adTitle" Grid.Row="1" Text="Title" x:FieldModifier="public" TextAlignment="Center" VerticalAlignment="Center"/>
         <TextBox x:Name="adDesc" Grid.Row="2" Text="Description" x:FieldModifier="public"/>
     </Grid>
-  
-    
-   
+
+
+
 </UserControl>
