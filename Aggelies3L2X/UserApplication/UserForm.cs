@@ -215,47 +215,6 @@ namespace UserApplication
         #endregion
 
         #region ADS Panel Methods
-        /// <summary>
-        /// Enables editing the titleTextBox.
-        /// Changes editTitlePictureBox image accordingly.
-        /// </summary>
-        /// <param name="sender">editTitlePictureBox</param>
-        /// <param name="e">Click</param>
-        private void titleEditPictureBox_Click(object sender, EventArgs e)
-        {
-            //if (titleTextBox.Enabled == false)
-            //{
-            //    titleTextBox.Enabled = true;
-            //    editTitlePictureBox.Image = UserApplication.Properties.Resources.save1;
-            //}
-            //else
-            //{
-            //    titleTextBox.Enabled = false;
-            //    editTitlePictureBox.Image = UserApplication.Properties.Resources.edit1;
-            //    updateTitleDesc();
-            //}
-        }
-
-        /// <summary>
-        /// Enables editing the descriptionRichTextBox.
-        /// Changes editDescriptionPictureBox image accordingly.
-        /// </summary>
-        /// <param name="sender">editTitlePictureBox</param>
-        /// <param name="e">Click</param>
-        private void descriptionEditPictureBox_Click(object sender, EventArgs e)
-        {
-            //if (descriptionRichTextBox.Enabled == false)
-            //{
-            //    descriptionRichTextBox.Enabled = true;
-            //    editDescriptionPictureBox.Image = UserApplication.Properties.Resources.save1;
-            //}
-            //else
-            //{
-            //    descriptionRichTextBox.Enabled = false;
-            //    editDescriptionPictureBox.Image = UserApplication.Properties.Resources.edit1;
-            //    updateTitleDesc();
-            //}
-        }
 
         /// <summary>
         /// Changes the image path in database per adID.
@@ -292,12 +251,7 @@ namespace UserApplication
                         // Set adsPicturebox new image.
                         Console.WriteLine(imgNewPath);
                         displayAd1.GetadImage.Source = new BitmapImage(new Uri(imgNewPath));
-                       
-                        // Update DataRowView dynamicaly.
-                        //view.BeginEdit();
-                        //view["media"] = imgName;
-                        //view.EndEdit();
-
+                        this.adsTableTableAdapter.AdsPerUser(this.aggeliesDBDataSet.AdsTable, userid);
                     }
                 }
             }
@@ -750,14 +704,7 @@ namespace UserApplication
         {
             signupPrompt(3);
         }
-
-      
-
-
-
-       
-
-     
+    
 
         private void btn_silver_Click(object sender, EventArgs e)
         {
@@ -795,15 +742,11 @@ namespace UserApplication
             DataGridViewRow selectedRow = userAdsDataGrid.Rows[index];
             displayAd1.GetadTitle.Text = selectedRow.Cells["adTitle"].Value.ToString();
             displayAd1.GetadDesc.Text = selectedRow.Cells["adDesc"].Value.ToString();
-         displayAd1.GetadImage.Source = new BitmapImage(new Uri(imagesLocation + selectedRow.Cells["images"].Value.ToString()));
+
+            displayAd1.GetadImage.Source = new BitmapImage(new Uri(imagesLocation + selectedRow.Cells["Images"].Value.ToString()));
 
 
         }
-
-      
-
-
-
 
         /// <summary>
         /// Initialize the WPF custom control used as navigation menu.
@@ -842,6 +785,7 @@ namespace UserApplication
         private void setConnectionString()
         {
             string DebugDir = Application.StartupPath;
+            Console.WriteLine(DebugDir);
             string BidDir = Directory.GetParent(DebugDir).FullName;
             string ProjectDir = Directory.GetParent(BidDir).FullName;
             string SolutionDir = Directory.GetParent(ProjectDir).FullName;
