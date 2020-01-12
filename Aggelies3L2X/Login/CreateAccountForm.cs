@@ -39,13 +39,13 @@ namespace Login
 
         }
 
-        private void lang_button_Click(object sender, EventArgs e)
-        {
-            if (lang_button.Text == "GR")
-            { ChangeLanguage("gr"); }
+        //private void lang_button_Click(object sender, EventArgs e)
+        //{
+        //    if (lang_button.Text == "GR")
+        //    { ChangeLanguage("gr"); }
 
-            else if (lang_button.Text == "EN")
-            { ChangeLanguage("en"); }
-        }
+        //    else if (lang_button.Text == "EN")
+        //    { ChangeLanguage("en"); }
+        //}
     }
 }

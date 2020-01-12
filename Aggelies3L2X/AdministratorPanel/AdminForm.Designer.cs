@@ -73,6 +73,23 @@
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.Statuslabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.usersRightPanel = new System.Windows.Forms.Panel();
+            this.checkbox_blacklist = new System.Windows.Forms.CheckBox();
+            this.txt_age = new System.Windows.Forms.TextBox();
+            this.txt_phone = new System.Windows.Forms.TextBox();
+            this.txt_recoveremail = new System.Windows.Forms.TextBox();
+            this.txt_email = new System.Windows.Forms.TextBox();
+            this.txt_password = new System.Windows.Forms.TextBox();
+            this.txt_username = new System.Windows.Forms.TextBox();
+            this.txt_lastname = new System.Windows.Forms.TextBox();
+            this.txt_firstname = new System.Windows.Forms.TextBox();
+            this.txt_userid = new System.Windows.Forms.TextBox();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.btn_next = new System.Windows.Forms.Button();
+            this.btn_addnew = new System.Windows.Forms.Button();
+            this.btn_previous = new System.Windows.Forms.Button();
             this.categoriesRightPanel = new System.Windows.Forms.Panel();
             this.AdsCategoriesRightPanel = new System.Windows.Forms.Panel();
             this.updateCatB = new System.Windows.Forms.Button();
@@ -105,25 +122,9 @@
             this.properynameLabel = new System.Windows.Forms.Label();
             this.editpropertyLabel = new System.Windows.Forms.Label();
             this.addingPropertyL = new System.Windows.Forms.Label();
-            this.usersRightPanel = new System.Windows.Forms.Panel();
-            this.checkbox_blacklist = new System.Windows.Forms.CheckBox();
-            this.txt_age = new System.Windows.Forms.TextBox();
-            this.txt_phone = new System.Windows.Forms.TextBox();
-            this.txt_recoveremail = new System.Windows.Forms.TextBox();
-            this.txt_email = new System.Windows.Forms.TextBox();
-            this.txt_password = new System.Windows.Forms.TextBox();
-            this.txt_username = new System.Windows.Forms.TextBox();
-            this.txt_lastname = new System.Windows.Forms.TextBox();
-            this.txt_firstname = new System.Windows.Forms.TextBox();
-            this.txt_userid = new System.Windows.Forms.TextBox();
-            this.btn_update = new System.Windows.Forms.Button();
-            this.btn_delete = new System.Windows.Forms.Button();
-            this.btn_save = new System.Windows.Forms.Button();
-            this.btn_next = new System.Windows.Forms.Button();
-            this.btn_addnew = new System.Windows.Forms.Button();
-            this.btn_previous = new System.Windows.Forms.Button();
             this.topPanel = new System.Windows.Forms.Panel();
             this.Menu_panel = new System.Windows.Forms.Panel();
+            this.logo_box = new System.Windows.Forms.PictureBox();
             this.btn_settings = new System.Windows.Forms.Button();
             this.btn_category = new System.Windows.Forms.Button();
             this.btn_email = new System.Windows.Forms.Button();
@@ -155,7 +156,6 @@
             this.adCategoryAdsTableBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.aggeliesDBDataSet1 = new AdministratorPanel.AggeliesDBDataSet();
             this.adCategoryBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.logo_box = new System.Windows.Forms.PictureBox();
             uAgeLabel = new System.Windows.Forms.Label();
             uPhoneLabel = new System.Windows.Forms.Label();
             uRecoverEmailLabel = new System.Windows.Forms.Label();
@@ -187,13 +187,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             this.statusStrip.SuspendLayout();
+            this.usersRightPanel.SuspendLayout();
             this.categoriesRightPanel.SuspendLayout();
             this.AdsCategoriesRightPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.parentCategoriesBindingSource)).BeginInit();
             this.PropertiesRightPanel.SuspendLayout();
-            this.usersRightPanel.SuspendLayout();
             this.topPanel.SuspendLayout();
             this.Menu_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_box)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
@@ -208,7 +209,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.adCategoryAdsTableBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adCategoryBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logo_box)).BeginInit();
             this.SuspendLayout();
             // 
             // uAgeLabel
@@ -473,6 +473,173 @@
             this.Statuslabel.Name = "Statuslabel";
             resources.ApplyResources(this.Statuslabel, "Statuslabel");
             // 
+            // usersRightPanel
+            // 
+            this.usersRightPanel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.usersRightPanel.Controls.Add(this.checkbox_blacklist);
+            this.usersRightPanel.Controls.Add(uAgeLabel);
+            this.usersRightPanel.Controls.Add(this.txt_age);
+            this.usersRightPanel.Controls.Add(uPhoneLabel);
+            this.usersRightPanel.Controls.Add(this.txt_phone);
+            this.usersRightPanel.Controls.Add(uRecoverEmailLabel);
+            this.usersRightPanel.Controls.Add(this.txt_recoveremail);
+            this.usersRightPanel.Controls.Add(uEmailLabel);
+            this.usersRightPanel.Controls.Add(this.txt_email);
+            this.usersRightPanel.Controls.Add(uPasswordLabel);
+            this.usersRightPanel.Controls.Add(this.txt_password);
+            this.usersRightPanel.Controls.Add(uNameLabel);
+            this.usersRightPanel.Controls.Add(this.txt_username);
+            this.usersRightPanel.Controls.Add(lNameLabel);
+            this.usersRightPanel.Controls.Add(this.txt_lastname);
+            this.usersRightPanel.Controls.Add(fNameLabel);
+            this.usersRightPanel.Controls.Add(this.txt_firstname);
+            this.usersRightPanel.Controls.Add(useridlabel);
+            this.usersRightPanel.Controls.Add(this.txt_userid);
+            this.usersRightPanel.Controls.Add(this.btn_update);
+            this.usersRightPanel.Controls.Add(this.btn_delete);
+            this.usersRightPanel.Controls.Add(this.btn_save);
+            this.usersRightPanel.Controls.Add(this.btn_next);
+            this.usersRightPanel.Controls.Add(this.btn_addnew);
+            this.usersRightPanel.Controls.Add(this.btn_previous);
+            resources.ApplyResources(this.usersRightPanel, "usersRightPanel");
+            this.usersRightPanel.Name = "usersRightPanel";
+            // 
+            // checkbox_blacklist
+            // 
+            resources.ApplyResources(this.checkbox_blacklist, "checkbox_blacklist");
+            this.checkbox_blacklist.Name = "checkbox_blacklist";
+            this.checkbox_blacklist.UseVisualStyleBackColor = true;
+            // 
+            // txt_age
+            // 
+            this.txt_age.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uAge", true));
+            resources.ApplyResources(this.txt_age, "txt_age");
+            this.txt_age.Name = "txt_age";
+            // 
+            // uPhoneLabel
+            // 
+            resources.ApplyResources(uPhoneLabel, "uPhoneLabel");
+            uPhoneLabel.Name = "uPhoneLabel";
+            // 
+            // txt_phone
+            // 
+            this.txt_phone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uPhone", true));
+            resources.ApplyResources(this.txt_phone, "txt_phone");
+            this.txt_phone.Name = "txt_phone";
+            // 
+            // uRecoverEmailLabel
+            // 
+            resources.ApplyResources(uRecoverEmailLabel, "uRecoverEmailLabel");
+            uRecoverEmailLabel.Name = "uRecoverEmailLabel";
+            // 
+            // txt_recoveremail
+            // 
+            this.txt_recoveremail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uRecoverEmail", true));
+            resources.ApplyResources(this.txt_recoveremail, "txt_recoveremail");
+            this.txt_recoveremail.Name = "txt_recoveremail";
+            // 
+            // uEmailLabel
+            // 
+            resources.ApplyResources(uEmailLabel, "uEmailLabel");
+            uEmailLabel.Name = "uEmailLabel";
+            // 
+            // txt_email
+            // 
+            this.txt_email.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uEmail", true));
+            resources.ApplyResources(this.txt_email, "txt_email");
+            this.txt_email.Name = "txt_email";
+            // 
+            // uPasswordLabel
+            // 
+            resources.ApplyResources(uPasswordLabel, "uPasswordLabel");
+            uPasswordLabel.Name = "uPasswordLabel";
+            // 
+            // txt_password
+            // 
+            this.txt_password.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uPassword", true));
+            resources.ApplyResources(this.txt_password, "txt_password");
+            this.txt_password.Name = "txt_password";
+            // 
+            // uNameLabel
+            // 
+            resources.ApplyResources(uNameLabel, "uNameLabel");
+            uNameLabel.Name = "uNameLabel";
+            // 
+            // txt_username
+            // 
+            this.txt_username.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uName", true));
+            resources.ApplyResources(this.txt_username, "txt_username");
+            this.txt_username.Name = "txt_username";
+            // 
+            // lNameLabel
+            // 
+            resources.ApplyResources(lNameLabel, "lNameLabel");
+            lNameLabel.Name = "lNameLabel";
+            // 
+            // txt_lastname
+            // 
+            this.txt_lastname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "lName", true));
+            resources.ApplyResources(this.txt_lastname, "txt_lastname");
+            this.txt_lastname.Name = "txt_lastname";
+            // 
+            // fNameLabel
+            // 
+            resources.ApplyResources(fNameLabel, "fNameLabel");
+            fNameLabel.Name = "fNameLabel";
+            // 
+            // txt_firstname
+            // 
+            this.txt_firstname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "fName", true));
+            resources.ApplyResources(this.txt_firstname, "txt_firstname");
+            this.txt_firstname.Name = "txt_firstname";
+            // 
+            // useridlabel
+            // 
+            resources.ApplyResources(useridlabel, "useridlabel");
+            useridlabel.Name = "useridlabel";
+            // 
+            // txt_userid
+            // 
+            this.txt_userid.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "userID", true));
+            resources.ApplyResources(this.txt_userid, "txt_userid");
+            this.txt_userid.Name = "txt_userid";
+            // 
+            // btn_update
+            // 
+            resources.ApplyResources(this.btn_update, "btn_update");
+            this.btn_update.Name = "btn_update";
+            this.btn_update.UseVisualStyleBackColor = true;
+            // 
+            // btn_delete
+            // 
+            resources.ApplyResources(this.btn_delete, "btn_delete");
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            // 
+            // btn_save
+            // 
+            resources.ApplyResources(this.btn_save, "btn_save");
+            this.btn_save.Name = "btn_save";
+            this.btn_save.UseVisualStyleBackColor = true;
+            // 
+            // btn_next
+            // 
+            resources.ApplyResources(this.btn_next, "btn_next");
+            this.btn_next.Name = "btn_next";
+            this.btn_next.UseVisualStyleBackColor = true;
+            // 
+            // btn_addnew
+            // 
+            resources.ApplyResources(this.btn_addnew, "btn_addnew");
+            this.btn_addnew.Name = "btn_addnew";
+            this.btn_addnew.UseVisualStyleBackColor = true;
+            // 
+            // btn_previous
+            // 
+            resources.ApplyResources(this.btn_previous, "btn_previous");
+            this.btn_previous.Name = "btn_previous";
+            this.btn_previous.UseVisualStyleBackColor = true;
+            // 
             // categoriesRightPanel
             // 
             this.categoriesRightPanel.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -693,173 +860,6 @@
             resources.ApplyResources(this.addingPropertyL, "addingPropertyL");
             this.addingPropertyL.Name = "addingPropertyL";
             // 
-            // usersRightPanel
-            // 
-            this.usersRightPanel.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.usersRightPanel.Controls.Add(this.checkbox_blacklist);
-            this.usersRightPanel.Controls.Add(uAgeLabel);
-            this.usersRightPanel.Controls.Add(this.txt_age);
-            this.usersRightPanel.Controls.Add(uPhoneLabel);
-            this.usersRightPanel.Controls.Add(this.txt_phone);
-            this.usersRightPanel.Controls.Add(uRecoverEmailLabel);
-            this.usersRightPanel.Controls.Add(this.txt_recoveremail);
-            this.usersRightPanel.Controls.Add(uEmailLabel);
-            this.usersRightPanel.Controls.Add(this.txt_email);
-            this.usersRightPanel.Controls.Add(uPasswordLabel);
-            this.usersRightPanel.Controls.Add(this.txt_password);
-            this.usersRightPanel.Controls.Add(uNameLabel);
-            this.usersRightPanel.Controls.Add(this.txt_username);
-            this.usersRightPanel.Controls.Add(lNameLabel);
-            this.usersRightPanel.Controls.Add(this.txt_lastname);
-            this.usersRightPanel.Controls.Add(fNameLabel);
-            this.usersRightPanel.Controls.Add(this.txt_firstname);
-            this.usersRightPanel.Controls.Add(useridlabel);
-            this.usersRightPanel.Controls.Add(this.txt_userid);
-            this.usersRightPanel.Controls.Add(this.btn_update);
-            this.usersRightPanel.Controls.Add(this.btn_delete);
-            this.usersRightPanel.Controls.Add(this.btn_save);
-            this.usersRightPanel.Controls.Add(this.btn_next);
-            this.usersRightPanel.Controls.Add(this.btn_addnew);
-            this.usersRightPanel.Controls.Add(this.btn_previous);
-            resources.ApplyResources(this.usersRightPanel, "usersRightPanel");
-            this.usersRightPanel.Name = "usersRightPanel";
-            // 
-            // checkbox_blacklist
-            // 
-            resources.ApplyResources(this.checkbox_blacklist, "checkbox_blacklist");
-            this.checkbox_blacklist.Name = "checkbox_blacklist";
-            this.checkbox_blacklist.UseVisualStyleBackColor = true;
-            // 
-            // txt_age
-            // 
-            this.txt_age.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uAge", true));
-            resources.ApplyResources(this.txt_age, "txt_age");
-            this.txt_age.Name = "txt_age";
-            // 
-            // uPhoneLabel
-            // 
-            resources.ApplyResources(uPhoneLabel, "uPhoneLabel");
-            uPhoneLabel.Name = "uPhoneLabel";
-            // 
-            // txt_phone
-            // 
-            this.txt_phone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uPhone", true));
-            resources.ApplyResources(this.txt_phone, "txt_phone");
-            this.txt_phone.Name = "txt_phone";
-            // 
-            // uRecoverEmailLabel
-            // 
-            resources.ApplyResources(uRecoverEmailLabel, "uRecoverEmailLabel");
-            uRecoverEmailLabel.Name = "uRecoverEmailLabel";
-            // 
-            // txt_recoveremail
-            // 
-            this.txt_recoveremail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uRecoverEmail", true));
-            resources.ApplyResources(this.txt_recoveremail, "txt_recoveremail");
-            this.txt_recoveremail.Name = "txt_recoveremail";
-            // 
-            // uEmailLabel
-            // 
-            resources.ApplyResources(uEmailLabel, "uEmailLabel");
-            uEmailLabel.Name = "uEmailLabel";
-            // 
-            // txt_email
-            // 
-            this.txt_email.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uEmail", true));
-            resources.ApplyResources(this.txt_email, "txt_email");
-            this.txt_email.Name = "txt_email";
-            // 
-            // uPasswordLabel
-            // 
-            resources.ApplyResources(uPasswordLabel, "uPasswordLabel");
-            uPasswordLabel.Name = "uPasswordLabel";
-            // 
-            // txt_password
-            // 
-            this.txt_password.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uPassword", true));
-            resources.ApplyResources(this.txt_password, "txt_password");
-            this.txt_password.Name = "txt_password";
-            // 
-            // uNameLabel
-            // 
-            resources.ApplyResources(uNameLabel, "uNameLabel");
-            uNameLabel.Name = "uNameLabel";
-            // 
-            // txt_username
-            // 
-            this.txt_username.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "uName", true));
-            resources.ApplyResources(this.txt_username, "txt_username");
-            this.txt_username.Name = "txt_username";
-            // 
-            // lNameLabel
-            // 
-            resources.ApplyResources(lNameLabel, "lNameLabel");
-            lNameLabel.Name = "lNameLabel";
-            // 
-            // txt_lastname
-            // 
-            this.txt_lastname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "lName", true));
-            resources.ApplyResources(this.txt_lastname, "txt_lastname");
-            this.txt_lastname.Name = "txt_lastname";
-            // 
-            // fNameLabel
-            // 
-            resources.ApplyResources(fNameLabel, "fNameLabel");
-            fNameLabel.Name = "fNameLabel";
-            // 
-            // txt_firstname
-            // 
-            this.txt_firstname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "fName", true));
-            resources.ApplyResources(this.txt_firstname, "txt_firstname");
-            this.txt_firstname.Name = "txt_firstname";
-            // 
-            // useridlabel
-            // 
-            resources.ApplyResources(useridlabel, "useridlabel");
-            useridlabel.Name = "useridlabel";
-            // 
-            // txt_userid
-            // 
-            this.txt_userid.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "userID", true));
-            resources.ApplyResources(this.txt_userid, "txt_userid");
-            this.txt_userid.Name = "txt_userid";
-            // 
-            // btn_update
-            // 
-            resources.ApplyResources(this.btn_update, "btn_update");
-            this.btn_update.Name = "btn_update";
-            this.btn_update.UseVisualStyleBackColor = true;
-            // 
-            // btn_delete
-            // 
-            resources.ApplyResources(this.btn_delete, "btn_delete");
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.UseVisualStyleBackColor = true;
-            // 
-            // btn_save
-            // 
-            resources.ApplyResources(this.btn_save, "btn_save");
-            this.btn_save.Name = "btn_save";
-            this.btn_save.UseVisualStyleBackColor = true;
-            // 
-            // btn_next
-            // 
-            resources.ApplyResources(this.btn_next, "btn_next");
-            this.btn_next.Name = "btn_next";
-            this.btn_next.UseVisualStyleBackColor = true;
-            // 
-            // btn_addnew
-            // 
-            resources.ApplyResources(this.btn_addnew, "btn_addnew");
-            this.btn_addnew.Name = "btn_addnew";
-            this.btn_addnew.UseVisualStyleBackColor = true;
-            // 
-            // btn_previous
-            // 
-            resources.ApplyResources(this.btn_previous, "btn_previous");
-            this.btn_previous.Name = "btn_previous";
-            this.btn_previous.UseVisualStyleBackColor = true;
-            // 
             // topPanel
             // 
             this.topPanel.Controls.Add(this.Menu_panel);
@@ -881,6 +881,13 @@
             this.Menu_panel.Controls.Add(this.txt_search);
             resources.ApplyResources(this.Menu_panel, "Menu_panel");
             this.Menu_panel.Name = "Menu_panel";
+            // 
+            // logo_box
+            // 
+            resources.ApplyResources(this.logo_box, "logo_box");
+            this.logo_box.Name = "logo_box";
+            this.logo_box.TabStop = false;
+            this.logo_box.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btn_settings
             // 
@@ -1053,13 +1060,6 @@
             this.adCategoryBindingSource3.DataMember = "AdCategory";
             this.adCategoryBindingSource3.DataSource = this.aggeliesDBDataSet1;
             // 
-            // logo_box
-            // 
-            resources.ApplyResources(this.logo_box, "logo_box");
-            this.logo_box.Name = "logo_box";
-            this.logo_box.TabStop = false;
-            this.logo_box.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // AdminForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1093,17 +1093,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
+            this.usersRightPanel.ResumeLayout(false);
+            this.usersRightPanel.PerformLayout();
             this.categoriesRightPanel.ResumeLayout(false);
             this.AdsCategoriesRightPanel.ResumeLayout(false);
             this.AdsCategoriesRightPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.parentCategoriesBindingSource)).EndInit();
             this.PropertiesRightPanel.ResumeLayout(false);
             this.PropertiesRightPanel.PerformLayout();
-            this.usersRightPanel.ResumeLayout(false);
-            this.usersRightPanel.PerformLayout();
             this.topPanel.ResumeLayout(false);
             this.Menu_panel.ResumeLayout(false);
             this.Menu_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_box)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
@@ -1118,7 +1119,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.adCategoryAdsTableBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adCategoryBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logo_box)).EndInit();
             this.ResumeLayout(false);
 
         }
