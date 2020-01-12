@@ -106,7 +106,6 @@
             this.Info_label = new System.Windows.Forms.Label();
             this.btn_gold = new System.Windows.Forms.Button();
             this.btn_silver = new System.Windows.Forms.Button();
-            this.freetrial_button = new System.Windows.Forms.Button();
             this.signupPanel = new System.Windows.Forms.Panel();
             this.signupLabel = new System.Windows.Forms.Label();
             this.signupRPasswordLabel = new System.Windows.Forms.Label();
@@ -133,25 +132,63 @@
             this.adCategoryTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.AdCategoryTableAdapter();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.gold_panel = new System.Windows.Forms.Panel();
-            this.payment_picbox = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.gold_payment_picbox = new System.Windows.Forms.PictureBox();
+            this.gold_creditinfolabel = new System.Windows.Forms.Label();
             this.plan_label = new System.Windows.Forms.Label();
-            this.credit_box = new System.Windows.Forms.GroupBox();
-            this.cardholder_label = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.creditcard_label = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.cvv_label = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.total_label = new System.Windows.Forms.Label();
+            this.gold_credit_box = new System.Windows.Forms.GroupBox();
+            this.gold_cardholder_label = new System.Windows.Forms.Label();
+            this.gold_txt_cardholder = new System.Windows.Forms.TextBox();
+            this.gold_txt_cardnumber = new System.Windows.Forms.TextBox();
+            this.gold_creditcard_label = new System.Windows.Forms.Label();
+            this.gold_txt_cvv = new System.Windows.Forms.TextBox();
+            this.gold_cvv_label = new System.Windows.Forms.Label();
+            this.gold_txt_total = new System.Windows.Forms.TextBox();
+            this.gold_total_label = new System.Windows.Forms.Label();
             this.requiredCardHolder_label = new System.Windows.Forms.Label();
             this.requiredCardNumber = new System.Windows.Forms.Label();
             this.requiredcvv_label = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.expdate_label = new System.Windows.Forms.Label();
+            this.currency_label = new System.Windows.Forms.Label();
+            this.requiredexpdate_label = new System.Windows.Forms.Label();
+            this.gold_expdate_label = new System.Windows.Forms.Label();
+            this.gold_month_combobox = new System.Windows.Forms.ComboBox();
+            this.gold_year_combobox = new System.Windows.Forms.ComboBox();
+            this.gold_seperaton_label = new System.Windows.Forms.Label();
+            this.gold_paypal_label = new System.Windows.Forms.Label();
+            this.gold_paypal_groupbox = new System.Windows.Forms.GroupBox();
+            this.gold_btn_Continue = new System.Windows.Forms.Button();
+            this.gold_btn_paypal = new System.Windows.Forms.Button();
+            this.gold_AmericanExpess_groupbox = new System.Windows.Forms.GroupBox();
+            this.gold_btn_americanexpress = new System.Windows.Forms.Button();
+            this.gold_american_label = new System.Windows.Forms.Label();
+            this.silver_panel = new System.Windows.Forms.Panel();
+            this.usexpress_box = new System.Windows.Forms.GroupBox();
+            this.btn_usexpresscheckout = new System.Windows.Forms.Button();
+            this.usexpress_label = new System.Windows.Forms.Label();
+            this.paypal_box = new System.Windows.Forms.GroupBox();
+            this.btn_paypalcheckout = new System.Windows.Forms.Button();
+            this.infopaypal_label = new System.Windows.Forms.Label();
+            this.creditcard_box = new System.Windows.Forms.GroupBox();
+            this.silver_btn_continue = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.silver_year_combobox = new System.Windows.Forms.ComboBox();
+            this.silver_month_combobox = new System.Windows.Forms.ComboBox();
+            this.silver_requiredexpdatelabel = new System.Windows.Forms.Label();
+            this.silver_expdatelabel = new System.Windows.Forms.Label();
+            this.silver_currencylabel = new System.Windows.Forms.Label();
+            this.silver_requiredcvvlabel = new System.Windows.Forms.Label();
+            this.silver_requiredcardnumberlabel = new System.Windows.Forms.Label();
+            this.silver_requiredholdernamelabel = new System.Windows.Forms.Label();
+            this.silver_txt_total = new System.Windows.Forms.TextBox();
+            this.silver_totallabel = new System.Windows.Forms.Label();
+            this.silver_txt_cvv = new System.Windows.Forms.TextBox();
+            this.silver_cvv = new System.Windows.Forms.Label();
+            this.silver_txt_cardnumber = new System.Windows.Forms.TextBox();
+            this.silver_cardnumberlabel = new System.Windows.Forms.Label();
+            this.silver_txtcardholder = new System.Windows.Forms.TextBox();
+            this.silver_cardholder_label = new System.Windows.Forms.Label();
+            this.silver_creditcard_label = new System.Windows.Forms.Label();
+            this.silver_planlabel = new System.Windows.Forms.Label();
+            this.payments_picbox = new System.Windows.Forms.PictureBox();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.settingsPanel.SuspendLayout();
@@ -176,8 +213,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.upgradeinfo_picbox)).BeginInit();
             this.signupPanel.SuspendLayout();
             this.gold_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.payment_picbox)).BeginInit();
-            this.credit_box.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gold_payment_picbox)).BeginInit();
+            this.gold_credit_box.SuspendLayout();
+            this.gold_paypal_groupbox.SuspendLayout();
+            this.gold_AmericanExpess_groupbox.SuspendLayout();
+            this.silver_panel.SuspendLayout();
+            this.usexpress_box.SuspendLayout();
+            this.paypal_box.SuspendLayout();
+            this.creditcard_box.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.payments_picbox)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
@@ -965,8 +1009,9 @@
             // 
             // contentPanel
             // 
-            this.contentPanel.Controls.Add(this.gold_panel);
             this.contentPanel.Controls.Add(this.upgradeAccount_panel);
+            this.contentPanel.Controls.Add(this.gold_panel);
+            this.contentPanel.Controls.Add(this.silver_panel);
             this.contentPanel.Controls.Add(this.profilePanel);
             this.contentPanel.Controls.Add(this.homePanel);
             this.contentPanel.Controls.Add(this.settingsPanel);
@@ -985,7 +1030,6 @@
             this.upgradeAccount_panel.Controls.Add(this.Info_label);
             this.upgradeAccount_panel.Controls.Add(this.btn_gold);
             this.upgradeAccount_panel.Controls.Add(this.btn_silver);
-            this.upgradeAccount_panel.Controls.Add(this.freetrial_button);
             this.upgradeAccount_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.upgradeAccount_panel.Location = new System.Drawing.Point(0, 0);
             this.upgradeAccount_panel.Name = "upgradeAccount_panel";
@@ -1021,6 +1065,7 @@
             this.btn_gold.TabIndex = 13;
             this.btn_gold.Text = "Upgrade to GOLD";
             this.btn_gold.UseVisualStyleBackColor = true;
+            this.btn_gold.Click += new System.EventHandler(this.btn_gold_Click);
             // 
             // btn_silver
             // 
@@ -1031,16 +1076,7 @@
             this.btn_silver.TabIndex = 12;
             this.btn_silver.Text = "Upgrade to SILVER";
             this.btn_silver.UseVisualStyleBackColor = true;
-            // 
-            // freetrial_button
-            // 
-            this.freetrial_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.freetrial_button.Location = new System.Drawing.Point(229, 469);
-            this.freetrial_button.Name = "freetrial_button";
-            this.freetrial_button.Size = new System.Drawing.Size(175, 35);
-            this.freetrial_button.TabIndex = 11;
-            this.freetrial_button.Text = "Free Trial 10 days";
-            this.freetrial_button.UseVisualStyleBackColor = true;
+            this.btn_silver.Click += new System.EventHandler(this.btn_silver_Click);
             // 
             // signupPanel
             // 
@@ -1280,34 +1316,36 @@
             // 
             // gold_panel
             // 
-            this.gold_panel.Controls.Add(this.credit_box);
-            this.gold_panel.Controls.Add(this.payment_picbox);
+            this.gold_panel.Controls.Add(this.gold_AmericanExpess_groupbox);
+            this.gold_panel.Controls.Add(this.gold_paypal_groupbox);
+            this.gold_panel.Controls.Add(this.gold_credit_box);
+            this.gold_panel.Controls.Add(this.gold_payment_picbox);
             this.gold_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gold_panel.Location = new System.Drawing.Point(0, 0);
             this.gold_panel.Name = "gold_panel";
             this.gold_panel.Size = new System.Drawing.Size(970, 541);
             this.gold_panel.TabIndex = 16;
             // 
-            // payment_picbox
+            // gold_payment_picbox
             // 
-            this.payment_picbox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.payment_picbox.Image = ((System.Drawing.Image)(resources.GetObject("payment_picbox.Image")));
-            this.payment_picbox.Location = new System.Drawing.Point(0, 369);
-            this.payment_picbox.Name = "payment_picbox";
-            this.payment_picbox.Size = new System.Drawing.Size(970, 172);
-            this.payment_picbox.TabIndex = 0;
-            this.payment_picbox.TabStop = false;
+            this.gold_payment_picbox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gold_payment_picbox.Image = ((System.Drawing.Image)(resources.GetObject("gold_payment_picbox.Image")));
+            this.gold_payment_picbox.Location = new System.Drawing.Point(0, 369);
+            this.gold_payment_picbox.Name = "gold_payment_picbox";
+            this.gold_payment_picbox.Size = new System.Drawing.Size(970, 172);
+            this.gold_payment_picbox.TabIndex = 0;
+            this.gold_payment_picbox.TabStop = false;
             // 
-            // label1
+            // gold_creditinfolabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label1.Location = new System.Drawing.Point(8, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Payment by Credit Card";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.gold_creditinfolabel.AutoSize = true;
+            this.gold_creditinfolabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gold_creditinfolabel.Location = new System.Drawing.Point(8, 16);
+            this.gold_creditinfolabel.Name = "gold_creditinfolabel";
+            this.gold_creditinfolabel.Size = new System.Drawing.Size(229, 24);
+            this.gold_creditinfolabel.TabIndex = 1;
+            this.gold_creditinfolabel.Text = "Payment by Credit Card";
+            this.gold_creditinfolabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // plan_label
             // 
@@ -1319,101 +1357,105 @@
             this.plan_label.TabIndex = 2;
             this.plan_label.Text = "Gold Plan";
             // 
-            // credit_box
+            // gold_credit_box
             // 
-            this.credit_box.Controls.Add(this.label4);
-            this.credit_box.Controls.Add(this.textBox5);
-            this.credit_box.Controls.Add(this.expdate_label);
-            this.credit_box.Controls.Add(this.label3);
-            this.credit_box.Controls.Add(this.requiredcvv_label);
-            this.credit_box.Controls.Add(this.requiredCardNumber);
-            this.credit_box.Controls.Add(this.requiredCardHolder_label);
-            this.credit_box.Controls.Add(this.textBox4);
-            this.credit_box.Controls.Add(this.total_label);
-            this.credit_box.Controls.Add(this.textBox3);
-            this.credit_box.Controls.Add(this.cvv_label);
-            this.credit_box.Controls.Add(this.textBox2);
-            this.credit_box.Controls.Add(this.creditcard_label);
-            this.credit_box.Controls.Add(this.textBox1);
-            this.credit_box.Controls.Add(this.cardholder_label);
-            this.credit_box.Controls.Add(this.label1);
-            this.credit_box.Controls.Add(this.plan_label);
-            this.credit_box.Dock = System.Windows.Forms.DockStyle.Left;
-            this.credit_box.Location = new System.Drawing.Point(0, 0);
-            this.credit_box.Name = "credit_box";
-            this.credit_box.Size = new System.Drawing.Size(388, 369);
-            this.credit_box.TabIndex = 3;
-            this.credit_box.TabStop = false;
+            this.gold_credit_box.Controls.Add(this.gold_btn_Continue);
+            this.gold_credit_box.Controls.Add(this.gold_seperaton_label);
+            this.gold_credit_box.Controls.Add(this.gold_year_combobox);
+            this.gold_credit_box.Controls.Add(this.gold_month_combobox);
+            this.gold_credit_box.Controls.Add(this.requiredexpdate_label);
+            this.gold_credit_box.Controls.Add(this.gold_expdate_label);
+            this.gold_credit_box.Controls.Add(this.currency_label);
+            this.gold_credit_box.Controls.Add(this.requiredcvv_label);
+            this.gold_credit_box.Controls.Add(this.requiredCardNumber);
+            this.gold_credit_box.Controls.Add(this.requiredCardHolder_label);
+            this.gold_credit_box.Controls.Add(this.gold_txt_total);
+            this.gold_credit_box.Controls.Add(this.gold_total_label);
+            this.gold_credit_box.Controls.Add(this.gold_txt_cvv);
+            this.gold_credit_box.Controls.Add(this.gold_cvv_label);
+            this.gold_credit_box.Controls.Add(this.gold_txt_cardnumber);
+            this.gold_credit_box.Controls.Add(this.gold_creditcard_label);
+            this.gold_credit_box.Controls.Add(this.gold_txt_cardholder);
+            this.gold_credit_box.Controls.Add(this.gold_cardholder_label);
+            this.gold_credit_box.Controls.Add(this.gold_creditinfolabel);
+            this.gold_credit_box.Controls.Add(this.plan_label);
+            this.gold_credit_box.Dock = System.Windows.Forms.DockStyle.Left;
+            this.gold_credit_box.Location = new System.Drawing.Point(0, 0);
+            this.gold_credit_box.Name = "gold_credit_box";
+            this.gold_credit_box.Size = new System.Drawing.Size(388, 369);
+            this.gold_credit_box.TabIndex = 3;
+            this.gold_credit_box.TabStop = false;
             // 
-            // cardholder_label
+            // gold_cardholder_label
             // 
-            this.cardholder_label.AutoSize = true;
-            this.cardholder_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.cardholder_label.Location = new System.Drawing.Point(14, 110);
-            this.cardholder_label.Name = "cardholder_label";
-            this.cardholder_label.Size = new System.Drawing.Size(148, 20);
-            this.cardholder_label.TabIndex = 3;
-            this.cardholder_label.Text = "Card Holder Name: ";
+            this.gold_cardholder_label.AutoSize = true;
+            this.gold_cardholder_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gold_cardholder_label.Location = new System.Drawing.Point(14, 110);
+            this.gold_cardholder_label.Name = "gold_cardholder_label";
+            this.gold_cardholder_label.Size = new System.Drawing.Size(148, 20);
+            this.gold_cardholder_label.TabIndex = 3;
+            this.gold_cardholder_label.Text = "Card Holder Name: ";
             // 
-            // textBox1
+            // gold_txt_cardholder
             // 
-            this.textBox1.Location = new System.Drawing.Point(214, 110);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.gold_txt_cardholder.Location = new System.Drawing.Point(214, 110);
+            this.gold_txt_cardholder.Name = "gold_txt_cardholder";
+            this.gold_txt_cardholder.Size = new System.Drawing.Size(100, 20);
+            this.gold_txt_cardholder.TabIndex = 4;
             // 
-            // textBox2
+            // gold_txt_cardnumber
             // 
-            this.textBox2.Location = new System.Drawing.Point(214, 148);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 6;
+            this.gold_txt_cardnumber.Location = new System.Drawing.Point(214, 148);
+            this.gold_txt_cardnumber.Name = "gold_txt_cardnumber";
+            this.gold_txt_cardnumber.Size = new System.Drawing.Size(100, 20);
+            this.gold_txt_cardnumber.TabIndex = 6;
             // 
-            // creditcard_label
+            // gold_creditcard_label
             // 
-            this.creditcard_label.AutoSize = true;
-            this.creditcard_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.creditcard_label.Location = new System.Drawing.Point(14, 152);
-            this.creditcard_label.Name = "creditcard_label";
-            this.creditcard_label.Size = new System.Drawing.Size(157, 20);
-            this.creditcard_label.TabIndex = 5;
-            this.creditcard_label.Text = "Credit Card Number: ";
+            this.gold_creditcard_label.AutoSize = true;
+            this.gold_creditcard_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gold_creditcard_label.Location = new System.Drawing.Point(14, 152);
+            this.gold_creditcard_label.Name = "gold_creditcard_label";
+            this.gold_creditcard_label.Size = new System.Drawing.Size(157, 20);
+            this.gold_creditcard_label.TabIndex = 5;
+            this.gold_creditcard_label.Text = "Credit Card Number: ";
             // 
-            // textBox3
+            // gold_txt_cvv
             // 
-            this.textBox3.Location = new System.Drawing.Point(214, 184);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 8;
+            this.gold_txt_cvv.Location = new System.Drawing.Point(214, 184);
+            this.gold_txt_cvv.Name = "gold_txt_cvv";
+            this.gold_txt_cvv.Size = new System.Drawing.Size(100, 20);
+            this.gold_txt_cvv.TabIndex = 8;
             // 
-            // cvv_label
+            // gold_cvv_label
             // 
-            this.cvv_label.AutoSize = true;
-            this.cvv_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.cvv_label.Location = new System.Drawing.Point(14, 189);
-            this.cvv_label.Name = "cvv_label";
-            this.cvv_label.Size = new System.Drawing.Size(46, 20);
-            this.cvv_label.TabIndex = 7;
-            this.cvv_label.Text = "CVV:";
+            this.gold_cvv_label.AutoSize = true;
+            this.gold_cvv_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gold_cvv_label.Location = new System.Drawing.Point(14, 189);
+            this.gold_cvv_label.Name = "gold_cvv_label";
+            this.gold_cvv_label.Size = new System.Drawing.Size(46, 20);
+            this.gold_cvv_label.TabIndex = 7;
+            this.gold_cvv_label.Text = "CVV:";
             // 
-            // textBox4
+            // gold_txt_total
             // 
-            this.textBox4.Location = new System.Drawing.Point(214, 264);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 10;
-            this.textBox4.Text = "9.99 ";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gold_txt_total.Location = new System.Drawing.Point(214, 264);
+            this.gold_txt_total.Name = "gold_txt_total";
+            this.gold_txt_total.ReadOnly = true;
+            this.gold_txt_total.Size = new System.Drawing.Size(100, 20);
+            this.gold_txt_total.TabIndex = 10;
+            this.gold_txt_total.Text = "9.99 ";
+            this.gold_txt_total.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // total_label
+            // gold_total_label
             // 
-            this.total_label.AutoSize = true;
-            this.total_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.total_label.Location = new System.Drawing.Point(14, 269);
-            this.total_label.Name = "total_label";
-            this.total_label.Size = new System.Drawing.Size(44, 20);
-            this.total_label.TabIndex = 9;
-            this.total_label.Text = "Total";
+            this.gold_total_label.AutoSize = true;
+            this.gold_total_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gold_total_label.Location = new System.Drawing.Point(14, 269);
+            this.gold_total_label.Name = "gold_total_label";
+            this.gold_total_label.Size = new System.Drawing.Size(44, 20);
+            this.gold_total_label.TabIndex = 9;
+            this.gold_total_label.Text = "Total";
             // 
             // requiredCardHolder_label
             // 
@@ -1448,44 +1490,488 @@
             this.requiredcvv_label.TabIndex = 13;
             this.requiredcvv_label.Text = "*";
             // 
-            // label3
+            // currency_label
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(317, 265);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(16, 18);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "€";
+            this.currency_label.AutoSize = true;
+            this.currency_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.currency_label.ForeColor = System.Drawing.Color.Black;
+            this.currency_label.Location = new System.Drawing.Point(317, 265);
+            this.currency_label.Name = "currency_label";
+            this.currency_label.Size = new System.Drawing.Size(16, 18);
+            this.currency_label.TabIndex = 14;
+            this.currency_label.Text = "€";
             // 
-            // label4
+            // requiredexpdate_label
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(316, 225);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(15, 20);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "*";
+            this.requiredexpdate_label.AutoSize = true;
+            this.requiredexpdate_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.requiredexpdate_label.ForeColor = System.Drawing.Color.Red;
+            this.requiredexpdate_label.Location = new System.Drawing.Point(316, 225);
+            this.requiredexpdate_label.Name = "requiredexpdate_label";
+            this.requiredexpdate_label.Size = new System.Drawing.Size(15, 20);
+            this.requiredexpdate_label.TabIndex = 17;
+            this.requiredexpdate_label.Text = "*";
             // 
-            // textBox5
+            // gold_expdate_label
             // 
-            this.textBox5.Location = new System.Drawing.Point(214, 225);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 16;
+            this.gold_expdate_label.AutoSize = true;
+            this.gold_expdate_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gold_expdate_label.Location = new System.Drawing.Point(14, 230);
+            this.gold_expdate_label.Name = "gold_expdate_label";
+            this.gold_expdate_label.Size = new System.Drawing.Size(118, 20);
+            this.gold_expdate_label.TabIndex = 15;
+            this.gold_expdate_label.Text = "Expiration Date";
             // 
-            // expdate_label
+            // gold_month_combobox
             // 
-            this.expdate_label.AutoSize = true;
-            this.expdate_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.expdate_label.Location = new System.Drawing.Point(14, 230);
-            this.expdate_label.Name = "expdate_label";
-            this.expdate_label.Size = new System.Drawing.Size(46, 20);
-            this.expdate_label.TabIndex = 15;
-            this.expdate_label.Text = "CVV:";
+            this.gold_month_combobox.FormattingEnabled = true;
+            this.gold_month_combobox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.gold_month_combobox.Location = new System.Drawing.Point(214, 227);
+            this.gold_month_combobox.Name = "gold_month_combobox";
+            this.gold_month_combobox.Size = new System.Drawing.Size(32, 21);
+            this.gold_month_combobox.TabIndex = 4;
+            // 
+            // gold_year_combobox
+            // 
+            this.gold_year_combobox.FormattingEnabled = true;
+            this.gold_year_combobox.Items.AddRange(new object[] {
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026"});
+            this.gold_year_combobox.Location = new System.Drawing.Point(271, 227);
+            this.gold_year_combobox.Name = "gold_year_combobox";
+            this.gold_year_combobox.Size = new System.Drawing.Size(43, 21);
+            this.gold_year_combobox.TabIndex = 18;
+            // 
+            // gold_seperaton_label
+            // 
+            this.gold_seperaton_label.AutoSize = true;
+            this.gold_seperaton_label.Cursor = System.Windows.Forms.Cursors.SizeNS;
+            this.gold_seperaton_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gold_seperaton_label.Location = new System.Drawing.Point(253, 228);
+            this.gold_seperaton_label.Name = "gold_seperaton_label";
+            this.gold_seperaton_label.Size = new System.Drawing.Size(12, 16);
+            this.gold_seperaton_label.TabIndex = 19;
+            this.gold_seperaton_label.Text = "/";
+            // 
+            // gold_paypal_label
+            // 
+            this.gold_paypal_label.AutoSize = true;
+            this.gold_paypal_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gold_paypal_label.Location = new System.Drawing.Point(12, 23);
+            this.gold_paypal_label.Name = "gold_paypal_label";
+            this.gold_paypal_label.Size = new System.Drawing.Size(159, 24);
+            this.gold_paypal_label.TabIndex = 4;
+            this.gold_paypal_label.Text = "PayPal Payment";
+            // 
+            // gold_paypal_groupbox
+            // 
+            this.gold_paypal_groupbox.Controls.Add(this.gold_btn_paypal);
+            this.gold_paypal_groupbox.Controls.Add(this.gold_paypal_label);
+            this.gold_paypal_groupbox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.gold_paypal_groupbox.Location = new System.Drawing.Point(388, 0);
+            this.gold_paypal_groupbox.Name = "gold_paypal_groupbox";
+            this.gold_paypal_groupbox.Size = new System.Drawing.Size(282, 369);
+            this.gold_paypal_groupbox.TabIndex = 5;
+            this.gold_paypal_groupbox.TabStop = false;
+            // 
+            // gold_btn_Continue
+            // 
+            this.gold_btn_Continue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gold_btn_Continue.Location = new System.Drawing.Point(214, 302);
+            this.gold_btn_Continue.Name = "gold_btn_Continue";
+            this.gold_btn_Continue.Size = new System.Drawing.Size(100, 31);
+            this.gold_btn_Continue.TabIndex = 20;
+            this.gold_btn_Continue.Text = "Continue";
+            this.gold_btn_Continue.UseVisualStyleBackColor = true;
+            // 
+            // gold_btn_paypal
+            // 
+            this.gold_btn_paypal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gold_btn_paypal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gold_btn_paypal.Image = ((System.Drawing.Image)(resources.GetObject("gold_btn_paypal.Image")));
+            this.gold_btn_paypal.Location = new System.Drawing.Point(16, 65);
+            this.gold_btn_paypal.Name = "gold_btn_paypal";
+            this.gold_btn_paypal.Size = new System.Drawing.Size(251, 46);
+            this.gold_btn_paypal.TabIndex = 21;
+            this.gold_btn_paypal.UseVisualStyleBackColor = true;
+            // 
+            // gold_AmericanExpess_groupbox
+            // 
+            this.gold_AmericanExpess_groupbox.Controls.Add(this.gold_btn_americanexpress);
+            this.gold_AmericanExpess_groupbox.Controls.Add(this.gold_american_label);
+            this.gold_AmericanExpess_groupbox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.gold_AmericanExpess_groupbox.Location = new System.Drawing.Point(670, 0);
+            this.gold_AmericanExpess_groupbox.Name = "gold_AmericanExpess_groupbox";
+            this.gold_AmericanExpess_groupbox.Size = new System.Drawing.Size(282, 369);
+            this.gold_AmericanExpess_groupbox.TabIndex = 6;
+            this.gold_AmericanExpess_groupbox.TabStop = false;
+            // 
+            // gold_btn_americanexpress
+            // 
+            this.gold_btn_americanexpress.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gold_btn_americanexpress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gold_btn_americanexpress.Image = ((System.Drawing.Image)(resources.GetObject("gold_btn_americanexpress.Image")));
+            this.gold_btn_americanexpress.Location = new System.Drawing.Point(16, 59);
+            this.gold_btn_americanexpress.Name = "gold_btn_americanexpress";
+            this.gold_btn_americanexpress.Size = new System.Drawing.Size(196, 77);
+            this.gold_btn_americanexpress.TabIndex = 21;
+            this.gold_btn_americanexpress.UseVisualStyleBackColor = true;
+            // 
+            // gold_american_label
+            // 
+            this.gold_american_label.AutoSize = true;
+            this.gold_american_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gold_american_label.Location = new System.Drawing.Point(12, 23);
+            this.gold_american_label.Name = "gold_american_label";
+            this.gold_american_label.Size = new System.Drawing.Size(267, 24);
+            this.gold_american_label.TabIndex = 4;
+            this.gold_american_label.Text = "American Express Payment";
+            // 
+            // silver_panel
+            // 
+            this.silver_panel.Controls.Add(this.usexpress_box);
+            this.silver_panel.Controls.Add(this.paypal_box);
+            this.silver_panel.Controls.Add(this.creditcard_box);
+            this.silver_panel.Controls.Add(this.payments_picbox);
+            this.silver_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.silver_panel.Location = new System.Drawing.Point(0, 0);
+            this.silver_panel.Name = "silver_panel";
+            this.silver_panel.Size = new System.Drawing.Size(970, 541);
+            this.silver_panel.TabIndex = 72;
+            // 
+            // usexpress_box
+            // 
+            this.usexpress_box.Controls.Add(this.btn_usexpresscheckout);
+            this.usexpress_box.Controls.Add(this.usexpress_label);
+            this.usexpress_box.Dock = System.Windows.Forms.DockStyle.Left;
+            this.usexpress_box.Location = new System.Drawing.Point(670, 0);
+            this.usexpress_box.Name = "usexpress_box";
+            this.usexpress_box.Size = new System.Drawing.Size(282, 369);
+            this.usexpress_box.TabIndex = 6;
+            this.usexpress_box.TabStop = false;
+            // 
+            // btn_usexpresscheckout
+            // 
+            this.btn_usexpresscheckout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_usexpresscheckout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btn_usexpresscheckout.Image = ((System.Drawing.Image)(resources.GetObject("btn_usexpresscheckout.Image")));
+            this.btn_usexpresscheckout.Location = new System.Drawing.Point(16, 59);
+            this.btn_usexpresscheckout.Name = "btn_usexpresscheckout";
+            this.btn_usexpresscheckout.Size = new System.Drawing.Size(196, 77);
+            this.btn_usexpresscheckout.TabIndex = 21;
+            this.btn_usexpresscheckout.UseVisualStyleBackColor = true;
+            // 
+            // usexpress_label
+            // 
+            this.usexpress_label.AutoSize = true;
+            this.usexpress_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.usexpress_label.Location = new System.Drawing.Point(12, 23);
+            this.usexpress_label.Name = "usexpress_label";
+            this.usexpress_label.Size = new System.Drawing.Size(267, 24);
+            this.usexpress_label.TabIndex = 4;
+            this.usexpress_label.Text = "American Express Payment";
+            // 
+            // paypal_box
+            // 
+            this.paypal_box.Controls.Add(this.btn_paypalcheckout);
+            this.paypal_box.Controls.Add(this.infopaypal_label);
+            this.paypal_box.Dock = System.Windows.Forms.DockStyle.Left;
+            this.paypal_box.Location = new System.Drawing.Point(388, 0);
+            this.paypal_box.Name = "paypal_box";
+            this.paypal_box.Size = new System.Drawing.Size(282, 369);
+            this.paypal_box.TabIndex = 5;
+            this.paypal_box.TabStop = false;
+            // 
+            // btn_paypalcheckout
+            // 
+            this.btn_paypalcheckout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_paypalcheckout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btn_paypalcheckout.Image = ((System.Drawing.Image)(resources.GetObject("btn_paypalcheckout.Image")));
+            this.btn_paypalcheckout.Location = new System.Drawing.Point(16, 65);
+            this.btn_paypalcheckout.Name = "btn_paypalcheckout";
+            this.btn_paypalcheckout.Size = new System.Drawing.Size(251, 46);
+            this.btn_paypalcheckout.TabIndex = 21;
+            this.btn_paypalcheckout.UseVisualStyleBackColor = true;
+            // 
+            // infopaypal_label
+            // 
+            this.infopaypal_label.AutoSize = true;
+            this.infopaypal_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.infopaypal_label.Location = new System.Drawing.Point(12, 23);
+            this.infopaypal_label.Name = "infopaypal_label";
+            this.infopaypal_label.Size = new System.Drawing.Size(159, 24);
+            this.infopaypal_label.TabIndex = 4;
+            this.infopaypal_label.Text = "PayPal Payment";
+            // 
+            // creditcard_box
+            // 
+            this.creditcard_box.Controls.Add(this.silver_btn_continue);
+            this.creditcard_box.Controls.Add(this.label6);
+            this.creditcard_box.Controls.Add(this.silver_year_combobox);
+            this.creditcard_box.Controls.Add(this.silver_month_combobox);
+            this.creditcard_box.Controls.Add(this.silver_requiredexpdatelabel);
+            this.creditcard_box.Controls.Add(this.silver_expdatelabel);
+            this.creditcard_box.Controls.Add(this.silver_currencylabel);
+            this.creditcard_box.Controls.Add(this.silver_requiredcvvlabel);
+            this.creditcard_box.Controls.Add(this.silver_requiredcardnumberlabel);
+            this.creditcard_box.Controls.Add(this.silver_requiredholdernamelabel);
+            this.creditcard_box.Controls.Add(this.silver_txt_total);
+            this.creditcard_box.Controls.Add(this.silver_totallabel);
+            this.creditcard_box.Controls.Add(this.silver_txt_cvv);
+            this.creditcard_box.Controls.Add(this.silver_cvv);
+            this.creditcard_box.Controls.Add(this.silver_txt_cardnumber);
+            this.creditcard_box.Controls.Add(this.silver_cardnumberlabel);
+            this.creditcard_box.Controls.Add(this.silver_txtcardholder);
+            this.creditcard_box.Controls.Add(this.silver_cardholder_label);
+            this.creditcard_box.Controls.Add(this.silver_creditcard_label);
+            this.creditcard_box.Controls.Add(this.silver_planlabel);
+            this.creditcard_box.Dock = System.Windows.Forms.DockStyle.Left;
+            this.creditcard_box.Location = new System.Drawing.Point(0, 0);
+            this.creditcard_box.Name = "creditcard_box";
+            this.creditcard_box.Size = new System.Drawing.Size(388, 369);
+            this.creditcard_box.TabIndex = 3;
+            this.creditcard_box.TabStop = false;
+            // 
+            // silver_btn_continue
+            // 
+            this.silver_btn_continue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.silver_btn_continue.Location = new System.Drawing.Point(214, 302);
+            this.silver_btn_continue.Name = "silver_btn_continue";
+            this.silver_btn_continue.Size = new System.Drawing.Size(100, 31);
+            this.silver_btn_continue.TabIndex = 20;
+            this.silver_btn_continue.Text = "Continue";
+            this.silver_btn_continue.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label6.Location = new System.Drawing.Point(253, 228);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(12, 16);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "/";
+            // 
+            // silver_year_combobox
+            // 
+            this.silver_year_combobox.FormattingEnabled = true;
+            this.silver_year_combobox.Items.AddRange(new object[] {
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026"});
+            this.silver_year_combobox.Location = new System.Drawing.Point(271, 227);
+            this.silver_year_combobox.Name = "silver_year_combobox";
+            this.silver_year_combobox.Size = new System.Drawing.Size(43, 21);
+            this.silver_year_combobox.TabIndex = 18;
+            // 
+            // silver_month_combobox
+            // 
+            this.silver_month_combobox.FormattingEnabled = true;
+            this.silver_month_combobox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.silver_month_combobox.Location = new System.Drawing.Point(214, 227);
+            this.silver_month_combobox.Name = "silver_month_combobox";
+            this.silver_month_combobox.Size = new System.Drawing.Size(32, 21);
+            this.silver_month_combobox.TabIndex = 4;
+            // 
+            // silver_requiredexpdatelabel
+            // 
+            this.silver_requiredexpdatelabel.AutoSize = true;
+            this.silver_requiredexpdatelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.silver_requiredexpdatelabel.ForeColor = System.Drawing.Color.Red;
+            this.silver_requiredexpdatelabel.Location = new System.Drawing.Point(316, 225);
+            this.silver_requiredexpdatelabel.Name = "silver_requiredexpdatelabel";
+            this.silver_requiredexpdatelabel.Size = new System.Drawing.Size(15, 20);
+            this.silver_requiredexpdatelabel.TabIndex = 17;
+            this.silver_requiredexpdatelabel.Text = "*";
+            // 
+            // silver_expdatelabel
+            // 
+            this.silver_expdatelabel.AutoSize = true;
+            this.silver_expdatelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.silver_expdatelabel.Location = new System.Drawing.Point(14, 230);
+            this.silver_expdatelabel.Name = "silver_expdatelabel";
+            this.silver_expdatelabel.Size = new System.Drawing.Size(118, 20);
+            this.silver_expdatelabel.TabIndex = 15;
+            this.silver_expdatelabel.Text = "Expiration Date";
+            // 
+            // silver_currencylabel
+            // 
+            this.silver_currencylabel.AutoSize = true;
+            this.silver_currencylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.silver_currencylabel.ForeColor = System.Drawing.Color.Black;
+            this.silver_currencylabel.Location = new System.Drawing.Point(317, 265);
+            this.silver_currencylabel.Name = "silver_currencylabel";
+            this.silver_currencylabel.Size = new System.Drawing.Size(16, 18);
+            this.silver_currencylabel.TabIndex = 14;
+            this.silver_currencylabel.Text = "€";
+            // 
+            // silver_requiredcvvlabel
+            // 
+            this.silver_requiredcvvlabel.AutoSize = true;
+            this.silver_requiredcvvlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.silver_requiredcvvlabel.ForeColor = System.Drawing.Color.Red;
+            this.silver_requiredcvvlabel.Location = new System.Drawing.Point(316, 184);
+            this.silver_requiredcvvlabel.Name = "silver_requiredcvvlabel";
+            this.silver_requiredcvvlabel.Size = new System.Drawing.Size(15, 20);
+            this.silver_requiredcvvlabel.TabIndex = 13;
+            this.silver_requiredcvvlabel.Text = "*";
+            // 
+            // silver_requiredcardnumberlabel
+            // 
+            this.silver_requiredcardnumberlabel.AutoSize = true;
+            this.silver_requiredcardnumberlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.silver_requiredcardnumberlabel.ForeColor = System.Drawing.Color.Red;
+            this.silver_requiredcardnumberlabel.Location = new System.Drawing.Point(316, 152);
+            this.silver_requiredcardnumberlabel.Name = "silver_requiredcardnumberlabel";
+            this.silver_requiredcardnumberlabel.Size = new System.Drawing.Size(15, 20);
+            this.silver_requiredcardnumberlabel.TabIndex = 12;
+            this.silver_requiredcardnumberlabel.Text = "*";
+            // 
+            // silver_requiredholdernamelabel
+            // 
+            this.silver_requiredholdernamelabel.AutoSize = true;
+            this.silver_requiredholdernamelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.silver_requiredholdernamelabel.ForeColor = System.Drawing.Color.Red;
+            this.silver_requiredholdernamelabel.Location = new System.Drawing.Point(316, 110);
+            this.silver_requiredholdernamelabel.Name = "silver_requiredholdernamelabel";
+            this.silver_requiredholdernamelabel.Size = new System.Drawing.Size(15, 20);
+            this.silver_requiredholdernamelabel.TabIndex = 11;
+            this.silver_requiredholdernamelabel.Text = "*";
+            // 
+            // silver_txt_total
+            // 
+            this.silver_txt_total.Cursor = System.Windows.Forms.Cursors.No;
+            this.silver_txt_total.Location = new System.Drawing.Point(214, 264);
+            this.silver_txt_total.Name = "silver_txt_total";
+            this.silver_txt_total.ReadOnly = true;
+            this.silver_txt_total.Size = new System.Drawing.Size(100, 20);
+            this.silver_txt_total.TabIndex = 10;
+            this.silver_txt_total.Text = "9.99 ";
+            this.silver_txt_total.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // silver_totallabel
+            // 
+            this.silver_totallabel.AutoSize = true;
+            this.silver_totallabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.silver_totallabel.Location = new System.Drawing.Point(14, 269);
+            this.silver_totallabel.Name = "silver_totallabel";
+            this.silver_totallabel.Size = new System.Drawing.Size(44, 20);
+            this.silver_totallabel.TabIndex = 9;
+            this.silver_totallabel.Text = "Total";
+            // 
+            // silver_txt_cvv
+            // 
+            this.silver_txt_cvv.Location = new System.Drawing.Point(214, 184);
+            this.silver_txt_cvv.Name = "silver_txt_cvv";
+            this.silver_txt_cvv.Size = new System.Drawing.Size(100, 20);
+            this.silver_txt_cvv.TabIndex = 8;
+            // 
+            // silver_cvv
+            // 
+            this.silver_cvv.AutoSize = true;
+            this.silver_cvv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.silver_cvv.Location = new System.Drawing.Point(14, 189);
+            this.silver_cvv.Name = "silver_cvv";
+            this.silver_cvv.Size = new System.Drawing.Size(46, 20);
+            this.silver_cvv.TabIndex = 7;
+            this.silver_cvv.Text = "CVV:";
+            // 
+            // silver_txt_cardnumber
+            // 
+            this.silver_txt_cardnumber.Location = new System.Drawing.Point(214, 148);
+            this.silver_txt_cardnumber.Name = "silver_txt_cardnumber";
+            this.silver_txt_cardnumber.Size = new System.Drawing.Size(100, 20);
+            this.silver_txt_cardnumber.TabIndex = 6;
+            // 
+            // silver_cardnumberlabel
+            // 
+            this.silver_cardnumberlabel.AutoSize = true;
+            this.silver_cardnumberlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.silver_cardnumberlabel.Location = new System.Drawing.Point(14, 152);
+            this.silver_cardnumberlabel.Name = "silver_cardnumberlabel";
+            this.silver_cardnumberlabel.Size = new System.Drawing.Size(157, 20);
+            this.silver_cardnumberlabel.TabIndex = 5;
+            this.silver_cardnumberlabel.Text = "Credit Card Number: ";
+            // 
+            // silver_txtcardholder
+            // 
+            this.silver_txtcardholder.Location = new System.Drawing.Point(214, 110);
+            this.silver_txtcardholder.Name = "silver_txtcardholder";
+            this.silver_txtcardholder.Size = new System.Drawing.Size(100, 20);
+            this.silver_txtcardholder.TabIndex = 4;
+            // 
+            // silver_cardholder_label
+            // 
+            this.silver_cardholder_label.AutoSize = true;
+            this.silver_cardholder_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.silver_cardholder_label.Location = new System.Drawing.Point(14, 110);
+            this.silver_cardholder_label.Name = "silver_cardholder_label";
+            this.silver_cardholder_label.Size = new System.Drawing.Size(148, 20);
+            this.silver_cardholder_label.TabIndex = 3;
+            this.silver_cardholder_label.Text = "Card Holder Name: ";
+            // 
+            // silver_creditcard_label
+            // 
+            this.silver_creditcard_label.AutoSize = true;
+            this.silver_creditcard_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.silver_creditcard_label.Location = new System.Drawing.Point(8, 16);
+            this.silver_creditcard_label.Name = "silver_creditcard_label";
+            this.silver_creditcard_label.Size = new System.Drawing.Size(229, 24);
+            this.silver_creditcard_label.TabIndex = 1;
+            this.silver_creditcard_label.Text = "Payment by Credit Card";
+            // 
+            // silver_planlabel
+            // 
+            this.silver_planlabel.AutoSize = true;
+            this.silver_planlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.silver_planlabel.Location = new System.Drawing.Point(8, 53);
+            this.silver_planlabel.Name = "silver_planlabel";
+            this.silver_planlabel.Size = new System.Drawing.Size(93, 20);
+            this.silver_planlabel.TabIndex = 2;
+            this.silver_planlabel.Text = "Silver Plan";
+            // 
+            // payments_picbox
+            // 
+            this.payments_picbox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.payments_picbox.Image = ((System.Drawing.Image)(resources.GetObject("payments_picbox.Image")));
+            this.payments_picbox.Location = new System.Drawing.Point(0, 369);
+            this.payments_picbox.Name = "payments_picbox";
+            this.payments_picbox.Size = new System.Drawing.Size(970, 172);
+            this.payments_picbox.TabIndex = 0;
+            this.payments_picbox.TabStop = false;
             // 
             // UserForm
             // 
@@ -1537,9 +2023,21 @@
             this.signupPanel.ResumeLayout(false);
             this.signupPanel.PerformLayout();
             this.gold_panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.payment_picbox)).EndInit();
-            this.credit_box.ResumeLayout(false);
-            this.credit_box.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gold_payment_picbox)).EndInit();
+            this.gold_credit_box.ResumeLayout(false);
+            this.gold_credit_box.PerformLayout();
+            this.gold_paypal_groupbox.ResumeLayout(false);
+            this.gold_paypal_groupbox.PerformLayout();
+            this.gold_AmericanExpess_groupbox.ResumeLayout(false);
+            this.gold_AmericanExpess_groupbox.PerformLayout();
+            this.silver_panel.ResumeLayout(false);
+            this.usexpress_box.ResumeLayout(false);
+            this.usexpress_box.PerformLayout();
+            this.paypal_box.ResumeLayout(false);
+            this.paypal_box.PerformLayout();
+            this.creditcard_box.ResumeLayout(false);
+            this.creditcard_box.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.payments_picbox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1648,28 +2146,65 @@
         private System.Windows.Forms.Label Info_label;
         private System.Windows.Forms.Button btn_gold;
         private System.Windows.Forms.Button btn_silver;
-        private System.Windows.Forms.Button freetrial_button;
         private System.Windows.Forms.PictureBox upgradeinfo_picbox;
         private System.Windows.Forms.Panel gold_panel;
-        private System.Windows.Forms.GroupBox credit_box;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox gold_credit_box;
+        private System.Windows.Forms.Label gold_creditinfolabel;
         private System.Windows.Forms.Label plan_label;
-        private System.Windows.Forms.PictureBox payment_picbox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label expdate_label;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox gold_payment_picbox;
+        private System.Windows.Forms.Label requiredexpdate_label;
+        private System.Windows.Forms.Label gold_expdate_label;
+        private System.Windows.Forms.Label currency_label;
         private System.Windows.Forms.Label requiredcvv_label;
         private System.Windows.Forms.Label requiredCardNumber;
         private System.Windows.Forms.Label requiredCardHolder_label;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label total_label;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label cvv_label;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label creditcard_label;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label cardholder_label;
+        private System.Windows.Forms.TextBox gold_txt_total;
+        private System.Windows.Forms.Label gold_total_label;
+        private System.Windows.Forms.TextBox gold_txt_cvv;
+        private System.Windows.Forms.Label gold_cvv_label;
+        private System.Windows.Forms.TextBox gold_txt_cardnumber;
+        private System.Windows.Forms.Label gold_creditcard_label;
+        private System.Windows.Forms.TextBox gold_txt_cardholder;
+        private System.Windows.Forms.Label gold_cardholder_label;
+        private System.Windows.Forms.Label gold_seperaton_label;
+        private System.Windows.Forms.ComboBox gold_year_combobox;
+        private System.Windows.Forms.ComboBox gold_month_combobox;
+        private System.Windows.Forms.GroupBox gold_paypal_groupbox;
+        private System.Windows.Forms.Label gold_paypal_label;
+        private System.Windows.Forms.Button gold_btn_Continue;
+        private System.Windows.Forms.Button gold_btn_paypal;
+        private System.Windows.Forms.GroupBox gold_AmericanExpess_groupbox;
+        private System.Windows.Forms.Button gold_btn_americanexpress;
+        private System.Windows.Forms.Label gold_american_label;
+        private System.Windows.Forms.Panel silver_panel;
+        private System.Windows.Forms.GroupBox usexpress_box;
+        private System.Windows.Forms.Button btn_usexpresscheckout;
+        private System.Windows.Forms.Label usexpress_label;
+        private System.Windows.Forms.GroupBox paypal_box;
+        private System.Windows.Forms.Button btn_paypalcheckout;
+        private System.Windows.Forms.Label infopaypal_label;
+        private System.Windows.Forms.GroupBox creditcard_box;
+        private System.Windows.Forms.Button silver_btn_continue;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox silver_year_combobox;
+        private System.Windows.Forms.ComboBox silver_month_combobox;
+        private System.Windows.Forms.Label silver_requiredexpdatelabel;
+        private System.Windows.Forms.Label silver_expdatelabel;
+        private System.Windows.Forms.Label silver_currencylabel;
+        private System.Windows.Forms.Label silver_requiredcvvlabel;
+        private System.Windows.Forms.Label silver_requiredcardnumberlabel;
+        private System.Windows.Forms.Label silver_requiredholdernamelabel;
+        private System.Windows.Forms.TextBox silver_txt_total;
+        private System.Windows.Forms.Label silver_totallabel;
+        private System.Windows.Forms.TextBox silver_txt_cvv;
+        private System.Windows.Forms.Label silver_cvv;
+        private System.Windows.Forms.TextBox silver_txt_cardnumber;
+        private System.Windows.Forms.Label silver_cardnumberlabel;
+        private System.Windows.Forms.TextBox silver_txtcardholder;
+        private System.Windows.Forms.Label silver_cardholder_label;
+        private System.Windows.Forms.Label silver_creditcard_label;
+        private System.Windows.Forms.Label silver_planlabel;
+        private System.Windows.Forms.PictureBox payments_picbox;
     }
 }
 

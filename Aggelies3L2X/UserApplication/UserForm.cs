@@ -1526,6 +1526,18 @@ namespace UserApplication
 
         }
 
+        private void btn_silver_Click(object sender, EventArgs e)
+        {
+            this.silver_panel.Visible = true;
+            this.silver_panel.BringToFront();
+        }
+
+        private void btn_gold_Click(object sender, EventArgs e)
+        {
+            this.gold_panel.Visible = true;
+            this.gold_panel.BringToFront();
+        }
+
 
 
         /// <summary>
