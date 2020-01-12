@@ -15,19 +15,46 @@ namespace AdministratorPanel
 {
     public partial class AdminForm : Form
     {
+        string connectionString = Properties.Settings.Default.AggeliesDBConnectionString;
+        private string imagesLocation;
         public AdminForm()
         {
             var directoryName = Application.StartupPath;
-            Console.WriteLine(directoryName);
             var path = Directory.GetParent(directoryName).FullName;
-            Console.WriteLine(path);
             var z = Directory.GetParent(path).FullName;
-            Console.WriteLine(z);
+            imagesLocation = z.ToString() + @"\Resources\images\";
             InitializeComponent();
           
         }
 
-       
+        private void PopulateTreeViewAdsCategory(int parentId, TreeNode parentNode)
+        {
+
+            TreeNode childNode;
+            AggeliesDBDataSet.AdCategoryDataTable dt = new AggeliesDBDataSet.AdCategoryDataTable();
+            BindingSource bs = new BindingSource();
+            bs.DataSource = adCategoryTableAdapter.Fill(dt);
+            foreach (DataRow dr in dt.Select("[catParent]=" + parentId))
+            {
+                TreeNode t = new TreeNode();
+                t.Text = dr["catID"].ToString() + " - " + dr["catTitle"].ToString();
+                t.Name = dr["catID"].ToString();
+                t.Tag = dt.Rows.IndexOf(dr);
+                if (parentNode == null)
+                {
+                    treeviewdatabase.Nodes.Add(t);
+                    childNode = t;
+                }
+                else
+                {
+                    parentNode.Nodes.Add(t);
+                    childNode = t;
+                }
+                PopulateTreeViewAdsCategory(Convert.ToInt32(dr["catID"].ToString()), childNode);
+            }
+        }
+
+
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
@@ -58,7 +85,7 @@ namespace AdministratorPanel
             this.usersTableAdapter1.Fill(this.aggeliesDBDataSet.Users);
             // TODO: This line of code loads data into the 'aggeliesDBDataSet1.Users' table. You can move, or remove it, as needed.
 
-            
+           
 
         }
 
@@ -156,9 +183,48 @@ namespace AdministratorPanel
             Application.Exit();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
 
+        private void toolSortB_Click(object sender, EventArgs e)
+        {
+            this.adsTableTableAdapter.FillByOwner(this.aggeliesDBDataSet.AdsTable, Int32.Parse(userIDSortTB.Text.ToString()));
+        }
+
+        private void toolDelB_Click(object sender, EventArgs e)
+        {
+            this.adsTableTableAdapter.DeleteAd(Int32.Parse(adIDTB.Text.ToString()));
+            this.adsTableTableAdapter.Fill(this.aggeliesDBDataSet.AdsTable);
+        }
+
+        private void toolSaveB_Click(object sender, EventArgs e)
+        {
+            this.adsTableTableAdapter.Update(this.aggeliesDBDataSet.AdsTable);
+            MessageBox.Show("Table updated !");
+        }
+
+        private void ShowNodeData(TreeNode nod)
+        {
+            if (nod.Nodes.Count == 0) { 
+            this.adsTableTableAdapter.FillByCategory(this.aggeliesDBDataSet.AdsTable,Int32.Parse(nod.Name));
+            }
+
+
+        }
+        private void treeviewdatabase_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+           
+            ShowNodeData(e.Node);
+        }
+
+        private void AdsLabel_Click(object sender, EventArgs e)
+        {
+            this.adsTableTableAdapter.Fill(this.aggeliesDBDataSet.AdsTable);
+        }
+
+        private void btn_ads_Click(object sender, EventArgs e)
+        {
+            PopulateTreeViewAdsCategory(0, null);
+            AdsMidPanel.BringToFront();
+            AdsRightPanel.BringToFront();
         }
     }
 }

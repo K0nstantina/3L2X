@@ -162,18 +162,6 @@
   <data name="splitContainer2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="treeviewdatabase.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="treeviewdatabase.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="treeviewdatabase.Size" type="System.Drawing.Size, System.Drawing">
-    <value>235, 433</value>
-  </data>
-  <data name="treeviewdatabase.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;treeviewdatabase.Name" xml:space="preserve">
     <value>treeviewdatabase</value>
   </data>
@@ -222,145 +210,115 @@
   <data name="&gt;&gt;splitContainer2.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="catIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>catID</value>
-  </data>
-  <data name="catTitleDataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
-    <value>catTitle</value>
-  </data>
-  <data name="catParentDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>catParent</value>
-  </data>
-  <metadata name="adCategoryBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>179, 134</value>
+  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1064, 251</value>
   </metadata>
-  <metadata name="aggeliesDBDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 49</value>
+  </data>
+  <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>590, 25</value>
+  </data>
+  <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="toolStrip1.Text" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Name" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Parent" xml:space="preserve">
+    <value>AdsMidPanel</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="adsTableBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>360, 95</value>
   </metadata>
-  <data name="dataGridView2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="allAdsDGV.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="dataGridView2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="allAdsDGV.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 84</value>
   </data>
-  <data name="dataGridView2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>576, 401</value>
+  <data name="allAdsDGV.Size" type="System.Drawing.Size, System.Drawing">
+    <value>573, 254</value>
   </data>
-  <data name="dataGridView2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dataGridView2.Name" xml:space="preserve">
-    <value>dataGridView2</value>
-  </data>
-  <data name="&gt;&gt;dataGridView2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridView2.Parent" xml:space="preserve">
-    <value>AdsCategoriesTab</value>
-  </data>
-  <data name="&gt;&gt;dataGridView2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="AdsCategoriesTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="AdsCategoriesTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="AdsCategoriesTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>582, 407</value>
-  </data>
-  <data name="AdsCategoriesTab.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="AdsCategoriesTab.Text" xml:space="preserve">
-    <value>Ads Categories</value>
-  </data>
-  <data name="&gt;&gt;AdsCategoriesTab.Name" xml:space="preserve">
-    <value>AdsCategoriesTab</value>
-  </data>
-  <data name="&gt;&gt;AdsCategoriesTab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AdsCategoriesTab.Parent" xml:space="preserve">
-    <value>CategoriesTabC</value>
-  </data>
-  <data name="&gt;&gt;AdsCategoriesTab.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>pID</value>
-  </data>
-  <data name="propertyDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>property</value>
-  </data>
-  <data name="catTitleDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>catTitle</value>
-  </data>
-  <metadata name="propertiesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>573, 173</value>
-  </metadata>
-  <data name="propertiesGridView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="propertiesGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="propertiesGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>576, 401</value>
-  </data>
-  <data name="propertiesGridView.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;propertiesGridView.Name" xml:space="preserve">
-    <value>propertiesGridView</value>
-  </data>
-  <data name="&gt;&gt;propertiesGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;propertiesGridView.Parent" xml:space="preserve">
-    <value>AdsPropertiesTab</value>
-  </data>
-  <data name="&gt;&gt;propertiesGridView.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="AdsPropertiesTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="AdsPropertiesTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="AdsPropertiesTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>582, 407</value>
-  </data>
-  <data name="AdsPropertiesTab.TabIndex" type="System.Int32, mscorlib">
+  <data name="allAdsDGV.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="AdsPropertiesTab.Text" xml:space="preserve">
-    <value>Ads Properties</value>
+  <data name="&gt;&gt;allAdsDGV.Name" xml:space="preserve">
+    <value>allAdsDGV</value>
   </data>
-  <data name="&gt;&gt;AdsPropertiesTab.Name" xml:space="preserve">
-    <value>AdsPropertiesTab</value>
+  <data name="&gt;&gt;allAdsDGV.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;AdsPropertiesTab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;allAdsDGV.Parent" xml:space="preserve">
+    <value>AdsMidPanel</value>
   </data>
-  <data name="&gt;&gt;AdsPropertiesTab.Parent" xml:space="preserve">
-    <value>CategoriesTabC</value>
-  </data>
-  <data name="&gt;&gt;AdsPropertiesTab.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;allAdsDGV.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="CategoriesTabC.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="AdsLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
-  <data name="CategoriesTabC.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AdsLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="AdsLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="CategoriesTabC.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AdsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>590, 49</value>
+  </data>
+  <data name="AdsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="AdsLabel.Text" xml:space="preserve">
+    <value>View all listed Ads</value>
+  </data>
+  <data name="AdsLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;AdsLabel.Name" xml:space="preserve">
+    <value>AdsLabel</value>
+  </data>
+  <data name="&gt;&gt;AdsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdsLabel.Parent" xml:space="preserve">
+    <value>AdsMidPanel</value>
+  </data>
+  <data name="&gt;&gt;AdsLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="AdsMidPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="AdsMidPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="AdsMidPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>590, 433</value>
   </data>
-  <data name="CategoriesTabC.TabIndex" type="System.Int32, mscorlib">
+  <data name="AdsMidPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;AdsMidPanel.Name" xml:space="preserve">
+    <value>AdsMidPanel</value>
+  </data>
+  <data name="&gt;&gt;AdsMidPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdsMidPanel.Parent" xml:space="preserve">
+    <value>splitContainer2.Panel2</value>
+  </data>
+  <data name="&gt;&gt;AdsMidPanel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="&gt;&gt;CategoriesTabC.Name" xml:space="preserve">
@@ -397,53 +355,11 @@
     <value>splitContainer2.Panel2</value>
   </data>
   <data name="&gt;&gt;categoriesMidPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
-  <data name="userIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>userID</value>
-  </data>
-  <data name="fNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>fName</value>
-  </data>
-  <data name="lNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>lName</value>
-  </data>
-  <data name="uNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>uName</value>
-  </data>
-  <data name="uPasswordDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>uPassword</value>
-  </data>
-  <data name="uEmailDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>uEmail</value>
-  </data>
-  <data name="uCatDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>uCat</value>
-  </data>
-  <data name="uAgeDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>uAge</value>
-  </data>
-  <data name="uRecoverEmailDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>uRecoverEmail</value>
-  </data>
-  <data name="uPhoneDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>uPhone</value>
-  </data>
-  <metadata name="usersBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>341, 56</value>
+  <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>133, 25</value>
   </metadata>
-  <data name="dataGridView1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>625, 406</value>
-  </data>
-  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
   <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
     <value>dataGridView1</value>
   </data>
@@ -455,27 +371,6 @@
   </data>
   <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>133, 25</value>
-  </metadata>
-  <data name="Statuslabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 17</value>
-  </data>
-  <data name="Statuslabel.Text" xml:space="preserve">
-    <value>Status</value>
-  </data>
-  <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 406</value>
-  </data>
-  <data name="statusStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>625, 22</value>
-  </data>
-  <data name="statusStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="statusStrip.Text" xml:space="preserve">
-    <value>Status</value>
   </data>
   <data name="&gt;&gt;statusStrip.Name" xml:space="preserve">
     <value>statusStrip</value>
@@ -508,7 +403,7 @@
     <value>splitContainer2.Panel2</value>
   </data>
   <data name="&gt;&gt;usersMidPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;splitContainer2.Panel2.Name" xml:space="preserve">
     <value>splitContainer2.Panel2</value>
@@ -557,6 +452,2964 @@
   </data>
   <data name="splitContainer1.Panel2.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;adDetailsPanel.Name" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adDetailsPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adDetailsPanel.Parent" xml:space="preserve">
+    <value>AdsRightPanel</value>
+  </data>
+  <data name="&gt;&gt;adDetailsPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="adDetailsPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="adIDL" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="adTitleL" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="adCatIDL" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="adOwnerIDL" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="adCDiDL" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="adEXiDL" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="AdPriceL" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="adPublishedL" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="adStatusL" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="adDescL" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="adIDTB" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="adTitleTB" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="adCatTB" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="ownerTB" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="adCDTB" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="adEXTB" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="adPriceTB" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="adPublishedCB" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="adStatusTB" Row="8" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="adDescTB" Row="9" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Absolute,30,Absolute,30,Absolute,30,Absolute,30,Absolute,30,Absolute,30,Absolute,30,Absolute,30,Absolute,30,Absolute,30" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="AdsRightPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="AdsRightPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="AdsRightPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>397, 433</value>
+  </data>
+  <data name="AdsRightPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;AdsRightPanel.Name" xml:space="preserve">
+    <value>AdsRightPanel</value>
+  </data>
+  <data name="&gt;&gt;AdsRightPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdsRightPanel.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;AdsRightPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesRightPanel.Name" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesRightPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesRightPanel.Parent" xml:space="preserve">
+    <value>categoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesRightPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;PropertiesRightPanel.Name" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;PropertiesRightPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PropertiesRightPanel.Parent" xml:space="preserve">
+    <value>categoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;PropertiesRightPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="categoriesRightPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="categoriesRightPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="categoriesRightPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>397, 433</value>
+  </data>
+  <data name="categoriesRightPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="&gt;&gt;categoriesRightPanel.Name" xml:space="preserve">
+    <value>categoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;categoriesRightPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;categoriesRightPanel.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;categoriesRightPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="uPhoneLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="uRecoverEmailLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="uEmailLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="uPasswordLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="uNameLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="lNameLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="fNameLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="useridlabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="&gt;&gt;checkbox_blacklist.Name" xml:space="preserve">
+    <value>checkbox_blacklist</value>
+  </data>
+  <data name="&gt;&gt;checkbox_blacklist.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkbox_blacklist.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;checkbox_blacklist.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txt_age.Name" xml:space="preserve">
+    <value>txt_age</value>
+  </data>
+  <data name="&gt;&gt;txt_age.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_age.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;txt_age.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;uPhoneLabel.Name" xml:space="preserve">
+    <value>uPhoneLabel</value>
+  </data>
+  <data name="&gt;&gt;uPhoneLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;uPhoneLabel.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;uPhoneLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txt_phone.Name" xml:space="preserve">
+    <value>txt_phone</value>
+  </data>
+  <data name="&gt;&gt;txt_phone.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_phone.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;txt_phone.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;uRecoverEmailLabel.Name" xml:space="preserve">
+    <value>uRecoverEmailLabel</value>
+  </data>
+  <data name="&gt;&gt;uRecoverEmailLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;uRecoverEmailLabel.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;uRecoverEmailLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txt_recoveremail.Name" xml:space="preserve">
+    <value>txt_recoveremail</value>
+  </data>
+  <data name="&gt;&gt;txt_recoveremail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_recoveremail.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;txt_recoveremail.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;uEmailLabel.Name" xml:space="preserve">
+    <value>uEmailLabel</value>
+  </data>
+  <data name="&gt;&gt;uEmailLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;uEmailLabel.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;uEmailLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;txt_email.Name" xml:space="preserve">
+    <value>txt_email</value>
+  </data>
+  <data name="&gt;&gt;txt_email.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_email.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;txt_email.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;uPasswordLabel.Name" xml:space="preserve">
+    <value>uPasswordLabel</value>
+  </data>
+  <data name="&gt;&gt;uPasswordLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;uPasswordLabel.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;uPasswordLabel.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;txt_password.Name" xml:space="preserve">
+    <value>txt_password</value>
+  </data>
+  <data name="&gt;&gt;txt_password.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_password.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;txt_password.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;uNameLabel.Name" xml:space="preserve">
+    <value>uNameLabel</value>
+  </data>
+  <data name="&gt;&gt;uNameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;uNameLabel.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;uNameLabel.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;txt_username.Name" xml:space="preserve">
+    <value>txt_username</value>
+  </data>
+  <data name="&gt;&gt;txt_username.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_username.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;txt_username.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;lNameLabel.Name" xml:space="preserve">
+    <value>lNameLabel</value>
+  </data>
+  <data name="&gt;&gt;lNameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lNameLabel.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;lNameLabel.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;txt_lastname.Name" xml:space="preserve">
+    <value>txt_lastname</value>
+  </data>
+  <data name="&gt;&gt;txt_lastname.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_lastname.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;txt_lastname.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;fNameLabel.Name" xml:space="preserve">
+    <value>fNameLabel</value>
+  </data>
+  <data name="&gt;&gt;fNameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fNameLabel.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;fNameLabel.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;txt_firstname.Name" xml:space="preserve">
+    <value>txt_firstname</value>
+  </data>
+  <data name="&gt;&gt;txt_firstname.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_firstname.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;txt_firstname.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;useridlabel.Name" xml:space="preserve">
+    <value>useridlabel</value>
+  </data>
+  <data name="&gt;&gt;useridlabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;useridlabel.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;useridlabel.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;txt_userid.Name" xml:space="preserve">
+    <value>txt_userid</value>
+  </data>
+  <data name="&gt;&gt;txt_userid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txt_userid.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;txt_userid.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;btn_update.Name" xml:space="preserve">
+    <value>btn_update</value>
+  </data>
+  <data name="&gt;&gt;btn_update.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_update.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_update.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;btn_delete.Name" xml:space="preserve">
+    <value>btn_delete</value>
+  </data>
+  <data name="&gt;&gt;btn_delete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_delete.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_delete.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;btn_save.Name" xml:space="preserve">
+    <value>btn_save</value>
+  </data>
+  <data name="&gt;&gt;btn_save.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_save.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_save.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;btn_next.Name" xml:space="preserve">
+    <value>btn_next</value>
+  </data>
+  <data name="&gt;&gt;btn_next.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_next.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_next.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;btn_addnew.Name" xml:space="preserve">
+    <value>btn_addnew</value>
+  </data>
+  <data name="&gt;&gt;btn_addnew.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_addnew.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_addnew.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;btn_previous.Name" xml:space="preserve">
+    <value>btn_previous</value>
+  </data>
+  <data name="&gt;&gt;btn_previous.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_previous.Parent" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;btn_previous.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="usersRightPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="usersRightPanel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="usersRightPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="usersRightPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>397, 433</value>
+  </data>
+  <data name="usersRightPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;usersRightPanel.Name" xml:space="preserve">
+    <value>usersRightPanel</value>
+  </data>
+  <data name="&gt;&gt;usersRightPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;usersRightPanel.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;usersRightPanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1230, 433</value>
+  </data>
+  <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
+    <value>829</value>
+  </data>
+  <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="treeviewdatabase.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="treeviewdatabase.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="treeviewdatabase.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 433</value>
+  </data>
+  <data name="treeviewdatabase.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;treeviewdatabase.Name" xml:space="preserve">
+    <value>treeviewdatabase</value>
+  </data>
+  <data name="&gt;&gt;treeviewdatabase.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;treeviewdatabase.Parent" xml:space="preserve">
+    <value>treeview_panel</value>
+  </data>
+  <data name="&gt;&gt;treeviewdatabase.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="toolDelB.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASxSURBVFhHzVdbTFxVFOXDCv1QWwqDVeuHIg+NNRpNTYgx
+        saaJDQTro4/ElFbwT/3xFSpCtYm0lFCSNmmxxKJNqDFGUzrDc2agVprCh0lheEyqAwg0iCKvAgNTWO51
+        zh1g6O2US1LrSlb27H3v2Wvdc889d27E/wF33Z/nsN+bW4nVOZWI/PRGRik6VFxpnb2pQS1qammNe3jg
+        vwK1qKmlNWLpTuFCKtD4BnBx+yK+KUxHtuNPFXVusc6e7C2gFjW1tIaNU6XQmAZckiZNOxdR8uZtyKv5
+        S0WVW62zJ3sLqEVNLa1hWy33i8ip8CHX3os8R98891f24kBVD/Kru1VkbrXOnuxNUIuaWlpDDNjVwctj
+        QIvQMx7KzkngS3uHiiupsyd7E9SippbWsEXtMwyMzOHy8CxaRhbYOjqHjmvSsMKjInOrdfZkb4Ja1NTS
+        GvMGeHKrNPGMLrBtbA7eCSD/nEdF5lbr7MnehLkB4xZ4ZbquiOvfZGCQvwu7/UCho01F5lbr7MneBLWo
+        qaU15tdA/tlWFJwjPfM8bPegqLIdxdUdKjK3Xm9VvQnzNWAY8Mmi6RJ2T4WybwYoqmpT0XJdZqFL6JM6
+        YToDwTXgk+nyyVT5ZMqC7JJarzQoqmxTkfly633TYkDYJb1JIirH5DEMGqD7riXskWb9AeBIdaeKzG9W
+        5/geYb9cebGsgatS75W+7gdXKRKR+2vNboHeiPpuwgHhkYsDKt6qflUoeyCO1nnxt0TZkNGQFIMrz9iU
+        iYiCJhMDxrvgh7d2w/3ofXAlrIMzMUbRJXQnxaIhWRpIZG5alzEc+2NGBo419uOE8HjTII62TKLhyQdw
+        3XEGPSkPaxM3GPisShlwx6+B//tSjBV8grHD2cJ9GCvUHDei4tI6z5Ux0zK2PiEao9KrIisTF+TKz4u4
+        c+MGTJcfR+C7EvyxZWPQxN1angZytQFXQgz8Jw5iKP05DG3bhKHXnl8eea6M4Vhnkg3D0qs+cR1mSw5i
+        5qsC+EsOYepkEUZeT0Hg22PofTUlxMS8AWdiLAKF2ZjcuxUTmanCtGUyVY0JyGw4k+LAPccttwgl+Qhk
+        pWEmKx2Te15R50y/vRXDxQeCBtZqA8YtcD0WDXz+PvDBbmGG5ocmXFpX58oYGUthefJgfycTPyfHoOGp
+        DXA+G4+593YA727H4M7NQfFNCwaMRfiTLKC6+LWolZmoSbShRqazVliXHAfX43EqMjetyxhnfDTO7t2D
+        0qZ+lDX349SvgyjtnIJbTOCjDAzvejko/oLwIaFxC4zHUB5lyEYYQnmsIY81TjYPqMg8XJ09ZoWn6r3g
+        6+e6kE/MP7u2aPFDl2jgkaA4YYs0NqIpGXFNOLGIbCr7CUrdXhWZh60LVb2uXYnzdtSsv8VGFDQQkMF+
+        sb+Y01Ijvna2q8jcSp1mSDmkEHYrDofT7g7jVyis1s1fRsbbsMzZJmxHmWuB3whP13fgzHmviswt19lT
+        ehNh/w+EQ3mD+RVZrZv+H7gDHyahBtZ/YR/nAbrjglxKrhFOHeNK6+xNDdvH5b+IZsiHyRrh08KXhJtv
+        M18UPiEM+TRbJaQJTsvtJq+c4iEfp3cQERH/AkmiAPEEJK+HAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="toolDelB.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolDelB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="toolDelB.Text" xml:space="preserve">
+    <value>Delete Row</value>
+  </data>
+  <data name="toolSaveB.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAWWSURBVFhHvVfrT5t1FMY43MXsom44s6/Gjxr9pl/MWEw0
+        mTGLl+yzf8PcnLt04DJUBDdxG7s5HOjGRgwtbaGD3WUXHLpBL5QNVqBQWMuthW4I9PE8v/d9S9u9wZQl
+        PsmT857nPe855z2/01JyBIvWWhz2FbudWLrTicU7nuQSRYeyC9WZmzVYizVZ2MBy3vi/wFqsqZXWsIbd
+        KVzbCDR/Alz/LIWfCj/CdseQspqfpc6czC1gLdbUSmvI46gUmj8EbkqSW5tTKH7LJlhcYWWVn63OnMwt
+        YC3W1EpryFsq50XstHVjt70PFkcwyT3OPnxd34OihoCy9LPVmZO5CdZiTa20BmnArm7ejQJtQncsnR1x
+        YJ/dp+xCdOZkboK1WFMrrSFvyVd6A2MJ3B2dRdvYHNvHE/BNSEKbW1n62erMydwEa7GmVlpDsgEGt0sS
+        9/gcPdEE/JNAUZ1bWfrZ6szJ3IR5A/oR+GVc96Tr+/KgwS5h4DHwvcOjLP1sdeZkboK1WFMrrSG5A0XW
+        dnxXR7qTLLa7Uer0Yn+DT1n62evtKjdhvgN6A92yNA+EgUfpDP4DlNZ7lF2IzpzMTZhOwNiBbhlXt4yq
+        W0Zm8IFofTLKUqdHWfpZ68wplph3CQN8+8mEkFZjj2gDU8B+OVNa+tnrklMsMW8DfGBAxhZK4aAwMguU
+        ubzK0k/XfcoOTWsabUQW/ifqYukbuQjzI9B34AdZmANON36U8aXyoCQrb+xQNlM/0ugXduDIebkWHpXr
+        401+nLzYqSx96ocllli20+Sb0JhAWLoN8834FjqHhfwIHzrvVZZ+qn7sQgfkY/4E2UCmRqzU/hqaN/BQ
+        jmDocSKN1EZnIG/rUdaIoZXvHZy67MemqlbkbK3VuIW0IucLm2aVr3OrVSZgx0t7nFhX4GyW2up3QbKB
+        Yb79VCKN1KJS6HCDR1kjhlZ2DmeuduKZbTbcGJzF5X4Zy3/g6sAMWiPA6oJ6TmJFWgMxGWkmJ4TyacKx
+        Jq+y9A2d5Wqa7+PZL224I+eXs1eOIzqOs7U2VFvtOGtzKKpr0XiPMe1yhi9a5n4XJJew3OVG+Xm3LI0n
+        yaPCExd8qLjUoSx9Qz950YfaG9LAdhuu9U9hWUknIiNj6I3E0DM8iV6d6lo03mNMs3zU9AbULiQnIMeq
+        3jKV1Lg/Jy94lTViaAnr9ftYJA3Uy1ddXlkXhsJjqDpnQ2WNHVU61bVovMcYl3w9cg+SDSzWG3gkFSZl
+        0VIZF42jPt7oVZa+oRO1egM18qfv1SMBDIQiuBcchj84kkZqvMeY3zvjWG3WwDTPWxKnUvZN4WfZAYJ+
+        ql4nR8AGTrkn8FZFDyr/DKGn5yG6AumkxnuMqfJOyBKaHMF8qJTzNkP9zS7VwNG2GNafCeLd00G882sf
+        3s4gNd5jzIn2GNakNaAvYUWTR+hFhZy3wV+ElZd8OH3Fryx9Qz99pQOuli7kSgNlf8ewsaYfH5wL4r3q
+        IDbozJeC+Wf6lMZ7jDl0J6MB4/fAfPjtsvkEXC08AitKWqL4uDaE6r8GRZUzMjAr1zOyPbPTqG4NqZj9
+        tzMaeNp/TJ6TCRTdGsfmuiH0DkTQNTCOLTsKsXXXXvj7x+AOhOGTPejtD6uYb1vGkZfawCsWR1T9ayaT
+        4EJmkjvCY6JN1Rm/fJcDq3bbsa8lhs9dEQxFRhEajaOgqASF35QiOBJH9+AoHoRGMBgeUTFFEpvawCrh
+        m8J84YYF8P2XC+tRfDuObX9EkZiKY0ZGfrDsAMoPlWF6ehrxeFw4idnHkyqmuDWOtfKMPKsayBWyCToL
+        4WvrLLW9TMgvF05yhaUBLxQ2YVVhI5bL9fO7nIq8xxjG5u2x9smzaf+iLRQrha8L1wvNJmRGxr4h5LNP
+        DU6Qifg2ZhMyI2PlmZzcfwEs0P3Q3TpRywAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="toolSaveB.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolSaveB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="toolSaveB.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="toolSortB.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUsSURBVFhHvZfrb5N1FMeXiAESRWN06gv/Al8Z/gGjia80
+        xgSNf4ZvfIEQht1GF9aW69gGyDWgJioCa1l36SQbFzUaWO+7dIWW3Rlru3YrbP16vud5Wp6O2awL4SSf
+        nd85z6/nnN/5nadZa0Q2vVPn7ti2x4Otuz3YvOtZtihu1Rv1MzZzMBdzMnFRXuWDFyXMxZxGakPeYnUq
+        /Z8CN3YAN7+y8KXwOXa6p1QbdpV+xmRsEeZiTiO1IbVslcqNz4DbEuTPry2I/dcXqPPOqFa7Wj9jMrYI
+        czGnkdqQ2q1yX5TdV2LY05FAnTtZYq8ngfpr92DvjKumXa2fMRmbwlzMaaQ2RAro0Id308CgEMiUE8kB
+        +zrCqjfiZ0zGpjAXcxqpDand8p1ZwHwBdx+tYHD+Kf5UAeEFCXgloJp2tX7GZGwKczGnkdqQUgHc7Jcg
+        gdRTgukColnAfjWgmna1fsZkbMraBZhXEJV2DUvVI/LBIqNCfAlwuIOqaVfrZ0zGpjAXcxqpDSnNgP2y
+        H/uvkkCJ5o4AXJ4QDnaGVdOu3u/X2JS1Z8AsICZDMybEF8tJPgZc14KqN+JnTMamrNmB4gzEpF0xaVVM
+        WlZkTHwJaaXLE1RNu2o/Y4qmVBzCOE+fLQjUBvfEN54HDsqdUtNel1/aPy4dKPoZm1KxAH6QH5qwMCnM
+        rgBHvCHVtCv6n4hfBv5o9xBmJeaU2PQzNmXzmgWYM3BABuaQJ4DD0j4rLd4w2rojqlf723uiONYVwVEZ
+        uiNCizeKtt5RHDp5AQdOXEBrz4gUGZG4Ic2xaa2v4mIHZqTaGZ6MpzB5KPAVPtYVUk1b/csAv9zafSNg
+        d+X6Fek2Lnd4cOXSJeV3WdNvvoWo2dX9/wVMS5umlgpl0PdIkrV4g6ppT8twaYFSbPORdtgbbGisN2gQ
+        Lv32K1LzKYVr+visqbEBB5ub4HQ0+SXvy0Z6SwEPefp8oQz60nLHrZ1B1bRJSvafPncOvl4fFhcXkc1l
+        lYVsFql0GnfuDipc08dnuVwO+XweA/0DcDgcEcmtRZQKyEiLV7MgyIFxoiekmjbbzJniqTKZBQwNjSAc
+        iZYY9Afwz793FK6tz4aHRpHN5uByuXgVrxkFmEPY5g2grSuA9q5giePCD71hnOmLqKZ9vDuEU9dHYZeW
+        JpJJ+INB+APlBIIhZbWfe5MPxuF0OlmA/mNS6gBPxVNaoU86j9O9IdW05QZUGhvqEYvFtQPR6PC64N74
+        2H24jAJ0GGv5blIWJUNWBs1KTnwybzgpp6amzX0shsOVSD5AbCyO0djYuuDeB+MTxQ6UF/CE9y2Rrcgc
+        qpySGaDQfmz66m02TE5NIyEtvZ9IrgvunZ6ZLS+geAWV5LwvbK6eCjswN/cIU5PTmJiYXBfcOy+vp7wF
+        lgLMITzTExRCOCP3XeSscL4vjB+vR1XTPivFXOyPGW/BwgIezs1hZnZ2XXAvX8uyAor/D1SSi38824FG
+        2/dYXl7WgOlMpgTf/flUSuHa+ox7VwqF8ivY6A8T9y8/4e+bA6ZVlAJWpKj80pLCNX1WuXXrNux2e1xy
+        G6/hu3XutP40k05wIFfDGeE1Uasta/7AeGNvJ75pbscJVxPanHa0Ouw4vH8ffr54wUwFXdPHZ62yp8W5
+        HzabjV/F2wX9Inpd+ED4SPj4OfDJ3p3f9vX5fCBc02d5/qHAfG8L+lXMPyyC9/E8eE/Ybquru024Nn3F
+        52z7NqHsB+rzlJeEN4X3Tbim74UKT/eKSYWT1tT8B1Ck7ok/AC/fAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="toolSortB.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolSortB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="toolSortB.Text" xml:space="preserve">
+    <value>Sort Table By</value>
+  </data>
+  <data name="toolSortB.ToolTipText" xml:space="preserve">
+    <value>Sort Ads By User</value>
+  </data>
+  <data name="userIDSortTB.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="userIDSortTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 25</value>
+  </data>
+  <data name="adIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>adID</value>
+  </data>
+  <data name="adTitleDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>adTitle</value>
+  </data>
+  <data name="adCategoryDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>adCategory</value>
+  </data>
+  <data name="ownerIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>ownerID</value>
+  </data>
+  <data name="creationDateDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>creationDate</value>
+  </data>
+  <data name="expirationDateDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>expirationDate</value>
+  </data>
+  <data name="adDescDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>adDesc</value>
+  </data>
+  <data name="priceDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>price</value>
+  </data>
+  <data name="publishedDataGridViewCheckBoxColumn.HeaderText" xml:space="preserve">
+    <value>Published</value>
+  </data>
+  <data name="adStatusDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>adStatus</value>
+  </data>
+  <metadata name="adsTableBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>360, 95</value>
+  </metadata>
+  <metadata name="aggeliesDBDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>172, 17</value>
+  </metadata>
+  <metadata name="aggeliesDBDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>172, 17</value>
+  </metadata>
+  <metadata name="aggeliesDBDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="aggeliesDBDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="&gt;&gt;AdsCategoriesTab.Name" xml:space="preserve">
+    <value>AdsCategoriesTab</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesTab.Parent" xml:space="preserve">
+    <value>CategoriesTabC</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesTab.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;AdsPropertiesTab.Name" xml:space="preserve">
+    <value>AdsPropertiesTab</value>
+  </data>
+  <data name="&gt;&gt;AdsPropertiesTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdsPropertiesTab.Parent" xml:space="preserve">
+    <value>CategoriesTabC</value>
+  </data>
+  <data name="&gt;&gt;AdsPropertiesTab.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CategoriesTabC.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="CategoriesTabC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="CategoriesTabC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>590, 433</value>
+  </data>
+  <data name="CategoriesTabC.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;CategoriesTabC.Name" xml:space="preserve">
+    <value>CategoriesTabC</value>
+  </data>
+  <data name="&gt;&gt;CategoriesTabC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CategoriesTabC.Parent" xml:space="preserve">
+    <value>categoriesMidPanel</value>
+  </data>
+  <data name="&gt;&gt;CategoriesTabC.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesDataGrid.Name" xml:space="preserve">
+    <value>AdsCategoriesDataGrid</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesDataGrid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesDataGrid.Parent" xml:space="preserve">
+    <value>AdsCategoriesTab</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesDataGrid.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="AdsCategoriesTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="AdsCategoriesTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="AdsCategoriesTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>582, 407</value>
+  </data>
+  <data name="AdsCategoriesTab.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="AdsCategoriesTab.Text" xml:space="preserve">
+    <value>Ads Categories</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesTab.Name" xml:space="preserve">
+    <value>AdsCategoriesTab</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesTab.Parent" xml:space="preserve">
+    <value>CategoriesTabC</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesTab.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="adCategoryBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>179, 134</value>
+  </metadata>
+  <data name="AdsCategoriesDataGrid.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="AdsCategoriesDataGrid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="AdsCategoriesDataGrid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>576, 401</value>
+  </data>
+  <data name="AdsCategoriesDataGrid.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesDataGrid.Name" xml:space="preserve">
+    <value>AdsCategoriesDataGrid</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesDataGrid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesDataGrid.Parent" xml:space="preserve">
+    <value>AdsCategoriesTab</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesDataGrid.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="catIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>catID</value>
+  </data>
+  <data name="catTitleDataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>catTitle</value>
+  </data>
+  <data name="catParentDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>catParent</value>
+  </data>
+  <metadata name="adCategoryBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>179, 134</value>
+  </metadata>
+  <data name="&gt;&gt;propertiesGridView.Name" xml:space="preserve">
+    <value>propertiesGridView</value>
+  </data>
+  <data name="&gt;&gt;propertiesGridView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;propertiesGridView.Parent" xml:space="preserve">
+    <value>AdsPropertiesTab</value>
+  </data>
+  <data name="&gt;&gt;propertiesGridView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="AdsPropertiesTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="AdsPropertiesTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="AdsPropertiesTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>582, 407</value>
+  </data>
+  <data name="AdsPropertiesTab.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="AdsPropertiesTab.Text" xml:space="preserve">
+    <value>Ads Properties</value>
+  </data>
+  <data name="&gt;&gt;AdsPropertiesTab.Name" xml:space="preserve">
+    <value>AdsPropertiesTab</value>
+  </data>
+  <data name="&gt;&gt;AdsPropertiesTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdsPropertiesTab.Parent" xml:space="preserve">
+    <value>CategoriesTabC</value>
+  </data>
+  <data name="&gt;&gt;AdsPropertiesTab.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="propertiesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>573, 173</value>
+  </metadata>
+  <data name="propertiesGridView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="propertiesGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="propertiesGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>576, 401</value>
+  </data>
+  <data name="propertiesGridView.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;propertiesGridView.Name" xml:space="preserve">
+    <value>propertiesGridView</value>
+  </data>
+  <data name="&gt;&gt;propertiesGridView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;propertiesGridView.Parent" xml:space="preserve">
+    <value>AdsPropertiesTab</value>
+  </data>
+  <data name="&gt;&gt;propertiesGridView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>pID</value>
+  </data>
+  <data name="propertyDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>property</value>
+  </data>
+  <data name="catTitleDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>catTitle</value>
+  </data>
+  <metadata name="propertiesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>573, 173</value>
+  </metadata>
+  <metadata name="usersBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>341, 56</value>
+  </metadata>
+  <data name="dataGridView1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>625, 406</value>
+  </data>
+  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
+    <value>dataGridView1</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
+    <value>usersMidPanel</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="userIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>userID</value>
+  </data>
+  <data name="fNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>fName</value>
+  </data>
+  <data name="lNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>lName</value>
+  </data>
+  <data name="uNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>uName</value>
+  </data>
+  <data name="uPasswordDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>uPassword</value>
+  </data>
+  <data name="uEmailDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>uEmail</value>
+  </data>
+  <data name="uCatDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>uCat</value>
+  </data>
+  <data name="uAgeDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>uAge</value>
+  </data>
+  <data name="uRecoverEmailDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>uRecoverEmail</value>
+  </data>
+  <data name="uPhoneDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>uPhone</value>
+  </data>
+  <metadata name="usersBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>341, 56</value>
+  </metadata>
+  <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>133, 25</value>
+  </metadata>
+  <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 406</value>
+  </data>
+  <data name="statusStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>625, 22</value>
+  </data>
+  <data name="statusStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="statusStrip.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.Name" xml:space="preserve">
+    <value>statusStrip</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.Parent" xml:space="preserve">
+    <value>usersMidPanel</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Statuslabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 17</value>
+  </data>
+  <data name="Statuslabel.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="adDetailsPanel.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;adIDL.Name" xml:space="preserve">
+    <value>adIDL</value>
+  </data>
+  <data name="&gt;&gt;adIDL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adIDL.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adIDL.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;adTitleL.Name" xml:space="preserve">
+    <value>adTitleL</value>
+  </data>
+  <data name="&gt;&gt;adTitleL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adTitleL.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adTitleL.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;adCatIDL.Name" xml:space="preserve">
+    <value>adCatIDL</value>
+  </data>
+  <data name="&gt;&gt;adCatIDL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adCatIDL.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adCatIDL.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;adOwnerIDL.Name" xml:space="preserve">
+    <value>adOwnerIDL</value>
+  </data>
+  <data name="&gt;&gt;adOwnerIDL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adOwnerIDL.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adOwnerIDL.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;adCDiDL.Name" xml:space="preserve">
+    <value>adCDiDL</value>
+  </data>
+  <data name="&gt;&gt;adCDiDL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adCDiDL.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adCDiDL.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;adEXiDL.Name" xml:space="preserve">
+    <value>adEXiDL</value>
+  </data>
+  <data name="&gt;&gt;adEXiDL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adEXiDL.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adEXiDL.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;AdPriceL.Name" xml:space="preserve">
+    <value>AdPriceL</value>
+  </data>
+  <data name="&gt;&gt;AdPriceL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdPriceL.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;AdPriceL.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;adPublishedL.Name" xml:space="preserve">
+    <value>adPublishedL</value>
+  </data>
+  <data name="&gt;&gt;adPublishedL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adPublishedL.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adPublishedL.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;adStatusL.Name" xml:space="preserve">
+    <value>adStatusL</value>
+  </data>
+  <data name="&gt;&gt;adStatusL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adStatusL.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adStatusL.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;adDescL.Name" xml:space="preserve">
+    <value>adDescL</value>
+  </data>
+  <data name="&gt;&gt;adDescL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adDescL.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adDescL.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;adIDTB.Name" xml:space="preserve">
+    <value>adIDTB</value>
+  </data>
+  <data name="&gt;&gt;adIDTB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adIDTB.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adIDTB.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;adTitleTB.Name" xml:space="preserve">
+    <value>adTitleTB</value>
+  </data>
+  <data name="&gt;&gt;adTitleTB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adTitleTB.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adTitleTB.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;adCatTB.Name" xml:space="preserve">
+    <value>adCatTB</value>
+  </data>
+  <data name="&gt;&gt;adCatTB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adCatTB.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adCatTB.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;ownerTB.Name" xml:space="preserve">
+    <value>ownerTB</value>
+  </data>
+  <data name="&gt;&gt;ownerTB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ownerTB.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;ownerTB.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;adCDTB.Name" xml:space="preserve">
+    <value>adCDTB</value>
+  </data>
+  <data name="&gt;&gt;adCDTB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adCDTB.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adCDTB.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;adEXTB.Name" xml:space="preserve">
+    <value>adEXTB</value>
+  </data>
+  <data name="&gt;&gt;adEXTB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adEXTB.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adEXTB.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;adPriceTB.Name" xml:space="preserve">
+    <value>adPriceTB</value>
+  </data>
+  <data name="&gt;&gt;adPriceTB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adPriceTB.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adPriceTB.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;adPublishedCB.Name" xml:space="preserve">
+    <value>adPublishedCB</value>
+  </data>
+  <data name="&gt;&gt;adPublishedCB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adPublishedCB.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adPublishedCB.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;adStatusTB.Name" xml:space="preserve">
+    <value>adStatusTB</value>
+  </data>
+  <data name="&gt;&gt;adStatusTB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adStatusTB.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adStatusTB.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;adDescTB.Name" xml:space="preserve">
+    <value>adDescTB</value>
+  </data>
+  <data name="&gt;&gt;adDescTB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adDescTB.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adDescTB.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="adDetailsPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="adDetailsPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="adDetailsPanel.RowCount" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="adDetailsPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>397, 433</value>
+  </data>
+  <data name="adDetailsPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;adDetailsPanel.Name" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adDetailsPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adDetailsPanel.Parent" xml:space="preserve">
+    <value>AdsRightPanel</value>
+  </data>
+  <data name="&gt;&gt;adDetailsPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="adDetailsPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="adIDL" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="adTitleL" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="adCatIDL" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="adOwnerIDL" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="adCDiDL" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="adEXiDL" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="AdPriceL" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="adPublishedL" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="adStatusL" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="adDescL" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="adIDTB" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="adTitleTB" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="adCatTB" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="ownerTB" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="adCDTB" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="adEXTB" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="adPriceTB" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="adPublishedCB" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="adStatusTB" Row="8" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="adDescTB" Row="9" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Absolute,30,Absolute,30,Absolute,30,Absolute,30,Absolute,30,Absolute,30,Absolute,30,Absolute,30,Absolute,30,Absolute,30" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="adIDL.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="adIDL.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
+  </data>
+  <data name="adIDL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="adIDL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 30</value>
+  </data>
+  <data name="adIDL.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="adIDL.Text" xml:space="preserve">
+    <value>ID :</value>
+  </data>
+  <data name="adIDL.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;adIDL.Name" xml:space="preserve">
+    <value>adIDL</value>
+  </data>
+  <data name="&gt;&gt;adIDL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adIDL.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adIDL.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="adTitleL.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="adTitleL.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
+  </data>
+  <data name="adTitleL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="adTitleL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 30</value>
+  </data>
+  <data name="adTitleL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 30</value>
+  </data>
+  <data name="adTitleL.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="adTitleL.Text" xml:space="preserve">
+    <value>Title :</value>
+  </data>
+  <data name="adTitleL.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;adTitleL.Name" xml:space="preserve">
+    <value>adTitleL</value>
+  </data>
+  <data name="&gt;&gt;adTitleL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adTitleL.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adTitleL.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="adCatIDL.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="adCatIDL.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
+  </data>
+  <data name="adCatIDL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="adCatIDL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 60</value>
+  </data>
+  <data name="adCatIDL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 30</value>
+  </data>
+  <data name="adCatIDL.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="adCatIDL.Text" xml:space="preserve">
+    <value>Category :</value>
+  </data>
+  <data name="adCatIDL.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;adCatIDL.Name" xml:space="preserve">
+    <value>adCatIDL</value>
+  </data>
+  <data name="&gt;&gt;adCatIDL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adCatIDL.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adCatIDL.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="adOwnerIDL.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="adOwnerIDL.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
+  </data>
+  <data name="adOwnerIDL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="adOwnerIDL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 90</value>
+  </data>
+  <data name="adOwnerIDL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 30</value>
+  </data>
+  <data name="adOwnerIDL.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="adOwnerIDL.Text" xml:space="preserve">
+    <value>Owner :</value>
+  </data>
+  <data name="adOwnerIDL.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;adOwnerIDL.Name" xml:space="preserve">
+    <value>adOwnerIDL</value>
+  </data>
+  <data name="&gt;&gt;adOwnerIDL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adOwnerIDL.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adOwnerIDL.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="adCDiDL.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="adCDiDL.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
+  </data>
+  <data name="adCDiDL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="adCDiDL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 120</value>
+  </data>
+  <data name="adCDiDL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 30</value>
+  </data>
+  <data name="adCDiDL.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="adCDiDL.Text" xml:space="preserve">
+    <value>Created Date :</value>
+  </data>
+  <data name="adCDiDL.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;adCDiDL.Name" xml:space="preserve">
+    <value>adCDiDL</value>
+  </data>
+  <data name="&gt;&gt;adCDiDL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adCDiDL.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adCDiDL.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="adEXiDL.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="adEXiDL.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
+  </data>
+  <data name="adEXiDL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="adEXiDL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 150</value>
+  </data>
+  <data name="adEXiDL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 30</value>
+  </data>
+  <data name="adEXiDL.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="adEXiDL.Text" xml:space="preserve">
+    <value>Expiration Date :</value>
+  </data>
+  <data name="adEXiDL.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;adEXiDL.Name" xml:space="preserve">
+    <value>adEXiDL</value>
+  </data>
+  <data name="&gt;&gt;adEXiDL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adEXiDL.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adEXiDL.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="AdPriceL.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="AdPriceL.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
+  </data>
+  <data name="AdPriceL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="AdPriceL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 180</value>
+  </data>
+  <data name="AdPriceL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 30</value>
+  </data>
+  <data name="AdPriceL.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="AdPriceL.Text" xml:space="preserve">
+    <value>Price :</value>
+  </data>
+  <data name="AdPriceL.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;AdPriceL.Name" xml:space="preserve">
+    <value>AdPriceL</value>
+  </data>
+  <data name="&gt;&gt;AdPriceL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdPriceL.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;AdPriceL.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="adPublishedL.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="adPublishedL.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
+  </data>
+  <data name="adPublishedL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="adPublishedL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 210</value>
+  </data>
+  <data name="adPublishedL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 30</value>
+  </data>
+  <data name="adPublishedL.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="adPublishedL.Text" xml:space="preserve">
+    <value>Published :</value>
+  </data>
+  <data name="adPublishedL.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;adPublishedL.Name" xml:space="preserve">
+    <value>adPublishedL</value>
+  </data>
+  <data name="&gt;&gt;adPublishedL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adPublishedL.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adPublishedL.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="adStatusL.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="adStatusL.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
+  </data>
+  <data name="adStatusL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="adStatusL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 240</value>
+  </data>
+  <data name="adStatusL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 30</value>
+  </data>
+  <data name="adStatusL.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="adStatusL.Text" xml:space="preserve">
+    <value>Status :</value>
+  </data>
+  <data name="adStatusL.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;adStatusL.Name" xml:space="preserve">
+    <value>adStatusL</value>
+  </data>
+  <data name="&gt;&gt;adStatusL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adStatusL.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adStatusL.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="adDescL.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="adDescL.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
+  </data>
+  <data name="adDescL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="adDescL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 270</value>
+  </data>
+  <data name="adDescL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 163</value>
+  </data>
+  <data name="adDescL.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="adDescL.Text" xml:space="preserve">
+    <value>Description :</value>
+  </data>
+  <data name="adDescL.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;adDescL.Name" xml:space="preserve">
+    <value>adDescL</value>
+  </data>
+  <data name="&gt;&gt;adDescL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adDescL.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adDescL.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="adIDTB.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="adIDTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 3</value>
+  </data>
+  <data name="adIDTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 20</value>
+  </data>
+  <data name="adIDTB.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;adIDTB.Name" xml:space="preserve">
+    <value>adIDTB</value>
+  </data>
+  <data name="&gt;&gt;adIDTB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adIDTB.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adIDTB.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="adTitleTB.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="adTitleTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 33</value>
+  </data>
+  <data name="adTitleTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 20</value>
+  </data>
+  <data name="adTitleTB.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;adTitleTB.Name" xml:space="preserve">
+    <value>adTitleTB</value>
+  </data>
+  <data name="&gt;&gt;adTitleTB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adTitleTB.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adTitleTB.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="adCatTB.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="adCatTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 63</value>
+  </data>
+  <data name="adCatTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 20</value>
+  </data>
+  <data name="adCatTB.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;adCatTB.Name" xml:space="preserve">
+    <value>adCatTB</value>
+  </data>
+  <data name="&gt;&gt;adCatTB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adCatTB.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adCatTB.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="ownerTB.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ownerTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 93</value>
+  </data>
+  <data name="ownerTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 20</value>
+  </data>
+  <data name="ownerTB.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ownerTB.Name" xml:space="preserve">
+    <value>ownerTB</value>
+  </data>
+  <data name="&gt;&gt;ownerTB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ownerTB.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;ownerTB.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="adCDTB.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="adCDTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 123</value>
+  </data>
+  <data name="adCDTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 20</value>
+  </data>
+  <data name="adCDTB.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;adCDTB.Name" xml:space="preserve">
+    <value>adCDTB</value>
+  </data>
+  <data name="&gt;&gt;adCDTB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adCDTB.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adCDTB.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="adEXTB.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="adEXTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 153</value>
+  </data>
+  <data name="adEXTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 20</value>
+  </data>
+  <data name="adEXTB.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;adEXTB.Name" xml:space="preserve">
+    <value>adEXTB</value>
+  </data>
+  <data name="&gt;&gt;adEXTB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adEXTB.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adEXTB.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="adPriceTB.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="adPriceTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 183</value>
+  </data>
+  <data name="adPriceTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 20</value>
+  </data>
+  <data name="adPriceTB.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;adPriceTB.Name" xml:space="preserve">
+    <value>adPriceTB</value>
+  </data>
+  <data name="&gt;&gt;adPriceTB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adPriceTB.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adPriceTB.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="adPublishedCB.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="adPublishedCB.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="adPublishedCB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 213</value>
+  </data>
+  <data name="adPublishedCB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 24</value>
+  </data>
+  <data name="adPublishedCB.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;adPublishedCB.Name" xml:space="preserve">
+    <value>adPublishedCB</value>
+  </data>
+  <data name="&gt;&gt;adPublishedCB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adPublishedCB.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adPublishedCB.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="adStatusTB.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="adStatusTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 243</value>
+  </data>
+  <data name="adStatusTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 20</value>
+  </data>
+  <data name="adStatusTB.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;adStatusTB.Name" xml:space="preserve">
+    <value>adStatusTB</value>
+  </data>
+  <data name="&gt;&gt;adStatusTB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adStatusTB.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adStatusTB.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="adDescTB.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="adDescTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 273</value>
+  </data>
+  <data name="adDescTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 157</value>
+  </data>
+  <data name="adDescTB.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="adDescTB.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;adDescTB.Name" xml:space="preserve">
+    <value>adDescTB</value>
+  </data>
+  <data name="&gt;&gt;adDescTB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adDescTB.Parent" xml:space="preserve">
+    <value>adDetailsPanel</value>
+  </data>
+  <data name="&gt;&gt;adDescTB.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;updateCatB.Name" xml:space="preserve">
+    <value>updateCatB</value>
+  </data>
+  <data name="&gt;&gt;updateCatB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateCatB.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;updateCatB.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;AddCategoryB.Name" xml:space="preserve">
+    <value>AddCategoryB</value>
+  </data>
+  <data name="&gt;&gt;AddCategoryB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddCategoryB.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;AddCategoryB.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;updateCatTBox.Name" xml:space="preserve">
+    <value>updateCatTBox</value>
+  </data>
+  <data name="&gt;&gt;updateCatTBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateCatTBox.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;updateCatTBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;addCatNameTBox.Name" xml:space="preserve">
+    <value>addCatNameTBox</value>
+  </data>
+  <data name="&gt;&gt;addCatNameTBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addCatNameTBox.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;addCatNameTBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;updateCatCBox.Name" xml:space="preserve">
+    <value>updateCatCBox</value>
+  </data>
+  <data name="&gt;&gt;updateCatCBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateCatCBox.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;updateCatCBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;addCatNameCBox.Name" xml:space="preserve">
+    <value>addCatNameCBox</value>
+  </data>
+  <data name="&gt;&gt;addCatNameCBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addCatNameCBox.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;addCatNameCBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;updateCatIDL.Name" xml:space="preserve">
+    <value>updateCatIDL</value>
+  </data>
+  <data name="&gt;&gt;updateCatIDL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateCatIDL.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;updateCatIDL.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;catNameL.Name" xml:space="preserve">
+    <value>catNameL</value>
+  </data>
+  <data name="&gt;&gt;catNameL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;catNameL.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;catNameL.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;editCategoryL.Name" xml:space="preserve">
+    <value>editCategoryL</value>
+  </data>
+  <data name="&gt;&gt;editCategoryL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;editCategoryL.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;editCategoryL.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;categoriesRightPanelHeader.Name" xml:space="preserve">
+    <value>categoriesRightPanelHeader</value>
+  </data>
+  <data name="&gt;&gt;categoriesRightPanelHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;categoriesRightPanelHeader.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;categoriesRightPanelHeader.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="AdsCategoriesRightPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="AdsCategoriesRightPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="AdsCategoriesRightPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>397, 433</value>
+  </data>
+  <data name="AdsCategoriesRightPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesRightPanel.Name" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesRightPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesRightPanel.Parent" xml:space="preserve">
+    <value>categoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;AdsCategoriesRightPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="updateCatB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="updateCatB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 296</value>
+  </data>
+  <data name="updateCatB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="updateCatB.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="updateCatB.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="&gt;&gt;updateCatB.Name" xml:space="preserve">
+    <value>updateCatB</value>
+  </data>
+  <data name="&gt;&gt;updateCatB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateCatB.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;updateCatB.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="AddCategoryB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 134</value>
+  </data>
+  <data name="AddCategoryB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="AddCategoryB.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="AddCategoryB.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="&gt;&gt;AddCategoryB.Name" xml:space="preserve">
+    <value>AddCategoryB</value>
+  </data>
+  <data name="&gt;&gt;AddCategoryB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddCategoryB.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;AddCategoryB.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="updateCatTBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 214</value>
+  </data>
+  <data name="updateCatTBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 20</value>
+  </data>
+  <data name="updateCatTBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;updateCatTBox.Name" xml:space="preserve">
+    <value>updateCatTBox</value>
+  </data>
+  <data name="&gt;&gt;updateCatTBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateCatTBox.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;updateCatTBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="addCatNameTBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 66</value>
+  </data>
+  <data name="addCatNameTBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 20</value>
+  </data>
+  <data name="addCatNameTBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;addCatNameTBox.Name" xml:space="preserve">
+    <value>addCatNameTBox</value>
+  </data>
+  <data name="&gt;&gt;addCatNameTBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addCatNameTBox.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;addCatNameTBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="parentCategoriesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>179, 212</value>
+  </metadata>
+  <data name="updateCatCBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 240</value>
+  </data>
+  <data name="updateCatCBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 21</value>
+  </data>
+  <data name="updateCatCBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;updateCatCBox.Name" xml:space="preserve">
+    <value>updateCatCBox</value>
+  </data>
+  <data name="&gt;&gt;updateCatCBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateCatCBox.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;updateCatCBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="parentCategoriesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>179, 212</value>
+  </metadata>
+  <data name="addCatNameCBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 92</value>
+  </data>
+  <data name="addCatNameCBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 21</value>
+  </data>
+  <data name="addCatNameCBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;addCatNameCBox.Name" xml:space="preserve">
+    <value>addCatNameCBox</value>
+  </data>
+  <data name="&gt;&gt;addCatNameCBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addCatNameCBox.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;addCatNameCBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 240</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 13</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Parent category name :</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 92</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 13</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Parent category name :</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="updateCatIDL.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="updateCatIDL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="updateCatIDL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 266</value>
+  </data>
+  <data name="updateCatIDL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 13</value>
+  </data>
+  <data name="updateCatIDL.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="updateCatIDL.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;updateCatIDL.Name" xml:space="preserve">
+    <value>updateCatIDL</value>
+  </data>
+  <data name="&gt;&gt;updateCatIDL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateCatIDL.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;updateCatIDL.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 266</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 13</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>ID of category :</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 218</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Category name :</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="catNameL.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="catNameL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="catNameL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 66</value>
+  </data>
+  <data name="catNameL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
+  </data>
+  <data name="catNameL.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="catNameL.Text" xml:space="preserve">
+    <value>Category name :</value>
+  </data>
+  <data name="&gt;&gt;catNameL.Name" xml:space="preserve">
+    <value>catNameL</value>
+  </data>
+  <data name="&gt;&gt;catNameL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;catNameL.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;catNameL.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="editCategoryL.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="editCategoryL.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="editCategoryL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="editCategoryL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 172</value>
+  </data>
+  <data name="editCategoryL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 20</value>
+  </data>
+  <data name="editCategoryL.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="editCategoryL.Text" xml:space="preserve">
+    <value>Edit a category</value>
+  </data>
+  <data name="&gt;&gt;editCategoryL.Name" xml:space="preserve">
+    <value>editCategoryL</value>
+  </data>
+  <data name="&gt;&gt;editCategoryL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;editCategoryL.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;editCategoryL.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="categoriesRightPanelHeader.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="categoriesRightPanelHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="categoriesRightPanelHeader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 39</value>
+  </data>
+  <data name="categoriesRightPanelHeader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 20</value>
+  </data>
+  <data name="categoriesRightPanelHeader.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="categoriesRightPanelHeader.Text" xml:space="preserve">
+    <value>Add a new Category</value>
+  </data>
+  <data name="&gt;&gt;categoriesRightPanelHeader.Name" xml:space="preserve">
+    <value>categoriesRightPanelHeader</value>
+  </data>
+  <data name="&gt;&gt;categoriesRightPanelHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;categoriesRightPanelHeader.Parent" xml:space="preserve">
+    <value>AdsCategoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;categoriesRightPanelHeader.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;propertyID.Name" xml:space="preserve">
+    <value>propertyID</value>
+  </data>
+  <data name="&gt;&gt;propertyID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;propertyID.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;propertyID.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;updatePropertyB.Name" xml:space="preserve">
+    <value>updatePropertyB</value>
+  </data>
+  <data name="&gt;&gt;updatePropertyB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updatePropertyB.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;updatePropertyB.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;propertyAddButton.Name" xml:space="preserve">
+    <value>propertyAddButton</value>
+  </data>
+  <data name="&gt;&gt;propertyAddButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;propertyAddButton.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;propertyAddButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;allCategoriesCBox.Name" xml:space="preserve">
+    <value>allCategoriesCBox</value>
+  </data>
+  <data name="&gt;&gt;allCategoriesCBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;allCategoriesCBox.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;allCategoriesCBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;parentCategoriesCMB.Name" xml:space="preserve">
+    <value>parentCategoriesCMB</value>
+  </data>
+  <data name="&gt;&gt;parentCategoriesCMB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;parentCategoriesCMB.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;parentCategoriesCMB.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;pNameUpdateTBox.Name" xml:space="preserve">
+    <value>pNameUpdateTBox</value>
+  </data>
+  <data name="&gt;&gt;pNameUpdateTBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pNameUpdateTBox.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;pNameUpdateTBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;propertyNameTBox.Name" xml:space="preserve">
+    <value>propertyNameTBox</value>
+  </data>
+  <data name="&gt;&gt;propertyNameTBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;propertyNameTBox.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;propertyNameTBox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;whichcatLabel.Name" xml:space="preserve">
+    <value>whichcatLabel</value>
+  </data>
+  <data name="&gt;&gt;whichcatLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;whichcatLabel.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;whichcatLabel.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;properynameLabel.Name" xml:space="preserve">
+    <value>properynameLabel</value>
+  </data>
+  <data name="&gt;&gt;properynameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;properynameLabel.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;properynameLabel.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;editpropertyLabel.Name" xml:space="preserve">
+    <value>editpropertyLabel</value>
+  </data>
+  <data name="&gt;&gt;editpropertyLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;editpropertyLabel.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;editpropertyLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;addingPropertyL.Name" xml:space="preserve">
+    <value>addingPropertyL</value>
+  </data>
+  <data name="&gt;&gt;addingPropertyL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addingPropertyL.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;addingPropertyL.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="PropertiesRightPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="PropertiesRightPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="PropertiesRightPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>397, 433</value>
+  </data>
+  <data name="PropertiesRightPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="PropertiesRightPanel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;PropertiesRightPanel.Name" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;PropertiesRightPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PropertiesRightPanel.Parent" xml:space="preserve">
+    <value>categoriesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;PropertiesRightPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="propertyID.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="propertyID.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="propertyID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>238, 272</value>
+  </data>
+  <data name="propertyID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 13</value>
+  </data>
+  <data name="propertyID.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="propertyID.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;propertyID.Name" xml:space="preserve">
+    <value>propertyID</value>
+  </data>
+  <data name="&gt;&gt;propertyID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;propertyID.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;propertyID.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>161, 272</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>ID of property :</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="updatePropertyB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="updatePropertyB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 296</value>
+  </data>
+  <data name="updatePropertyB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="updatePropertyB.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="updatePropertyB.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="&gt;&gt;updatePropertyB.Name" xml:space="preserve">
+    <value>updatePropertyB</value>
+  </data>
+  <data name="&gt;&gt;updatePropertyB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updatePropertyB.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;updatePropertyB.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="propertyAddButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 138</value>
+  </data>
+  <data name="propertyAddButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="propertyAddButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="propertyAddButton.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="&gt;&gt;propertyAddButton.Name" xml:space="preserve">
+    <value>propertyAddButton</value>
+  </data>
+  <data name="&gt;&gt;propertyAddButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;propertyAddButton.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;propertyAddButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="allCategoriesCBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 269</value>
+  </data>
+  <data name="allCategoriesCBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 21</value>
+  </data>
+  <data name="allCategoriesCBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;allCategoriesCBox.Name" xml:space="preserve">
+    <value>allCategoriesCBox</value>
+  </data>
+  <data name="&gt;&gt;allCategoriesCBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;allCategoriesCBox.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;allCategoriesCBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="parentCategoriesCMB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 108</value>
+  </data>
+  <data name="parentCategoriesCMB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 21</value>
+  </data>
+  <data name="parentCategoriesCMB.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;parentCategoriesCMB.Name" xml:space="preserve">
+    <value>parentCategoriesCMB</value>
+  </data>
+  <data name="&gt;&gt;parentCategoriesCMB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;parentCategoriesCMB.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;parentCategoriesCMB.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pNameUpdateTBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 224</value>
+  </data>
+  <data name="pNameUpdateTBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 20</value>
+  </data>
+  <data name="pNameUpdateTBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pNameUpdateTBox.Name" xml:space="preserve">
+    <value>pNameUpdateTBox</value>
+  </data>
+  <data name="&gt;&gt;pNameUpdateTBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pNameUpdateTBox.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;pNameUpdateTBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="propertyNameTBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 59</value>
+  </data>
+  <data name="propertyNameTBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 20</value>
+  </data>
+  <data name="propertyNameTBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;propertyNameTBox.Name" xml:space="preserve">
+    <value>propertyNameTBox</value>
+  </data>
+  <data name="&gt;&gt;propertyNameTBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;propertyNameTBox.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;propertyNameTBox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 226</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Property Name</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 253</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>254, 13</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Which category do you want to assign this property?</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="whichcatLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="whichcatLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 91</value>
+  </data>
+  <data name="whichcatLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>254, 13</value>
+  </data>
+  <data name="whichcatLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="whichcatLabel.Text" xml:space="preserve">
+    <value>Which category do you want to assign this property?</value>
+  </data>
+  <data name="&gt;&gt;whichcatLabel.Name" xml:space="preserve">
+    <value>whichcatLabel</value>
+  </data>
+  <data name="&gt;&gt;whichcatLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;whichcatLabel.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;whichcatLabel.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="properynameLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="properynameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 61</value>
+  </data>
+  <data name="properynameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="properynameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="properynameLabel.Text" xml:space="preserve">
+    <value>Property Name</value>
+  </data>
+  <data name="&gt;&gt;properynameLabel.Name" xml:space="preserve">
+    <value>properynameLabel</value>
+  </data>
+  <data name="&gt;&gt;properynameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;properynameLabel.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;properynameLabel.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="editpropertyLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="editpropertyLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="editpropertyLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 199</value>
+  </data>
+  <data name="editpropertyLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 19</value>
+  </data>
+  <data name="editpropertyLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="editpropertyLabel.Text" xml:space="preserve">
+    <value>Edit the selected property</value>
+  </data>
+  <data name="&gt;&gt;editpropertyLabel.Name" xml:space="preserve">
+    <value>editpropertyLabel</value>
+  </data>
+  <data name="&gt;&gt;editpropertyLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;editpropertyLabel.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;editpropertyLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="addingPropertyL.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="addingPropertyL.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="addingPropertyL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 32</value>
+  </data>
+  <data name="addingPropertyL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 19</value>
+  </data>
+  <data name="addingPropertyL.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="addingPropertyL.Text" xml:space="preserve">
+    <value>Add a new property</value>
+  </data>
+  <data name="&gt;&gt;addingPropertyL.Name" xml:space="preserve">
+    <value>addingPropertyL</value>
+  </data>
+  <data name="&gt;&gt;addingPropertyL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addingPropertyL.Parent" xml:space="preserve">
+    <value>PropertiesRightPanel</value>
+  </data>
+  <data name="&gt;&gt;addingPropertyL.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
   <data name="checkbox_blacklist.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1167,888 +4020,6 @@
   <data name="&gt;&gt;btn_previous.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
-  <data name="usersRightPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="usersRightPanel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="usersRightPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="usersRightPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>397, 433</value>
-  </data>
-  <data name="usersRightPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;usersRightPanel.Name" xml:space="preserve">
-    <value>usersRightPanel</value>
-  </data>
-  <data name="&gt;&gt;usersRightPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;usersRightPanel.Parent" xml:space="preserve">
-    <value>splitContainer1.Panel2</value>
-  </data>
-  <data name="&gt;&gt;usersRightPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="updateCatB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="updateCatB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 296</value>
-  </data>
-  <data name="updateCatB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="updateCatB.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="updateCatB.Text" xml:space="preserve">
-    <value>Update</value>
-  </data>
-  <data name="&gt;&gt;updateCatB.Name" xml:space="preserve">
-    <value>updateCatB</value>
-  </data>
-  <data name="&gt;&gt;updateCatB.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateCatB.Parent" xml:space="preserve">
-    <value>AdsCategoriesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;updateCatB.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="AddCategoryB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 134</value>
-  </data>
-  <data name="AddCategoryB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="AddCategoryB.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="AddCategoryB.Text" xml:space="preserve">
-    <value>Add</value>
-  </data>
-  <data name="&gt;&gt;AddCategoryB.Name" xml:space="preserve">
-    <value>AddCategoryB</value>
-  </data>
-  <data name="&gt;&gt;AddCategoryB.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AddCategoryB.Parent" xml:space="preserve">
-    <value>AdsCategoriesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;AddCategoryB.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="updateCatTBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>129, 214</value>
-  </data>
-  <data name="updateCatTBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 20</value>
-  </data>
-  <data name="updateCatTBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;updateCatTBox.Name" xml:space="preserve">
-    <value>updateCatTBox</value>
-  </data>
-  <data name="&gt;&gt;updateCatTBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateCatTBox.Parent" xml:space="preserve">
-    <value>AdsCategoriesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;updateCatTBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="addCatNameTBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>129, 66</value>
-  </data>
-  <data name="addCatNameTBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 20</value>
-  </data>
-  <data name="addCatNameTBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;addCatNameTBox.Name" xml:space="preserve">
-    <value>addCatNameTBox</value>
-  </data>
-  <data name="&gt;&gt;addCatNameTBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;addCatNameTBox.Parent" xml:space="preserve">
-    <value>AdsCategoriesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;addCatNameTBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <metadata name="parentCategoriesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>179, 212</value>
-  </metadata>
-  <data name="updateCatCBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>129, 240</value>
-  </data>
-  <data name="updateCatCBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 21</value>
-  </data>
-  <data name="updateCatCBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;updateCatCBox.Name" xml:space="preserve">
-    <value>updateCatCBox</value>
-  </data>
-  <data name="&gt;&gt;updateCatCBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateCatCBox.Parent" xml:space="preserve">
-    <value>AdsCategoriesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;updateCatCBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="addCatNameCBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>129, 92</value>
-  </data>
-  <data name="addCatNameCBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 21</value>
-  </data>
-  <data name="addCatNameCBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;addCatNameCBox.Name" xml:space="preserve">
-    <value>addCatNameCBox</value>
-  </data>
-  <data name="&gt;&gt;addCatNameCBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;addCatNameCBox.Parent" xml:space="preserve">
-    <value>AdsCategoriesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;addCatNameCBox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 240</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 13</value>
-  </data>
-  <data name="label7.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Parent category name :</value>
-  </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
-  </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
-    <value>AdsCategoriesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 92</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 13</value>
-  </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Parent category name :</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>AdsCategoriesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="updateCatIDL.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="updateCatIDL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="updateCatIDL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>126, 266</value>
-  </data>
-  <data name="updateCatIDL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 13</value>
-  </data>
-  <data name="updateCatIDL.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="updateCatIDL.Text" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;updateCatIDL.Name" xml:space="preserve">
-    <value>updateCatIDL</value>
-  </data>
-  <data name="&gt;&gt;updateCatIDL.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateCatIDL.Parent" xml:space="preserve">
-    <value>AdsCategoriesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;updateCatIDL.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 266</value>
-  </data>
-  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 13</value>
-  </data>
-  <data name="label8.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>ID of category :</value>
-  </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
-  </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
-    <value>AdsCategoriesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 218</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 13</value>
-  </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Category name :</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>AdsCategoriesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="catNameL.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="catNameL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="catNameL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 66</value>
-  </data>
-  <data name="catNameL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 13</value>
-  </data>
-  <data name="catNameL.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="catNameL.Text" xml:space="preserve">
-    <value>Category name :</value>
-  </data>
-  <data name="&gt;&gt;catNameL.Name" xml:space="preserve">
-    <value>catNameL</value>
-  </data>
-  <data name="&gt;&gt;catNameL.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;catNameL.Parent" xml:space="preserve">
-    <value>AdsCategoriesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;catNameL.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 172</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 20</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Add a new Category</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>AdsCategoriesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="categoriesRightPanelHeader.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="categoriesRightPanelHeader.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="categoriesRightPanelHeader.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 39</value>
-  </data>
-  <data name="categoriesRightPanelHeader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 20</value>
-  </data>
-  <data name="categoriesRightPanelHeader.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="categoriesRightPanelHeader.Text" xml:space="preserve">
-    <value>Add a new Category</value>
-  </data>
-  <data name="&gt;&gt;categoriesRightPanelHeader.Name" xml:space="preserve">
-    <value>categoriesRightPanelHeader</value>
-  </data>
-  <data name="&gt;&gt;categoriesRightPanelHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;categoriesRightPanelHeader.Parent" xml:space="preserve">
-    <value>AdsCategoriesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;categoriesRightPanelHeader.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="AdsCategoriesRightPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="AdsCategoriesRightPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="AdsCategoriesRightPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>397, 433</value>
-  </data>
-  <data name="AdsCategoriesRightPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;AdsCategoriesRightPanel.Name" xml:space="preserve">
-    <value>AdsCategoriesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;AdsCategoriesRightPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AdsCategoriesRightPanel.Parent" xml:space="preserve">
-    <value>categoriesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;AdsCategoriesRightPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="propertyID.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="propertyID.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="propertyID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 272</value>
-  </data>
-  <data name="propertyID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 13</value>
-  </data>
-  <data name="propertyID.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="propertyID.Text" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;propertyID.Name" xml:space="preserve">
-    <value>propertyID</value>
-  </data>
-  <data name="&gt;&gt;propertyID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;propertyID.Parent" xml:space="preserve">
-    <value>PropertiesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;propertyID.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>161, 272</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 13</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>ID of property :</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>PropertiesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="updatePropertyB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="updatePropertyB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 296</value>
-  </data>
-  <data name="updatePropertyB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="updatePropertyB.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="updatePropertyB.Text" xml:space="preserve">
-    <value>Update</value>
-  </data>
-  <data name="&gt;&gt;updatePropertyB.Name" xml:space="preserve">
-    <value>updatePropertyB</value>
-  </data>
-  <data name="&gt;&gt;updatePropertyB.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updatePropertyB.Parent" xml:space="preserve">
-    <value>PropertiesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;updatePropertyB.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="propertyAddButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 138</value>
-  </data>
-  <data name="propertyAddButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="propertyAddButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="propertyAddButton.Text" xml:space="preserve">
-    <value>Add</value>
-  </data>
-  <data name="&gt;&gt;propertyAddButton.Name" xml:space="preserve">
-    <value>propertyAddButton</value>
-  </data>
-  <data name="&gt;&gt;propertyAddButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;propertyAddButton.Parent" xml:space="preserve">
-    <value>PropertiesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;propertyAddButton.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="allCategoriesCBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 269</value>
-  </data>
-  <data name="allCategoriesCBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 21</value>
-  </data>
-  <data name="allCategoriesCBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;allCategoriesCBox.Name" xml:space="preserve">
-    <value>allCategoriesCBox</value>
-  </data>
-  <data name="&gt;&gt;allCategoriesCBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;allCategoriesCBox.Parent" xml:space="preserve">
-    <value>PropertiesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;allCategoriesCBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="parentCategoriesCMB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 108</value>
-  </data>
-  <data name="parentCategoriesCMB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 21</value>
-  </data>
-  <data name="parentCategoriesCMB.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;parentCategoriesCMB.Name" xml:space="preserve">
-    <value>parentCategoriesCMB</value>
-  </data>
-  <data name="&gt;&gt;parentCategoriesCMB.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;parentCategoriesCMB.Parent" xml:space="preserve">
-    <value>PropertiesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;parentCategoriesCMB.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="pNameUpdateTBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 224</value>
-  </data>
-  <data name="pNameUpdateTBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 20</value>
-  </data>
-  <data name="pNameUpdateTBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pNameUpdateTBox.Name" xml:space="preserve">
-    <value>pNameUpdateTBox</value>
-  </data>
-  <data name="&gt;&gt;pNameUpdateTBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pNameUpdateTBox.Parent" xml:space="preserve">
-    <value>PropertiesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;pNameUpdateTBox.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="propertyNameTBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 59</value>
-  </data>
-  <data name="propertyNameTBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 20</value>
-  </data>
-  <data name="propertyNameTBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;propertyNameTBox.Name" xml:space="preserve">
-    <value>propertyNameTBox</value>
-  </data>
-  <data name="&gt;&gt;propertyNameTBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;propertyNameTBox.Parent" xml:space="preserve">
-    <value>PropertiesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;propertyNameTBox.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 226</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 13</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Property Name</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>PropertiesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 253</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 13</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Which category do you want to assign this property?</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>PropertiesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="whichcatLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="whichcatLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 91</value>
-  </data>
-  <data name="whichcatLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 13</value>
-  </data>
-  <data name="whichcatLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="whichcatLabel.Text" xml:space="preserve">
-    <value>Which category do you want to assign this property?</value>
-  </data>
-  <data name="&gt;&gt;whichcatLabel.Name" xml:space="preserve">
-    <value>whichcatLabel</value>
-  </data>
-  <data name="&gt;&gt;whichcatLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;whichcatLabel.Parent" xml:space="preserve">
-    <value>PropertiesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;whichcatLabel.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="properynameLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="properynameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 61</value>
-  </data>
-  <data name="properynameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 13</value>
-  </data>
-  <data name="properynameLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="properynameLabel.Text" xml:space="preserve">
-    <value>Property Name</value>
-  </data>
-  <data name="&gt;&gt;properynameLabel.Name" xml:space="preserve">
-    <value>properynameLabel</value>
-  </data>
-  <data name="&gt;&gt;properynameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;properynameLabel.Parent" xml:space="preserve">
-    <value>PropertiesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;properynameLabel.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="editpropertyLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="editpropertyLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 12pt, style=Bold</value>
-  </data>
-  <data name="editpropertyLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 199</value>
-  </data>
-  <data name="editpropertyLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 19</value>
-  </data>
-  <data name="editpropertyLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="editpropertyLabel.Text" xml:space="preserve">
-    <value>Edit the selected property</value>
-  </data>
-  <data name="&gt;&gt;editpropertyLabel.Name" xml:space="preserve">
-    <value>editpropertyLabel</value>
-  </data>
-  <data name="&gt;&gt;editpropertyLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;editpropertyLabel.Parent" xml:space="preserve">
-    <value>PropertiesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;editpropertyLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="addingPropertyL.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="addingPropertyL.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 12pt, style=Bold</value>
-  </data>
-  <data name="addingPropertyL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 32</value>
-  </data>
-  <data name="addingPropertyL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 19</value>
-  </data>
-  <data name="addingPropertyL.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="addingPropertyL.Text" xml:space="preserve">
-    <value>Add a new property</value>
-  </data>
-  <data name="&gt;&gt;addingPropertyL.Name" xml:space="preserve">
-    <value>addingPropertyL</value>
-  </data>
-  <data name="&gt;&gt;addingPropertyL.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;addingPropertyL.Parent" xml:space="preserve">
-    <value>PropertiesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;addingPropertyL.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="PropertiesRightPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="PropertiesRightPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="PropertiesRightPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>397, 433</value>
-  </data>
-  <data name="PropertiesRightPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="PropertiesRightPanel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;PropertiesRightPanel.Name" xml:space="preserve">
-    <value>PropertiesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;PropertiesRightPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PropertiesRightPanel.Parent" xml:space="preserve">
-    <value>categoriesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;PropertiesRightPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="categoriesRightPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="categoriesRightPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="categoriesRightPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>397, 433</value>
-  </data>
-  <data name="categoriesRightPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>72</value>
-  </data>
-  <data name="&gt;&gt;categoriesRightPanel.Name" xml:space="preserve">
-    <value>categoriesRightPanel</value>
-  </data>
-  <data name="&gt;&gt;categoriesRightPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;categoriesRightPanel.Parent" xml:space="preserve">
-    <value>splitContainer1.Panel2</value>
-  </data>
-  <data name="&gt;&gt;categoriesRightPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
-    <value>splitContainer1.Panel2</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
-    <value>splitContainer1</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1230, 433</value>
-  </data>
-  <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
-    <value>829</value>
-  </data>
-  <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
-    <value>splitContainer1</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="logo_box.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
   </data>
@@ -2535,14 +4506,8 @@
   <metadata name="usersBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>195, 95</value>
   </metadata>
-  <metadata name="aggeliesDBDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>172, 17</value>
-  </metadata>
   <metadata name="usersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>568, 17</value>
-  </metadata>
-  <metadata name="adsTableBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>360, 95</value>
   </metadata>
   <metadata name="usersTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>506, 56</value>
@@ -2597,6 +4562,12 @@
   </metadata>
   <metadata name="adCategoryBindingSource3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>429, 251</value>
+  </metadata>
+  <metadata name="adCategoryAdsTableBindingSource3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>629, 251</value>
+  </metadata>
+  <metadata name="adsTableBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>879, 251</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -9822,6 +11793,108 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Administrator Form</value>
   </data>
+  <data name="&gt;&gt;toolDelB.Name" xml:space="preserve">
+    <value>toolDelB</value>
+  </data>
+  <data name="&gt;&gt;toolDelB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolSaveB.Name" xml:space="preserve">
+    <value>toolSaveB</value>
+  </data>
+  <data name="&gt;&gt;toolSaveB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolSortB.Name" xml:space="preserve">
+    <value>toolSortB</value>
+  </data>
+  <data name="&gt;&gt;toolSortB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userIDSortTB.Name" xml:space="preserve">
+    <value>userIDSortTB</value>
+  </data>
+  <data name="&gt;&gt;userIDSortTB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adIDDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>adIDDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;adIDDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adTitleDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>adTitleDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;adTitleDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adCategoryDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>adCategoryDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;adCategoryDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ownerIDDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>ownerIDDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;ownerIDDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;creationDateDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>creationDateDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;creationDateDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;expirationDateDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>expirationDateDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;expirationDateDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adDescDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>adDescDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;adDescDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;priceDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>priceDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;priceDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;publishedDataGridViewCheckBoxColumn.Name" xml:space="preserve">
+    <value>publishedDataGridViewCheckBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;publishedDataGridViewCheckBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adStatusDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>adStatusDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;adStatusDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adsTableBindingSource.Name" xml:space="preserve">
+    <value>adsTableBindingSource</value>
+  </data>
+  <data name="&gt;&gt;adsTableBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aggeliesDBDataSetBindingSource.Name" xml:space="preserve">
+    <value>aggeliesDBDataSetBindingSource</value>
+  </data>
+  <data name="&gt;&gt;aggeliesDBDataSetBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aggeliesDBDataSet.Name" xml:space="preserve">
+    <value>aggeliesDBDataSet</value>
+  </data>
+  <data name="&gt;&gt;aggeliesDBDataSet.Type" xml:space="preserve">
+    <value>AdministratorPanel.AggeliesDBDataSet, AggeliesDBDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="&gt;&gt;catIDDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>catIDDataGridViewTextBoxColumn</value>
   </data>
@@ -9845,12 +11918,6 @@
   </data>
   <data name="&gt;&gt;adCategoryBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;aggeliesDBDataSet.Name" xml:space="preserve">
-    <value>aggeliesDBDataSet</value>
-  </data>
-  <data name="&gt;&gt;aggeliesDBDataSet.Type" xml:space="preserve">
-    <value>AdministratorPanel.AggeliesDBDataSet, AggeliesDBDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pIDDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>pIDDataGridViewTextBoxColumn</value>
@@ -9960,22 +12027,10 @@
   <data name="&gt;&gt;usersBindingSource2.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;aggeliesDBDataSetBindingSource.Name" xml:space="preserve">
-    <value>aggeliesDBDataSetBindingSource</value>
-  </data>
-  <data name="&gt;&gt;aggeliesDBDataSetBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;usersBindingSource.Name" xml:space="preserve">
     <value>usersBindingSource</value>
   </data>
   <data name="&gt;&gt;usersBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;adsTableBindingSource.Name" xml:space="preserve">
-    <value>adsTableBindingSource</value>
-  </data>
-  <data name="&gt;&gt;adsTableBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;usersTableAdapter1.Name" xml:space="preserve">
@@ -10084,6 +12139,18 @@
     <value>adCategoryBindingSource3</value>
   </data>
   <data name="&gt;&gt;adCategoryBindingSource3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adCategoryAdsTableBindingSource3.Name" xml:space="preserve">
+    <value>adCategoryAdsTableBindingSource3</value>
+  </data>
+  <data name="&gt;&gt;adCategoryAdsTableBindingSource3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adsTableBindingSource1.Name" xml:space="preserve">
+    <value>adsTableBindingSource1</value>
+  </data>
+  <data name="&gt;&gt;adsTableBindingSource1.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
