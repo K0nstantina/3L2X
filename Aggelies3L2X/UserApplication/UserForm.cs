@@ -709,9 +709,9 @@ namespace UserApplication
             
             panels[0].BringToFront();
 
-            recentAdsList.Add(recentAds1);
-            recentAdsList.Add(recentAds2);
-            recentAdsList.Add(recentAds3);
+            //recentAdsList.Add(recentAds1);
+            //recentAdsList.Add(recentAds2);
+            //recentAdsList.Add(recentAds3);
         }
 
         /// <summary>
