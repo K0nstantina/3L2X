@@ -124,16 +124,19 @@
   <data name="uAgeLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="uAgeLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="uAgeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="uAgeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>43, 104</value>
+    <value>61, 104</value>
   </data>
   <data name="uAgeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 13</value>
+    <value>42, 20</value>
   </data>
   <data name="uAgeLabel.TabIndex" type="System.Int32, mscorlib">
     <value>107</value>
@@ -159,14 +162,17 @@
   <data name="uPhoneLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="uPhoneLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="uPhoneLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="uPhoneLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 78</value>
+    <value>44, 78</value>
   </data>
   <data name="uPhoneLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 13</value>
+    <value>59, 20</value>
   </data>
   <data name="uPhoneLabel.TabIndex" type="System.Int32, mscorlib">
     <value>105</value>
@@ -192,14 +198,17 @@
   <data name="uRecoverEmailLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="uRecoverEmailLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="uRecoverEmailLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="uRecoverEmailLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-10, 208</value>
+    <value>-12, 208</value>
   </data>
   <data name="uRecoverEmailLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 13</value>
+    <value>115, 20</value>
   </data>
   <data name="uRecoverEmailLabel.TabIndex" type="System.Int32, mscorlib">
     <value>103</value>
@@ -225,14 +234,17 @@
   <data name="uEmailLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="uEmailLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="uEmailLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="uEmailLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>34, 185</value>
+    <value>51, 182</value>
   </data>
   <data name="uEmailLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
+    <value>52, 20</value>
   </data>
   <data name="uEmailLabel.TabIndex" type="System.Int32, mscorlib">
     <value>100</value>
@@ -258,14 +270,17 @@
   <data name="uPasswordLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="uPasswordLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="uPasswordLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="uPasswordLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 155</value>
+    <value>21, 156</value>
   </data>
   <data name="uPasswordLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 13</value>
+    <value>82, 20</value>
   </data>
   <data name="uPasswordLabel.TabIndex" type="System.Int32, mscorlib">
     <value>99</value>
@@ -291,14 +306,17 @@
   <data name="uNameLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="uNameLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="uNameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="uNameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 129</value>
+    <value>16, 130</value>
   </data>
   <data name="uNameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 13</value>
+    <value>87, 20</value>
   </data>
   <data name="uNameLabel.TabIndex" type="System.Int32, mscorlib">
     <value>97</value>
@@ -324,14 +342,17 @@
   <data name="lNameLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lNameLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="lNameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lNameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 52</value>
+    <value>13, 50</value>
   </data>
   <data name="lNameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 13</value>
+    <value>90, 20</value>
   </data>
   <data name="lNameLabel.TabIndex" type="System.Int32, mscorlib">
     <value>95</value>
@@ -357,6 +378,9 @@
   <data name="fNameLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="fNameLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="fNameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -364,7 +388,7 @@
     <value>13, 26</value>
   </data>
   <data name="fNameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 13</value>
+    <value>90, 20</value>
   </data>
   <data name="fNameLabel.TabIndex" type="System.Int32, mscorlib">
     <value>93</value>
@@ -384,11 +408,14 @@
   <data name="&gt;&gt;fNameLabel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="btn_submit.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="btn_submit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 227</value>
+    <value>134, 244</value>
   </data>
   <data name="btn_submit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>75, 26</value>
   </data>
   <data name="btn_submit.TabIndex" type="System.Int32, mscorlib">
     <value>109</value>
@@ -409,7 +436,7 @@
     <value>1</value>
   </data>
   <data name="txt_age.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 97</value>
+    <value>109, 104</value>
   </data>
   <data name="txt_age.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
@@ -430,7 +457,7 @@
     <value>5</value>
   </data>
   <data name="txt_phone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 71</value>
+    <value>109, 78</value>
   </data>
   <data name="txt_phone.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
@@ -451,7 +478,7 @@
     <value>9</value>
   </data>
   <data name="txt_recoveremail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 201</value>
+    <value>109, 208</value>
   </data>
   <data name="txt_recoveremail.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
@@ -472,7 +499,7 @@
     <value>13</value>
   </data>
   <data name="txt_email.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 175</value>
+    <value>109, 182</value>
   </data>
   <data name="txt_email.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
@@ -493,7 +520,7 @@
     <value>16</value>
   </data>
   <data name="txt_password.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 149</value>
+    <value>109, 156</value>
   </data>
   <data name="txt_password.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
@@ -514,7 +541,7 @@
     <value>12</value>
   </data>
   <data name="txt_username.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 123</value>
+    <value>109, 130</value>
   </data>
   <data name="txt_username.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
@@ -535,7 +562,7 @@
     <value>8</value>
   </data>
   <data name="txt_lastname.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 45</value>
+    <value>109, 52</value>
   </data>
   <data name="txt_lastname.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
@@ -559,7 +586,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="txt_firstname.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 19</value>
+    <value>109, 26</value>
   </data>
   <data name="txt_firstname.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
@@ -586,7 +613,7 @@
     <value>12, 12</value>
   </data>
   <data name="CreateAccGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 269</value>
+    <value>251, 289</value>
   </data>
   <data name="CreateAccGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>110</value>
@@ -601,30 +628,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CreateAccGroupBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lang_button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>250, 28</value>
-  </data>
-  <data name="lang_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 23</value>
-  </data>
-  <data name="lang_button.TabIndex" type="System.Int32, mscorlib">
-    <value>111</value>
-  </data>
-  <data name="lang_button.Text" xml:space="preserve">
-    <value>GR</value>
-  </data>
-  <data name="&gt;&gt;lang_button.Name" xml:space="preserve">
-    <value>lang_button</value>
-  </data>
-  <data name="&gt;&gt;lang_button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lang_button.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lang_button.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -634,7 +637,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>302, 301</value>
+    <value>274, 318</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>CreateAccountForm</value>
