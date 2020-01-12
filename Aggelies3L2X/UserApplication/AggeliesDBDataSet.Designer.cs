@@ -5143,18 +5143,18 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        catTitle, catID, catParent\r\nFROM            AdCategory\r\nWHERE      " +
-                "  (catParent = ?)";
+            this._commandCollection[1].CommandText = "SELECT        catTitle, catID, catParent\nFROM            AdCategory\nWHERE        " +
+                "(catParent = ?)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("catParent", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "catParent", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT        catTitle, catID, catParent\r\nFROM            AdCategory\r\nWHERE      " +
-                "  (catParent = 0)";
+            this._commandCollection[2].CommandText = "SELECT        catTitle, catID, catParent\nFROM            AdCategory\nWHERE        " +
+                "(catParent = 0)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT        catParent\r\nFROM            AdCategory\r\nWHERE        (catID = ?)";
+            this._commandCollection[3].CommandText = "SELECT        catParent\nFROM            AdCategory\nWHERE        (catID = ?)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("catID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "catID", global::System.Data.DataRowVersion.Current, false, null));
         }
@@ -5944,32 +5944,32 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
             this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "SELECT        adID, adTitle, adCategory, ownerID, creationDate, expirationDate, m" +
-                "edia, adDesc, price, Published, Hits, adStatus\r\nFROM            AdsTable\r\nWHERE " +
-                "       (adCategory = ?) AND (Published = Yes)";
+                "edia, adDesc, price, Published, Hits, adStatus\nFROM            AdsTable\nWHERE   " +
+                "     (adCategory = ?) AND (Published = Yes)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adCategory", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adCategory", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = "SELECT        TOP 9 adTitle, adDesc, media, adCategory, adID, ownerID, creationDa" +
-                "te, expirationDate, price, Published, Hits, adStatus, address\r\nFROM            A" +
-                "dsTable\r\nWHERE        (Published = True)\r\nORDER BY creationDate DESC, adID DESC";
+                "te, expirationDate, price, Published, Hits, adStatus, address\nFROM            Ad" +
+                "sTable\nWHERE        (Published = True)\nORDER BY creationDate DESC, adID DESC";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "UPDATE       AdsTable\r\nSET                media = ?\r\nWHERE        (adID = ?)";
+            this._commandCollection[4].CommandText = "UPDATE       AdsTable\nSET                media = ?\nWHERE        (adID = ?)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("media", global::System.Data.OleDb.OleDbType.WChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "media", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_adID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adID", global::System.Data.DataRowVersion.Original, false, null));
             this._commandCollection[5] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = "UPDATE       AdsTable\r\nSET                price = ?\r\nWHERE        (adID = ?)";
+            this._commandCollection[5].CommandText = "UPDATE       AdsTable\nSET                price = ?\nWHERE        (adID = ?)";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "price", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_adID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adID", global::System.Data.DataRowVersion.Original, false, null));
             this._commandCollection[6] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[6].Connection = this.Connection;
-            this._commandCollection[6].CommandText = "UPDATE       AdsTable\r\nSET                adTitle = ?, adDesc = ?\r\nWHERE        (" +
-                "adID = ?)";
+            this._commandCollection[6].CommandText = "UPDATE       AdsTable\nSET                adTitle = ?, adDesc = ?\nWHERE        (ad" +
+                "ID = ?)";
             this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[6].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adTitle", global::System.Data.OleDb.OleDbType.WChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adTitle", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[6].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("adDesc", global::System.Data.OleDb.OleDbType.WChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "adDesc", global::System.Data.DataRowVersion.Current, false, null));
@@ -8213,44 +8213,44 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT fName\r\nFROM Users\r\nWHERE        (userID = ?)";
+            this._commandCollection[1].CommandText = "SELECT fName\nFROM Users\nWHERE        (userID = ?)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("userID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "userID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT lName\r\nFROM Users\r\nWHERE        (userID = ?)";
+            this._commandCollection[2].CommandText = "SELECT lName\nFROM Users\nWHERE        (userID = ?)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("userID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "userID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT uEmail\r\nFROM Users\r\nWHERE        (userID = ?)";
+            this._commandCollection[3].CommandText = "SELECT uEmail\nFROM Users\nWHERE        (userID = ?)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("userID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "userID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[4] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "SELECT uImage \r\nFROM Users\r\nWHERE        (userID = ?)";
+            this._commandCollection[4].CommandText = "SELECT uImage \nFROM Users\nWHERE        (userID = ?)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("userID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "userID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[5] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = "SELECT uName\r\nFROM Users\r\nWHERE        (userID = ?)";
+            this._commandCollection[5].CommandText = "SELECT uName\nFROM Users\nWHERE        (userID = ?)";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("userID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "userID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[6] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[6].Connection = this.Connection;
-            this._commandCollection[6].CommandText = "SELECT uPassword\r\nFROM Users\r\nWHERE        (userID = ?)";
+            this._commandCollection[6].CommandText = "SELECT uPassword\nFROM Users\nWHERE        (userID = ?)";
             this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[6].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("userID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "userID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[7] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[7].Connection = this.Connection;
-            this._commandCollection[7].CommandText = "UPDATE       Users\r\nSET                uImage= ?\r\nWHERE        (userID = ?)";
+            this._commandCollection[7].CommandText = "UPDATE       Users\nSET                uImage= ?\nWHERE        (userID = ?)";
             this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[7].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("uImage", global::System.Data.OleDb.OleDbType.WChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "uImage", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[7].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_userID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "userID", global::System.Data.DataRowVersion.Original, false, null));
             this._commandCollection[8] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[8].Connection = this.Connection;
-            this._commandCollection[8].CommandText = "UPDATE       Users\r\nSET                fName = ?, lName = ?, uName = ?, uPassword" +
-                " = ?, uEmail = ?\r\nWHERE        (userID = ?)";
+            this._commandCollection[8].CommandText = "UPDATE       Users\nSET                fName = ?, lName = ?, uName = ?, uPassword " +
+                "= ?, uEmail = ?\nWHERE        (userID = ?)";
             this._commandCollection[8].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[8].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("fName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fName", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[8].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("lName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "lName", global::System.Data.DataRowVersion.Current, false, null));
@@ -8260,9 +8260,8 @@ namespace UserApplication.AggeliesDBDataSetTableAdapters {
             this._commandCollection[8].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_userID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "userID", global::System.Data.DataRowVersion.Original, false, null));
             this._commandCollection[9] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[9].Connection = this.Connection;
-            this._commandCollection[9].CommandText = "INSERT INTO Users\r\n                         (fName, lName, uName, uPassword, uEma" +
-                "il, uCat, uAge, uRecoverEmail, uPhone)\r\nVALUES        (?, ?, ?, ?, ?, ?, ?, ?, ?" +
-                ")";
+            this._commandCollection[9].CommandText = "INSERT INTO Users\n                         (fName, lName, uName, uPassword, uEmai" +
+                "l, uCat, uAge, uRecoverEmail, uPhone)\nVALUES        (?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._commandCollection[9].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[9].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("fName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fName", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[9].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("lName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "lName", global::System.Data.DataRowVersion.Current, false, null));

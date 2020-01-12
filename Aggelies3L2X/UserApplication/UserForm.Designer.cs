@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
             this.topPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
             this.userMenuIcons1 = new aggeliesWpfLab.UserMenuIcons();
             this.footerPanel = new System.Windows.Forms.Panel();
@@ -45,6 +46,25 @@
             this.darkRadioButton = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.homePanel = new System.Windows.Forms.Panel();
+            this.recentAdsTablePanel = new System.Windows.Forms.TableLayoutPanel();
+            this.elementHost2 = new System.Windows.Forms.Integration.ElementHost();
+            this.displayAd2 = new aggeliesWpfLab.DisplayAd();
+            this.elementHost3 = new System.Windows.Forms.Integration.ElementHost();
+            this.displayAd3 = new aggeliesWpfLab.DisplayAd();
+            this.elementHost4 = new System.Windows.Forms.Integration.ElementHost();
+            this.displayAd4 = new aggeliesWpfLab.DisplayAd();
+            this.elementHost5 = new System.Windows.Forms.Integration.ElementHost();
+            this.displayAd5 = new aggeliesWpfLab.DisplayAd();
+            this.elementHost6 = new System.Windows.Forms.Integration.ElementHost();
+            this.displayAd6 = new aggeliesWpfLab.DisplayAd();
+            this.elementHost7 = new System.Windows.Forms.Integration.ElementHost();
+            this.displayAd7 = new aggeliesWpfLab.DisplayAd();
+            this.elementHost8 = new System.Windows.Forms.Integration.ElementHost();
+            this.displayAd8 = new aggeliesWpfLab.DisplayAd();
+            this.elementHost9 = new System.Windows.Forms.Integration.ElementHost();
+            this.displayAd9 = new aggeliesWpfLab.DisplayAd();
+            this.elementHost10 = new System.Windows.Forms.Integration.ElementHost();
+            this.displayAd10 = new aggeliesWpfLab.DisplayAd();
             this.recentAdsLabel = new System.Windows.Forms.Label();
             this.profilePanel = new System.Windows.Forms.Panel();
             this.uPhoneLabel = new System.Windows.Forms.Label();
@@ -70,7 +90,8 @@
             this.uNameTextBox = new System.Windows.Forms.TextBox();
             this.avatarUploadButton = new System.Windows.Forms.Button();
             this.avatarPictureBox = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.myAdsLabel = new System.Windows.Forms.Label();
+            this.profileLabel = new System.Windows.Forms.Label();
             this.categoriesPanel = new System.Windows.Forms.Panel();
             this.displayAd = new UserApplication.DisplayAds();
             this.categoriesListBox = new System.Windows.Forms.ListBox();
@@ -79,27 +100,32 @@
             this.mainCategoriesComboBox = new System.Windows.Forms.ComboBox();
             this.categoriesLabel = new System.Windows.Forms.Label();
             this.adsPanel = new System.Windows.Forms.Panel();
+            this.goBackImage = new System.Windows.Forms.PictureBox();
+            this.adsUserCategoryCBox = new System.Windows.Forms.ComboBox();
+            this.adsTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.publishButton = new System.Windows.Forms.Button();
             this.savePriceButton = new System.Windows.Forms.Button();
+            this.adsUserCategoryL = new System.Windows.Forms.Label();
             this.priceLabel = new System.Windows.Forms.Label();
             this.publishedLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.adsOfUserL = new System.Windows.Forms.Label();
             this.creationDateLabel = new System.Windows.Forms.Label();
             this.priceTextBox = new System.Windows.Forms.TextBox();
             this.publishedTextBox = new System.Windows.Forms.TextBox();
             this.expirationDateTextBox = new System.Windows.Forms.TextBox();
             this.creationDateTextBox = new System.Windows.Forms.TextBox();
-            this.editPicturePictureBox = new System.Windows.Forms.PictureBox();
             this.adsListPanel = new System.Windows.Forms.Panel();
-            this.adsListBox = new System.Windows.Forms.ListBox();
-            this.adsTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userAdsDataGrid = new System.Windows.Forms.DataGridView();
+            this.adIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adCategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.infoLabel = new System.Windows.Forms.Label();
-            this.editDescriptionPictureBox = new System.Windows.Forms.PictureBox();
-            this.editTitlePictureBox = new System.Windows.Forms.PictureBox();
             this.selectedAdPanel = new System.Windows.Forms.Panel();
-            this.titleTextBox = new System.Windows.Forms.TextBox();
-            this.descriptionRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.adsPictureBox = new System.Windows.Forms.PictureBox();
+            this.userPanelElementHost = new System.Windows.Forms.Integration.ElementHost();
+            this.displayAd1 = new aggeliesWpfLab.DisplayAd();
+            this.adsTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.usersAdsTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contentPanel = new System.Windows.Forms.Panel();
             this.signupPanel = new System.Windows.Forms.Panel();
             this.signupLabel = new System.Windows.Forms.Label();
@@ -126,33 +152,35 @@
             this.usersTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.UsersTableAdapter();
             this.adCategoryTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.AdCategoryTableAdapter();
             this.leftPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.usersAdsTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.topPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.settingsPanel.SuspendLayout();
             this.fontSizeGroupBox.SuspendLayout();
             this.panelColorsGroupBox.SuspendLayout();
             this.homePanel.SuspendLayout();
+            this.recentAdsTablePanel.SuspendLayout();
             this.profilePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
             this.categoriesPanel.SuspendLayout();
             this.adsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.editPicturePictureBox)).BeginInit();
-            this.adsListPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.goBackImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adsTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.editDescriptionPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.editTitlePictureBox)).BeginInit();
+            this.adsListPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userAdsDataGrid)).BeginInit();
             this.selectedAdPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.adsPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adsTableBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersAdsTableBindingSource)).BeginInit();
             this.contentPanel.SuspendLayout();
             this.signupPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersAdsTableBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
             // 
-            this.topPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(178)))), ((int)(((byte)(250)))));
             this.topPanel.Controls.Add(this.pictureBox1);
             this.topPanel.Controls.Add(this.elementHost1);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -160,6 +188,17 @@
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1828, 108);
             this.topPanel.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 108);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // elementHost1
             // 
@@ -173,16 +212,16 @@
             // 
             // footerPanel
             // 
-            this.footerPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.footerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(178)))), ((int)(((byte)(250)))));
             this.footerPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.footerPanel.Location = new System.Drawing.Point(200, 714);
+            this.footerPanel.Location = new System.Drawing.Point(200, 747);
             this.footerPanel.Name = "footerPanel";
-            this.footerPanel.Size = new System.Drawing.Size(1428, 100);
+            this.footerPanel.Size = new System.Drawing.Size(1428, 67);
             this.footerPanel.TabIndex = 1;
             // 
             // rightPanel
             // 
-            this.rightPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.rightPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(178)))), ((int)(((byte)(250)))));
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.rightPanel.Location = new System.Drawing.Point(1628, 108);
             this.rightPanel.Name = "rightPanel";
@@ -197,7 +236,7 @@
             this.settingsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.settingsPanel.Location = new System.Drawing.Point(0, 0);
             this.settingsPanel.Name = "settingsPanel";
-            this.settingsPanel.Size = new System.Drawing.Size(1428, 606);
+            this.settingsPanel.Size = new System.Drawing.Size(1428, 639);
             this.settingsPanel.TabIndex = 1;
             // 
             // fontSizeGroupBox
@@ -302,15 +341,137 @@
             // 
             // homePanel
             // 
+            this.homePanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.homePanel.Controls.Add(this.recentAdsTablePanel);
             this.homePanel.Controls.Add(this.recentAdsLabel);
             this.homePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.homePanel.Location = new System.Drawing.Point(0, 0);
             this.homePanel.Name = "homePanel";
-            this.homePanel.Size = new System.Drawing.Size(1428, 606);
+            this.homePanel.Size = new System.Drawing.Size(1428, 639);
             this.homePanel.TabIndex = 3;
+            // 
+            // recentAdsTablePanel
+            // 
+            this.recentAdsTablePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.recentAdsTablePanel.ColumnCount = 3;
+            this.recentAdsTablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.recentAdsTablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.recentAdsTablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.recentAdsTablePanel.Controls.Add(this.elementHost2, 0, 0);
+            this.recentAdsTablePanel.Controls.Add(this.elementHost3, 1, 0);
+            this.recentAdsTablePanel.Controls.Add(this.elementHost4, 2, 0);
+            this.recentAdsTablePanel.Controls.Add(this.elementHost5, 0, 1);
+            this.recentAdsTablePanel.Controls.Add(this.elementHost6, 1, 1);
+            this.recentAdsTablePanel.Controls.Add(this.elementHost7, 2, 1);
+            this.recentAdsTablePanel.Controls.Add(this.elementHost8, 0, 2);
+            this.recentAdsTablePanel.Controls.Add(this.elementHost9, 1, 2);
+            this.recentAdsTablePanel.Controls.Add(this.elementHost10, 2, 2);
+            this.recentAdsTablePanel.Location = new System.Drawing.Point(214, 80);
+            this.recentAdsTablePanel.Name = "recentAdsTablePanel";
+            this.recentAdsTablePanel.Padding = new System.Windows.Forms.Padding(2);
+            this.recentAdsTablePanel.RowCount = 3;
+            this.recentAdsTablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.recentAdsTablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.recentAdsTablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.recentAdsTablePanel.Size = new System.Drawing.Size(1000, 500);
+            this.recentAdsTablePanel.TabIndex = 6;
+            // 
+            // elementHost2
+            // 
+            this.elementHost2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.elementHost2.Location = new System.Drawing.Point(5, 5);
+            this.elementHost2.Name = "elementHost2";
+            this.elementHost2.Size = new System.Drawing.Size(326, 159);
+            this.elementHost2.TabIndex = 0;
+            this.elementHost2.Text = "elementHost2";
+            this.elementHost2.Child = this.displayAd2;
+            // 
+            // elementHost3
+            // 
+            this.elementHost3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.elementHost3.Location = new System.Drawing.Point(337, 5);
+            this.elementHost3.Name = "elementHost3";
+            this.elementHost3.Size = new System.Drawing.Size(326, 159);
+            this.elementHost3.TabIndex = 1;
+            this.elementHost3.Text = "elementHost3";
+            this.elementHost3.Child = this.displayAd3;
+            // 
+            // elementHost4
+            // 
+            this.elementHost4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.elementHost4.Location = new System.Drawing.Point(669, 5);
+            this.elementHost4.Name = "elementHost4";
+            this.elementHost4.Size = new System.Drawing.Size(326, 159);
+            this.elementHost4.TabIndex = 2;
+            this.elementHost4.Text = "elementHost4";
+            this.elementHost4.Child = this.displayAd4;
+            // 
+            // elementHost5
+            // 
+            this.elementHost5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.elementHost5.Location = new System.Drawing.Point(5, 170);
+            this.elementHost5.Name = "elementHost5";
+            this.elementHost5.Size = new System.Drawing.Size(326, 159);
+            this.elementHost5.TabIndex = 3;
+            this.elementHost5.Text = "elementHost5";
+            this.elementHost5.Child = this.displayAd5;
+            // 
+            // elementHost6
+            // 
+            this.elementHost6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.elementHost6.Location = new System.Drawing.Point(337, 170);
+            this.elementHost6.Name = "elementHost6";
+            this.elementHost6.Size = new System.Drawing.Size(326, 159);
+            this.elementHost6.TabIndex = 4;
+            this.elementHost6.Text = "elementHost6";
+            this.elementHost6.Child = this.displayAd6;
+            // 
+            // elementHost7
+            // 
+            this.elementHost7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.elementHost7.Location = new System.Drawing.Point(669, 170);
+            this.elementHost7.Name = "elementHost7";
+            this.elementHost7.Size = new System.Drawing.Size(326, 159);
+            this.elementHost7.TabIndex = 5;
+            this.elementHost7.Text = "elementHost7";
+            this.elementHost7.Child = this.displayAd7;
+            // 
+            // elementHost8
+            // 
+            this.elementHost8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.elementHost8.Location = new System.Drawing.Point(5, 335);
+            this.elementHost8.Name = "elementHost8";
+            this.elementHost8.Size = new System.Drawing.Size(326, 160);
+            this.elementHost8.TabIndex = 6;
+            this.elementHost8.Text = "elementHost8";
+            this.elementHost8.Child = this.displayAd8;
+            // 
+            // elementHost9
+            // 
+            this.elementHost9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.elementHost9.Location = new System.Drawing.Point(337, 335);
+            this.elementHost9.Name = "elementHost9";
+            this.elementHost9.Size = new System.Drawing.Size(326, 160);
+            this.elementHost9.TabIndex = 7;
+            this.elementHost9.Text = "elementHost9";
+            this.elementHost9.Child = this.displayAd9;
+            // 
+            // elementHost10
+            // 
+            this.elementHost10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.elementHost10.Location = new System.Drawing.Point(669, 335);
+            this.elementHost10.Name = "elementHost10";
+            this.elementHost10.Size = new System.Drawing.Size(326, 160);
+            this.elementHost10.TabIndex = 8;
+            this.elementHost10.Text = "elementHost10";
+            this.elementHost10.Child = this.displayAd10;
             // 
             // recentAdsLabel
             // 
+            this.recentAdsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.recentAdsLabel.AutoSize = true;
             this.recentAdsLabel.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.recentAdsLabel.ForeColor = System.Drawing.Color.Black;
@@ -344,11 +505,12 @@
             this.profilePanel.Controls.Add(this.uNameTextBox);
             this.profilePanel.Controls.Add(this.avatarUploadButton);
             this.profilePanel.Controls.Add(this.avatarPictureBox);
-            this.profilePanel.Controls.Add(this.label5);
+            this.profilePanel.Controls.Add(this.myAdsLabel);
+            this.profilePanel.Controls.Add(this.profileLabel);
             this.profilePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profilePanel.Location = new System.Drawing.Point(0, 0);
             this.profilePanel.Name = "profilePanel";
-            this.profilePanel.Size = new System.Drawing.Size(1428, 606);
+            this.profilePanel.Size = new System.Drawing.Size(1428, 639);
             this.profilePanel.TabIndex = 0;
             // 
             // uPhoneLabel
@@ -357,9 +519,9 @@
             this.uPhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.uPhoneLabel.Location = new System.Drawing.Point(467, 313);
             this.uPhoneLabel.Name = "uPhoneLabel";
-            this.uPhoneLabel.Size = new System.Drawing.Size(78, 20);
+            this.uPhoneLabel.Size = new System.Drawing.Size(115, 20);
             this.uPhoneLabel.TabIndex = 69;
-            this.uPhoneLabel.Text = "Τηλέφωνο";
+            this.uPhoneLabel.Text = "Phone Number";
             // 
             // uPhoneTextBox
             // 
@@ -375,9 +537,9 @@
             this.uAgeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.uAgeLabel.Location = new System.Drawing.Point(467, 276);
             this.uAgeLabel.Name = "uAgeLabel";
-            this.uAgeLabel.Size = new System.Drawing.Size(60, 20);
+            this.uAgeLabel.Size = new System.Drawing.Size(38, 20);
             this.uAgeLabel.TabIndex = 67;
-            this.uAgeLabel.Text = "Ηληκία";
+            this.uAgeLabel.Text = "Age";
             // 
             // uAgeTextBox
             // 
@@ -393,9 +555,9 @@
             this.uREmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.uREmailLabel.Location = new System.Drawing.Point(467, 239);
             this.uREmailLabel.Name = "uREmailLabel";
-            this.uREmailLabel.Size = new System.Drawing.Size(132, 20);
+            this.uREmailLabel.Size = new System.Drawing.Size(111, 20);
             this.uREmailLabel.TabIndex = 65;
-            this.uREmailLabel.Text = "Email Ανάκτησης";
+            this.uREmailLabel.Text = "Recover Email";
             // 
             // uREmailTextBox
             // 
@@ -413,7 +575,7 @@
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(149, 45);
             this.saveButton.TabIndex = 63;
-            this.saveButton.Text = "Αποθήκευση";
+            this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
@@ -423,9 +585,9 @@
             this.lNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.lNameLabel.Location = new System.Drawing.Point(467, 91);
             this.lNameLabel.Name = "lNameLabel";
-            this.lNameLabel.Size = new System.Drawing.Size(72, 20);
+            this.lNameLabel.Size = new System.Drawing.Size(94, 20);
             this.lNameLabel.TabIndex = 62;
-            this.lNameLabel.Text = "Επώνυμο";
+            this.lNameLabel.Text = "Last Name :";
             // 
             // lNameTextBox
             // 
@@ -456,7 +618,7 @@
             this.avatarRemoveButton.Name = "avatarRemoveButton";
             this.avatarRemoveButton.Size = new System.Drawing.Size(172, 45);
             this.avatarRemoveButton.TabIndex = 59;
-            this.avatarRemoveButton.Text = "Απαλοιφή";
+            this.avatarRemoveButton.Text = "Remove";
             this.avatarRemoveButton.UseVisualStyleBackColor = true;
             this.avatarRemoveButton.Click += new System.EventHandler(this.avatarRemoveButton_Click);
             // 
@@ -466,9 +628,9 @@
             this.fNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.fNameLabel.Location = new System.Drawing.Point(467, 54);
             this.fNameLabel.Name = "fNameLabel";
-            this.fNameLabel.Size = new System.Drawing.Size(56, 20);
+            this.fNameLabel.Size = new System.Drawing.Size(94, 20);
             this.fNameLabel.TabIndex = 56;
-            this.fNameLabel.Text = "Όνομα";
+            this.fNameLabel.Text = "First Name :";
             // 
             // fNameTextBox
             // 
@@ -513,9 +675,9 @@
             this.uPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.uPasswordLabel.Location = new System.Drawing.Point(467, 165);
             this.uPasswordLabel.Name = "uPasswordLabel";
-            this.uPasswordLabel.Size = new System.Drawing.Size(67, 20);
+            this.uPasswordLabel.Size = new System.Drawing.Size(86, 20);
             this.uPasswordLabel.TabIndex = 52;
-            this.uPasswordLabel.Text = "Κωδικός";
+            this.uPasswordLabel.Text = "Password :";
             // 
             // uPasswordTextBox
             // 
@@ -552,7 +714,7 @@
             this.avatarUploadButton.Name = "avatarUploadButton";
             this.avatarUploadButton.Size = new System.Drawing.Size(172, 45);
             this.avatarUploadButton.TabIndex = 48;
-            this.avatarUploadButton.Text = "Αλλαγή";
+            this.avatarUploadButton.Text = "Change";
             this.avatarUploadButton.UseVisualStyleBackColor = true;
             this.avatarUploadButton.Click += new System.EventHandler(this.avatarUploadButton_Click);
             // 
@@ -567,16 +729,31 @@
             this.avatarPictureBox.TabIndex = 47;
             this.avatarPictureBox.TabStop = false;
             // 
-            // label5
+            // myAdsLabel
             // 
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label5.Location = new System.Drawing.Point(0, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 72);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Προφίλ";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.myAdsLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.myAdsLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.myAdsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.myAdsLabel.Location = new System.Drawing.Point(0, 72);
+            this.myAdsLabel.Name = "myAdsLabel";
+            this.myAdsLabel.Size = new System.Drawing.Size(177, 72);
+            this.myAdsLabel.TabIndex = 1;
+            this.myAdsLabel.Text = "My Ads";
+            this.myAdsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.myAdsLabel.Click += new System.EventHandler(this.myAdsLabel_Click);
+            // 
+            // profileLabel
+            // 
+            this.profileLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.profileLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.profileLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.profileLabel.Location = new System.Drawing.Point(0, 0);
+            this.profileLabel.Name = "profileLabel";
+            this.profileLabel.Size = new System.Drawing.Size(177, 72);
+            this.profileLabel.TabIndex = 1;
+            this.profileLabel.Text = "My Profile";
+            this.profileLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.profileLabel.Click += new System.EventHandler(this.profileLabel_Click);
             // 
             // categoriesPanel
             // 
@@ -589,7 +766,7 @@
             this.categoriesPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.categoriesPanel.Location = new System.Drawing.Point(0, 0);
             this.categoriesPanel.Name = "categoriesPanel";
-            this.categoriesPanel.Size = new System.Drawing.Size(1428, 606);
+            this.categoriesPanel.Size = new System.Drawing.Size(1428, 639);
             this.categoriesPanel.TabIndex = 3;
             // 
             // displayAd
@@ -613,7 +790,7 @@
             this.categoriesListBox.ItemHeight = 20;
             this.categoriesListBox.Location = new System.Drawing.Point(807, 53);
             this.categoriesListBox.Name = "categoriesListBox";
-            this.categoriesListBox.Size = new System.Drawing.Size(621, 540);
+            this.categoriesListBox.Size = new System.Drawing.Size(621, 560);
             this.categoriesListBox.TabIndex = 5;
             this.categoriesListBox.SelectedIndexChanged += new System.EventHandler(this.categoriesListBox_SelectedIndexChanged);
             // 
@@ -662,38 +839,64 @@
             // 
             // adsPanel
             // 
-            this.adsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.adsPanel.Controls.Add(this.goBackImage);
+            this.adsPanel.Controls.Add(this.adsUserCategoryCBox);
             this.adsPanel.Controls.Add(this.publishButton);
             this.adsPanel.Controls.Add(this.savePriceButton);
+            this.adsPanel.Controls.Add(this.adsUserCategoryL);
             this.adsPanel.Controls.Add(this.priceLabel);
             this.adsPanel.Controls.Add(this.publishedLabel);
             this.adsPanel.Controls.Add(this.label7);
+            this.adsPanel.Controls.Add(this.adsOfUserL);
             this.adsPanel.Controls.Add(this.creationDateLabel);
             this.adsPanel.Controls.Add(this.priceTextBox);
             this.adsPanel.Controls.Add(this.publishedTextBox);
             this.adsPanel.Controls.Add(this.expirationDateTextBox);
             this.adsPanel.Controls.Add(this.creationDateTextBox);
-            this.adsPanel.Controls.Add(this.editPicturePictureBox);
             this.adsPanel.Controls.Add(this.adsListPanel);
-            this.adsPanel.Controls.Add(this.editDescriptionPictureBox);
-            this.adsPanel.Controls.Add(this.editTitlePictureBox);
             this.adsPanel.Controls.Add(this.selectedAdPanel);
+            this.adsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.adsPanel.Location = new System.Drawing.Point(0, 0);
             this.adsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adsPanel.Name = "adsPanel";
-            this.adsPanel.Size = new System.Drawing.Size(1064, 606);
+            this.adsPanel.Size = new System.Drawing.Size(1428, 639);
             this.adsPanel.TabIndex = 2;
+            // 
+            // goBackImage
+            // 
+            this.goBackImage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.goBackImage.Image = ((System.Drawing.Image)(resources.GetObject("goBackImage.Image")));
+            this.goBackImage.Location = new System.Drawing.Point(394, 3);
+            this.goBackImage.Name = "goBackImage";
+            this.goBackImage.Size = new System.Drawing.Size(56, 50);
+            this.goBackImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.goBackImage.TabIndex = 67;
+            this.goBackImage.TabStop = false;
+            this.goBackImage.Click += new System.EventHandler(this.goBackImage_Click);
+            // 
+            // adsUserCategoryCBox
+            // 
+            this.adsUserCategoryCBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.adsTableBindingSource, "adCategory", true));
+            this.adsUserCategoryCBox.FormattingEnabled = true;
+            this.adsUserCategoryCBox.Location = new System.Drawing.Point(666, 223);
+            this.adsUserCategoryCBox.Name = "adsUserCategoryCBox";
+            this.adsUserCategoryCBox.Size = new System.Drawing.Size(242, 21);
+            this.adsUserCategoryCBox.TabIndex = 66;
+            // 
+            // adsTableBindingSource
+            // 
+            this.adsTableBindingSource.DataMember = "AdsTable";
+            this.adsTableBindingSource.DataSource = this.aggeliesDBDataSet;
             // 
             // publishButton
             // 
             this.publishButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.publishButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.publishButton.Location = new System.Drawing.Point(488, 248);
+            this.publishButton.Location = new System.Drawing.Point(524, 358);
             this.publishButton.Name = "publishButton";
             this.publishButton.Size = new System.Drawing.Size(149, 45);
             this.publishButton.TabIndex = 65;
-            this.publishButton.Text = "Δημοσίευση";
+            this.publishButton.Text = "Publish my Ad";
             this.publishButton.UseVisualStyleBackColor = true;
             this.publishButton.Click += new System.EventHandler(this.publishButton_Click);
             // 
@@ -701,69 +904,89 @@
             // 
             this.savePriceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savePriceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.savePriceButton.Location = new System.Drawing.Point(652, 248);
+            this.savePriceButton.Location = new System.Drawing.Point(759, 358);
             this.savePriceButton.Name = "savePriceButton";
             this.savePriceButton.Size = new System.Drawing.Size(149, 45);
             this.savePriceButton.TabIndex = 64;
-            this.savePriceButton.Text = "Αποθήκευση";
+            this.savePriceButton.Text = "Save my Ad";
             this.savePriceButton.UseVisualStyleBackColor = true;
             this.savePriceButton.Click += new System.EventHandler(this.savePriceButton_Click);
+            // 
+            // adsUserCategoryL
+            // 
+            this.adsUserCategoryL.AutoSize = true;
+            this.adsUserCategoryL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.adsUserCategoryL.Location = new System.Drawing.Point(520, 226);
+            this.adsUserCategoryL.Name = "adsUserCategoryL";
+            this.adsUserCategoryL.Size = new System.Drawing.Size(81, 20);
+            this.adsUserCategoryL.TabIndex = 63;
+            this.adsUserCategoryL.Text = "Category :";
             // 
             // priceLabel
             // 
             this.priceLabel.AutoSize = true;
             this.priceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.priceLabel.Location = new System.Drawing.Point(394, 193);
+            this.priceLabel.Location = new System.Drawing.Point(520, 189);
             this.priceLabel.Name = "priceLabel";
-            this.priceLabel.Size = new System.Drawing.Size(63, 20);
+            this.priceLabel.Size = new System.Drawing.Size(75, 20);
             this.priceLabel.TabIndex = 63;
-            this.priceLabel.Text = "Τιμή (€)";
+            this.priceLabel.Text = "Price (€) :";
             // 
             // publishedLabel
             // 
             this.publishedLabel.AutoSize = true;
             this.publishedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.publishedLabel.Location = new System.Drawing.Point(394, 161);
+            this.publishedLabel.Location = new System.Drawing.Point(520, 152);
             this.publishedLabel.Name = "publishedLabel";
-            this.publishedLabel.Size = new System.Drawing.Size(111, 20);
+            this.publishedLabel.Size = new System.Drawing.Size(82, 20);
             this.publishedLabel.TabIndex = 62;
-            this.publishedLabel.Text = "Δημοσιεύτηκε";
+            this.publishedLabel.Text = "Published:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label7.Location = new System.Drawing.Point(394, 129);
+            this.label7.Location = new System.Drawing.Point(520, 115);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 20);
+            this.label7.Size = new System.Drawing.Size(126, 20);
             this.label7.TabIndex = 61;
-            this.label7.Text = "Λήγει στις";
+            this.label7.Text = "Expiration Date :";
+            // 
+            // adsOfUserL
+            // 
+            this.adsOfUserL.AutoSize = true;
+            this.adsOfUserL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.adsOfUserL.Location = new System.Drawing.Point(628, 3);
+            this.adsOfUserL.Name = "adsOfUserL";
+            this.adsOfUserL.Size = new System.Drawing.Size(173, 25);
+            this.adsOfUserL.TabIndex = 60;
+            this.adsOfUserL.Text = "Your listed Ads";
             // 
             // creationDateLabel
             // 
             this.creationDateLabel.AutoSize = true;
             this.creationDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.creationDateLabel.Location = new System.Drawing.Point(394, 97);
+            this.creationDateLabel.Location = new System.Drawing.Point(520, 83);
             this.creationDateLabel.Name = "creationDateLabel";
-            this.creationDateLabel.Size = new System.Drawing.Size(119, 20);
+            this.creationDateLabel.Size = new System.Drawing.Size(116, 20);
             this.creationDateLabel.TabIndex = 60;
-            this.creationDateLabel.Text = "Δημιουργήθηκε";
+            this.creationDateLabel.Text = "Creation Date :";
             // 
             // priceTextBox
             // 
-            this.priceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "fName", true));
+            this.priceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.adsTableBindingSource, "price", true));
             this.priceTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.priceTextBox.Location = new System.Drawing.Point(559, 193);
+            this.priceTextBox.Location = new System.Drawing.Point(666, 188);
             this.priceTextBox.Name = "priceTextBox";
             this.priceTextBox.Size = new System.Drawing.Size(242, 26);
             this.priceTextBox.TabIndex = 59;
             // 
             // publishedTextBox
             // 
-            this.publishedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "fName", true));
+            this.publishedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.adsTableBindingSource, "Published", true));
             this.publishedTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.publishedTextBox.ForeColor = System.Drawing.Color.White;
-            this.publishedTextBox.Location = new System.Drawing.Point(559, 161);
+            this.publishedTextBox.Location = new System.Drawing.Point(666, 153);
             this.publishedTextBox.Name = "publishedTextBox";
             this.publishedTextBox.ReadOnly = true;
             this.publishedTextBox.Size = new System.Drawing.Size(242, 26);
@@ -771,166 +994,129 @@
             // 
             // expirationDateTextBox
             // 
-            this.expirationDateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "fName", true));
+            this.expirationDateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.adsTableBindingSource, "expirationDate", true));
             this.expirationDateTextBox.Enabled = false;
             this.expirationDateTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.expirationDateTextBox.Location = new System.Drawing.Point(559, 129);
+            this.expirationDateTextBox.Location = new System.Drawing.Point(666, 116);
+            this.expirationDateTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.expirationDateTextBox.Name = "expirationDateTextBox";
             this.expirationDateTextBox.Size = new System.Drawing.Size(242, 26);
             this.expirationDateTextBox.TabIndex = 57;
             // 
             // creationDateTextBox
             // 
-            this.creationDateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "fName", true));
+            this.creationDateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.adsTableBindingSource, "creationDate", true));
             this.creationDateTextBox.Enabled = false;
             this.creationDateTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.creationDateTextBox.Location = new System.Drawing.Point(559, 97);
+            this.creationDateTextBox.Location = new System.Drawing.Point(666, 83);
             this.creationDateTextBox.Name = "creationDateTextBox";
             this.creationDateTextBox.Size = new System.Drawing.Size(242, 26);
             this.creationDateTextBox.TabIndex = 56;
             // 
-            // editPicturePictureBox
-            // 
-            this.editPicturePictureBox.Image = global::UserApplication.Properties.Resources.edit1;
-            this.editPicturePictureBox.Location = new System.Drawing.Point(355, 36);
-            this.editPicturePictureBox.Name = "editPicturePictureBox";
-            this.editPicturePictureBox.Size = new System.Drawing.Size(30, 30);
-            this.editPicturePictureBox.TabIndex = 6;
-            this.editPicturePictureBox.TabStop = false;
-            this.editPicturePictureBox.Click += new System.EventHandler(this.editPicturePictureBox_Click);
-            // 
             // adsListPanel
             // 
-            this.adsListPanel.Controls.Add(this.adsListBox);
+            this.adsListPanel.Controls.Add(this.userAdsDataGrid);
             this.adsListPanel.Controls.Add(this.infoLabel);
-            this.adsListPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.adsListPanel.Location = new System.Drawing.Point(819, 0);
+            this.adsListPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.adsListPanel.Location = new System.Drawing.Point(0, 0);
             this.adsListPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adsListPanel.Name = "adsListPanel";
-            this.adsListPanel.Size = new System.Drawing.Size(245, 606);
+            this.adsListPanel.Size = new System.Drawing.Size(391, 639);
             this.adsListPanel.TabIndex = 5;
             // 
-            // adsListBox
+            // userAdsDataGrid
             // 
-            this.adsListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.userAdsDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.adsListBox.BackColor = System.Drawing.SystemColors.Control;
-            this.adsListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.adsListBox.DataSource = this.adsTableBindingSource;
-            this.adsListBox.DisplayMember = "adTitle";
-            this.adsListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adsListBox.ForeColor = System.Drawing.Color.DarkBlue;
-            this.adsListBox.FormattingEnabled = true;
-            this.adsListBox.ItemHeight = 20;
-            this.adsListBox.Location = new System.Drawing.Point(4, 33);
-            this.adsListBox.Margin = new System.Windows.Forms.Padding(0);
-            this.adsListBox.Name = "adsListBox";
-            this.adsListBox.Size = new System.Drawing.Size(241, 340);
-            this.adsListBox.TabIndex = 3;
-            this.adsListBox.ValueMember = "adID";
-            this.adsListBox.SelectedIndexChanged += new System.EventHandler(this.adsListBox_SelectedIndexChanged);
+            this.userAdsDataGrid.AutoGenerateColumns = false;
+            this.userAdsDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.userAdsDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.userAdsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.userAdsDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.adIDDataGridViewTextBoxColumn,
+            this.adTitleDataGridViewTextBoxColumn,
+            this.adCategoryDataGridViewTextBoxColumn});
+            this.userAdsDataGrid.DataSource = this.adsTableBindingSource;
+            this.userAdsDataGrid.Location = new System.Drawing.Point(4, 42);
+            this.userAdsDataGrid.Name = "userAdsDataGrid";
+            this.userAdsDataGrid.Size = new System.Drawing.Size(380, 591);
+            this.userAdsDataGrid.TabIndex = 3;
+            this.userAdsDataGrid.SelectionChanged += new System.EventHandler(this.userAdsDataGrid_SelectionChanged);
             // 
-            // adsTableBindingSource
+            // adIDDataGridViewTextBoxColumn
             // 
-            this.adsTableBindingSource.DataMember = "AdsTable";
-            this.adsTableBindingSource.DataSource = this.aggeliesDBDataSet;
+            this.adIDDataGridViewTextBoxColumn.DataPropertyName = "adID";
+            this.adIDDataGridViewTextBoxColumn.HeaderText = "adID";
+            this.adIDDataGridViewTextBoxColumn.Name = "adIDDataGridViewTextBoxColumn";
+            // 
+            // adTitleDataGridViewTextBoxColumn
+            // 
+            this.adTitleDataGridViewTextBoxColumn.DataPropertyName = "adTitle";
+            this.adTitleDataGridViewTextBoxColumn.HeaderText = "adTitle";
+            this.adTitleDataGridViewTextBoxColumn.Name = "adTitleDataGridViewTextBoxColumn";
+            // 
+            // adCategoryDataGridViewTextBoxColumn
+            // 
+            this.adCategoryDataGridViewTextBoxColumn.DataPropertyName = "adCategory";
+            this.adCategoryDataGridViewTextBoxColumn.HeaderText = "adCategory";
+            this.adCategoryDataGridViewTextBoxColumn.Name = "adCategoryDataGridViewTextBoxColumn";
             // 
             // infoLabel
             // 
-            this.infoLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.infoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.infoLabel.AutoSize = true;
             this.infoLabel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.infoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.infoLabel.Location = new System.Drawing.Point(0, 0);
+            this.infoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.infoLabel.Location = new System.Drawing.Point(121, 3);
             this.infoLabel.Name = "infoLabel";
-            this.infoLabel.Size = new System.Drawing.Size(245, 33);
+            this.infoLabel.Size = new System.Drawing.Size(148, 25);
             this.infoLabel.TabIndex = 2;
-            this.infoLabel.Text = "Αγγελίες ανα τίτλο";
+            this.infoLabel.Text = "Ads Per Title";
             this.infoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // editDescriptionPictureBox
-            // 
-            this.editDescriptionPictureBox.Image = global::UserApplication.Properties.Resources.edit1;
-            this.editDescriptionPictureBox.Location = new System.Drawing.Point(355, 282);
-            this.editDescriptionPictureBox.Name = "editDescriptionPictureBox";
-            this.editDescriptionPictureBox.Size = new System.Drawing.Size(30, 30);
-            this.editDescriptionPictureBox.TabIndex = 4;
-            this.editDescriptionPictureBox.TabStop = false;
-            this.editDescriptionPictureBox.Click += new System.EventHandler(this.descriptionEditPictureBox_Click);
-            // 
-            // editTitlePictureBox
-            // 
-            this.editTitlePictureBox.Image = global::UserApplication.Properties.Resources.edit1;
-            this.editTitlePictureBox.Location = new System.Drawing.Point(355, 1);
-            this.editTitlePictureBox.Name = "editTitlePictureBox";
-            this.editTitlePictureBox.Size = new System.Drawing.Size(30, 30);
-            this.editTitlePictureBox.TabIndex = 3;
-            this.editTitlePictureBox.TabStop = false;
-            this.editTitlePictureBox.Click += new System.EventHandler(this.titleEditPictureBox_Click);
             // 
             // selectedAdPanel
             // 
-            this.selectedAdPanel.Controls.Add(this.titleTextBox);
-            this.selectedAdPanel.Controls.Add(this.descriptionRichTextBox);
-            this.selectedAdPanel.Controls.Add(this.adsPictureBox);
-            this.selectedAdPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.selectedAdPanel.Location = new System.Drawing.Point(0, 0);
+            this.selectedAdPanel.Controls.Add(this.userPanelElementHost);
+            this.selectedAdPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.selectedAdPanel.Location = new System.Drawing.Point(1079, 0);
             this.selectedAdPanel.Name = "selectedAdPanel";
-            this.selectedAdPanel.Size = new System.Drawing.Size(349, 606);
+            this.selectedAdPanel.Size = new System.Drawing.Size(349, 639);
             this.selectedAdPanel.TabIndex = 2;
             // 
-            // titleTextBox
+            // userPanelElementHost
             // 
-            this.titleTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.titleTextBox.Enabled = false;
-            this.titleTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleTextBox.Location = new System.Drawing.Point(0, 0);
-            this.titleTextBox.Multiline = true;
-            this.titleTextBox.Name = "titleTextBox";
-            this.titleTextBox.Size = new System.Drawing.Size(349, 166);
-            this.titleTextBox.TabIndex = 5;
-            this.titleTextBox.Text = "TITLE";
-            this.titleTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.userPanelElementHost.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userPanelElementHost.Location = new System.Drawing.Point(0, 0);
+            this.userPanelElementHost.Name = "userPanelElementHost";
+            this.userPanelElementHost.Size = new System.Drawing.Size(349, 639);
+            this.userPanelElementHost.TabIndex = 0;
+            this.userPanelElementHost.Child = this.displayAd1;
             // 
-            // descriptionRichTextBox
+            // adsTableBindingSource1
             // 
-            this.descriptionRichTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.descriptionRichTextBox.Enabled = false;
-            this.descriptionRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.descriptionRichTextBox.Location = new System.Drawing.Point(0, 415);
-            this.descriptionRichTextBox.Name = "descriptionRichTextBox";
-            this.descriptionRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.descriptionRichTextBox.Size = new System.Drawing.Size(349, 191);
-            this.descriptionRichTextBox.TabIndex = 4;
-            this.descriptionRichTextBox.Text = "Το ακίνητο βρίσκεται στην Αθήνα και μπλα μπλα μπλα....................\n.........." +
-    ".....................\n................................\n........................." +
-    "........";
+            this.adsTableBindingSource1.DataMember = "AdsTable";
+            this.adsTableBindingSource1.DataSource = this.aggeliesDBDataSet;
             // 
-            // adsPictureBox
+            // usersAdsTableBindingSource
             // 
-            this.adsPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.adsPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("adsPictureBox.Image")));
-            this.adsPictureBox.Location = new System.Drawing.Point(0, 33);
-            this.adsPictureBox.Name = "adsPictureBox";
-            this.adsPictureBox.Size = new System.Drawing.Size(349, 385);
-            this.adsPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.adsPictureBox.TabIndex = 3;
-            this.adsPictureBox.TabStop = false;
+            this.usersAdsTableBindingSource.DataMember = "UsersAdsTable";
+            this.usersAdsTableBindingSource.DataSource = this.usersBindingSource;
             // 
             // contentPanel
             // 
-            this.contentPanel.Controls.Add(this.homePanel);
-            this.contentPanel.Controls.Add(this.settingsPanel);
             this.contentPanel.Controls.Add(this.adsPanel);
+            this.contentPanel.Controls.Add(this.homePanel);
+            this.contentPanel.Controls.Add(this.profilePanel);
+            this.contentPanel.Controls.Add(this.settingsPanel);
             this.contentPanel.Controls.Add(this.signupPanel);
             this.contentPanel.Controls.Add(this.categoriesPanel);
-            this.contentPanel.Controls.Add(this.profilePanel);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(200, 108);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(1428, 606);
+            this.contentPanel.Size = new System.Drawing.Size(1428, 639);
             this.contentPanel.TabIndex = 5;
             // 
             // signupPanel
@@ -958,7 +1144,7 @@
             this.signupPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.signupPanel.Location = new System.Drawing.Point(0, 0);
             this.signupPanel.Name = "signupPanel";
-            this.signupPanel.Size = new System.Drawing.Size(1428, 606);
+            this.signupPanel.Size = new System.Drawing.Size(1428, 639);
             this.signupPanel.TabIndex = 7;
             // 
             // signupLabel
@@ -1163,21 +1349,17 @@
             // 
             // leftPanel
             // 
+            this.leftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(178)))), ((int)(((byte)(250)))));
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 108);
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(200, 706);
             this.leftPanel.TabIndex = 1;
             // 
-            // pictureBox1
+            // usersAdsTableBindingSource1
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 108);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.usersAdsTableBindingSource1.DataMember = "UsersAdsTable";
+            this.usersAdsTableBindingSource1.DataSource = this.usersBindingSource;
             // 
             // UserForm
             // 
@@ -1198,6 +1380,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.topPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.settingsPanel.ResumeLayout(false);
             this.fontSizeGroupBox.ResumeLayout(false);
             this.fontSizeGroupBox.PerformLayout();
@@ -1205,6 +1388,7 @@
             this.panelColorsGroupBox.PerformLayout();
             this.homePanel.ResumeLayout(false);
             this.homePanel.PerformLayout();
+            this.recentAdsTablePanel.ResumeLayout(false);
             this.profilePanel.ResumeLayout(false);
             this.profilePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
@@ -1213,18 +1397,18 @@
             this.categoriesPanel.ResumeLayout(false);
             this.adsPanel.ResumeLayout(false);
             this.adsPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.editPicturePictureBox)).EndInit();
-            this.adsListPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.goBackImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adsTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.editDescriptionPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.editTitlePictureBox)).EndInit();
+            this.adsListPanel.ResumeLayout(false);
+            this.adsListPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userAdsDataGrid)).EndInit();
             this.selectedAdPanel.ResumeLayout(false);
-            this.selectedAdPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.adsPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adsTableBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersAdsTableBindingSource)).EndInit();
             this.contentPanel.ResumeLayout(false);
             this.signupPanel.ResumeLayout(false);
             this.signupPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersAdsTableBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1238,24 +1422,17 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel homePanel;
         private System.Windows.Forms.Panel profilePanel;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label profileLabel;
         private System.Windows.Forms.Panel categoriesPanel;
         private System.Windows.Forms.Label categoriesLabel;
         private System.Windows.Forms.Panel adsPanel;
         private System.Windows.Forms.Panel adsListPanel;
-        private System.Windows.Forms.ListBox adsListBox;
         private System.Windows.Forms.Label infoLabel;
-        private System.Windows.Forms.PictureBox editDescriptionPictureBox;
-        private System.Windows.Forms.PictureBox editTitlePictureBox;
         private System.Windows.Forms.Panel selectedAdPanel;
-        private System.Windows.Forms.TextBox titleTextBox;
-        private System.Windows.Forms.RichTextBox descriptionRichTextBox;
-        private System.Windows.Forms.PictureBox adsPictureBox;
         private System.Windows.Forms.Panel contentPanel;
         private UserApplication.AggeliesDBDataSet aggeliesDBDataSet;
         private System.Windows.Forms.BindingSource adsTableBindingSource;
         private UserApplication.AggeliesDBDataSetTableAdapters.AdsTableTableAdapter adsTableTableAdapter;
-        private System.Windows.Forms.PictureBox editPicturePictureBox;
         private System.Windows.Forms.CheckBox showpasswordCheckBox;
         private System.Windows.Forms.Button avatarRemoveButton;
         private System.Windows.Forms.Label fNameLabel;
@@ -1328,6 +1505,39 @@
         private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private aggeliesWpfLab.UserMenuIcons userMenuIcons1;
+        private System.Windows.Forms.DataGridView userAdsDataGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adTitleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adCategoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource usersAdsTableBindingSource1;
+        private System.Windows.Forms.Integration.ElementHost userPanelElementHost;
+        private aggeliesWpfLab.DisplayAd displayAd1;
+        private System.Windows.Forms.BindingSource usersAdsTableBindingSource;
+        private System.Windows.Forms.ComboBox adsUserCategoryCBox;
+        private System.Windows.Forms.Label adsUserCategoryL;
+        private System.Windows.Forms.Label adsOfUserL;
+        private System.Windows.Forms.Label myAdsLabel;
+        private System.Windows.Forms.PictureBox goBackImage;
+        private System.Windows.Forms.TableLayoutPanel recentAdsTablePanel;
+        private System.Windows.Forms.Integration.ElementHost elementHost2;
+        private aggeliesWpfLab.DisplayAd displayAd2;
+        private System.Windows.Forms.Integration.ElementHost elementHost3;
+        private aggeliesWpfLab.DisplayAd displayAd3;
+        private System.Windows.Forms.Integration.ElementHost elementHost4;
+        private aggeliesWpfLab.DisplayAd displayAd4;
+        private System.Windows.Forms.Integration.ElementHost elementHost5;
+        private aggeliesWpfLab.DisplayAd displayAd5;
+        private System.Windows.Forms.Integration.ElementHost elementHost6;
+        private aggeliesWpfLab.DisplayAd displayAd6;
+        private System.Windows.Forms.Integration.ElementHost elementHost7;
+        private aggeliesWpfLab.DisplayAd displayAd7;
+        private System.Windows.Forms.Integration.ElementHost elementHost8;
+        private aggeliesWpfLab.DisplayAd displayAd8;
+        private System.Windows.Forms.Integration.ElementHost elementHost9;
+        private aggeliesWpfLab.DisplayAd displayAd9;
+        private System.Windows.Forms.Integration.ElementHost elementHost10;
+        private aggeliesWpfLab.DisplayAd displayAd10;
+        private System.Windows.Forms.BindingSource adsTableBindingSource1;
     }
 }
 

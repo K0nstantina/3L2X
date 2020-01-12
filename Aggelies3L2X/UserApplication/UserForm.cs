@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Windows.Media.Imaging;
 
 namespace UserApplication
 {
@@ -27,10 +29,12 @@ namespace UserApplication
             this.Hide();
             UserApplication.trestingTreeView treeView = new trestingTreeView();
             treeView.Show();
+
         }
         public UserForm(int userID)
         {
             InitializeComponent();
+            
             userid = userID;
             setImagesPath();
             // Add controls to list.
@@ -100,7 +104,7 @@ namespace UserApplication
                 view = recentAdsListBox.Items[i] as DataRowView;
                 recentAdsList[i].titleTextBox.Text = view["adTitle"].ToString();
                 recentAdsList[i].descTextBox.Text = view["adDesc"].ToString();
-                recentAdsList[i].mediaPictureBox.ImageLocation = imagesLocation + view["media"].ToString();
+                recentAdsList[i].mediaPictureBox.ImageLocation = imagesLocation + view["Images"].ToString();
             }
         }
         #endregion
@@ -177,9 +181,9 @@ namespace UserApplication
             if (categoriesListBox.DataSource!=null)
             {
                 view = categoriesListBox.SelectedItem as DataRowView;
-                displayAd.titleTextBox.Text = view["adTitle"].ToString();
-                displayAd.descTextBox.Text = view["adDesc"].ToString();
-                displayAd.mediaPictureBox.ImageLocation = imagesLocation + view["media"].ToString();
+                //displayAd.titleTextBox.Text = view["adTitle"].ToString();
+                //displayAd.descTextBox.Text = view["adDesc"].ToString();
+                //displayAd.mediaPictureBox.ImageLocation = imagesLocation + view["media"].ToString();
             }
 
         }
@@ -201,9 +205,9 @@ namespace UserApplication
             categoriesListBox.ValueMember = "adID";
 
             view = categoriesListBox.SelectedItem as DataRowView;
-            displayAd.titleTextBox.Text = view["adTitle"].ToString();
-            displayAd.descTextBox.Text = view["adDesc"].ToString();
-            displayAd.mediaPictureBox.ImageLocation = imagesLocation + view["media"].ToString();
+            //displayAd.titleTextBox.Text = view["adTitle"].ToString();
+            //displayAd.descTextBox.Text = view["adDesc"].ToString();
+            //displayAd.mediaPictureBox.ImageLocation = imagesLocation + view["media"].ToString();
         }
 
         #endregion
@@ -217,17 +221,17 @@ namespace UserApplication
         /// <param name="e">Click</param>
         private void titleEditPictureBox_Click(object sender, EventArgs e)
         {
-            if (titleTextBox.Enabled == false)
-            {
-                titleTextBox.Enabled = true;
-                editTitlePictureBox.Image = UserApplication.Properties.Resources.save1;
-            }
-            else
-            {
-                titleTextBox.Enabled = false;
-                editTitlePictureBox.Image = UserApplication.Properties.Resources.edit1;
-                updateTitleDesc();
-            }
+            //if (titleTextBox.Enabled == false)
+            //{
+            //    titleTextBox.Enabled = true;
+            //    editTitlePictureBox.Image = UserApplication.Properties.Resources.save1;
+            //}
+            //else
+            //{
+            //    titleTextBox.Enabled = false;
+            //    editTitlePictureBox.Image = UserApplication.Properties.Resources.edit1;
+            //    updateTitleDesc();
+            //}
         }
 
         /// <summary>
@@ -238,17 +242,17 @@ namespace UserApplication
         /// <param name="e">Click</param>
         private void descriptionEditPictureBox_Click(object sender, EventArgs e)
         {
-            if (descriptionRichTextBox.Enabled == false)
-            {
-                descriptionRichTextBox.Enabled = true;
-                editDescriptionPictureBox.Image = UserApplication.Properties.Resources.save1;
-            }
-            else
-            {
-                descriptionRichTextBox.Enabled = false;
-                editDescriptionPictureBox.Image = UserApplication.Properties.Resources.edit1;
-                updateTitleDesc();
-            }
+            //if (descriptionRichTextBox.Enabled == false)
+            //{
+            //    descriptionRichTextBox.Enabled = true;
+            //    editDescriptionPictureBox.Image = UserApplication.Properties.Resources.save1;
+            //}
+            //else
+            //{
+            //    descriptionRichTextBox.Enabled = false;
+            //    editDescriptionPictureBox.Image = UserApplication.Properties.Resources.edit1;
+            //    updateTitleDesc();
+            //}
         }
 
         /// <summary>
@@ -258,42 +262,43 @@ namespace UserApplication
         /// <param name="e"></param>
         private void editPicturePictureBox_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // Open file dialog and set directory and file filters.
-                OpenFileDialog imgDialog = new OpenFileDialog();
-                //imgDialog.InitialDirectory = "C:\\";
-                imgDialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png) |*.png| All files(*.*)|*.*";
-                // OK button clicked (file selected).
-                if (imgDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    // If file exists (no error in filename).
-                    if (imgDialog.CheckFileExists)
-                    {
-                        // Get file name.
-                        imgName = System.IO.Path.GetFileName(imgDialog.FileName);
-                        // Set the new local path
-                        imgNewPath = imagesLocation + imgName;
-                        // Copy file to images folder and update avatarPictureBox.
-                        System.IO.File.Copy(imgDialog.FileName, imagesLocation + imgName);
-                        // Get current adID.
-                        view = adsListBox.SelectedItem as DataRowView;
-                        int adID = Int32.Parse(view["adID"].ToString());
-                        // Update the image path in database.
-                        this.adsTableTableAdapter.UpdateImageQuery(imgName, adID);
-                        // Set adsPicturebox new image.
-                        adsPictureBox.ImageLocation = imgNewPath;
-                        // Update DataRowView dynamicaly.
-                        view.BeginEdit();
-                        view["media"] = imgName;
-                        view.EndEdit();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An Error Occured" + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
+            //try
+            //{
+            //    // Open file dialog and set directory and file filters.
+            //    OpenFileDialog imgDialog = new OpenFileDialog();
+            //    //imgDialog.InitialDirectory = "C:\\";
+            //    imgDialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png) |*.png| All files(*.*)|*.*";
+            //    // OK button clicked (file selected).
+            //    if (imgDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            //    {
+            //        // If file exists (no error in filename).
+            //        if (imgDialog.CheckFileExists)
+            //        {
+            //            // Get file name.
+            //            imgName = System.IO.Path.GetFileName(imgDialog.FileName);
+            //            // Set the new local path
+            //            imgNewPath = imagesLocation + imgName;
+            //            // Copy file to images folder and update avatarPictureBox.
+            //            System.IO.File.Copy(imgDialog.FileName, imagesLocation + imgName);
+            //            // Get current adID.
+            //           // view = adsListBox.SelectedItem as DataRowView;
+            //            int adID = Int32.Parse(view["adID"].ToString());
+            //            // Update the image path in database.
+            //            this.adsTableTableAdapter.UpdateImageQuery(imgName, adID);
+            //            // Set adsPicturebox new image.
+            //            displayAd1.GetadImage.Source = imgNewPath;
+            //            // Update DataRowView dynamicaly.
+            //            view.BeginEdit();
+            //            view["media"] = imgName;
+            //            view.EndEdit();
+            //        }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("An Error Occured" + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         /// <summary>
@@ -304,54 +309,54 @@ namespace UserApplication
         /// <param name="e"></param>
         private void adsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
-                adsListBox.Refresh();
-                view = adsListBox.SelectedItem as DataRowView;
+            //try
+            //{
+            //    adsListBox.Refresh();
+            //    view = adsListBox.SelectedItem as DataRowView;
 
-                string img = view["media"].ToString();
-                adsPictureBox.ImageLocation = imagesLocation + img;
+            //    string img = view["media"].ToString();
+            //    adsPictureBox.ImageLocation = imagesLocation + img;
 
-                titleTextBox.Text = view["adTitle"].ToString(); ;
-                descriptionRichTextBox.Text = view["adDesc"].ToString();
-                creationDateTextBox.Text = view["creationDate"].ToString();
-                expirationDateTextBox.Text = view["expirationDate"].ToString();
-                priceTextBox.Text = view["price"].ToString();
+            //    titleTextBox.Text = view["adTitle"].ToString(); ;
+            //    descriptionRichTextBox.Text = view["adDesc"].ToString();
+            //    creationDateTextBox.Text = view["creationDate"].ToString();
+            //    expirationDateTextBox.Text = view["expirationDate"].ToString();
+            //    priceTextBox.Text = view["price"].ToString();
 
-                if (view["published"].ToString() == "True")
-                {
-                    publishedTextBox.Text = "Published";
-                    publishedTextBox.BackColor = Color.Green;
-                    publishButton.Text = "Κατάργηση";
-                }
-                else
-                {
-                    publishedTextBox.Text = "Not yet published";
-                    publishedTextBox.BackColor = Color.DarkRed;
-                    publishButton.Text = "Δημοσίευση";
-                }
-            }
-            catch (Exception x)
-            {
-                //MessageBox.Show(x.ToString());
-            }
+            //    if (view["published"].ToString() == "True")
+            //    {
+            //        publishedTextBox.Text = "Published";
+            //        publishedTextBox.BackColor = Color.Green;
+            //        publishButton.Text = "Κατάργηση";
+            //    }
+            //    else
+            //    {
+            //        publishedTextBox.Text = "Not yet published";
+            //        publishedTextBox.BackColor = Color.DarkRed;
+            //        publishButton.Text = "Δημοσίευση";
+            //    }
+            //}
+            //catch (Exception x)
+            //{
+            //    //MessageBox.Show(x.ToString());
+            //}
         }
         /// <summary>
         /// Updates the tilte and description in database.
         /// </summary>
         private void updateTitleDesc()
         {
-            try
-            {
-                view = adsListBox.SelectedItem as DataRowView;
-                int adID = Int32.Parse(view["adID"].ToString());
-                this.adsTableTableAdapter.UpdateTitleDescQuery(titleTextBox.Text, descriptionRichTextBox.Text, adID);
-                updateFields();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("not updated");
-            }
+            //try
+            //{
+            //    view = adsListBox.SelectedItem as DataRowView;
+            //    int adID = Int32.Parse(view["adID"].ToString());
+            //    this.adsTableTableAdapter.UpdateTitleDescQuery(titleTextBox.Text, descriptionRichTextBox.Text, adID);
+            //    updateFields();
+            //}
+            //catch (Exception)
+            //{
+            //    MessageBox.Show("not updated");
+            //}
         }
 
         /// <summary>
@@ -361,20 +366,21 @@ namespace UserApplication
         /// <param name="e">Click</param>
         private void savePriceButton_Click(object sender, EventArgs e)
         {
-            int price;
-            bool result = Int32.TryParse(priceTextBox.Text, out price);
-            if (result)
-            {
-                // Get current adID.
-                view = adsListBox.SelectedItem as DataRowView;
-                int adID = Int32.Parse(view["adID"].ToString());
-                adsTableTableAdapter.UpdatePriceQuery(price, adID);
-                updateFields();
-            }
-            else
-            {
-                MessageBox.Show("nope");
-            }
+            
+            //int price;
+            //bool result = Int32.TryParse(priceTextBox.Text, out price);
+            //if (result)
+            //{
+            //    // Get current adID.
+            //    view = adsListBox.SelectedItem as DataRowView;
+            //    int adID = Int32.Parse(view["adID"].ToString());
+            //    adsTableTableAdapter.UpdatePriceQuery(price, adID);
+            //    updateFields();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("nope");
+            //}
         }
         /// <summary>
         /// Event Handler fot publishButton Click.
@@ -383,26 +389,31 @@ namespace UserApplication
         /// <param name="e"></param>
         private void publishButton_Click(object sender, EventArgs e)
         {
-            view = adsListBox.SelectedItem as DataRowView;
-            int adid = Int32.Parse(view["adID"].ToString());
-            string publishQuery;
-            // Setup Query.
-            if (view["Published"].ToString() == "True")
-            {
-                publishQuery = "UPDATE AdsTable SET Published=No WHERE adID=" + adid + "";
-            }
-            else
-            {
-                publishQuery = "UPDATE AdsTable SET Published=Yes WHERE adID=" + adid + "";
-            }
-            // Open connection.
-            OleDbConnection connection = new OleDbConnection(connectionString);
-            OleDbCommand command = new OleDbCommand(publishQuery, connection);
+           
+            //view = adsListBox.SelectedItem as DataRowView;
+            //int adid = Int32.Parse(view["adID"].ToString());
+            //string publishQuery;
+            //// Setup Query.
+            //if (view["Published"].ToString() == "True")
+            //{
+            //    publishQuery = "UPDATE AdsTable SET Published=No WHERE adID=" + adid + "";
+            //}
+            //else
+            //{
+            //    publishQuery = "UPDATE AdsTable SET Published=Yes WHERE adID=" + adid + "";
+            //}
+            //// Open connection.
+            //OleDbConnection connection = new OleDbConnection(connectionString);
+            //OleDbCommand command = new OleDbCommand(publishQuery, connection);
 
-            connection.Open();
-            command.ExecuteNonQuery();
-            connection.Close();
-            updateFields();
+            //connection.Open();
+            //command.ExecuteNonQuery();
+            //connection.Close();
+            //updateFields();
+
+
+
+
         }
         #endregion
 
@@ -681,8 +692,10 @@ namespace UserApplication
         {
             setConnectionString();
             // Initialize the lists.
-            adsListBox_SelectedIndexChanged(adsListBox, e);
+            //adsListBox_SelectedIndexChanged(adsListBox, e);
             categoriesListBox_SelectedIndexChanged(categoriesListBox,e);
+           
+            this.adsTableTableAdapter.AdsPerUser(this.aggeliesDBDataSet.AdsTable, userid);
         }
 
         /// <summary>
@@ -709,9 +722,9 @@ namespace UserApplication
             
             panels[0].BringToFront();
 
-            recentAdsList.Add(recentAds1);
-            recentAdsList.Add(recentAds2);
-            recentAdsList.Add(recentAds3);
+           //recentAdsList.Add();
+            //recentAdsList.Add(recentAds2);
+            //recentAdsList.Add(recentAds3);
         }
 
         /// <summary>
@@ -720,41 +733,41 @@ namespace UserApplication
         /// </summary>
         private void updateFields()
         {
-            int sIndex = adsListBox.SelectedIndex;
-            // Find current users Ads
-            this.adsTableTableAdapter.AdsPerUser(this.aggeliesDBDataSet.AdsTable, userid);
-            adsListBox.SelectedIndex = sIndex;
-            // Set the avatarPictureBox image location.
-            try
-            {
-                avatarPictureBox.ImageLocation = userImagesLocation + usersTableAdapter1.SelectUserImageQuery(userid).ToString();
-            }
-            catch (Exception) { }
+            //int sIndex = adsListBox.SelectedIndex;
+            //// Find current users Ads
+            //this.adsTableTableAdapter.AdsPerUser(this.aggeliesDBDataSet.AdsTable, userid);
+            //adsListBox.SelectedIndex = sIndex;
+            //// Set the avatarPictureBox image location.
+            //try
+            //{
+            //    avatarPictureBox.ImageLocation = userImagesLocation + usersTableAdapter1.SelectUserImageQuery(userid).ToString();
+            //}
+            //catch (Exception) { }
 
-            // Setup Query, declare reader.
-            string unameQuery = "SELECT uName, uPassword, fName, lName, uAge, uPhone, uEmail, uRecoverEmail FROM Users WHERE userID=" + userid + "";
-            OleDbDataReader reader;
-            // Open connection.
-            OleDbConnection connection = new OleDbConnection(connectionString);
-            OleDbCommand command = new OleDbCommand(unameQuery, connection);
-            connection.Open();
-            // Execute reader.
-            reader = command.ExecuteReader();
-            // If user exists.
-            if (reader.HasRows)
-            {
-                reader.Read();
-                uNameTextBox.Text = reader["uName"].ToString();
-                fNameTextBox.Text = reader["fName"].ToString();
-                lNameTextBox.Text = reader["lName"].ToString();
-                uEmailTextBox.Text = reader["uEmail"].ToString();
-                uREmailTextBox.Text = reader["uRecoverEmail"].ToString();
-                uAgeTextBox.Text = reader["uAge"].ToString();
-                uPhoneTextBox.Text = reader["uPhone"].ToString();
-                uPasswordTextBox.Text = reader["uPassword"].ToString();
-                reader.Close();
-            }
-            connection.Close();
+            //// Setup Query, declare reader.
+            //string unameQuery = "SELECT uName, uPassword, fName, lName, uAge, uPhone, uEmail, uRecoverEmail FROM Users WHERE userID=" + userid + "";
+            //OleDbDataReader reader;
+            //// Open connection.
+            //OleDbConnection connection = new OleDbConnection(connectionString);
+            //OleDbCommand command = new OleDbCommand(unameQuery, connection);
+            //connection.Open();
+            //// Execute reader.
+            //reader = command.ExecuteReader();
+            //// If user exists.
+            //if (reader.HasRows)
+            //{
+            //    reader.Read();
+            //    uNameTextBox.Text = reader["uName"].ToString();
+            //    fNameTextBox.Text = reader["fName"].ToString();
+            //    lNameTextBox.Text = reader["lName"].ToString();
+            //    uEmailTextBox.Text = reader["uEmail"].ToString();
+            //    uREmailTextBox.Text = reader["uRecoverEmail"].ToString();
+            //    uAgeTextBox.Text = reader["uAge"].ToString();
+            //    uPhoneTextBox.Text = reader["uPhone"].ToString();
+            //    uPasswordTextBox.Text = reader["uPassword"].ToString();
+            //    reader.Close();
+            //}
+            //connection.Close();
         }
         /// <summary>
         /// Initialize the images relative path.
@@ -772,7 +785,31 @@ namespace UserApplication
             userImagesLocation = str;
         }
 
+        private void myAdsLabel_Click(object sender, EventArgs e)
+        {
+            signupPrompt(2);
+        }
+
+        private void profileLabel_Click(object sender, EventArgs e)
+        {
+            signupPrompt(3);
+        }
+
+        private void goBackImage_Click(object sender, EventArgs e)
+        {
+            signupPrompt(3);
+        }
+
+        private void userAdsDataGrid_SelectionChanged(object sender, EventArgs e)
+        {
+            
+          
       
+        }
+
+
+
+
 
         /// <summary>
         /// Initialize the WPF custom control used as navigation menu.
@@ -788,7 +825,6 @@ namespace UserApplication
             userMenu.categoriesButton.Click += CatBut_Click;
             userMenu.logoutButton.Click += LogoutBut_Click;
             userMenu.settingsButton.Click += SettingBut_Click;
-            userMenu.adsButton.Click += AdsBut_Click;
             userMenu.profileButton.Click += ProfileBut_Click;
         }
         /// <summary>
@@ -803,7 +839,7 @@ namespace UserApplication
             }
             else
             {
-                if (MessageBox.Show("Απαιτείται δημιουργία λογαριασμού! \nΔημιουργία?", "Επιβεβαίωση", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("You need to register ! \nSign up now ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     panels[5].BringToFront();
                 }
@@ -811,11 +847,13 @@ namespace UserApplication
         }
         private void setConnectionString()
         {
-            string str = AppDomain.CurrentDomain.BaseDirectory;
-            str = str.Remove(str.Length - 16);
-            str += @"AppData\AggeliesDB.accdb";
+            string DebugDir = Application.StartupPath;
+            string BidDir = Directory.GetParent(DebugDir).FullName;
+            string ProjectDir = Directory.GetParent(BidDir).FullName;
+            string SolutionDir = Directory.GetParent(ProjectDir).FullName;
+            string str = SolutionDir + @"\AppData\AggeliesDB.accdb";
+            Console.WriteLine(str);
             connectionString = "Provider=Microft.ACE.OLEDB.12.0;Data Source=" + str;
-            recentAdsLabel.Text = connectionString;
         }
         #endregion
 
