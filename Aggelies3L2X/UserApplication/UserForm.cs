@@ -772,7 +772,12 @@ namespace UserApplication
             userImagesLocation = str;
         }
 
-      
+        private void silver_link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+
 
         /// <summary>
         /// Initialize the WPF custom control used as navigation menu.
