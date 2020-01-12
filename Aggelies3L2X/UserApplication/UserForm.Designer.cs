@@ -189,6 +189,9 @@
             this.silver_creditcard_label = new System.Windows.Forms.Label();
             this.silver_planlabel = new System.Windows.Forms.Label();
             this.payments_picbox = new System.Windows.Forms.PictureBox();
+            this.gold_btn_goback = new System.Windows.Forms.Button();
+            this.silver_btn_goback = new System.Windows.Forms.Button();
+            this.btn_backtoprofile = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.settingsPanel.SuspendLayout();
@@ -1026,6 +1029,7 @@
             // 
             // upgradeAccount_panel
             // 
+            this.upgradeAccount_panel.Controls.Add(this.btn_backtoprofile);
             this.upgradeAccount_panel.Controls.Add(this.upgradeinfo_picbox);
             this.upgradeAccount_panel.Controls.Add(this.Info_label);
             this.upgradeAccount_panel.Controls.Add(this.btn_gold);
@@ -1340,7 +1344,7 @@
             // 
             this.gold_creditinfolabel.AutoSize = true;
             this.gold_creditinfolabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gold_creditinfolabel.Location = new System.Drawing.Point(8, 16);
+            this.gold_creditinfolabel.Location = new System.Drawing.Point(8, 41);
             this.gold_creditinfolabel.Name = "gold_creditinfolabel";
             this.gold_creditinfolabel.Size = new System.Drawing.Size(229, 24);
             this.gold_creditinfolabel.TabIndex = 1;
@@ -1351,7 +1355,7 @@
             // 
             this.plan_label.AutoSize = true;
             this.plan_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.plan_label.Location = new System.Drawing.Point(8, 53);
+            this.plan_label.Location = new System.Drawing.Point(8, 78);
             this.plan_label.Name = "plan_label";
             this.plan_label.Size = new System.Drawing.Size(87, 20);
             this.plan_label.TabIndex = 2;
@@ -1359,6 +1363,7 @@
             // 
             // gold_credit_box
             // 
+            this.gold_credit_box.Controls.Add(this.gold_btn_goback);
             this.gold_credit_box.Controls.Add(this.gold_btn_Continue);
             this.gold_credit_box.Controls.Add(this.gold_seperaton_label);
             this.gold_credit_box.Controls.Add(this.gold_year_combobox);
@@ -1390,7 +1395,7 @@
             // 
             this.gold_cardholder_label.AutoSize = true;
             this.gold_cardholder_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gold_cardholder_label.Location = new System.Drawing.Point(14, 110);
+            this.gold_cardholder_label.Location = new System.Drawing.Point(14, 135);
             this.gold_cardholder_label.Name = "gold_cardholder_label";
             this.gold_cardholder_label.Size = new System.Drawing.Size(148, 20);
             this.gold_cardholder_label.TabIndex = 3;
@@ -1398,14 +1403,14 @@
             // 
             // gold_txt_cardholder
             // 
-            this.gold_txt_cardholder.Location = new System.Drawing.Point(214, 110);
+            this.gold_txt_cardholder.Location = new System.Drawing.Point(214, 135);
             this.gold_txt_cardholder.Name = "gold_txt_cardholder";
             this.gold_txt_cardholder.Size = new System.Drawing.Size(100, 20);
             this.gold_txt_cardholder.TabIndex = 4;
             // 
             // gold_txt_cardnumber
             // 
-            this.gold_txt_cardnumber.Location = new System.Drawing.Point(214, 148);
+            this.gold_txt_cardnumber.Location = new System.Drawing.Point(214, 173);
             this.gold_txt_cardnumber.Name = "gold_txt_cardnumber";
             this.gold_txt_cardnumber.Size = new System.Drawing.Size(100, 20);
             this.gold_txt_cardnumber.TabIndex = 6;
@@ -1414,7 +1419,7 @@
             // 
             this.gold_creditcard_label.AutoSize = true;
             this.gold_creditcard_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gold_creditcard_label.Location = new System.Drawing.Point(14, 152);
+            this.gold_creditcard_label.Location = new System.Drawing.Point(14, 177);
             this.gold_creditcard_label.Name = "gold_creditcard_label";
             this.gold_creditcard_label.Size = new System.Drawing.Size(157, 20);
             this.gold_creditcard_label.TabIndex = 5;
@@ -1422,7 +1427,7 @@
             // 
             // gold_txt_cvv
             // 
-            this.gold_txt_cvv.Location = new System.Drawing.Point(214, 184);
+            this.gold_txt_cvv.Location = new System.Drawing.Point(214, 209);
             this.gold_txt_cvv.Name = "gold_txt_cvv";
             this.gold_txt_cvv.Size = new System.Drawing.Size(100, 20);
             this.gold_txt_cvv.TabIndex = 8;
@@ -1431,7 +1436,7 @@
             // 
             this.gold_cvv_label.AutoSize = true;
             this.gold_cvv_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gold_cvv_label.Location = new System.Drawing.Point(14, 189);
+            this.gold_cvv_label.Location = new System.Drawing.Point(14, 214);
             this.gold_cvv_label.Name = "gold_cvv_label";
             this.gold_cvv_label.Size = new System.Drawing.Size(46, 20);
             this.gold_cvv_label.TabIndex = 7;
@@ -1439,7 +1444,7 @@
             // 
             // gold_txt_total
             // 
-            this.gold_txt_total.Location = new System.Drawing.Point(214, 264);
+            this.gold_txt_total.Location = new System.Drawing.Point(214, 289);
             this.gold_txt_total.Name = "gold_txt_total";
             this.gold_txt_total.ReadOnly = true;
             this.gold_txt_total.Size = new System.Drawing.Size(100, 20);
@@ -1451,7 +1456,7 @@
             // 
             this.gold_total_label.AutoSize = true;
             this.gold_total_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gold_total_label.Location = new System.Drawing.Point(14, 269);
+            this.gold_total_label.Location = new System.Drawing.Point(14, 294);
             this.gold_total_label.Name = "gold_total_label";
             this.gold_total_label.Size = new System.Drawing.Size(44, 20);
             this.gold_total_label.TabIndex = 9;
@@ -1462,7 +1467,7 @@
             this.requiredCardHolder_label.AutoSize = true;
             this.requiredCardHolder_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.requiredCardHolder_label.ForeColor = System.Drawing.Color.Red;
-            this.requiredCardHolder_label.Location = new System.Drawing.Point(316, 110);
+            this.requiredCardHolder_label.Location = new System.Drawing.Point(316, 135);
             this.requiredCardHolder_label.Name = "requiredCardHolder_label";
             this.requiredCardHolder_label.Size = new System.Drawing.Size(15, 20);
             this.requiredCardHolder_label.TabIndex = 11;
@@ -1473,7 +1478,7 @@
             this.requiredCardNumber.AutoSize = true;
             this.requiredCardNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.requiredCardNumber.ForeColor = System.Drawing.Color.Red;
-            this.requiredCardNumber.Location = new System.Drawing.Point(316, 152);
+            this.requiredCardNumber.Location = new System.Drawing.Point(316, 177);
             this.requiredCardNumber.Name = "requiredCardNumber";
             this.requiredCardNumber.Size = new System.Drawing.Size(15, 20);
             this.requiredCardNumber.TabIndex = 12;
@@ -1484,7 +1489,7 @@
             this.requiredcvv_label.AutoSize = true;
             this.requiredcvv_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.requiredcvv_label.ForeColor = System.Drawing.Color.Red;
-            this.requiredcvv_label.Location = new System.Drawing.Point(316, 184);
+            this.requiredcvv_label.Location = new System.Drawing.Point(316, 209);
             this.requiredcvv_label.Name = "requiredcvv_label";
             this.requiredcvv_label.Size = new System.Drawing.Size(15, 20);
             this.requiredcvv_label.TabIndex = 13;
@@ -1495,7 +1500,7 @@
             this.currency_label.AutoSize = true;
             this.currency_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.currency_label.ForeColor = System.Drawing.Color.Black;
-            this.currency_label.Location = new System.Drawing.Point(317, 265);
+            this.currency_label.Location = new System.Drawing.Point(317, 290);
             this.currency_label.Name = "currency_label";
             this.currency_label.Size = new System.Drawing.Size(16, 18);
             this.currency_label.TabIndex = 14;
@@ -1506,7 +1511,7 @@
             this.requiredexpdate_label.AutoSize = true;
             this.requiredexpdate_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.requiredexpdate_label.ForeColor = System.Drawing.Color.Red;
-            this.requiredexpdate_label.Location = new System.Drawing.Point(316, 225);
+            this.requiredexpdate_label.Location = new System.Drawing.Point(316, 250);
             this.requiredexpdate_label.Name = "requiredexpdate_label";
             this.requiredexpdate_label.Size = new System.Drawing.Size(15, 20);
             this.requiredexpdate_label.TabIndex = 17;
@@ -1516,7 +1521,7 @@
             // 
             this.gold_expdate_label.AutoSize = true;
             this.gold_expdate_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gold_expdate_label.Location = new System.Drawing.Point(14, 230);
+            this.gold_expdate_label.Location = new System.Drawing.Point(14, 255);
             this.gold_expdate_label.Name = "gold_expdate_label";
             this.gold_expdate_label.Size = new System.Drawing.Size(118, 20);
             this.gold_expdate_label.TabIndex = 15;
@@ -1538,7 +1543,7 @@
             "10",
             "11",
             "12"});
-            this.gold_month_combobox.Location = new System.Drawing.Point(214, 227);
+            this.gold_month_combobox.Location = new System.Drawing.Point(214, 252);
             this.gold_month_combobox.Name = "gold_month_combobox";
             this.gold_month_combobox.Size = new System.Drawing.Size(32, 21);
             this.gold_month_combobox.TabIndex = 4;
@@ -1554,7 +1559,7 @@
             "2024",
             "2025",
             "2026"});
-            this.gold_year_combobox.Location = new System.Drawing.Point(271, 227);
+            this.gold_year_combobox.Location = new System.Drawing.Point(271, 252);
             this.gold_year_combobox.Name = "gold_year_combobox";
             this.gold_year_combobox.Size = new System.Drawing.Size(43, 21);
             this.gold_year_combobox.TabIndex = 18;
@@ -1564,7 +1569,7 @@
             this.gold_seperaton_label.AutoSize = true;
             this.gold_seperaton_label.Cursor = System.Windows.Forms.Cursors.SizeNS;
             this.gold_seperaton_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gold_seperaton_label.Location = new System.Drawing.Point(253, 228);
+            this.gold_seperaton_label.Location = new System.Drawing.Point(253, 253);
             this.gold_seperaton_label.Name = "gold_seperaton_label";
             this.gold_seperaton_label.Size = new System.Drawing.Size(12, 16);
             this.gold_seperaton_label.TabIndex = 19;
@@ -1594,7 +1599,7 @@
             // gold_btn_Continue
             // 
             this.gold_btn_Continue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gold_btn_Continue.Location = new System.Drawing.Point(214, 302);
+            this.gold_btn_Continue.Location = new System.Drawing.Point(214, 327);
             this.gold_btn_Continue.Name = "gold_btn_Continue";
             this.gold_btn_Continue.Size = new System.Drawing.Size(100, 31);
             this.gold_btn_Continue.TabIndex = 20;
@@ -1722,6 +1727,7 @@
             // 
             // creditcard_box
             // 
+            this.creditcard_box.Controls.Add(this.silver_btn_goback);
             this.creditcard_box.Controls.Add(this.silver_btn_continue);
             this.creditcard_box.Controls.Add(this.label6);
             this.creditcard_box.Controls.Add(this.silver_year_combobox);
@@ -1752,7 +1758,7 @@
             // silver_btn_continue
             // 
             this.silver_btn_continue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.silver_btn_continue.Location = new System.Drawing.Point(214, 302);
+            this.silver_btn_continue.Location = new System.Drawing.Point(214, 329);
             this.silver_btn_continue.Name = "silver_btn_continue";
             this.silver_btn_continue.Size = new System.Drawing.Size(100, 31);
             this.silver_btn_continue.TabIndex = 20;
@@ -1763,7 +1769,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label6.Location = new System.Drawing.Point(253, 228);
+            this.label6.Location = new System.Drawing.Point(253, 255);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(12, 16);
             this.label6.TabIndex = 19;
@@ -1780,7 +1786,7 @@
             "2024",
             "2025",
             "2026"});
-            this.silver_year_combobox.Location = new System.Drawing.Point(271, 227);
+            this.silver_year_combobox.Location = new System.Drawing.Point(271, 254);
             this.silver_year_combobox.Name = "silver_year_combobox";
             this.silver_year_combobox.Size = new System.Drawing.Size(43, 21);
             this.silver_year_combobox.TabIndex = 18;
@@ -1801,7 +1807,7 @@
             "10",
             "11",
             "12"});
-            this.silver_month_combobox.Location = new System.Drawing.Point(214, 227);
+            this.silver_month_combobox.Location = new System.Drawing.Point(214, 254);
             this.silver_month_combobox.Name = "silver_month_combobox";
             this.silver_month_combobox.Size = new System.Drawing.Size(32, 21);
             this.silver_month_combobox.TabIndex = 4;
@@ -1811,7 +1817,7 @@
             this.silver_requiredexpdatelabel.AutoSize = true;
             this.silver_requiredexpdatelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.silver_requiredexpdatelabel.ForeColor = System.Drawing.Color.Red;
-            this.silver_requiredexpdatelabel.Location = new System.Drawing.Point(316, 225);
+            this.silver_requiredexpdatelabel.Location = new System.Drawing.Point(316, 252);
             this.silver_requiredexpdatelabel.Name = "silver_requiredexpdatelabel";
             this.silver_requiredexpdatelabel.Size = new System.Drawing.Size(15, 20);
             this.silver_requiredexpdatelabel.TabIndex = 17;
@@ -1821,7 +1827,7 @@
             // 
             this.silver_expdatelabel.AutoSize = true;
             this.silver_expdatelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.silver_expdatelabel.Location = new System.Drawing.Point(14, 230);
+            this.silver_expdatelabel.Location = new System.Drawing.Point(14, 257);
             this.silver_expdatelabel.Name = "silver_expdatelabel";
             this.silver_expdatelabel.Size = new System.Drawing.Size(118, 20);
             this.silver_expdatelabel.TabIndex = 15;
@@ -1832,7 +1838,7 @@
             this.silver_currencylabel.AutoSize = true;
             this.silver_currencylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.silver_currencylabel.ForeColor = System.Drawing.Color.Black;
-            this.silver_currencylabel.Location = new System.Drawing.Point(317, 265);
+            this.silver_currencylabel.Location = new System.Drawing.Point(317, 292);
             this.silver_currencylabel.Name = "silver_currencylabel";
             this.silver_currencylabel.Size = new System.Drawing.Size(16, 18);
             this.silver_currencylabel.TabIndex = 14;
@@ -1843,7 +1849,7 @@
             this.silver_requiredcvvlabel.AutoSize = true;
             this.silver_requiredcvvlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.silver_requiredcvvlabel.ForeColor = System.Drawing.Color.Red;
-            this.silver_requiredcvvlabel.Location = new System.Drawing.Point(316, 184);
+            this.silver_requiredcvvlabel.Location = new System.Drawing.Point(316, 211);
             this.silver_requiredcvvlabel.Name = "silver_requiredcvvlabel";
             this.silver_requiredcvvlabel.Size = new System.Drawing.Size(15, 20);
             this.silver_requiredcvvlabel.TabIndex = 13;
@@ -1854,7 +1860,7 @@
             this.silver_requiredcardnumberlabel.AutoSize = true;
             this.silver_requiredcardnumberlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.silver_requiredcardnumberlabel.ForeColor = System.Drawing.Color.Red;
-            this.silver_requiredcardnumberlabel.Location = new System.Drawing.Point(316, 152);
+            this.silver_requiredcardnumberlabel.Location = new System.Drawing.Point(316, 179);
             this.silver_requiredcardnumberlabel.Name = "silver_requiredcardnumberlabel";
             this.silver_requiredcardnumberlabel.Size = new System.Drawing.Size(15, 20);
             this.silver_requiredcardnumberlabel.TabIndex = 12;
@@ -1865,7 +1871,7 @@
             this.silver_requiredholdernamelabel.AutoSize = true;
             this.silver_requiredholdernamelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.silver_requiredholdernamelabel.ForeColor = System.Drawing.Color.Red;
-            this.silver_requiredholdernamelabel.Location = new System.Drawing.Point(316, 110);
+            this.silver_requiredholdernamelabel.Location = new System.Drawing.Point(316, 137);
             this.silver_requiredholdernamelabel.Name = "silver_requiredholdernamelabel";
             this.silver_requiredholdernamelabel.Size = new System.Drawing.Size(15, 20);
             this.silver_requiredholdernamelabel.TabIndex = 11;
@@ -1874,7 +1880,7 @@
             // silver_txt_total
             // 
             this.silver_txt_total.Cursor = System.Windows.Forms.Cursors.No;
-            this.silver_txt_total.Location = new System.Drawing.Point(214, 264);
+            this.silver_txt_total.Location = new System.Drawing.Point(214, 291);
             this.silver_txt_total.Name = "silver_txt_total";
             this.silver_txt_total.ReadOnly = true;
             this.silver_txt_total.Size = new System.Drawing.Size(100, 20);
@@ -1886,7 +1892,7 @@
             // 
             this.silver_totallabel.AutoSize = true;
             this.silver_totallabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.silver_totallabel.Location = new System.Drawing.Point(14, 269);
+            this.silver_totallabel.Location = new System.Drawing.Point(14, 296);
             this.silver_totallabel.Name = "silver_totallabel";
             this.silver_totallabel.Size = new System.Drawing.Size(44, 20);
             this.silver_totallabel.TabIndex = 9;
@@ -1894,7 +1900,7 @@
             // 
             // silver_txt_cvv
             // 
-            this.silver_txt_cvv.Location = new System.Drawing.Point(214, 184);
+            this.silver_txt_cvv.Location = new System.Drawing.Point(214, 211);
             this.silver_txt_cvv.Name = "silver_txt_cvv";
             this.silver_txt_cvv.Size = new System.Drawing.Size(100, 20);
             this.silver_txt_cvv.TabIndex = 8;
@@ -1903,7 +1909,7 @@
             // 
             this.silver_cvv.AutoSize = true;
             this.silver_cvv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.silver_cvv.Location = new System.Drawing.Point(14, 189);
+            this.silver_cvv.Location = new System.Drawing.Point(14, 216);
             this.silver_cvv.Name = "silver_cvv";
             this.silver_cvv.Size = new System.Drawing.Size(46, 20);
             this.silver_cvv.TabIndex = 7;
@@ -1911,7 +1917,7 @@
             // 
             // silver_txt_cardnumber
             // 
-            this.silver_txt_cardnumber.Location = new System.Drawing.Point(214, 148);
+            this.silver_txt_cardnumber.Location = new System.Drawing.Point(214, 175);
             this.silver_txt_cardnumber.Name = "silver_txt_cardnumber";
             this.silver_txt_cardnumber.Size = new System.Drawing.Size(100, 20);
             this.silver_txt_cardnumber.TabIndex = 6;
@@ -1920,7 +1926,7 @@
             // 
             this.silver_cardnumberlabel.AutoSize = true;
             this.silver_cardnumberlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.silver_cardnumberlabel.Location = new System.Drawing.Point(14, 152);
+            this.silver_cardnumberlabel.Location = new System.Drawing.Point(14, 179);
             this.silver_cardnumberlabel.Name = "silver_cardnumberlabel";
             this.silver_cardnumberlabel.Size = new System.Drawing.Size(157, 20);
             this.silver_cardnumberlabel.TabIndex = 5;
@@ -1928,7 +1934,7 @@
             // 
             // silver_txtcardholder
             // 
-            this.silver_txtcardholder.Location = new System.Drawing.Point(214, 110);
+            this.silver_txtcardholder.Location = new System.Drawing.Point(214, 137);
             this.silver_txtcardholder.Name = "silver_txtcardholder";
             this.silver_txtcardholder.Size = new System.Drawing.Size(100, 20);
             this.silver_txtcardholder.TabIndex = 4;
@@ -1937,7 +1943,7 @@
             // 
             this.silver_cardholder_label.AutoSize = true;
             this.silver_cardholder_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.silver_cardholder_label.Location = new System.Drawing.Point(14, 110);
+            this.silver_cardholder_label.Location = new System.Drawing.Point(14, 137);
             this.silver_cardholder_label.Name = "silver_cardholder_label";
             this.silver_cardholder_label.Size = new System.Drawing.Size(148, 20);
             this.silver_cardholder_label.TabIndex = 3;
@@ -1947,7 +1953,7 @@
             // 
             this.silver_creditcard_label.AutoSize = true;
             this.silver_creditcard_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.silver_creditcard_label.Location = new System.Drawing.Point(8, 16);
+            this.silver_creditcard_label.Location = new System.Drawing.Point(8, 43);
             this.silver_creditcard_label.Name = "silver_creditcard_label";
             this.silver_creditcard_label.Size = new System.Drawing.Size(229, 24);
             this.silver_creditcard_label.TabIndex = 1;
@@ -1957,7 +1963,7 @@
             // 
             this.silver_planlabel.AutoSize = true;
             this.silver_planlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.silver_planlabel.Location = new System.Drawing.Point(8, 53);
+            this.silver_planlabel.Location = new System.Drawing.Point(8, 80);
             this.silver_planlabel.Name = "silver_planlabel";
             this.silver_planlabel.Size = new System.Drawing.Size(93, 20);
             this.silver_planlabel.TabIndex = 2;
@@ -1972,6 +1978,39 @@
             this.payments_picbox.Size = new System.Drawing.Size(970, 172);
             this.payments_picbox.TabIndex = 0;
             this.payments_picbox.TabStop = false;
+            // 
+            // gold_btn_goback
+            // 
+            this.gold_btn_goback.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gold_btn_goback.Location = new System.Drawing.Point(7, 7);
+            this.gold_btn_goback.Name = "gold_btn_goback";
+            this.gold_btn_goback.Size = new System.Drawing.Size(130, 30);
+            this.gold_btn_goback.TabIndex = 21;
+            this.gold_btn_goback.Text = "Back to Plans";
+            this.gold_btn_goback.UseVisualStyleBackColor = true;
+            this.gold_btn_goback.Click += new System.EventHandler(this.gold_btn_goback_Click);
+            // 
+            // silver_btn_goback
+            // 
+            this.silver_btn_goback.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.silver_btn_goback.Location = new System.Drawing.Point(12, 9);
+            this.silver_btn_goback.Name = "silver_btn_goback";
+            this.silver_btn_goback.Size = new System.Drawing.Size(130, 30);
+            this.silver_btn_goback.TabIndex = 21;
+            this.silver_btn_goback.Text = "Back to Plans";
+            this.silver_btn_goback.UseVisualStyleBackColor = true;
+            this.silver_btn_goback.Click += new System.EventHandler(this.silver_btn_goback_Click);
+            // 
+            // btn_backtoprofile
+            // 
+            this.btn_backtoprofile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btn_backtoprofile.Location = new System.Drawing.Point(229, 469);
+            this.btn_backtoprofile.Name = "btn_backtoprofile";
+            this.btn_backtoprofile.Size = new System.Drawing.Size(175, 35);
+            this.btn_backtoprofile.TabIndex = 16;
+            this.btn_backtoprofile.Text = "Back to Profile";
+            this.btn_backtoprofile.UseVisualStyleBackColor = true;
+            this.btn_backtoprofile.Click += new System.EventHandler(this.button1_Click);
             // 
             // UserForm
             // 
@@ -2205,6 +2244,9 @@
         private System.Windows.Forms.Label silver_creditcard_label;
         private System.Windows.Forms.Label silver_planlabel;
         private System.Windows.Forms.PictureBox payments_picbox;
+        private System.Windows.Forms.Button gold_btn_goback;
+        private System.Windows.Forms.Button silver_btn_goback;
+        private System.Windows.Forms.Button btn_backtoprofile;
     }
 }
 

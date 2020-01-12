@@ -1538,6 +1538,24 @@ namespace UserApplication
             this.gold_panel.BringToFront();
         }
 
+        private void gold_btn_goback_Click(object sender, EventArgs e)
+        {
+            this.upgradeAccount_panel.Visible = true;
+            this.upgradeAccount_panel.BringToFront();
+        }
+
+        private void silver_btn_goback_Click(object sender, EventArgs e)
+        {
+            this.upgradeAccount_panel.Visible = true;
+            this.upgradeAccount_panel.BringToFront();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.profilePanel.Visible = true;
+            this.profilePanel.BringToFront();
+        }
+
 
 
         /// <summary>
