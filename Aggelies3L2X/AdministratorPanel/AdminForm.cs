@@ -155,5 +155,10 @@ namespace AdministratorPanel
             System.IO.File.Copy(sourceFile, destFile, true);
             Application.Exit();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -39,8 +39,8 @@
         </Grid.RowDefinitions>
 
         <Image x:Name="adImage" Grid.Row="0" x:FieldModifier="public"/>
-        <TextBlock x:Name="adTitle" Grid.Row="1" Text="Title"/>
-        <TextBox x:Name="adDesc" Grid.Row="2" Text="Description"/>
+        <TextBlock x:Name="adTitle" Grid.Row="1" Text="Title" x:FieldModifier="public"/>
+        <TextBox x:Name="adDesc" Grid.Row="2" Text="Description" x:FieldModifier="public"/>
     </Grid>
   
     

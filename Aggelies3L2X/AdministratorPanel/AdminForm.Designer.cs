@@ -133,20 +133,6 @@
             this.Statistics = new System.Windows.Forms.Button();
             this.searchlabel = new System.Windows.Forms.Label();
             this.txt_search = new System.Windows.Forms.TextBox();
-            this.Menu_navigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripRefresh = new System.Windows.Forms.ToolStripButton();
             this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.aggeliesDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -169,6 +155,7 @@
             this.adCategoryAdsTableBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.aggeliesDBDataSet1 = new AdministratorPanel.AggeliesDBDataSet();
             this.adCategoryBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.logo_box = new System.Windows.Forms.PictureBox();
             uAgeLabel = new System.Windows.Forms.Label();
             uPhoneLabel = new System.Windows.Forms.Label();
             uRecoverEmailLabel = new System.Windows.Forms.Label();
@@ -207,8 +194,6 @@
             this.usersRightPanel.SuspendLayout();
             this.topPanel.SuspendLayout();
             this.Menu_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Menu_navigator)).BeginInit();
-            this.Menu_navigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
@@ -223,6 +208,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.adCategoryAdsTableBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adCategoryBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_box)).BeginInit();
             this.SuspendLayout();
             // 
             // uAgeLabel
@@ -243,8 +229,8 @@
             // 
             resources.ApplyResources(this.splitContainer1.Panel2, "splitContainer1.Panel2");
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.RosyBrown;
-            this.splitContainer1.Panel2.Controls.Add(this.categoriesRightPanel);
             this.splitContainer1.Panel2.Controls.Add(this.usersRightPanel);
+            this.splitContainer1.Panel2.Controls.Add(this.categoriesRightPanel);
             // 
             // splitContainer2
             // 
@@ -883,6 +869,7 @@
             // Menu_panel
             // 
             this.Menu_panel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Menu_panel.Controls.Add(this.logo_box);
             this.Menu_panel.Controls.Add(this.btn_settings);
             this.Menu_panel.Controls.Add(this.btn_category);
             this.Menu_panel.Controls.Add(this.btn_email);
@@ -892,7 +879,6 @@
             this.Menu_panel.Controls.Add(this.Statistics);
             this.Menu_panel.Controls.Add(this.searchlabel);
             this.Menu_panel.Controls.Add(this.txt_search);
-            this.Menu_panel.Controls.Add(this.Menu_navigator);
             resources.ApplyResources(this.Menu_panel, "Menu_panel");
             this.Menu_panel.Name = "Menu_panel";
             // 
@@ -956,106 +942,6 @@
             // 
             resources.ApplyResources(this.txt_search, "txt_search");
             this.txt_search.Name = "txt_search";
-            // 
-            // Menu_navigator
-            // 
-            this.Menu_navigator.AddNewItem = null;
-            this.Menu_navigator.CountItem = this.bindingNavigatorCountItem;
-            this.Menu_navigator.DeleteItem = null;
-            this.Menu_navigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.toolStripButton1,
-            this.toolStripRefresh});
-            resources.ApplyResources(this.Menu_navigator, "Menu_navigator");
-            this.Menu_navigator.MoveFirstItem = null;
-            this.Menu_navigator.MoveLastItem = null;
-            this.Menu_navigator.MoveNextItem = null;
-            this.Menu_navigator.MovePreviousItem = null;
-            this.Menu_navigator.Name = "Menu_navigator";
-            this.Menu_navigator.PositionItem = null;
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            resources.ApplyResources(this.bindingNavigatorCountItem, "bindingNavigatorCountItem");
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.bindingNavigatorMoveFirstItem, "bindingNavigatorMoveFirstItem");
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.bindingNavigatorMovePreviousItem, "bindingNavigatorMovePreviousItem");
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            resources.ApplyResources(this.bindingNavigatorSeparator, "bindingNavigatorSeparator");
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            resources.ApplyResources(this.bindingNavigatorPositionItem, "bindingNavigatorPositionItem");
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            resources.ApplyResources(this.bindingNavigatorSeparator1, "bindingNavigatorSeparator1");
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.bindingNavigatorMoveNextItem, "bindingNavigatorMoveNextItem");
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.bindingNavigatorMoveLastItem, "bindingNavigatorMoveLastItem");
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            resources.ApplyResources(this.bindingNavigatorSeparator2, "bindingNavigatorSeparator2");
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.ForeColor = System.Drawing.Color.Red;
-            resources.ApplyResources(this.bindingNavigatorAddNewItem, "bindingNavigatorAddNewItem");
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            resources.ApplyResources(this.bindingNavigatorDeleteItem, "bindingNavigatorDeleteItem");
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.ForeColor = System.Drawing.SystemColors.InfoText;
-            resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
-            this.toolStripButton1.Name = "toolStripButton1";
-            // 
-            // toolStripRefresh
-            // 
-            this.toolStripRefresh.ForeColor = System.Drawing.SystemColors.InfoText;
-            resources.ApplyResources(this.toolStripRefresh, "toolStripRefresh");
-            this.toolStripRefresh.Name = "toolStripRefresh";
             // 
             // aggeliesDBDataSetBindingSource
             // 
@@ -1167,6 +1053,13 @@
             this.adCategoryBindingSource3.DataMember = "AdCategory";
             this.adCategoryBindingSource3.DataSource = this.aggeliesDBDataSet1;
             // 
+            // logo_box
+            // 
+            resources.ApplyResources(this.logo_box, "logo_box");
+            this.logo_box.Name = "logo_box";
+            this.logo_box.TabStop = false;
+            this.logo_box.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // AdminForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1211,9 +1104,6 @@
             this.topPanel.ResumeLayout(false);
             this.Menu_panel.ResumeLayout(false);
             this.Menu_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Menu_navigator)).EndInit();
-            this.Menu_navigator.ResumeLayout(false);
-            this.Menu_navigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
@@ -1228,6 +1118,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.adCategoryAdsTableBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adCategoryBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_box)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1250,20 +1141,6 @@
         private System.Windows.Forms.BindingSource usersBindingSource2;
         private AggeliesDBDataSetTableAdapters.AdsTableTableAdapter adsTableTableAdapter;
         private System.Windows.Forms.BindingSource adsTableBindingSource;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripRefresh;
-        public System.Windows.Forms.BindingNavigator Menu_navigator;
         private System.Windows.Forms.Label searchlabel;
         private System.Windows.Forms.TextBox txt_search;
         public System.Windows.Forms.Button btn_email;
@@ -1373,5 +1250,6 @@
         private System.Windows.Forms.Label updateCatIDL;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox logo_box;
     }
 }
