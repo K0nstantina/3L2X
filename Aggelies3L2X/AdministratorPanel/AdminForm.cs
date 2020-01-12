@@ -10,7 +10,10 @@ using System.Windows.Forms;
 using System.Globalization;
 using System.Threading;
 using System.IO;
+<<<<<<< HEAD
 using Aggelies3L2X;
+=======
+>>>>>>> parent of 6d8e5e5... testCommit
 
 namespace AdministratorPanel
 {
@@ -25,7 +28,7 @@ namespace AdministratorPanel
             var z = Directory.GetParent(path).FullName;
             Console.WriteLine(z);
             InitializeComponent();
-            
+          
         }
 
        
