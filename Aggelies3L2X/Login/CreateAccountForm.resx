@@ -601,6 +601,30 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CreateAccGroupBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lang_button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>250, 28</value>
+  </data>
+  <data name="lang_button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 23</value>
+  </data>
+  <data name="lang_button.TabIndex" type="System.Int32, mscorlib">
+    <value>111</value>
+  </data>
+  <data name="lang_button.Text" xml:space="preserve">
+    <value>GR</value>
+  </data>
+  <data name="&gt;&gt;lang_button.Name" xml:space="preserve">
+    <value>lang_button</value>
+  </data>
+  <data name="&gt;&gt;lang_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lang_button.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lang_button.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

@@ -31,9 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
             this.topPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
-            this.userMenuIcons2 = new aggeliesWpfLab.UserMenuIcons();
+            this.userMenuIcons1 = new aggeliesWpfLab.UserMenuIcons();
             this.footerPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.settingsPanel = new System.Windows.Forms.Panel();
@@ -46,25 +45,6 @@
             this.darkRadioButton = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.homePanel = new System.Windows.Forms.Panel();
-            this.recentAdsGrid = new System.Windows.Forms.TableLayoutPanel();
-            this.elementHost2 = new System.Windows.Forms.Integration.ElementHost();
-            this.displayAd1 = new aggeliesWpfLab.DisplayAd();
-            this.elementHost3 = new System.Windows.Forms.Integration.ElementHost();
-            this.displayAd2 = new aggeliesWpfLab.DisplayAd();
-            this.elementHost4 = new System.Windows.Forms.Integration.ElementHost();
-            this.displayAd3 = new aggeliesWpfLab.DisplayAd();
-            this.elementHost5 = new System.Windows.Forms.Integration.ElementHost();
-            this.displayAd4 = new aggeliesWpfLab.DisplayAd();
-            this.elementHost6 = new System.Windows.Forms.Integration.ElementHost();
-            this.displayAd5 = new aggeliesWpfLab.DisplayAd();
-            this.elementHost7 = new System.Windows.Forms.Integration.ElementHost();
-            this.displayAd6 = new aggeliesWpfLab.DisplayAd();
-            this.elementHost8 = new System.Windows.Forms.Integration.ElementHost();
-            this.displayAd7 = new aggeliesWpfLab.DisplayAd();
-            this.elementHost9 = new System.Windows.Forms.Integration.ElementHost();
-            this.displayAd8 = new aggeliesWpfLab.DisplayAd();
-            this.elementHost10 = new System.Windows.Forms.Integration.ElementHost();
-            this.displayAd9 = new aggeliesWpfLab.DisplayAd();
             this.recentAdsLabel = new System.Windows.Forms.Label();
             this.profilePanel = new System.Windows.Forms.Panel();
             this.uPhoneLabel = new System.Windows.Forms.Label();
@@ -146,17 +126,12 @@
             this.usersTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.UsersTableAdapter();
             this.adCategoryTableAdapter1 = new UserApplication.AggeliesDBDataSetTableAdapters.AdCategoryTableAdapter();
             this.leftPanel = new System.Windows.Forms.Panel();
-
-            this.silver_link = new System.Windows.Forms.LinkLabel();
-            this.gold_link = new System.Windows.Forms.LinkLabel();
-
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.topPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.settingsPanel.SuspendLayout();
             this.fontSizeGroupBox.SuspendLayout();
             this.panelColorsGroupBox.SuspendLayout();
             this.homePanel.SuspendLayout();
-            this.recentAdsGrid.SuspendLayout();
             this.profilePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aggeliesDBDataSet)).BeginInit();
@@ -172,6 +147,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.adsPictureBox)).BeginInit();
             this.contentPanel.SuspendLayout();
             this.signupPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
@@ -182,54 +158,35 @@
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1370, 108);
+            this.topPanel.Size = new System.Drawing.Size(1828, 108);
             this.topPanel.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 108);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // elementHost1
             // 
             this.elementHost1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.elementHost1.Location = new System.Drawing.Point(444, 0);
+            this.elementHost1.Location = new System.Drawing.Point(902, 0);
             this.elementHost1.Name = "elementHost1";
             this.elementHost1.Size = new System.Drawing.Size(926, 108);
             this.elementHost1.TabIndex = 0;
             this.elementHost1.Text = "elementHost1";
-            this.elementHost1.Child = this.userMenuIcons2;
+            this.elementHost1.Child = this.userMenuIcons1;
             // 
             // footerPanel
             // 
             this.footerPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.footerPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-
-            this.footerPanel.Location = new System.Drawing.Point(200, 749);
+            this.footerPanel.Location = new System.Drawing.Point(200, 714);
             this.footerPanel.Name = "footerPanel";
-            this.footerPanel.Size = new System.Drawing.Size(1428, 65);
-
-            this.footerPanel.Location = new System.Drawing.Point(200, 649);
-            this.footerPanel.Name = "footerPanel";
-            this.footerPanel.Size = new System.Drawing.Size(970, 100);
-
+            this.footerPanel.Size = new System.Drawing.Size(1428, 100);
             this.footerPanel.TabIndex = 1;
             // 
             // rightPanel
             // 
             this.rightPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rightPanel.Location = new System.Drawing.Point(1170, 108);
+            this.rightPanel.Location = new System.Drawing.Point(1628, 108);
             this.rightPanel.Name = "rightPanel";
-            this.rightPanel.Size = new System.Drawing.Size(200, 641);
+            this.rightPanel.Size = new System.Drawing.Size(200, 706);
             this.rightPanel.TabIndex = 2;
             // 
             // settingsPanel
@@ -240,11 +197,7 @@
             this.settingsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.settingsPanel.Location = new System.Drawing.Point(0, 0);
             this.settingsPanel.Name = "settingsPanel";
-
-            this.settingsPanel.Size = new System.Drawing.Size(1428, 641);
-
-            this.settingsPanel.Size = new System.Drawing.Size(970, 541);
-
+            this.settingsPanel.Size = new System.Drawing.Size(1428, 606);
             this.settingsPanel.TabIndex = 1;
             // 
             // fontSizeGroupBox
@@ -349,138 +302,19 @@
             // 
             // homePanel
             // 
-            this.homePanel.Controls.Add(this.recentAdsGrid);
             this.homePanel.Controls.Add(this.recentAdsLabel);
             this.homePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.homePanel.Location = new System.Drawing.Point(0, 0);
             this.homePanel.Name = "homePanel";
-
-            this.homePanel.Size = new System.Drawing.Size(1428, 641);
-
-            this.homePanel.Size = new System.Drawing.Size(970, 541);
-
+            this.homePanel.Size = new System.Drawing.Size(1428, 606);
             this.homePanel.TabIndex = 3;
-            // 
-            // recentAdsGrid
-            // 
-            this.recentAdsGrid.ColumnCount = 3;
-            this.recentAdsGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.recentAdsGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.recentAdsGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.recentAdsGrid.Controls.Add(this.elementHost2, 0, 0);
-            this.recentAdsGrid.Controls.Add(this.elementHost3, 1, 0);
-            this.recentAdsGrid.Controls.Add(this.elementHost4, 2, 0);
-            this.recentAdsGrid.Controls.Add(this.elementHost5, 0, 1);
-            this.recentAdsGrid.Controls.Add(this.elementHost6, 1, 1);
-            this.recentAdsGrid.Controls.Add(this.elementHost7, 2, 1);
-            this.recentAdsGrid.Controls.Add(this.elementHost8, 0, 2);
-            this.recentAdsGrid.Controls.Add(this.elementHost9, 1, 2);
-            this.recentAdsGrid.Controls.Add(this.elementHost10, 2, 2);
-            this.recentAdsGrid.Location = new System.Drawing.Point(214, 60);
-            this.recentAdsGrid.Name = "recentAdsGrid";
-            this.recentAdsGrid.RowCount = 3;
-            this.recentAdsGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.recentAdsGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.recentAdsGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.recentAdsGrid.Size = new System.Drawing.Size(1000, 500);
-            this.recentAdsGrid.TabIndex = 6;
-            // 
-            // elementHost2
-            // 
-            this.elementHost2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost2.Location = new System.Drawing.Point(3, 3);
-            this.elementHost2.Name = "elementHost2";
-            this.elementHost2.Size = new System.Drawing.Size(327, 160);
-            this.elementHost2.TabIndex = 0;
-            this.elementHost2.Text = "elementHost2";
-            this.elementHost2.Child = this.displayAd1;
-            // 
-            // elementHost3
-            // 
-            this.elementHost3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost3.Location = new System.Drawing.Point(336, 3);
-            this.elementHost3.Name = "elementHost3";
-            this.elementHost3.Size = new System.Drawing.Size(327, 160);
-            this.elementHost3.TabIndex = 1;
-            this.elementHost3.Text = "elementHost3";
-            this.elementHost3.Child = this.displayAd2;
-            // 
-            // elementHost4
-            // 
-            this.elementHost4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost4.Location = new System.Drawing.Point(669, 3);
-            this.elementHost4.Name = "elementHost4";
-            this.elementHost4.Size = new System.Drawing.Size(328, 160);
-            this.elementHost4.TabIndex = 2;
-            this.elementHost4.Text = "elementHost4";
-            this.elementHost4.Child = this.displayAd3;
-            // 
-            // elementHost5
-            // 
-            this.elementHost5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost5.Location = new System.Drawing.Point(3, 169);
-            this.elementHost5.Name = "elementHost5";
-            this.elementHost5.Size = new System.Drawing.Size(327, 160);
-            this.elementHost5.TabIndex = 3;
-            this.elementHost5.Text = "elementHost5";
-            this.elementHost5.Child = this.displayAd4;
-            // 
-            // elementHost6
-            // 
-            this.elementHost6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost6.Location = new System.Drawing.Point(336, 169);
-            this.elementHost6.Name = "elementHost6";
-            this.elementHost6.Size = new System.Drawing.Size(327, 160);
-            this.elementHost6.TabIndex = 4;
-            this.elementHost6.Text = "elementHost6";
-            this.elementHost6.Child = this.displayAd5;
-            // 
-            // elementHost7
-            // 
-            this.elementHost7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost7.Location = new System.Drawing.Point(669, 169);
-            this.elementHost7.Name = "elementHost7";
-            this.elementHost7.Size = new System.Drawing.Size(328, 160);
-            this.elementHost7.TabIndex = 5;
-            this.elementHost7.Text = "elementHost7";
-            this.elementHost7.Child = this.displayAd6;
-            // 
-            // elementHost8
-            // 
-            this.elementHost8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost8.Location = new System.Drawing.Point(3, 335);
-            this.elementHost8.Name = "elementHost8";
-            this.elementHost8.Size = new System.Drawing.Size(327, 162);
-            this.elementHost8.TabIndex = 6;
-            this.elementHost8.Text = "elementHost8";
-            this.elementHost8.Child = this.displayAd7;
-            // 
-            // elementHost9
-            // 
-            this.elementHost9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost9.Location = new System.Drawing.Point(336, 335);
-            this.elementHost9.Name = "elementHost9";
-            this.elementHost9.Size = new System.Drawing.Size(327, 162);
-            this.elementHost9.TabIndex = 7;
-            this.elementHost9.Text = "elementHost9";
-            this.elementHost9.Child = this.displayAd8;
-            // 
-            // elementHost10
-            // 
-            this.elementHost10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost10.Location = new System.Drawing.Point(669, 335);
-            this.elementHost10.Name = "elementHost10";
-            this.elementHost10.Size = new System.Drawing.Size(328, 162);
-            this.elementHost10.TabIndex = 8;
-            this.elementHost10.Text = "elementHost10";
-            this.elementHost10.Child = this.displayAd9;
             // 
             // recentAdsLabel
             // 
             this.recentAdsLabel.AutoSize = true;
             this.recentAdsLabel.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.recentAdsLabel.ForeColor = System.Drawing.Color.Black;
-            this.recentAdsLabel.Location = new System.Drawing.Point(641, 20);
+            this.recentAdsLabel.Location = new System.Drawing.Point(641, 26);
             this.recentAdsLabel.Name = "recentAdsLabel";
             this.recentAdsLabel.Size = new System.Drawing.Size(146, 36);
             this.recentAdsLabel.TabIndex = 5;
@@ -489,8 +323,6 @@
             // 
             // profilePanel
             // 
-            this.profilePanel.Controls.Add(this.gold_link);
-            this.profilePanel.Controls.Add(this.silver_link);
             this.profilePanel.Controls.Add(this.uPhoneLabel);
             this.profilePanel.Controls.Add(this.uPhoneTextBox);
             this.profilePanel.Controls.Add(this.uAgeLabel);
@@ -516,11 +348,7 @@
             this.profilePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profilePanel.Location = new System.Drawing.Point(0, 0);
             this.profilePanel.Name = "profilePanel";
-
-            this.profilePanel.Size = new System.Drawing.Size(1428, 641);
-
-            this.profilePanel.Size = new System.Drawing.Size(970, 541);
-
+            this.profilePanel.Size = new System.Drawing.Size(1428, 606);
             this.profilePanel.TabIndex = 0;
             // 
             // uPhoneLabel
@@ -581,7 +409,7 @@
             // 
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.saveButton.Location = new System.Drawing.Point(803, 432);
+            this.saveButton.Location = new System.Drawing.Point(803, 370);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(149, 45);
             this.saveButton.TabIndex = 63;
@@ -761,11 +589,7 @@
             this.categoriesPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.categoriesPanel.Location = new System.Drawing.Point(0, 0);
             this.categoriesPanel.Name = "categoriesPanel";
-
-            this.categoriesPanel.Size = new System.Drawing.Size(1428, 641);
-
-            this.categoriesPanel.Size = new System.Drawing.Size(970, 541);
-
+            this.categoriesPanel.Size = new System.Drawing.Size(1428, 606);
             this.categoriesPanel.TabIndex = 3;
             // 
             // displayAd
@@ -789,11 +613,7 @@
             this.categoriesListBox.ItemHeight = 20;
             this.categoriesListBox.Location = new System.Drawing.Point(807, 53);
             this.categoriesListBox.Name = "categoriesListBox";
-
-            this.categoriesListBox.Size = new System.Drawing.Size(621, 560);
-
-            this.categoriesListBox.Size = new System.Drawing.Size(163, 460);
-
+            this.categoriesListBox.Size = new System.Drawing.Size(621, 540);
             this.categoriesListBox.TabIndex = 5;
             this.categoriesListBox.SelectedIndexChanged += new System.EventHandler(this.categoriesListBox_SelectedIndexChanged);
             // 
@@ -842,6 +662,8 @@
             // 
             // adsPanel
             // 
+            this.adsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.adsPanel.Controls.Add(this.publishButton);
             this.adsPanel.Controls.Add(this.savePriceButton);
             this.adsPanel.Controls.Add(this.priceLabel);
@@ -857,15 +679,10 @@
             this.adsPanel.Controls.Add(this.editDescriptionPictureBox);
             this.adsPanel.Controls.Add(this.editTitlePictureBox);
             this.adsPanel.Controls.Add(this.selectedAdPanel);
-            this.adsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.adsPanel.Location = new System.Drawing.Point(0, 0);
             this.adsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adsPanel.Name = "adsPanel";
-
-            this.adsPanel.Size = new System.Drawing.Size(1428, 641);
-
-            this.adsPanel.Size = new System.Drawing.Size(1064, 541);
-
+            this.adsPanel.Size = new System.Drawing.Size(1064, 606);
             this.adsPanel.TabIndex = 2;
             // 
             // publishButton
@@ -876,7 +693,7 @@
             this.publishButton.Name = "publishButton";
             this.publishButton.Size = new System.Drawing.Size(149, 45);
             this.publishButton.TabIndex = 65;
-            this.publishButton.Text = "Publish";
+            this.publishButton.Text = "Δημοσίευση";
             this.publishButton.UseVisualStyleBackColor = true;
             this.publishButton.Click += new System.EventHandler(this.publishButton_Click);
             // 
@@ -888,7 +705,7 @@
             this.savePriceButton.Name = "savePriceButton";
             this.savePriceButton.Size = new System.Drawing.Size(149, 45);
             this.savePriceButton.TabIndex = 64;
-            this.savePriceButton.Text = "Save";
+            this.savePriceButton.Text = "Αποθήκευση";
             this.savePriceButton.UseVisualStyleBackColor = true;
             this.savePriceButton.Click += new System.EventHandler(this.savePriceButton_Click);
             // 
@@ -898,9 +715,9 @@
             this.priceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.priceLabel.Location = new System.Drawing.Point(394, 193);
             this.priceLabel.Name = "priceLabel";
-            this.priceLabel.Size = new System.Drawing.Size(71, 20);
+            this.priceLabel.Size = new System.Drawing.Size(63, 20);
             this.priceLabel.TabIndex = 63;
-            this.priceLabel.Text = "Price (€):";
+            this.priceLabel.Text = "Τιμή (€)";
             // 
             // publishedLabel
             // 
@@ -908,9 +725,9 @@
             this.publishedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.publishedLabel.Location = new System.Drawing.Point(394, 161);
             this.publishedLabel.Name = "publishedLabel";
-            this.publishedLabel.Size = new System.Drawing.Size(121, 20);
+            this.publishedLabel.Size = new System.Drawing.Size(111, 20);
             this.publishedLabel.TabIndex = 62;
-            this.publishedLabel.Text = "Published Date:";
+            this.publishedLabel.Text = "Δημοσιεύτηκε";
             // 
             // label7
             // 
@@ -918,9 +735,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label7.Location = new System.Drawing.Point(394, 129);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 20);
+            this.label7.Size = new System.Drawing.Size(83, 20);
             this.label7.TabIndex = 61;
-            this.label7.Text = "Expiration Date:";
+            this.label7.Text = "Λήγει στις";
             // 
             // creationDateLabel
             // 
@@ -928,9 +745,9 @@
             this.creationDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.creationDateLabel.Location = new System.Drawing.Point(394, 97);
             this.creationDateLabel.Name = "creationDateLabel";
-            this.creationDateLabel.Size = new System.Drawing.Size(109, 20);
+            this.creationDateLabel.Size = new System.Drawing.Size(119, 20);
             this.creationDateLabel.TabIndex = 60;
-            this.creationDateLabel.Text = "Created Date:";
+            this.creationDateLabel.Text = "Δημιουργήθηκε";
             // 
             // priceTextBox
             // 
@@ -986,15 +803,11 @@
             // 
             this.adsListPanel.Controls.Add(this.adsListBox);
             this.adsListPanel.Controls.Add(this.infoLabel);
-            this.adsListPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.adsListPanel.Location = new System.Drawing.Point(0, 0);
+            this.adsListPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.adsListPanel.Location = new System.Drawing.Point(819, 0);
             this.adsListPanel.Margin = new System.Windows.Forms.Padding(0);
             this.adsListPanel.Name = "adsListPanel";
-
-            this.adsListPanel.Size = new System.Drawing.Size(245, 641);
-
-            this.adsListPanel.Size = new System.Drawing.Size(245, 541);
-
+            this.adsListPanel.Size = new System.Drawing.Size(245, 606);
             this.adsListPanel.TabIndex = 5;
             // 
             // adsListBox
@@ -1013,11 +826,7 @@
             this.adsListBox.Location = new System.Drawing.Point(4, 33);
             this.adsListBox.Margin = new System.Windows.Forms.Padding(0);
             this.adsListBox.Name = "adsListBox";
-
-            this.adsListBox.Size = new System.Drawing.Size(241, 360);
-
-            this.adsListBox.Size = new System.Drawing.Size(241, 260);
-
+            this.adsListBox.Size = new System.Drawing.Size(241, 340);
             this.adsListBox.TabIndex = 3;
             this.adsListBox.ValueMember = "adID";
             this.adsListBox.SelectedIndexChanged += new System.EventHandler(this.adsListBox_SelectedIndexChanged);
@@ -1036,7 +845,7 @@
             this.infoLabel.Name = "infoLabel";
             this.infoLabel.Size = new System.Drawing.Size(245, 33);
             this.infoLabel.TabIndex = 2;
-            this.infoLabel.Text = "Your Ads";
+            this.infoLabel.Text = "Αγγελίες ανα τίτλο";
             this.infoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // editDescriptionPictureBox
@@ -1064,14 +873,10 @@
             this.selectedAdPanel.Controls.Add(this.titleTextBox);
             this.selectedAdPanel.Controls.Add(this.descriptionRichTextBox);
             this.selectedAdPanel.Controls.Add(this.adsPictureBox);
-            this.selectedAdPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.selectedAdPanel.Location = new System.Drawing.Point(1079, 0);
+            this.selectedAdPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.selectedAdPanel.Location = new System.Drawing.Point(0, 0);
             this.selectedAdPanel.Name = "selectedAdPanel";
-
-            this.selectedAdPanel.Size = new System.Drawing.Size(349, 641);
-
-            this.selectedAdPanel.Size = new System.Drawing.Size(349, 541);
-
+            this.selectedAdPanel.Size = new System.Drawing.Size(349, 606);
             this.selectedAdPanel.TabIndex = 2;
             // 
             // titleTextBox
@@ -1083,11 +888,7 @@
             this.titleTextBox.Location = new System.Drawing.Point(0, 0);
             this.titleTextBox.Multiline = true;
             this.titleTextBox.Name = "titleTextBox";
-
-            this.titleTextBox.Size = new System.Drawing.Size(349, 201);
-
-            this.titleTextBox.Size = new System.Drawing.Size(349, 101);
-
+            this.titleTextBox.Size = new System.Drawing.Size(349, 166);
             this.titleTextBox.TabIndex = 5;
             this.titleTextBox.Text = "TITLE";
             this.titleTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1097,11 +898,7 @@
             this.descriptionRichTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.descriptionRichTextBox.Enabled = false;
             this.descriptionRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-
-            this.descriptionRichTextBox.Location = new System.Drawing.Point(0, 450);
-
-            this.descriptionRichTextBox.Location = new System.Drawing.Point(0, 350);
-
+            this.descriptionRichTextBox.Location = new System.Drawing.Point(0, 415);
             this.descriptionRichTextBox.Name = "descriptionRichTextBox";
             this.descriptionRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.descriptionRichTextBox.Size = new System.Drawing.Size(349, 191);
@@ -1117,34 +914,23 @@
             this.adsPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("adsPictureBox.Image")));
             this.adsPictureBox.Location = new System.Drawing.Point(0, 33);
             this.adsPictureBox.Name = "adsPictureBox";
-
-            this.adsPictureBox.Size = new System.Drawing.Size(349, 420);
-
-            this.adsPictureBox.Size = new System.Drawing.Size(349, 320);
-
+            this.adsPictureBox.Size = new System.Drawing.Size(349, 385);
             this.adsPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.adsPictureBox.TabIndex = 3;
             this.adsPictureBox.TabStop = false;
             // 
             // contentPanel
             // 
-
-            this.contentPanel.Controls.Add(this.adsPanel);
-
-            this.contentPanel.Controls.Add(this.profilePanel);
-
             this.contentPanel.Controls.Add(this.homePanel);
             this.contentPanel.Controls.Add(this.settingsPanel);
+            this.contentPanel.Controls.Add(this.adsPanel);
             this.contentPanel.Controls.Add(this.signupPanel);
             this.contentPanel.Controls.Add(this.categoriesPanel);
+            this.contentPanel.Controls.Add(this.profilePanel);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(200, 108);
             this.contentPanel.Name = "contentPanel";
-
-            this.contentPanel.Size = new System.Drawing.Size(1428, 641);
-
-            this.contentPanel.Size = new System.Drawing.Size(970, 541);
-
+            this.contentPanel.Size = new System.Drawing.Size(1428, 606);
             this.contentPanel.TabIndex = 5;
             // 
             // signupPanel
@@ -1172,11 +958,7 @@
             this.signupPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.signupPanel.Location = new System.Drawing.Point(0, 0);
             this.signupPanel.Name = "signupPanel";
-
-            this.signupPanel.Size = new System.Drawing.Size(1428, 641);
-
-            this.signupPanel.Size = new System.Drawing.Size(970, 541);
-
+            this.signupPanel.Size = new System.Drawing.Size(1428, 606);
             this.signupPanel.TabIndex = 7;
             // 
             // signupLabel
@@ -1384,42 +1166,25 @@
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 108);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(200, 641);
+            this.leftPanel.Size = new System.Drawing.Size(200, 706);
             this.leftPanel.TabIndex = 1;
             // 
-
-            // silver_link
+            // pictureBox1
             // 
-            this.silver_link.AutoSize = true;
-            this.silver_link.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.silver_link.LinkColor = System.Drawing.Color.Navy;
-            this.silver_link.Location = new System.Drawing.Point(695, 358);
-            this.silver_link.Name = "silver_link";
-            this.silver_link.Size = new System.Drawing.Size(257, 20);
-            this.silver_link.TabIndex = 70;
-            this.silver_link.TabStop = true;
-            this.silver_link.Text = "Αναβάθμιση λογαριασμού σε Silver.";
-            this.silver_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.silver_link_LinkClicked);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 108);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
-            // gold_link
-            // 
-            this.gold_link.AutoSize = true;
-            this.gold_link.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gold_link.LinkColor = System.Drawing.Color.Navy;
-            this.gold_link.Location = new System.Drawing.Point(699, 393);
-            this.gold_link.Name = "gold_link";
-            this.gold_link.Size = new System.Drawing.Size(253, 20);
-            this.gold_link.TabIndex = 71;
-            this.gold_link.TabStop = true;
-            this.gold_link.Text = "Αναβάθμιση λογαριασμού σε Gold.";
-            // 
-
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1828, 814);
             this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.footerPanel);
             this.Controls.Add(this.leftPanel);
@@ -1433,7 +1198,6 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.topPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.settingsPanel.ResumeLayout(false);
             this.fontSizeGroupBox.ResumeLayout(false);
             this.fontSizeGroupBox.PerformLayout();
@@ -1441,7 +1205,6 @@
             this.panelColorsGroupBox.PerformLayout();
             this.homePanel.ResumeLayout(false);
             this.homePanel.PerformLayout();
-            this.recentAdsGrid.ResumeLayout(false);
             this.profilePanel.ResumeLayout(false);
             this.profilePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
@@ -1461,6 +1224,7 @@
             this.contentPanel.ResumeLayout(false);
             this.signupPanel.ResumeLayout(false);
             this.signupPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1564,31 +1328,6 @@
         private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private aggeliesWpfLab.UserMenuIcons userMenuIcons1;
-
-        private aggeliesWpfLab.UserMenuIcons userMenuIcons2;
-        private System.Windows.Forms.TableLayoutPanel recentAdsGrid;
-        private System.Windows.Forms.Integration.ElementHost elementHost2;
-        private aggeliesWpfLab.DisplayAd displayAd1;
-        private System.Windows.Forms.Integration.ElementHost elementHost3;
-        private aggeliesWpfLab.DisplayAd displayAd2;
-        private System.Windows.Forms.Integration.ElementHost elementHost4;
-        private aggeliesWpfLab.DisplayAd displayAd3;
-        private System.Windows.Forms.Integration.ElementHost elementHost5;
-        private aggeliesWpfLab.DisplayAd displayAd4;
-        private System.Windows.Forms.Integration.ElementHost elementHost6;
-        private aggeliesWpfLab.DisplayAd displayAd5;
-        private System.Windows.Forms.Integration.ElementHost elementHost7;
-        private aggeliesWpfLab.DisplayAd displayAd6;
-        private System.Windows.Forms.Integration.ElementHost elementHost8;
-        private aggeliesWpfLab.DisplayAd displayAd7;
-        private System.Windows.Forms.Integration.ElementHost elementHost9;
-        private aggeliesWpfLab.DisplayAd displayAd8;
-        private System.Windows.Forms.Integration.ElementHost elementHost10;
-        private aggeliesWpfLab.DisplayAd displayAd9;
-
-        private System.Windows.Forms.LinkLabel gold_link;
-        private System.Windows.Forms.LinkLabel silver_link;
-
     }
 }
 

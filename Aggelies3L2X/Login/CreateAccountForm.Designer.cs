@@ -47,6 +47,7 @@
             this.txt_lastname = new System.Windows.Forms.TextBox();
             this.txt_firstname = new System.Windows.Forms.TextBox();
             this.CreateAccGroupBox = new System.Windows.Forms.GroupBox();
+            this.lang_button = new System.Windows.Forms.Button();
             uAgeLabel = new System.Windows.Forms.Label();
             uPhoneLabel = new System.Windows.Forms.Label();
             uRecoverEmailLabel = new System.Windows.Forms.Label();
@@ -168,10 +169,18 @@
             this.CreateAccGroupBox.Name = "CreateAccGroupBox";
             this.CreateAccGroupBox.TabStop = false;
             // 
+            // lang_button
+            // 
+            resources.ApplyResources(this.lang_button, "lang_button");
+            this.lang_button.Name = "lang_button";
+            this.lang_button.UseVisualStyleBackColor = true;
+            this.lang_button.Click += new System.EventHandler(this.lang_button_Click);
+            // 
             // CreateAccountForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lang_button);
             this.Controls.Add(this.CreateAccGroupBox);
             this.Name = "CreateAccountForm";
             this.Load += new System.EventHandler(this.CreateAccountForm_Load);
@@ -194,5 +203,6 @@
         private System.Windows.Forms.TextBox txt_lastname;
         private System.Windows.Forms.TextBox txt_firstname;
         private System.Windows.Forms.GroupBox CreateAccGroupBox;
+        private System.Windows.Forms.Button lang_button;
     }
 }

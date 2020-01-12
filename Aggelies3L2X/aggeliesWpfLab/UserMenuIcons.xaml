@@ -12,38 +12,43 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
-            
+            <ColumnDefinition Width="1*"/>
 
         </Grid.ColumnDefinitions>
-        
+        <Button x:Name="adsButton" Background="{x:Null}" x:FieldModifier="public" BorderThickness="0" Grid.Column="2" >
+            <StackPanel>
+                <Image Source="Icons/ads.png" Stretch="Fill" Height="50" Width="50" RenderTransformOrigin="0.556,0.597" />
+                <TextBlock TextAlignment="Center" FontSize="24" FontFamily="Microsoft Sans Serif" Text="Αγγελίες"/>
+            </StackPanel>
+        </Button>
         <Button x:Name="categoriesButton" Background="{x:Null}" x:FieldModifier="public" BorderThickness="0" Grid.Column="1">
             <StackPanel>
-                <Image Source="Icons/ads.png" Stretch="Fill" Height="50" Width="50" />
-                <TextBlock TextAlignment="Center" FontSize="24" FontFamily="Microsoft Sans Serif" Text="Ads"/>
+                <Image Source="Icons/categories.png" Stretch="Fill" Height="50" Width="50" />
+                <TextBlock TextAlignment="Center" FontSize="24" FontFamily="Microsoft Sans Serif" Text="Κατηγορίες"/>
             </StackPanel>
         </Button>
-        <Button x:Name="profileButton" Background="{x:Null}" x:FieldModifier="public" BorderThickness="0" Grid.Column="2">
+        <Button x:Name="profileButton" Background="{x:Null}" x:FieldModifier="public" BorderThickness="0" Grid.Column="3">
             <StackPanel>
                 <Image Source="Icons/avatar.png" Stretch="Fill" Height="50" Width="50" />
-                <TextBlock  TextAlignment="Center" FontSize="24" FontFamily="Microsoft Sans Serif" Text="My Account"/>
+                <TextBlock  TextAlignment="Center" FontSize="24" FontFamily="Microsoft Sans Serif" Text="Λογαριασμός"/>
             </StackPanel>
         </Button>
-        <Button x:Name="settingsButton" Background="{x:Null}" x:FieldModifier="public" BorderThickness="0" Grid.Column="3">
+        <Button x:Name="settingsButton" Background="{x:Null}" x:FieldModifier="public" BorderThickness="0" Grid.Column="4">
             <StackPanel>
                 <Image Source="Icons/settings.png" Stretch="Fill" Height="50" Width="50" />
-                <TextBlock TextAlignment="Center" FontSize="24" FontFamily="Microsoft Sans Serif" Text="Settings"/>
+                <TextBlock TextAlignment="Center" FontSize="24" FontFamily="Microsoft Sans Serif" Text="Ρυθμίσεις"/>
             </StackPanel>
         </Button>
         <Button x:Name="logoutButton" Background="{x:Null}" x:FieldModifier="public" BorderThickness="0" Grid.Column="5">
             <StackPanel>
                 <Image Stretch="Fill" Height="50" Width="50" Source="Icons/logout.png" />
-                <TextBlock TextAlignment="Center" FontSize="24" FontFamily="Microsoft Sans Serif" Text="Log out"/>
+                <TextBlock TextAlignment="Center" FontSize="24" FontFamily="Microsoft Sans Serif" Text="Αποσύνδεση"/>
             </StackPanel>
         </Button>
         <Button x:Name="homeButton" Background="{x:Null}" x:FieldModifier="public" BorderThickness="0" Grid.Column="0">
             <StackPanel>
                 <Image Source="Icons/home.png" Stretch="Fill" Height="50" Width="50" />
-                <TextBlock TextAlignment="Center" FontSize="24" FontFamily="Microsoft Sans Serif" Text="Home"/>
+                <TextBlock TextAlignment="Center" FontSize="24" FontFamily="Microsoft Sans Serif" Text="Αρχική"/>
             </StackPanel>
         </Button>
 
