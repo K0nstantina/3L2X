@@ -264,8 +264,8 @@ namespace UserApplication
         /// <param name="e"></param>
         private void editPicturePictureBox_Click(object sender, EventArgs e)
         {
+
             
-          
             try
             {
                 // Open file dialog and set directory and file filters.
@@ -286,9 +286,9 @@ namespace UserApplication
                         System.IO.File.Copy(imgDialog.FileName, imagesLocation + imgName);
                         // Get current adID.
                         // view = adsListBox.SelectedItem as DataRowView;
-                       // int adID = Int32.Parse();
+                        int adID = Int32.Parse(userAdsDataGrid.CurrentRow.Cells["adID"].Value.ToString());
                         // Update the image path in database.
-                      //  this.adsTableTableAdapter.UpdateImageQuery(imgName, adID);
+                        this.adsTableTableAdapter.UpdateImageQuery(imgName, adID);
                         // Set adsPicturebox new image.
                         Console.WriteLine(imgNewPath);
                         displayAd1.GetadImage.Source = new BitmapImage(new Uri(imgNewPath));
